@@ -10,6 +10,7 @@ module.exports = {
       "style",
       "ci",
       "perf",
+      "data",
       "util",
       "layout",
       "font",
@@ -115,6 +116,11 @@ module.exports = {
          "description": "Adding util",
          "emoji": "🚙",
          "value": "util"
+      },
+      "data": {
+         "description": "Adding data",
+         "emoji": "🗂️",
+         "value": "data"
       }
    }
 };
