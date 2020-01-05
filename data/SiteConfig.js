@@ -9,7 +9,7 @@ const config = {
    dateFromFormat: 'YYYY-MM-DD',
    dateFormat: 'MMMM Do, YYYY',
    siteDescription:
-      'Tania Rascia is a front end software developer and writer specializing in modern JavaScript.',
+      'Yoni Calsin is a front end software developer and writer specializing in modern JavaScript.',
    siteRss: '/rss.xml',
    googleAnalyticsID: 'UA-155262111-2',
    postDefaultCategoryID: 'Tech',
