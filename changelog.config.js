@@ -10,6 +10,10 @@ module.exports = {
       "style",
       "ci",
       "perf",
+      "util",
+      "layout",
+      "font",
+      "comp",
       "page",
       "img",
       "article"
@@ -91,6 +95,26 @@ module.exports = {
          "description": "Adding page",
          "emoji": "📄",
          "value": "page"
+      },
+      "comp": {
+         "description": "Adding component",
+         "emoji": "🍚",
+         "value": "comp"
+      },
+      "font": {
+         "description": "Adding font",
+         "emoji": "🆎",
+         "value": "font"
+      },
+      "layout": {
+         "description": "Adding layout",
+         "emoji": "🎴",
+         "value": "layout"
+      },
+      "util": {
+         "description": "Adding util",
+         "emoji": "🚙",
+         "value": "util"
       }
    }
 };
