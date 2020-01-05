@@ -10,6 +10,7 @@ module.exports = {
       "style",
       "ci",
       "perf",
+      "page",
       "img",
       "article"
    ],
@@ -85,6 +86,11 @@ module.exports = {
          "description": "Adding article",
          "emoji": "📰",
          "value": "article"
+      },
+      "page": {
+         "description": "Adding page",
+         "emoji": "📄",
+         "value": "page"
       }
    }
 };
