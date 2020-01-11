@@ -1,108 +1,109 @@
 ---
 date: 2019-12-02
-title: 'CSS: An Art, a Science, a Nightmare (Everything You Should Know)'
+title: 'CSS: Un Arte, una Ciencia, una Pesadilla (Todo lo que debes saber)'
 template: post
 thumbnail: '../thumbnails/css2.png'
-slug: overview-of-css-concepts
+slug: descripcion-general-de-conceptos-css
 categories:
-  - Design
+  - Diseño
 tags:
   - css
-  - styling
-  - design
+  - estilo
+  - css3
+  - diseño
 ---
 
-Speaking CSS is like speaking English, or any other spoken language - there are many words, but you only end up using a small subset of them on a daily basis. Just like reading a dictionary isn't an efficient way to learn a language, looking at a [big list of properties](https://www.w3.org/Style/CSS/all-properties.en.html) isn't helpful to learn CSS.
+Hablar CSS es como hablar inglés, o cualquier otro idioma hablado - hay muchas palabras, pero sólo terminas usando un pequeño subconjunto de ellas a diario. Al igual que leer un diccionario no es una forma eficiente de aprender un idioma, mirar una [gran lista de propiedades](https://www.w3.org/Style/CSS/all-properties.en.html) no es útil para aprender CSS.
 
-Some people think CSS is really hard and it's too much of a hassle to learn. Some people think that since it's not a programming language ([or is it?](https://notlaura.com/is-css-turing-complete/)), it's so easy that you don't even have to bother learning it. Ultimately, there's a lot to CSS, but it doesn't have to be overwhelming. If you learn a few key concepts, you should feel confident looking at or thinking of any design and turning it into reality.
+Algunas personas piensan que CSS es realmente difícil y que es demasiado complicado de aprender. Algunos piensan que como no es un lenguaje de programación ([o lo es?](https://notlaura.com/is-css-turing-complete/)), es tan fácil que ni siquiera tienes que molestarte en aprenderlo. En última instancia, hay mucho en CSS, pero no tiene por qué ser abrumador. Si aprendes algunos conceptos clave, debes sentirte seguro mirando o pensando en cualquier diseño y convirtiéndolo en realidad.
 
-I'm going to go over some of the parts of CSS that are important on a daily basis, and give some of tips and tricks I've come to learn over the years.
+Voy a repasar algunas de las partes de CSS que son importantes a diario, y dar algunos de los consejos y trucos que he llegado a aprender a lo largo de los años.
 
-> If you just want some hints on how to make your design look pretty or consistent, check out [Design for Developers](https://www.taniarascia.com/design-for-developers/). I also think [Web Design in 4 Minutes](https://jgthms.com/web-design-in-4-minutes/) by [Jeremy Thomas](https://jgthms.com/) has an excellent, interactive introduction to the concepts of web design.
+> Si sólo quieres algunas pistas sobre cómo hacer que tu diseño se vea bonito o consistente, echa un vistazo a [Design for Developers](https://www.taniarascia.com/design-for-developers/). También creo que [Diseño Web en 4 minutos](https://jgthms.com/web-design-in-4-minutes/) de [Jeremy Thomas](https://jgthms.com/) tiene una excelente introducción interactiva a los conceptos de diseño web.
 
-#### Who is this article for?
+#### ¿Para quién es este artículo?
 
-If you're a seasoned front end developer who already knows everything about CSS, please close this tab immediately and run as fast as you can to the nearest exit. If you've never heard of or used CSS before and don't know how to load CSS into an HTML page, this resource is also not for you.
+Si eres un desarrollador de front-end experimentado que ya sabe todo sobre CSS, por favor cierra esta pestaña inmediatamente y corre tan rápido como puedas a la salida más cercana. Si nunca has oído hablar o usado CSS antes y no sabes cómo cargar CSS en una página HTML, este recurso tampoco es para ti.
 
-This article is for the middleground of people who have had to touch CSS a few times here and there but ultimately don't feel like they know what they're doing, or struggle with making basic layouts.
+Este artículo es para el medio de personas que han tenido que tocar el CSS unas cuantas veces aquí y allá, pero que al final no sienten que saben lo que están haciendo, o que tienen dificultades para hacer diseños básicos.
 
-#### Topics covered
+#### Temas tratados
 
 ##### HTML 101
 
-- [HTML Fundamentals](#html-fundamentals)
+- [Fundamentos de HTML](#fundamentos-de-html)
 
 ##### CSS 101
 
-- [CSS Syntax](#css-syntax)
-- [CSS Selectors](#css-selectors)
-- [CSS Specificity](#css-specificity)
-- [CSS Properties](#css-properties)
+- [Sintaxis CSS](#Sintaxis-CSS)
+- [Seleccionadores de CSS](#Selectores-CSS)
+- [Especificación de CSS](#Especificidad-de-CSS)
+- [Propiedades CSS](#Propiedades-de-CSS)
 
-##### Working with CSS
+##### Trabajar con CSS
 
-- [Spacing Out](#spacing-out-padding-and-margins)
+- [Spacing Out](#Espaciamiento-Relleno-y-márgenes)
   - `padding`, `margin`, `border`
-- [Box Model](#box-model)
+- [Modelo de caja](#Modelo-de-caja)
   - `content-box` vs. `border-box`
-- [Shorthand Properties](#shorthand-properties)
-- [Layouts: Display](#layouts-display)
+- [Propiedades de la taquigrafía](#Propiedades-de-la-taquigrafía)
+- [Maquetación: Display](#Maquetación-display)
   - `inline`, `inline-block`, `block`
-- [Layouts: Positioning](#layouts-positioning)
+- [Maquetación: Posicionamiento](#Maquetación-Posicionamiento)
   - `static`, `fixed`, `absolute`, `relative`
-- [Layouts: Flex](#layouts-flex)
+- [Maquetación: Flex](#Maquetación-flex)
   - flex containers (`flex` display), flex items (`flex` property)
 - [Responsive: Media Queries](#responsive-media-queries)
   - `min-width`, `max-width`
-- [Other Considerations](#other-considerations)
+- [Otras consideraciones](#Otras-consideraciones)
 
-## HTML Fundamentals
+## Fundamentos de HTML
 
-Just as a recap, we'll be talking about how CSS applies to HTML a lot, so make sure you're familiar with what everything is referring to in HTML.
+A modo de recapitulación, hablaremos mucho de cómo CSS se aplica a HTML, así que asegúrate de estar familiarizado con lo que todo se refiere en HTML.
 
-- **Tag** - element name (_example:_ `a`)
-- **Attribute** - HTML modifiers (_example:_ `href`)
-- **Value** - value applied to an attribute (_example:_ `http://tania.dev`)
-- **Element** - everything within the HTML tag - attributes, values, and content.
+- **Etiqueta** - nombre de elemento (_ejemplo:_ `a`)
+- **Atributo** - Modificadores de HTML (_ejemplo:_ `href`)
+- **Valor** - valor aplicado a un atributo (_ejemplo:_ `https://greyblu.com`)
+- **Elemento** - todo dentro de la etiqueta HTML - atributos, valores y contenido.
 
-Example:
-
-```html
-<tag attribute="value">element contents</tag>
-```
-
-A real example:
+Ejemplo:
 
 ```html
-<a href="http://tania.dev">Tania's WebRing</a>
+<tag atributo="valor">contenidos de elementos</tag>
 ```
 
-This will link to my awesome WebRing.
+Un verdadero ejemplo:
 
-### HTML Reference
+```html
+<a href="https://greyblu.com">El WebRing de Yoni</a>
+```
 
-| Syntax    | Example                                           |
-| --------- | ------------------------------------------------- |
-| Tag       | `a`, `img`, `h1`                                  |
-| Attribute | `href`, `src`, `alt`                              |
-| Value     | `http://tania.dev`, `avatar.png`, `Some alt text` |
-| Element   | `<img src="avatar.png">`                          |
+Esto enlazará con mi increíble WebRing.
 
-Now we can move on to CSS.
+### Referencia HTML
 
-## CSS Fundamentals
+| Sintaxis | Ejemplo                                                        |
+|----------|----------------------------------------------------------------|
+| Etiqueta | `a`, `img`, `h1`                                               |
+| Atributo | `href`, `src`, `alt`                                           |
+| Valor    | `https://greyblu.com`, `avatar.png`, `Algún texto alternativo` |
+| Elemento | `<img src="avatar.png">`                                       |
 
-I'm just going to go over some of the basics of CSS - syntax, selectors, and specificity.
+Ahora podemos pasar a CSS.
 
-## CSS Syntax
+## Fundamentos de CSS
 
-There are three main parts of CSS - selectors, properties, and values.
+Voy a repasar algunos de los fundamentos de CSS - sintaxis, selectores y especificidad.
 
-- **Selectors** - the element(s) being selected
-- **Properties** - the aspect of the element being styled
-- **Values** - the style being applied
+## Sintaxis CSS
 
-Example:
+Hay tres partes principales de CSS - selectores, propiedades y valores.
+
+- **Selectores** - el elemento o elementos seleccionados
+- **Propiedades** - el aspecto del elemento que se está estilizando
+- **Valores** - el estilo que se aplica
+
+Ejemplo:
 
 ```css
 selector {
@@ -110,7 +111,7 @@ selector {
 }
 ```
 
-A real example:
+Un verdadero ejemplo:
 
 ```css
 h1 {
@@ -118,54 +119,54 @@ h1 {
 }
 ```
 
-This will make all `h1` elements blue.
+Esto hará que todos los elementos "h1" sean azules.
 
-## CSS Selectors
+## Selectores CSS
 
-From **least specific** to **most specific** (more about that below), here are the main types of selectors:
+Desde **menos específico** hasta **más específico** (más sobre eso abajo), aquí están los principales tipos de selectores:
 
-- [**Universal selector**](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) - selects all elements
-- [**Type selector**](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) - targets element(s) by HTML tag (includes [pseudo elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements))
-- [**Class selector**](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors), [**Attribute selector**](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) - targets element(s) by class or attribute, respectively (includes [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes))
-- [**ID selector**](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) - targets an element by id
+- [**Selector universal**](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) - selecciona todos los elementos
+- [**Seleccionador de tipo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) - apunta elemento(s) por etiqueta HTML (incluye [pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements))
+- [**Selector de clase**](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors), [**Selector de atributo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) - elemento(s) objetivo por clase o atributo, respectivamente (incluye [pseudo clases](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes))
+- [**Selector de id**](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) - apunta a un elemento por id
 
 ```css
 * {
-  /* Universal selector */
+  /* Selector universal */
 }
 
-tag {
-  /* Type selector */
+etiqueta {
+  /* Selector de tipo */
 }
 
-tag::before {
-  /* Type selector (psuedo element) */
+etiqueta::before {
+  /* Selector de tipo (elemento psuedo) */
 }
 
-.class {
-  /* Class selector */
+.clase {
+  /* Selector de clase */
 }
 
-.class:hover {
-  /* Class selector (pseudo class) */
+.clase:hover {
+  /* Selector de clase (pseudo clase) */
 }
 
 [attr] {
-  /* Attribute selector */
+  /* Selector de atributos */
 }
 
 #id {
-  /* ID selector */
+  /* Selector de identificación */
 }
 ```
 
-> **Pseudo elements** have two colons (`::`, or `::before`) and **pseudo classes** have one colon (`:`, or `:hover`).
+> **Los seudoelementos** tienen dos dos puntos (`::`, o `::before`) y las **seudoclases** tienen un punto (`:`, o `:hover`).
 
-### CSS and JavaScript
+### CSS y JavaScript
 
-Note that even if you don't care much about CSS, learning about selectors will help you write (vanilla) JavaScript, as the DOM selectors in a JavaScript document query are the same.
+Ten en cuenta que aunque no te importe mucho el CSS, aprender sobre los selectores te ayudará a escribir JavaScript (vainilla), ya que los selectores DOM en una consulta de documento JavaScript son los mismos.
 
-This query to get all elements that match a selector:
+Esta consulta para obtener todos los elementos que coinciden con un selector:
 
 <div class="filename">.js</div>
 
@@ -173,7 +174,7 @@ This query to get all elements that match a selector:
 document.querySelectorAll('article h2')
 ```
 
-Targets all the same elements as this CSS to style all elements that match a selector:
+Apunta a los mismos elementos que este CSS para dar estilo a todos los elementos que coinciden con un selector:
 
 <div class="filename">.css</div>
 
@@ -182,66 +183,66 @@ article h2 {
 }
 ```
 
-> **Note:** All selectors may target one or more elements except IDs, which can only apply to a single element.
+> **Nota:** Todos los selectores pueden tener como objetivo uno o más elementos, excepto los IDs, que sólo pueden aplicarse a un único elemento.
 
-### A space means something
+### Un espacio significa algo
 
-Do you know the difference between these two?
+¿Sabes la diferencia entre estos dos?
 
 - `.foo.bar`
 - `.foo .bar`
 
-The first one targets a `foo` and `bar` on the same element.
+El primero apunta a un `foo` y a un `bar` en el mismo elemento.
 
-<div class="filename">.foo.bar example</div>
+<div class="filename">Ejemplo de .foo.bar</div>
 
 ```css
 .foo.bar {
-  /* without a space */
+  /* sin un espacio */
 }
 ```
 
 ```html
-<div class="foo bar">I'm targeted</div>
+<div class="foo bar">Soy el objetivo</div>
 ```
 
-The second one targets a `bar` that is a descendent of a `foo`.
+El segundo apunta a un `bar` que desciende de un `foo`.
 
-<div class="filename">.foo .bar example</div>
+<div class="filename">Ejemplo de .foo .bar</div>
 
 ```css
 .foo .bar {
-  /* with a space */
+  /* con un espacio */
 }
 ```
 
 ```html
 <div class="foo">
-  <div class="bar">I'm targeted</div>
+  <div class="bar">Soy el objetivo</div>
 </div>
 ```
 
-There are other selectors that can be used instead of a space to modify the selector, such as `>`, `+`, and `~`. These all have different meanings. They are not used incredibly often so you can learn them as needed.
+Hay otros selectores que pueden usarse en lugar de un espacio para modificar el selector, como `>`, `+`, y `~`. Todos ellos tienen diferentes significados. No se usan increíblemente a menudo, así que puedes aprenderlos cuando sea necesario.
 
-### Selector Reference
+### Referencia del selector
 
-| Selector           | Targets                 | Example                                             |
-| ------------------ | ----------------------- | --------------------------------------------------- |
-| Universal selector | All elements            | `*`                                                 |
-| Type selector      | Tags, pseudo elements   | `h1`, `div`, `li::before`                           |
-| Class selector     | Classes, pseudo classes | `.page-header`, `.page-content`, `.list-item:hover` |
-| Attribute selector | Attributes              | `[alt]`, `[type="text"]`, `[lang="en"]`             |
-| ID selector        | IDs                     | `#toggle`, `#getting-started`, `#about`             |
+| Selector                   | Objetivos                   | Ejemplo                                             |
+|----------------------------|-----------------------------|-----------------------------------------------------|
+| Selector universal         | Todos los elementos         | `*`                                                 |
+| Selector de tipo           | Etiquetas, pseudo elementos | `h1`, `div`, `li::before`                           |
+| Selector de clase          | Clases, pseudo clases       | `.page-header`, `.page-content`, `.list-item:hover` |
+| Selector de atributos      | Atributos                   | `[alt]`, `[type="text"]`, `[lang="en"]`             |
+| selector de identificación | Identificaciones            | `#toggle`, `#getting-started`, `#about`             |
 
-## CSS Specificity
+## Especificidad de CSS
 
-What does "specificity" mean in CSS?
+¿Qué significa "especificidad" en CSS?
 
-### Order
+### Orden
 
-First, all things being equal, the order in which you use two selectors in the stylesheet matters. So if we have a stylesheet with two classes:
+En primer lugar, si todas las cosas son iguales, el orden en el que se utilizan dos selectores en la hoja de estilo es importante. Así que si tenemos una hoja de estilo con dos clases:
 
-<div class="filename">Comparing two selectors weighted equally</div>
+<div class="filename">Comparación de dos selectores con igual peso</div>
 
 ```css
 .foo {
@@ -253,31 +254,31 @@ First, all things being equal, the order in which you use two selectors in the s
 }
 ```
 
-and you have both of those classes on the same element:
+y tienes ambas clases en el mismo elemento:
 
-<div class="filename">An example of one element using both selectors</div>
+<div class="filename">Un ejemplo de un elemento que utiliza ambos selectores</div>
 
 ```html
-<div class="foo bar">What color am I?</div>
+<div class="foo bar">¿De qué color soy?</div>
 ```
 
-...then the one closest to the bottom wins. So in this case, the element's color is red, because `.bar` appears closest to the bottom of the stylesheet.
+...entonces el que esté más cerca del fondo gana. Así que en este caso, el color del elemento es rojo, porque `.bar` aparece más cerca de la parte inferior de la hoja de estilo.
 
-### Calculating specificity
+### Cálculo de la especificidad
 
-CSS uses a number scale to determine specificity. You can also use [this specificity calculator](https://specificity.keegan.st/) to see how specific an element is.
+CSS utiliza una escala numérica para determinar la especificidad. También puedes usar [esta calculadora de especificidad](https://specificity.keegan.st/) para ver cuán específico es un elemento.
 
-As we know, there are three sections: `ID`, `Class`, and `Type`. In the scale, all are represented by `0` initially.
+Como sabemos, hay tres secciones: `ID`, `Clase` y `Tipo`. En la escala, todas están representadas por `0` inicialmente.
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 0   | 0     | 0    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 0  | 0     | 0    |
 
-Any time your selector contains one of the selectors, you'll increase that bucket by 1.
+Cada vez que su selector contenga uno de los selectores, aumentará ese cubo en 1.
 
-Add a type selector.
+Añade un selector de tipo.
 
-<div class="filename">Only a type selector</div>
+<div class="filename">Sólo un selector de tipo</div>
 
 ```css
 h1 {
@@ -285,13 +286,13 @@ h1 {
 }
 ```
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 0   | 0     | 1    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 0  | 0     | 1    |
 
-Add a class selector.
+Añade un selector de clase.
 
-<div class="filename">Type selector plus class selector</div>
+<div class="filename">Selector de tipo más selector de clase</div>
 
 ```css
 .container h1 {
@@ -299,13 +300,13 @@ Add a class selector.
 }
 ```
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 0   | 1     | 1    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 0  | 1     | 1    |
 
-Add an ID selector.
+Añada un selector de identificación.
 
-<div class="filename">Type, class, and ID selector</div>
+<div class="filename">Selector de tipo, clase e ID</div>
 
 ```css
 #landing-page .container h1 {
@@ -313,21 +314,21 @@ Add an ID selector.
 }
 ```
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 1   | 1     | 1    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 1  | 1     | 1    |
 
-You can think of this scale exactly the same as a base-10 number system. If just a tag is `1` (one), and a class and type is `11` (eleven), and an id, class, and tag is `111` (one-hundred and one), which one is the biggest? In this case, `111` is the biggest and therefore the most specific.
+Puede pensar en esta escala exactamente igual que un sistema de números de base 10. Si una etiqueta es `1` (uno), y una clase y tipo es `11` (once), y un id, clase y etiqueta es `111` (ciento uno), ¿cuál es el más grande? En este caso, `111` es el más grande y por lo tanto el más específico.
 
-> If you had more than 10 elements in a given bucket, like `1` id, `15` classes, and `30` types, this analogy doesn't work, but you could relate it to semantic numbering systems as well - it would be `1.15.30`. However, if you're using that many selectors, something has most likely gone horribly wrong.
+> Si tuvieras más de 10 elementos en un cubo dado, como `1` id, `15` clases, y tipos `30`, esta analogía no funciona, pero podrías relacionarla con sistemas de numeración semántica también - sería `1.15.30`. Sin embargo, si está usando tantos selectores, lo más probable es que algo haya ido terriblemente mal.
 
-This means a class is an order of magnitude more specific than a type, and an id is an order of magnitude more specific than a class.
+Esto significa que una clase es un orden de magnitud más específico que un tipo, y un id es un orden de magnitud más específico que una clase.
 
-In other words, if you had two ids and 0 classes vs. 1 id and 20 classes, the two ids would win. For example:
+En otras palabras, si tuvieras dos ids y 0 clases vs. 1 id y 20 clases, las dos ids ganarían. Por ejemplo:
 
-This selector is more specific: (`200`, or two-hundred)
+Este selector es más específico: (`200`, o doscientos)
 
-<div class="filename">Two ID selectors</div>
+<div class="filename">Dos selectores ID</div>
 
 ```css
 #landing-page #about-section {
@@ -335,13 +336,13 @@ This selector is more specific: (`200`, or two-hundred)
 }
 ```
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 2   | 0     | 0    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 2  | 0     | 0    |
 
-This selector is less specific: (`140`, or one-hundred forty)
+Este selector es menos específico: (`140`, o ciento cuarenta)
 
-<div class="filename">An ID selector and many class selectors</div>
+<div class="filename">Un selector de ID y muchos selectores de clase</div>
 
 ```css
 #landing-page .foo.bar.baz.box {
@@ -349,25 +350,25 @@ This selector is less specific: (`140`, or one-hundred forty)
 }
 ```
 
-| ID  | Class | Type |
-| --- | ----- | ---- |
-| 1   | 4     | 0    |
+| ID | Clase | Tipo |
+|----|-------|------|
+| 1  | 4     | 0    |
 
-#### Inline styles
+#### Estilos en línea
 
-An inline style is stronger than any combination of id, class, or type.
+Un estilo en línea es más fuerte que cualquier combinación de id, clase o tipo.
 
-<div class="filename">Inline styles on an element</div>
+<div class="filename">Estilos en línea en un elemento</div>
 
 ```html
-<div style="color: red;">I'm red! No selector can override me!</div>
+<div style="color: red;">¡Estoy rojo! ¡Ningún selector puede anularme!</div>
 ```
 
-### Important!
+### ¡Importante!
 
-Except an `!important` keyword on a property can override even that...
+Excepto que una palabra clave `!important` en una propiedad puede anular incluso eso...
 
-<div class="filename">Important keyword overriding inline styles on an element</div>
+<div class="filename">Palabra clave importante que anula los estilos en línea de un elemento</div>.
 
 ```css
 div {
@@ -376,65 +377,65 @@ div {
 ```
 
 ```html
-<div style="color: red;">I've been overridden! I'm blue now!</div>
+<div style="color: red;">¡He sido anulado! ¡Estoy azul ahora!</div>
 ```
 
-Please, make very, very sparing use of `!important`. It becomes really hard to override. `!important` should only be used when absolutely necessary, like styling some third party you have no control over that is using inline styles, and in a few cases with JavaScript toggling display.
+Por favor, haga un uso muy, muy ahorrativo de `!important`. Se vuelve muy difícil de anular. Importante" sólo debe ser usado cuando sea absolutamente necesario, como estilizar a un tercero sobre el que no tienes control y que está usando estilos en línea, y en algunos casos con Javascript para cambiar la visualización.
 
-To summarize, each level of hierarchy from type to `!important` is an order of magnitude stronger than the previous one. While `!important` is the strongest specificity modifier, an `!important` can be overridden by another `!important` that is otherwise higher (for example, `!important` + ID is stronger than `!important` plus class).
+En resumen, cada nivel de jerarquía desde type a `!important` es un orden de magnitud más fuerte que el anterior. Mientras que `!important` es el modificador de especificidad más fuerte, un `!important` puede ser anulado por otro `!important` que por lo demás es más alto (por ejemplo, `!important` + ID es más fuerte que `!important` más clase).
 
-### Specificity hierarchy
+### Jerarquía de la especificidad
 
-From least specific to most specific:
+De menos específico a más específico:
 
-| Selector                   | Example                            | Specificity   |
-| -------------------------- | ---------------------------------- | ------------- |
-| Type selector              | `h1`                               | `0 0 0 1`     |
-| Class, attribute selectors | `.class`, `[type="text"]`          | `0 0 1 0`     |
-| ID selector                | `#contact`                         | `0 1 0 0`     |
-| Inline style               | `<div style="background: purple">` | `1 0 0 0`     |
-| `!important` keyword       | `div { color: green !important }`  | Overrides all |
+| Selector                       | Ejemplo                            | Especificación |
+|--------------------------------|------------------------------------|----------------|
+| Selector de tipo               | `h1`                               | `0 0 0 1`      |
+| Clase, selectores de atributos | `.class`, `[type="text"]`          | `0 0 1 0`      |
+| Selector de ID                 | `#contact`                         | `0 1 0 0`      |
+| Estilo en línea                | `<div style="background: purple">` | `1 0 0 0`      |
+| `!important` Palabra clave     | `div { color: green !important }`  | Anula todos    |
 
-## CSS Properties
+## Propiedades de CSS
 
-Here's a list of all properties that I think are absolutely essential to knowing CSS. The equivalent of knowing the most basic verbs and nouns in English that you can get by with.
+Aquí hay una lista de todas las propiedades que creo que son absolutamente esenciales para conocer CSS. El equivalente a saber los verbos y sustantivos más básicos en inglés con los que te puedes desenvolver.
 
-The minimum to be able to do anything:
+Lo mínimo para poder hacer cualquier cosa:
 
 - `padding`, `margin`, `border`
 - `background`
 - `color`, `font-family`, `font-weight`, `font-size`, `line-height`
 - `width`, `height`, `max-width`, `max-height`
 
-Layout essentials:
+Lo esencial del diseño:
 
 - `position`, `z-index`, `top`, `right`, `bottom`, `left`
 - `display`, `flex`, `align-items`, `justify-content`
 - `@media`
 
-Good to know, but not quite as essential as the rest:
+Es bueno saberlo, pero no tan esencial como el resto:
 
 - `grid`, `grid-template-columns`, `grid-template-rows`
 - `transform`, `transition`
 
-We'll go into these more in a moment. Now we should have enough of the basics down to discuss some applications of the knowledge.
+Entraremos en esto más en un momento. Ahora deberíamos tener suficiente de lo básico para discutir algunas aplicaciones del conocimiento.
 
-## Spacing Out: Padding and Margins
+## Espaciamiento: Relleno y márgenes
 
-All of your spacing needs will be covered by two properties: `padding` and `margin`.
+Todas sus necesidades de espacio serán cubiertas por dos propiedades: `padding` y `margin`.
 
-- [**Padding**](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) is used to pad the inside of an element (_inside of the border_)
-- [**Margin**](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) is used to separate elements (_outside of the border_)
+- [**Padding**](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) se utiliza para acolchar el interior de un elemento (_dentro del borde_)
+- [**Margin**](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) se utiliza para separar elementos (_fuera del borde_)
 
-> In Developer Tools, content is represented by blue, padding is represented by green and margins are represented by orange.
+> En Developer Tools, el contenido se representa en azul, el relleno se representa en verde y los márgenes se representan en naranja.
 
 ![](../images/padding1.png)
 
-The order of nesting for an element is as follows:
+El orden de anidación de un elemento es el siguiente:
 
-- Element content -> `padding` -> `border` -> `margin`
+- Contenido de los elementos -> `padding` -> `border` -> `margin`
 
-So if I were to make an element that was a square with padding and margins, it would look like this:
+Así que si tuviera que hacer un elemento que fuera un cuadrado con relleno y márgenes, se vería así:
 
 ```css
 .square {
@@ -448,78 +449,82 @@ So if I were to make an element that was a square with padding and margins, it w
 
 ![](../images/padding2.png)
 
-A few important notes:
+Algunas notas importantes:
 
-- **Margin** is always transparent; **padding** can have a background color
-- **Margins** collapse into each other; **padding** stacks on top of each other
-- **Margin** can have negative values; **padding** cannot have negative values
-- **Padding** adds to the area of an element that can be clicked; **margin** does not
-- **Padding** (and border) add to the total size of an element; **margin** does not
+- El **Margin** es siempre transparente; el **padding** puede tener un color de fondo.
+- Los **Margins** se derrumban entre sí; los **padding** se apilan uno encima del otro.
+- El **Margin** puede tener valores negativos; el **padding** no puede tener valores negativos.
+- El **Padding** añade al área de un elemento que se puede hacer clic; **margin** no lo hace
+- El **Padding** (y el borde) se suman al tamaño total de un elemento; **margin** no lo hace
 
-What this means is that margins overlap each other, and padding never will. This comes up a lot in formatting of headings and paragraphs, for example.
+Lo que esto significa es que los márgenes se superponen entre sí, y el relleno nunca lo hará. Esto aparece mucho en el formato de los encabezados y párrafos, por ejemplo.
 
-Using an example of an `h2` with a `10px` bottom margin and a `p` with a `10px` top margin, how much of a margin will separate the two elements?
+Usando un ejemplo de una `h2` con un margen inferior de `10px` y una `p` con un margen superior de `10px`, ¿cuánto margen separará los dos elementos?
 
 ```html
-<h2 style="margin-bottom: 10px;">Heading</h2>
-<p style="margin-top: 10px;">Paragraph</p>
+<h2 style="margin-bottom: 10px;">Encabezamiento</h2>
+<p style="margin-top: 10px;">Párrafo</p>
 ```
 
-We'll see that there is a total `10px` margin between them, not `20px`.
+Veremos que hay un margen total de `10px` entre ellos, no `20px`.
 
-To use a real example, in [this example MVC todo app](https://taniarascia.github.io/mvc/) I made, each todo item is padded, and they're separated from each other by margins.
+Para usar un ejemplo real, en [este ejemplo MVC todo app](https://taniarascia.github.io/mvc/) que hice, cada ítem de todo se rellena, y se separan entre sí por márgenes.
 
 ![](../images/padding3.png)
 
 ### Padding vs. margin
 
-| Trait             | Margin             | Padding        |
-| ----------------- | ------------------ | -------------- |
-| Background color  | Always transparent | Set by element |
-| Collapse or stack | Collapse           | Stack          |
-| Negative values   | Allowed            | Not allowed    |
-| Clickable         | No                 | Yes            |
+| Rasgo                  | Margin               | Padding             |
+|------------------------|----------------------|---------------------|
+| Color de fondo         | Siempre transparente | Fijado por elemento |
+| Colapsar o apilar      | Colapsar             | apilar              |
+| Valores negativos      | Permitido            | No se permite       |
+| Se puede hacer clic en | No                   | Si                  |
 
-## Box Model
+## Modelo de caja
 
-[Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)! It means one thing: do padding and borders count as part of the element's size, or not?
+[Tamaño de la caja](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)! Significa una cosa: ¿el relleno y los bordes cuentan como parte del tamaño del elemento, o no?
 
 - **Border box** says yes! Borders and padding are part of an element's size!
 - **Content box** says no! Borders and padding are not part of an element's size!
 
-My recommendation? Set `box-sizing` to `border-box` on everything (`*`). Always. Don't even think about it! On the rare occasion something needs to be `content-box`, you can override it. This is one of the few things IE got right - making `border-box` the default while the rest of the browsers use `content-box` as the default.
+- **Border box** dice que sí. Los bordes y el acolchado son parte del tamaño de un elemento!
+- **Content box** ¡dice que no! ¡Los bordes y el relleno no son parte del tamaño de un elemento!
+
+¿Mi recomendación? Establezca el `tamaño de la caja` en `caja-borde` en todo (`*`). Siempre. ¡Ni siquiera lo pienses! En las raras ocasiones en que algo necesita ser `contenido-caja`, puedes anularlo. Esta es una de las pocas cosas que IE ha hecho bien - haciendo que `border-box` sea la predeterminada mientras que el resto de los navegadores usan `content-box` como la predeterminada.
 
 ### Border box vs. content box?
 
-Let's use our square example above. With `content-box` applied, the element's total size is `72px * 72px`:
+Usemos el ejemplo del cuadrado de arriba. Con `content-box` aplicada, el tamaño total del elemento es `72px * 72px`:
 
 <div class="filename">Content box</div>
 
 ```
-50px for content
-2px (x) and 2px (y) for four 1px borders
-20px for 10px padding all around
-= 72px square
+50px para el contenido
+2px (x) y 2px (y) para cuatro bordes de 1px
+20px para un acolchado de 10px en todo el contorno
+= 72px cuadrado
 ```
 
 ![](../images/content-box.png)
 
-With `border-box` applied, the element's total size is `50px * 50px`.
+Con la aplicación de `border-box`, el tamaño total del elemento es de `50px * 50px`.
 
 <div class="filename">Border box</div>
 
 ```
-28px for content
-2px (x) and 2px (y) for four 1px borders
-20px for 10px padding all around
-= 50px square
+28px para el contenido
+2px (x) y 2px (y) para cuatro bordes de 1px
+20px para un acolchado de 10px en todo el contorno
+= 50px cuadrado
 ```
 
 ![](../images/border-box.png)
 
-If you're giving an element a `height` and `width` of `50px` each, would you prefer the element to be `50px` or `72px`? The most likely answer is that you want the height and width to match the size of the element. This will become very important when creating layouts, especially flex/grids that are set by percent.
 
-You can apply `border-box` to all elements like this:
+Si le das a un elemento una `height` y `width` de `50px` cada uno, ¿preferirías que el elemento fuera `50px` o `72px`? La respuesta más probable es que quieras que la altura y el ancho coincidan con el tamaño del elemento. Esto se convertirá en algo muy importante cuando cree diseños, especialmente flex/grids que se establecen por porcentaje.
+
+Puedes aplicar `border-box` a todos los elementos de esta manera:
 
 ```css
 * {
@@ -527,19 +532,19 @@ You can apply `border-box` to all elements like this:
 }
 ```
 
-(Or [this way](https://www.paulirish.com/2012/box-sizing-border-box-ftw/) if you have a specific need for `content-box` somewhere.)
+(O [de esta manera](https://www.paulirish.com/2012/box-sizing-border-box-ftw/) si tienes una necesidad específica de `content-box` en algún lugar).
 
-## Shorthand Properties
+## Propiedades de la taquigrafía
 
-You see me use `padding: 5px` and `margin: 5px`. The `padding` property, for example, is actually a shorthand for four individual properties:
+Me ves usar `padding: 5px` y `margin: 5px`. La propiedad `padding`, por ejemplo, es en realidad una abreviatura de cuatro propiedades individuales:
 
 ```css
-/* Shorthand property */
+/* Propiedad de taquigrafía */
 div {
   padding: 5px;
 }
 
-/* Individual properties */
+/* Propiedades individuales */
 div {
   padding-top: 5px;
   padding-right: 5px;
@@ -548,30 +553,30 @@ div {
 }
 ```
 
-Usually, you won't have to declare each side separately. In design, we like symmetry, so if you ever end up with a different value for all four sides, something has probably gone quite wrong and you might want to rethink your strategy.
+Normalmente, no tendrás que declarar cada lado por separado. En diseño, nos gusta la simetría, así que si alguna vez terminas con un valor diferente para los cuatro lados, es probable que algo haya salido bastante mal y que quieras replantearte tu estrategia.
 
-- **one** value applies to all four sides (`padding: 5px`)
-- **two** values apply to vertical (top and bottom) and horizontal (left and right) respectively (`padding: 10px 0`)
-- **four** values are applied **clockwise** from top to left (`padding: 1px 2px 3px 4px`)
+- **Uno** se aplica a los cuatro lados (`padding: 5px`)
+- **Dos** valores se aplican a la vertical (arriba y abajo) y a la horizontal (izquierda y derecha) respectivamente (`padding: 10px 0`)
+- **Cuatro** valores **sentido de las agujas del reloj** de arriba a la izquierda (`padding: 1px 2px 3px 4px`)
 
-This applies to both `padding` and `margin`. The most common usage of an individual side property is when you're overriding something. For example, an element exists with `padding: 5px`, and you want it to have a different padding bottom value.
+Esto se aplica tanto al `padding` como al `margin`. El uso más común de una propiedad lateral individual es cuando estás anulando algo. Por ejemplo, un elemento existe con `padding: 5px`, y quieres que tenga un valor de fondo de relleno diferente.
 
-The next most common shorthand applies to `border`. You will most commonly see border written like this:
+La siguiente taquigrafía más común se aplica a `border`. Lo más común es que vea el borde escrito de esta manera:
 
 ```css
 div {
-  border: border-width border-style border-color;
+  border: borde-ancho borde-estilo borde-color;
 }
 ```
 
-These can be written out individually as well.
+Estos pueden ser escritos individualmente también.
 
 ```css
 div {
   border: 1px solid black;
 }
 
-/* Can also be written individually */
+/* También puede escribirse individualmente */
 div {
   border-color: black;
   border-width: 1px;
@@ -579,7 +584,7 @@ div {
 }
 ```
 
-And just like `padding` and `margin`, each of these border modifiers has its own side property.
+Y al igual que el `padding` y el `margin`, cada uno de estos modificadores de frontera tiene su propia propiedad lateral.
 
 ```css
 div {
@@ -589,35 +594,35 @@ div {
 }
 ```
 
-So actually when you write `border: 1px solid black` you're writing shorthand for 12 properties combined.
+Así que en realidad cuando escribes `border: 1px solid black` estás escribiendo taquigrafía para 12 propiedades combinadas.
 
-## Layouts: Display
+## Maquetación: Display
 
-There are many `display` properties ([see this list](https://developer.mozilla.org/en-US/docs/Web/CSS/display)), but I think the most used and important to know are `block`, `inline`, `inline-block`, `flex` and `none`.
+Hay muchas propiedades `display` ([ver esta lista](https://developer.mozilla.org/en-US/docs/Web/CSS/display)), pero creo que las más usadas e importantes de conocer son `block`, `inline`, `inline-block`, `flex` y `none`.
 
-Most elements by default are `block`, `inline`, or `inline-block`. The default `block` element is a `div`, and the default inline element is a `span`.
+La mayoría de los elementos por defecto son `block`, `inline` o `inline-block`. El elemento `block` por defecto es un `div`, y el elemento inline por defecto es un `span`.
 
-Examples of default elements:
+Ejemplos de elementos predeterminados:
 
 - **Inline**: `span`, `strong`, `em`, `img`
-- **Inline-block**: `button`, `select`, (Chrome only: `textarea`, `input`)
+- **Inline-block**: `button`, `select`, (Solo Chrome: `textarea`, `input`)
 - **Block**: `div`, `p`, `nav`, `section`
 
-> There a few other obvious, specific ones, such as `table` elements having the `table` display, and `li` having the `list-item` display, but you will rarely decide to make some other element have that display type.
+> Hay algunos otros obvios y específicos, como los elementos `table` que tienen la pantalla `table`, y `li` que tiene la pantalla `list-item`, pero raramente decidirá hacer que algún otro elemento tenga ese tipo de pantalla.
 
 #### Inline
 
-**Inline** elements are usually text formatting based: `b` or `strong`, which make text bold, or `i` and `em` which make text italic. They are on the same line - they do not create a new line. Inline elements are usually nested within block elements. Horizontal and vertical padding and margins are applied as expected, but vertical margins are not applied at all, and vertical padding is ignored by other elements.
+**Los elementos en línea** suelen estar basados en el formato de texto: `b` o `fuerte`, que hacen el texto en negrita, o `i` y `em` que hacen el texto en cursiva. Están en la misma línea - no crean una nueva línea. Los elementos en línea se anidan normalmente dentro de elementos de bloque. Los rellenos y márgenes horizontales y verticales se aplican como se espera, pero los márgenes verticales no se aplican en absoluto, y el relleno vertical es ignorado por otros elementos.
 
-<div class="filename">Inline element behavior</div>
+<div class="filename">Comportamiento del elemento en línea</div>
 
 ```html
-content content...<span>span</span>..content content
+contenido de contenido...<span>span</span>..contenido de contenido
 ```
 
 ```css
 span {
-  /* inline by default */
+  /* en línea por defecto */
   padding: 15px;
   margin: 15px;
 }
@@ -625,11 +630,11 @@ span {
 
 ![](../images/inline.png)
 
-To be safe, inline elements should only be used for text formatting.
+Para mayor seguridad, los elementos inline sólo deberían utilizarse para el formato de texto.
 
 #### Inline block
 
-**Inline-block** elements are like inline elements, except they can have vertical and horizontal padding and margins. They also appear next to each other horizontally by default, and do not stack on new lines.
+**Los elementos de bloque en línea** son como los elementos en línea, excepto que pueden tener acolchados y márgenes verticales y horizontales. También aparecen uno junto al otro horizontalmente por defecto, y no se apilan en nuevas líneas.
 
 ```css
 span {
@@ -643,47 +648,47 @@ span {
 
 #### Block
 
-**Block** elements span the full width of their containing element, and stack on top of each other in new lines of the document.
+**Los elementos de bloque** abarcan todo el ancho del elemento que los contiene y se apilan unos sobre otros en nuevas líneas del documento.
 
-<div class="filename">Block element behavior</div>
+<div class="filename">Comportamiento del elemento bloque</div>
 
 ```html
-content content...
+feliz feliz feliz feliz...
 <div>div</div>
-..content content
+...contenido de los contenidos
 ```
 
 ![](../images/block-element.png)
 
 #### None
 
-An element with **none** applied will not appear in the document at all. This is most commonly used for hiding/displaying content for mobile.
+Un elemento con **none** aplicado no aparecerá en el documento en absoluto. Esto es lo más comúnmente usado para ocultar/visualizar contenido para móviles.
 
-### Display Reference
+### Referencia de la pantalla
 
-| Display        | Behavior                                                                         |
-| -------------- | -------------------------------------------------------------------------------- |
-| `inline`       | used primarily for text formatting, appear next to each other horizontally       |
-| `inline-block` | appear next to each other horizontally with vertical padding and margins applied |
-| `block`        | spans the full width of the container, stack vertically                          |
-| `none`         | does not appear in the document                                                  |
+| Display        | Comportamiento                                                                                    |
+|----------------|---------------------------------------------------------------------------------------------------|
+| `inline`       | utilizados principalmente para el formato de texto, aparecen uno al lado del otro horizontalmente |
+| `inline-block` | aparecen uno al lado del otro horizontalmente con acolchado vertical y márgenes aplicados         |
+| `block`        | se extiende a lo largo de todo el ancho del contenedor, apilado verticalmente                     |
+| `none`         | no aparece en el documento                                                                        |
 
-## Layouts: Positioning
+## Maquetación: Posicionamiento
 
-The `position` property, while important, is not what you should be using for the majority of layout related decisions. Changing `position` from it's default value (`static`) should be reserved for a few specific situations. There are three that are mainly used: `fixed`, `absolute`, and `relative`. A positioned element is affected by `top`, `left`, `right`, `bottom` and `z-index`.
+La propiedad `position`, aunque importante, no es lo que debería usar para la mayoría de las decisiones relacionadas con el diseño. Cambiar la `position` de su valor por defecto (`static`) debe reservarse para unas pocas situaciones específicas. Hay tres que se usan principalmente: `fixed`, `absolute` y `relative`. Un elemento posicionado se ve afectado por `top`, `left`, `right`, `bottom` y `z-index`.
 
-### Normal flow
+### Flujo normal (normal)
 
-If you do not modify the `position` of any element, everything pertains to the [Normal flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) of the document. All this means is that:
+Si no se modifica la `position` de ningún elemento, todo pertenece al [Flujo normal](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) del documento. Todo esto significa que
 
-- block level elements will take up the **full width** of their **container**, and the height of their content
-- block level elements will stack on top of each other vertically, from top to bottom
-- inline elements are as tall and wide as their content
-- all elements are aware of each other, and margins will collapse
+- Los elementos del nivel de bloque ocuparán el **ancho completo** de su **contenedor**, y la altura de su contenido
+- los elementos del nivel del bloque se apilan verticalmente uno encima del otro, de arriba a abajo
+- Los elementos en línea son tan altos y anchos como su contenido
+- todos los elementos son conscientes de los demás, y los márgenes se colapsarán
 
-### Static
+### Estática (static)
 
-The default state of `position` is `static`. It means your element stays in the normal flow of the document. If you have three static `div`s next to each other, they will all be aware of each other and stack on top of each other.
+El estado por defecto de la `position` es `static`. Esto significa que su elemento se mantiene en el flujo normal del documento. Si tienes tres `div`s estáticos uno al lado del otro, todos se darán cuenta del otro y se apilarán uno encima del otro.
 
 ```html
 <div>div</div>
@@ -701,19 +706,19 @@ div {
 
 ![](../images/div.png)
 
-`static` elements are not positioned, and therefore not affected by `top`, `left`, `right`, `bottom`, or `z-index`.
+Los elementos `estáticos` no están posicionados, y por lo tanto no se ven afectados por los índices `top`, `left`, `right`, `bottom` o `z-index`.
 
-> **Note:** Just because elements have a `static` position does not always mean they will stack each other vertically. The `display` property might modify this, with `inline-block`, `grid`, or `flex`, but they will still be part of the regular document flow and other elements will be aware of them.
+> **Nota:** El hecho de que los elementos tengan una posición `static` no siempre significa que se apilen verticalmente. La propiedad `display` puede modificar esto, con `inline-block`, `grid`, o `flex`, pero seguirán formando parte del flujo regular de documentos y otros elementos serán conscientes de ello.
 
-### Fixed
+### Fijo (fixed)
 
-A `fixed` element is the easiest position to understand: it is always visible and positioned according to the viewport.
+Un elemento `fixed` es la posición más fácil de entender: siempre está visible y posicionado de acuerdo a la vista.
 
-A few common uses of `fixed` positioning:
+Algunos usos comunes del posicionamiento `fixed`:
 
-- a stick-to-top **navigation bar**
-- a **back to top** button in the bottom right of the screen
-- a **popup modal** that is in the center of the viewport
+- una barra de navegación con un palo en la parte superior.
+- un botón **volver al principio** en la parte inferior derecha de la pantalla
+- un **popup modal** que está en el centro de la vista
 
 ```css
 nav {
@@ -721,13 +726,13 @@ nav {
 }
 ```
 
-A few things to know about `fixed` elements:
+Algunas cosas que hay que saber sobre los elementos `fijos`:
 
-- their position on the screen is determined by `top`, `left`, `right`, and `bottom` properties. `top: 0` means it will stick to the top of the viewport, and `top: 10px` means it will be `10px` from the top of the viewport
-- other elements are **not aware** of the existence of a `fixed` element. This generally means you must account for the space they would occupy by **adding margins** to the elements around them.
-- `fixed` elements are no longer part of the flow and do not have a containing element, and therefore do not expand to fill their container like a normal (block) element would.
+- su posición en la pantalla está determinada por las propiedades `top`, `left`, `right` y `bottom`. `top: 0` significa que se pegará a la parte superior de la ventana, y `top: 10px` significa que estará a `10px` de la parte superior de la ventana.
+- otros elementos no son conscientes de la existencia de un elemento `fijo`. Esto generalmente significa que debes tener en cuenta el espacio que ocuparían al **añadir márgenes** a los elementos que los rodean.
+- Los elementos `fijos` ya no forman parte del flujo y no tienen un elemento que los contenga, y por lo tanto no se expanden para llenar su contenedor como lo haría un elemento normal (bloque).
 
-This means if all we do is set our `nav` to fixed with no other properties, it will not expand the full width of the viewport.
+Esto significa que si todo lo que hacemos es establecer nuestro `nav` como fijo sin otras propiedades, no se expandirá el ancho completo del viewport.
 
 ```html
 <nav>nav</nav>
@@ -751,7 +756,7 @@ nav {
 
 ![](../images/nav.png)
 
-So we can update it to be full width, and stick to the top and left of the viewport:
+Así que podemos actualizarlo para que tenga todo el ancho, y se pegue a la parte superior e izquierda del viewport:
 
 ```css
 nav {
@@ -767,7 +772,7 @@ nav {
 
 ![](../images/nav2.png)
 
-We're adding the `z-index` property, which affects the z-axis of the element. Since we intend this element to always be completely visible, we give it a `z-index` greater than `0` to ensure it's always "above" any element in our document. As we can see, there's one last issue, which is that the `nav` is overlapping the content. As mentioned previously, you _must_ add space (margins) to `static` elements to make space for the `fixed` element. Simply adding a `margin-bottom` to the `nav` won't have any effect.
+Añadimos la propiedad `z-index`, que afecta al eje z del elemento. Dado que pretendemos que este elemento sea siempre completamente visible, le damos un `z-index` mayor que `0` para asegurarnos de que siempre esté `por encima` de cualquier elemento de nuestro documento. Como podemos ver, hay una última cuestión, que es que el `navegador` se superpone al contenido. Como se mencionó anteriormente, debes añadir espacio (márgenes) a los elementos `estáticos` para hacer espacio para el elemento `fijo`. Simplemente añadiendo un `margin-bottom` al `nav` no tendrá ningún efecto.
 
 ```html
 <nav>nav</nav>
@@ -786,30 +791,30 @@ section {
 
 ![](../images/nav3.png)
 
-So now we have that all taken care of and `fixed` positioning should make sense.
+Así que ahora tenemos que todo cuidado y el posicionamiento `fixed` debe tener sentido.
 
-### Absolute and relative
+### Absoluto y relativo (Absolute, relative)
 
-`absolute` and `relative` positions go hand in hand. Take everything you just learned about `fixed` elements and apply them to `absolute` elements. They behave almost exactly the same: other elements don't know about `absolute` elements, they're affected by the directional properties and `z-index`. The difference is instead of being positioned relative to the viewport (browser window), they're positioned relative to the nearest element that is not `static` - so a `fixed`, `absolute`, or `relative` element.
+Las posiciones `absolute` y `relative` van de la mano. Toma todo lo que acabas de aprender sobre los elementos `fixed` y aplícalo a los elementos `absolute`. Se comportan casi exactamente igual: otros elementos no saben de elementos `absolute`, están afectados por las propiedades direccionales y el `z-index`. La diferencia es que en lugar de estar posicionados con respecto a la ventana del navegador, se posicionan con respecto al elemento más cercano que no es `static`, es decir, un elemento `fixed`, `absolute` o `relative`.
 
-`relative` elements, on the other hand, behave almost exactly the same as a `static` element - they are part of the document flow, and simply setting `relative` to an element will not change its appearance at all. The difference is a `relative` element _can_ use the directional properties - `top`, `left`, `right`, and `bottom`.
+Los elementos `relative`, por otro lado, se comportan casi exactamente igual que un elemento `static` - son parte del flujo de documentos, y el simple hecho de establecer un `relative` a un elemento no cambiará su apariencia en absoluto. La diferencia es que un elemento `relative` puede usar las propiedades direccionales `top`, `left`, `right`, y `bottom`.
 
-However, the most common usage of `relative` and `absolute` is that a `relative` element is treated as `static`, but as an **anchor point** for some other `absolute` element.
+Sin embargo, el uso más común de `relative` y `absolute` es que un elemento `relative` es tratado como `static`, pero como un `punto de anclaje` para algún otro elemento `absolute`.
 
-I'll make an example with a `section` (red) that has a nested `div` (blue).
+Haré un ejemplo con una `sección` (rojo) que tiene una `div` anidada (azul).
 
 ```html
 <section>
-  section
+  sección
   <div>div</div>
 </section>
 ```
 
-With no positioning applied, the `div` is contained inside of the `section`.
+Sin posicionamiento aplicado, el `div` está contenido dentro de la `sección`.
 
 ![](../images/absolute1.png)
 
-Now imagine I have a bunch of card elements that are always `100px` tall, regardless of the content contained within, and I want a button to always exist at the same spot on the bottom right. Using `relative` and `absolute`, the `div` will always be in the same spot on any card.
+Ahora imagina que tengo un montón de elementos de tarjeta que siempre son `100px` de alto, independientemente del contenido que contengan, y quiero que un botón siempre exista en el mismo lugar en la parte inferior derecha. Usando `relative` y `absolute`, el `div` siempre estará en el mismo lugar en cualquier tarjeta.
 
 ```css
 section {
@@ -826,22 +831,22 @@ div {
 
 ![](../images/absolute2.png)
 
-To summarize, use `relative` when you want something else to be anchored to an element but you don't want that element itself to move or be affected at all, and use `absolute` on the element to be anchored. A common usage of this is card-like elements.
+Para resumir, usa `relative` cuando quieras que algo más esté anclado a un elemento pero no quieras que ese elemento en sí se mueva o se vea afectado en absoluto, y usa `absolute` en el elemento a anclar. Un uso común de esto son los elementos tipo tarjeta.
 
-This [card element](https://taniarascia.github.io/card/) is an example of absolute coming in handy to make sure they're always the same size but the buttons line up.
+Este [elemento de tarjeta](https://taniarascia.github.io/card/) es un ejemplo de absoluta utilidad para asegurarse de que siempre son del mismo tamaño pero los botones se alinean.
 
 ![](../images/absolute3.png)
 
-### Positioning Reference
+### Referencia de posicionamiento
 
-| Position   | Behavior                                                                            | In Document Flow |
-| ---------- | ----------------------------------------------------------------------------------- | ---------------- |
-| `static`   | default behavior; elements stack in order and are aware of each other               | Yes              |
-| `relative` | positioned relative to its original position in the flow                            | Yes              |
-| `fixed`    | positioned relative to the viewport                                                 | No               |
-| `absolute` | positioned relative to closest non-static (`fixed`, `relative`, `absolute`) element | No               |
+| Posición   | Comportamiento                                                                                    | En el flujo de documentos |
+|------------|---------------------------------------------------------------------------------------------------|---------------------------|
+| `static`   | comportamiento por defecto; los elementos se apilan en orden y se conocen entre sí                | Yes                       |
+| `relative` | posicionado con respecto a su posición original en el flujo                                       | Yes                       |
+| `fixed`    | posicionado con respecto a la ventana de visualización                                            | No                        |
+| `absolute` | posicionado en relación con el elemento no estático más cercano (`fixed`, `relative`, `absolute`) | No                        |
 
-## Layouts: Flex
+## Maquetación: Flex
 
 The `block`, `inline-block`, and `inline` display types all apply to the element itself. [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is different, because it applies to elements nested within the one that has `display: flex`. There are many resources that go deep into Flexbox and everything it's capable of, but I'm just going to tell you the basic stuff you can always do to easily make layouts.
 
@@ -979,7 +984,7 @@ I believe without knowing anything else about flex, you can get pretty far with 
 ### Flex Container Reference
 
 | Property          | Values                                                                    |
-| ----------------- | ------------------------------------------------------------------------- |
+|-------------------|---------------------------------------------------------------------------|
 | `flex-direction`  | `row`, `column`, `row-reverse`, `column-reverse`                          |
 | `flex-wrap`       | `wrap`, `nowrap`                                                          |
 | `align-items`     | `flex-start`, `flex-end`, `center`, `stretch`, `baseline`                 |
@@ -1084,7 +1089,7 @@ You can easily make simple grids by either setting the `flex-basis` (setting one
 ### Flex Property Reference
 
 | Property      | Description                                                                  |
-| ------------- | ---------------------------------------------------------------------------- |
+|---------------|------------------------------------------------------------------------------|
 | `flex-grow`   | Determines how much a flex item should grow if there's space available       |
 | `flex-shrink` | Determines how much a flex item should shrink if there's not space available |
 | `flex-basis`  | Defines initial size of flex item                                            |
@@ -1133,7 +1138,7 @@ h1 {
 }
 ```
 
-## Other Considerations
+## Otras consideraciones
 
 This article is getting incredibly long, and there's still plenty I haven't covered. Here's a few quick answers and additional resources to the holes in my attempt to cover everything at once.
 
