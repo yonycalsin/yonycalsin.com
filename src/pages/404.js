@@ -6,47 +6,47 @@ import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 
 export default class NotFoundPage extends Component {
-  static contextType = ThemeContext
+   static contextType = ThemeContext
 
-  componentDidMount() {
-    const { setNotFound } = this.context
+   componentDidMount() {
+      const { setNotFound } = this.context
 
-    setNotFound()
-  }
+      setNotFound()
+   }
 
-  componentWillUnmount() {
-    const { setFound } = this.context
+   componentWillUnmount() {
+      const { setFound } = this.context
 
-    setFound()
-  }
+      setFound()
+   }
 
-  render() {
-    return (
-      <Layout>
-        <Helmet title={`Page not found – ${config.siteTitle}`} />
-        <SEO />
-        <div className="container">
-          <div className="text-center">
-            <h1>404</h1>
-          </div>
-          <p>
-            A fatal exception 0E has occurred at <span className="tania">0x74616e6961</span> in 404:
-            page not found.
+   render() {
+      return (
+         <Layout>
+            <Helmet title={`Page not found – ${config.siteTitle}`} />
+            <SEO />
+            <div className="container">
+               <div className="text-center">
+                  <h1>404</h1>
+               </div>
+               <p>
+                  Se ha producido una excepción fatal 0E en <span className="tania">0x74616e6961</span> en 404:
+                     página no encontrada.
           </p>
-          <div className="list">
-            <p>
-              <span className="bullet">*</span> Click any link to terminate the current application.
+               <div className="list">
+                  <p>
+                     <span className="bullet">*</span> Haga clic en cualquier enlace para terminar la aplicación actual.
             </p>
-            <p>
-              <span className="bullet">*</span> Press ALT + F4 again to restart your browser. You
-              will lose any unsaved information in all tabs.
+                  <p>
+                     <span className="bullet">*</span> Presione nuevamente ALT + F4 para reiniciar su navegador. Usted
+                     perderá cualquier información no guardada en todas las pestañas.
             </p>
-          </div>
-          <p className="text-right">
-            Click any link to continue<span className="blink">&#9608;</span>
-          </p>
-        </div>
-      </Layout>
-    )
-  }
+               </div>
+               <p className="text-right">
+                  Haga clic en cualquier enlace para continuar<span className="blink">&#9608;</span>
+               </p>
+            </div>
+         </Layout>
+      )
+   }
 }
