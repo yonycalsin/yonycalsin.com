@@ -7,98 +7,98 @@ import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 
 export default class BlogPage extends Component {
-  state = {
-    searchTerm: '',
-    currentCategories: [],
-    posts: this.props.data.posts.edges,
-    filteredPosts: this.props.data.posts.edges,
-  }
+   state = {
+      searchTerm: '',
+      currentCategories: [],
+      posts: this.props.data.posts.edges,
+      filteredPosts: this.props.data.posts.edges,
+   }
 
-  handleChange = async event => {
-    const { name, value } = event.target
+   handleChange = async event => {
+      const { name, value } = event.target
 
-    await this.setState({ [name]: value })
+      await this.setState({ [name]: value })
 
-    this.filterPosts()
-  }
+      this.filterPosts()
+   }
 
-  filterPosts = () => {
-    const { posts, searchTerm, currentCategories } = this.state
+   filterPosts = () => {
+      const { posts, searchTerm, currentCategories } = this.state
 
-    let filteredPosts = posts.filter(post =>
-      post.node.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-
-    if (currentCategories.length > 0) {
-      filteredPosts = filteredPosts.filter(
-        post =>
-          post.node.frontmatter.categories &&
-          currentCategories.every(cat => post.node.frontmatter.categories.includes(cat))
+      let filteredPosts = posts.filter(post =>
+         post.node.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
-    }
 
-    this.setState({ filteredPosts })
-  }
+      if (currentCategories.length > 0) {
+         filteredPosts = filteredPosts.filter(
+            post =>
+               post.node.frontmatter.categories &&
+               currentCategories.every(cat => post.node.frontmatter.categories.includes(cat))
+         )
+      }
 
-  updateCategories = category => {
-    const { currentCategories } = this.state
+      this.setState({ filteredPosts })
+   }
 
-    if (!currentCategories.includes(category)) {
-      this.setState(prevState => ({
-        currentCategories: [...prevState.currentCategories, category],
-      }))
-    } else {
-      this.setState(prevState => ({
-        currentCategories: prevState.currentCategories.filter(cat => category !== cat),
-      }))
-    }
-  }
+   updateCategories = category => {
+      const { currentCategories } = this.state
 
-  render() {
-    const { filteredPosts, searchTerm, currentCategories } = this.state
-    const filterCount = filteredPosts.length
-    const categories = this.props.data.categories.group
+      if (!currentCategories.includes(category)) {
+         this.setState(prevState => ({
+            currentCategories: [...prevState.currentCategories, category],
+         }))
+      } else {
+         this.setState(prevState => ({
+            currentCategories: prevState.currentCategories.filter(cat => category !== cat),
+         }))
+      }
+   }
 
-    return (
-      <Layout>
-        <Helmet title={`Articles – ${config.siteTitle}`} />
-        <SEO />
-        <div className="container">
-          <h1>Articles</h1>
-          <div className="category-container">
-            {categories.map(category => {
-              const active = currentCategories.includes(category.fieldValue)
+   render() {
+      const { filteredPosts, searchTerm, currentCategories } = this.state
+      const filterCount = filteredPosts.length
+      const categories = this.props.data.categories.group
 
-              return (
-                <div
-                  className={`category-filter ${active ? 'active' : ''}`}
-                  key={category.fieldValue}
-                  onClick={async () => {
-                    await this.updateCategories(category.fieldValue)
-                    await this.filterPosts()
-                  }}
-                >
-                  {category.fieldValue}
-                </div>
-              )
-            })}
-          </div>
-          <div className="search-container">
-            <input
-              className="search"
-              type="text"
-              name="searchTerm"
-              value={searchTerm}
-              placeholder="Type here to filter posts..."
-              onChange={this.handleChange}
-            />
-            <div className="filter-count">{filterCount}</div>
-          </div>
-          <PostListing postEdges={filteredPosts} />
-        </div>
-      </Layout>
-    )
-  }
+      return (
+         <Layout>
+            <Helmet title={`Articles – ${config.siteTitle}`} />
+            <SEO />
+            <div className="container">
+               <h1>Articles</h1>
+               <div className="category-container">
+                  {categories.map(category => {
+                     const active = currentCategories.includes(category.fieldValue)
+
+                     return (
+                        <div
+                           className={`category-filter ${active ? 'active' : ''}`}
+                           key={category.fieldValue}
+                           onClick={async () => {
+                              await this.updateCategories(category.fieldValue)
+                              await this.filterPosts()
+                           }}
+                        >
+                           {category.fieldValue}
+                        </div>
+                     )
+                  })}
+               </div>
+               <div className="search-container">
+                  <input
+                     className="search"
+                     type="text"
+                     name="searchTerm"
+                     value={searchTerm}
+                     placeholder="Type here to filter posts..."
+                     onChange={this.handleChange}
+                  />
+                  <div className="filter-count">{filterCount}</div>
+               </div>
+               <PostListing postEdges={filteredPosts} />
+            </div>
+         </Layout>
+      )
+   }
 }
 
 export const pageQuery = graphql`
