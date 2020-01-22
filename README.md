@@ -1,4 +1,4 @@
-# taniarascia.com
+# greyblu.com
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/0a51d0e9-f611-4dd8-887f-fc1889e68540/deploy-status)](https://app.netlify.com/sites/tania/deploys) 
 
@@ -32,10 +32,13 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 ## Author
 
 - [Tania Rascia](https://www.taniarascia.com)
+- [Yoni Calsin](https://www.greyblu.com)
+   - [Github](https://github.com/yonicb)
+   - [Twitter](https://twitter.com/yonicalsin)
 
-<a href="https://patreon.com/taniarascia"><img src="https://img.shields.io/endpoint.svg?url=https://shieldsio-patreon.herokuapp.com/taniarascia&style=for-the-badge" alt="Patreon donate button" /> </a>
+<!-- <a href="https://patreon.com/taniarascia"><img src="https://img.shields.io/endpoint.svg?url=https://shieldsio-patreon.herokuapp.com/taniarascia&style=for-the-badge" alt="Patreon donate button" /> </a> -->
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F1GNP8)
+<!-- [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F1GNP8) -->
 
 ## License
 
