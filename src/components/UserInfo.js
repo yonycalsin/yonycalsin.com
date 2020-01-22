@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import yoni from '../../content/images/yoni-avatar.jpg'
+import yoni from '../../content/images/yoni-avatar.png'
 import patreon from '../../content/thumbnails/patreon.png'
 import kofi from '../../content/thumbnails/kofi.png'
 
