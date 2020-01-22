@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import tania from '../../content/images/tania-avatar.jpg'
+import yoni from '../../content/images/yoni-avatar.jpg'
 import patreon from '../../content/thumbnails/patreon.png'
 import kofi from '../../content/thumbnails/kofi.png'
 
@@ -10,11 +10,11 @@ export default class UserInfo extends Component {
             <div className="container note-container">
                <div className="flex-author">
                   <div className="flex-avatar">
-                     <img className="avatar" src={tania} alt="Yoni Calsin" />
+                     <img className="avatar" src={yoni} alt="Yoni Calsin" />
                   </div>
                   <div>
                      <p>
-                        Soy Yoni Calsin. Documento todo lo que aprendo y ayudo a miles de personas a comenzar a codificar carreras.{' '}
+                        Soy Yoni Calsin, Documento todo lo que aprendo y ayudo a miles de personas a comenzar a codificar carreras.{' '}
                         <strong>
                            Si disfrutas de mi contenido, considera apoyar lo que hago.
                 </strong>
