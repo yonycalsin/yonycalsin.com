@@ -23,7 +23,7 @@ export default class NotFoundPage extends Component {
    render() {
       return (
          <Layout>
-            <Helmet title={`Page not found – ${config.siteTitle}`} />
+            <Helmet title={`Página no encontrada – ${config.siteTitle}`} />
             <SEO />
             <div className="container">
                <div className="text-center">
