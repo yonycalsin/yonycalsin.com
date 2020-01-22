@@ -12,7 +12,7 @@ import projects from '../../data/projects'
 import speaking from '../../data/speaking'
 import podcasts from '../../data/podcasts'
 import quotes from '../../data/quotes'
-import yoni from '../../content/images/yoni-avatar.jpg'
+import yoni from '../../content/images/yoni-avatar.png'
 
 export default class Index extends Component {
    render() {
