@@ -28,7 +28,7 @@ export default class Index extends Component {
             <div className="container">
                <div className="lead">
                   <div className="elevator">
-                     <h1>{`Hey, I'm Tania`}</h1>
+                     <h1>{`Hola, soy Yoni`}</h1>
                      <p>
                         Soy un desarrollador de software de primera línea que trabaja en{' '}
                         <a href="https://github.com/yonicb" target="_blank" rel="noopener noreferrer">
