@@ -12,7 +12,7 @@ import projects from '../../data/projects'
 import speaking from '../../data/speaking'
 import podcasts from '../../data/podcasts'
 import quotes from '../../data/quotes'
-import tania from '../../content/images/tania-avatar.jpg'
+import yoni from '../../content/images/yoni-avatar.jpg'
 
 export default class Index extends Component {
    render() {
@@ -23,7 +23,7 @@ export default class Index extends Component {
 
       return (
          <Layout>
-            <Helmet title={`${config.siteTitle} – Developer & Writer`} />
+            <Helmet title={`${config.siteTitle} – Desarrollador & Redactor`} />
             <SEO />
             <div className="container">
                <div className="lead">
@@ -31,7 +31,7 @@ export default class Index extends Component {
                      <h1>{`Hey, I'm Tania`}</h1>
                      <p>
                         Soy un desarrollador de software de primera línea que trabaja en{' '}
-                        <a href="https://github.com/taniarascia" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/yonicb" target="_blank" rel="noopener noreferrer">
                            open source</a>{' '}
                         y <Link to="/blog">escribiendo</Link> sobre JavaScript moderno, Node.js, y desarrollo. 💾
               </p>
@@ -41,18 +41,18 @@ export default class Index extends Component {
                            data-size="large"
                            data-show-count="true"
                         >
-                           yonicb
+                           Yoni Calsin
                 </GitHubButton>
                      </div>
                   </div>
                   <div className="newsletter-section">
-                     <img src={tania} className="newsletter-avatar" alt="Tania" />
+                     <img src={yoni} className="newsletter-avatar" alt="Tania" />
                      <div>
                         <h3>Obtener actualizaciones</h3>
                         <p>Proyectos de código abierto y tutoriales de desarrollo</p>
-                        <a className="button" href="https://taniarascia.substack.com">
+                        <a className="button" href="https://github.com/yonicb">
                            Suscríbete
-                </a>
+                        </a>
                      </div>
                   </div>
                </div>
