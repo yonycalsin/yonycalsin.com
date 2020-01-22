@@ -1,5 +1,5 @@
 ---
-date: 2019-12-02
+date: 2020-01-5
 title: 'CSS: Un Arte, una Ciencia, una Pesadilla (Todo lo que debes saber)'
 template: post
 thumbnail: '../thumbnails/css2.png'
