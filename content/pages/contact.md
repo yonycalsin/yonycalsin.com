@@ -6,7 +6,7 @@ template: page
 
 Hi, I'm Tania - a front end software developer based out of Chicago. I build open-source projects and write about modern JavaScript, Node.js, design and web development. If you like my stuff and hate spam, join over **8,000 other developers** in receiving my email newsletter. 👇 One-click unsubscribe anytime.
 
-<div class="centered-iframe">
+<!-- <div class="centered-iframe">
   <iframe
     width="480"
     height="150"
@@ -14,7 +14,7 @@ Hi, I'm Tania - a front end software developer based out of Chicago. I build ope
     frameborder="0"
     scrolling="no"
   ></iframe>
-</div>
+</div> -->
 
 If you have any questions, comments, ideas, critiques, or you just want to say hi, don't hesitate to send me an email at [hello@taniarascia.com](mailto:hello[AT]taniarascia[DOT]com)!
 
