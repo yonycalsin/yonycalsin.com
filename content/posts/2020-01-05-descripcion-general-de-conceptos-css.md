@@ -1,11 +1,12 @@
 ---
-date: 2020-01-5
+date: 2020-01-05
 title: 'CSS: Un Arte, una Ciencia, una Pesadilla (Todo lo que debes saber)'
 template: post
 thumbnail: '../thumbnails/css2.png'
 slug: descripcion-general-de-conceptos-css
 categories:
   - Diseño
+  - Popular
 tags:
   - css
   - estilo
