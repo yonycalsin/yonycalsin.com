@@ -1,24 +1,35 @@
 export default [
    {
+      icon: '🎨',
+      title: 'Sass Colors',
+      path: 'https://yoicalsin.github.io/sass-colors/',
+      source: 'https://github.com/yoicalsin/sass-colors',
+      description:
+         'Sass-colors 🌐 is a scss library, which adds modern colors.',
+   },
+   {
       icon: '📝',
       title: 'TakeNote',
       path: 'https://takenote.dev',
       source: 'https://github.com/taniarascia/takenote',
-      description: 'A web-based note-taking app with GitHub sync and Markdown support.',
+      description:
+         'A web-based note-taking app with GitHub sync and Markdown support.',
    },
    {
       icon: '🌙',
       title: 'New Moon',
       path: 'https://taniarascia.github.io/new-moon/',
       source: 'https://github.com/taniarascia/new-moon/',
-      description: 'The optimized dark theme for web development. Your new favorite theme.',
+      description:
+         'The optimized dark theme for web development. Your new favorite theme.',
    },
    {
       icon: '🎮',
       title: 'Chip8.js',
       path: 'https://taniarascia.github.io/chip8/',
       source: 'https://github.com/taniarascia/chip8/',
-      description: 'A Chip-8 emulator written in JavaScript for terminal and the browser.',
+      description:
+         'A Chip-8 emulator written in JavaScript for terminal and the browser.',
    },
    {
       icon: '🔱',
@@ -32,7 +43,8 @@ export default [
       title: 'Laconia',
       path: 'https://laconia.dev',
       source: 'https://github.com/taniarascia/laconia/',
-      description: 'A modern PHP MVC framework written without libraries or frameworks.',
+      description:
+         'A modern PHP MVC framework written without libraries or frameworks.',
    },
    {
       icon: '⛏️',
@@ -46,7 +58,8 @@ export default [
       icon: '🐍',
       title: 'Snek.js',
       source: 'https://github.com/taniarascia/snek/',
-      description: 'A terminal-based Snake implementation written in JavaScript (Node.js).',
+      description:
+         'A terminal-based Snake implementation written in JavaScript (Node.js).',
    },
    {
       icon: '📦',
@@ -61,4 +74,4 @@ export default [
       source: 'https://github.com/taniarascia/taniarascia.com/',
       description: 'Personal theme for Gatsby (the source of this website).',
    },
-]
+];
