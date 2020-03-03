@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import GitHubButton from 'react-github-btn'
-import { graphql, Link } from 'gatsby'
-import Layout from '../layout'
-import PostListing from '../components/PostListing'
-import ProjectListing from '../components/ProjectListing'
-import SimpleListing from '../components/SimpleListing'
-import SEO from '../components/SEO'
-import config from '../../data/SiteConfig'
-import projects from '../../data/projects'
-import speaking from '../../data/speaking'
-import podcasts from '../../data/podcasts'
-import quotes from '../../data/quotes'
-import yoni from '../../content/images/yoni-avatar.png'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import GitHubButton from 'react-github-btn';
+import { graphql, Link } from 'gatsby';
+import Layout from '../layout';
+import PostListing from '../components/PostListing';
+import ProjectListing from '../components/ProjectListing';
+import SimpleListing from '../components/SimpleListing';
+import SEO from '../components/SEO';
+import config from '../../data/SiteConfig';
+import projects from '../../data/projects';
+import speaking from '../../data/speaking';
+import podcasts from '../../data/podcasts';
+import quotes from '../../data/quotes';
+import yoni from '../../content/images/yoni-avatar.png';
 
 export default class Index extends Component {
    render() {
-      const { data } = this.props
+      const { data } = this.props;
 
-      const latestPostEdges = data.latest.edges
-      const popularPostEdges = data.popular.edges
+      const latestPostEdges = data.latest.edges;
+      const popularPostEdges = data.popular.edges;
 
       return (
          <Layout>
@@ -30,27 +30,44 @@ export default class Index extends Component {
                   <div className="elevator">
                      <h1>{`Hola, soy Yoni`}</h1>
                      <p>
-                        Soy un desarrollador de software de primera línea que trabaja en{' '}
-                        <a href="https://github.com/yonicb" target="_blank" rel="noopener noreferrer">
-                           open source</a>{' '}
-                        y <Link to="/blog">escribiendo</Link> sobre JavaScript moderno, Node.js, y desarrollo. 💾
-              </p>
+                        Soy un desarrollador de software de primera línea que
+                        trabaja en{' '}
+                        <a
+                           href="https://github.com/yoicalsin"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           open source
+                        </a>{' '}
+                        y <Link to="/blog">escribiendo</Link> sobre JavaScript
+                        moderno, Node.js, y desarrollo. 💾
+                     </p>
                      <div className="social-buttons">
                         <GitHubButton
-                           href="https://github.com/yonicb"
+                           href="https://github.com/yoicalsin"
                            data-size="large"
                            data-show-count="true"
                         >
                            Yoni Calsin
-                </GitHubButton>
+                        </GitHubButton>
                      </div>
                   </div>
                   <div className="newsletter-section">
-                     <img src={yoni} className="newsletter-avatar" alt="Tania" />
+                     <img
+                        src={yoni}
+                        className="newsletter-avatar"
+                        alt="Tania"
+                     />
                      <div>
                         <h3>Obtener actualizaciones</h3>
-                        <p>Proyectos de código abierto y tutoriales de desarrollo</p>
-                        <a className="button" href="https://github.com/yonicb">
+                        <p>
+                           Proyectos de código abierto y tutoriales de
+                           desarrollo
+                        </p>
+                        <a
+                           className="button"
+                           href="https://github.com/yoicalsin"
+                        >
                            Suscríbete
                         </a>
                      </div>
@@ -62,9 +79,9 @@ export default class Index extends Component {
                <section className="section">
                   <h2>
                      Últimos artículos
-              <Link to="/blog" className="view-all">
+                     <Link to="/blog" className="view-all">
                         Ver todo
-              </Link>
+                     </Link>
                   </h2>
                   <PostListing simple postEdges={latestPostEdges} />
                </section>
@@ -72,9 +89,9 @@ export default class Index extends Component {
                <section className="section">
                   <h2>
                      Lo más popular
-              <Link to="/categories/popular" className="view-all">
+                     <Link to="/categories/popular" className="view-all">
                         Ver todo
-              </Link>
+                     </Link>
                   </h2>
                   <PostListing simple postEdges={popularPostEdges} />
                </section>
@@ -107,71 +124,71 @@ export default class Index extends Component {
                </section>
             </div>
          </Layout>
-      )
+      );
    }
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    latest: allMarkdownRemark(
-      limit: 6
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { template: { eq: "post" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            categories
-            thumbnail {
-              childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
+   query IndexQuery {
+      latest: allMarkdownRemark(
+         limit: 6
+         sort: { fields: [fields___date], order: DESC }
+         filter: { frontmatter: { template: { eq: "post" } } }
+      ) {
+         edges {
+            node {
+               fields {
+                  slug
+                  date
+               }
+               excerpt
+               timeToRead
+               frontmatter {
+                  title
+                  tags
+                  categories
+                  thumbnail {
+                     childImageSharp {
+                        fixed(width: 150, height: 150) {
+                           ...GatsbyImageSharpFixed
+                        }
+                     }
+                  }
+                  date
+                  template
+               }
             }
-            date
-            template
-          }
-        }
+         }
       }
-    }
-    popular: allMarkdownRemark(
-      limit: 7
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: "Popular" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            categories
-            thumbnail {
-              childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
+      popular: allMarkdownRemark(
+         limit: 7
+         sort: { fields: [fields___date], order: DESC }
+         filter: { frontmatter: { categories: { eq: "Popular" } } }
+      ) {
+         edges {
+            node {
+               fields {
+                  slug
+                  date
+               }
+               excerpt
+               timeToRead
+               frontmatter {
+                  title
+                  tags
+                  categories
+                  thumbnail {
+                     childImageSharp {
+                        fixed(width: 150, height: 150) {
+                           ...GatsbyImageSharpFixed
+                        }
+                     }
+                  }
+                  date
+                  template
+               }
             }
-            date
-            template
-          }
-        }
+         }
       }
-    }
-  }
-`
+   }
+`;
