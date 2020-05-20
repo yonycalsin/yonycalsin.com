@@ -1,7 +1,23 @@
-const gh = url => 'https://github.com/yoicalsin/' + url;
-const ghp = url => 'https://yoicalsin.github.io/' + url;
+const gh = (url, user = 'yoicalsin') => `https://github.com/${user}/${url}`;
+const ghp = (url, user = 'yoicalsin') => `https://${user}.github.io/${url}`;
 
 export default [
+   {
+      icon: '🚀',
+      title: 'Nest',
+      path: 'https://nestjs.com/',
+      source: gh('nest', 'nestjs'),
+      description:
+         'A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8)',
+   },
+   {
+      icon: '📋',
+      title: 'React Hook Form',
+      path: 'https://react-hook-form.com/',
+      source: 'https://github.com/react-hook-form/react-hook-form',
+      description:
+         'React hooks for forms validation without the hassle (Web + React Native)',
+   },
    {
       icon: '🌍',
       title: 'Cogenv',
@@ -51,7 +67,7 @@ export default [
    },
 
    {
-      icon: '💾',
+      icon: '🏆',
       title: 'greyblu.com',
       source: 'https://github.com/greyblu/greyblu.com/',
       description: 'Personal theme for Gatsby (the source of this website).',

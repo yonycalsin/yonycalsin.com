@@ -1,9 +1,9 @@
 {
-   "name": "taniarascia.com",
+   "name": "greyblu.com",
    "description": "Personal website running on Gatsby, React, and Node.js.",
    "version": "1.0.1",
-   "author": "Tania Rascia <hello@taniarascia.com>",
-   "repository": "git@github.com:taniarascia/taniarascia.com",
+   "author": "Yoni Calsin <helloyonicb@gmail.com>",
+   "repository": "git@github.com:greyblu/greyblu.com",
    "dependencies": {
       "eslint-utils": "^1.4.1",
       "gatsby": "^2.13.13",
