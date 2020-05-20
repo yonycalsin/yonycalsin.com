@@ -19,12 +19,19 @@ export default [
          'React hooks for forms validation without the hassle (Web + React Native)',
    },
    {
+      icon: '☕',
+      title: 'Sequelize',
+      path: 'https://sequelize.org/',
+      source: 'https://github.com/sequelize/sequelize',
+      description: 'An easy-to-use multi SQL dialect ORM for Node.js',
+   },
+   {
       icon: '🌍',
       title: 'Cogenv',
       path: 'https://github.com/cogenv',
       source: 'https://github.com/cogenv',
       description:
-         'Cogenv is a zero-dependency module that loads environment variables from an .env file into process.env. Storing the configuration in the environment separate from the code is based on The Twelve-Factor App methodology, and with support for typescript',
+         'Cogenv is a module that loads environment variables from an .env file',
    },
    {
       icon: '🎨',
