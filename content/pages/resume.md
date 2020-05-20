@@ -6,9 +6,8 @@ template: page
 
 ### Front End Software Developer
 
-- [taniarascia.com](https://www.taniarascia.com)
-- [hello@taniarascia.com](mailto:hello@taniarascia.com)
-- Chicago, IL
+-  [taniarascia.com](https://www.greyblu.com)
+-  [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
 
 ## Technical Skills
 
@@ -22,7 +21,7 @@ React, Vue, Node, Express, Git, VSC, Jest, Selenium, Webpack, DevTools, Jira, AW
 
 ### Concepts
 
-RESTful API Design, CI/CD, Agile Methodology, MVC Architecture, Secure Authentication, ADA, Testing (unit, integration, end-to-end) Databases (MySQL, PostgreSQL)
+RESTful API Design, CI/CD, Agile Methodology, MVC Architecture, Secure Authentication, ADA, Testing (unit, integration, end-to-end) Databases (MySQL, MongoDB)
 
 ## Experience
 
@@ -30,60 +29,66 @@ RESTful API Design, CI/CD, Agile Methodology, MVC Architecture, Secure Authentic
 
 **Dais Technology, Inc** - _2018 - Present | Chicago, IL_
 
-- Architected a platform that implements secure authentication and routing used in several production applications
-- Developed the internal user management and agent/carrier onboarding system
-- Worked in small teams as front end lead to create intuitive UIs
+-  Architected a platform that implements secure authentication and routing used in several production applications
+-  Developed the internal user management and agent/carrier onboarding system
+-  Worked in small teams as front end lead to create intuitive UIs
 
 ### Technical Writer - JavaScript
 
 **DigitalOcean** - _2017 - 2019 | Remote_
 
-- Wrote the Understanding the DOM and How to Code JavaScript tutorial series
-- Shaped the content of the JavaScript curriculum by collaborating with the in-house team
+-  Wrote the Understanding the DOM and How to Code JavaScript tutorial series
+-  Shaped the content of the JavaScript curriculum by collaborating with the in-house team
 
 ### Web Developer
 
 **RateYourSeats.com** - _2018 | Chicago, IL_
 
-- Designed an API for data reuse across multiple front ends
-- Integrated Git version control into the company codebase
-- Created interactive SVGs for arenas and stadiums
+-  Designed an API for data reuse across multiple front ends
+-  Integrated Git version control into the company codebase
+-  Created interactive SVGs for arenas and stadiums
 
 ### Web Developer/Designer
 
 **Lettuce Entertain You Enterprises, Inc.** - _June 2015 - June 2017 | Chicago, IL_
 
-- Developed, designed, and maintained custom websites
-- Took ownership of Amazon Web Services infrastructure and Linux administration tasks
-- Established company conventions/standards and documented all internal processes
+-  Developed, designed, and maintained custom websites
+-  Took ownership of Amazon Web Services infrastructure and Linux administration tasks
+-  Established company conventions/standards and documented all internal processes
 
 ## Open Source Projects
 
-### TakeNote
+### Cogenv / core / object / typed
 
-**Web-based Markdown Note-taking App** - [Source](https://github.com/taniarascia/takenote) - _2019_
+**is an alternative to dotenv, and with many improvements !** - [Source](https://github.com/@cogenv) - _2019_
 
-A simple, Markdown-based note-taking app for the web, written in TypeScript and functional React.
+Cogenv is a zero-dependency module that loads environment variables from an .env file into process.env. Storing the configuration in the environment separate from the code is based on The Twelve-Factor App methodology, and with support for typescript
 
-### Chip8.js
+### Format Fast
 
-**Retro Game Emulator** - [Source](https://github.com/taniarascia/chip8) - _2018 - 2019_
+**String formatter** - [Source](https://github.com/yoicalsin/format-fast) - _2018 - 2019_
 
-An emulator for Chip-8 games implementing browser, terminal, and graphical front ends.
+Format-fast is a function that allows you to replace certain words to make a string dynamically, and very easily !
 
-### Laconia
+### Nestjs Sequelize Seeder
 
-**MVC Authentication Framework** - [Source](https://github.com/taniarascia/laconia) - _2018_
+**Seeder** - [Source](https://github.com/yoicalsin/nestjs-sequelize-seeder) - _2018_
 
-An MVC framework used as a helpful starting point for implementing authentication, object-oriented architecture, MVC concepts, routing and databases.
+🌾 A simple extension library for nestjs sequelize to perform seeding.
 
-### Primitive
+### Nestjs Sequelize Paginate
 
-**Front End Toolkit** - [Source](https://github.com/taniarascia/primitive)
+**paging system** - [Source](https://github.com/yoicalsin/nestjs-sequelize-paginate)
 
-A minimalist front-end design toolkit built with Sass for developing responsive, browser-consistent web apps.
+🎉 Pagination response object function + types for sequelize + nestjs
 
-## Speaking
+### Nestjs Crud Sequelize
+
+**Crud methods** - [Source](https://github.com/yoicalsin/nestjs-crud-sequelize)
+
+Crud for nestjs
+
+<!-- ## Speaking
 
 ### An Introduction to Vue
 
@@ -101,10 +106,10 @@ A minimalist front-end design toolkit built with Sass for developing responsive,
 
 ### B.A. in Professional Studies
 
-**Robert Morris University** - _2007 - 2010 | Chicago, IL_
+**Robert Morris University** - _2007 - 2010 | Chicago, IL_ -->
 
 ## Accomplishments
 
-- Getting Started With React article featured in official React documentation as React For Beginners. [Source](https://reactjs.org/docs/getting-started.html)
-- Interviewed in the Egghead.io Podcast in Switching Careers and Learning in Public with Joel Hooks. [Source](https://egghead.io/podcasts/switching-careers-and-learning-in-public-with-tania-rascia)
-- Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://www.taniarascia.com/publications)
+-  Getting Started With React article featured in official React documentation as React For Beginners. [Source](https://reactjs.org/docs/getting-started.html)
+-  Interviewed in the Egghead.io Podcast in Switching Careers and Learning in Public with Joel Hooks. [Source](https://egghead.io/podcasts/switching-careers-and-learning-in-public-with-tania-rascia)
+-  Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://www.greyblu.com/publications)
