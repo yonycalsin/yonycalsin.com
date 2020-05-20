@@ -5,13 +5,13 @@ template: post
 thumbnail: '../thumbnails/css2.png'
 slug: descripcion-general-de-conceptos-css
 categories:
-  - Diseño
-  - Popular
+   - Diseño
+   - Popular
 tags:
-  - css
-  - estilo
-  - css3
-  - diseño
+   - css
+   - estilo
+   - css3
+   - diseño
 ---
 
 Hablar CSS es como hablar inglés, o cualquier otro idioma hablado - hay muchas palabras, pero sólo terminas usando un pequeño subconjunto de ellas a diario. Al igual que leer un diccionario no es una forma eficiente de aprender un idioma, mirar una [gran lista de propiedades](https://www.w3.org/Style/CSS/all-properties.en.html) no es útil para aprender CSS.
@@ -32,40 +32,40 @@ Este artículo es para el medio de personas que han tenido que tocar el CSS unas
 
 ##### HTML 101
 
-- [Fundamentos de HTML](#fundamentos-de-html)
+-  [Fundamentos de HTML](#fundamentos-de-html)
 
 ##### CSS 101
 
-- [Sintaxis CSS](#Sintaxis-CSS)
-- [Seleccionadores de CSS](#Selectores-CSS)
-- [Especificación de CSS](#Especificidad-de-CSS)
-- [Propiedades CSS](#Propiedades-de-CSS)
+-  [Sintaxis CSS](#Sintaxis-CSS)
+-  [Seleccionadores de CSS](#Selectores-CSS)
+-  [Especificación de CSS](#Especificidad-de-CSS)
+-  [Propiedades CSS](#Propiedades-de-CSS)
 
 ##### Trabajar con CSS
 
-- [Spacing Out](#Espaciamiento-Relleno-y-márgenes)
-  - `padding`, `margin`, `border`
-- [Modelo de caja](#Modelo-de-caja)
-  - `content-box` vs. `border-box`
-- [Propiedades de la taquigrafía](#Propiedades-de-la-taquigrafía)
-- [Maquetación: Display](#Maquetación-display)
-  - `inline`, `inline-block`, `block`
-- [Maquetación: Posicionamiento](#Maquetación-Posicionamiento)
-  - `static`, `fixed`, `absolute`, `relative`
-- [Maquetación: Flex](#Maquetación-flex)
-  - flex containers (`flex` display), flex items (`flex` property)
-- [Responsive: Media Queries](#responsive-media-queries)
-  - `min-width`, `max-width`
-- [Otras consideraciones](#Otras-consideraciones)
+-  [Spacing Out](#Espaciamiento-Relleno-y-márgenes)
+   -  `padding`, `margin`, `border`
+-  [Modelo de caja](#Modelo-de-caja)
+   -  `content-box` vs. `border-box`
+-  [Propiedades de la taquigrafía](#Propiedades-de-la-taquigrafía)
+-  [Maquetación: Display](#Maquetación-display)
+   -  `inline`, `inline-block`, `block`
+-  [Maquetación: Posicionamiento](#Maquetación-Posicionamiento)
+   -  `static`, `fixed`, `absolute`, `relative`
+-  [Maquetación: Flex](#Maquetación-flex)
+   -  flex containers (`flex` display), flex items (`flex` property)
+-  [Responsive: Media Queries](#responsive-media-queries)
+   -  `min-width`, `max-width`
+-  [Otras consideraciones](#Otras-consideraciones)
 
 ## Fundamentos de HTML
 
 A modo de recapitulación, hablaremos mucho de cómo CSS se aplica a HTML, así que asegúrate de estar familiarizado con lo que todo se refiere en HTML.
 
-- **Etiqueta** - nombre de elemento (_ejemplo:_ `a`)
-- **Atributo** - Modificadores de HTML (_ejemplo:_ `href`)
-- **Valor** - valor aplicado a un atributo (_ejemplo:_ `https://greyblu.com`)
-- **Elemento** - todo dentro de la etiqueta HTML - atributos, valores y contenido.
+-  **Etiqueta** - nombre de elemento (_ejemplo:_ `a`)
+-  **Atributo** - Modificadores de HTML (_ejemplo:_ `href`)
+-  **Valor** - valor aplicado a un atributo (_ejemplo:_ `https://greyblu.com`)
+-  **Elemento** - todo dentro de la etiqueta HTML - atributos, valores y contenido.
 
 Ejemplo:
 
@@ -84,7 +84,7 @@ Esto enlazará con mi increíble WebRing.
 ### Referencia HTML
 
 | Sintaxis | Ejemplo                                                        |
-|----------|----------------------------------------------------------------|
+| -------- | -------------------------------------------------------------- |
 | Etiqueta | `a`, `img`, `h1`                                               |
 | Atributo | `href`, `src`, `alt`                                           |
 | Valor    | `https://greyblu.com`, `avatar.png`, `Algún texto alternativo` |
@@ -100,15 +100,15 @@ Voy a repasar algunos de los fundamentos de CSS - sintaxis, selectores y especif
 
 Hay tres partes principales de CSS - selectores, propiedades y valores.
 
-- **Selectores** - el elemento o elementos seleccionados
-- **Propiedades** - el aspecto del elemento que se está estilizando
-- **Valores** - el estilo que se aplica
+-  **Selectores** - el elemento o elementos seleccionados
+-  **Propiedades** - el aspecto del elemento que se está estilizando
+-  **Valores** - el estilo que se aplica
 
 Ejemplo:
 
 ```css
 selector {
-  property: value;
+   property: value;
 }
 ```
 
@@ -116,7 +116,7 @@ Un verdadero ejemplo:
 
 ```css
 h1 {
-  color: blue;
+   color: blue;
 }
 ```
 
@@ -126,38 +126,38 @@ Esto hará que todos los elementos "h1" sean azules.
 
 Desde **menos específico** hasta **más específico** (más sobre eso abajo), aquí están los principales tipos de selectores:
 
-- [**Selector universal**](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) - selecciona todos los elementos
-- [**Seleccionador de tipo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) - apunta elemento(s) por etiqueta HTML (incluye [pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements))
-- [**Selector de clase**](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors), [**Selector de atributo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) - elemento(s) objetivo por clase o atributo, respectivamente (incluye [pseudo clases](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes))
-- [**Selector de id**](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) - apunta a un elemento por id
+-  [**Selector universal**](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) - selecciona todos los elementos
+-  [**Seleccionador de tipo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) - apunta elemento(s) por etiqueta HTML (incluye [pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements))
+-  [**Selector de clase**](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors), [**Selector de atributo**](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) - elemento(s) objetivo por clase o atributo, respectivamente (incluye [pseudo clases](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes))
+-  [**Selector de id**](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) - apunta a un elemento por id
 
 ```css
 * {
-  /* Selector universal */
+   /* Selector universal */
 }
 
 etiqueta {
-  /* Selector de tipo */
+   /* Selector de tipo */
 }
 
 etiqueta::before {
-  /* Selector de tipo (elemento psuedo) */
+   /* Selector de tipo (elemento psuedo) */
 }
 
 .clase {
-  /* Selector de clase */
+   /* Selector de clase */
 }
 
 .clase:hover {
-  /* Selector de clase (pseudo clase) */
+   /* Selector de clase (pseudo clase) */
 }
 
 [attr] {
-  /* Selector de atributos */
+   /* Selector de atributos */
 }
 
 #id {
-  /* Selector de identificación */
+   /* Selector de identificación */
 }
 ```
 
@@ -172,7 +172,7 @@ Esta consulta para obtener todos los elementos que coinciden con un selector:
 <div class="filename">.js</div>
 
 ```js
-document.querySelectorAll('article h2')
+document.querySelectorAll('article h2');
 ```
 
 Apunta a los mismos elementos que este CSS para dar estilo a todos los elementos que coinciden con un selector:
@@ -190,8 +190,8 @@ article h2 {
 
 ¿Sabes la diferencia entre estos dos?
 
-- `.foo.bar`
-- `.foo .bar`
+-  `.foo.bar`
+-  `.foo .bar`
 
 El primero apunta a un `foo` y a un `bar` en el mismo elemento.
 
@@ -199,7 +199,7 @@ El primero apunta a un `foo` y a un `bar` en el mismo elemento.
 
 ```css
 .foo.bar {
-  /* sin un espacio */
+   /* sin un espacio */
 }
 ```
 
@@ -213,13 +213,13 @@ El segundo apunta a un `bar` que desciende de un `foo`.
 
 ```css
 .foo .bar {
-  /* con un espacio */
+   /* con un espacio */
 }
 ```
 
 ```html
 <div class="foo">
-  <div class="bar">Soy el objetivo</div>
+   <div class="bar">Soy el objetivo</div>
 </div>
 ```
 
@@ -228,7 +228,7 @@ Hay otros selectores que pueden usarse en lugar de un espacio para modificar el 
 ### Referencia del selector
 
 | Selector                   | Objetivos                   | Ejemplo                                             |
-|----------------------------|-----------------------------|-----------------------------------------------------|
+| -------------------------- | --------------------------- | --------------------------------------------------- |
 | Selector universal         | Todos los elementos         | `*`                                                 |
 | Selector de tipo           | Etiquetas, pseudo elementos | `h1`, `div`, `li::before`                           |
 | Selector de clase          | Clases, pseudo clases       | `.page-header`, `.page-content`, `.list-item:hover` |
@@ -247,11 +247,11 @@ En primer lugar, si todas las cosas son iguales, el orden en el que se utilizan 
 
 ```css
 .foo {
-  color: blue;
+   color: blue;
 }
 
 .bar {
-  color: red;
+   color: red;
 }
 ```
 
@@ -271,9 +271,9 @@ CSS utiliza una escala numérica para determinar la especificidad. También pued
 
 Como sabemos, hay tres secciones: `ID`, `Clase` y `Tipo`. En la escala, todas están representadas por `0` inicialmente.
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 0  | 0     | 0    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 0   | 0     | 0    |
 
 Cada vez que su selector contenga uno de los selectores, aumentará ese cubo en 1.
 
@@ -283,13 +283,13 @@ Añade un selector de tipo.
 
 ```css
 h1 {
-  /* 001 */
+   /* 001 */
 }
 ```
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 0  | 0     | 1    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 0   | 0     | 1    |
 
 Añade un selector de clase.
 
@@ -297,13 +297,13 @@ Añade un selector de clase.
 
 ```css
 .container h1 {
-  /* 011 */
+   /* 011 */
 }
 ```
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 0  | 1     | 1    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 0   | 1     | 1    |
 
 Añada un selector de identificación.
 
@@ -311,13 +311,13 @@ Añada un selector de identificación.
 
 ```css
 #landing-page .container h1 {
-  /* 111 */
+   /* 111 */
 }
 ```
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 1  | 1     | 1    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 1   | 1     | 1    |
 
 Puede pensar en esta escala exactamente igual que un sistema de números de base 10. Si una etiqueta es `1` (uno), y una clase y tipo es `11` (once), y un id, clase y etiqueta es `111` (ciento uno), ¿cuál es el más grande? En este caso, `111` es el más grande y por lo tanto el más específico.
 
@@ -333,13 +333,13 @@ Este selector es más específico: (`200`, o doscientos)
 
 ```css
 #landing-page #about-section {
-  /* 200 */
+   /* 200 */
 }
 ```
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 2  | 0     | 0    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 2   | 0     | 0    |
 
 Este selector es menos específico: (`140`, o ciento cuarenta)
 
@@ -347,13 +347,13 @@ Este selector es menos específico: (`140`, o ciento cuarenta)
 
 ```css
 #landing-page .foo.bar.baz.box {
-  /* 140 */
+   /* 140 */
 }
 ```
 
-| ID | Clase | Tipo |
-|----|-------|------|
-| 1  | 4     | 0    |
+| ID  | Clase | Tipo |
+| --- | ----- | ---- |
+| 1   | 4     | 0    |
 
 #### Estilos en línea
 
@@ -373,7 +373,7 @@ Excepto que una palabra clave `!important` en una propiedad puede anular incluso
 
 ```css
 div {
-  color: blue !important;
+   color: blue !important;
 }
 ```
 
@@ -390,7 +390,7 @@ En resumen, cada nivel de jerarquía desde type a `!important` es un orden de ma
 De menos específico a más específico:
 
 | Selector                       | Ejemplo                            | Especificación |
-|--------------------------------|------------------------------------|----------------|
+| ------------------------------ | ---------------------------------- | -------------- |
 | Selector de tipo               | `h1`                               | `0 0 0 1`      |
 | Clase, selectores de atributos | `.class`, `[type="text"]`          | `0 0 1 0`      |
 | Selector de ID                 | `#contact`                         | `0 1 0 0`      |
@@ -403,21 +403,21 @@ Aquí hay una lista de todas las propiedades que creo que son absolutamente esen
 
 Lo mínimo para poder hacer cualquier cosa:
 
-- `padding`, `margin`, `border`
-- `background`
-- `color`, `font-family`, `font-weight`, `font-size`, `line-height`
-- `width`, `height`, `max-width`, `max-height`
+-  `padding`, `margin`, `border`
+-  `background`
+-  `color`, `font-family`, `font-weight`, `font-size`, `line-height`
+-  `width`, `height`, `max-width`, `max-height`
 
 Lo esencial del diseño:
 
-- `position`, `z-index`, `top`, `right`, `bottom`, `left`
-- `display`, `flex`, `align-items`, `justify-content`
-- `@media`
+-  `position`, `z-index`, `top`, `right`, `bottom`, `left`
+-  `display`, `flex`, `align-items`, `justify-content`
+-  `@media`
 
 Es bueno saberlo, pero no tan esencial como el resto:
 
-- `grid`, `grid-template-columns`, `grid-template-rows`
-- `transform`, `transition`
+-  `grid`, `grid-template-columns`, `grid-template-rows`
+-  `transform`, `transition`
 
 Entraremos en esto más en un momento. Ahora deberíamos tener suficiente de lo básico para discutir algunas aplicaciones del conocimiento.
 
@@ -425,8 +425,8 @@ Entraremos en esto más en un momento. Ahora deberíamos tener suficiente de lo 
 
 Todas sus necesidades de espacio serán cubiertas por dos propiedades: `padding` y `margin`.
 
-- [**Padding**](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) se utiliza para acolchar el interior de un elemento (_dentro del borde_)
-- [**Margin**](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) se utiliza para separar elementos (_fuera del borde_)
+-  [**Padding**](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) se utiliza para acolchar el interior de un elemento (_dentro del borde_)
+-  [**Margin**](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) se utiliza para separar elementos (_fuera del borde_)
 
 > En Developer Tools, el contenido se representa en azul, el relleno se representa en verde y los márgenes se representan en naranja.
 
@@ -434,17 +434,17 @@ Todas sus necesidades de espacio serán cubiertas por dos propiedades: `padding`
 
 El orden de anidación de un elemento es el siguiente:
 
-- Contenido de los elementos -> `padding` -> `border` -> `margin`
+-  Contenido de los elementos -> `padding` -> `border` -> `margin`
 
 Así que si tuviera que hacer un elemento que fuera un cuadrado con relleno y márgenes, se vería así:
 
 ```css
 .square {
-  border: 1px solid gray;
-  padding: 10px;
-  margin: 10px;
-  height: 50px;
-  width: 50px;
+   border: 1px solid gray;
+   padding: 10px;
+   margin: 10px;
+   height: 50px;
+   width: 50px;
 }
 ```
 
@@ -452,11 +452,11 @@ Así que si tuviera que hacer un elemento que fuera un cuadrado con relleno y m�
 
 Algunas notas importantes:
 
-- El **Margin** es siempre transparente; el **padding** puede tener un color de fondo.
-- Los **Margins** se derrumban entre sí; los **padding** se apilan uno encima del otro.
-- El **Margin** puede tener valores negativos; el **padding** no puede tener valores negativos.
-- El **Padding** añade al área de un elemento que se puede hacer clic; **margin** no lo hace
-- El **Padding** (y el borde) se suman al tamaño total de un elemento; **margin** no lo hace
+-  El **Margin** es siempre transparente; el **padding** puede tener un color de fondo.
+-  Los **Margins** se derrumban entre sí; los **padding** se apilan uno encima del otro.
+-  El **Margin** puede tener valores negativos; el **padding** no puede tener valores negativos.
+-  El **Padding** añade al área de un elemento que se puede hacer clic; **margin** no lo hace
+-  El **Padding** (y el borde) se suman al tamaño total de un elemento; **margin** no lo hace
 
 Lo que esto significa es que los márgenes se superponen entre sí, y el relleno nunca lo hará. Esto aparece mucho en el formato de los encabezados y párrafos, por ejemplo.
 
@@ -476,7 +476,7 @@ Para usar un ejemplo real, en [este ejemplo MVC todo app](https://taniarascia.gi
 ### Padding vs. margin
 
 | Rasgo                  | Margin               | Padding             |
-|------------------------|----------------------|---------------------|
+| ---------------------- | -------------------- | ------------------- |
 | Color de fondo         | Siempre transparente | Fijado por elemento |
 | Colapsar o apilar      | Colapsar             | apilar              |
 | Valores negativos      | Permitido            | No se permite       |
@@ -486,11 +486,11 @@ Para usar un ejemplo real, en [este ejemplo MVC todo app](https://taniarascia.gi
 
 [Tamaño de la caja](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)! Significa una cosa: ¿el relleno y los bordes cuentan como parte del tamaño del elemento, o no?
 
-- **Border box** says yes! Borders and padding are part of an element's size!
-- **Content box** says no! Borders and padding are not part of an element's size!
+-  **Border box** says yes! Borders and padding are part of an element's size!
+-  **Content box** says no! Borders and padding are not part of an element's size!
 
-- **Border box** dice que sí. Los bordes y el acolchado son parte del tamaño de un elemento!
-- **Content box** ¡dice que no! ¡Los bordes y el relleno no son parte del tamaño de un elemento!
+-  **Border box** dice que sí. Los bordes y el acolchado son parte del tamaño de un elemento!
+-  **Content box** ¡dice que no! ¡Los bordes y el relleno no son parte del tamaño de un elemento!
 
 ¿Mi recomendación? Establezca el `tamaño de la caja` en `caja-borde` en todo (`*`). Siempre. ¡Ni siquiera lo pienses! En las raras ocasiones en que algo necesita ser `contenido-caja`, puedes anularlo. Esta es una de las pocas cosas que IE ha hecho bien - haciendo que `border-box` sea la predeterminada mientras que el resto de los navegadores usan `content-box` como la predeterminada.
 
@@ -522,14 +522,13 @@ Con la aplicación de `border-box`, el tamaño total del elemento es de `50px * 
 
 ![](../images/border-box.png)
 
-
 Si le das a un elemento una `height` y `width` de `50px` cada uno, ¿preferirías que el elemento fuera `50px` o `72px`? La respuesta más probable es que quieras que la altura y el ancho coincidan con el tamaño del elemento. Esto se convertirá en algo muy importante cuando cree diseños, especialmente flex/grids que se establecen por porcentaje.
 
 Puedes aplicar `border-box` a todos los elementos de esta manera:
 
 ```css
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 ```
 
@@ -542,23 +541,23 @@ Me ves usar `padding: 5px` y `margin: 5px`. La propiedad `padding`, por ejemplo,
 ```css
 /* Propiedad de taquigrafía */
 div {
-  padding: 5px;
+   padding: 5px;
 }
 
 /* Propiedades individuales */
 div {
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
+   padding-top: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px;
+   padding-left: 5px;
 }
 ```
 
 Normalmente, no tendrás que declarar cada lado por separado. En diseño, nos gusta la simetría, así que si alguna vez terminas con un valor diferente para los cuatro lados, es probable que algo haya salido bastante mal y que quieras replantearte tu estrategia.
 
-- **Uno** se aplica a los cuatro lados (`padding: 5px`)
-- **Dos** valores se aplican a la vertical (arriba y abajo) y a la horizontal (izquierda y derecha) respectivamente (`padding: 10px 0`)
-- **Cuatro** valores **sentido de las agujas del reloj** de arriba a la izquierda (`padding: 1px 2px 3px 4px`)
+-  **Uno** se aplica a los cuatro lados (`padding: 5px`)
+-  **Dos** valores se aplican a la vertical (arriba y abajo) y a la horizontal (izquierda y derecha) respectivamente (`padding: 10px 0`)
+-  **Cuatro** valores **sentido de las agujas del reloj** de arriba a la izquierda (`padding: 1px 2px 3px 4px`)
 
 Esto se aplica tanto al `padding` como al `margin`. El uso más común de una propiedad lateral individual es cuando estás anulando algo. Por ejemplo, un elemento existe con `padding: 5px`, y quieres que tenga un valor de fondo de relleno diferente.
 
@@ -566,7 +565,7 @@ La siguiente taquigrafía más común se aplica a `border`. Lo más común es qu
 
 ```css
 div {
-  border: borde-ancho borde-estilo borde-color;
+   border: borde-ancho borde-estilo borde-color;
 }
 ```
 
@@ -574,14 +573,14 @@ Estos pueden ser escritos individualmente también.
 
 ```css
 div {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 /* También puede escribirse individualmente */
 div {
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
+   border-color: black;
+   border-width: 1px;
+   border-style: solid;
 }
 ```
 
@@ -589,9 +588,9 @@ Y al igual que el `padding` y el `margin`, cada uno de estos modificadores de fr
 
 ```css
 div {
-  border-bottom-color: green;
-  border-bottom-width: 2px;
-  border-bottom-style: dashed;
+   border-bottom-color: green;
+   border-bottom-width: 2px;
+   border-bottom-style: dashed;
 }
 ```
 
@@ -605,9 +604,9 @@ La mayoría de los elementos por defecto son `block`, `inline` o `inline-block`.
 
 Ejemplos de elementos predeterminados:
 
-- **Inline**: `span`, `strong`, `em`, `img`
-- **Inline-block**: `button`, `select`, (Solo Chrome: `textarea`, `input`)
-- **Block**: `div`, `p`, `nav`, `section`
+-  **Inline**: `span`, `strong`, `em`, `img`
+-  **Inline-block**: `button`, `select`, (Solo Chrome: `textarea`, `input`)
+-  **Block**: `div`, `p`, `nav`, `section`
 
 > Hay algunos otros obvios y específicos, como los elementos `table` que tienen la pantalla `table`, y `li` que tiene la pantalla `list-item`, pero raramente decidirá hacer que algún otro elemento tenga ese tipo de pantalla.
 
@@ -623,9 +622,9 @@ contenido de contenido...<span>span</span>..contenido de contenido
 
 ```css
 span {
-  /* en línea por defecto */
-  padding: 15px;
-  margin: 15px;
+   /* en línea por defecto */
+   padding: 15px;
+   margin: 15px;
 }
 ```
 
@@ -639,9 +638,9 @@ Para mayor seguridad, los elementos inline sólo deberían utilizarse para el fo
 
 ```css
 span {
-  display: inline-block;
-  padding: 15px;
-  margin: 15px;
+   display: inline-block;
+   padding: 15px;
+   margin: 15px;
 }
 ```
 
@@ -668,7 +667,7 @@ Un elemento con **none** aplicado no aparecerá en el documento en absoluto. Est
 ### Referencia de la pantalla
 
 | Display        | Comportamiento                                                                                    |
-|----------------|---------------------------------------------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------------------------------------------- |
 | `inline`       | utilizados principalmente para el formato de texto, aparecen uno al lado del otro horizontalmente |
 | `inline-block` | aparecen uno al lado del otro horizontalmente con acolchado vertical y márgenes aplicados         |
 | `block`        | se extiende a lo largo de todo el ancho del contenedor, apilado verticalmente                     |
@@ -682,10 +681,10 @@ La propiedad `position`, aunque importante, no es lo que debería usar para la m
 
 Si no se modifica la `position` de ningún elemento, todo pertenece al [Flujo normal](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) del documento. Todo esto significa que
 
-- Los elementos del nivel de bloque ocuparán el **ancho completo** de su **contenedor**, y la altura de su contenido
-- los elementos del nivel del bloque se apilan verticalmente uno encima del otro, de arriba a abajo
-- Los elementos en línea son tan altos y anchos como su contenido
-- todos los elementos son conscientes de los demás, y los márgenes se colapsarán
+-  Los elementos del nivel de bloque ocuparán el **ancho completo** de su **contenedor**, y la altura de su contenido
+-  los elementos del nivel del bloque se apilan verticalmente uno encima del otro, de arriba a abajo
+-  Los elementos en línea son tan altos y anchos como su contenido
+-  todos los elementos son conscientes de los demás, y los márgenes se colapsarán
 
 ### Estática (static)
 
@@ -699,9 +698,9 @@ El estado por defecto de la `position` es `static`. Esto significa que su elemen
 
 ```css
 div {
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
+   border: 1px solid black;
+   padding: 15px;
+   margin: 15px;
 }
 ```
 
@@ -717,21 +716,21 @@ Un elemento `fixed` es la posición más fácil de entender: siempre está visib
 
 Algunos usos comunes del posicionamiento `fixed`:
 
-- una barra de navegación con un palo en la parte superior.
-- un botón **volver al principio** en la parte inferior derecha de la pantalla
-- un **popup modal** que está en el centro de la vista
+-  una barra de navegación con un palo en la parte superior.
+-  un botón **volver al principio** en la parte inferior derecha de la pantalla
+-  un **popup modal** que está en el centro de la vista
 
 ```css
 nav {
-  position: fixed;
+   position: fixed;
 }
 ```
 
 Algunas cosas que hay que saber sobre los elementos `fijos`:
 
-- su posición en la pantalla está determinada por las propiedades `top`, `left`, `right` y `bottom`. `top: 0` significa que se pegará a la parte superior de la ventana, y `top: 10px` significa que estará a `10px` de la parte superior de la ventana.
-- otros elementos no son conscientes de la existencia de un elemento `fijo`. Esto generalmente significa que debes tener en cuenta el espacio que ocuparían al **añadir márgenes** a los elementos que los rodean.
-- Los elementos `fijos` ya no forman parte del flujo y no tienen un elemento que los contenga, y por lo tanto no se expanden para llenar su contenedor como lo haría un elemento normal (bloque).
+-  su posición en la pantalla está determinada por las propiedades `top`, `left`, `right` y `bottom`. `top: 0` significa que se pegará a la parte superior de la ventana, y `top: 10px` significa que estará a `10px` de la parte superior de la ventana.
+-  otros elementos no son conscientes de la existencia de un elemento `fijo`. Esto generalmente significa que debes tener en cuenta el espacio que ocuparían al **añadir márgenes** a los elementos que los rodean.
+-  Los elementos `fijos` ya no forman parte del flujo y no tienen un elemento que los contenga, y por lo tanto no se expanden para llenar su contenedor como lo haría un elemento normal (bloque).
 
 Esto significa que si todo lo que hacemos es establecer nuestro `nav` como fijo sin otras propiedades, no se expandirá el ancho completo del viewport.
 
@@ -743,15 +742,15 @@ Esto significa que si todo lo que hacemos es establecer nuestro `nav` como fijo 
 
 ```css
 div {
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
-  background: white;
+   border: 1px solid black;
+   padding: 15px;
+   margin: 15px;
+   background: white;
 }
 
 nav {
-  position: fixed;
-  background: gray;
+   position: fixed;
+   background: gray;
 }
 ```
 
@@ -761,13 +760,13 @@ Así que podemos actualizarlo para que tenga todo el ancho, y se pegue a la part
 
 ```css
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  background: gray;
-  z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   padding: 20px;
+   width: 100%;
+   background: gray;
+   z-index: 2;
 }
 ```
 
@@ -779,14 +778,14 @@ Añadimos la propiedad `z-index`, que afecta al eje z del elemento. Dado que pre
 <nav>nav</nav>
 
 <section>
-  <div>div</div>
-  <div>div</div>
+   <div>div</div>
+   <div>div</div>
 </section>
 ```
 
 ```css
 section {
-  margin-top: 80px;
+   margin-top: 80px;
 }
 ```
 
@@ -806,8 +805,8 @@ Haré un ejemplo con una `sección` (rojo) que tiene una `div` anidada (azul).
 
 ```html
 <section>
-  sección
-  <div>div</div>
+   sección
+   <div>div</div>
 </section>
 ```
 
@@ -819,14 +818,14 @@ Ahora imagina que tengo un montón de elementos de tarjeta que siempre son `100p
 
 ```css
 section {
-  position: relative;
-  height: 100px;
+   position: relative;
+   height: 100px;
 }
 
 div {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+   position: absolute;
+   bottom: 15px;
+   right: 15px;
 }
 ```
 
@@ -841,7 +840,7 @@ Este [elemento de tarjeta](https://taniarascia.github.io/card/) es un ejemplo de
 ### Referencia de posicionamiento
 
 | Posición   | Comportamiento                                                                                    | En el flujo de documentos |
-|------------|---------------------------------------------------------------------------------------------------|---------------------------|
+| ---------- | ------------------------------------------------------------------------------------------------- | ------------------------- |
 | `static`   | comportamiento por defecto; los elementos se apilan en orden y se conocen entre sí                | Yes                       |
 | `relative` | posicionado con respecto a su posición original en el flujo                                       | Yes                       |
 | `fixed`    | posicionado con respecto a la ventana de visualización                                            | No                        |
@@ -867,9 +866,9 @@ We already know that a bunch of default block elements will stack each other:
 
 ```html
 <section>
-  <div>div</div>
-  <div>div</div>
-  <div>div</div>
+   <div>div</div>
+   <div>div</div>
+   <div>div</div>
 </section>
 ```
 
@@ -881,15 +880,15 @@ So how do we get elements to be side-by-side? We can make the outer container a 
 
 ```html
 <section class="flex-container">
-  <div>div</div>
-  <div>div</div>
-  <div>div</div>
+   <div>div</div>
+   <div>div</div>
+   <div>div</div>
 </section>
 ```
 
 ```css
 .flex-container {
-  display: flex;
+   display: flex;
 }
 ```
 
@@ -899,27 +898,27 @@ And just like that, all the inner elements are now stacked horizontally in a row
 
 Here are a few cool things flex can do:
 
-- vertically align elements with ease
-- space items apart or group them together easily
-- create repeating grids
+-  vertically align elements with ease
+-  space items apart or group them together easily
+-  create repeating grids
 
 ### Alignment: create a navigation bar with flex
 
 Let's make a practical example to demonstrate some of what flex is capable of: a navigation bar. Here's what we want it to look like:
 
-- brand name to the left
-- nav links to the right
-- all items vertically centered
+-  brand name to the left
+-  nav links to the right
+-  all items vertically centered
 
 <div class="filename">navbar.html</div>
 
 ```html
 <nav>
-  <div>Brand name</div>
-  <div>
-    <a href="#!">About</a>
-    <a href="#!">Contact</a>
-  </div>
+   <div>Brand name</div>
+   <div>
+      <a href="#!">About</a>
+      <a href="#!">Contact</a>
+   </div>
 </nav>
 ```
 
@@ -927,8 +926,8 @@ Let's make a practical example to demonstrate some of what flex is capable of: a
 
 ```css
 nav {
-  background: blue;
-  height: 80px;
+   background: blue;
+   height: 80px;
 }
 ```
 
@@ -940,7 +939,7 @@ We'll make the navbar flex, so the brand name and nav links will be horizontal.
 
 ```css
 nav {
-  display: flex;
+   display: flex;
 }
 ```
 
@@ -950,8 +949,8 @@ Now we want everything to be vertically aligned. With `align-items: center`, we 
 
 ```css
 nav {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
 ```
 
@@ -961,9 +960,9 @@ Now we want the brand and links to be on opposite ends of the navbar. With `just
 
 ```css
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 ```
 
@@ -975,8 +974,8 @@ Then just add a little padding and you have an acceptable navbar.
 
 I believe without knowing anything else about flex, you can get pretty far with just those properties. When thinking about any of the other values that can be applied to flex alignment, just think about the navigation bar. The brand and group of links are two items in a flex row.
 
-- `align-items` refers to the **vertical alignment**: `flex-start` would be the top, `flex-end` would be the bottom, and `center` is vertically aligned.
-- `justify-content` refers to the **horizontal spacing**: `start` would be all items to the left, `end` would be all items to the right, `center` is everything in the middle, and `space-between` is everything equally spaced apart.
+-  `align-items` refers to the **vertical alignment**: `flex-start` would be the top, `flex-end` would be the bottom, and `center` is vertically aligned.
+-  `justify-content` refers to the **horizontal spacing**: `start` would be all items to the left, `end` would be all items to the right, `center` is everything in the middle, and `space-between` is everything equally spaced apart.
 
 > **Note:** Flex is also capable of reversing rows and columns. In addition to `flex-direction: row`, and `flex-direction: column`, there is also `row-reverse` and `column-reverse`. This would reverse the expectation of `align-items` and `justify-content` as well. For example, `justify-content: start` would be on the right of a `row-reverse` flex container.
 
@@ -985,7 +984,7 @@ I believe without knowing anything else about flex, you can get pretty far with 
 ### Flex Container Reference
 
 | Property          | Values                                                                    |
-|-------------------|---------------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------------- |
 | `flex-direction`  | `row`, `column`, `row-reverse`, `column-reverse`                          |
 | `flex-wrap`       | `wrap`, `nowrap`                                                          |
 | `align-items`     | `flex-start`, `flex-end`, `center`, `stretch`, `baseline`                 |
@@ -997,15 +996,15 @@ Often, you might have a bunch of cards or images in a gallery that should be in 
 
 ```html
 <section class="flex-container">
-  <div>div</div>
-  <div>div</div>
-  ...
+   <div>div</div>
+   <div>div</div>
+   ...
 </section>
 ```
 
 ```css
 .flex-container {
-  display: flex;
+   display: flex;
 }
 ```
 
@@ -1015,8 +1014,8 @@ We can make the grid repeat onto as many lines as necessary with `flex-wrap`.
 
 ```css
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
+   display: flex;
+   flex-wrap: wrap;
 }
 ```
 
@@ -1030,7 +1029,7 @@ Now this seems pretty useless. But with a tiny bit of flex magic, we can transfo
 
 ```css
 div {
-  flex: 1;
+   flex: 1;
 }
 ```
 
@@ -1040,20 +1039,20 @@ So what does `flex: 1` do? It tells all flex items in a container, if they all h
 
 ```css
 .element {
-  flex: 1;
+   flex: 1;
 }
 
 /* is the same as */
 
 .element {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0%;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%;
 }
 
 /* flex shorthand */
 .element {
-  flex: flex-grow flex-shrink flex-basis;
+   flex: flex-grow flex-shrink flex-basis;
 }
 ```
 
@@ -1067,7 +1066,7 @@ What if you always want each element to take up 1/3 of the available horizontal 
 
 ```css
 div {
-  flex: 0 0 33.3333%;
+   flex: 0 0 33.3333%;
 }
 ```
 
@@ -1077,9 +1076,9 @@ But there is one more consideration - if you want gutters in your grid, you'll u
 
 ```css
 div {
-  padding: 15px;
-  margin: 10px;
-  flex: 0 0 calc(33.3333% - 20px);
+   padding: 15px;
+   margin: 10px;
+   flex: 0 0 calc(33.3333% - 20px);
 }
 ```
 
@@ -1090,7 +1089,7 @@ You can easily make simple grids by either setting the `flex-basis` (setting one
 ### Flex Property Reference
 
 | Property      | Description                                                                  |
-|---------------|------------------------------------------------------------------------------|
+| ------------- | ---------------------------------------------------------------------------- |
 | `flex-grow`   | Determines how much a flex item should grow if there's space available       |
 | `flex-shrink` | Determines how much a flex item should shrink if there's not space available |
 | `flex-basis`  | Defines initial size of flex item                                            |
@@ -1103,13 +1102,13 @@ Use [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queri
 
 ```css
 @media screen and (min-width: 800px) {
-  /* applies styles to any device screen sizes above 800px wide */
+   /* applies styles to any device screen sizes above 800px wide */
 }
 ```
 
 ```css
 @media screen and (max-width: 800px) {
-  /* applies styles to any device screen sizes below 800px wide */
+   /* applies styles to any device screen sizes below 800px wide */
 }
 ```
 
@@ -1119,7 +1118,7 @@ If you've ever heard the term **mobile-first**, this refers to building a websit
 /* Mobile first styles go here */
 
 @media screen and (min-width: 800px) {
-  /* Desktop styles go here */
+   /* Desktop styles go here */
 }
 ```
 
@@ -1131,11 +1130,11 @@ Note that `@media` can be nested within a selector. In this example, an `h1` has
 
 ```css
 h1 {
-  font-size: 28px;
+   font-size: 28px;
 
-  @media screen and (min-width: 800px) {
-    font-size: 32px;
-  }
+   @media screen and (min-width: 800px) {
+      font-size: 32px;
+   }
 }
 ```
 
@@ -1173,11 +1172,11 @@ Browsers have been known to have inconsistencies with each other regarding CSS, 
 
 ```css
 .flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
 }
 ```
 
@@ -1203,7 +1202,7 @@ You can use the pseudo class/function `:not()` to target every element that does
 h1:not(:first-child),
 h2:not(:first-child),
 h3:not(:first-child) {
-  margin-top: 2.5rem;
+   margin-top: 2.5rem;
 }
 ```
 
@@ -1211,10 +1210,10 @@ Always have a `.container` element handy, that looks something like this (`max-w
 
 ```css
 .container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+   max-width: 1200px;
+   padding: 0 15px;
+   margin-left: auto;
+   margin-right: auto;
 }
 ```
 
@@ -1224,10 +1223,10 @@ Don't spread text out too wide. Think about a page in a book; you wouldn't want 
 
 ```css
 .small-container {
-  max-width: 800px;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
+   max-width: 800px;
+   padding: 0 15px;
+   margin-left: auto;
+   margin-right: auto;
 }
 ```
 
@@ -1235,8 +1234,8 @@ Use `max-width: 100%` and `height: auto` for responsive images. This way, the im
 
 ```css
 img.responsive-image {
-  max-width: 100%;
-  height: auto;
+   max-width: 100%;
+   height: auto;
 }
 ```
 
