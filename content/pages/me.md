@@ -4,13 +4,11 @@ slug: me
 template: page
 ---
 
-Soy Yoni Calsin, una desarrollador de software, escritor técnica y musico (guitarra, piano). Actualmente trabajo a tiempo completo y escribo para varias [publicaciones de desarrolladores](/publications), como Greyblu, DigitalOcean, LogRocket, y Envato.
+I am Yoni Calsin, a software developer, technical writer and musician (guitar, piano). I currently work full time and write for various [developer publications](/publications), such as Greyblu, Github, Medium and Envato
 
-Comencé este sitio web como un lugar para documentar todo lo que aprendí mientras pasaba por un [cambio de carrera](/how-i-made-a-career-change-into-web-development/). Yo [aprendo en público](/learn) y escribo sobre todo lo que sé.
+I started this website as a place to document everything I learned. I [learn in public](/learn) and write about everything I know.
 
 I aim to create a beautiful corner of the web free of ads, sponsored posts, newsletter pop-ups, affiliate links, and the rest of the annoying noise we're so accustomed to seeing on the internet these days.
-
-Mi objetivo es crear un bello rincón de la web.
 
 <!-- ### Boletín de noticias
 
@@ -27,7 +25,7 @@ Envío un mensaje cada vez que escribo algo nuevo. Si te gustan mis cosas y odia
 </div> -->
 
 <!-- ![Me](../images/taniafull.jpg) -->
-<!-- 
+<!--
 ## Enlaces
 
 Una lista no exhaustiva.
@@ -100,16 +98,14 @@ Algunos sitios que diseñé.
 - [Il Porcellino](https://www.ilporcellinochicago.com/) - 2016
 - [Reel Club](http://reel-club.com/) - 2016 -->
 
-<!-- ## Currently Using -->
+## Currently Using
 
-<!-- - **Computer:** MacBook Pro
-- **Hosting:** [Netlify](https://netlify.com) (blog)
-- **Editor:** [Visual Studio Code](https://code.visualstudio.com/)
-- **Static site generator:** [Gatsby](https://gatsbyjs.org)
-- **Syntax highlighting:** [PrismJS](http://prismjs.com/)
-- **Code theme:** [New Moon](https://taniarascia.github.io/new-moon)
-- **Email newsletter:** [Substack](https://substack.com)
-- **Notes:** [SimpleNote](https://simplenote.com/) -->
+-  **Computer:** MacBook Pro
+-  **Hosting:** [Netlify](https://netlify.com) (blog)
+-  **Editor:** [Visual Studio Code](https://code.visualstudio.com/)
+-  **Static site generator:** [Gatsby](https://gatsbyjs.org)
+-  **Syntax highlighting:** [PrismJS](http://prismjs.com/)
+-  **Code theme:** [New Moon](https://taniarascia.github.io/new-moon)
 
 <!-- ## Year in Review
 
