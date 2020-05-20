@@ -4,7 +4,7 @@ slug: newsletter
 template: page
 ---
 
-Construyo proyectos de código abierto y escribo sobre JavaScript moderno, Node.js, diseño y desarrollo web.
+I build open source projects and write about modern JavaScript, Node.js, web design and development.
 
 <!-- <div class="centered-iframe">
   <iframe
