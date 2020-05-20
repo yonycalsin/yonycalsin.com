@@ -1,27 +1,42 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import netlify from '../../content/images/netlify.png'
-import gatsby from '../../content/thumbnails/gatsby.png'
-import github from '../../content/images/github.png'
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import netlify from '../../content/images/netlify.png';
+import gatsby from '../../content/thumbnails/gatsby.png';
+import github from '../../content/images/github.png';
 
 export default class Footer extends Component {
    render() {
       return (
          <footer className="footer container">
             <div>
-               <a href="https://ko-fi.com/yonicb" target="_blank" rel="noopener noreferrer">
+               <a
+                  href="https://ko-fi.com/yonicb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
                   Ko-Fi
-          </a>
-               <a href="https://patreon.com/yonicb" target="_blank" rel="noopener noreferrer">
+               </a>
+               <a
+                  href="https://patreon.com/yonicb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
                   Patreon
-          </a>
+               </a>
                <Link to="/newsletter">Newsletter</Link>
-               <a href="https://www.greyblu.com/rss.xml" target="_blank" rel="noopener noreferrer">
+               <a
+                  href="https://www.greyblu.com/rss.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
                   RSS
-          </a>
+               </a>
             </div>
             <div>
-               <a href="https://github.com/yonicb" title="Open-source on GitHub">
+               <a
+                  href="https://github.com/yonicb"
+                  title="Open-source on GitHub"
+               >
                   <img
                      src={github}
                      target="_blank"
@@ -50,6 +65,6 @@ export default class Footer extends Component {
                </a>
             </div>
          </footer>
-      )
+      );
    }
 }
