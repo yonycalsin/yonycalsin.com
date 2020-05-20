@@ -1,77 +1,59 @@
+const gh = url => 'https://github.com/yoicalsin/' + url;
+const ghp = url => 'https://yoicalsin.github.io/' + url;
+
 export default [
+   {
+      icon: '🌍',
+      title: 'Cogenv',
+      path: 'https://github.com/cogenv',
+      source: 'https://github.com/cogenv',
+      description:
+         'Cogenv is a zero-dependency module that loads environment variables from an .env file into process.env. Storing the configuration in the environment separate from the code is based on The Twelve-Factor App methodology, and with support for typescript',
+   },
    {
       icon: '🎨',
       title: 'Sass Colors',
-      path: 'https://yoicalsin.github.io/sass-colors/',
-      source: 'https://github.com/yoicalsin/sass-colors',
+      path: ghp('sass-colors'),
+      source: gh('sass-colors'),
       description:
          'Sass-colors 🌐 is a scss library, which adds modern colors.',
    },
    {
       icon: '📝',
-      title: 'TakeNote',
-      path: 'https://takenote.dev',
-      source: 'https://github.com/taniarascia/takenote',
+      title: 'Format Fast',
+      path: gh('format-fast'),
+      source: gh('format-fast'),
       description:
-         'A web-based note-taking app with GitHub sync and Markdown support.',
+         'Format-fast is a function that allows you to replace certain words to make a string dynamically, and very easily !',
    },
    {
-      icon: '🌙',
-      title: 'New Moon',
-      path: 'https://taniarascia.github.io/new-moon/',
-      source: 'https://github.com/taniarascia/new-moon/',
+      icon: '🎁',
+      title: 'Nestjs Sequelize Seeder',
+      path: gh('nestjs-sequelize-seeder'),
+      source: gh('nestjs-sequelize-seeder'),
       description:
          'The optimized dark theme for web development. Your new favorite theme.',
    },
    {
-      icon: '🎮',
-      title: 'Chip8.js',
-      path: 'https://taniarascia.github.io/chip8/',
-      source: 'https://github.com/taniarascia/chip8/',
+      icon: '🌾',
+      title: 'Nestjs Sequelize Seeder',
+      path: gh('nestjs-sequelize-paginate'),
+      source: gh('nestjs-sequelize-paginate'),
       description:
-         'A Chip-8 emulator written in JavaScript for terminal and the browser.',
+         'A simple extension library for nestjs sequelize to perform seeding.',
    },
    {
-      icon: '🔱',
-      title: 'MVC.js',
-      path: 'https://taniarascia.github.io/mvc/',
-      source: 'https://github.com/taniarascia/mvc/',
-      description: 'A simple Todo MVC application in plain JavaScript.',
+      icon: '🎸',
+      title: 'Nestjs Crud Sequelize',
+      path: gh('nestjs-crud-sequelize'),
+      source: gh('nestjs-crud-sequelize'),
+      description: 'Nestjs crude methods',
    },
-   {
-      icon: '🏺',
-      title: 'Laconia',
-      path: 'https://laconia.dev',
-      source: 'https://github.com/taniarascia/laconia/',
-      description:
-         'A modern PHP MVC framework written without libraries or frameworks.',
-   },
-   {
-      icon: '⛏️',
-      title: ' Primitive',
-      path: 'https://taniarascia.github.io/primitive/',
-      source: 'https://github.com/taniarascia/primitive/',
-      description:
-         'A minimalist front-end design toolkit built with Sass for developing responsive, browser-consistent web apps.',
-   },
-   {
-      icon: '🐍',
-      title: 'Snek.js',
-      source: 'https://github.com/taniarascia/snek/',
-      description:
-         'A terminal-based Snake implementation written in JavaScript (Node.js).',
-   },
-   {
-      icon: '📦',
-      title: 'Webpack Boilerplate',
-      source: 'https://github.com/taniarascia/webpack-boilerplate',
-      description:
-         'A sensible Webpack 4 boilerplate with with Babel, Sass, ESLint, HMR, and prod/dev optimization.',
-   },
+
    {
       icon: '💾',
-      title: 'tania.dev',
-      source: 'https://github.com/taniarascia/taniarascia.com/',
+      title: 'greyblu.com',
+      source: 'https://github.com/greyblu/greyblu.com/',
       description: 'Personal theme for Gatsby (the source of this website).',
    },
 ];
