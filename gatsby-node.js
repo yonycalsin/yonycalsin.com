@@ -130,7 +130,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                }
             `,
-         ).then(result => {
+         ).then((result) => {
             if (result.errors) {
                console.log(result.errors);
                reject(result.errors);
@@ -139,15 +139,15 @@ exports.createPages = ({ graphql, actions }) => {
             const tagSet = new Set();
             const categorySet = new Set();
 
-            result.data.allMarkdownRemark.edges.forEach(edge => {
+            result.data.allMarkdownRemark.edges.forEach((edge) => {
                if (edge.node.frontmatter.tags) {
-                  edge.node.frontmatter.tags.forEach(tag => {
+                  edge.node.frontmatter.tags.forEach((tag) => {
                      tagSet.add(tag);
                   });
                }
 
                if (edge.node.frontmatter.categories) {
-                  edge.node.frontmatter.categories.forEach(category => {
+                  edge.node.frontmatter.categories.forEach((category) => {
                      categorySet.add(category);
                   });
                }
@@ -174,7 +174,7 @@ exports.createPages = ({ graphql, actions }) => {
             });
 
             const tagList = Array.from(tagSet);
-            tagList.forEach(tag => {
+            tagList.forEach((tag) => {
                createPage({
                   path: `/tags/${kebabCase(tag)}/`,
                   component: tagPage,
@@ -185,7 +185,7 @@ exports.createPages = ({ graphql, actions }) => {
             });
 
             const categoryList = Array.from(categorySet);
-            categoryList.forEach(category => {
+            categoryList.forEach((category) => {
                createPage({
                   path: `/categories/${category.toLowerCase()}/`,
                   component: categoryPage,
