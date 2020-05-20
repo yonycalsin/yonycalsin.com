@@ -1,13 +1,6 @@
 {
-   "extends": [
-      "airbnb",
-      "prettier"
-   ],
-   "plugins": [
-      "react",
-      "jsx-a11y",
-      "import"
-   ],
+   "extends": ["airbnb", "prettier"],
+   "plugins": ["react", "jsx-a11y", "import"],
    "rules": {
       "no-else-return": "off",
       "react/no-did-update-set-state": "off",
@@ -31,19 +24,9 @@
       "jsx-a11y/anchor-is-valid": [
          0,
          {
-            "components": [
-               "Link"
-            ],
-            "specialLink": [
-               "hrefLeft",
-               "hrefRight",
-               "to"
-            ],
-            "aspects": [
-               "noHref",
-               "invalidHref",
-               "preferButton"
-            ]
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight", "to"],
+            "aspects": ["noHref", "invalidHref", "preferButton"]
          }
       ]
    },

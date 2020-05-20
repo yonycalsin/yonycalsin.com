@@ -1,5 +1,5 @@
-const urljoin = require('url-join')
-const config = require('./data/SiteConfig')
+const urljoin = require('url-join');
+const config = require('./data/SiteConfig');
 
 module.exports = {
    pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -10,7 +10,10 @@ module.exports = {
          feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
          title: config.siteTitle,
          description: config.siteDescription,
-         image_url: `${urljoin(config.siteUrl, config.pathPrefix)}/logos/logo-48.png`,
+         image_url: `${urljoin(
+            config.siteUrl,
+            config.pathPrefix,
+         )}/logos/logo-48.png`,
       },
    },
    plugins: [
@@ -113,10 +116,10 @@ module.exports = {
          resolve: 'gatsby-plugin-feed',
          options: {
             setup(ref) {
-               const ret = ref.query.site.siteMetadata.rssMetadata
-               ret.allMarkdownRemark = ref.query.allMarkdownRemark
-               ret.generator = 'Tania Rascia'
-               return ret
+               const ret = ref.query.site.siteMetadata.rssMetadata;
+               ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+               ret.generator = 'Tania Rascia';
+               return ret;
             },
             query: `
         {
@@ -136,7 +139,7 @@ module.exports = {
             feeds: [
                {
                   serialize(ctx) {
-                     const { rssMetadata } = ctx.query.site.siteMetadata
+                     const { rssMetadata } = ctx.query.site.siteMetadata;
                      return ctx.query.allMarkdownRemark.edges.map(edge => ({
                         categories: edge.node.frontmatter.tags,
                         date: edge.node.fields.date,
@@ -148,7 +151,7 @@ module.exports = {
                            { 'content:encoded': edge.node.html },
                            { author: config.userEmail },
                         ],
-                     }))
+                     }));
                   },
                   query: `
             {
@@ -179,10 +182,10 @@ module.exports = {
             }
           `,
                   output: config.siteRss,
-                  title: 'Tania Rascia - RSS Feed',
+                  title: 'Greyblu - RSS Feed',
                },
             ],
          },
       },
    ],
-}
+};
