@@ -3,17 +3,17 @@
 
 // Reset box sizing to border box
 html {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 // Remove figure margin
 figure,
 body {
-    margin: 0;
+   margin: 0;
 }
