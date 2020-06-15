@@ -1,14 +1,14 @@
 #main-content {
    margin-top: 55px;
    padding: 40px 0 0;
-   min-height: calc(100vh - 162px);
+   min-height: calc(100vh - 190px);
 }
 
 @include small-breakpoint {
    #main-content {
-      margin-top: 92px;
+      margin-top: 140px;
       padding: 60px 0 0;
-      min-height: calc(100vh - 219px);
+      min-height: calc(100vh - 360px);
    }
 }
 
@@ -17,6 +17,7 @@
    padding: 0 1.5rem;
    margin-left: auto;
    margin-right: auto;
+   overflow-wrap: break-word;
 }
 
 @include small-breakpoint {
@@ -31,12 +32,18 @@
 
    h1 {
       margin-top: 0;
-      font-weight: 600;
-      font-size: 3.2rem;
+      font-weight: 700;
+      font-size: 2.8rem;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.03rem;
+   }
+
+   .newsletter-section .newsletter-avatar {
+      display: none;
    }
 
    p {
+      color: rgba(0, 0, 0, 0.6);
       font-size: 1.25rem;
    }
 
@@ -45,18 +52,32 @@
    }
 }
 
-@include small-breakpoint {
+@media screen and (min-width: 750px) {
    .lead {
       display: flex;
       align-items: center;
       font-size: 1.2rem;
+      line-height: 1.5;
 
       .elevator {
-         margin-right: 2.5rem;
+         flex: 2;
+         margin-right: 3rem;
+
+         p {
+            max-width: 450px;
+         }
+      }
+
+      .newsletter-section {
+         flex: 1;
+
+         .newsletter-avatar {
+            display: block;
+         }
       }
 
       h1 {
-         font-size: 4rem;
+         font-size: 3.5rem;
       }
 
       p {
@@ -124,18 +145,23 @@
    h2 {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       border-bottom: 0;
       padding-bottom: 0;
 
+      @include small-breakpoint {
+         justify-content: flex-start;
+      }
+
       a.view-all {
          display: inline-block;
-         padding: 0.4rem 0.6rem;
+         padding: 0.5rem 0.75rem;
          background: $light;
          border-radius: $border-radius;
          color: lighten($font-color, 10%);
          font-size: 1rem;
          font-weight: 500;
-         margin: 0.25rem 1rem 0 2rem;
+         margin: 0.25rem 0 0 2rem;
 
          &:hover,
          &:focus {
@@ -169,6 +195,8 @@
 @include small-breakpoint {
    .single {
       .gatsby-image-wrapper {
+         order: 1;
+         margin-left: 2rem;
          height: 150px !important;
          width: 150px !important;
       }
@@ -190,7 +218,7 @@
 
    h1 {
       margin: 0.5rem 0;
-      font-weight: 600;
+      font-weight: 700;
    }
 
    .post-meta {
@@ -201,8 +229,8 @@
 @include small-breakpoint {
    .single-header {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      margin-bottom: 80px;
+      grid-template-columns: 1fr 180px;
+      margin-bottom: 60px;
 
       h1 {
          margin: 0 0 0.5rem 0;
@@ -220,12 +248,11 @@
 
       .each {
          display: grid;
-         align-items: center;
-         grid-template-columns: 50px 1fr 70px;
+         grid-template-columns: 50px 1fr 0;
          padding: 1rem 0;
          margin: 0;
-         border: 2px solid transparent;
-         border-bottom: 2px solid $light;
+         border: 1px solid transparent;
+         border-bottom: 1px solid lighten($border-color, 12%);
 
          .date {
             margin: 0;
@@ -244,7 +271,7 @@
 
    h2 {
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.3;
       border-bottom: none;
       margin: 0;
@@ -262,12 +289,18 @@
          .each {
             grid-template-columns: 50px 2fr auto;
             align-items: center;
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             margin: 0;
-            border: 2px solid transparent;
+            border: 1px solid transparent;
 
             &:hover {
                background: white;
+            }
+         }
+
+         &:last-of-type {
+            .each {
+               border-bottom: 1px solid transparent !important;
             }
          }
       }
@@ -279,10 +312,11 @@
       }
 
       h2 {
+         font-size: 1.2rem;
          font-weight: 500;
          padding: 0;
          margin: 0;
-         color: $light-font-color;
+         color: $font-color;
 
          &:hover {
             color: #111;
@@ -290,11 +324,18 @@
       }
    }
 
-   .excerpt {
+   .datetime {
       font-size: 1rem;
       display: block;
       color: rgba(0, 0, 0, 0.4);
       font-weight: 400;
+   }
+
+   .excerpt {
+      margin-top: 1rem;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+      font-size: 1.1rem;
    }
 }
 
@@ -306,18 +347,12 @@
          .each {
             grid-template-columns: 80px 1fr 90px;
             align-items: start;
-            padding: 1rem 2rem;
+            padding: 2rem;
             margin: 0 -2rem;
 
             &:hover {
                border-radius: $border-radius;
-               background: $light;
-
-               &last-of-type {
-                  &:hover {
-                     border-bottom-color: $primary-color;
-                  }
-               }
+               background: lighten($light, 3%);
 
                h2 {
                   color: #111;
@@ -326,14 +361,16 @@
 
             &:active,
             &:focus {
-               border: 2px dashed $primary-color;
+               border: 1px dashed $primary-color;
                background: $primary-hover;
             }
 
             h2 {
-               font-size: 1.3rem;
+               font-size: 1.25rem;
                line-height: 1.3;
                margin: 0 0 0.25rem 0;
+               letter-spacing: -0.02rem;
+               font-weight: 600;
             }
 
             .gatsby-image-wrapper {
@@ -347,22 +384,25 @@
       &.simple {
          a {
             .each {
-               padding: 0.5rem 1rem;
+               padding: 0.75rem 1rem;
                margin: 0 -1rem;
+               border-bottom: 1px solid lighten($border-color, 12%);
 
                &:hover {
-                  border: 2px solid $light;
+                  border: 1px solid $light;
                   background: $light;
                }
 
                &:active,
                &:focus {
-                  border: 2px dashed $primary-color;
+                  border: 1px dashed $primary-color;
                   background: $primary-hover;
                }
 
                h2 {
+                  font-size: 1.25rem;
                   margin: 0;
+                  letter-spacing: -0.02rem;
                }
 
                .gatsby-image-wrapper {
@@ -373,6 +413,23 @@
          }
       }
    }
+}
+
+@media screen and (min-width: 1050px) {
+   .posts:not(.simple) {
+      margin: 3rem 0 3rem -6rem;
+   }
+}
+
+.post,
+.page {
+   h2 {
+      border-bottom: 1px solid lighten($border-color, 12%);
+   }
+}
+
+h1.articles-title {
+   margin-top: 3rem;
 }
 
 h2.publication-company {
@@ -387,14 +444,14 @@ h2.publication-company {
 }
 
 .alert {
-   align-self: center;
+   display: none;
    justify-self: flex-end;
    margin-left: 1rem;
 
    .new {
       display: inline-block;
       font-size: 0.9rem;
-      background: lighten($yellow, 26%);
+      background: #fff8e2;
       color: darken($yellow, 18%);
       border-radius: $border-radius;
       padding: 0.5rem 0.75rem;
@@ -414,6 +471,7 @@ h2.publication-company {
 
 @include small-breakpoint {
    .alert {
+      display: block;
 
       .new,
       .popular {
@@ -426,17 +484,18 @@ h2.publication-company {
 .simple-posts {
    a {
       .each {
-         padding: 0.5rem 0;
+         padding: 0.75rem 0;
          margin: 0;
-         border: 2px solid transparent;
+         border: 1px solid transparent;
          border-radius: $border-radius;
 
          h2 {
-            font-size: 1.1rem;
+            justify-content: flex-start;
+            font-size: 1.2rem;
             font-weight: 500;
             padding: 0;
             margin: 0;
-            color: $light-font-color;
+            color: $font-color;
             border-bottom: none;
             display: flex;
             align-items: center;
@@ -450,7 +509,7 @@ h2.publication-company {
          }
 
          &:hover {
-            border: 2px solid $light;
+            border: 1px solid $light;
             background: $light;
 
             h2 {
@@ -465,11 +524,19 @@ h2.publication-company {
    .simple-posts {
       a {
          .each {
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             margin: 0 -1rem;
+            border-bottom: 1px solid lighten($border-color, 12%);
 
             h2 {
-               font-size: 1.3rem;
+               font-size: 1.25rem;
+               letter-spacing: -0.02rem;
+            }
+         }
+
+         &:last-of-type {
+            .each {
+               border-bottom: 1px solid transparent !important;
             }
          }
       }
@@ -488,7 +555,7 @@ h2.publication-company {
       font-size: 1.2rem;
       border-bottom: none;
       margin: 0 1rem 0 0;
-      font-weight: 600;
+      font-weight: 500;
       color: #111;
       padding: 0;
       min-width: 110px;
@@ -507,6 +574,7 @@ h2.publication-company {
 
       .project-title {
          display: inline-block;
+         letter-spacing: -0.02rem;
       }
    }
 
@@ -534,8 +602,8 @@ h2.publication-company {
       .each {
          display: flex;
          justify-content: space-between;
-         padding: 1rem 0;
-         border-bottom: 2px solid $light;
+         padding: 1.5rem 0;
+         border-bottom: 1px solid #eee;
 
          &:last-of-type {
             border-bottom: none;
@@ -546,7 +614,7 @@ h2.publication-company {
          width: 150px;
          min-width: 150px;
          max-width: 150px;
-         font-size: 1.4rem;
+         font-size: 1.3rem;
          margin-right: 1rem;
       }
 
@@ -565,6 +633,10 @@ h2.publication-company {
 }
 
 .tag-container {
+   a {
+      display: inline-block;
+   }
+
    span {
       display: inline-block;
       padding: 0.3rem 0.5rem;
@@ -576,7 +648,7 @@ h2.publication-company {
       margin: 0 0.5rem 0.5rem 0;
 
       .count {
-         color: $secondary-color;
+         color: $primary-color;
          font-weight: 700;
          margin-left: 0.25rem;
       }
@@ -625,7 +697,8 @@ h2.publication-company {
 .post-meta {
    font-size: 0.8rem;
    color: $light-font-color;
-   display: inline-block;
+   display: inline-flex;
+   align-items: center;
 
    .date {
       margin-right: 0.5rem;
@@ -653,9 +726,9 @@ h2.publication-company {
 }
 
 blockquote {
-   color: rgba(0, 0, 0, 0.7);
-   border: 2px solid $yellow;
-   background: lighten($yellow, 28%);
+   color: rgba(0, 0, 0, 0.8);
+   border: 2px solid lighten($yellow, 20%);
+   background: lighten($yellow, 25%);
    border-radius: $border-radius;
    font-weight: 500;
    margin: 1.5rem 0;
@@ -664,12 +737,12 @@ blockquote {
    font-size: 1rem;
 
    &.success {
-      border: 2px solid $green;
+      border: none;
       background: lighten($green, 48%);
    }
 
    &.error {
-      border: 2px solid $error;
+      border: none;
       background: lighten($error, 23%);
    }
 
@@ -684,13 +757,14 @@ blockquote {
 
    a {
       color: #111;
-      border-bottom: 2px solid $yellow !important;
+      background: lighten($yellow, 15%) !important;
+      border-bottom: none !important;
 
       &:hover,
       &:active,
       &:focus {
          color: #111 !important;
-         background: lighten($yellow, 28%) !important;
+         background: lighten($yellow, 5%) !important;
       }
    }
 
@@ -713,26 +787,38 @@ blockquote {
    }
 }
 
+.gradient-section {
+   border-top: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
+   padding: 4rem 0;
+   background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
+
+   h2 {
+      color: white;
+   }
+
+   &.articles {
+      margin-top: -60px;
+   }
+}
+
 .quotations {
    display: flex;
    flex-wrap: wrap;
+   @extend .container;
 
    .quotation {
       padding: 1rem;
-      margin: 0 0 1rem;
-      flex: 1 1 calc(50% - 2rem);
+      margin: 1rem 0;
       border: none;
-      background: #f0f0f0;
-      padding: 1rem 1rem 3.5rem !important;
+      background: white;
+      padding: 1.5rem 1.5rem 3.5rem !important;
       border-radius: $border-radius;
       position: relative;
+      box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(0, 0, 0, 0.3);
 
       p {
-         font-size: 1rem;
-      }
-
-      &:nth-of-type(2n) {
-         margin-left: 1rem;
+         font-size: 1.1rem;
       }
 
       cite {
@@ -745,7 +831,9 @@ blockquote {
          font-size: 1.3rem;
          text-align: right;
          font-family: $font-family;
-         color: rgba(0, 0, 0, 0.4);
+         color: $primary-color;
+         font-weight: 600;
+         font-style: normal;
       }
    }
 }
@@ -753,6 +841,7 @@ blockquote {
 @include small-breakpoint {
    .quotations {
       .quotation {
+         flex: 1 1 calc(50% - 2rem);
          padding: 2.5rem 2.5rem 5.5rem !important;
 
          p {
@@ -764,35 +853,63 @@ blockquote {
             bottom: 1.5rem;
             right: 2.5rem;
          }
+
+         &:nth-of-type(2n) {
+            margin-left: 2rem;
+         }
       }
    }
 }
 
 .note {
-   background: lighten($yellow, 28%);
-   padding: 2rem 0;
-   margin: 1.5rem 0;
-   border-top: 2px solid $yellow;
-   border-bottom: 2px solid $yellow;
+   margin: 1.5rem;
 
    .note-container {
+      background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
+      box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
+      color: rgba(255, 255, 255, 0.9);
       border-radius: $border-radius;
-      padding: 1.5rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+
+      a.donate-button {
+         background: darken($primary-color, 20%);
+
+         &:hover {
+            background: darken($primary-color, 30%);
+         }
+      }
    }
 
-   h2 {
-      border-bottom: 0;
+   h3 {
+      color: white;
+   }
+
+   p {
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.3;
    }
 }
 
 .avatar {
    max-width: 100px;
-   border-radius: 12px;
+   border-radius: 50%;
    margin-bottom: 1rem;
+}
+
+.avatar-small {
+   width: 35px;
+   max-width: 35px;
+   height: auto;
+   border-radius: 50%;
+   margin-right: 0.75rem;
+}
+
+.note .flex-avatar {
+   display: none;
 }
 
 @include small-breakpoint {
@@ -803,12 +920,21 @@ blockquote {
 
       .flex-author {
          display: flex;
-         align-items: center;
+         align-items: flex-start;
+      }
+
+      .flex-avatar {
+         display: block;
+      }
+
+      p {
+         line-height: 1.5;
       }
    }
 
    .avatar {
-      max-width: 200px;
+      width: 125px;
+      max-width: 125px;
       margin-right: 2rem;
       margin-bottom: 0;
    }
@@ -823,7 +949,7 @@ blockquote {
    text-align: center;
    color: $primary-color;
    font-size: 1.4rem;
-   font-weight: 600;
+   font-weight: 500;
 }
 
 @include small-breakpoint {
@@ -839,7 +965,7 @@ blockquote {
 
 .view-all {
    margin-left: 1.5rem;
-   font-size: 1.2rem;
+   font-size: 1.1rem;
 }
 
 .emoji-in-button {
@@ -851,6 +977,7 @@ blockquote {
 .search-container {
    display: flex;
    align-items: center;
+   max-width: 500px;
    margin-bottom: 2rem;
 }
 
@@ -869,7 +996,7 @@ blockquote {
       border-radius: $border-radius;
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
-      font-weight: 600;
+      font-weight: 500;
       color: $primary-color;
       cursor: pointer;
 
@@ -964,12 +1091,12 @@ blockquote {
 
    a {
       font-weight: 400;
-      color: darken($light, 30%);
+      color: rgba(0, 0, 0, 0.6);
       display: block;
       margin-right: 1.5rem;
 
       &:hover {
-         color: $primary-color;
+         color: rgba(0, 0, 0, 0.8);
       }
    }
 
@@ -982,6 +1109,7 @@ blockquote {
 
 @include small-breakpoint {
    .footer {
+      margin: 60px auto;
       flex-direction: row;
       height: 100px;
    }
@@ -1006,7 +1134,7 @@ iframe {
 
       &.reply {
          background: $light;
-         border: 2px solid $border-color;
+         border: 1px solid $border-color;
          border-radius: $border-radius;
          padding: 1.5rem;
          margin-left: 2rem;
@@ -1074,45 +1202,50 @@ button[disabled] {
 }
 
 .newsletter-section {
-   display: flex;
    align-items: center;
    flex-direction: column;
    border-radius: $border-radius;
    margin: 2rem 0;
    padding: 1.5rem;
    text-align: center;
-   background: #f0f0f0;
+   background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
+   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
+   color: rgba(255, 255, 255, 0.9);
 
    .newsletter-avatar {
       margin-top: 0.5rem;
-      border-radius: 8px;
-      width: 50px;
+      border-radius: 50%;
+      width: 120px;
    }
 
    p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.8) !important;
    }
 
    h3 {
-      margin: 0 0 0.75rem;
+      margin: 1rem 0 0.75rem;
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
+      color: white !important;
    }
 
-   .button {
-      font-size: 1.1rem;
-      padding: 0.75rem 1rem;
+   a.button {
+      font-size: 1.2rem;
+      padding: 1rem 1.5rem;
+      border: none !important;
+      background: white;
+      color: darken($primary-color, 5%);
+
+      &:hover,
+      &:active,
+      &:focus {
+         color: darken($primary-color, 20%);
+      }
    }
 
    @include small-breakpoint {
-      .newsletter-avatar {
-         width: 75px;
-      }
-
-      .button {
-         font-size: 1.2rem;
-         padding: 1rem 1.2rem;
-      }
+      display: flex;
    }
 
    @include large-breakpoint {
@@ -1126,7 +1259,66 @@ button[disabled] {
    margin-bottom: 3rem;
 }
 
+.instruction-manuals {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0 -1rem;
+
+   >a {
+      z-index: 2;
+      transition: all 0.2s ease;
+      display: block;
+      padding: 1rem 1.5rem;
+      background: white;
+      border-radius: $border-radius;
+      box-shadow: 0.2rem 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.1);
+      margin: 0.5rem;
+
+      &:hover {
+         transform: translateY(-1px);
+         box-shadow: 0.5rem 1.25rem 2rem 0 rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+         display: block;
+         margin: auto;
+         width: 50px;
+         max-width: 50px;
+         max-height: 50px;
+         height: auto;
+      }
+
+      h3 {
+         margin: 0.5rem auto 0;
+         text-align: center;
+         font-size: 1.1rem;
+         font-weight: 500;
+      }
+   }
+
+   @include small-breakpoint {
+      >a {
+         img {
+            width: 75px;
+            max-width: 75px;
+            max-height: 75px;
+         }
+
+         h3 {
+            font-size: 1.3rem;
+         }
+      }
+   }
+}
+
 ::selection {
    background: rgba(255, 235, 20, 0.7);
    color: #111;
+}
+
+@media print {
+   .footer {
+      display: none;
+   }
 }
