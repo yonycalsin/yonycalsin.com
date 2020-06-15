@@ -18,7 +18,7 @@ export default class CategoriesPage extends Component {
             <div className="container">
                <h1>Categorías</h1>
                <div className="tag-container">
-                  {group.map(category => (
+                  {group.map((category) => (
                      <Link
                         to={`/categories/${kebabCase(category.fieldValue)}`}
                         key={category.fieldValue}

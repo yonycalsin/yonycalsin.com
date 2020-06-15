@@ -6,7 +6,7 @@ export default class SimpleListing extends Component {
 
       return (
          <section className="simple-posts">
-            {data.map(post => {
+            {data.map((post) => {
                return (
                   <a
                      href={post.path}

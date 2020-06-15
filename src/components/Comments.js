@@ -30,7 +30,7 @@ export default class Comments extends Component {
       }
    }
 
-   onSubmitComment = async event => {
+   onSubmitComment = async (event) => {
       event.preventDefault();
 
       this.setState({ submitting: true });
@@ -48,7 +48,7 @@ export default class Comments extends Component {
       });
 
       if (response.status === 201) {
-         this.setState(prevState => ({
+         this.setState((prevState) => ({
             ...prevState,
             comments: [newComment, ...comments],
             newComment: {
@@ -65,7 +65,7 @@ export default class Comments extends Component {
       }
    };
 
-   handleChange = event => {
+   handleChange = (event) => {
       const { newComment } = this.state;
       const { name, value } = event.target;
 
@@ -96,7 +96,7 @@ export default class Comments extends Component {
             </blockquote>
          );
 
-      const commentTitle = commentLength => {
+      const commentTitle = (commentLength) => {
          if (commentLength < 1) {
             return 'Deje un comentario';
          } else if (commentLength === 1) {
@@ -156,13 +156,13 @@ export default class Comments extends Component {
             )}
             {comments.length > 0 &&
                comments
-                  .filter(comment => !comment.parent_comment_id)
+                  .filter((comment) => !comment.parent_comment_id)
                   .filter((comment, i) => i < 50)
                   .map((comment, i) => {
                      let child;
                      if (comment.id) {
                         child = comments.find(
-                           c => comment.id == c.parent_comment_id,
+                           (c) => comment.id == c.parent_comment_id,
                         );
                      }
 

@@ -114,7 +114,7 @@ export default class Index extends Component {
                <section className="section">
                   <h2>{`Other People's Opinions`}</h2>
                   <div className="quotations">
-                     {quotes.map(quote => (
+                     {quotes.map((quote) => (
                         <blockquote className="quotation" key={quote.name}>
                            <p>{quote.quote}</p>
                            <cite>— {quote.name}</cite>

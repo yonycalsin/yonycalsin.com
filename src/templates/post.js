@@ -25,7 +25,7 @@ export default class PostTemplate extends Component {
       const postNode = this.props.data.markdownRemark;
       const post = postNode.frontmatter;
       const popular = postNode.frontmatter.categories.find(
-         category => category === 'Popular',
+         (category) => category === 'Popular',
       );
       let thumbnail;
 
