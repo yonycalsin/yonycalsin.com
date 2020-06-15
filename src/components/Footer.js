@@ -10,20 +10,20 @@ export default class Footer extends Component {
          <footer className="footer container">
             <div>
                <a
-                  href="https://ko-fi.com/yonicb"
+                  href="https://ko-fi.com/yonicalsin"
                   target="_blank"
                   rel="noopener noreferrer"
                >
                   Ko-Fi
                </a>
                <a
-                  href="https://patreon.com/yonicb"
+                  href="https://patreon.com/yonicalsin"
                   target="_blank"
                   rel="noopener noreferrer"
                >
                   Patreon
                </a>
-               <Link to="/newsletter">Newsletter</Link>
+               <Link to="/contact/">Contact</Link>
                <a
                   href="https://www.greyblu.com/rss.xml"
                   target="_blank"
@@ -34,34 +34,29 @@ export default class Footer extends Component {
             </div>
             <div>
                <a
-                  href="https://github.com/yonicb"
+                  href="https://github.com/yonicalsin"
                   title="Open-source on GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
                >
-                  <img
-                     src={github}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="footer-img"
-                     alt="GitHub"
-                  />
+                  <img src={github} className="footer-img" alt="GitHub" />
                </a>
-               <a href="https://www.netlify.com/" title="Hosted by Netlify">
-                  <img
-                     src={netlify}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="footer-img"
-                     alt="GitHub"
-                  />
+               <a
+                  href="https://www.netlify.com/"
+                  title="Hosted by Netlify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  <img src={netlify} className="footer-img" alt="Netlify" />
                </a>
-               <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
-                  <img
-                     src={gatsby}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     className="footer-img"
-                     alt="GitHub"
-                  />
+               <a
+                  href="https://www.gatsbyjs.org/"
+                  title="Built with Gatsby"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginRight: 0 }}
+               >
+                  <img src={gatsby} className="footer-img" alt="Gatsby" />
                </a>
             </div>
          </footer>
