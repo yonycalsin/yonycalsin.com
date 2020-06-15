@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import sun from '../images/sun.svg';
 import moon from '../images/moon.svg';
 import logo from '../images/logo.png';
+import kofi from '../images/kofi.png';
 import ThemeContext from '../context/ThemeContext';
 
 export default class Navigation extends Component {
