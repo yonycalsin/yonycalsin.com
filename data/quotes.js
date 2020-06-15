@@ -24,6 +24,7 @@ export default [
    },
    {
       name: 'Antony',
-      quote: 'Just wanted to thank you for your awesome tutorials. Glad you found your niche, teaching valuable skills to so many folks out there, instead of preparing fine meals for a select few.'
-   }
-]
+      quote:
+         'Just wanted to thank you for your awesome tutorials. Glad you found your niche, teaching valuable skills to so many folks out there, instead of preparing fine meals for a select few.',
+   },
+];
