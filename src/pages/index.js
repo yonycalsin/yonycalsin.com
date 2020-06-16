@@ -116,7 +116,7 @@ export default class Index extends Component {
             </div>
             <div className="gradient-section">
                <div className="container">
-                  <h2>Otras personas dicen...</h2>
+                  <h2>Frases motivadores...</h2>
                </div>
                <div className="quotations">
                   {quotes.map((quote) => (
