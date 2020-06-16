@@ -66,25 +66,25 @@ Cogenv is a zero-dependency module that loads environment variables from an .env
 
 ### Format Fast
 
-**String formatter** - [Source](https://github.com/yoicalsin/format-fast) - _2018 - 2019_
+**String formatter** - [Source](https://github.com/yonicalsin/format-fast) - _2018 - 2019_
 
 Format-fast is a function that allows you to replace certain words to make a string dynamically, and very easily !
 
 ### Nestjs Sequelize Seeder
 
-**Seeder** - [Source](https://github.com/yoicalsin/nestjs-sequelize-seeder) - _2018_
+**Seeder** - [Source](https://github.com/yonicalsin/nestjs-sequelize-seeder) - _2018_
 
 🌾 A simple extension library for nestjs sequelize to perform seeding.
 
 ### Nestjs Sequelize Paginate
 
-**paging system** - [Source](https://github.com/yoicalsin/nestjs-sequelize-paginate)
+**paging system** - [Source](https://github.com/yonicalsin/nestjs-sequelize-paginate)
 
 🎉 Pagination response object function + types for sequelize + nestjs
 
 ### Nestjs Crud Sequelize
 
-**Crud methods** - [Source](https://github.com/yoicalsin/nestjs-crud-sequelize)
+**Crud methods** - [Source](https://github.com/yonicalsin/nestjs-crud-sequelize)
 
 Crud for nestjs
 
