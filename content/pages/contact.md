@@ -21,8 +21,8 @@ If you have any questions, comments, ideas, criticisms, or just want to say hell
 ### Around the web
 
 -  **Email**: [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
--  **GitHub**: [@yoicalsin](https://github.com/yoicalsin)
--  **Twitter**: [@yoicalsin](https://twitter.com/yoicalsin)
--  **Patreon**: [@yoicalsin](https://patreon.com/yoicalsin)
--  **Ko-Fi**: [@yoicalsin](https://ko-fi.com/yoicalsin)
+-  **GitHub**: [@yonicalsin](https://github.com/yonicalsin)
+-  **Twitter**: [@yonicalsin](https://twitter.com/yonicalsin)
+-  **Patreon**: [@yonicalsin](https://patreon.com/yonicalsin)
+-  **Ko-Fi**: [@yonicalsin](https://ko-fi.com/yonicalsin)
 -  **Feed**: [RSS](https://www.greyblu.com/rss.xml)
