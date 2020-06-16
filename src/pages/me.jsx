@@ -23,18 +23,13 @@ export default class AboutMe extends Component {
                   </header>
                   <div className="page">
                      <p>
-                        Soy Tania Rascia, una desarrolladora de software,
-                        escritora técnica y ex cocinera. Esta página web es un
-                        compendio de las cosas que he aprendido a lo largo de
-                        los años.
+                        Soy Yoni Calsin, una desarrollador full stack,
+                        actualmente me especializo como frontend (React, Next,
+                        Redux, Gatsby), escritor técnico y musico (guitarra,
+                        piano). Esta página web es un compendio de las cosas que
+                        he aprendido a lo largo de los años.
                      </p>
-                     <p>
-                        Mi objetivo es crear un bello rincón de la web libre de
-                        anuncios, posts patrocinados, pop-ups de boletines,
-                        enlaces de afiliados, y el resto del molesto ruido que
-                        estamos tan acostumbrados a ver en Internet en estos
-                        días.
-                     </p>
+                     <p>Mi objetivo es crear un bello rincón de la web.</p>
                      <p>
                         Puede leer mis
                         <a href="https://www.greyblu.com/blog">
@@ -50,16 +45,13 @@ export default class AboutMe extends Component {
 
                      <ul>
                         <li>
-                           💻 trabaja como desarrollador de software
-                           (principalmente React/Redux, Node)
+                           💻 trabaja como desarrollador frontend
+                           (principalmente React/Redux, Node, Next, Typescript,
+                           SCSS)
                         </li>
                         <li>👍 tiene un título imaginario en electrónica</li>
-                        <li>
-                           🚀 ha hecho un viaje de mochilero en solitario a unos
-                           20 países
-                        </li>
                         <li>🎉 puede hablar un poco de ingles</li>
-                        <li>💾 tiene el mejor manejo de reddit</li>
+                        <li>💾 tiene el mejor manejo de reddit y medium</li>
                         <li>🎹 puede tocar el piano y la guitarra</li>
                         <li>☕ necesita café</li>
                         <li>
@@ -68,7 +60,9 @@ export default class AboutMe extends Component {
                         </li>
                      </ul>
 
-                     <p>Este sitio web ha sido inspirado en la cuarentena.</p>
+                     <p>
+                        Este sitio web ha sido inspirado en la cuarentena. 🙃
+                     </p>
 
                      <h2>Proyectos de código abierto</h2>
 
@@ -78,6 +72,37 @@ export default class AboutMe extends Component {
                               <a href={v.path}>{v.title}</a> - {v.description}
                            </li>
                         ))}
+                     </ul>
+
+                     <h2>Actualmente usando</h2>
+                     <ul>
+                        <li>
+                           <strong>Computadora:</strong> Windows <q>10</q>
+                        </li>
+                        <li>
+                           <strong>Host:</strong>{' '}
+                           <a href="https://netlify.com">Netlify</a>
+                        </li>
+                        <li>
+                           <strong>Editor:</strong>{' '}
+                           <a href="https://code.visualstudio.com/">
+                              Visual Studio Code
+                           </a>
+                        </li>
+                        <li>
+                           <strong>SSG:</strong>{' '}
+                           <a href="https://gatsbyjs.org">Gatsby</a>
+                        </li>
+                        <li>
+                           <strong>Tema:</strong>{' '}
+                           <a href="https://taniarascia.github.io/new-moon">
+                              New Moon
+                           </a>
+                        </li>
+                        <li>
+                           <strong>Newsletter:</strong>{' '}
+                           <a href="https://substack.com">Substack</a>
+                        </li>
                      </ul>
                   </div>
                </article>
