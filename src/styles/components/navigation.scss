@@ -62,7 +62,7 @@
          font-size: 1.05rem;
          font-weight: 400;
          padding: 0.75rem;
-         margin: 0 .25rem;
+         margin: 0 0.25rem;
          color: rgba(0, 0, 0, 0.6);
          line-height: 1.2;
          text-align: center;
@@ -93,7 +93,6 @@
       &:active {
          transform: scale(0.95);
       }
-
    }
 }
 
@@ -123,7 +122,6 @@ button.dark-switcher {
    min-width: 18px;
    margin-bottom: 0;
 }
-
 
 .kofi {
    margin: 0;
