@@ -18,6 +18,9 @@
 @import 'components/layout';
 @import 'components/new-moon';
 
+// Extra components
+@import './components/grid-boxes.scss';
+
 // Themes
 
 @import 'themes/dark';
