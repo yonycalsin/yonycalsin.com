@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import config from '../../data/SiteConfig';
 import ThemeContext from '../context/ThemeContext';
 import projects from '../../data/projects';
+import { Link } from 'gatsby';
 
 export default class AboutMe extends Component {
    static contextType = ThemeContext;
@@ -32,14 +33,8 @@ export default class AboutMe extends Component {
                      <p>Mi objetivo es crear un bello rincón de la web.</p>
                      <p>
                         Puede leer mis
-                        <a href="https://www.greyblu.com/blog">
-                           {' artículos '}
-                        </a>
-                        o
-                        <a href="https://www.greyblu.com/contact">
-                           {' contactarme'}
-                        </a>
-                        .
+                        <Link to="/blog">{' artículos '}</Link>o
+                        <Link to="/contact">{' contactarme'}</Link>.
                      </p>
                      <h3>Yoni Calsin</h3>
 
