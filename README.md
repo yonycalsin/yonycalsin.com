@@ -33,7 +33,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 -  [Tania Rascia](https://www.taniarascia.com)
 -  [Yoni Calsin](https://www.greyblu.com)
-   -  [Github](https://github.com/yonicb)
+   -  [Github](https://github.com/yonicalsin)
    -  [Twitter](https://twitter.com/yonicalsin)
 
 <!-- <a href="https://patreon.com/taniarascia"><img src="https://img.shields.io/endpoint.svg?url=https://shieldsio-patreon.herokuapp.com/taniarascia&style=for-the-badge" alt="Patreon donate button" /> </a> -->
