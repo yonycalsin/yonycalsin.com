@@ -87,6 +87,38 @@ export default class Navigation extends Component {
                >
                   <img src={kofi} alt="Kofi" className="kofi" />
                </a>
+               <a
+                  className="kofi-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/yonicalsin"
+                  aria-label="¡Cómprame un café!"
+                  title="¡Cómprame un café!"
+               >
+                  <img
+                     src="https://image.flaticon.com/icons/svg/1051/1051326.svg"
+                     alt="Github"
+                     className="kofi"
+                     height="18px"
+                     width="18px"
+                  />
+               </a>
+               <a
+                  className="kofi-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/YoniCalsin"
+                  aria-label="¡Cómprame un café!"
+                  title="¡Cómprame un café!"
+               >
+                  <img
+                     src="https://image.flaticon.com/icons/svg/733/733579.svg"
+                     alt="Twitter"
+                     className="kofi"
+                     height="18px"
+                     width="18px"
+                  />
+               </a>
             </div>
          </nav>
       );
