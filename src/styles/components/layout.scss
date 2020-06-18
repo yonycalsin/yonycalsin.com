@@ -791,8 +791,12 @@ blockquote {
    border-top: 1px solid #ddd;
    border-bottom: 1px solid #ddd;
    padding: 4rem 0;
-   background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
-
+   // background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
+   background: radial-gradient(
+      circle at 20% 20%,
+      darken($primary-color, 10%) 25%,
+      darken($primary-color, 20%) 100%
+   );
    h2 {
       color: white;
    }
@@ -815,7 +819,6 @@ blockquote {
       padding: 1.5rem 1.5rem 3.5rem !important;
       border-radius: $border-radius;
       position: relative;
-      box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(0, 0, 0, 0.3);
 
       p {
          font-size: 1.1rem;
@@ -1211,7 +1214,7 @@ button[disabled] {
    color: rgba(255, 255, 255, 0.9);
    // background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
    background: #0779e4;
-   background: #58b4ae;
+   background: $primary-color;
 
    .newsletter-avatar {
       margin-top: 0.5rem;
@@ -1314,7 +1317,7 @@ button[disabled] {
 }
 
 ::selection {
-   background: rgba(255, 235, 20, 0.7);
+   background: $primary-color;
    color: #111;
 }
 
