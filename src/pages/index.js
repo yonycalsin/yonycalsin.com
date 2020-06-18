@@ -58,7 +58,7 @@ export default class Index extends Component {
                      <img
                         src={yoni}
                         className="newsletter-avatar"
-                        alt="Tania"
+                        alt="Yoni Calsin"
                      />
                      <div>
                         <h3>Email Newsletter</h3>
