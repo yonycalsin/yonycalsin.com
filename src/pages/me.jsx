@@ -156,6 +156,58 @@ const eachSkills = (data) => {
    );
 };
 
+const createdProjects = [
+   {
+      title: 'Instagram Template',
+      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      source: ['HTML', 'Css', 'Bulma', 'Typescript'],
+   },
+   {
+      title: 'Generador de paleta de colores',
+      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      source: ['React', 'Typescript'],
+   },
+   {
+      title: 'Plataforma de educacion dinamica',
+      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      source: [
+         'React',
+         'NextJs',
+         'Redux',
+         'Typescript',
+         'Bootstrap 4',
+         'NestJs',
+         'MongoDB',
+         'Graphql',
+         'Mongoose',
+      ],
+   },
+   {
+      title: 'Administrador de contraseñas',
+      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      source: ['Vuejs', 'Vuex', 'Laravel', 'Php', 'Mysql', 'CoreUi'],
+   },
+   {
+      title: 'Generador de formularios',
+      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      source: [
+         'React',
+         'NextJs',
+         'Typescript',
+         'Ant Design',
+         'Scss',
+         'styled-jsx',
+         'Redux',
+         'Typescript',
+         'NestJs',
+         'Seqeuelize',
+         'Graphql',
+         'Mysql',
+         'sql',
+      ],
+   },
+];
+
 export default class AboutMe extends Component {
    static contextType = ThemeContext;
 
@@ -227,11 +279,29 @@ export default class AboutMe extends Component {
                         </li>
                      </ul>
 
-                     <p>
+                     <h2>Projectos Creados</h2>
+                     <div className="created-projects fx fx-rw fx-jcsb fx-aic">
+                        {createdProjects.map((v, i) => (
+                           <div className="item" key={i}>
+                              <img
+                                 src={v.image}
+                                 alt=""
+                                 draggable={false}
+                                 onContextMenu={(e) => e.preventDefault()}
+                              />
+                              <div className="content fx fx-cc fx-cnw">
+                                 <h4>{v.title}</h4>
+                                 <p>{v.source.join(', ')}</p>
+                              </div>
+                           </div>
+                        ))}
+                     </div>
+
+                     {/* <p>
                         Puede leer mis
                         <Link to="/blog">{' artículos '}</Link>o
                         <Link to="/contact">{' contactarme'}</Link>.
-                     </p>
+                     </p> */}
 
                      <h3>Yoni Calsin</h3>
                      <ul>
