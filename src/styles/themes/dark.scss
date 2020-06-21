@@ -94,7 +94,7 @@ $dark-primary: $tag;
       }
    }
 
-   :not(pre)>code {
+   :not(pre) > code {
       background: rgba(255, 255, 255, 0.1);
       color: $foreground;
    }
@@ -116,7 +116,8 @@ $dark-primary: $tag;
          }
       }
 
-      .links a {
+      .links a,
+      .cta a {
          color: darken($foreground, 20%);
 
          &:hover,
@@ -130,6 +131,11 @@ $dark-primary: $tag;
 
          &.active {
             color: $tag;
+         }
+      }
+      .cta a {
+         img {
+            filter: brightness(0) invert(1);
          }
       }
    }
@@ -301,7 +307,7 @@ $dark-primary: $tag;
    }
 
    .instruction-manuals {
-      >a {
+      > a {
          background: lighten($background, 4%);
 
          &:hover {

@@ -15,6 +15,21 @@
       display: flex;
       align-items: center;
       margin: 0 0 0 0.75rem;
+      a {
+         padding: 0.6rem;
+         margin: 0 0.1rem;
+         display: flex;
+         flex-flow: row wrap;
+         align-items: center;
+         justify-content: center;
+         border-radius: 7px;
+         &:hover,
+         &:active,
+         &.active {
+            color: #111;
+            background: rgba(0, 0, 0, 0.05);
+         }
+      }
    }
 
    .nav-container {
@@ -74,24 +89,6 @@
             color: #111;
             background: rgba(0, 0, 0, 0.05);
          }
-      }
-   }
-
-   .kofi-button {
-      display: block;
-      padding: 0.6rem 0.6rem 0.4rem;
-      background: $primary-color;
-      border-radius: $border-radius;
-      margin: 0;
-
-      &:hover,
-      &:active,
-      &:focus {
-         background: darken($primary-color, 10%);
-      }
-
-      &:active {
-         transform: scale(0.95);
       }
    }
 }

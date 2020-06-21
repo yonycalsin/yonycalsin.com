@@ -37,8 +37,9 @@ export default class PublicationsPage extends Component {
                </header>
                <div className="page">
                   {/* <p>I've written for {companyStr}.</p> */}
-                  <p>Escrito por {companyStr}.</p>
-                  {pubs.map((publication, i) => {
+                  {/* <p>Escrito por {companyStr}.</p> */}
+                  <p>Esta pagina aun esta en desarrollo 🎉</p>
+                  {/* {pubs.map((publication, i) => {
                      const company = publication[0];
                      const articles = publication[1];
 
@@ -68,7 +69,7 @@ export default class PublicationsPage extends Component {
                            </ul>
                         </article>
                      );
-                  })}
+                  })} */}
                </div>
             </div>
          </Layout>
