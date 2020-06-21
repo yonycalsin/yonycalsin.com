@@ -64,7 +64,7 @@ export default [
 
    {
       icon: '🏆',
-      title: 'greyblu.com',
+      title: 'yonicalsin.netlify.app',
       source: 'https://github.com/greyblu/greyblu.com/',
       description: 'Blog Personal de Yoni Calsin',
    },

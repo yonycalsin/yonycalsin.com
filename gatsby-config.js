@@ -17,6 +17,12 @@ module.exports = {
       },
    },
    plugins: [
+      {
+         resolve: `gatsby-plugin-disqus`,
+         options: {
+            shortname: `yonicalsinblog`,
+         },
+      },
       'gatsby-plugin-sass',
       'gatsby-plugin-react-helmet',
       {

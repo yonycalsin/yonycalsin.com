@@ -25,7 +25,7 @@ export default class Footer extends Component {
                </a>
                <Link to="/contact/">Contact</Link>
                <a
-                  href="https://www.greyblu.com/rss.xml"
+                  href="https://yonicalsin.netlify.app/rss.xml"
                   target="_blank"
                   rel="noopener noreferrer"
                >

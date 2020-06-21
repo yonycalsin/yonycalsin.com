@@ -33,7 +33,7 @@ export default class Index extends Component {
                      <h1>{`Hola, soy Yoni`} </h1>
                      <p>
                         {''}
-                        {`Soy un desarrollador de software full stack creando proyectos de `}
+                        {`Soy un desarrollador frontend creando proyectos de `}
                         <a
                            href="https://github.com/yonicalsin"
                            target="_blank"

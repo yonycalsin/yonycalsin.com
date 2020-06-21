@@ -1,4 +1,4 @@
-# greyblu.com
+# yonicalsin.netlify.app
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/0a51d0e9-f611-4dd8-887f-fc1889e68540/deploy-status)](https://app.netlify.com/sites/tania/deploys)
 
@@ -31,8 +31,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## Author
 
--  [Tania Rascia](https://www.taniarascia.com)
--  [Yoni Calsin](https://www.greyblu.com)
+-  [Yoni Calsin](https://yonicalsin.netlify.app)
    -  [Github](https://github.com/yonicalsin)
    -  [Twitter](https://twitter.com/yonicalsin)
 

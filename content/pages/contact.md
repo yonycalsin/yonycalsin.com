@@ -1,6 +1,6 @@
 ---
-title: Contact
-slug: contact
+title: Contacto
+slug: contacto
 template: page
 ---
 
@@ -25,4 +25,4 @@ Si tienes alguna pregunta, comentario, idea, crítica o simplemente quieres deci
 -  **Twitter**: [@yonicalsin](https://twitter.com/yonicalsin)
 -  **Patreon**: [@yonicalsin](https://patreon.com/yonicalsin)
 -  **Ko-Fi**: [@yonicalsin](https://ko-fi.com/yonicalsin)
--  **Feed**: [RSS](https://www.greyblu.com/rss.xml)
+-  **Feed**: [RSS](https://yonicalsin.netlify.app/rss.xml)
