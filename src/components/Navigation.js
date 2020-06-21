@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import greyblu from '../images/greyblu.png';
+// import greyblu from '../images/greyblu.png';
 import sun from '../images/sun.svg';
 import moon from '../images/moon.svg';
-import kofi from '../../content/thumbnails/kofi.png';
+import logo from '../images/logo.svg';
+import kofi from '../images/kofi.png';
 import ThemeContext from '../context/ThemeContext';
 
 export default class Navigation extends Component {
-   static contextType = ThemeContext;
+   static contextType = ThemeContext; // eslint-disable-line
 
    state = {
       scrolled: false,
@@ -39,12 +40,12 @@ export default class Navigation extends Component {
             <div className="nav-container">
                <div className="brand">
                   <Link to="/">
-                     <img src={greyblu} className="favicon" alt="Greyblu.com" />
-                     <span className="text">GreyBlu</span>
+                     <img src={logo} className="favicon" alt="Greyblu Logo" />
+                     <span className="text">Yoni Calsin</span>
                   </Link>
                </div>
                <div className="links">
-                  {menuLinks.map(link => (
+                  {menuLinks.map((link) => (
                      <Link
                         key={link.name}
                         to={link.link}
@@ -53,39 +54,71 @@ export default class Navigation extends Component {
                         {link.name}
                      </Link>
                   ))}
-                  <div className="cta">
-                     <button
-                        className="dark-switcher"
-                        onClick={theme.toggleDark}
-                        aria-label="Toggle Dark Mode."
-                        title="Toggle Dark Mode"
-                     >
-                        {theme.dark ? (
-                           <img
-                              src={sun}
-                              className="theme-icon"
-                              alt="Light Mode"
-                           />
-                        ) : (
-                           <img
-                              src={moon}
-                              className="theme-icon"
-                              alt="Dark Mode"
-                           />
-                        )}
-                     </button>
-                  </div>
-                  <a
-                     className="kofi-button"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     href="https://ko-fi.com/yonicb"
-                     aria-label="Buy me a coffee!"
-                     title="Buy me a coffee!"
-                  >
-                     <img src={kofi} alt="Kofi" className="kofi" />
-                  </a>
                </div>
+               <div className="cta">
+                  <button
+                     className="dark-switcher"
+                     onClick={theme.toggleDark}
+                     aria-label="Toggle Dark Mode."
+                     title="Toggle Dark Mode"
+                  >
+                     {theme.dark ? (
+                        <img
+                           src={sun}
+                           className="theme-icon"
+                           alt="Light Mode"
+                        />
+                     ) : (
+                        <img
+                           src={moon}
+                           className="theme-icon"
+                           alt="Dark Mode"
+                        />
+                     )}
+                  </button>
+               </div>
+               <a
+                  className="kofi-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://ko-fi.com/yonicalsin"
+                  aria-label="¡Cómprame un café!"
+                  title="¡Cómprame un café!"
+               >
+                  <img src={kofi} alt="Kofi" className="kofi" />
+               </a>
+               <a
+                  className="kofi-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/yonicalsin"
+                  aria-label="¡Cómprame un café!"
+                  title="¡Cómprame un café!"
+               >
+                  <img
+                     src="https://image.flaticon.com/icons/svg/1051/1051326.svg"
+                     alt="Github"
+                     className="kofi"
+                     height="18px"
+                     width="18px"
+                  />
+               </a>
+               <a
+                  className="kofi-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/YoniCalsin"
+                  aria-label="¡Cómprame un café!"
+                  title="¡Cómprame un café!"
+               >
+                  <img
+                     src="https://image.flaticon.com/icons/svg/733/733579.svg"
+                     alt="Twitter"
+                     className="kofi"
+                     height="18px"
+                     width="18px"
+                  />
+               </a>
             </div>
          </nav>
       );

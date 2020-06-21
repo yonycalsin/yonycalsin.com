@@ -1,29 +1,27 @@
 export default [
    {
-      name: 'Craig',
-      quote: `It's no exaggeration to say that I
-   wouldn't currently have a job in development without this site. So thanks for
-   ruining my life, Tania.`,
+      name: 'Albert Einstein',
+      quote: `Hazlo simple: tan simple como sea posible, pero no más.`,
    },
    {
-      name: 'Lori',
-      quote: `Not to get too dramatic, but I find your site to be an unspeakably beautiful
-   lifeboat in an overwhelming sea of technical jargon and shite.`,
+      name: 'Ley de los Datos de Parkinson',
+      quote: `Los datos se expanden hasta llenar todo el espacio de almacenamiento.`,
    },
    {
-      name: 'Evan',
-      quote: `You taught me more than any class could have and it took me a fraction of the time because of how clearly you write and teach.`,
+      name: 'Anónimo',
+      quote: `Los programadores de verdad no documentan. Si fue difícil de escribir, debe ser difícil de entender.`,
    },
    {
-      name: 'Zuzana',
-      quote: `I keep coming back to your website and I appreciate it more and more every time. The way you explain things just make sense!`,
+      name: 'Anónimo',
+      quote: `No le atribuyas cualidades humanas a los ordenadores. No les gusta.`,
    },
    {
-      name: 'P.P.',
-      quote: `You are the best tutor I have ever seen in my life. This tutorial is an excellent example of simplicity, clear explanations and detailed examples. I love every bit of your work. Never stop teaching, please.`,
+      name: 'Al Goodman',
+      quote: `Se ha creado el ordenador perfecto. Metes todos tus problemas y ya no vuelven a salir.`,
    },
    {
-      name: 'Antony',
-      quote: 'Just wanted to thank you for your awesome tutorials. Glad you found your niche, teaching valuable skills to so many folks out there, instead of preparing fine meals for a select few.'
-   }
-]
+      name: 'Anónimo',
+      quote:
+         'El hardware es aquello a lo que puedes dar patadas. Software es aquello a lo que sólo puedes insultar.',
+   },
+];

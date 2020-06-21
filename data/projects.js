@@ -1,5 +1,5 @@
-const gh = (url, user = 'yoicalsin') => `https://github.com/${user}/${url}`;
-const ghp = (url, user = 'yoicalsin') => `https://${user}.github.io/${url}`;
+const gh = (url, user = 'yonicalsin') => `https://github.com/${user}/${url}`;
+const ghp = (url, user = 'yonicalsin') => `https://${user}.github.io/${url}`;
 
 export default [
    {
@@ -8,7 +8,7 @@ export default [
       path: 'https://nestjs.com/',
       source: gh('nest', 'nestjs'),
       description:
-         'A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8)',
+         'Framework para construir un servidor con nodejs y typescript',
    },
    {
       icon: '📋',
@@ -16,14 +16,14 @@ export default [
       path: 'https://react-hook-form.com/',
       source: 'https://github.com/react-hook-form/react-hook-form',
       description:
-         'React hooks for forms validation without the hassle (Web + React Native)',
+         'React Hooks para la validación de formularios sin la molestia',
    },
    {
       icon: '☕',
       title: 'Sequelize',
       path: 'https://sequelize.org/',
       source: 'https://github.com/sequelize/sequelize',
-      description: 'An easy-to-use multi SQL dialect ORM for Node.js',
+      description: 'Un ORM de dialecto multi SQL fácil de usar para Node.js',
    },
    {
       icon: '🌍',
@@ -31,39 +31,28 @@ export default [
       path: 'https://github.com/cogenv',
       source: 'https://github.com/cogenv',
       description:
-         'Cogenv is a module that loads environment variables from an .env file',
+         'una eficiente y flexible biblioteca de JavaScript para manejar las variables del entorno',
    },
    {
       icon: '🎨',
       title: 'Sass Colors',
       path: ghp('sass-colors'),
       source: gh('sass-colors'),
-      description:
-         'Sass-colors 🌐 is a scss library, which adds modern colors.',
+      description: 'añade colores modernos a sass/scss.',
    },
    {
       icon: '📝',
       title: 'Format Fast',
       path: gh('format-fast'),
       source: gh('format-fast'),
-      description:
-         'Format-fast is a function that allows you to replace certain words to make a string dynamically, and very easily !',
-   },
-   {
-      icon: '🎁',
-      title: 'Nestjs Sequelize Seeder',
-      path: gh('nestjs-sequelize-seeder'),
-      source: gh('nestjs-sequelize-seeder'),
-      description:
-         'The optimized dark theme for web development. Your new favorite theme.',
+      description: 'formatea string mágicamente',
    },
    {
       icon: '🌾',
       title: 'Nestjs Sequelize Seeder',
       path: gh('nestjs-sequelize-paginate'),
       source: gh('nestjs-sequelize-paginate'),
-      description:
-         'A simple extension library for nestjs sequelize to perform seeding.',
+      description: 'seeder for nestjs and sequelize',
    },
    {
       icon: '🎸',
@@ -77,6 +66,6 @@ export default [
       icon: '🏆',
       title: 'greyblu.com',
       source: 'https://github.com/greyblu/greyblu.com/',
-      description: 'Personal theme for Gatsby (the source of this website).',
+      description: 'Blog Personal de Yoni Calsin',
    },
 ];

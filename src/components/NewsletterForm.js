@@ -5,13 +5,13 @@ export default class NewsletterForm extends Component {
       return (
          <div className="centered-iframe">
             <h3>Desactivado por el momento!</h3>
-            {/* <iframe
+            <iframe
                width="480"
                height="150"
-               src="https://taniarascia.substack.com/embed"
+               src="https://yonicalsin.substack.com/embed"
                frameborder="0"
                scrolling="no"
-            ></iframe> */}
+            ></iframe>
          </div>
       );
    }

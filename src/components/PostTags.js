@@ -9,7 +9,7 @@ export default class PostTags extends Component {
       return (
          <div className="tag-container">
             {tags &&
-               tags.map(tag => (
+               tags.map((tag) => (
                   <Link
                      key={tag}
                      style={{ textDecoration: 'none' }}

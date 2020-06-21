@@ -9,8 +9,6 @@ categories:
    - Popular
 tags:
    - css
-   - estilo
-   - css3
    - diseño
 ---
 
@@ -64,7 +62,7 @@ A modo de recapitulación, hablaremos mucho de cómo CSS se aplica a HTML, así 
 
 -  **Etiqueta** - nombre de elemento (_ejemplo:_ `a`)
 -  **Atributo** - Modificadores de HTML (_ejemplo:_ `href`)
--  **Valor** - valor aplicado a un atributo (_ejemplo:_ `https://greyblu.com`)
+-  **Valor** - valor aplicado a un atributo (_ejemplo:_ `https://yonicalsin.netlify.app`)
 -  **Elemento** - todo dentro de la etiqueta HTML - atributos, valores y contenido.
 
 Ejemplo:
@@ -76,19 +74,19 @@ Ejemplo:
 Un verdadero ejemplo:
 
 ```html
-<a href="https://greyblu.com">El WebRing de Yoni</a>
+<a href="https://yonicalsin.netlify.app">El WebRing de Yoni</a>
 ```
 
 Esto enlazará con mi increíble WebRing.
 
 ### Referencia HTML
 
-| Sintaxis | Ejemplo                                                        |
-| -------- | -------------------------------------------------------------- |
-| Etiqueta | `a`, `img`, `h1`                                               |
-| Atributo | `href`, `src`, `alt`                                           |
-| Valor    | `https://greyblu.com`, `avatar.png`, `Algún texto alternativo` |
-| Elemento | `<img src="avatar.png">`                                       |
+| Sintaxis | Ejemplo                                                                   |
+| -------- | ------------------------------------------------------------------------- |
+| Etiqueta | `a`, `img`, `h1`                                                          |
+| Atributo | `href`, `src`, `alt`                                                      |
+| Valor    | `https://yonicalsin.netlify.app`, `avatar.png`, `Algún texto alternativo` |
+| Elemento | `<img src="avatar.png">`                                                  |
 
 Ahora podemos pasar a CSS.
 

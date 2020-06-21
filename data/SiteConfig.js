@@ -1,7 +1,7 @@
 const config = {
-   siteTitle: 'Greyblu',
-   siteTitleShort: 'Greyblu',
-   siteTitleAlt: 'Greyblu',
+   siteTitle: 'Yoni Calsin',
+   siteTitleShort: 'YoniCalsin',
+   siteTitleAlt: 'Yoni Calsin - Frontend Developer',
    siteLogo: '/logos/logo-1024.png',
    siteUrl: 'https://www.greyblu.com',
    repo: 'https://github.com/greyblu/greyblu.com',
@@ -13,22 +13,22 @@ const config = {
    siteRss: '/rss.xml',
    googleAnalyticsID: 'UA-155262111-2',
    postDefaultCategoryID: 'Tech',
-   newsletter: 'https://taniarascia.substack.com',
-   newsletterEmbed: 'https://taniarascia.substack.com/embed',
+   newsletter: 'https://yonicalsin.substack.com',
+   newsletterEmbed: 'https://yonicalsin.substack.com/embed',
    userName: 'Yoni Calsin',
    userEmail: 'helloyonicb@gmail.com',
    userTwitter: 'yonicalsin',
    menuLinks: [
       {
-         name: 'About me',
+         name: 'Portafolio',
          link: '/me/',
       },
       {
-         name: 'Articles',
+         name: 'Articulos',
          link: '/blog/',
       },
       {
-         name: 'Contact',
+         name: 'Contacto',
          link: '/contact/',
       },
    ],

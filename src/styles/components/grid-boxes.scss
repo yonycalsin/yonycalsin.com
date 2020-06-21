@@ -1,0 +1,13 @@
+.grid-boxes {
+   display: flex;
+   flex-flow: row wrap;
+   > * {
+      margin: 5px;
+      width: calc((100% / 6) - 10px);
+      p {
+         text-align: center;
+         margin: 10px auto;
+         font-weight: bold;
+      }
+   }
+}

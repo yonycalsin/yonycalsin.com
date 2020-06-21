@@ -5,6 +5,14 @@ code {
    font-size: 13px;
 }
 
+a code {
+   border-bottom: 2px solid $primary-color !important;
+
+   &:hover {
+      color: white !important;
+   }
+}
+
 pre.language-terminal code.language-terminal {
    position: relative;
    padding: 1rem;
@@ -53,7 +61,7 @@ pre code {
    tab-size: 2;
    hyphens: none;
    border-radius: $border-radius;
-   -webkit-font-smoothing: antialiased;
+   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* Code blocks */
@@ -65,17 +73,18 @@ pre code {
    background-color: #333;
    border: 0;
    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
+   overflow-wrap: normal;
 }
 
 // Keyboard input
 kbd {
    background-color: #f7f7f7;
-   border: 1px solid rgba(0, 0, 0, 0.3);
+   border: 2px solid rgba(0, 0, 0, 0.3);
    border-radius: 3px;
    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
    color: #333;
    display: inline-block;
-   font-family: Helvetica, Arial, sans-serif;
+   font-family: $font-family;
    line-height: 1.4;
    margin: 0 0.1em;
    padding: 0.1em 0.6em;
@@ -88,13 +97,14 @@ kbd {
 :not(pre)>code[class*='language-'] {
    padding: 3px 5px;
    color: #111111;
+   font-weight: 500;
 }
 
 :not(pre)>code {
    padding: 3px 5px;
    border: none;
    font-family: $code-font-family;
-   font-weight: 400;
+   font-weight: 500;
    color: #111111;
    border-radius: 4px;
    background: rgba(0, 0, 0, 0.06);
@@ -115,7 +125,7 @@ code[class*='language-sass'] {
    font-weight: bold;
    border-top-left-radius: 6px;
    border-top-right-radius: 6px;
-   margin-bottom: -2.2rem;
+   margin-bottom: -2.3rem;
 }
 
 @include small-breakpoint {
@@ -324,4 +334,14 @@ code[class*='language-'] ::selection {
    text-shadow: none;
    color: inherit;
    background: rgba(150, 150, 150, 0.3) !important;
+}
+
+.gatsby-highlight-code-line {
+   background-color: #191919;
+   display: block;
+   margin-right: -1em;
+   margin-left: -1em;
+   padding-right: 1em;
+   padding-left: 0.75em;
+   border-left: 0.25em solid $string;
 }

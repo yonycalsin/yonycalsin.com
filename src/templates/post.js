@@ -25,7 +25,7 @@ export default class PostTemplate extends Component {
       const postNode = this.props.data.markdownRemark;
       const post = postNode.frontmatter;
       const popular = postNode.frontmatter.categories.find(
-         category => category === 'Popular',
+         (category) => category === 'Popular',
       );
       let thumbnail;
 
@@ -45,7 +45,7 @@ export default class PostTemplate extends Component {
       const githubLink = editOnGithub(post);
       const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(
          post.title,
-      )}&url=${config.siteUrl}/${post.slug}/&via=yoicalsin`;
+      )}&url=${config.siteUrl}/${post.slug}/&via=yonicalsin`;
 
       return (
          <Layout>
@@ -112,7 +112,7 @@ export default class PostTemplate extends Component {
             <div className="container">
                <a
                   className="button"
-                  // href="https://yoicalsin.substack.com/"
+                  href="https://yonicalsin.substack.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                >

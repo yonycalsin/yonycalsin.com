@@ -7,7 +7,7 @@ export default class ProjectListing extends Component {
 
       return (
          <section className="projects">
-            {projects.map(project => (
+            {projects.map((project) => (
                <div className="each" key={project.title}>
                   <h2>
                      <a

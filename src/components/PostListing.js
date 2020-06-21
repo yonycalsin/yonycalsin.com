@@ -7,7 +7,7 @@ import { formatDate } from '../utils/global';
 export default class PostListing extends Component {
    getPostList() {
       const { postEdges } = this.props;
-      const postList = postEdges.map(postEdge => {
+      const postList = postEdges.map((postEdge) => {
          return {
             path: postEdge.node.fields.slug,
             tags: postEdge.node.frontmatter.tags,
@@ -28,7 +28,7 @@ export default class PostListing extends Component {
 
       return (
          <section className={`posts ${simple ? 'simple' : ''}`}>
-            {postList.map(post => {
+            {postList.map((post) => {
                let thumbnail;
                if (post.thumbnail) {
                   thumbnail = post.thumbnail.childImageSharp.fixed;

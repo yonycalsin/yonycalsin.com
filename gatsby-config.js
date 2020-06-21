@@ -37,12 +37,6 @@ module.exports = {
          },
       },
       {
-         resolve: 'gatsby-plugin-typography',
-         options: {
-            pathToConfigModule: `${__dirname}/src/utils/typography.js`,
-         },
-      },
-      {
          resolve: 'gatsby-source-filesystem',
          options: {
             name: 'posts',
@@ -118,7 +112,7 @@ module.exports = {
             setup(ref) {
                const ret = ref.query.site.siteMetadata.rssMetadata;
                ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-               ret.generator = 'Tania Rascia';
+               ret.generator = 'Yoni Calsin';
                return ret;
             },
             query: `
@@ -140,7 +134,7 @@ module.exports = {
                {
                   serialize(ctx) {
                      const { rssMetadata } = ctx.query.site.siteMetadata;
-                     return ctx.query.allMarkdownRemark.edges.map(edge => ({
+                     return ctx.query.allMarkdownRemark.edges.map((edge) => ({
                         categories: edge.node.frontmatter.tags,
                         date: edge.node.fields.date,
                         title: edge.node.frontmatter.title,
@@ -182,7 +176,7 @@ module.exports = {
             }
           `,
                   output: config.siteRss,
-                  title: 'Greyblu - RSS Feed',
+                  title: 'Yoni Calsin - RSS Feed',
                },
             ],
          },

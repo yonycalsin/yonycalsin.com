@@ -31,7 +31,7 @@ class ThemeProvider extends Component {
    }
 
    toggleDark = () => {
-      this.setState(prevState => ({ dark: !prevState.dark }));
+      this.setState((prevState) => ({ dark: !prevState.dark }));
    };
 
    setNotFound = () => {

@@ -5,7 +5,7 @@ import config from '../../data/SiteConfig';
 
 export default class SEO extends Component {
    render() {
-      const replacePath = path =>
+      const replacePath = (path) =>
          path === `/` ? path : path.replace(/\/$/, ``);
       const { postNode, postPath, postSEO } = this.props;
       let title;
