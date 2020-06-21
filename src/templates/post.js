@@ -21,6 +21,7 @@ export default class PostTemplate extends Component {
    }
 
    render() {
+      const { location } = this.props;
       const { slug } = this.props.pageContext;
       const postNode = this.props.data.markdownRemark;
       const post = postNode.frontmatter;
