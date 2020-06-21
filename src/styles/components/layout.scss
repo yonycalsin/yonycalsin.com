@@ -1316,11 +1316,6 @@ button[disabled] {
    }
 }
 
-::selection {
-   background: $primary-color;
-   color: white;
-}
-
 @media print {
    .footer {
       display: none;
