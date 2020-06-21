@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 // import greyblu from '../images/greyblu.png';
 import sun from '../images/sun.svg';
 import moon from '../images/moon.svg';
-import logo from '../images/logo.png';
+import logo from '../images/logo.svg';
 import kofi from '../images/kofi.png';
 import ThemeContext from '../context/ThemeContext';
 
