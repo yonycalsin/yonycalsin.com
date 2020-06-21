@@ -176,7 +176,7 @@ module.exports = {
             }
           `,
                   output: config.siteRss,
-                  title: 'Greyblu - RSS Feed',
+                  title: 'Yoni Calsin - RSS Feed',
                },
             ],
          },
