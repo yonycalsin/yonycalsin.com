@@ -162,7 +162,7 @@ export default class AboutMe extends Component {
    render() {
       return (
          <Layout>
-            <Helmet title={`Acerca de Yoni Calsin - Greyblu `} />
+            <Helmet title={`Acerca de Yoni Calsin - Desarrollador Frontend `} />
             <SEO />
             <div className="container">
                <article>

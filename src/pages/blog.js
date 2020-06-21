@@ -18,10 +18,12 @@ import terminal from '../../content/thumbnails/terminal.png';
 import sql from '../../content/thumbnails/sql.png';
 import cookie from '../../content/thumbnails/cookie.png';
 import json from '../../content/thumbnails/json.png';
+import typescript from '../../content/thumbnails/typescript.png';
 
 const manuals = [
    { name: 'React', image: react, url: '/categories/react' },
    { name: 'Redux', image: redux, url: '/categories/redux' },
+   { name: 'Typescript', image: typescript, url: '/categories/typescript' },
    { name: 'Vue', image: vue, url: '/categories/vue' },
    { name: 'Node', image: node, url: '/categories/node' },
    { name: 'Bash', image: bash, url: '/categories/bash' },
@@ -65,7 +67,7 @@ export default class BlogPage extends Component {
 
       return (
          <Layout>
-            <Helmet title={`Articles – ${config.siteTitle}`} />
+            <Helmet title={`Artículos – ${config.siteTitle}`} />
             <SEO />
             <div className="gradient-section articles">
                <div className="container">

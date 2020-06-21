@@ -49,7 +49,7 @@ export default class PostListing extends Component {
                         </div>
                         {newest && (
                            <div className="alert">
-                              <div className="new">Nuevo!</div>
+                              <div className="new">Nuevo</div>
                            </div>
                         )}
                         {popular && !simple && !newest && (
