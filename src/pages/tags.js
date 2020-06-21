@@ -13,9 +13,9 @@ export default class TagsPage extends Component {
       return (
          <Layout>
             <SEO />
-            <Helmet title={`Tags – ${config.siteTitle}`} />
+            <Helmet title={`Etiquetas – ${config.siteTitle}`} />
             <div className="container">
-               <h1>Tags</h1>
+               <h1>Etiquetas</h1>
                <div className="tag-container">
                   {group.map((tag) => (
                      <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
