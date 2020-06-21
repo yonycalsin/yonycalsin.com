@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
 import Layout from '../layout';
-import PostListing from '../components/PostListing';
 import SEO from '../components/SEO';
-import config from '../../data/SiteConfig';
 import ThemeContext from '../context/ThemeContext';
 import projects from '../../data/projects';
 import { Link } from 'gatsby';
-import {
-   CircularProgressbarWithChildren,
-   buildStyles,
-} from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 
 const skillMarkupt = [
    {
@@ -152,33 +144,17 @@ const skillTesting = [
    },
 ];
 
-const GridBoxes = ({ data }) => (
-   <div className="grid-boxes">
-      {data.map((v, i) => (
-         <div>
-            <CircularProgressbarWithChildren
-               value={v.score}
-               styles={buildStyles({
-                  textColor: 'red',
-                  pathColor: v.stroke || '#33BD65',
-                  trailColor: '#eee',
-                  pathTransitionDuration: 2,
-               })}
-            >
-               <h4 style={{ textAlign: 'center', margin: 0 }}>
-                  {v.icon && (
-                     <>
-                        {v.icon} <br />
-                     </>
-                  )}{' '}
-                  {v.score}%
-               </h4>
-            </CircularProgressbarWithChildren>
-            <p>{v.label}</p>
-         </div>
-      ))}
-   </div>
-);
+const eachSkills = (data) => {
+   return (
+      <ul>
+         {data.map((v, i) => (
+            <li key={i}>
+               <strong>{v?.label}</strong> - puntuación: <code>{v?.score}</code>
+            </li>
+         ))}
+      </ul>
+   );
+};
 
 export default class AboutMe extends Component {
    static contextType = ThemeContext;
@@ -215,49 +191,48 @@ export default class AboutMe extends Component {
                         momento.
                      </p>
 
-                     <h2>Habilidades</h2>
+                     <h2>Habilidades Profesionales</h2>
+                     <ul>
+                        <li>
+                           Maquetacion
+                           {eachSkills(skillMarkupt)}
+                        </li>
+                        <li>Diseño {eachSkills(skillDesign)} </li>
+                        <li>
+                           Lenguajes de Programacion
+                           {eachSkills(skillProgramingLanguage)}
+                        </li>
+                        <li>
+                           Librerias
+                           {eachSkills(skillLibrerias)}
+                        </li>
+                        <li>Testing {eachSkills(skillTesting)}</li>
+                     </ul>
 
-                     <div>
-                        <h4>- Maquetacion</h4>
-                        <GridBoxes data={skillMarkupt} />
-
-                        <h4>- Diseño</h4>
-                        <GridBoxes data={skillDesign} />
-
-                        <h4>- Lenguajes de Programacion</h4>
-                        <GridBoxes data={skillProgramingLanguage} />
-
-                        <h4>- Librerias</h4>
-                        <GridBoxes data={skillLibrerias} />
-                        <h4>- Testing</h4>
-                        <GridBoxes data={skillTesting} />
-                     </div>
-                     <br />
-                     <br />
-
+                     <h2>Habilidades Personales</h2>
                      <ul>
                         <li>
                            Siempre estoy dispuesto a aceptar los desafíos con la
                            gran dedicación.
                         </li>
                         <li>
-                           Dale la bienvenida a todos los que quieran mis
-                           servicios y no tendrás ninguna oportunidad de
-                           sentirte mal y seguramente obtendrás un 100% de
-                           satisfacción.
+                           Me exijo a mi mismo para realizar un trabajo de
+                           calidad
+                        </li>
+                        <li>
+                           Siempre me a encantado trabajar en equipo sabiendo
+                           que es una de las claves para el éxito, e incluso me
+                           gustaría delegar un equipo con la máxima
+                           responsabilidad requerida
                         </li>
                      </ul>
+
                      <p>
                         Puede leer mis
                         <Link to="/blog">{' artículos '}</Link>o
                         <Link to="/contact">{' contactarme'}</Link>.
                      </p>
-                     <p>
-                        Si está buscando un desarrollador frontend, está en el
-                        lugar correcto. Tengo más de 2 años de experiencia en
-                        desarrollo de sitios web dinamicas con las ultimas
-                        tecnologias.
-                     </p>
+
                      <h3>Yoni Calsin</h3>
                      <ul>
                         <li>
