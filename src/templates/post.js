@@ -8,7 +8,8 @@ import PostTags from '../components/PostTags';
 import SEO from '../components/SEO';
 import config from '../../data/SiteConfig';
 import { formatDate, editOnGithub } from '../utils/global';
-import NewsletterForm from '../components/NewsletterForm';
+// import NewsletterForm from '../components/NewsletterForm';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 
 export default class PostTemplate extends Component {
    constructor(props) {
@@ -20,7 +21,6 @@ export default class PostTemplate extends Component {
    }
 
    render() {
-      const { comments, error } = this.state;
       const { slug } = this.props.pageContext;
       const postNode = this.props.data.markdownRemark;
       const post = postNode.frontmatter;
@@ -46,6 +46,12 @@ export default class PostTemplate extends Component {
       const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(
          post.title,
       )}&url=${config.siteUrl}/${post.slug}/&via=yonicalsin`;
+
+      let disqusConfig = {
+         url: `${config.siteUrl + location.pathname}`,
+         identifier: post.id,
+         title: post.title,
+      };
 
       return (
          <Layout>
@@ -93,22 +99,6 @@ export default class PostTemplate extends Component {
                   dangerouslySetInnerHTML={{ __html: postNode.html }}
                />
             </article>
-            <div className="container no-comments">
-               <h3>No comments?</h3>
-               <p>
-                  There are intentionally no comments on this site. Enjoy! If
-                  you found any errors in this article, please feel free to{' '}
-                  <a
-                     className="github-link"
-                     href={githubLink}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                  >
-                     edit on GitHub
-                  </a>
-                  .
-               </p>
-            </div>
             <div className="container">
                <a
                   className="button"
@@ -116,10 +106,13 @@ export default class PostTemplate extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                >
-                  Subscribe to Newsletter
+                  Suscríbete al boletín de noticias
                </a>
             </div>
             <UserInfo config={config} />
+            <div className="container">
+               <Disqus config={disqusConfig} />
+            </div>
          </Layout>
       );
    }

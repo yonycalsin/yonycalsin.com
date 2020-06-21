@@ -29,7 +29,7 @@ const config = {
       },
       {
          name: 'Contacto',
-         link: '/contact/',
+         link: '/contacto/',
       },
    ],
    themeColor: '#3F80FF', // Used for setting manifest and progress theme colors.
