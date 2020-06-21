@@ -1,15 +1,15 @@
 const config = {
    siteTitle: 'Yoni Calsin',
    siteTitleShort: 'YoniCalsin',
-   siteTitleAlt: 'Yoni Calsin - Frontend Developer',
+   siteTitleAlt: 'Yoni Calsin - Desarrollador de Frontend | Frontend Developer',
    siteLogo: '/logos/logo-1024.png',
-   siteUrl: 'https://www.greyblu.com',
+   siteUrl: 'https://yonicalsin.netlify.app',
    repo: 'https://github.com/greyblu/greyblu.com',
    pathPrefix: '',
    dateFromFormat: 'YYYY-MM-DD',
    dateFormat: 'MMMM Do, YYYY',
    siteDescription:
-      'Yoni Calsin is a front end software developer and writer specializing in modern JavaScript.',
+      'Yoni Calsin es un desarrollador de frontend especializado en JavaScript moderno.',
    siteRss: '/rss.xml',
    googleAnalyticsID: 'UA-155262111-2',
    postDefaultCategoryID: 'Tech',

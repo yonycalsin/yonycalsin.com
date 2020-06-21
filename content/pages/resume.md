@@ -1,12 +1,12 @@
 ---
-title: Tania Rascia
+title: Yoni Calsin
 slug: resume
 template: page
 ---
 
 ### Front End Software Developer
 
--  [taniarascia.com](https://www.greyblu.com)
+-  [yonicalsin.netlify.app](https://yonicalsin.netlify.app)
 -  [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
 
 ## Technical Skills
@@ -112,4 +112,4 @@ Crud for nestjs
 
 -  Getting Started With React article featured in official React documentation as React For Beginners. [Source](https://reactjs.org/docs/getting-started.html)
 -  Interviewed in the Egghead.io Podcast in Switching Careers and Learning in Public with Joel Hooks. [Source](https://egghead.io/podcasts/switching-careers-and-learning-in-public-with-tania-rascia)
--  Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://www.greyblu.com/publications)
+-  Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://yonicalsin.netlify.app/publications)
