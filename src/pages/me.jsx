@@ -10,6 +10,10 @@ import previewPacolor from '../../content/previews/pacolor.gif';
 import previewAprende from '../../content/previews/aprende.gif';
 import previewFiverr from '../../content/previews/fivver.png';
 import previewFormUnique from '../../content/previews/form-unique.gif';
+import previewChat from '../../content/previews/chat.png';
+import previewCodeBlog from '../../content/previews/code-blog.png';
+import previewCodeTemplate from '../../content/previews/code-template.png';
+import previewNextjsBlog from '../../content/previews/nextjs-blog.png';
 
 const skillMarkupt = [
    {
@@ -163,14 +167,10 @@ const eachSkills = (data) => {
 
 const createdProjects = [
    {
-      title: 'Instagram Template',
-      image: previewInstagramTemplate,
-      source: ['HTML', 'Jade', 'Css', 'Scss', 'Bulma', 'Typescript'],
-   },
-   {
       title: 'Generador de paleta de colores',
       image: previewPacolor,
       source: ['React', 'Scss', 'Typescript', 'Redux'],
+      demo: 'https://pacolor.netlify.app/',
    },
    {
       title: 'Plataforma de educacion dinamica',
@@ -230,6 +230,33 @@ const createdProjects = [
          'Mysql',
          'sql',
       ],
+   },
+
+   {
+      title: 'Template de venta de codigos',
+      image: previewCodeTemplate,
+      source: ['React', 'Typescript', 'Scss'],
+   },
+   {
+      title: 'Blog with NextJs',
+      image: previewNextjsBlog,
+      source: ['React', 'NextJs', 'Scss', 'Markdown', 'NodeJs'],
+      demo: 'https://github.com/yonicalsin/my-nextjs-blog',
+   },
+   {
+      title: 'Instagram Template',
+      image: previewInstagramTemplate,
+      source: ['HTML', 'Jade', 'Css', 'Scss', 'Bulma', 'Typescript'],
+   },
+   {
+      title: 'Messenger Template',
+      image: previewChat,
+      source: ['HTML', 'Jade', 'Bootstrap'],
+   },
+   {
+      title: 'Code Blog',
+      image: previewCodeBlog,
+      source: ['Bootstrap', 'Html', 'Jquery'],
    },
 ];
 
@@ -317,6 +344,15 @@ export default class AboutMe extends Component {
                               <div className="content fx fx-cc fx-cnw">
                                  <h4>{v.title}</h4>
                                  <p>{v.source.join(', ')}</p>
+                                 {v.demo && (
+                                    <a
+                                       href={v.demo}
+                                       target="blank"
+                                       rel="noopener noreferrer"
+                                    >
+                                       Preview
+                                    </a>
+                                 )}
                               </div>
                            </div>
                         ))}
