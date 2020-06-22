@@ -24,7 +24,7 @@ export default class Index extends Component {
       return (
          <Layout>
             <Helmet
-               title={`${config.siteTitle} – Full Stack Software Developer`}
+               title={`${config.siteTitle} – Desarrollador Frontend / Frontend Developer`}
             />
             <SEO />
             <div className="container">
@@ -52,6 +52,15 @@ export default class Index extends Component {
                         >
                            yonicalsin
                         </GitHubButton>
+                        <a
+                           href="https://twitter.com/yonicalsin"
+                           target="_blank"
+                           style={{ background: 'transparent' }}
+                           rel="noopener noreferrer"
+                        >
+                           {' '}
+                           <img src="https://img.shields.io/twitter/follow/yonicalsin.svg?style=social&label=Follow" />{' '}
+                        </a>
                      </div>
                   </div>
                   <div className="newsletter-section">

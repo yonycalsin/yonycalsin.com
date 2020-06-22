@@ -17,3 +17,12 @@ figure,
 body {
    margin: 0;
 }
+
+::selection {
+   background: $primary-color;
+   color: white;
+}
+
+img::selection {
+   background: transparent;
+}
