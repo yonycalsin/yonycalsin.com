@@ -4,7 +4,12 @@ import Layout from '../layout';
 import SEO from '../components/SEO';
 import ThemeContext from '../context/ThemeContext';
 import projects from '../../data/projects';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import previewInstagramTemplate from '../../content/previews/instagram-template.png';
+import previewPacolor from '../../content/previews/pacolor.gif';
+import previewAprende from '../../content/previews/aprende.gif';
+import previewFiverr from '../../content/previews/fivver.png';
+import previewFormUnique from '../../content/previews/form-unique.gif';
 
 const skillMarkupt = [
    {
@@ -159,17 +164,17 @@ const eachSkills = (data) => {
 const createdProjects = [
    {
       title: 'Instagram Template',
-      image: 'https://source.unsplash.com/collection/190727/1600x900',
-      source: ['HTML', 'Css', 'Bulma', 'Typescript'],
+      image: previewInstagramTemplate,
+      source: ['HTML', 'Jade', 'Css', 'Scss', 'Bulma', 'Typescript'],
    },
    {
       title: 'Generador de paleta de colores',
-      image: 'https://source.unsplash.com/collection/190727/1600x900',
-      source: ['React', 'Typescript'],
+      image: previewPacolor,
+      source: ['React', 'Scss', 'Typescript', 'Redux'],
    },
    {
       title: 'Plataforma de educacion dinamica',
-      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      image: previewAprende,
       source: [
          'React',
          'NextJs',
@@ -189,7 +194,7 @@ const createdProjects = [
    },
    {
       title: 'Generador de formularios',
-      image: 'https://source.unsplash.com/collection/190727/1600x900',
+      image: previewFormUnique,
       source: [
          'React',
          'NextJs',
@@ -200,7 +205,27 @@ const createdProjects = [
          'Redux',
          'Typescript',
          'NestJs',
-         'Seqeuelize',
+         'Sequelize',
+         'Graphql',
+         'Mysql',
+         'sql',
+         'Apollo Client',
+      ],
+   },
+   {
+      title: 'Sistema de contratacion de freelancers',
+      image: previewFiverr,
+      source: [
+         'React',
+         'NextJs',
+         'Typescript',
+         'Ant Design',
+         'Scss',
+         'styled-jsx',
+         'Redux',
+         'Typescript',
+         'NestJs',
+         'Sequelize',
          'Graphql',
          'Mysql',
          'sql',
