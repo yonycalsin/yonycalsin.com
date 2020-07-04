@@ -1,7 +1,8 @@
-$hg: 30px;
+$hg: 35px;
 .promo-bar {
    background: #404040;
    background: rgb(26, 43, 75);
+   background: #052c48;
    position: fixed;
    top: 0;
    left: 0;
@@ -9,11 +10,15 @@ $hg: 30px;
    height: $hg;
    width: 100%;
    color: white;
+   &,
+   * {
+      font-size: 16px;
+   }
    * {
       margin: 0;
    }
    a {
-      $bg: $primary-color;
+      $bg: lighten($primary-color, 30%);
       color: $bg;
       margin: 0 5px;
       border-bottom: 1px solid $bg;

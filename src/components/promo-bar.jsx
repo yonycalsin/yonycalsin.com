@@ -1,6 +1,5 @@
-// @ts-check
-
 import React, { useEffect } from 'react';
+import { Link } from 'gatsby';
 
 const PromoBar = () => {
    useEffect(() => {
@@ -10,7 +9,9 @@ const PromoBar = () => {
    return (
       <div className="promo-bar fx fx-cc">
          <p>
-            Defendamos 🎉 <a href="/">#BlackLivesMatter</a>{' '}
+            🚀 Mañana llegarán dos nuevos articulos.
+            <Link to="/blog">¿Serán los que tanto esperabas?</Link>
+            🎁
          </p>
       </div>
    );
