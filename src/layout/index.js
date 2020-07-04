@@ -8,6 +8,7 @@ import favicon from '../images/favicon.png';
 import '../styles/main.scss';
 import Popup from '../components/popup';
 import BackTop from '../components/back-top';
+import PromoBar from '../components/promo-bar';
 
 export default class MainLayout extends Component {
    static contextType = ThemeContext;
@@ -34,6 +35,7 @@ export default class MainLayout extends Component {
                <link rel="shortcut icon" type="image/png" href={favicon} />
             </Helmet>
             <Popup />
+            <PromoBar />
             <Navigation menuLinks={config.menuLinks} />
             <main id="main-content">{children}</main>
             <Footer />
