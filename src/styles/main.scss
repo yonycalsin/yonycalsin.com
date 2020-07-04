@@ -7,6 +7,7 @@
 
 // Reset
 @import 'base/reset';
+@import 'scroll';
 
 // Flexbox Helpers
 @import '~flexbox-fast/index.scss';
@@ -21,6 +22,9 @@
 @import 'components/layout';
 @import 'components/new-moon';
 @import 'components/created-projects.scss';
+@import 'components/popup.scss';
+@import 'components/back-top.scss';
+@import 'components/promo-bar.scss';
 
 // Extra components
 @import './components/grid-boxes.scss';

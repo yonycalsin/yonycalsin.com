@@ -792,11 +792,7 @@ blockquote {
    border-bottom: 1px solid #ddd;
    padding: 4rem 0;
    // background: radial-gradient(circle at 20% 20%, #5183f5 25%, #4640ff 100%);
-   background: radial-gradient(
-      circle at 20% 20%,
-      darken($primary-color, 10%) 25%,
-      darken($primary-color, 20%) 100%
-   );
+   background: $primary-color;
    h2 {
       color: white;
    }

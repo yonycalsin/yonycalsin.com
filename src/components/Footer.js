@@ -23,7 +23,7 @@ export default class Footer extends Component {
                >
                   Patreon
                </a>
-               <Link to="/contact/">Contact</Link>
+               <Link to="/contacto/">Contacto</Link>
                <a
                   href="https://yonicalsin.netlify.app/rss.xml"
                   target="_blank"
@@ -33,6 +33,23 @@ export default class Footer extends Component {
                </a>
             </div>
             <div>
+               <a
+                  href="#"
+                  title="Reload"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                     e.preventDefault();
+                     localStorage.clear();
+                     return window.location.reload();
+                  }}
+               >
+                  <img
+                     src={'https://image.flaticon.com/icons/svg/853/853672.svg'}
+                     className="footer-img"
+                     alt="Reload"
+                  />
+               </a>
                <a
                   href="https://github.com/yonicalsin"
                   title="Open-source on GitHub"

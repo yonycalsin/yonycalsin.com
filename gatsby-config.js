@@ -17,6 +17,10 @@ module.exports = {
       },
    },
    plugins: [
+      /* customized */
+      `gatsby-plugin-offline`,
+      /* -/ customized */
+
       {
          resolve: `gatsby-plugin-disqus`,
          options: {

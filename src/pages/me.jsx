@@ -275,11 +275,11 @@ export default class AboutMe extends Component {
                   </header>
                   <div className="page">
                      <p>
-                        Hola, Soy <strong>Yoni Calsin</strong>, una
-                        desarrollador frontend, apasionado de la programacion
-                        web (frontend, backend), a lo largo de mi carrera he
-                        tenido la posibilidad de trabajar en diversos proyectos
-                        que me an proporcionado la oportunidad de ejecutar mis
+                        Hola, Soy <strong>Yoni Calsin</strong>, un desarrollador
+                        frontend, apasionado de la programacion web (frontend,
+                        backend), a lo largo de mi carrera he tenido la
+                        posibilidad de trabajar en diversos proyectos que me an
+                        proporcionado la oportunidad de ejecutar mis
                         conocimientos en estas areas y tambien para seguir
                         aprendiendo acerca de ellos
                      </p>

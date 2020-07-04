@@ -1,6 +1,11 @@
 import React from 'react';
 import { ThemeProvider } from './src/context/ThemeContext';
+import { PopupProvider } from './src/context/PopupContext';
 
 export const wrapRootElement = ({ element }) => (
-   <ThemeProvider>{element}</ThemeProvider>
+   <>
+      <PopupProvider>
+         <ThemeProvider>{element}</ThemeProvider>
+      </PopupProvider>
+   </>
 );
