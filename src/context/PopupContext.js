@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ms from 'ms';
 
 const defaultState = {
    showed: false,
@@ -25,7 +26,7 @@ class PopupProvider extends Component {
             showed: true,
          });
          clearTimeout(interval);
-      }, 2000);
+      }, ms('7s'));
    }
    componentDidUpdate(prev) {
       const { showed } = this.state;
