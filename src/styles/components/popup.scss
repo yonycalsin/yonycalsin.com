@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+
 .popup {
    background: white;
    position: fixed;
@@ -6,6 +8,7 @@
    top: 0;
    left: 0;
    z-index: 1000;
+
    .close {
       position: absolute;
       right: 2%;
@@ -17,10 +20,57 @@
       height: 100%;
       position: relative;
       .content {
-         text-align: center;
+         // max-width: 550px;
          h2 {
+            text-align: center;
             font-size: 2.5em;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 1.15rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #000;
+            line-height: 1.5;
+            span {
+               font-weight: 900;
+               font-size: 2.75rem;
+            }
+         }
+         p {
+            text-align: center;
+            font-family: 'Segoe Ui', sans-serif;
+            font-weight: 400;
+         }
+
+         ul {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            li {
+               flex: 1 1 40%;
+               &::before {
+                  position: relative;
+                  display: inline-block;
+                  content: '';
+                  color: #27ae60;
+                  background-color: rgba(39, 174, 96, 0.15);
+                  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2327AE60' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+                  background-repeat: no-repeat;
+                  background-position: 50%;
+                  margin: 0 0.75rem 0 0;
+                  background-size: 14px 14px;
+                  height: 20px;
+                  width: 20px;
+                  top: 4px;
+                  border-radius: 50%;
+               }
+            }
          }
       }
+   }
+}
+
+html.has-popup {
+   body {
+      overflow: hidden;
    }
 }
