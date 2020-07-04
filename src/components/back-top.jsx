@@ -1,6 +1,5 @@
-// @ts-check
-
 import React, { useEffect, useState } from 'react';
+import ArrowUp from '../images/arrow-up.svg';
 
 const duration = 700;
 const inOutSine = (n) => 0.5 * (1 - Math.cos(Math.PI * n));
@@ -62,7 +61,7 @@ const BackTop = () => {
          className={`backtop fx fx-cc ${showed ? 'showed' : ''} `}
          onClick={() => scrollUp()}
       >
-         <span>|</span>
+         <img src={ArrowUp} alt="" />
       </div>
    );
 };
