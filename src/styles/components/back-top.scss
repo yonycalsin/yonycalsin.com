@@ -1,0 +1,20 @@
+.backtop {
+   background: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   bottom: 7%;
+   right: 7%;
+   transition: all 0.2s ease-in-out;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   cursor: pointer;
+   color: white;
+
+   pointer-events: none;
+   opacity: 0;
+
+   &.showed {
+      pointer-events: all;
+      opacity: 1;
+   }
+}
