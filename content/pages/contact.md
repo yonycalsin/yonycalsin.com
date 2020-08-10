@@ -16,11 +16,11 @@ Hola, soy Yoni, un desarrollador de software de primera categoría. Construyo pr
   ></iframe>
 </div>
 
-Si tienes alguna pregunta, comentario, idea, crítica o simplemente quieres decir hola, no dudes en enviarme un correo electrónico a [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
+Si tienes alguna pregunta, comentario, idea, crítica o simplemente quieres decir hola, no dudes en enviarme un correo electrónico [aqui](mailto:helloyonicb@gmail.com)
 
 ### Around the web
 
--  **Email**: [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
+-  **Email**: [@yonicalsin](mailto:helloyonicb@gmail.com)
 -  **GitHub**: [@yonicalsin](https://github.com/yonicalsin)
 -  **Twitter**: [@yonicalsin](https://twitter.com/yonicalsin)
 -  **Patreon**: [@yonicalsin](https://patreon.com/yonicalsin)

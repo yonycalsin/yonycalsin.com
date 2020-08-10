@@ -7,7 +7,7 @@ template: page
 ### Front End Software Developer
 
 -  [yonicalsin.netlify.app](https://yonicalsin.netlify.app)
--  [helloyonicb@gmail.com](mailto:helloyonicb@gmail.com)
+-  [email](mailto:helloyonicb@gmail.com)
 
 ## Technical Skills
 
