@@ -21,12 +21,12 @@ class PopupProvider extends Component {
          return;
       }
 
-      const interval = setTimeout(() => {
-         this.setState({
-            showed: true,
-         });
-         clearTimeout(interval);
-      }, ms('7s'));
+      // const interval = setTimeout(() => {
+      //    this.setState({
+      //       showed: true,
+      //    });
+      //    clearTimeout(interval);
+      // }, ms('7s'));
    }
    componentDidUpdate(prev) {
       const { showed } = this.state;

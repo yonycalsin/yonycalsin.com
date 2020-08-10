@@ -167,10 +167,47 @@ const eachSkills = (data) => {
 
 const createdProjects = [
    {
+      title: 'Una aplicación meteorológica',
+      image:
+         'https://flutterawesome.com/content/images/2019/06/Flutter-Weather.jpg',
+      source: ['Flutter', 'Dart', 'Cupertino Icons', 'Material Design'],
+      code: 'https://github.com/yonicalsin/dart-wheater',
+      pending: true,
+   },
+   {
+      title: 'Aplicacion de Herramientas Basicas para Blogers',
+      image:
+         'https://i.ibb.co/4FRhtRH/me-tools-vercel-app-Laptop-with-Hi-DPI-screen.png',
+      source: [
+         'React',
+         'NextJs',
+         'Typescript',
+         'Scss',
+         'Less',
+         'Ant Design',
+         'prettier',
+      ],
+      demo: 'https://me-tools.vercel.app/',
+      code: 'https://github.com/yonicalsin/my-tools',
+   },
+   {
+      title: 'Extension de navegador, de estudio biblico diariamente',
+      image: 'https://i.ibb.co/RvL1x8k/devocion-extension.png',
+      source: [
+         'Html',
+         'Css',
+         'Bulma',
+         'ncp',
+         'Typescript',
+         'Prepros',
+         'Nodejs',
+      ],
+   },
+   {
       title: 'Generador de paleta de colores',
       image: previewPacolor,
       source: ['React', 'Scss', 'Typescript', 'Redux'],
-      demo: 'https://pacolor.netlify.app/',
+      demo: 'https://pacolor.vercel.app/',
    },
    {
       title: 'Plataforma de educacion dinamica',
@@ -191,6 +228,7 @@ const createdProjects = [
       title: 'Administrador de contraseñas',
       image: 'https://source.unsplash.com/collection/190727/1600x900',
       source: ['Vuejs', 'Vuex', 'Laravel', 'Php', 'Mysql', 'CoreUi'],
+      pending: true,
    },
    {
       title: 'Generador de formularios',
@@ -252,11 +290,6 @@ const createdProjects = [
       title: 'Messenger Template',
       image: previewChat,
       source: ['HTML', 'Jade', 'Bootstrap'],
-   },
-   {
-      title: 'Code Blog',
-      image: previewCodeBlog,
-      source: ['Bootstrap', 'Html', 'Jquery'],
    },
 ];
 
@@ -331,10 +364,23 @@ export default class AboutMe extends Component {
                         </li>
                      </ul>
 
-                     <h2>Projectos Creados</h2>
+                     <h2>
+                        Projectos Creados{' '}
+                        <u style={{ color: '#aaa' }}>
+                           ({createdProjects.length})
+                        </u>
+                     </h2>
+                     <p>
+                        Los siguientes proyectos no son todos los que he creado
+                        a lo largo de mi carrera, por razones de privacidad no
+                        podré mostrar algunos de ellos 😎
+                     </p>
                      <div className="created-projects fx fx-rw fx-jcsb fx-aic">
                         {createdProjects.map((v, i) => (
                            <div className="item" key={i}>
+                              {v.pending && (
+                                 <div className="pending">Pendiente</div>
+                              )}
                               <img
                                  src={v.image}
                                  alt=""
@@ -351,6 +397,15 @@ export default class AboutMe extends Component {
                                        rel="noopener noreferrer"
                                     >
                                        Preview
+                                    </a>
+                                 )}
+                                 {v.code && (
+                                    <a
+                                       href={v.code}
+                                       target="blank"
+                                       rel="noopener noreferrer"
+                                    >
+                                       Code
                                     </a>
                                  )}
                               </div>

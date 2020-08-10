@@ -13,6 +13,7 @@ import speaking from '../../data/speaking';
 import podcasts from '../../data/podcasts';
 import quotes from '../../data/quotes';
 import yoni from '../../content/images/yoni-avatar.png';
+import PopupContext from '../context/PopupContext';
 
 export default class Index extends Component {
    render() {
@@ -79,6 +80,10 @@ export default class Index extends Component {
                            className="button"
                            href="https://yonicalsin.substack.com"
                            target="blank"
+                           onClick={(e) => {
+                              e.preventDefault();
+                              this.context.show();
+                           }}
                         >
                            Suscríbase
                         </a>
@@ -140,6 +145,8 @@ export default class Index extends Component {
       );
    }
 }
+
+Index.contextType = PopupContext;
 
 export const pageQuery = graphql`
    query IndexQuery {
