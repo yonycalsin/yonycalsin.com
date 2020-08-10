@@ -7,6 +7,7 @@
       border-radius: 7px;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.1) 0.2rem 0.25rem 0.75rem 0px;
+      border: 1px solid #ddd;
       &,
       * {
          transition: all 0.2s ease-in-out;
@@ -15,6 +16,15 @@
       img {
          display: block;
          cursor: pointer;
+      }
+      .pending {
+         position: absolute;
+         right: 0;
+         top: 0;
+         padding: 5px 10px;
+         background: #0adf54;
+         color: white;
+         border-radius: 0 0 0 7px;
       }
       .content {
          position: absolute;
