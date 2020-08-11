@@ -12,8 +12,8 @@ import projects from '../../data/projects';
 import speaking from '../../data/speaking';
 import podcasts from '../../data/podcasts';
 import quotes from '../../data/quotes';
-import yoni from '../../content/images/yoni-avatar.png';
 import PopupContext from '../context/PopupContext';
+import avatar from '../images/avatar.jpg';
 
 export default class Index extends Component {
    render() {
@@ -43,7 +43,7 @@ export default class Index extends Component {
                            código abierto
                         </a>{' '}
                         y <Link to="/blog">escribiendo</Link> sobre JavaScript
-                        moderno, Node.js, y desarrollo.
+                        moderno, Node.js, Typescript y Graphql.
                      </p>
                      <div className="social-buttons">
                         <GitHubButton
@@ -66,9 +66,10 @@ export default class Index extends Component {
                   </div>
                   <div className="newsletter-section">
                      <img
-                        src={yoni}
+                        src={avatar}
                         className="newsletter-avatar"
                         alt="Yoni Calsin"
+                        style={{ border: '3px dashed rgba(255,255,255,.4)' }}
                      />
                      <div>
                         <h3>Email Newsletter</h3>

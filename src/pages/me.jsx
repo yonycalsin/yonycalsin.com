@@ -14,6 +14,7 @@ import previewChat from '../../content/previews/chat.png';
 import previewCodeBlog from '../../content/previews/code-blog.png';
 import previewCodeTemplate from '../../content/previews/code-template.png';
 import previewNextjsBlog from '../../content/previews/nextjs-blog.png';
+import avatar from '../images/avatar.jpg';
 
 const skillMarkupt = [
    {
@@ -303,8 +304,20 @@ export default class AboutMe extends Component {
             <SEO />
             <div className="container">
                <article>
-                  <header className="page-header">
+                  <header className="page-header fx fx-cnw fx-cc">
                      <h1>Sobre mí</h1>
+                     <img
+                        src={avatar}
+                        className="newsletter-avatar"
+                        alt="Yoni Calsin"
+                        style={{
+                           border: '3px dashed white',
+                           borderRadius: '50%',
+                           width: 150,
+                           height: 150,
+                           marginBottom: 20,
+                        }}
+                     />
                   </header>
                   <div className="page">
                      <p>
