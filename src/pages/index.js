@@ -13,7 +13,7 @@ import speaking from '../../data/speaking';
 import podcasts from '../../data/podcasts';
 import quotes from '../../data/quotes';
 import PopupContext from '../context/PopupContext';
-import avatar from '../images/avatar.jpg';
+import avatar from '../images/avatar.png';
 
 export default class Index extends Component {
    render() {
@@ -31,12 +31,12 @@ export default class Index extends Component {
             <div className="container">
                <div className="lead">
                   <div className="elevator">
-                     <h1>{`Hola, soy Yoni`} </h1>
+                     <h1>{`Hola, soy Yony`} </h1>
                      <p>
                         {''}
                         {`Soy un desarrollador frontend creando proyectos de `}
                         <a
-                           href="https://github.com/yonicalsin"
+                           href="https://github.com/yonycalsin"
                            target="_blank"
                            rel="noopener noreferrer"
                         >
@@ -47,20 +47,20 @@ export default class Index extends Component {
                      </p>
                      <div className="social-buttons">
                         <GitHubButton
-                           href="https://github.com/yonicalsin"
+                           href="https://github.com/yonycalsin"
                            data-size="large"
                            data-show-count="true"
                         >
-                           yonicalsin
+                           yonycalsin
                         </GitHubButton>
                         <a
-                           href="https://twitter.com/yonicalsin"
+                           href="https://twitter.com/yonycalsin"
                            target="_blank"
                            style={{ background: 'transparent' }}
                            rel="noopener noreferrer"
                         >
                            {' '}
-                           <img src="https://img.shields.io/twitter/follow/yonicalsin.svg?style=social&label=Follow" />{' '}
+                           <img src="https://img.shields.io/twitter/follow/yonycalsin.svg?style=social&label=Follow" />{' '}
                         </a>
                      </div>
                   </div>
@@ -68,7 +68,7 @@ export default class Index extends Component {
                      <img
                         src={avatar}
                         className="newsletter-avatar"
-                        alt="Yoni Calsin"
+                        alt="Yony Calsin"
                         style={{ border: '3px dashed rgba(255,255,255,.4)' }}
                      />
                      <div>
@@ -79,7 +79,7 @@ export default class Index extends Component {
                         </p>
                         <a
                            className="button"
-                           href="https://yonicalsin.substack.com"
+                           href="https://yonycalsin.substack.com"
                            target="blank"
                            onClick={(e) => {
                               e.preventDefault();

@@ -172,7 +172,7 @@ const createdProjects = [
       image:
          'https://flutterawesome.com/content/images/2019/06/Flutter-Weather.jpg',
       source: ['Flutter', 'Dart', 'Cupertino Icons', 'Material Design'],
-      code: 'https://github.com/yonicalsin/dart-wheater',
+      code: 'https://github.com/yonycalsin/dart-wheater',
       pending: true,
    },
    {
@@ -189,7 +189,7 @@ const createdProjects = [
          'prettier',
       ],
       demo: 'https://me-tools.vercel.app/',
-      code: 'https://github.com/yonicalsin/my-tools',
+      code: 'https://github.com/yonycalsin/my-tools',
    },
    {
       title: 'Extension de navegador, de estudio biblico diariamente',
@@ -280,7 +280,7 @@ const createdProjects = [
       title: 'Blog with NextJs',
       image: previewNextjsBlog,
       source: ['React', 'NextJs', 'Scss', 'Markdown', 'NodeJs'],
-      demo: 'https://github.com/yonicalsin/my-nextjs-blog',
+      demo: 'https://github.com/yonycalsin/my-nextjs-blog',
    },
    {
       title: 'Instagram Template',
@@ -300,7 +300,7 @@ export default class AboutMe extends Component {
    render() {
       return (
          <Layout>
-            <Helmet title={`Acerca de Yoni Calsin - Desarrollador Frontend `} />
+            <Helmet title={`Acerca de Yony Calsin - Desarrollador Frontend `} />
             <SEO />
             <div className="container">
                <article>
@@ -309,7 +309,7 @@ export default class AboutMe extends Component {
                      <img
                         src={avatar}
                         className="newsletter-avatar"
-                        alt="Yoni Calsin"
+                        alt="Yony Calsin"
                         style={{
                            border: '3px dashed white',
                            borderRadius: '50%',
@@ -321,7 +321,7 @@ export default class AboutMe extends Component {
                   </header>
                   <div className="page">
                      <p>
-                        Hola, Soy <strong>Yoni Calsin</strong>, un desarrollador
+                        Hola, Soy <strong>Yony Calsin</strong>, un desarrollador
                         frontend, apasionado de la programacion web (frontend,
                         backend), a lo largo de mi carrera he tenido la
                         posibilidad de trabajar en diversos proyectos que me an
@@ -432,7 +432,7 @@ export default class AboutMe extends Component {
                         <Link to="/contact">{' contactarme'}</Link>.
                      </p> */}
 
-                     <h3>Yoni Calsin</h3>
+                     <h3>Yony Calsin</h3>
                      <ul>
                         <li>
                            💻 trabaja como desarrollador frontend

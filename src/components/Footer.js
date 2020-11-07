@@ -10,14 +10,14 @@ export default class Footer extends Component {
          <footer className="footer container">
             <div>
                <a
-                  href="https://ko-fi.com/yonicalsin"
+                  href="https://ko-fi.com/yonycalsin"
                   target="_blank"
                   rel="noopener noreferrer"
                >
                   Ko-Fi
                </a>
                <a
-                  href="https://patreon.com/yonicalsin"
+                  href="https://patreon.com/yonycalsin"
                   target="_blank"
                   rel="noopener noreferrer"
                >
@@ -25,7 +25,7 @@ export default class Footer extends Component {
                </a>
                <Link to="/contacto/">Contacto</Link>
                <a
-                  href="https://yonicalsin.netlify.app/rss.xml"
+                  href="https://yonycalsin.netlify.app/rss.xml"
                   target="_blank"
                   rel="noopener noreferrer"
                >
@@ -51,7 +51,7 @@ export default class Footer extends Component {
                   />
                </a>
                <a
-                  href="https://github.com/yonicalsin"
+                  href="https://github.com/yonycalsin"
                   title="Open-source on GitHub"
                   target="_blank"
                   rel="noopener noreferrer"

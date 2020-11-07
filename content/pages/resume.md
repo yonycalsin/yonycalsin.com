@@ -6,8 +6,8 @@ template: page
 
 ### Front End Software Developer
 
--  [yonicalsin.netlify.app](https://yonicalsin.netlify.app)
--  [email](mailto:helloyonicb@gmail.com)
+-  [yonycalsin.netlify.app](https://yonycalsin.netlify.app)
+-  [email](mailto:helloyonycalsin@gmail.com)
 
 ## Technical Skills
 
@@ -66,25 +66,25 @@ Cogenv is a zero-dependency module that loads environment variables from an .env
 
 ### Format Fast
 
-**String formatter** - [Source](https://github.com/yonicalsin/format-fast) - _2018 - 2019_
+**String formatter** - [Source](https://github.com/yonycalsin/format-fast) - _2018 - 2019_
 
 Format-fast is a function that allows you to replace certain words to make a string dynamically, and very easily !
 
 ### Nestjs Sequelize Seeder
 
-**Seeder** - [Source](https://github.com/yonicalsin/nestjs-sequelize-seeder) - _2018_
+**Seeder** - [Source](https://github.com/yonycalsin/nestjs-sequelize-seeder) - _2018_
 
 🌾 A simple extension library for nestjs sequelize to perform seeding.
 
 ### Nestjs Sequelize Paginate
 
-**paging system** - [Source](https://github.com/yonicalsin/nestjs-sequelize-paginate)
+**paging system** - [Source](https://github.com/yonycalsin/nestjs-sequelize-paginate)
 
 🎉 Pagination response object function + types for sequelize + nestjs
 
 ### Nestjs Crud Sequelize
 
-**Crud methods** - [Source](https://github.com/yonicalsin/nestjs-crud-sequelize)
+**Crud methods** - [Source](https://github.com/yonycalsin/nestjs-crud-sequelize)
 
 Crud for nestjs
 
@@ -112,4 +112,4 @@ Crud for nestjs
 
 -  Getting Started With React article featured in official React documentation as React For Beginners. [Source](https://reactjs.org/docs/getting-started.html)
 -  Interviewed in the Egghead.io Podcast in Switching Careers and Learning in Public with Joel Hooks. [Source](https://egghead.io/podcasts/switching-careers-and-learning-in-public-with-tania-rascia)
--  Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://yonicalsin.netlify.app/publications)
+-  Wrote published articles for DigitalOcean, Envato Tuts+, SitePoint, LogRocket, Codrops, and Progress. [Source](https://yonycalsin.netlify.app/publications)

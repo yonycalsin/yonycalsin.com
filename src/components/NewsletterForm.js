@@ -8,7 +8,7 @@ export default class NewsletterForm extends Component {
             <iframe
                width="480"
                height="150"
-               src="https://yonicalsin.substack.com/embed"
+               src="https://yonycalsin.substack.com/embed"
                frameborder="0"
                scrolling="no"
             ></iframe>

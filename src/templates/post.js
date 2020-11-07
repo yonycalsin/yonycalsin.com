@@ -46,7 +46,7 @@ export default class PostTemplate extends Component {
       const githubLink = editOnGithub(post);
       const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(
          post.title,
-      )}&url=${config.siteUrl}/${post.slug}/&via=yonicalsin`;
+      )}&url=${config.siteUrl}/${post.slug}/&via=yonycalsin`;
 
       let disqusConfig = {
          url: `${config.siteUrl + location.pathname}`,
@@ -103,7 +103,7 @@ export default class PostTemplate extends Component {
             <div className="container">
                <a
                   className="button"
-                  href="https://yonicalsin.substack.com/"
+                  href="https://yonycalsin.substack.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                >
