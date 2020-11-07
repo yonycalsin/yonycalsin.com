@@ -14,7 +14,7 @@ import previewChat from '../../content/previews/chat.png';
 import previewCodeBlog from '../../content/previews/code-blog.png';
 import previewCodeTemplate from '../../content/previews/code-template.png';
 import previewNextjsBlog from '../../content/previews/nextjs-blog.png';
-import avatar from '../images/avatar.jpg';
+import avatar from '../images/avatar.png';
 
 const skillMarkupt = [
    {
