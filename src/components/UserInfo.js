@@ -10,11 +10,11 @@ export default class UserInfo extends Component {
             <div className="container note-container">
                <div className="flex-author">
                   <div className="flex-avatar">
-                     <img className="avatar" src={yoni} alt="Yoni Calsin" />
+                     <img className="avatar" src={yoni} alt="Yony Calsin" />
                   </div>
                   <div>
                      <p>
-                        Soy Yoni Calsin, Documento todo lo que aprendo y ayudo a
+                        Soy Yony Calsin, Documento todo lo que aprendo y ayudo a
                         miles de personas a comenzar a codificar carreras.{' '}
                         <strong>
                            Si disfrutas de mi contenido, considera apoyar lo que
@@ -24,7 +24,7 @@ export default class UserInfo extends Component {
 
                      <div className="flex">
                         <a
-                           href="https://ko-fi.com/yonicalsin"
+                           href="https://ko-fi.com/yonycalsin"
                            className="donate-button"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export default class UserInfo extends Component {
                         </a>
                         <a
                            className="patreon-button"
-                           href="https://www.patreon.com/yonicalsin"
+                           href="https://www.patreon.com/yonycalsin"
                            target="_blank"
                            rel="noopener noreferrer"
                         >

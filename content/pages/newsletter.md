@@ -10,7 +10,7 @@ Construyo proyectos de código abierto y escribo sobre JavaScript moderno, Node.
   <iframe
     width="480"
     height="350"
-    src="https://yonicalsin.substack.com/embed"
+    src="https://yonycalsin.substack.com/embed"
     frameborder="0"
     scrolling="no"
   ></iframe>

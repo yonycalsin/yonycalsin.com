@@ -1,5 +1,5 @@
-const gh = (url, user = 'yonicalsin') => `https://github.com/${user}/${url}`;
-const ghp = (url, user = 'yonicalsin') => `https://${user}.github.io/${url}`;
+const gh = (url, user = 'yonycalsin') => `https://github.com/${user}/${url}`;
+const ghp = (url, user = 'yonycalsin') => `https://${user}.github.io/${url}`;
 
 export default [
    {
@@ -48,13 +48,6 @@ export default [
       description: 'formatea string mágicamente',
    },
    {
-      icon: '🌾',
-      title: 'Nestjs Sequelize Seeder',
-      path: gh('nestjs-sequelize-paginate'),
-      source: gh('nestjs-sequelize-paginate'),
-      description: 'seeder for nestjs and sequelize',
-   },
-   {
       icon: '🎸',
       title: 'Nestjs Crud Sequelize',
       path: gh('nestjs-crud-sequelize'),
@@ -64,7 +57,7 @@ export default [
 
    {
       icon: '🏆',
-      title: 'yonicalsin.netlify.app',
+      title: 'yonycalsin.netlify.app',
       source: 'https://github.com/greyblu/greyblu.com/',
       description: 'Blog Personal de Yoni Calsin',
    },

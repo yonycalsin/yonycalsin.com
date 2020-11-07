@@ -1,9 +1,9 @@
 const config = {
-   siteTitle: 'Yoni Calsin',
-   siteTitleShort: 'YoniCalsin',
-   siteTitleAlt: 'Yoni Calsin - Desarrollador de Frontend | Frontend Developer',
+   siteTitle: 'Yony Calsin',
+   siteTitleShort: 'YonyCalsin',
+   siteTitleAlt: 'Yony Calsin - Desarrollador de Frontend | Frontend Developer',
    siteLogo: '/logos/logo-1024.png',
-   siteUrl: 'https://yonicalsin.netlify.app',
+   siteUrl: 'https://yonycalsin.netlify.app',
    repo: 'https://github.com/greyblu/greyblu.com',
    pathPrefix: '',
    dateFromFormat: 'YYYY-MM-DD',
@@ -13,11 +13,11 @@ const config = {
    siteRss: '/rss.xml',
    googleAnalyticsID: 'UA-155262111-2',
    postDefaultCategoryID: 'Tech',
-   newsletter: 'https://yonicalsin.substack.com',
-   newsletterEmbed: 'https://yonicalsin.substack.com/embed',
+   newsletter: 'https://yonycalsin.substack.com',
+   newsletterEmbed: 'https://yonycalsin.substack.com/embed',
    userName: 'Yoni Calsin',
    userEmail: 'helloyonicb@gmail.com',
-   userTwitter: 'yonicalsin',
+   userTwitter: 'yonycalsin',
    menuLinks: [
       {
          name: 'Portafolio',

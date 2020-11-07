@@ -69,22 +69,22 @@ const Popup = () => {
                   <li>
                      Github (
                      <a
-                        href="http://github.com/yonicalsin"
+                        href="http://github.com/yonycalsin"
                         target="blank"
                         rel="noopener noreferrer"
                      >
-                        @yonicalsin
+                        @yonycalsin
                      </a>
                      )
                   </li>
                   <li>
                      Twitter (
                      <a
-                        href="https://twitter.com/YoniCalsin"
+                        href="https://twitter.com/yonycalsin"
                         target="blank"
                         rel="noopener noreferrer"
                      >
-                        @yonicalsin
+                        @yonycalsin
                      </a>
                      )
                   </li>
@@ -94,7 +94,7 @@ const Popup = () => {
                   <iframe
                      width="480"
                      height="150"
-                     src="https://yonicalsin.substack.com/embed"
+                     src="https://yonycalsin.substack.com/embed"
                      frameBorder="0"
                      scrolling="no"
                   ></iframe>

@@ -41,7 +41,7 @@ export default class Navigation extends Component {
                <div className="brand">
                   <Link to="/">
                      <img src={logo} className="favicon" alt="Greyblu Logo" />
-                     <span className="text">Yoni Calsin</span>
+                     <span className="text">Yony Calsin</span>
                   </Link>
                </div>
                <div className="links">
@@ -80,7 +80,7 @@ export default class Navigation extends Component {
                   <a
                      target="_blank"
                      rel="noopener noreferrer"
-                     href="https://github.com/yonicalsin"
+                     href="https://github.com/yonycalsin"
                      aria-label="¡Cómprame un café!"
                      title="¡Cómprame un café!"
                   >
@@ -95,7 +95,7 @@ export default class Navigation extends Component {
                   <a
                      target="_blank"
                      rel="noopener noreferrer"
-                     href="https://twitter.com/YoniCalsin"
+                     href="https://twitter.com/yonycalsin"
                      aria-label="¡Cómprame un café!"
                      title="¡Cómprame un café!"
                   >
@@ -110,7 +110,7 @@ export default class Navigation extends Component {
                   <a
                      target="_blank"
                      rel="noopener noreferrer"
-                     href="https://ko-fi.com/yonicalsin"
+                     href="https://ko-fi.com/yonycalsin"
                      aria-label="¡Cómprame un café!"
                      title="¡Cómprame un café!"
                   >

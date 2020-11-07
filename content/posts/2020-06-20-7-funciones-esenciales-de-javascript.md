@@ -143,7 +143,7 @@ var getAbsoluteUrl = (function () {
 })();
 
 // Usage
-getAbsoluteUrl('/something'); // https://yonicalsin.netlify.app/something
+getAbsoluteUrl('/something'); // https://yonycalsin.netlify.app/something
 ```
 
 El elemento `burn` href maneja y tonterías de URL para usted, proporcionando una URL absoluta confiable a cambio.
