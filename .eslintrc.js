@@ -1,3 +1,12 @@
+const fs = require('fs')
+const path = require('path')
+
+const internalModules = fs
+   .readdirSync('src')
+   .filter(name => !name.endsWith('.d.ts'))
+   .map(name => name.replace(path.extname(name), ''))
+   .join('|')
+
 module.exports = {
    env: {
       node: true,
@@ -14,7 +23,7 @@ module.exports = {
                // Packages. `react` related packages come first.
                ['^react', '^@?\\w'],
                // Internal modules.
-               // [`^(${internalModules})(/.*|$)`],
+               [`^(${internalModules})(/.*|$)`],
                // Parent imports. Put `..` last.
                ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
                // Other relative imports. Put same-folder imports and `.` last.

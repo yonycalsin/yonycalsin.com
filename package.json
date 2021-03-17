@@ -1,8 +1,20 @@
 {
    "name": "personal-website",
-   "description": "Personal website running on Gatsby, Typescript, React, and Node.js.",
    "version": "2.0.0",
+   "description": "Personal website running on Gatsby, Typescript, React, and Node.js.",
+   "keywords": [],
+   "license": "MIT",
    "author": "Yony Calsin",
+   "main": "n/a",
+   "scripts": {
+      "develop": "gatsby develop",
+      "dev": "npm run clean && npm run develop",
+      "build": "gatsby build",
+      "lint": "eslint --ext .js,.jsx .",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean"
+   },
    "dependencies": {
       "gatsby": "^3.1.0",
       "react": "^17.0.1",
@@ -17,20 +29,10 @@
       "eslint-config-prettier": "^8.1.0",
       "eslint-plugin-prettier": "^3.3.1",
       "eslint-plugin-simple-import-sort": "^7.0.0",
+      "gatsby-plugin-root-import": "^2.0.6",
       "gatsby-plugin-typescript": "^3.1.0",
       "prettier": "^2.2.1",
+      "prettier-plugin-packagejson": "^2.2.10",
       "typescript": "^4.2.3"
-   },
-   "keywords": [],
-   "license": "MIT",
-   "main": "n/a",
-   "scripts": {
-      "develop": "gatsby develop",
-      "dev": "npm run develop",
-      "build": "gatsby build",
-      "lint": "eslint --ext .js,.jsx .",
-      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
-      "serve": "gatsby serve",
-      "clean": "gatsby clean"
    }
 }
