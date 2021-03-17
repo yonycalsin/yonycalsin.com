@@ -1,9 +1,0 @@
-{
-   "extends": [],
-   "plugins": [],
-   "rules": {},
-   "settings": {},
-   "env": {
-      "browser": true
-   }
-}
