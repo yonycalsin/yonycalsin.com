@@ -4,13 +4,13 @@
    "version": "2.0.0",
    "author": "Yony Calsin",
    "dependencies": {
-      "gatsby": "^2.23.3",
-      "react": "^16.13.1",
-      "react-dom": "^16.13.1"
+      "gatsby": "^3.1.0",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1"
    },
    "devDependencies": {
-      "eslint": "^7.2.0",
-      "prettier": "^2.0.5"
+      "eslint": "^7.22.0",
+      "prettier": "^2.2.1"
    },
    "keywords": [],
    "license": "MIT",
@@ -20,7 +20,7 @@
       "dev": "npm run develop",
       "build": "gatsby build",
       "lint": "eslint --ext .js,.jsx .",
-      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
       "serve": "gatsby serve",
       "clean": "gatsby clean"
    }
