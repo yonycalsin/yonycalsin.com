@@ -11,15 +11,15 @@ export default class CategoryTemplate extends Component {
       const postEdges = this.props.data.allMarkdownRemark.edges;
 
       return (
-         <Layout>
-            <Helmet
-               title={`Posts in category "${category}" – ${config.siteTitle}`}
-            />
-            <div className="container">
-               <h1>{category}</h1>
-               <PostListing postEdges={postEdges} />
-            </div>
-         </Layout>
+        <Layout>
+          <Helmet
+            title={`Posts in category "${category}" – ${config.siteTitle}`}
+          />
+          <div className="container">
+            <h1>{category}</h1>
+            <PostListing postEdges={postEdges} />
+          </div>
+        </Layout>
       );
    }
 }

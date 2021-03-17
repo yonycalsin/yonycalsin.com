@@ -156,13 +156,13 @@ const skillTesting = [
 
 const eachSkills = (data) => {
    return (
-      <ul>
-         {data.map((v, i) => (
-            <li key={i}>
-               <strong>{v?.label}</strong> - puntuación: <code>{v?.score}</code>
-            </li>
+     <ul>
+       {data.map((v, i) => (
+         <li key={i}>
+           <strong>{v?.label}</strong> - puntuación: <code>{v?.score}</code>
+         </li>
          ))}
-      </ul>
+     </ul>
    );
 };
 
@@ -299,201 +299,201 @@ export default class AboutMe extends Component {
 
    render() {
       return (
-         <Layout>
-            <Helmet title={`Acerca de Yony Calsin - Desarrollador Frontend `} />
-            <SEO />
-            <div className="container">
-               <article>
-                  <header className="page-header fx fx-cnw fx-cc">
-                     <h1>Sobre mí</h1>
-                     <img
-                        src={avatar}
-                        className="newsletter-avatar"
-                        alt="Yony Calsin"
-                        style={{
+        <Layout>
+          <Helmet title={`Acerca de Yony Calsin - Desarrollador Frontend `} />
+          <SEO />
+          <div className="container">
+            <article>
+              <header className="page-header fx fx-cnw fx-cc">
+                <h1>Sobre mí</h1>
+                <img
+                  src={avatar}
+                  className="newsletter-avatar"
+                  alt="Yony Calsin"
+                  style={{
                            border: '3px dashed white',
                            borderRadius: '50%',
                            width: 150,
                            height: 150,
                            marginBottom: 20,
                         }}
-                     />
-                  </header>
-                  <div className="page">
-                     <p>
-                        Hola, Soy <strong>Yony Calsin</strong>, un desarrollador
-                        frontend, apasionado de la programacion web (frontend,
-                        backend), a lo largo de mi carrera he tenido la
-                        posibilidad de trabajar en diversos proyectos que me an
-                        proporcionado la oportunidad de ejecutar mis
-                        conocimientos en estas areas y tambien para seguir
-                        aprendiendo acerca de ellos
-                     </p>
-                     <p>
-                        Me considero una persona con una amplia capacidad de
-                        lógica, y el trabajo en equipo, aptitudes que sin duda
-                        empleare a diario
-                     </p>
-                     <p>
-                        Demasiado interesado en poner mis conocimientos de
-                        Desarrollo Web Frontend y Backend para obtener un
-                        resultado de calidad con la creatividad en su mejor
-                        momento.
-                     </p>
+                />
+              </header>
+              <div className="page">
+                <p>
+                  Hola, Soy <strong>Yony Calsin</strong>, un desarrollador
+                  frontend, apasionado de la programacion web (frontend,
+                  backend), a lo largo de mi carrera he tenido la
+                  posibilidad de trabajar en diversos proyectos que me an
+                  proporcionado la oportunidad de ejecutar mis
+                  conocimientos en estas areas y tambien para seguir
+                  aprendiendo acerca de ellos
+                </p>
+                <p>
+                  Me considero una persona con una amplia capacidad de
+                  lógica, y el trabajo en equipo, aptitudes que sin duda
+                  empleare a diario
+                </p>
+                <p>
+                  Demasiado interesado en poner mis conocimientos de
+                  Desarrollo Web Frontend y Backend para obtener un
+                  resultado de calidad con la creatividad en su mejor
+                  momento.
+                </p>
 
-                     <h2>Habilidades Profesionales</h2>
-                     <ul>
-                        <li>
-                           Maquetacion
-                           {eachSkills(skillMarkupt)}
-                        </li>
-                        <li>Diseño {eachSkills(skillDesign)} </li>
-                        <li>
-                           Lenguajes de Programacion
-                           {eachSkills(skillProgramingLanguage)}
-                        </li>
-                        <li>
-                           Librerias
-                           {eachSkills(skillLibrerias)}
-                        </li>
-                        <li>Testing {eachSkills(skillTesting)}</li>
-                     </ul>
+                <h2>Habilidades Profesionales</h2>
+                <ul>
+                  <li>
+                    Maquetacion
+                    {eachSkills(skillMarkupt)}
+                  </li>
+                  <li>Diseño {eachSkills(skillDesign)} </li>
+                  <li>
+                    Lenguajes de Programacion
+                    {eachSkills(skillProgramingLanguage)}
+                  </li>
+                  <li>
+                    Librerias
+                    {eachSkills(skillLibrerias)}
+                  </li>
+                  <li>Testing {eachSkills(skillTesting)}</li>
+                </ul>
 
-                     <h2>Habilidades Personales</h2>
-                     <ul>
-                        <li>
-                           Siempre estoy dispuesto a aceptar los desafíos con la
-                           gran dedicación.
-                        </li>
-                        <li>
-                           Me exijo a mi mismo para realizar un trabajo de
-                           calidad
-                        </li>
-                        <li>
-                           Siempre me a encantado trabajar en equipo sabiendo
-                           que es una de las claves para el éxito, e incluso me
-                           gustaría delegar un equipo con la máxima
-                           responsabilidad requerida
-                        </li>
-                     </ul>
+                <h2>Habilidades Personales</h2>
+                <ul>
+                  <li>
+                    Siempre estoy dispuesto a aceptar los desafíos con la
+                    gran dedicación.
+                  </li>
+                  <li>
+                    Me exijo a mi mismo para realizar un trabajo de
+                    calidad
+                  </li>
+                  <li>
+                    Siempre me a encantado trabajar en equipo sabiendo
+                    que es una de las claves para el éxito, e incluso me
+                    gustaría delegar un equipo con la máxima
+                    responsabilidad requerida
+                  </li>
+                </ul>
 
-                     <h2>
-                        Projectos Creados{' '}
-                        <u style={{ color: '#aaa' }}>
-                           ({createdProjects.length})
-                        </u>
-                     </h2>
-                     <p>
-                        Los siguientes proyectos no son todos los que he creado
-                        a lo largo de mi carrera, por razones de privacidad no
-                        podré mostrar algunos de ellos 😎
-                     </p>
-                     <div className="created-projects fx fx-rw fx-jcsb fx-aic">
-                        {createdProjects.map((v, i) => (
-                           <div className="item" key={i}>
-                              {v.pending && (
-                                 <div className="pending">Pendiente</div>
+                <h2>
+                  Projectos Creados{' '}
+                  <u style={{ color: '#aaa' }}>
+                    ({createdProjects.length})
+                  </u>
+                </h2>
+                <p>
+                  Los siguientes proyectos no son todos los que he creado
+                  a lo largo de mi carrera, por razones de privacidad no
+                  podré mostrar algunos de ellos 😎
+                </p>
+                <div className="created-projects fx fx-rw fx-jcsb fx-aic">
+                  {createdProjects.map((v, i) => (
+                    <div className="item" key={i}>
+                      {v.pending && (
+                      <div className="pending">Pendiente</div>
                               )}
-                              <img
-                                 src={v.image}
-                                 alt=""
-                                 draggable={false}
-                                 onContextMenu={(e) => e.preventDefault()}
-                              />
-                              <div className="content fx fx-cc fx-cnw">
-                                 <h4>{v.title}</h4>
-                                 <p>{v.source.join(', ')}</p>
-                                 {v.demo && (
-                                    <a
-                                       href={v.demo}
-                                       target="blank"
-                                       rel="noopener noreferrer"
-                                    >
-                                       Preview
-                                    </a>
+                      <img
+                        src={v.image}
+                        alt=""
+                        draggable={false}
+                        onContextMenu={(e) => e.preventDefault()}
+                      />
+                      <div className="content fx fx-cc fx-cnw">
+                        <h4>{v.title}</h4>
+                        <p>{v.source.join(', ')}</p>
+                        {v.demo && (
+                        <a
+                           href={v.demo}
+                           target="blank"
+                           rel="noopener noreferrer"
+                         >
+                                      Preview
+                         </a>
                                  )}
-                                 {v.code && (
-                                    <a
-                                       href={v.code}
-                                       target="blank"
-                                       rel="noopener noreferrer"
-                                    >
-                                       Code
-                                    </a>
+                        {v.code && (
+                        <a
+                           href={v.code}
+                           target="blank"
+                           rel="noopener noreferrer"
+                         >
+                                      Code
+                         </a>
                                  )}
-                              </div>
-                           </div>
+                      </div>
+                    </div>
                         ))}
-                     </div>
+                </div>
 
-                     {/* <p>
+                {/* <p>
                         Puede leer mis
                         <Link to="/blog">{' artículos '}</Link>o
                         <Link to="/contact">{' contactarme'}</Link>.
                      </p> */}
 
-                     <h3>Yony Calsin</h3>
-                     <ul>
-                        <li>
-                           💻 trabaja como desarrollador frontend
-                           (principalmente React/Redux, Node, Next, Typescript,
-                           SCSS)
-                        </li>
-                        <li>👍 tiene un título imaginario en electrónica</li>
-                        <li>🎉 puede hablar un poco de ingles</li>
-                        <li>💾 tiene el mejor manejo de reddit y medium</li>
-                        <li>🎹 puede tocar el piano y la guitarra</li>
-                        <li>☕ necesita café</li>
-                        <li>
-                           ✍️ ha escrito alrededor de 5 tutoriales (¡hasta
-                           ahora!)
-                        </li>
-                     </ul>
-                     <p>
-                        Este sitio web ha sido inspirado en la cuarentena. 🙃
-                     </p>
-                     <h2>Proyectos de código abierto</h2>
-                     <ul>
-                        {projects.map((v) => (
-                           <li>
-                              <a href={v.path}>{v.title}</a> - {v.description}
-                           </li>
+                <h3>Yony Calsin</h3>
+                <ul>
+                  <li>
+                    💻 trabaja como desarrollador frontend
+                    (principalmente React/Redux, Node, Next, Typescript,
+                    SCSS)
+                  </li>
+                  <li>👍 tiene un título imaginario en electrónica</li>
+                  <li>🎉 puede hablar un poco de ingles</li>
+                  <li>💾 tiene el mejor manejo de reddit y medium</li>
+                  <li>🎹 puede tocar el piano y la guitarra</li>
+                  <li>☕ necesita café</li>
+                  <li>
+                    ✍️ ha escrito alrededor de 5 tutoriales (¡hasta
+                    ahora!)
+                  </li>
+                </ul>
+                <p>
+                  Este sitio web ha sido inspirado en la cuarentena. 🙃
+                </p>
+                <h2>Proyectos de código abierto</h2>
+                <ul>
+                  {projects.map((v) => (
+                    <li>
+                      <a href={v.path}>{v.title}</a> - {v.description}
+                    </li>
                         ))}
-                     </ul>
-                     <h2>Actualmente usando</h2>
-                     <ul>
-                        <li>
-                           <strong>Computadora:</strong> Windows <q>10</q>
-                        </li>
-                        <li>
-                           <strong>Host:</strong>{' '}
-                           <a href="https://netlify.com">Netlify</a>
-                        </li>
-                        <li>
-                           <strong>Editor:</strong>{' '}
-                           <a href="https://code.visualstudio.com/">
-                              Visual Studio Code
-                           </a>
-                        </li>
-                        <li>
-                           <strong>SSG:</strong>{' '}
-                           <a href="https://gatsbyjs.org">Gatsby</a>
-                        </li>
-                        <li>
-                           <strong>Tema:</strong>{' '}
-                           <a href="https://taniarascia.github.io/new-moon">
-                              New Moon
-                           </a>
-                        </li>
-                        <li>
-                           <strong>Newsletter:</strong>{' '}
-                           <a href="https://substack.com">Substack</a>
-                        </li>
-                     </ul>
-                  </div>
-               </article>
-            </div>
-         </Layout>
+                </ul>
+                <h2>Actualmente usando</h2>
+                <ul>
+                  <li>
+                    <strong>Computadora:</strong> Windows <q>10</q>
+                  </li>
+                  <li>
+                    <strong>Host:</strong>{' '}
+                    <a href="https://netlify.com">Netlify</a>
+                  </li>
+                  <li>
+                    <strong>Editor:</strong>{' '}
+                    <a href="https://code.visualstudio.com/">
+                      Visual Studio Code
+                    </a>
+                  </li>
+                  <li>
+                    <strong>SSG:</strong>{' '}
+                    <a href="https://gatsbyjs.org">Gatsby</a>
+                  </li>
+                  <li>
+                    <strong>Tema:</strong>{' '}
+                    <a href="https://taniarascia.github.io/new-moon">
+                      New Moon
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Newsletter:</strong>{' '}
+                    <a href="https://substack.com">Substack</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </Layout>
       );
    }
 }

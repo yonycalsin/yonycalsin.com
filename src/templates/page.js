@@ -16,23 +16,23 @@ export default class PageTemplate extends Component {
       }
 
       return (
-         <Layout>
-            <Helmet>
-               <title>{`${page.title} – ${config.siteTitle}`}</title>
-            </Helmet>
-            <SEO postPath={slug} postNode={postNode} postSEO />
-            <div className="container">
-               <article>
-                  <header className="page-header">
-                     <h1>{page.title}</h1>
-                  </header>
-                  <div
-                     className="page"
-                     dangerouslySetInnerHTML={{ __html: postNode.html }}
-                  />
-               </article>
-            </div>
-         </Layout>
+        <Layout>
+          <Helmet>
+            <title>{`${page.title} – ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <div className="container">
+            <article>
+              <header className="page-header">
+                <h1>{page.title}</h1>
+              </header>
+              <div
+                className="page"
+                dangerouslySetInnerHTML={{ __html: postNode.html }}
+              />
+            </article>
+          </div>
+        </Layout>
       );
    }
 }

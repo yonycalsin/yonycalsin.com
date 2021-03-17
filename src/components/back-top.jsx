@@ -57,12 +57,12 @@ const BackTop = () => {
    }, [showed]);
 
    return (
-      <div
-         className={`backtop fx fx-cc ${showed ? 'showed' : ''} `}
-         onClick={() => scrollUp()}
-      >
-         <img src={ArrowUp} alt="" />
-      </div>
+     <div
+       className={`backtop fx fx-cc ${showed ? 'showed' : ''} `}
+       onClick={() => scrollUp()}
+     >
+       <img src={ArrowUp} alt="" />
+     </div>
    );
 };
 

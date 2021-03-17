@@ -70,11 +70,11 @@
    "main": "n/a",
    "scripts": {
       "develop": "gatsby develop",
-      "dev": "yarn run develop",
+      "dev": "npm run develop",
       "serve": "gatsby serve",
       "build": "gatsby build",
       "build:pp": "gatsby build --prefix-paths",
-      "build:gh": "yarn run clean && yarn run build:pp && gh-pages -d public",
+      "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
       "clean": "rm -rf public && rm -rf .cache",
       "lint:js": "eslint --ext .js,.jsx .",
       "lint:md": "remark content/posts/",

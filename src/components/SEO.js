@@ -74,26 +74,26 @@ export default class SEO extends Component {
          );
       }
       return (
-         <Helmet>
-            <meta name="description" content={description} />
-            <meta name="image" content={image} />
+        <Helmet>
+          <meta name="description" content={description} />
+          <meta name="image" content={image} />
 
-            <script type="application/ld+json">
-               {JSON.stringify(schemaOrgJSONLD)}
-            </script>
+          <script type="application/ld+json">
+            {JSON.stringify(schemaOrgJSONLD)}
+          </script>
 
-            <meta property="og:url" content={postSEO ? postURL : blogURL} />
-            {postSEO && <meta property="og:type" content="article" />}
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
+          <meta property="og:url" content={postSEO ? postURL : blogURL} />
+          {postSEO && <meta property="og:type" content="article" />}
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image" content={image} />
 
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={config.userTwitter} />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={image} />
-         </Helmet>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={config.userTwitter} />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={image} />
+        </Helmet>
       );
    }
 }

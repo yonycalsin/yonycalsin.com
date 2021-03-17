@@ -66,53 +66,53 @@ export default class BlogPage extends Component {
       const categories = this.props.data.categories.group;
 
       return (
-         <Layout>
-            <Helmet title={`Artículos – ${config.siteTitle}`} />
-            <SEO />
-            <div className="gradient-section articles">
-               <div className="container">
-                  <h2 className="text-center">
-                     Los manuales de instrucciones que faltan en la web
-                  </h2>
-                  <div className="instruction-manuals">
-                     {manuals.map((manual) => (
-                        <Link to={manual.url} key={manual.url}>
-                           <img src={manual.image} alt={manual.name} />
-                           <h3>{manual.name}</h3>
-                        </Link>
-                     ))}
-                  </div>
-               </div>
-            </div>
+        <Layout>
+          <Helmet title={`Artículos – ${config.siteTitle}`} />
+          <SEO />
+          <div className="gradient-section articles">
             <div className="container">
-               <h1 className="articles-title">Artículos</h1>
-               <div className="category-container">
-                  {categories.map((category) => {
+              <h2 className="text-center">
+                Los manuales de instrucciones que faltan en la web
+              </h2>
+              <div className="instruction-manuals">
+                {manuals.map((manual) => (
+                  <Link to={manual.url} key={manual.url}>
+                    <img src={manual.image} alt={manual.name} />
+                    <h3>{manual.name}</h3>
+                  </Link>
+                     ))}
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <h1 className="articles-title">Artículos</h1>
+            <div className="category-container">
+              {categories.map((category) => {
                      return (
-                        <Link
-                           to={`/categories/${category.fieldValue.toLowerCase()}`}
-                           className="category-filter"
-                           key={category.fieldValue}
-                        >
-                           {category.fieldValue}
-                        </Link>
+                       <Link
+                         to={`/categories/${category.fieldValue.toLowerCase()}`}
+                         className="category-filter"
+                         key={category.fieldValue}
+                       >
+                         {category.fieldValue}
+                       </Link>
                      );
                   })}
-               </div>
-               <div className="search-container">
-                  <input
-                     className="search"
-                     type="text"
-                     name="searchTerm"
-                     value={searchTerm}
-                     placeholder="Type here to filter posts..."
-                     onChange={this.handleChange}
-                  />
-                  <div className="filter-count">{filterCount}</div>
-               </div>
-               <PostListing postEdges={filteredPosts} />
             </div>
-         </Layout>
+            <div className="search-container">
+              <input
+                className="search"
+                type="text"
+                name="searchTerm"
+                value={searchTerm}
+                placeholder="Type here to filter posts..."
+                onChange={this.handleChange}
+              />
+              <div className="filter-count">{filterCount}</div>
+            </div>
+            <PostListing postEdges={filteredPosts} />
+          </div>
+        </Layout>
       );
    }
 }

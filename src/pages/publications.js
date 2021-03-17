@@ -29,17 +29,17 @@ export default class PublicationsPage extends Component {
 
       const pubs = Object.entries(publications);
       return (
-         <Layout>
-            <Helmet title={`Artículos publicados – ${config.siteTitle}`} />
-            <div className="container">
-               <header className="page-header">
-                  <h1>Publicaciones</h1>
-               </header>
-               <div className="page">
-                  {/* <p>I've written for {companyStr}.</p> */}
-                  {/* <p>Escrito por {companyStr}.</p> */}
-                  <p>Esta pagina aun esta en desarrollo 🎉</p>
-                  {/* {pubs.map((publication, i) => {
+        <Layout>
+          <Helmet title={`Artículos publicados – ${config.siteTitle}`} />
+          <div className="container">
+            <header className="page-header">
+              <h1>Publicaciones</h1>
+            </header>
+            <div className="page">
+              {/* <p>I've written for {companyStr}.</p> */}
+              {/* <p>Escrito por {companyStr}.</p> */}
+              <p>Esta pagina aun esta en desarrollo 🎉</p>
+              {/* {pubs.map((publication, i) => {
                      const company = publication[0];
                      const articles = publication[1];
 
@@ -70,9 +70,9 @@ export default class PublicationsPage extends Component {
                         </article>
                      );
                   })} */}
-               </div>
             </div>
-         </Layout>
+          </div>
+        </Layout>
       );
    }
 }

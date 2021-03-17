@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import Layout from '../layout';
 import UserInfo from '../components/UserInfo';
 import PostTags from '../components/PostTags';
@@ -9,7 +10,6 @@ import SEO from '../components/SEO';
 import config from '../../data/SiteConfig';
 import { formatDate, editOnGithub } from '../utils/global';
 // import NewsletterForm from '../components/NewsletterForm';
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 
 export default class PostTemplate extends Component {
    constructor(props) {
@@ -48,73 +48,73 @@ export default class PostTemplate extends Component {
          post.title,
       )}&url=${config.siteUrl}/${post.slug}/&via=yonycalsin`;
 
-      let disqusConfig = {
+      const disqusConfig = {
          url: `${config.siteUrl + location.pathname}`,
          identifier: post.id,
          title: post.title,
       };
 
       return (
-         <Layout>
-            <Helmet>
-               <title>{`${post.title} – ${config.siteTitle}`}</title>
-            </Helmet>
-            <SEO postPath={slug} postNode={postNode} postSEO />
-            <article className="single container">
-               <header
-                  className={`single-header ${
+        <Layout>
+          <Helmet>
+            <title>{`${post.title} – ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <article className="single container">
+            <header
+              className={`single-header ${
                      !thumbnail ? 'no-thumbnail' : ''
                   }`}
-               >
-                  {thumbnail && (
-                     <Img fixed={post.thumbnail.childImageSharp.fixed} />
+            >
+              {thumbnail && (
+              <Img fixed={post.thumbnail.childImageSharp.fixed} />
                   )}
-                  <div className="flex">
-                     <h1>{post.title}</h1>
-                     <div className="post-meta">
-                        <time className="date">{date}</time>/
-                        <a
-                           className="twitter-link"
-                           href={twitterShare}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                        >
-                           Share
-                        </a>
-                        /
-                        <a
-                           className="github-link"
-                           href={githubLink}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                        >
-                           Edit ✏️
-                        </a>
-                     </div>
-                     <PostTags tags={post.tags} />
-                  </div>
-               </header>
+              <div className="flex">
+                <h1>{post.title}</h1>
+                <div className="post-meta">
+                  <time className="date">{date}</time>/
+                  <a
+                    className="twitter-link"
+                    href={twitterShare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Share
+                  </a>
+                  /
+                  <a
+                    className="github-link"
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Edit ✏️
+                  </a>
+                </div>
+                <PostTags tags={post.tags} />
+              </div>
+            </header>
 
-               <div
-                  className="post"
-                  dangerouslySetInnerHTML={{ __html: postNode.html }}
-               />
-            </article>
-            <div className="container">
-               <a
-                  className="button"
-                  href="https://yonycalsin.substack.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-               >
-                  Suscríbete al boletín de noticias
-               </a>
-            </div>
-            <UserInfo config={config} />
-            <div className="container">
-               <Disqus config={disqusConfig} />
-            </div>
-         </Layout>
+            <div
+              className="post"
+              dangerouslySetInnerHTML={{ __html: postNode.html }}
+            />
+          </article>
+          <div className="container">
+            <a
+              className="button"
+              href="https://yonycalsin.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Suscríbete al boletín de noticias
+            </a>
+          </div>
+          <UserInfo config={config} />
+          <div className="container">
+            <Disqus config={disqusConfig} />
+          </div>
+        </Layout>
       );
    }
 }

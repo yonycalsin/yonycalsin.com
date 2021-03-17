@@ -12,28 +12,28 @@ export default class CategoriesPage extends Component {
       const { group } = data.allMarkdownRemark;
 
       return (
-         <Layout>
-            <SEO />
-            <Helmet title={`Categorías – ${config.siteTitle}`} />
-            <div className="container">
-               <h1>Categorías</h1>
-               <div className="tag-container">
-                  {group.map((category) => (
-                     <Link
-                        to={`/categories/${kebabCase(category.fieldValue)}`}
-                        key={category.fieldValue}
-                     >
-                        <span key={category.fieldValue}>
-                           {category.fieldValue}{' '}
-                           <strong className="count">
-                              {category.totalCount}
-                           </strong>
-                        </span>
-                     </Link>
+        <Layout>
+          <SEO />
+          <Helmet title={`Categorías – ${config.siteTitle}`} />
+          <div className="container">
+            <h1>Categorías</h1>
+            <div className="tag-container">
+              {group.map((category) => (
+                <Link
+                  to={`/categories/${kebabCase(category.fieldValue)}`}
+                  key={category.fieldValue}
+                >
+                  <span key={category.fieldValue}>
+                    {category.fieldValue}{' '}
+                    <strong className="count">
+                      {category.totalCount}
+                    </strong>
+                  </span>
+                </Link>
                   ))}
-               </div>
             </div>
-         </Layout>
+          </div>
+        </Layout>
       );
    }
 }

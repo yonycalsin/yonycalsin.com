@@ -27,8 +27,8 @@ export default class PostListing extends Component {
       const postList = this.getPostList();
 
       return (
-         <section className={`posts ${simple ? 'simple' : ''}`}>
-            {postList.map((post) => {
+        <section className={`posts ${simple ? 'simple' : ''}`}>
+          {postList.map((post) => {
                let thumbnail;
                if (post.thumbnail) {
                   thumbnail = post.thumbnail.childImageSharp.fixed;
@@ -40,28 +40,28 @@ export default class PostListing extends Component {
                   moment(post.date) > moment().subtract(1, 'months');
 
                return (
-                  <Link to={post.path} key={post.title}>
-                     <div className="each">
-                        {thumbnail ? <Img fixed={thumbnail} /> : <div />}
-                        <div className="each-list-item">
-                           <h2>{post.title}</h2>
-                           {!simple && <div className="excerpt">{date}</div>}
-                        </div>
-                        {newest && (
-                           <div className="alert">
-                              <div className="new">Nuevo</div>
-                           </div>
-                        )}
-                        {popular && !simple && !newest && (
-                           <div className="alert">
-                              <div className="popular">Popular</div>
-                           </div>
-                        )}
+                 <Link to={post.path} key={post.title}>
+                   <div className="each">
+                     {thumbnail ? <Img fixed={thumbnail} /> : <div />}
+                     <div className="each-list-item">
+                       <h2>{post.title}</h2>
+                       {!simple && <div className="excerpt">{date}</div>}
                      </div>
-                  </Link>
+                     {newest && (
+                     <div className="alert">
+                       <div className="new">Nuevo</div>
+                     </div>
+                        )}
+                     {popular && !simple && !newest && (
+                     <div className="alert">
+                       <div className="popular">Popular</div>
+                     </div>
+                        )}
+                   </div>
+                 </Link>
                );
             })}
-         </section>
+        </section>
       );
    }
 }

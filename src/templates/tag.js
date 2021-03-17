@@ -11,15 +11,15 @@ export default class TagTemplate extends Component {
       const postEdges = this.props.data.allMarkdownRemark.edges;
 
       return (
-         <Layout>
-            <Helmet title={`Posts tagged as "${tag}" – ${config.siteTitle}`} />
-            <div className="container">
-               <h1>
-                  Posts tagged as <u>{tag}</u>
-               </h1>
-               <PostListing postEdges={postEdges} />
-            </div>
-         </Layout>
+        <Layout>
+          <Helmet title={`Posts tagged as "${tag}" – ${config.siteTitle}`} />
+          <div className="container">
+            <h1>
+              Posts tagged as <u>{tag}</u>
+            </h1>
+            <PostListing postEdges={postEdges} />
+          </div>
+        </Layout>
       );
    }
 }

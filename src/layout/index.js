@@ -25,22 +25,22 @@ export default class MainLayout extends Component {
       }
 
       return (
-         <>
-            <Helmet
-               bodyAttributes={{
+        <>
+          <Helmet
+            bodyAttributes={{
                   class: `theme ${themeClass}`,
                }}
-            >
-               <meta name="description" content={config.siteDescription} />
-               <link rel="shortcut icon" type="image/png" href={favicon} />
-            </Helmet>
-            <Popup />
-            <PromoBar />
-            <Navigation menuLinks={config.menuLinks} />
-            <main id="main-content">{children}</main>
-            <Footer />
-            <BackTop />
-         </>
+          >
+            <meta name="description" content={config.siteDescription} />
+            <link rel="shortcut icon" type="image/png" href={favicon} />
+          </Helmet>
+          <Popup />
+          <PromoBar />
+          <Navigation menuLinks={config.menuLinks} />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <BackTop />
+        </>
       );
    }
 }

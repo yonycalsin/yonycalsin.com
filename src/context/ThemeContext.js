@@ -47,17 +47,17 @@ class ThemeProvider extends Component {
       const { dark, notFound } = this.state;
 
       return (
-         <ThemeContext.Provider
-            value={{
+        <ThemeContext.Provider
+          value={{
                dark,
                notFound,
                setFound: this.setFound,
                setNotFound: this.setNotFound,
                toggleDark: this.toggleDark,
             }}
-         >
-            {children}
-         </ThemeContext.Provider>
+        >
+          {children}
+        </ThemeContext.Provider>
       );
    }
 }

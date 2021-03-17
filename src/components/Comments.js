@@ -85,15 +85,15 @@ export default class Comments extends Component {
 
       const showError = () =>
          error && (
-            <blockquote className="error">
-               <p>Comentarios desactivados.</p>
-            </blockquote>
+         <blockquote className="error">
+           <p>Comentarios desactivados.</p>
+         </blockquote>
          );
       const showSuccess = () =>
          success && (
-            <blockquote className="success">
-               <p>Comentario enviado!</p>
-            </blockquote>
+         <blockquote className="success">
+           <p>Comentario enviado!</p>
+         </blockquote>
          );
 
       const commentTitle = (commentLength) => {
@@ -107,54 +107,54 @@ export default class Comments extends Component {
       };
 
       return (
-         <section className="comments" id="comments">
-            {success || error ? (
+        <section className="comments" id="comments">
+          {success || error ? (
                showError() || showSuccess()
             ) : (
-               <>
-                  <h3>{commentTitle(comments.length)}</h3>
-                  <form id="new-comment" onSubmit={this.onSubmitComment}>
-                     <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={name}
-                        onChange={this.handleChange}
-                        minLength="3"
-                        maxLength="255"
-                        placeholder="Name"
-                        required
-                     />
-                     <textarea
-                        rows="2"
-                        cols="5"
-                        name="text"
-                        id="text"
-                        value={text}
-                        onChange={this.handleChange}
-                        minLength="20"
-                        maxLength="1000"
-                        placeholder="Comment"
-                        required
-                     />
-                     <div style={{ marginBottom: '.5rem' }}>
-                        <small>
-                           Sólo texto simple. El comentario debe tener más de 20
-                           caracteres.
-                        </small>
-                     </div>
-                     <button
-                        type="submit"
-                        disabled={
+              <>
+                <h3>{commentTitle(comments.length)}</h3>
+                <form id="new-comment" onSubmit={this.onSubmitComment}>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={name}
+                    onChange={this.handleChange}
+                    minLength="3"
+                    maxLength="255"
+                    placeholder="Name"
+                    required
+                  />
+                  <textarea
+                    rows="2"
+                    cols="5"
+                    name="text"
+                    id="text"
+                    value={text}
+                    onChange={this.handleChange}
+                    minLength="20"
+                    maxLength="1000"
+                    placeholder="Comment"
+                    required
+                  />
+                  <div style={{ marginBottom: '.5rem' }}>
+                    <small>
+                      Sólo texto simple. El comentario debe tener más de 20
+                      caracteres.
+                    </small>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={
                            !name || !text || text.length < 20 || submitting
                         }
-                     >
-                        Envíe
-                     </button>
-                  </form>
-               </>
+                  >
+                    Envíe
+                  </button>
+                </form>
+              </>
             )}
-            {comments.length > 0 &&
+          {comments.length > 0 &&
                comments
                   .filter((comment) => !comment.parent_comment_id)
                   .filter((comment, i) => i < 50)
@@ -167,29 +167,29 @@ export default class Comments extends Component {
                      }
 
                      return (
-                        <div className="comment" key={i} data-id={i}>
+                       <div className="comment" key={i} data-id={i}>
+                         <header>
+                           <h2>{comment.name}</h2>
+                           <div className="comment-date">
+                             {moment(comment.date).fromNow()}
+                           </div>
+                         </header>
+                         <p>{comment.text}</p>
+                         {child && (
+                         <div className="comment reply">
                            <header>
-                              <h2>{comment.name}</h2>
-                              <div className="comment-date">
-                                 {moment(comment.date).fromNow()}
-                              </div>
+                             <h2>{child.name}</h2>
+                             <div className="comment-date">
+                               {moment(child.date).fromNow()}
+                             </div>
                            </header>
-                           <p>{comment.text}</p>
-                           {child && (
-                              <div className="comment reply">
-                                 <header>
-                                    <h2>{child.name}</h2>
-                                    <div className="comment-date">
-                                       {moment(child.date).fromNow()}
-                                    </div>
-                                 </header>
-                                 <p>{child.text}</p>
-                              </div>
+                           <p>{child.text}</p>
+                         </div>
                            )}
-                        </div>
+                       </div>
                      );
                   })}
-         </section>
+        </section>
       );
    }
 }

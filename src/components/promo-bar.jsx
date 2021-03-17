@@ -7,13 +7,13 @@ const PromoBar = () => {
    }, []);
 
    return (
-      <div className="promo-bar fx fx-cc">
-         <p>
-            🚀 Mañana llegarán dos nuevos articulos.
-            <Link to="/blog">¿Serán los que tanto esperabas?</Link>
-            🎁
-         </p>
-      </div>
+     <div className="promo-bar fx fx-cc">
+       <p>
+         🚀 Mañana llegarán dos nuevos articulos.
+         <Link to="/blog">¿Serán los que tanto esperabas?</Link>
+         🎁
+       </p>
+     </div>
    );
 };
 

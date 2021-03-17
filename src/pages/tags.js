@@ -11,23 +11,23 @@ export default class TagsPage extends Component {
       const { group } = this.props.data.allMarkdownRemark;
 
       return (
-         <Layout>
-            <SEO />
-            <Helmet title={`Etiquetas – ${config.siteTitle}`} />
-            <div className="container">
-               <h1>Etiquetas</h1>
-               <div className="tag-container">
-                  {group.map((tag) => (
-                     <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
-                        <span key={tag.fieldValue}>
-                           {tag.fieldValue}{' '}
-                           <strong className="count">{tag.totalCount}</strong>
-                        </span>
-                     </Link>
+        <Layout>
+          <SEO />
+          <Helmet title={`Etiquetas – ${config.siteTitle}`} />
+          <div className="container">
+            <h1>Etiquetas</h1>
+            <div className="tag-container">
+              {group.map((tag) => (
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
+                  <span key={tag.fieldValue}>
+                    {tag.fieldValue}{' '}
+                    <strong className="count">{tag.totalCount}</strong>
+                  </span>
+                </Link>
                   ))}
-               </div>
             </div>
-         </Layout>
+          </div>
+        </Layout>
       );
    }
 }
