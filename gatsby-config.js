@@ -14,6 +14,10 @@ module.exports = {
          resolve: 'gatsby-plugin-root-import',
          options: {
             utils: path.join(__dirname, 'src/utils'),
+            layouts: path.join(__dirname, 'src/layouts'),
+            pages: path.join(__dirname, 'src/pages'),
+            types: path.join(__dirname, 'src/types'),
+            styles: path.join(__dirname, 'src/styles'),
          },
       },
       {
@@ -24,5 +28,6 @@ module.exports = {
             allExtensions: true, // defaults to false
          },
       },
+      'gatsby-plugin-sass',
    ],
 }

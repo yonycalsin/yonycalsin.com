@@ -29,7 +29,7 @@ module.exports = {
                // Other relative imports. Put same-folder imports and `.` last.
                ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
                // Style imports.
-               ['^.+\\.css$'],
+               ['^.+\\.css$', '^.+\\.scss$'],
             ],
          },
       ],
