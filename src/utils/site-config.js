@@ -15,16 +15,16 @@ const siteConfig = {
    userName: 'Yony Calsin',
    userEmail: 'helloyonycalsin@gmail.com',
    userTwitter: 'yonycalsin',
-};
+}
 
 // Make sure siteUrl doesn't have an ending forward slash
 if (siteConfig.siteUrl.substr(-1) === '/') {
-   siteConfig.siteUrl = siteConfig.siteUrl.slice(0, -1);
+   siteConfig.siteUrl = siteConfig.siteUrl.slice(0, -1)
 }
 
 // Make sure siteRss has a starting forward slash
 if (siteConfig.siteRss && siteConfig.siteRss[0] !== '/') {
-   siteConfig.siteRss = `/${siteConfig.siteRss}`;
+   siteConfig.siteRss = `/${siteConfig.siteRss}`
 }
 
-export default siteConfig;
+export default siteConfig
