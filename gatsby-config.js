@@ -29,5 +29,13 @@ module.exports = {
          },
       },
       'gatsby-plugin-sass',
+      {
+         resolve: 'gatsby-plugin-i18n',
+         options: {
+            langKeyDefault: 'en',
+            langKeyForNull: 'any',
+            useLangKeyLayout: true,
+         },
+      },
    ],
 }
