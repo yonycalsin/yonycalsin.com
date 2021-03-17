@@ -1,41 +1,18 @@
 {
-   "name": "yonicalsin.netlify.app",
-   "description": "Personal website running on Gatsby, React, and Node.js.",
-   "version": "1.0.1",
-   "author": "Yoni Calsin <helloyonicb@gmail.com>",
-   "repository": "git@github.com:greyblu/greyblu.com",
+   "name": "personal-website",
+   "description": "Personal website running on Gatsby, Typescript, React, and Node.js.",
+   "version": "2.0.0",
+   "author": "Yony Calsin",
    "dependencies": {
-      "eslint-utils": "^2.1.0",
-      "flexbox-fast": "^1.0.0",
       "gatsby": "^2.23.3",
       "react": "^16.13.1",
       "react-dom": "^16.13.1"
    },
    "devDependencies": {
-      "babel-eslint": "^10.1.0",
-      "cli-glob": "^0.1.0",
       "eslint": "^7.2.0",
-      "eslint-config-airbnb": "^18.1.0",
-      "eslint-config-prettier": "6.11.0",
-      "eslint-plugin-import": "^2.21.2",
-      "eslint-plugin-jsx-a11y": "^6.2.3",
-      "eslint-plugin-react": "^7.20.0",
-      "prettier": "^2.0.5",
-      "remark-cli": "^8.0.0",
-      "remark-preset-lint-recommended": "^4.0.0",
-      "stylefmt": "^6.0.3",
-      "stylelint": "^13.6.0",
-      "stylelint-config-standard": "^20.0.0",
-      "write-good": "^1.0.2"
+      "prettier": "^2.0.5"
    },
-   "keywords": [
-      "development",
-      "dev",
-      "tutorials",
-      "tech",
-      "articles",
-      "blog"
-   ],
+   "keywords": [],
    "license": "MIT",
    "main": "n/a",
    "scripts": {
@@ -46,10 +23,5 @@
       "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
       "serve": "gatsby serve",
       "clean": "gatsby clean"
-   },
-   "remarkConfig": {
-      "plugins": [
-         "remark-preset-lint-recommended"
-      ]
    }
 }
