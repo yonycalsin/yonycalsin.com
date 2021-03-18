@@ -8,14 +8,15 @@ import 'styles/main.scss'
 
 type HomeLayoutProps = {
    children: React.ReactNode
+   isStandaloneBrand?: boolean
 }
 
 export const HomeLayout = (props: HomeLayoutProps) => {
-   const { children } = props
+   const { children, isStandaloneBrand } = props
 
    return (
       <>
-         <Navbar />
+         <Navbar isStandaloneBrand={isStandaloneBrand} />
          {children}
       </>
    )

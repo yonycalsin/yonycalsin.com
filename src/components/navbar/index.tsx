@@ -6,7 +6,13 @@ import {
    useTranslation,
 } from 'gatsby-plugin-react-i18next'
 
-export const Navbar = (props: unknown) => {
+type NavbarProps = {
+   isStandaloneBrand?: boolean
+}
+
+export const Navbar = (props: NavbarProps) => {
+   const { isStandaloneBrand } = props
+
    const { languages, changeLanguage } = useI18next()
 
    const { t } = useTranslation()
@@ -15,18 +21,23 @@ export const Navbar = (props: unknown) => {
       <div className="navbar">
          <div className="container fx fx-aic fx-jcsb">
             <div className="languages-select">
-               {languages.map(lang => (
-                  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                  <a
-                     href="#"
-                     onClick={e => {
-                        e.preventDefault()
-                        changeLanguage(lang)
-                     }}
-                  >
-                     {t(`languages.${lang}`)}
-                  </a>
-               ))}
+               {isStandaloneBrand ? (
+                  languages.map(lang => (
+                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                     <a
+                        key={lang}
+                        href="#"
+                        onClick={e => {
+                           e.preventDefault()
+                           changeLanguage(lang)
+                        }}
+                     >
+                        {t(`languages.${lang}`)}
+                     </a>
+                  ))
+               ) : (
+                  <Link to="/">Yony Calsin</Link>
+               )}
             </div>
             <div className="actions">
                <div className="fx menu">

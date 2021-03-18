@@ -4,5 +4,11 @@
       "es": "Español"
    },
    "about-me": "Acerca de mi",
-   "contact": "Contacto"
+   "contact": "Contacto",
+   "home": {
+      "description": {
+         "first": "Hola, bienvenido a mi página web, donde podrás aprender sobre desarrollo web, de aplicaciones y de software. Te invito a que aceptes mi reto: estudia todos los días, al menos 10 minutos. No dejes de aprender sobre tecnología, vida, artes, idiomas, cualquier cosa que te guste.",
+         "second": "¡Enfréntate a tus miedos! Aprender nos mantiene jóvenes, nos hace ver el universo con una nueva perspectiva y nos enamora. ¿Estás preparado para aprender y cambiar tu vida?"
+      }
+   }
 }

@@ -1,22 +1,25 @@
 import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
 import { HomeLayout } from 'layouts'
-import siteConfig from 'utils/site-config'
 
 export default function Home() {
+   const { t } = useTranslation()
+
    return (
       <HomeLayout>
-         <br />
-         <div className="container">
-            <div>Hello World {siteConfig.siteTitle} Website!</div>
-            <h1>Contact Page</h1>
-            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Blanditiis quaerat nostrum tempore, perspiciatis illo et corporis
-               iste laboriosam ab perferendis molestiae, nulla illum vel omnis
-               rerum eius aperiam. Magni, velit.
-            </p>
+         <div className="main">
+            <div className="container">
+               <h1>{t('contact')}</h1>
+
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Blanditiis quaerat nostrum tempore, perspiciatis illo et
+                  corporis iste laboriosam ab perferendis molestiae, nulla illum
+                  vel omnis rerum eius aperiam. Magni, velit.
+               </p>
+            </div>
          </div>
       </HomeLayout>
    )
