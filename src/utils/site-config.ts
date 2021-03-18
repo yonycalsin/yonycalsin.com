@@ -3,7 +3,7 @@ const siteConfig = {
    siteTitleShort: 'YonyCalsin',
    siteTitleAlt: 'Yony Calsin - Desarrollador de Frontend | Frontend Developer',
    siteLogo: '/logos/logo-1024.png',
-   siteUrl: 'https://yonycalsin.netlify.app',
+   siteUrl: 'https://yonycalsin.com/',
    dateFromFormat: 'YYYY-MM-DD',
    dateFormat: 'MMMM Do, YYYY',
    siteDescription:

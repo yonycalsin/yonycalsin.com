@@ -1,5 +1,9 @@
 import * as React from 'react'
 
+import { Navbar } from 'components'
+
+import 'flexbox-fast/index.css'
+import 'scroll-style/index.css'
 import 'styles/main.scss'
 
 type HomeLayoutProps = {
@@ -9,5 +13,10 @@ type HomeLayoutProps = {
 export const HomeLayout = (props: HomeLayoutProps) => {
    const { children } = props
 
-   return <div>{children}</div>
+   return (
+      <>
+         <Navbar />
+         {children}
+      </>
+   )
 }

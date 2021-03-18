@@ -10,6 +10,7 @@ export default function Home() {
          <br />
          <div className="container">
             <div>Hello World {siteConfig.siteTitle} Website!</div>
+            <h1>Contact Page</h1>
             <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Blanditiis quaerat nostrum tempore, perspiciatis illo et corporis
