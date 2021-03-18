@@ -50,15 +50,6 @@ module.exports = {
             // you can pass any i18next options
             // pass following options to allow message content as a key
             i18nextOptions: {
-               // interpolation: {
-               //    escapeValue: false, // not needed for react as it escapes by default
-               // },
-               // // keySeparator: false,
-               // nsSeparator: false,
-               // lowerCaseLng: true,
-               // saveMissing: false,
-               // keySeparator: '.',
-
                lowerCaseLng: true,
                saveMissing: false,
                interpolation: {
