@@ -1,0 +1,14 @@
+{
+   "languages": {
+      "en": "English",
+      "es": "Spanish"
+   },
+   "about-me": "About Me",
+   "contact": "Contact",
+   "home": {
+      "description": {
+         "first": "Hi! Welcome to my site, where you can learn about Web, App and software development. I welcome you to accept my challenge: Study every day , at least 10 minutes. Do NOT stop learning about tecnology, life, arts, languages, anything that you like.",
+         "second": "Face your fears! Learning keeps us young, it makes us see the universe in a new perspective and fall in love. Are you ready to learn and change your life?"
+      }
+   }
+}

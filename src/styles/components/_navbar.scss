@@ -1,0 +1,19 @@
+.navbar {
+   .container {
+      height: 80px;
+
+      .languages-select {
+         a:not(:last-child) {
+            margin-right: 16px;
+         }
+      }
+
+      .actions {
+         .menu {
+            a:not(:last-child) {
+               margin-right: 16px;
+            }
+         }
+      }
+   }
+}

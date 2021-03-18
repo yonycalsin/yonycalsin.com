@@ -8,22 +8,17 @@ export default function Home() {
    const { t } = useTranslation()
 
    return (
-      <HomeLayout isStandaloneBrand>
+      <HomeLayout>
          <div className="main">
             <div className="container">
-               <div>
-                  <h1 className="tac">Yony Calsin</h1>
-                  <p className="tac subtitle">Node Fullstack Engineer</p>
-               </div>
+               <h1>{t('contact')}</h1>
 
-               <br />
-
-               <div>
-                  <p style={{ initialLetter: 4 }}>
-                     {t('home.description.first')}
-                  </p>
-                  <p>{t('home.description.second')}</p>
-               </div>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Blanditiis quaerat nostrum tempore, perspiciatis illo et
+                  corporis iste laboriosam ab perferendis molestiae, nulla illum
+                  vel omnis rerum eius aperiam. Magni, velit.
+               </p>
             </div>
          </div>
       </HomeLayout>
