@@ -41,7 +41,7 @@ export default class Navigation extends Component {
                <div className="brand">
                   <Link to="/">
                      <img src={logo} className="favicon" alt="Greyblu Logo" />
-                     <span className="text">Yony Calsin</span>
+                     <span className="text">Yony</span>
                   </Link>
                </div>
                <div className="links">
