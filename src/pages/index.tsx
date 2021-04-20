@@ -7,7 +7,7 @@ export default function Home() {
    return (
       <HomeLayout isStandaloneBrand>
          <div>
-            <h1 className="text-center hover:text-red-500">
+            <h1 className="text-center ">
                <q>Yony Calsin</q>
             </h1>
          </div>
@@ -45,7 +45,31 @@ export default function Home() {
             </div>
          </div>
 
-         <div className="grid grid-cols-2 gap-4">
+         <div>
+            <pre>
+               <code
+                  style={{
+                     background:
+                        'linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
+                     color: 'black',
+                     fontWeight: 'bold',
+                  }}
+               >
+                  {JSON.stringify(
+                     {
+                        name: 'Yony Calsin',
+                        nickname: '@yonycalsin',
+                        role: 'Frontend Engineer',
+                        location: 'Peru',
+                     },
+                     undefined,
+                     2,
+                  )}
+               </code>
+            </pre>
+         </div>
+
+         <div className="grid lg:grid-cols-2 gap-4">
             <div>
                <blockquote>
                   Hazlo simple: tan simple como sea posible, pero no más.
