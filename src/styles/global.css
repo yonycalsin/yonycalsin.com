@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   overflow-y: scroll;
+}
+
+.container {
+   @apply max-w-3xl mx-auto p-4 md:p-6;
+}

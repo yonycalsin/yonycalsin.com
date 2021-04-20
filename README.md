@@ -1,6 +1,6 @@
 # yonycalsin.netlify.app
 
-Yony's personal website running on Gatsby, React, and Node.js.
+Yony's personal website running on Gatsby, Typescript, React, and Node.js.
 
 ## License
 
