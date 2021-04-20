@@ -9,17 +9,13 @@ export default function Home() {
 
    return (
       <HomeLayout>
-         <div className="main">
-            <div className="container">
-               <h1>{t('about-me')}</h1>
-               <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis quaerat nostrum tempore, perspiciatis illo et
-                  corporis iste laboriosam ab perferendis molestiae, nulla illum
-                  vel omnis rerum eius aperiam. Magni, velit.
-               </p>
-            </div>
-         </div>
+         <h1>{t('about-me')}</h1>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            quaerat nostrum tempore, perspiciatis illo et corporis iste
+            laboriosam ab perferendis molestiae, nulla illum vel omnis rerum
+            eius aperiam. Magni, velit.
+         </p>
       </HomeLayout>
    )
 }

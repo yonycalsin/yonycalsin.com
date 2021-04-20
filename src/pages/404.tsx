@@ -1,25 +1,21 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
 import { HomeLayout } from 'layouts'
 
-export default function Home() {
-   const { t } = useTranslation()
-
+const NotFoundPage = () => {
    return (
-      <HomeLayout isStandaloneBrand>
-         <div>
-            <h1 className="text-center">Yony Calsin</h1>
-            <p className="lead text-center">Node Fullstack Engineer</p>
-         </div>
-
-         <div className="text-center break-words">
-            <p>{t('home.description.first')}</p>
+      <HomeLayout>
+         <div className="my-5">
+            <div className="my-20">
+               <h1 className="text-center my-5">Page Not Found</h1>
+            </div>
          </div>
       </HomeLayout>
    )
 }
+
+export default NotFoundPage
 
 export const query = graphql`
    query($language: String!) {

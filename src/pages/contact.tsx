@@ -9,18 +9,20 @@ export default function Home() {
 
    return (
       <HomeLayout>
-         <div className="main">
-            <div className="container">
-               <h1>{t('contact')}</h1>
+         <h1>{t('contact')}</h1>
 
-               <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis quaerat nostrum tempore, perspiciatis illo et
-                  corporis iste laboriosam ab perferendis molestiae, nulla illum
-                  vel omnis rerum eius aperiam. Magni, velit.
-               </p>
-            </div>
-         </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            quaerat nostrum tempore, perspiciatis illo et corporis iste
+            laboriosam ab perferendis molestiae, nulla illum vel omnis rerum
+            eius aperiam. Magni, velit.
+         </p>
+
+         <ul>
+            <li>Twitter</li>
+            <li>Email</li>
+            <li>Github</li>
+         </ul>
       </HomeLayout>
    )
 }
