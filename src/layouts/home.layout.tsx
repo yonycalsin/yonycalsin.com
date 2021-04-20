@@ -19,7 +19,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
             {children}
          </div>
 
-         <div className="container sm:prose lg:prose-lg xl:prose-2xl mx-auto border-t-2 border-gray-100 bg-gray-50 mb-10">
+         <div className="container sm:prose lg:prose-lg xl:prose-2xl mx-auto border-t-2 border-gray-100 bg-gray-50 lg:mb-10">
             <div className="flex flex-wrap justify-between items-center ">
                <small>
                   Created By{' '}
