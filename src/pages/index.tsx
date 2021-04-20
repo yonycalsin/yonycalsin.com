@@ -7,13 +7,13 @@ export default function Home() {
    return (
       <HomeLayout isStandaloneBrand>
          <div>
-            <h1 className="text-center ">
+            <h1 className="text-center">
                <q>Yony Calsin</q>
             </h1>
          </div>
 
          <div className="text-center break-words">
-            <p>
+            <p className="lead">
                I am a frontend developer creating open source projects and
                writing on modern JavaScript, Node.js, Typescript and Graphql.
             </p>
