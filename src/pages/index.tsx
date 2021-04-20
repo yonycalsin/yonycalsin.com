@@ -63,10 +63,9 @@ export default function Home() {
             </div>
             <div>
                <blockquote>
-                  Se ha creado el ordenador perfecto. Metes todos tus problemas
-                  y ya no vuelven a salir.
+                  La constancia es la madre de la dominio.
                   <br />
-                  <b>— Anónimo</b>
+                  <b>— Yony Calsin</b>
                </blockquote>
             </div>
             <div>
