@@ -6,9 +6,17 @@ export const Navbar = () => {
 
    return (
       <div>
-         <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between  h-20">
+         <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between h-14 lg:h-20">
             <div>
-               <Link to="/">Yony Calsin</Link>
+               <Link
+                  to="/"
+                  style={{
+                     textDecoration: 'none',
+                     fontWeight: 'bold',
+                  }}
+               >
+                  Yony Calsin
+               </Link>
             </div>
             <div>
                <div>
