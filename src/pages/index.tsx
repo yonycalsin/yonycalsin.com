@@ -9,22 +9,13 @@ export default function Home() {
 
    return (
       <HomeLayout isStandaloneBrand>
-         <div className="main">
-            <div className="container">
-               <div>
-                  <h1 className="tac">Yony Calsin</h1>
-                  <p className="tac subtitle">Node Fullstack Engineer</p>
-               </div>
+         <div>
+            <h1 className="text-center">Yony Calsin</h1>
+            <p className="lead text-center">Node Fullstack Engineer</p>
+         </div>
 
-               <br />
-
-               <div>
-                  <p style={{ initialLetter: 4 }}>
-                     {t('home.description.first')}
-                  </p>
-                  <p>{t('home.description.second')}</p>
-               </div>
-            </div>
+         <div className="text-center break-words">
+            <p>{t('home.description.first')}</p>
          </div>
       </HomeLayout>
    )

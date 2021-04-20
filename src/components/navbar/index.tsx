@@ -26,31 +26,32 @@ export const Navbar = (props: NavbarProps) => {
             e.preventDefault()
             changeLanguage(lang)
          }}
+         className="mr-4 text-gray-600 font-semibold"
       >
          {t(`languages.${lang}`)}
       </a>
    ))
 
    return (
-      <div className="navbar">
-         <div className="container fx fx-aic fx-jcsb">
-            <div className="languages-select">
+      <div>
+         <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between  h-20">
+            <div>
                {isStandaloneBrand ? (
                   languagesRender
                ) : (
                   <Link to="/">Yony Calsin</Link>
                )}
             </div>
-            <div className="actions">
-               <div className="fx menu">
+            <div>
+               <div>
                   {!isStandaloneBrand && languagesRender}
                   {!isStandaloneBrand && (
                      // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                     <a href="#" style={{ borderBottom: 'none' }}>
+                     <a href="#" className="mr-4">
                         |
                      </a>
                   )}
-                  <Link to="/me/">
+                  <Link to="/me/" className="mr-4">
                      <Trans>{t('about-me')}</Trans>
                   </Link>
                   <Link to="/contact/">
