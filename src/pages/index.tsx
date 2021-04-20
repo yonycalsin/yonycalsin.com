@@ -14,9 +14,8 @@ export default function Home() {
 
          <div className="text-center break-words">
             <p>
-               Soy un desarrollador frontend creando proyectos de código abierto
-               y escribiendo sobre JavaScript moderno, Node.js, Typescript y
-               Graphql.
+               I am a frontend developer creating open source projects and
+               writing on modern JavaScript, Node.js, Typescript and Graphql.
             </p>
             <div className="flex items-center justify-center">
                <a
