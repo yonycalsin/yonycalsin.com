@@ -19,9 +19,30 @@ export default function Home() {
          </p>
 
          <ul>
-            <li>Twitter</li>
-            <li>Email</li>
-            <li>Github</li>
+            <li>
+               <strong>Email</strong>:{' '}
+               <a href="mailto:helloyonycalsin@gmail.com">@yonycalsin</a>
+            </li>
+            <li>
+               <strong>GitHub</strong>:{' '}
+               <a href="https://github.com/yonycalsin">@yonycalsin</a>
+            </li>
+            <li>
+               <strong>Twitter</strong>:{' '}
+               <a href="https://twitter.com/yonycalsin">@yonycalsin</a>
+            </li>
+            <li>
+               <strong>Patreon</strong>:{' '}
+               <a href="https://patreon.com/yonycalsin">@yonycalsin</a>
+            </li>
+            <li>
+               <strong>Ko-Fi</strong>:{' '}
+               <a href="https://ko-fi.com/yonycalsin">@yonycalsin</a>
+            </li>
+            <li>
+               <strong>Feed</strong>:{' '}
+               <a href="https://yonycalsin.netlify.app/rss.xml">RSS</a>
+            </li>
          </ul>
       </HomeLayout>
    )
