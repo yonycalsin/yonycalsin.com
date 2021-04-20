@@ -10,6 +10,7 @@ module.exports = {
    /* Your site config here */
    pathPrefix: '.',
    plugins: [
+      'gatsby-plugin-postcss',
       {
          resolve: 'gatsby-plugin-root-import',
          options: {
