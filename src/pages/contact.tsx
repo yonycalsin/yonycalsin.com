@@ -25,23 +25,53 @@ export default function Home() {
             </li>
             <li>
                <strong>GitHub</strong>:{' '}
-               <a href="https://github.com/yonycalsin">@yonycalsin</a>
+               <a
+                  href="https://github.com/yonycalsin"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  @yonycalsin
+               </a>
             </li>
             <li>
                <strong>Twitter</strong>:{' '}
-               <a href="https://twitter.com/yonycalsin">@yonycalsin</a>
+               <a
+                  href="https://twitter.com/yonycalsin"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  @yonycalsin
+               </a>
             </li>
             <li>
                <strong>Patreon</strong>:{' '}
-               <a href="https://patreon.com/yonycalsin">@yonycalsin</a>
+               <a
+                  href="https://patreon.com/yonycalsin"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  @yonycalsin
+               </a>
             </li>
             <li>
                <strong>Ko-Fi</strong>:{' '}
-               <a href="https://ko-fi.com/yonycalsin">@yonycalsin</a>
+               <a
+                  href="https://ko-fi.com/yonycalsin"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  @yonycalsin
+               </a>
             </li>
             <li>
                <strong>Feed</strong>:{' '}
-               <a href="https://yonycalsin.netlify.app/rss.xml">RSS</a>
+               <a
+                  href="https://yonycalsin.netlify.app/rss.xml"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  RSS
+               </a>
             </li>
          </ul>
       </HomeLayout>
