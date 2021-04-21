@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 
+import { Meta } from 'components/meta'
 import { HomeLayout } from 'layouts'
 
 export default function Home() {
    return (
       <HomeLayout isStandaloneBrand>
+         <Meta />
          <div>
             <h1 className="text-center">
                <q>Yony Calsin</q>

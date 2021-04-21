@@ -7,10 +7,20 @@ const path = require('path')
  */
 
 module.exports = {
+   siteMetadata: {
+      title: 'Yony Calsin - Frontend Developer',
+      titleTemplate: '%s - Yony Calsin',
+      description:
+         'Frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.',
+      url: 'https://www.yonycalsin.com', // No trailing slash allowed!
+      twitterUsername: '@yonycalsin',
+      socialBannerImage: 'https://avatars.githubusercontent.com/u/58490737?v=4',
+   },
    /* Your site config here */
    pathPrefix: '.',
    plugins: [
       'gatsby-plugin-postcss',
+      `gatsby-plugin-react-helmet`,
       {
          resolve: 'gatsby-plugin-root-import',
          options: {
@@ -46,7 +56,7 @@ module.exports = {
             localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
             defaultLanguage: `en`,
             // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-            siteUrl: 'https://yonycalsin.com/',
+            siteUrl: 'https://www.yonycalsin.com',
             // you can pass any i18next options
             // pass following options to allow message content as a key
             i18nextOptions: {

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
+import { Meta } from 'components/meta'
 import { HomeLayout } from 'layouts'
 
 export default function Home() {
@@ -9,6 +10,8 @@ export default function Home() {
 
    return (
       <HomeLayout>
+         <Meta title="Contact" />
+
          <h1>{t('contact')}</h1>
 
          <p>

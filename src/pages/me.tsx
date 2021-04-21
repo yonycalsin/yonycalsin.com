@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
+import { Meta } from 'components/meta'
 import { HomeLayout } from 'layouts'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
 
    return (
       <HomeLayout>
+         <Meta title="About Me" />
          <h1>{t('about-me')}</h1>
          <p>
             Hi, I'm Yony Calsin, a frontend developer, passionate about web
