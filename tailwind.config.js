@@ -1,6 +1,12 @@
 module.exports = {
-   mode: 'jit',
-   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+   // mode: 'jit',
+   purge: {
+      content: ['./src/**/*.{js,jsx,ts,tsx}'],
+      options: {
+         keyframes: true,
+         fontFace: true,
+      },
+   },
    darkMode: false, // or 'media' or 'class'
    theme: {
       container: false,
@@ -10,4 +16,7 @@ module.exports = {
       extend: {},
    },
    plugins: [require('@tailwindcss/typography')],
+   corePlugins: {
+      float: false,
+   },
 }
