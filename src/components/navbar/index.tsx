@@ -1,8 +1,9 @@
 import * as React from 'react'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 export const Navbar = () => {
-   const { t } = useTranslation()
+   const { t, i18n } = useTranslation()
 
    return (
       <div>
@@ -20,10 +21,41 @@ export const Navbar = () => {
             </div>
             <div>
                <div>
-                  <Link to="/me/" className="mr-4">
+                  <Link
+                     to="/me/"
+                     className="mr-4"
+                     onClick={e => {
+                        e.persist()
+
+                        // Lets track that custom click
+                        trackCustomEvent({
+                           // string - required - The object that was interacted with (e.g.video)
+                           category: 'Navbar Right Menu',
+                           // string - required - Type of interaction (e.g. 'play')
+                           action: 'link-click',
+                           // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+                           label: `Click in about-me link - ${i18n.language} `,
+                        })
+                     }}
+                  >
                      <Trans>{t('about-me')}</Trans>
                   </Link>
-                  <Link to="/contact/">
+                  <Link
+                     to="/contact/"
+                     onClick={e => {
+                        e.persist()
+
+                        // Lets track that custom click
+                        trackCustomEvent({
+                           // string - required - The object that was interacted with (e.g.video)
+                           category: 'Navbar Right Menu',
+                           // string - required - Type of interaction (e.g. 'play')
+                           action: 'link-click',
+                           // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+                           label: `Click in contact link - ${i18n.language} `,
+                        })
+                     }}
+                  >
                      <Trans>{t('contact')}</Trans>
                   </Link>
                </div>

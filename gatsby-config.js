@@ -19,6 +19,12 @@ module.exports = {
    /* Your site config here */
    pathPrefix: '.',
    plugins: [
+      {
+         resolve: 'gatsby-plugin-google-analytics',
+         options: {
+            trackingId: 'G-NV9Y519QF6',
+         },
+      },
       'gatsby-plugin-postcss',
       `gatsby-plugin-react-helmet`,
       {
