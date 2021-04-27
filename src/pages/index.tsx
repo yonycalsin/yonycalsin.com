@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <div>
                <blockquote>
-                  La constancia es la madre de la dominio.
+                  La constancia es la madre del dominio.
                   <br />
                   <b>— Yony Calsin</b>
                </blockquote>
