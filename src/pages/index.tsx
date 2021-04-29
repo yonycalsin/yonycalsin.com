@@ -1,10 +1,13 @@
 import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
 import { Meta } from 'components/meta'
 import { HomeLayout } from 'layouts'
 
 export default function Home() {
+   const { t } = useTranslation()
+
    return (
       <HomeLayout isStandaloneBrand>
          <Meta />
@@ -15,10 +18,7 @@ export default function Home() {
          </div>
 
          <div className="text-center break-words">
-            <p className="lead">
-               I am a frontend developer creating open source projects and
-               writing on modern JavaScript, Node.js, Typescript and Graphql.
-            </p>
+            <p className="lead">{t('description')}</p>
             <div className="flex items-center justify-center">
                <a
                   href="https://github.com/yonycalsin"

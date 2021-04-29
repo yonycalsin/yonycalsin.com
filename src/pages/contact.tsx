@@ -14,12 +14,7 @@ export default function Home() {
 
          <h1>{t('contact.title')}</h1>
 
-         <p>
-            Hi, I'm Yony, a top-notch software developer. I build open source
-            projects and write about modern JavaScript, Node.js, web design and
-            development. Join over 10,000+ developers to receive my email
-            newsletter. 👇 Unsubscribe with a single click at any time.
-         </p>
+         <p>{t('contact.description')}</p>
 
          <iframe
             width={480}

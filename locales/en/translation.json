@@ -1,18 +1,16 @@
 {
    "title": "Yony Calsin - Frontend Developer",
+   "description": "I am a frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.",
    "languages": {
       "en": "English",
       "es": "Spanish"
    },
    "about-me": {
-      "title": "About Me"
+      "title": "About Me",
+      "description": "Hi, I'm Yony Calsin, a frontend developer, passionate about web programming (frontend, backend), throughout my career I've had the chance to work on several projects that have given me the opportunity to execute my knowledge in these areas and also to keep learning about them."
    },
    "contact": {
-      "title": "Contact"
-   },
-   "home": {
-      "description": {
-         "first": "Hi! Welcome to my site, where you can learn about Web, App and software development. I welcome you to accept my challenge: Study every day , at least 10 minutes. Do NOT stop learning about tecnology, life, arts, languages, anything that you like."
-      }
+      "title": "Contact",
+      "description": "Hi, I'm Yony, a top-notch software developer. I build open source projects and write about modern JavaScript, Node.js, web design and development. Join over 10,000+ developers to receive my email newsletter. 👇 Unsubscribe with a single click at any time."
    }
 }
