@@ -1,6 +1,30 @@
 {
    "title": "Yony Calsin - Frontend Developer",
    "description": "I am a frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.",
+   "snippet": {
+      "name": "Yony Calsin",
+      "nickname": "@yonycalsin",
+      "role": "Frontend Engineer",
+      "location": "Peru"
+   },
+   "quotes": [
+      {
+         "phrase": "Keep it simple: as simple as possible, but no more.",
+         "author": "Albert Einstein"
+      },
+      {
+         "phrase": "Real programmers don't document. If it was hard to write, it must be hard to understand.",
+         "author": "Anónimo"
+      },
+      {
+         "phrase": "Consistency is the mother of mastery.",
+         "author": "Yony Calsin"
+      },
+      {
+         "phrase": "Hardware is what you can kick. Software is what you can only insult.",
+         "author": "Anónimo"
+      }
+   ],
    "languages": {
       "en": "English",
       "es": "Spanish"

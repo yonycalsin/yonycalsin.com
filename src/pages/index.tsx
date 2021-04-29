@@ -57,12 +57,9 @@ export default function Home() {
                   }}
                >
                   {JSON.stringify(
-                     {
-                        name: 'Yony Calsin',
-                        nickname: '@yonycalsin',
-                        role: 'Frontend Engineer',
-                        location: 'Peru',
-                     },
+                     t('snippet', {
+                        returnObjects: true,
+                     }),
                      undefined,
                      2,
                   )}
@@ -71,36 +68,17 @@ export default function Home() {
          </div>
 
          <div className="grid lg:grid-cols-2 gap-4">
-            <div>
-               <blockquote>
-                  Hazlo simple: tan simple como sea posible, pero no más.
-                  <br />
-                  <b>— Albert Einstein</b>
-               </blockquote>
-            </div>
-            <div>
-               <blockquote>
-                  Los programadores de verdad no documentan. Si fue difícil de
-                  escribir, debe ser difícil de entender.
-                  <br />
-                  <b>— Anónimo</b>
-               </blockquote>
-            </div>
-            <div>
-               <blockquote>
-                  La constancia es la madre del dominio.
-                  <br />
-                  <b>— Yony Calsin</b>
-               </blockquote>
-            </div>
-            <div>
-               <blockquote>
-                  El hardware es aquello a lo que puedes dar patadas. Software
-                  es aquello a lo que sólo puedes insultar.
-                  <br />
-                  <b>— Anónimo</b>
-               </blockquote>
-            </div>
+            {t<any, any>('quotes', {
+               returnObjects: true,
+            }).map(quote => (
+               <div>
+                  <blockquote>
+                     {quote.phrase}
+                     <br />
+                     <b>— {quote.author}</b>
+                  </blockquote>
+               </div>
+            ))}
          </div>
       </HomeLayout>
    )

@@ -1,6 +1,30 @@
 {
    "title": "Yony Calsin - Desarrollador Frontend",
    "description": "Soy un desarrollador frontend creando proyectos de código abierto y escribiendo de JavaScript moderno, Node.js, Typescript y Graphql.",
+   "snippet": {
+      "nombre": "Yony Calsin",
+      "usuario": "@yonycalsin",
+      "rol": "Ingeniero Frontend",
+      "país": "Peru"
+   },
+   "quotes": [
+      {
+         "phrase": "Hazlo simple: tan simple como sea posible, pero no más.",
+         "author": "Albert Einstein"
+      },
+      {
+         "phrase": "Los programadores de verdad no documentan. Si fue difícil de escribir, debe ser difícil de entender.",
+         "author": "Anónimo"
+      },
+      {
+         "phrase": "La constancia es la madre del dominio.",
+         "author": "Yony Calsin"
+      },
+      {
+         "phrase": "El hardware es aquello a lo que puedes dar patadas. Software es aquello a lo que sólo puedes insultar.",
+         "author": "Anónimo"
+      }
+   ],
    "languages": {
       "en": "Ingles",
       "es": "Español"
