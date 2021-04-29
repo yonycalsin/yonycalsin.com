@@ -2,6 +2,8 @@ import * as React from 'react'
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
+import LanguagesNav from './languages-nav'
+
 export const Navbar = () => {
    const { t, i18n } = useTranslation()
 
@@ -19,7 +21,10 @@ export const Navbar = () => {
                   Yony Calsin
                </Link>
             </div>
-            <div>
+
+            <LanguagesNav className="hidden md:flex" />
+
+            <div className="flex">
                <div>
                   <Link
                      to="/me/"
@@ -38,7 +43,7 @@ export const Navbar = () => {
                         })
                      }}
                   >
-                     <Trans>{t('about-me')}</Trans>
+                     <Trans>{t('about-me.title')}</Trans>
                   </Link>
                   <Link
                      to="/contact/"
@@ -56,7 +61,7 @@ export const Navbar = () => {
                         })
                      }}
                   >
-                     <Trans>{t('contact')}</Trans>
+                     <Trans>{t('contact.title')}</Trans>
                   </Link>
                </div>
             </div>

@@ -12,7 +12,7 @@ export default function Home() {
       <HomeLayout>
          <Meta title="Contact" />
 
-         <h1>{t('contact')}</h1>
+         <h1>{t('contact.title')}</h1>
 
          <p>
             Hi, I'm Yony, a top-notch software developer. I build open source

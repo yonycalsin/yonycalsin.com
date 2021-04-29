@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Helmet } from 'gatsby-plugin-react-i18next'
+import { Helmet, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const query = graphql`
    query MyQuery {
@@ -23,6 +23,8 @@ type MetaProps = {
 
 export const Meta = (props: MetaProps) => {
    const response = useStaticQuery(query)
+
+   const { t } = useTranslation()
 
    const {
       description,
@@ -71,7 +73,7 @@ export const Meta = (props: MetaProps) => {
          <title>
             {props.title
                ? titleTemplate.replace('%s', props.title)
-               : defaultTitle}
+               : t('title')}
          </title>
       </Helmet>
    )

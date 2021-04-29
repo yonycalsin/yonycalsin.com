@@ -11,7 +11,7 @@ export default function Home() {
    return (
       <HomeLayout>
          <Meta title="About Me" />
-         <h1>{t('about-me')}</h1>
+         <h1>{t('about-me.title')}</h1>
          <p>
             Hi, I'm Yony Calsin, a frontend developer, passionate about web
             programming (frontend, backend), throughout my career I've had the
