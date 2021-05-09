@@ -1,0 +1,5 @@
+.item {
+   background-image: url(../../assets/images/sun-moon.png);
+   background-size: theme('spacing.14');
+   transform: rotate(45deg);
+}
