@@ -4,8 +4,77 @@
 
 body {
    overflow-y: scroll;
+   @apply text-gray-700;
+   font-family: Archia, Wotfard, BlinkMacSystemFont, -apple-system, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
 }
 
 .container {
    @apply max-w-3xl mx-auto p-4 md:p-6;
+}
+
+h1 {
+   @apply font-extrabold text-3xl;
+}
+
+p {
+   @apply text-base dark:text-gray-200;
+   @apply mb-4 mt-4;
+}
+
+pre {
+   @apply bg-gray-800 text-gray-200 overflow-x-auto rounded-lg;
+   @apply p-3;
+   @apply mb-4 mt-4;
+}
+
+blockquote {
+   @apply italic;
+   @apply text-base;
+   @apply border-l-4;
+   @apply pl-3;
+   @apply mb-4 mt-4;
+}
+
+@screen lg {
+   h1 {
+      @apply text-7xl;
+   }
+
+   p {
+      @apply text-xl;
+      @apply mb-7 mt-7;
+   }
+
+   pre {
+      @apply text-xl;
+      @apply p-5;
+      @apply mb-7 mt-7;
+   }
+
+   blockquote {
+      @apply text-xl;
+      @apply mb-7 mt-7;
+      @apply pl-5;
+   }
+}
+
+@screen xl {
+   p {
+      @apply text-2xl;
+      @apply mb-8 mt-8;
+   }
+
+   pre {
+      @apply text-2xl;
+      @apply p-6;
+      @apply mb-8 mt-8;
+   }
+
+   blockquote {
+      @apply text-2xl;
+      @apply mb-8 mt-8;
+      @apply pl-6;
+   }
 }
