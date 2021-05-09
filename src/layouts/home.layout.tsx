@@ -18,22 +18,24 @@ export const HomeLayout = (props: HomeLayoutProps) => {
       <>
          <NightModeButton />
          <Navbar />
-         <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
-            {children}
-         </div>
+         <div className="container prose prose-sm">{children}</div>
 
-         <div className="container sm:prose lg:prose-lg xl:prose-2xl mx-auto border-t-2 border-gray-100 bg-gray-50 lg:mb-20">
+         <div className="container border-t-2 border-gray-100 bg-gray-50 dark:bg-gray-900 lg:mb-20">
             <div className="flex gap-4 flex-col md:flex-row flex-wrap justify-between items-center ">
-               <small>
-                  Created By{' '}
-                  <i>
-                     <b>Yony Calsin</b>
-                  </i>{' '}
-               </small>
+               <p>
+                  <small>
+                     Created By{' '}
+                     <i>
+                        <b>Yony Calsin</b>
+                     </i>{' '}
+                  </small>
+               </p>
 
                <LanguagesNav />
 
-               <small>With Gatsby, Typescript, TailwindCss, Netlify</small>
+               <p>
+                  <small>With Gatsby, Typescript, TailwindCss, Netlify</small>
+               </p>
             </div>
          </div>
       </>
