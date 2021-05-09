@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { Navbar } from 'components'
 import LanguagesNav from 'components/navbar/languages-nav'
+import NightModeButton from 'components/night-mode-button'
 
 import 'scroll-style/index.css'
 
@@ -15,6 +16,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
 
    return (
       <>
+         <NightModeButton />
          <Navbar />
          <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
             {children}

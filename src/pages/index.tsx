@@ -71,7 +71,7 @@ export default function Home() {
             {t<any, any>('quotes', {
                returnObjects: true,
             }).map(quote => (
-               <div>
+               <div key={quote.phrase}>
                   <blockquote>
                      {quote.phrase}
                      <br />
