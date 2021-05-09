@@ -7,13 +7,19 @@ module.exports = {
          fontFace: true,
       },
    },
-   darkMode: false, // or 'media' or 'class'
+   darkMode: 'class',
    theme: {
       container: false,
-      extend: {},
+      extend: {
+         rotate: {
+            135: '135deg',
+         },
+      },
    },
    variants: {
-      extend: {},
+      extend: {
+         rotate: ['dark'],
+      },
    },
    plugins: [require('@tailwindcss/typography')],
    corePlugins: {
