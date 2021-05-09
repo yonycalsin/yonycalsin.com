@@ -9,4 +9,7 @@ exports.onRenderBody = (
    pluginOptions,
 ) => {
    setHeadComponents(HeadComponents)
+   setBodyAttributes({
+      className: 'dark:bg-gray-800',
+   })
 }
