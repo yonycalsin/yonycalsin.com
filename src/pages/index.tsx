@@ -12,13 +12,13 @@ export default function Home() {
       <HomeLayout isStandaloneBrand>
          <Meta />
          <div>
-            <h1 className="text-center">
+            <h1 className="text-center dark:text-white ">
                <q>Yony Calsin</q>
             </h1>
          </div>
 
          <div className="text-center break-words">
-            <p className="lead">{t('description')}</p>
+            <p className="lead dark:text-gray-100">{t('description')}</p>
             <div className="flex items-center justify-center">
                <a
                   href="https://github.com/yonycalsin"

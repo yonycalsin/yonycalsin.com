@@ -22,7 +22,7 @@ export default function Home() {
             src="https://yonycalsin.substack.com/embed"
             frameBorder={0}
             scrolling="no"
-            className="w-full border-2 rounded-md border-gray-100 hover:border-green-500 border-dashed"
+            className="w-full rounded-md"
             title="Substack Yony Calsin"
          />
 

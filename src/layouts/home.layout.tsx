@@ -20,24 +20,28 @@ export const HomeLayout = (props: HomeLayoutProps) => {
          <Navbar />
          <div className="container prose prose-sm">{children}</div>
 
-         <div className="container border-t-2 border-gray-100 bg-gray-50 dark:bg-gray-900 lg:mb-20">
-            <div className="flex gap-4 flex-col md:flex-row flex-wrap justify-between items-center ">
-               <p>
-                  <small>
-                     Created By{' '}
-                     <i>
-                        <b>Yony Calsin</b>
-                     </i>{' '}
-                  </small>
-               </p>
+         <footer className="bg-gray-50 dark:bg-gray-900">
+            <div className="container border-t-2 border-gray-100 dark:border-gray-700 lg:mb-20">
+               <div className="flex gap-4 flex-col md:flex-row flex-wrap justify-between items-center ">
+                  <p>
+                     <small>
+                        Created By{' '}
+                        <i>
+                           <b>Yony Calsin</b>
+                        </i>{' '}
+                     </small>
+                  </p>
 
-               <LanguagesNav />
+                  <LanguagesNav />
 
-               <p>
-                  <small>With Gatsby, Typescript, TailwindCss, Netlify</small>
-               </p>
+                  <p>
+                     <small>
+                        With Gatsby, Typescript, TailwindCss, Netlify
+                     </small>
+                  </p>
+               </div>
             </div>
-         </div>
+         </footer>
       </>
    )
 }
