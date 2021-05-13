@@ -8,7 +8,7 @@ export const Navbar = () => {
    const { t, i18n } = useTranslation()
 
    return (
-      <div>
+      <div className="dark:bg-gray-900">
          <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between h-14 lg:h-20">
             <div>
                <Link
