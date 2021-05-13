@@ -10,12 +10,19 @@ body {
       Helvetica, Arial, sans-serif;
 }
 
+html {
+}
+
 .container {
-   @apply max-w-3xl mx-auto p-4 md:p-6;
+   @apply max-w-4xl mx-auto p-4 md:p-6;
+}
+
+a {
+   @apply text-base dark:text-gray-300 font-bold;
 }
 
 h1 {
-   @apply font-extrabold text-3xl;
+   @apply font-extrabold text-3xl dark:text-gray-400;
 }
 
 p {
@@ -35,9 +42,14 @@ blockquote {
    @apply border-l-4;
    @apply pl-3;
    @apply mb-4 mt-4;
+   @apply dark:text-gray-300;
 }
 
 @screen lg {
+   a {
+      @apply text-xl;
+   }
+
    h1 {
       @apply text-7xl;
    }

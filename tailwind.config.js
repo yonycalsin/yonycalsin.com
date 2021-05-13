@@ -1,7 +1,7 @@
 module.exports = {
-   // mode: 'jit',
+   mode: 'jit',
    purge: {
-      content: ['./src/**/*.{js,jsx,ts,tsx}'],
+      content: ['./src/**/*.{js,jsx,ts,tsx}', './gatsby-ssr.js'],
       options: {
          keyframes: true,
          fontFace: true,
@@ -9,10 +9,15 @@ module.exports = {
    },
    darkMode: 'class',
    theme: {
-      container: false,
+      container: {
+         center: true,
+      },
       extend: {
          rotate: {
             135: '135deg',
+         },
+         backgroundColor: {
+            inherit: 'inherit',
          },
       },
    },
@@ -21,7 +26,6 @@ module.exports = {
          rotate: ['dark'],
       },
    },
-   plugins: [require('@tailwindcss/typography')],
    corePlugins: {
       float: false,
    },

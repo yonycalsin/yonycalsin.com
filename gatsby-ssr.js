@@ -10,6 +10,6 @@ exports.onRenderBody = (
 ) => {
    setHeadComponents(HeadComponents)
    setBodyAttributes({
-      className: 'dark:bg-gray-800',
+      className: 'dark:bg-gray-900',
    })
 }
