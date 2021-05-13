@@ -32,13 +32,13 @@ const NightModeButton = () => {
                left: 'calc(50% - 2rem)',
             }}
          >
-            <p className={clsx(modules.item, 'w-14 h-14')}></p>
-            <p
+            <span className={clsx(modules.item, 'w-14 h-14')}></span>
+            <span
                className={clsx(modules.item, 'w-14 h-14')}
                style={{
                   backgroundPosition: 'bottom',
                }}
-            ></p>
+            ></span>
          </div>
       </button>
    )
