@@ -36,7 +36,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
 
                   <p>
                      <small>
-                        With Gatsby, Typescript, TailwindCss, Netlify
+                        With Gatsby, Typescript, TailwindCss, and Vercel
                      </small>
                   </p>
                </div>
