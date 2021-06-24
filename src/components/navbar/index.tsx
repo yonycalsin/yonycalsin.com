@@ -22,7 +22,7 @@ export const Navbar = () => {
                </Link>
             </div>
 
-            <LanguagesNav className="hidden md:flex" />
+            {/* <LanguagesNav className="hidden md:flex" /> */}
 
             <div className="flex">
                <div>
