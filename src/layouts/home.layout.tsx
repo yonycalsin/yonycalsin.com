@@ -32,7 +32,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
                      </small>
                   </p>
 
-                  <LanguagesNav />
+                  {/* <LanguagesNav /> */}
 
                   <p>
                      <small>
