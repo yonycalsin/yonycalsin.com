@@ -19,6 +19,10 @@ module.exports = {
          backgroundColor: {
             inherit: 'inherit',
          },
+         fontSize: {
+            xl: ['1.25rem', '1.99rem'],
+            '2xl': ['1.5rem', '2.5rem'],
+         },
       },
    },
    variants: {
