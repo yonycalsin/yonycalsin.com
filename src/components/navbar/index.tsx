@@ -23,9 +23,9 @@ export const Navbar = () => {
                </Link>
             </div>
 
-            {/* <LanguagesNav className="hidden md:flex" /> */}
-
             <div className="flex space-x-3">
+               <Link to="/projects/">Proyectos</Link>
+
                <Link
                   to="/me/"
                   onClick={e => {

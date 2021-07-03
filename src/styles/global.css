@@ -25,7 +25,7 @@ body {
 }
 
 a {
-   @apply text-base dark:text-gray-300 font-bold;
+   @apply text-base dark:text-gray-300 font-bold underline hover:text-blue-600;
 }
 
 h1 {
