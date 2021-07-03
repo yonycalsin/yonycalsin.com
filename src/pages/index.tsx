@@ -20,29 +20,29 @@ export default function Home() {
 
          <div className="text-center break-words">
             <p className="lead dark:text-gray-100">{t('description')}</p>
-            <div className="flex items-center justify-center space-x-2">
+            <div className="flex items-center justify-center space-x-1">
                <a
                   href={socialLinks.GITHUB}
-                  className="border border-transparent hover:border-blue-100 px-2 py-2 rounded-sm"
+                  className="border border-transparent hover:border-blue-100 p-1 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
                >
                   <img
                      src="https://cdn.svgporn.com/logos/github.svg"
                      alt="Linkedin"
-                     className="h-4 md:h-5 filter dark:invert"
+                     className="h-2 md:h-3 filter dark:invert"
                   />
                </a>
                <a
                   href={socialLinks.LINKEDIN}
-                  className="hover:bg-blue-100 px-2 py-2 rounded-sm"
+                  className="hover:bg-blue-100 p-1 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
                >
                   <img
                      src="https://cdn.svgporn.com/logos/linkedin.svg"
                      alt="Linkedin"
-                     className="h-4 md:h-5"
+                     className="h-2 md:h-3"
                   />
                </a>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
             </pre>
          </div>
 
-         <div className="grid lg:grid-cols-2 gap-4">
+         <div className="grid lg:grid-cols-2 gap-2">
             {t<any, any>('quotes', {
                returnObjects: true,
             }).map(quote => (

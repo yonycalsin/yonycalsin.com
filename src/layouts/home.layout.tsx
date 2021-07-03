@@ -18,11 +18,11 @@ export const HomeLayout = (props: HomeLayoutProps) => {
          <NightModeButton />
          <Navbar />
 
-         <div className="container prose prose-sm">{children}</div>
+         <div className="container">{children}</div>
 
          <footer className="bg-gray-50 dark:bg-gray-900">
-            <div className="container border-t-2 border-gray-100 dark:border-gray-700 lg:mb-20">
-               <div className="flex gap-4 flex-col md:flex-row flex-wrap justify-between items-center ">
+            <div className="container border-t-2 border-gray-100 dark:border-gray-700">
+               <div className="flex flex-col md:flex-row flex-wrap justify-between items-center ">
                   <p>
                      <small>
                         Created By{' '}

@@ -20,6 +20,29 @@ function ProjectsPage() {
             </a>
             .
          </p>
+
+         <div className="timeline">
+            <div>
+               <div className="bg-blue-600 absolute h-9 w-9 flex items-center justify-center rounded-full p-1">
+                  <img
+                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
+                     alt=""
+                  />
+               </div>
+               <div className="ml-8">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
+                  modi alias ad dignissimos vitae, vero harum, perferendis
+                  obcaecati dolore quia aperiam cupiditate impedit cum illum
+                  porro? Deleniti doloremque aperiam maxime?
+               </div>
+            </div>
+            <div>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Accusantium corrupti ratione velit? Rem quos expedita provident
+               facere est animi debitis quas sequi repellendus officiis, nobis
+               voluptatem eum atque suscipit quo.
+            </div>
+         </div>
       </HomeLayout>
    )
 }

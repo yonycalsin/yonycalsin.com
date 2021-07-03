@@ -18,7 +18,12 @@ module.exports = {
    },
    darkMode: 'class',
    theme: {
-      spacing,
+      spacing: {
+         ...spacing,
+         0.5: '4px',
+         1.5: '12px',
+         3.5: '28px',
+      },
       container: {
          center: true,
       },
