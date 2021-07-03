@@ -23,7 +23,7 @@ export default function Home() {
             <div className="flex items-center justify-center space-x-1">
                <a
                   href={socialLinks.GITHUB}
-                  className="border border-transparent hover:border-blue-100 p-1 rounded-sm"
+                  className="border border-transparent hover:border-primary-100 p-1 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
                >
@@ -35,7 +35,7 @@ export default function Home() {
                </a>
                <a
                   href={socialLinks.LINKEDIN}
-                  className="hover:bg-blue-100 p-1 rounded-sm"
+                  className="hover:bg-primary-100 p-1 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
                >

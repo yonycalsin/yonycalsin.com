@@ -25,7 +25,7 @@ body {
 }
 
 a {
-   @apply text-base dark:text-gray-300 font-bold underline hover:text-blue-600;
+   @apply text-base dark:text-gray-300 font-bold underline hover:text-primary;
 }
 
 h1 {
@@ -98,17 +98,7 @@ blockquote {
    }
 }
 
-.timeline {
-   background: red;
-   position: relative;
-}
-
 .timeline::before {
    content: '';
-   position: absolute;
-   top: 0;
-   left: 18px;
-   height: 100%;
-   width: 4px;
-   background: #d7e4ed;
+   @apply absolute top-0 left-3 h-full w-0.5 bg-gray-200;
 }

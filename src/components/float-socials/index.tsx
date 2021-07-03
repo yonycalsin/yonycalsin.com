@@ -7,7 +7,7 @@ const Item = ({ children, href }) => (
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="transition-all border-b-2 border-transparent hover:border-blue-600 hover:text-blue-500 no-underline"
+      className="transition-all border-b-2 border-transparent hover:border-primary hover:text-primary-500 no-underline"
    >
       {children}
    </a>
