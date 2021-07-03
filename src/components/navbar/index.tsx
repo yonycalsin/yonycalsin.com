@@ -7,11 +7,11 @@ export const Navbar = () => {
 
    return (
       <div className="dark:bg-gray-900">
-         <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between h-14 lg:h-20">
+         <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-14 lg:h-20">
             <div>
                <Link to="/" className="block no-underline">
                   <h1 className="text-2xl line-through text-gray-600">
-                     YONY CALSIN
+                     <q>Yony Calsin</q>
                   </h1>
                </Link>
             </div>

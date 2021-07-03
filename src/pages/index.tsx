@@ -12,7 +12,7 @@ export default function Home() {
    return (
       <HomeLayout isStandaloneBrand>
          <Meta />
-         <div>
+         <div className="hidden md:block">
             <h1 className="text-center dark:text-white ">
                <q>Yony Calsin</q>
             </h1>
