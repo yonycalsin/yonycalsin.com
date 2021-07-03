@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { Meta } from 'components/meta'
 import { HomeLayout } from 'layouts'
+import { socialLinks } from 'utils/constants'
 
 export default function Home() {
    const { t } = useTranslation()
@@ -19,28 +20,29 @@ export default function Home() {
 
          <div className="text-center break-words">
             <p className="lead dark:text-gray-100">{t('description')}</p>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center space-x-2">
                <a
-                  href="https://github.com/yonycalsin"
+                  href={socialLinks.GITHUB}
+                  className="border border-transparent hover:border-blue-100 px-2 py-2 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
-                  className="mr-4"
                >
                   <img
-                     src="https://img.shields.io/github/followers/yonycalsin?style=social"
-                     alt="Github Yony Calsin"
-                     style={{ margin: 0 }}
+                     src="https://cdn.svgporn.com/logos/github.svg"
+                     alt="Linkedin"
+                     className="h-4 md:h-5 filter dark:invert"
                   />
                </a>
                <a
-                  href="https://twitter.com/yonycalsin"
+                  href={socialLinks.LINKEDIN}
+                  className="hover:bg-blue-100 px-2 py-2 rounded-sm"
                   target="_blank"
                   rel="noreferrer"
                >
                   <img
-                     src="https://img.shields.io/twitter/follow/yonycalsin.svg?style=social&label=Follow"
-                     alt="Yony Calsin Twitter"
-                     style={{ margin: 0 }}
+                     src="https://cdn.svgporn.com/logos/linkedin.svg"
+                     alt="Linkedin"
+                     className="h-4 md:h-5"
                   />
                </a>
             </div>

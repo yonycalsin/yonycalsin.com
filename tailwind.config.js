@@ -28,6 +28,7 @@ module.exports = {
    variants: {
       extend: {
          rotate: ['dark'],
+         filter: ['dark'],
       },
    },
    corePlugins: {
