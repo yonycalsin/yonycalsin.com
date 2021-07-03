@@ -10,7 +10,7 @@ export default function Home() {
 
    return (
       <HomeLayout>
-         <Meta title="About Me" />
+         <Meta title="Sobre Mi" />
          <h1>{t('about-me.title')}</h1>
          <p>{t('about-me.description')}</p>
       </HomeLayout>

@@ -9,21 +9,14 @@ export const Navbar = () => {
       <div className="dark:bg-gray-900">
          <div className="container prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto flex items-center justify-between h-14 lg:h-20">
             <div>
-               <Link to="/" className="block h-5 md:h-7">
-                  <img
-                     src="/logos/dark-logo.svg"
-                     alt=""
-                     className="h-full block dark:hidden"
-                  />
-                  <img
-                     src="/logos/white-logo.svg"
-                     alt=""
-                     className="h-full hidden dark:block"
-                  />
+               <Link to="/" className="block no-underline">
+                  <h1 className="text-2xl line-through text-gray-600">
+                     YONY CALSIN
+                  </h1>
                </Link>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="flex items-center space-x-3">
                <Link to="/projects/">Proyectos</Link>
 
                <Link
