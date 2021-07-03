@@ -20,21 +20,21 @@ const NightModeButton = () => {
 
    return (
       <button
-         className="appearance-none outline-none bg-yellow-200 dark:bg-gray-700 rounded-full h-40 w-40 fixed overflow-hidden -left-20 -top-20 "
+         className="appearance-none outline-none bg-yellow-200 dark:bg-gray-700 rounded-full h-20 w-20 fixed overflow-hidden -left-10 -top-10 "
          onClick={onToggleDark}
          style={{
             outline: 'none',
          }}
       >
          <div
-            className="h-36 top-2 bottom-2 flex flex-col items-stretch justify-between absolute w-16 transform rotate-135 dark:-rotate-45 transition-transform duration-500"
+            className="top-1 bottom-1 flex flex-col items-stretch justify-between absolute w-8 transform rotate-135 dark:-rotate-45 transition-transform duration-500"
             style={{
                left: 'calc(50% - 2rem)',
             }}
          >
-            <span className={clsx(modules.item, 'w-14 h-14')}></span>
+            <span className={clsx(modules.item, 'w-7 h-7')}></span>
             <span
-               className={clsx(modules.item, 'w-14 h-14')}
+               className={clsx(modules.item, 'w-7 h-7')}
                style={{
                   backgroundPosition: 'bottom',
                }}
