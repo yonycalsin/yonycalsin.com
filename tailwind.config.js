@@ -1,3 +1,12 @@
+const spacingSize = 8
+
+const getSpacing = (count = 50) =>
+   Array.from({ length: count + 1 }).map(
+      (_, index) => `${index * spacingSize}px`,
+   )
+
+const spacing = Object.assign({}, getSpacing(25))
+
 module.exports = {
    mode: 'jit',
    purge: {
@@ -9,6 +18,7 @@ module.exports = {
    },
    darkMode: 'class',
    theme: {
+      spacing,
       container: {
          center: true,
       },
