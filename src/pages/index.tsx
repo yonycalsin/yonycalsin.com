@@ -48,14 +48,7 @@ export default function Home() {
 
          <div>
             <pre>
-               <code
-                  style={{
-                     background:
-                        'linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
-                     color: 'black',
-                     fontWeight: 'bold',
-                  }}
-               >
+               <code className="gradient-primary text-black font-bold">
                   {JSON.stringify(
                      t('snippet', {
                         returnObjects: true,

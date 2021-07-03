@@ -1,7 +1,6 @@
 import * as React from 'react'
 
-import { Navbar } from 'components'
-import LanguagesNav from 'components/navbar/languages-nav'
+import { FloatSocials, Navbar } from 'components'
 import NightModeButton from 'components/night-mode-button'
 
 import 'scroll-style/index.css'
@@ -18,6 +17,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
       <>
          <NightModeButton />
          <Navbar />
+
          <div className="container prose prose-sm">{children}</div>
 
          <footer className="bg-gray-50 dark:bg-gray-900">
@@ -32,8 +32,6 @@ export const HomeLayout = (props: HomeLayoutProps) => {
                      </small>
                   </p>
 
-                  {/* <LanguagesNav /> */}
-
                   <p>
                      <small>
                         With Gatsby, Typescript, TailwindCss, and Vercel
@@ -42,6 +40,8 @@ export const HomeLayout = (props: HomeLayoutProps) => {
                </div>
             </div>
          </footer>
+
+         <FloatSocials />
       </>
    )
 }

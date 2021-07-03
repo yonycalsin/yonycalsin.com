@@ -10,7 +10,14 @@ body {
       Helvetica, Arial, sans-serif;
 }
 
-html {
+.gradient-primary {
+   background: linear-gradient(
+      45deg,
+      rgb(238, 97, 97),
+      rgb(254, 212, 2),
+      rgb(5, 227, 156),
+      rgb(1, 208, 251)
+   );
 }
 
 .container {
