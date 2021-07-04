@@ -1,4 +1,5 @@
 import * as React from 'react'
+import dayjs from 'dayjs'
 import { graphql } from 'gatsby'
 import { sample } from 'lodash'
 
@@ -6,11 +7,22 @@ import { Tag } from 'components'
 import { Meta } from 'components/meta'
 import { Clock } from 'icons/clock'
 import { HomeLayout } from 'layouts'
-import { socialLinks } from 'utils/constants'
+import { dateFormat, socialLinks } from 'utils/constants'
 
-const Item = ({ tags = [], title, description, demoHref }) => (
+const Item = ({
+   tags = [],
+   title,
+   description,
+   demoHref,
+   startedAt = new Date(),
+}) => (
    <div>
       <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
+         <div className="absolute right-8 whitespace-nowrap hidden lg:block">
+            <span className="italic">
+               {dayjs(startedAt).format(dateFormat.PROJECT_DATE)}
+            </span>
+         </div>
          <Clock className="w-full h-full" />
       </div>
       <div className="ml-9">
@@ -54,13 +66,6 @@ function ProjectsPage() {
 
          <div className="timeline relative space-y-5">
             <Item
-               title="Slugger - URL Slug Generator"
-               demoHref="https://slugger.yonycalsin.com/"
-               description="Smart, fast and easy to use online tool built to generate search engine friendly and user friendly URL slugs"
-               tags={['svelte', 'typescript', 'tailwindcss']}
-            />
-
-            <Item
                title="Musica Adventista - Music player"
                demoHref="https://musica-adventista.yonycalsin.com/"
                description="Music player without database."
@@ -73,6 +78,15 @@ function ProjectsPage() {
                   'Youtube Player',
                   'Spotify API',
                ]}
+               startedAt={new Date('05/16/2021')}
+            />
+
+            <Item
+               title="Slugger - URL Slug Generator"
+               demoHref="https://slugger.yonycalsin.com/"
+               description="Smart, fast and easy to use online tool built to generate search engine friendly and user friendly URL slugs"
+               tags={['svelte', 'typescript', 'tailwindcss']}
+               startedAt={new Date('05/14/2021')}
             />
 
             <Item
@@ -87,6 +101,7 @@ function ProjectsPage() {
                   'Remark',
                   'Gatsby',
                ]}
+               startedAt={new Date('12/20/2020')}
             />
 
             <Item
@@ -95,8 +110,8 @@ function ProjectsPage() {
                description="Pacolor is a progressive web application, which generates color
                palettes, without getting tired, and infinitely"
                demoHref="https://pacolor.yonycalsin.com/"
+               startedAt={new Date('06/09/2020')}
             />
-            {/* <Item /> */}
          </div>
       </HomeLayout>
    )

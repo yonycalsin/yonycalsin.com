@@ -8,3 +8,8 @@ export const socialLinks = {
    LINKEDIN: 'https://www.linkedin.com/in/yonycalsin',
    EMAIL: `mailto:${authorInfo.EMAIL}`,
 }
+
+export const dateFormat = {
+   // 20 May, 2021
+   PROJECT_DATE: 'D MMM, YYYY',
+}
