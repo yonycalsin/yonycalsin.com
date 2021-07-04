@@ -18,7 +18,7 @@ const Item = ({
 }) => (
    <div>
       <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
-         <div className="absolute right-8 whitespace-nowrap hidden lg:block">
+         <div className="absolute right-9 whitespace-nowrap hidden lg:block">
             <span className="italic">
                {dayjs(startedAt).format(dateFormat.PROJECT_DATE)}
             </span>
