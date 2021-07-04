@@ -37,6 +37,7 @@ module.exports = {
             types: path.join(__dirname, 'src/types'),
             styles: path.join(__dirname, 'src/styles'),
             components: path.join(__dirname, 'src/components'),
+            icons: path.join(__dirname, 'src/icons'),
          },
       },
       {

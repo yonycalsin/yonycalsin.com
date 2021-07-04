@@ -80,6 +80,30 @@ blockquote {
 }
 
 @screen xl {
+   h1 {
+      @apply text-7xl;
+   }
+
+   h2 {
+      @apply text-5xl;
+   }
+
+   h3 {
+      @apply text-4xl;
+   }
+
+   h4 {
+      @apply text-3xl;
+   }
+
+   h5 {
+      @apply text-2xl;
+   }
+
+   h5 {
+      @apply text-xl;
+   }
+
    p {
       @apply text-2xl;
       @apply mb-4 mt-4;
@@ -100,5 +124,15 @@ blockquote {
 
 .timeline::before {
    content: '';
-   @apply absolute top-0 left-3 h-full w-0.5 bg-gray-200;
+   @apply absolute top-0 h-full w-0.5;
+   left: calc(theme('spacing.3') - (theme('spacing[0.5]') / 2));
+   background: linear-gradient(
+      45deg,
+      rgb(238, 97, 97),
+      rgb(254, 212, 2),
+      rgb(5, 227, 156),
+      rgb(1, 208, 251)
+   );
+
+   @apply dark:opacity-50;
 }

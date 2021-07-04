@@ -7,6 +7,9 @@ const getSpacing = (count = 50) =>
 
 const spacing = Object.assign({}, getSpacing(25))
 
+/**
+ * @type import("tailwindcss/tailwind-config").TailwindConfig
+ */
 module.exports = {
    mode: 'jit',
    purge: {

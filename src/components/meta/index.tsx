@@ -19,9 +19,12 @@ const query = graphql`
 
 type MetaProps = {
    title?: string
+   notRobots?: boolean
 }
 
 export const Meta = (props: MetaProps) => {
+   const { title, notRobots = false } = props
+
    const response = useStaticQuery(query)
 
    const { t } = useTranslation()
@@ -47,8 +50,14 @@ export const Meta = (props: MetaProps) => {
 
    return (
       <Helmet>
-         <meta name="robots" content="index,follow" />
-         <meta name="googlebot" content="index,follow" />
+         <meta
+            name="robots"
+            content={notRobots ? 'noindex, nofollow' : 'index,follow'}
+         />
+         <meta
+            name="googlebot"
+            content={notRobots ? 'noindex, nofollow' : 'index,follow'}
+         />
 
          <meta name="description" content={description} />
          <meta name="image" content={socialBannerImage} />

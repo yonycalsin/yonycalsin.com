@@ -1,14 +1,45 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { sample } from 'lodash'
 
+import { Tag } from 'components'
 import { Meta } from 'components/meta'
+import { Clock } from 'icons/clock'
 import { HomeLayout } from 'layouts'
 import { socialLinks } from 'utils/constants'
+
+const Item = ({ tags = [], title, description, demoHref }) => (
+   <div>
+      <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
+         <Clock className="w-full h-full" />
+      </div>
+      <div className="ml-9">
+         <a href={demoHref} target="__blank">
+            <h4 className="font-bold m-0">{title}</h4>
+         </a>
+         <p>{description}</p>
+         <div className="flex flex-wrap gap-1">
+            {tags.map(item => (
+               <Tag
+                  className={sample([
+                     'bg-primary',
+                     'bg-secondary',
+                     'bg-success',
+                     'bg-error',
+                  ])}
+               >
+                  {item}
+               </Tag>
+            ))}
+         </div>
+      </div>
+   </div>
+)
 
 function ProjectsPage() {
    return (
       <HomeLayout>
-         <Meta title="Proyectos" />
+         <Meta title="Proyectos" notRobots />
 
          <h1>Proyectos</h1>
 
@@ -21,35 +52,22 @@ function ProjectsPage() {
             .
          </p>
 
-         <div className="timeline relative space-y-2">
-            <div>
-               <div className="bg-primary absolute h-6 w-6 flex items-center justify-center rounded-full">
-                  <img
-                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
-                     alt=""
-                  />
-               </div>
-               <div className="ml-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-                  modi alias ad dignissimos vitae, vero harum, perferendis
-                  obcaecati dolore quia aperiam cupiditate impedit cum illum
-                  porro? Deleniti doloremque aperiam maxime?
-               </div>
-            </div>
-            <div>
-               <div className="bg-primary absolute h-6 w-6 flex items-center justify-center rounded-full">
-                  <img
-                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
-                     alt=""
-                  />
-               </div>
-               <div className="ml-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-                  modi alias ad dignissimos vitae, vero harum, perferendis
-                  obcaecati dolore quia aperiam cupiditate impedit cum illum
-                  porro? Deleniti doloremque aperiam maxime?
-               </div>
-            </div>
+         <div className="timeline relative space-y-5">
+            <Item
+               title="Slugger - URL Slug Generator"
+               demoHref="https://slugger.yonycalsin.com/"
+               description="Smart, fast and easy to use online tool built to generate search engine friendly and user friendly URL slugs"
+               tags={['svelte', 'typescript', 'tailwindcss']}
+            />
+
+            <Item
+               title="Pacolor - Infinite Color Palette Generator and Random"
+               tags={['ReactJs', 'Styled Components', 'Typescript']}
+               description="Pacolor is a progressive web application, which generates color
+               palettes, without getting tired, and infinitely"
+               demoHref="https://pacolor.yonycalsin.com/"
+            />
+            {/* <Item /> */}
          </div>
       </HomeLayout>
    )
