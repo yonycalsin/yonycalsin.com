@@ -61,6 +61,21 @@ function ProjectsPage() {
             />
 
             <Item
+               title="Musica Adventista - Music player"
+               demoHref="https://musica-adventista.yonycalsin.com/"
+               description="Music player without database."
+               tags={[
+                  'Typescript',
+                  'Tailwind Css',
+                  'Gatsby',
+                  'React',
+                  'Remark',
+                  'Youtube Player',
+                  'Spotify API',
+               ]}
+            />
+
+            <Item
                title="Pacolor - Infinite Color Palette Generator and Random"
                tags={['ReactJs', 'Styled Components', 'Typescript']}
                description="Pacolor is a progressive web application, which generates color
