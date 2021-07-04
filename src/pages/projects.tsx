@@ -33,6 +33,7 @@ const Item = ({
          <div className="flex flex-wrap gap-1">
             {tags.map(item => (
                <Tag
+                  key={item}
                   className={sample([
                      'bg-primary',
                      'bg-secondary',
