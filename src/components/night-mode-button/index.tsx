@@ -20,7 +20,7 @@ const NightModeButton = () => {
 
    return (
       <button
-         className="appearance-none outline-none bg-warning-200 dark:bg-gray-700 rounded-full h-20 w-20 fixed overflow-hidden -left-10 -top-10 border border-transparent hover:border-primary"
+         className="appearance-none outline-none bg-warning-200 dark:bg-gray-700 rounded-full h-20 w-20 fixed overflow-hidden -left-10 -top-10 border border-transparent hover:border-primary z-10"
          onClick={onToggleDark}
          style={{
             outline: 'none',
