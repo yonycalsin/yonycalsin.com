@@ -19,6 +19,7 @@
    "dependencies": {
       "@tailwindcss/typography": "^0.4.0",
       "clsx": "^1.1.1",
+      "dayjs": "^1.10.5",
       "flexbox-fast": "^1.0.0",
       "gatsby": "^3.1.0",
       "gatsby-plugin-google-analytics": "^3.3.0",
