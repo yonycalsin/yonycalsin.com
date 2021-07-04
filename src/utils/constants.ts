@@ -1,5 +1,6 @@
 export const authorInfo = {
    EMAIL: 'helloyonycalsin@gmail.com',
+   RESUME: 'https://resume.yonycalsin.com/',
 }
 
 export const socialLinks = {
