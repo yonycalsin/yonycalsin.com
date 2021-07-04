@@ -76,6 +76,20 @@ function ProjectsPage() {
             />
 
             <Item
+               title="Bencody - Code Tricks"
+               demoHref="https://bencody.yonycalsin.com/"
+               description="a system of code tricks in all languages, libraries, and frameworks."
+               tags={[
+                  'ReactJs',
+                  'Typescript',
+                  'Styled Components',
+                  'Scss',
+                  'Remark',
+                  'Gatsby',
+               ]}
+            />
+
+            <Item
                title="Pacolor - Infinite Color Palette Generator and Random"
                tags={['ReactJs', 'Styled Components', 'Typescript']}
                description="Pacolor is a progressive web application, which generates color
