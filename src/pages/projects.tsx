@@ -1,4 +1,5 @@
 import * as React from 'react'
+import clsx from 'clsx'
 import dayjs from 'dayjs'
 import { graphql } from 'gatsby'
 import { sample } from 'lodash'
@@ -34,12 +35,15 @@ const Item = ({
             {tags.map(item => (
                <Tag
                   key={item}
-                  className={sample([
-                     'bg-primary',
-                     'bg-secondary',
-                     'bg-success',
-                     'bg-error',
-                  ])}
+                  className={clsx(
+                     sample([
+                        'bg-primary',
+                        'bg-secondary',
+                        'bg-success',
+                        'bg-error',
+                     ]),
+                     'opacity-80',
+                  )}
                >
                   {item}
                </Tag>
@@ -66,7 +70,7 @@ function ProjectsPage() {
 
          <div className="timeline relative space-y-5">
             <Item
-               title="Musica Adventista - Music player"
+               title="Music player"
                demoHref="https://musica-adventista.yonycalsin.com/"
                description="Music player without database."
                tags={[
