@@ -57,10 +57,9 @@ function ProjectsPage() {
          <h1>Proyectos</h1>
 
          <p>
-            Algunos aspectos destacados de mis proyectos de código abierto.
-            Véalos todos{' '}
+            Aqui algunos de mis proyectos destacados. Véalos todos{' '}
             <a href={socialLinks.GITHUB} target="blank">
-               en GitHub
+               en mi GitHub
             </a>
             .
          </p>
