@@ -16,8 +16,7 @@ export const Navbar = () => {
             </div>
 
             <div className="flex items-center space-x-3">
-               <Link to="/projects/">Proyectos</Link>
-
+               <Link to="/projects/">Work</Link>
                <Link to="/me/">Sobre Mi</Link>
                <a href={authorInfo.RESUME} target="__blank">
                   Resume
