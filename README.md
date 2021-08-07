@@ -1,6 +1,6 @@
-# https://www.yonycalsin.com/
+# https://www.yonycalsin.com
 
-Yony's personal website running on Gatsby, Typescript, React, and Node.js.
+Yony's personal website running on Gatsby, Typescript, React, Tailwind and Node.js.
 
 ## License
 
