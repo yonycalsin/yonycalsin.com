@@ -42,7 +42,7 @@ const Item = ({
                         'bg-success',
                         'bg-error',
                      ]),
-                     'opacity-80',
+                     'opacity-60 hover:opacity-90',
                   )}
                >
                   {item}
