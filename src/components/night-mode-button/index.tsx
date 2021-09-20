@@ -1,7 +1,7 @@
 import * as React from 'react'
 import clsx from 'clsx'
 
-import * as modules from './night-mode-button.module.css'
+import s from './night-mode-button.module.css'
 
 const STORAGE_KEY = 'color-mode'
 
@@ -32,9 +32,9 @@ const NightModeButton = () => {
                left: 'calc(50% - 2rem)',
             }}
          >
-            <span className={clsx(modules.item, 'w-7 h-7')}></span>
+            <span className={clsx(s.item, 'w-7 h-7')}></span>
             <span
-               className={clsx(modules.item, 'w-7 h-7')}
+               className={clsx(s.item, 'w-7 h-7')}
                style={{
                   backgroundPosition: 'bottom',
                }}

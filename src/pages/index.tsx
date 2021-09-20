@@ -2,9 +2,9 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
-import { Meta } from 'components/meta'
-import { HomeLayout } from 'layouts'
-import { socialLinks } from 'utils/constants'
+import { Meta } from '~/components/meta'
+import { HomeLayout } from '~/layouts'
+import { socialLinks } from '~/utils/constants'
 
 export default function Home() {
    const { t } = useTranslation()
@@ -65,7 +65,7 @@ export default function Home() {
          <div className="grid lg:grid-cols-2 gap-2">
             {t<any, any>('quotes', {
                returnObjects: true,
-            }).map(quote => (
+            }).map((quote: any) => (
                <div key={quote.phrase}>
                   <blockquote>
                      {quote.phrase}

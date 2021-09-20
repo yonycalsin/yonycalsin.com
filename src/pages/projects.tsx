@@ -4,11 +4,11 @@ import dayjs from 'dayjs'
 import { graphql } from 'gatsby'
 import { sample } from 'lodash'
 
-import { Tag } from 'components'
-import { Meta } from 'components/meta'
-import { Clock } from 'icons/clock'
-import { HomeLayout } from 'layouts'
-import { dateFormat, socialLinks } from 'utils/constants'
+import { Tag } from '~/components'
+import { Meta } from '~/components/meta'
+import { Clock } from '~/icons/clock'
+import { HomeLayout } from '~/layouts'
+import { dateFormat, socialLinks } from '~/utils/constants'
 
 const Item = ({
    tags = [],
@@ -16,7 +16,7 @@ const Item = ({
    description,
    demoHref,
    startedAt = new Date(),
-}) => (
+}: any) => (
    <div>
       <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
          <div className="absolute right-9 whitespace-nowrap hidden lg:block">
@@ -32,7 +32,7 @@ const Item = ({
          </a>
          <p>{description}</p>
          <div className="flex flex-wrap gap-1">
-            {tags.map(item => (
+            {tags.map((item: any) => (
                <Tag
                   key={item}
                   className={clsx(

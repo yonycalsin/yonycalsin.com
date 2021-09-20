@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-import { FloatSocials, Navbar } from 'components'
-import NightModeButton from 'components/night-mode-button'
-
 import 'scroll-style/index.css'
+
+import { FloatSocials, Navbar } from '~/components'
+import NightModeButton from '~/components/night-mode-button'
 
 type HomeLayoutProps = {
    children: React.ReactNode

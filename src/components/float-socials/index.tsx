@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import { socialLinks } from 'utils/constants'
+import { socialLinks } from '~/utils/constants'
 
-const Item = ({ children, href }) => (
+const Item = ({ children, href }: any) => (
    <a
       href={href}
       target="_blank"

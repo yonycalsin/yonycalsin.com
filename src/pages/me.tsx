@@ -2,8 +2,8 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { graphql } from 'gatsby'
 
-import { Meta } from 'components/meta'
-import { HomeLayout } from 'layouts'
+import { Meta } from '~/components/meta'
+import { HomeLayout } from '~/layouts'
 
 export default function Home() {
    const { t } = useTranslation()
