@@ -1,14 +1,10 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-import { graphql } from 'gatsby'
 
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
 
 export default function Home() {
-   const { t } = useTranslation()
-
    return (
       <HomeLayout isStandaloneBrand>
          <Meta />
@@ -19,7 +15,11 @@ export default function Home() {
          </div>
 
          <div className="text-center break-words">
-            <p className="lead dark:text-gray-100">{t('description')}</p>
+            <p className="lead dark:text-gray-100">
+               Soy un desarrollador frontend creando proyectos de código abierto
+               y escribiendo de JavaScript moderno, Node.js, Typescript y
+               Graphql.
+            </p>
             <div className="flex items-center justify-center space-x-1">
                <a
                   href={socialLinks.GITHUB}
@@ -52,9 +52,12 @@ export default function Home() {
             <pre>
                <code className="gradient-primary text-black font-bold">
                   {JSON.stringify(
-                     t('snippet', {
-                        returnObjects: true,
-                     }),
+                     {
+                        nombre: 'Yony Calsin',
+                        usuario: '@yonycalsin',
+                        rol: 'Ingeniero Frontend',
+                        país: 'Peru',
+                     },
                      undefined,
                      2,
                   )}
@@ -63,9 +66,27 @@ export default function Home() {
          </div>
 
          <div className="grid lg:grid-cols-2 gap-2">
-            {t<any, any>('quotes', {
-               returnObjects: true,
-            }).map((quote: any) => (
+            {[
+               {
+                  phrase:
+                     'Hazlo simple: tan simple como sea posible, pero no más.',
+                  author: 'Albert Einstein',
+               },
+               {
+                  phrase:
+                     'Los programadores de verdad no documentan. Si fue difícil de escribir, debe ser difícil de entender.',
+                  author: 'Anónimo',
+               },
+               {
+                  phrase: 'La constancia es la madre del dominio.',
+                  author: 'Yony Calsin',
+               },
+               {
+                  phrase:
+                     'El hardware es aquello a lo que puedes dar patadas. Software es aquello a lo que sólo puedes insultar.',
+                  author: 'Anónimo',
+               },
+            ].map((quote: any) => (
                <div key={quote.phrase}>
                   <blockquote>
                      {quote.phrase}
@@ -78,17 +99,3 @@ export default function Home() {
       </HomeLayout>
    )
 }
-
-export const query = graphql`
-   query($language: String!) {
-      locales: allLocale(filter: { language: { eq: $language } }) {
-         edges {
-            node {
-               ns
-               data
-               language
-            }
-         }
-      }
-   }
-`

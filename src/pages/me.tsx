@@ -1,18 +1,20 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-import { graphql } from 'gatsby'
 
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 
 export default function Home() {
-   const { t } = useTranslation()
-
    return (
       <HomeLayout>
          <Meta title="Sobre Mi" />
-         <h1>{t('about-me.title')}</h1>
-         <p>{t('about-me.description')}</p>
+         <h1>Sobre Mi</h1>
+         <p>
+            Hola, soy Yony Calsin, desarrollador frontend, apasionado de la
+            programación web (frontend, backend), a lo largo de mi carrera he
+            tenido la oportunidad de trabajar en varios proyectos que me han
+            dado la oportunidad de ejecutar mis conocimientos en estas áreas y
+            también de seguir aprendiendo sobre ellas.
+         </p>
 
          <ul>
             <li>
@@ -73,17 +75,3 @@ export default function Home() {
       </HomeLayout>
    )
 }
-
-export const query = graphql`
-   query($language: String!) {
-      locales: allLocale(filter: { language: { eq: $language } }) {
-         edges {
-            node {
-               ns
-               data
-               language
-            }
-         }
-      }
-   }
-`

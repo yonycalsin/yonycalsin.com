@@ -1,7 +1,6 @@
 import * as React from 'react'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
-import { graphql } from 'gatsby'
 import { sample } from 'lodash'
 
 import { Tag } from '~/components'
@@ -122,17 +121,3 @@ function ProjectsPage() {
 }
 
 export default ProjectsPage
-
-export const query = graphql`
-   query($language: String!) {
-      locales: allLocale(filter: { language: { eq: $language } }) {
-         edges {
-            node {
-               ns
-               data
-               language
-            }
-         }
-      }
-   }
-`
