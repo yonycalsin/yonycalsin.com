@@ -42,6 +42,7 @@ module.exports = {
          },
       ],
       'import/no-anonymous-default-export': 'off',
+      'jsx-a11y/anchor-is-valid': 'off',
    },
    overrides: [
       {
