@@ -1,89 +1,58 @@
 import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Helmet, useTranslation } from 'gatsby-plugin-react-i18next'
-
-const query = graphql`
-   query MyQuery {
-      site {
-         siteMetadata {
-            description
-            defaultTitle: title
-            titleTemplate
-            twitterUsername
-            websiteUrl: url
-            socialBannerImage
-         }
-      }
-   }
-`
+import Head from 'next/head'
 
 type MetaProps = {
-   title?: string
-   notRobots?: boolean
+  title?: string
+  notRobots?: boolean
 }
 
 export const Meta = (props: MetaProps) => {
-   const { title, notRobots = false } = props
+  const { title, notRobots = false } = props
 
-   const response = useStaticQuery(query)
+  const { description, titleTemplate, defaultTitle, twitterUsername, websiteUrl, socialBannerImage } = {
+    description:
+      'Frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.',
+    titleTemplate: '%s - Yony Calsin',
+    defaultTitle: 'Yony Calsin - Frontend Developer',
+    twitterUsername: '@yonycalsin',
+    websiteUrl: 'https://www.yonycalsin.com',
+    socialBannerImage: 'https://avatars.githubusercontent.com/u/58490737?v=4',
+  }
 
-   const { t } = useTranslation()
+  const schemaOrgJSONLD = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      url: 'https://www.yonycalsin.com',
+      name: defaultTitle,
+      alternateName: defaultTitle,
+    },
+  ]
 
-   const {
-      description,
-      titleTemplate,
-      defaultTitle,
-      twitterUsername,
-      websiteUrl,
-      socialBannerImage,
-   } = response.site.siteMetadata
+  return (
+    <Head>
+      <meta name="robots" content={notRobots ? 'noindex, nofollow' : 'index,follow'} />
+      <meta name="googlebot" content={notRobots ? 'noindex, nofollow' : 'index,follow'} />
 
-   const schemaOrgJSONLD = [
-      {
-         '@context': 'https://schema.org',
-         '@type': 'Organization',
-         url: 'https://www.yonycalsin.com',
-         name: defaultTitle,
-         alternateName: defaultTitle,
-      },
-   ]
+      <meta name="description" content={description} />
+      <meta name="image" content={socialBannerImage} />
 
-   return (
-      <Helmet>
-         <meta
-            name="robots"
-            content={notRobots ? 'noindex, nofollow' : 'index,follow'}
-         />
-         <meta
-            name="googlebot"
-            content={notRobots ? 'noindex, nofollow' : 'index,follow'}
-         />
+      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
-         <meta name="description" content={description} />
-         <meta name="image" content={socialBannerImage} />
+      <link rel="icon" href={socialBannerImage} type="image/png" />
+      <meta property="og:url" content={websiteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={defaultTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={socialBannerImage} />
 
-         <script type="application/ld+json">
-            {JSON.stringify(schemaOrgJSONLD)}
-         </script>
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={defaultTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={socialBannerImage} />
 
-         <link rel="icon" href={socialBannerImage} type="image/png" />
-         <meta property="og:url" content={websiteUrl} />
-         <meta property="og:type" content="website" />
-         <meta property="og:title" content={defaultTitle} />
-         <meta property="og:description" content={description} />
-         <meta property="og:image" content={socialBannerImage} />
-
-         <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:creator" content={twitterUsername} />
-         <meta name="twitter:title" content={defaultTitle} />
-         <meta name="twitter:description" content={description} />
-         <meta name="twitter:image" content={socialBannerImage} />
-
-         <title>
-            {props.title
-               ? titleTemplate.replace('%s', props.title)
-               : t('title')}
-         </title>
-      </Helmet>
-   )
+      <title>{props.title ? titleTemplate.replace('%s', props.title) : 'Yony Calsin - Desarrollador Frontend'}</title>
+    </Head>
+  )
 }
