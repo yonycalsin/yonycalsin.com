@@ -1,9 +1,13 @@
 {
-   "editor.tabSize": 3,
-   "editor.detectIndentation": false,
+   "typescript.tsdk": "node_modules/typescript/lib",
    "editor.formatOnSave": true,
+   "editor.rulers": [120],
+   "files.eol": "\n",
    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll": true
    },
-   "css.validate": false
+   "editor.detectIndentation": false,
+   "files.associations": {
+      "*.mdx": "markdown"
+   }
 }
