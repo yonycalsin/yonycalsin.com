@@ -3,136 +3,123 @@
 @tailwind utilities;
 
 body {
-   overflow-y: scroll;
-   @apply text-gray-700;
-   font-family: Archia, Wotfard, BlinkMacSystemFont, -apple-system, Segoe UI,
-      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+  @apply text-gray-700;
+  font-family: Archia, Wotfard, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .gradient-primary {
-   background: linear-gradient(
-      45deg,
-      rgb(238, 97, 97),
-      rgb(254, 212, 2),
-      rgb(5, 227, 156),
-      rgb(1, 208, 251)
-   );
+  background: linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
 }
 
 .container {
-   @apply max-w-4xl mx-auto p-2 md:p-3;
+  @apply max-w-4xl mx-auto p-2 md:p-3;
 }
 
 a {
-   @apply text-base dark:text-gray-300 font-bold underline hover:text-primary;
+  @apply text-base dark:text-gray-300 font-bold underline hover:text-primary;
 }
 
 h1 {
-   @apply font-extrabold text-3xl dark:text-gray-400;
+  @apply font-extrabold text-3xl dark:text-gray-400;
 }
 
 p {
-   @apply text-base dark:text-gray-200;
-   @apply mb-2 mt-2;
+  @apply text-base dark:text-gray-200;
+  @apply mb-2 mt-2;
 }
 
 pre {
-   @apply bg-gray-800 text-gray-200 overflow-x-auto rounded-lg;
-   @apply p-1;
-   @apply mb-2 mt-2;
+  @apply bg-gray-800 text-gray-200 overflow-x-auto rounded-lg;
+  @apply p-1;
+  @apply mb-2 mt-2;
 }
 
 blockquote {
-   @apply italic;
-   @apply text-base;
-   @apply border-l-4;
-   @apply pl-2;
-   @apply mb-2 mt-2;
-   @apply dark:text-gray-300;
+  @apply italic;
+  @apply text-base;
+  @apply border-l-4;
+  @apply pl-2;
+  @apply mb-2 mt-2;
+  @apply dark:text-gray-300;
 }
 
 @screen lg {
-   a {
-      @apply text-xl;
-   }
+  a {
+    @apply text-xl;
+  }
 
-   h1 {
-      @apply text-7xl;
-   }
+  h1 {
+    @apply text-7xl;
+  }
 
-   p {
-      @apply text-xl;
-      @apply mb-3 mt-3;
-   }
+  p {
+    @apply text-xl;
+    @apply mb-3 mt-3;
+  }
 
-   pre {
-      @apply text-xl;
-      @apply p-2;
-      @apply mb-3 mt-3;
-   }
+  pre {
+    @apply text-xl;
+    @apply p-2;
+    @apply mb-3 mt-3;
+  }
 
-   blockquote {
-      @apply text-xl;
-      @apply mb-3 mt-3;
-      @apply pl-2;
-   }
+  blockquote {
+    @apply text-xl;
+    @apply mb-3 mt-3;
+    @apply pl-2;
+  }
 }
 
 @screen xl {
-   h1 {
-      @apply text-7xl;
-   }
+  h1 {
+    @apply text-7xl;
+  }
 
-   h2 {
-      @apply text-5xl;
-   }
+  h2 {
+    @apply text-5xl;
+  }
 
-   h3 {
-      @apply text-4xl;
-   }
+  h3 {
+    @apply text-4xl;
+  }
 
-   h4 {
-      @apply text-3xl;
-   }
+  h4 {
+    @apply text-3xl;
+  }
 
-   h5 {
-      @apply text-2xl;
-   }
+  h5 {
+    @apply text-2xl;
+  }
 
-   h5 {
-      @apply text-xl;
-   }
+  h5 {
+    @apply text-xl;
+  }
 
-   p {
-      @apply text-2xl;
-      @apply mb-4 mt-4;
-   }
+  p {
+    @apply text-2xl;
+    @apply mb-4 mt-4;
+  }
 
-   pre {
-      @apply text-2xl;
-      @apply p-3;
-      @apply mb-4 mt-4;
-   }
+  pre {
+    @apply text-2xl;
+    @apply p-3;
+    @apply mb-4 mt-4;
+  }
 
-   blockquote {
-      @apply text-2xl;
-      @apply mb-4 mt-4;
-      @apply pl-3;
-   }
+  blockquote {
+    @apply text-2xl;
+    @apply mb-4 mt-4;
+    @apply pl-3;
+  }
 }
 
 .timeline::before {
-   content: '';
-   @apply absolute top-0 h-full w-0.5;
-   left: calc(theme('spacing.3') - (theme('spacing[0.5]') / 2));
-   background: linear-gradient(
-      45deg,
-      rgb(238, 97, 97),
-      rgb(254, 212, 2),
-      rgb(5, 227, 156),
-      rgb(1, 208, 251)
-   );
+  content: '';
+  @apply absolute top-0 h-full w-0.5;
+  left: calc(theme('spacing.3') - (theme('spacing[0.5]') / 2));
+  background: linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
 
-   @apply dark:opacity-50;
+  @apply dark:opacity-50;
 }

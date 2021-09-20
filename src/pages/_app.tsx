@@ -4,7 +4,7 @@ import 'scroll-style/index.css'
 import '~/styles/global.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-   return <Component {...pageProps} />
+  return <Component {...pageProps} />
 }
 
 export default MyApp
