@@ -1,21 +1,5 @@
 import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Helmet, useTranslation } from 'gatsby-plugin-react-i18next'
-
-const query = graphql`
-   query MyQuery {
-      site {
-         siteMetadata {
-            description
-            defaultTitle: title
-            titleTemplate
-            twitterUsername
-            websiteUrl: url
-            socialBannerImage
-         }
-      }
-   }
-`
+import Head from 'next/head'
 
 type MetaProps = {
    title?: string
@@ -25,10 +9,6 @@ type MetaProps = {
 export const Meta = (props: MetaProps) => {
    const { title, notRobots = false } = props
 
-   const response = useStaticQuery(query)
-
-   const { t } = useTranslation()
-
    const {
       description,
       titleTemplate,
@@ -36,7 +16,15 @@ export const Meta = (props: MetaProps) => {
       twitterUsername,
       websiteUrl,
       socialBannerImage,
-   } = response.site.siteMetadata
+   } = {
+      description:
+         'Frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.',
+      titleTemplate: '%s - Yony Calsin',
+      defaultTitle: 'Yony Calsin - Frontend Developer',
+      twitterUsername: '@yonycalsin',
+      websiteUrl: 'https://www.yonycalsin.com',
+      socialBannerImage: 'https://avatars.githubusercontent.com/u/58490737?v=4',
+   }
 
    const schemaOrgJSONLD = [
       {
@@ -49,7 +37,7 @@ export const Meta = (props: MetaProps) => {
    ]
 
    return (
-      <Helmet>
+      <Head>
          <meta
             name="robots"
             content={notRobots ? 'noindex, nofollow' : 'index,follow'}
@@ -82,8 +70,8 @@ export const Meta = (props: MetaProps) => {
          <title>
             {props.title
                ? titleTemplate.replace('%s', props.title)
-               : t('title')}
+               : 'Yony Calsin - Desarrollador Frontend'}
          </title>
-      </Helmet>
+      </Head>
    )
 }

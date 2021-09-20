@@ -1,7 +1,5 @@
 import * as React from 'react'
 
-import 'scroll-style/index.css'
-
 import { FloatSocials, Navbar } from '~/components'
 import NightModeButton from '~/components/night-mode-button'
 
@@ -34,7 +32,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
 
                   <p>
                      <small>
-                        With Gatsby, Typescript, TailwindCss, and Vercel
+                        With NextJs, Typescript, TailwindCss, and Vercel
                      </small>
                   </p>
                </div>
