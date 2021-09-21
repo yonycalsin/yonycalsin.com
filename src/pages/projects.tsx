@@ -27,6 +27,7 @@ function ProjectsPage(props: ProjectsPageProps) {
       <div className="timeline relative space-y-5">
         {workProjects.map(work => (
           <WorkItem
+            key={work.id}
             title={work.name}
             demoHref={work.demoUrl}
             description={work.description}
@@ -50,6 +51,7 @@ export async function getStaticProps(): Promise<
     props: {
       workProjects: workProjects,
     },
+    revalidate: 10,
   }
 }
 
