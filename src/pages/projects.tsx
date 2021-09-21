@@ -8,6 +8,8 @@ import { Meta } from '~/components/meta'
 import { Clock } from '~/icons/clock'
 import { HomeLayout } from '~/layouts'
 import { dateFormat, socialLinks } from '~/utils/constants'
+import type { GetStaticPropsResult } from 'next'
+import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
 
 const Item = ({ tags = [], title, description, demoHref, startedAt = new Date() }: any) => (
   <div>
@@ -39,7 +41,13 @@ const Item = ({ tags = [], title, description, demoHref, startedAt = new Date() 
   </div>
 )
 
-function ProjectsPage() {
+interface ProjectsPageProps {
+  workProjects: WorkProject[]
+}
+
+function ProjectsPage(props: ProjectsPageProps) {
+  const { workProjects = [] } = props
+
   return (
     <HomeLayout>
       <Meta title="Proyectos" notRobots />
@@ -55,41 +63,32 @@ function ProjectsPage() {
       </p>
 
       <div className="timeline relative space-y-5">
-        <Item
-          title="Music player"
-          demoHref="https://musica-adventista.yonycalsin.com/"
-          description="Music player without database."
-          tags={['Typescript', 'Tailwind Css', 'Gatsby', 'React', 'Remark', 'Youtube Player', 'Spotify API']}
-          startedAt={new Date('05/16/2021')}
-        />
-
-        <Item
-          title="Slugger - URL Slug Generator"
-          demoHref="https://slugger.yonycalsin.com/"
-          description="Smart, fast and easy to use online tool built to generate search engine friendly and user friendly URL slugs"
-          tags={['svelte', 'typescript', 'tailwindcss']}
-          startedAt={new Date('05/14/2021')}
-        />
-
-        <Item
-          title="Bencody - Code Tricks"
-          demoHref="https://bencody.yonycalsin.com/"
-          description="a system of code tricks in all languages, libraries, and frameworks."
-          tags={['ReactJs', 'Typescript', 'Styled Components', 'Scss', 'Remark', 'Gatsby']}
-          startedAt={new Date('12/20/2020')}
-        />
-
-        <Item
-          title="Pacolor - Infinite Color Palette Generator and Random"
-          tags={['ReactJs', 'Styled Components', 'Typescript']}
-          description="Pacolor is a progressive web application, which generates color
-               palettes, without getting tired, and infinitely"
-          demoHref="https://pacolor.yonycalsin.com/"
-          startedAt={new Date('06/09/2020')}
-        />
+        {workProjects.map(work => (
+          <Item
+            title={work.name}
+            demoHref={work.demoUrl}
+            description={work.description}
+            tags={work.technologies}
+            startedAt={work.startedAt}
+          />
+        ))}
       </div>
     </HomeLayout>
   )
+}
+
+export async function getStaticProps(): Promise<
+  GetStaticPropsResult<{
+    workProjects: WorkProject[]
+  }>
+> {
+  const workProjects = await getWorkProjects()
+
+  return {
+    props: {
+      workProjects: workProjects,
+    },
+  }
 }
 
 export default ProjectsPage
