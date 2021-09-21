@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Image from 'next/image'
-import JavascriptLogo from '~/assets/images/javascript.svg'
+import JavascriptLogo from '~/assets/images/javascript.webp'
 import Link from 'next/link'
 
 import { authorInfo } from '~/utils/constants'
@@ -13,7 +13,7 @@ export const Navbar = () => {
           <Link href="/">
             <a className="flex flex-row items-center no-underline" title="">
               <div className="block h-3 w-3 mr-1 md:mr-2 md:h-4 md:w-4">
-                <Image src={JavascriptLogo} layout="intrinsic" width={32} height={32} />
+                <Image src={JavascriptLogo} layout="intrinsic" width={32} height={32} placeholder="blur" />
               </div>
               <h1 className="text-2xl text-gray">Yony Calsin</h1>
             </a>
