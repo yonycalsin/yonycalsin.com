@@ -6,7 +6,9 @@ export interface WorkProject {
   id: string
   name: string
   description: string
-  demoUrl?: string
+  webUrl?: string
+  repositoryUrl?: string
+  packageUrl?: string
   technologies?: string[]
   startedAt: string
   finishedAt: string
@@ -33,7 +35,9 @@ export async function getWorkProjects(): Promise<WorkProject[]> {
       id: item.id,
       name: item.get('Name') as string,
       description: item.get('Description') as string,
-      demoUrl: (item.get('Demo URL') as string) ?? null,
+      webUrl: (item.get('Web URL') as string) ?? null,
+      repositoryUrl: (item.get('Repository URL') as string) ?? null,
+      packageUrl: (item.get('Package URL') as string) ?? null,
       technologies: item.get('Technologies') as string[],
       startedAt: item.get('Started At') as string,
       finishedAt: (item.get('Finished At') as string) ?? null,

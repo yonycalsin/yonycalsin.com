@@ -16,7 +16,7 @@ function ProjectsPage(props: ProjectsPageProps) {
   return (
     <HomeLayout>
       <Meta title="Proyectos" notRobots />
-      <h1>Proyectos</h1>
+      <h1>Proyectos ({workProjects.length}) </h1>
       <p>
         Aqui algunos de mis proyectos destacados. Véalos todos{' '}
         <a href={socialLinks.GITHUB} target="blank">
@@ -29,7 +29,9 @@ function ProjectsPage(props: ProjectsPageProps) {
           <WorkItem
             key={work.id}
             title={work.name}
-            demoHref={work.demoUrl}
+            webHref={work.webUrl}
+            repositoryHref={work.repositoryUrl}
+            packageHref={work.packageUrl}
             description={work.description}
             tags={work.technologies}
             startedAt={work.startedAt}
