@@ -27,9 +27,6 @@ export const Navbar = () => {
           <Link href="/me">
             <a>Sobre Mi</a>
           </Link>
-<!--           <a href={authorInfo.RESUME} target="__blank">
-            Resume
-          </a> -->
         </div>
       </div>
     </div>
