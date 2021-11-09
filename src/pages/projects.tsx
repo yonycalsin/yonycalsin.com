@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
-import { socialLinks } from '~/utils/constants'
 import type { GetStaticPropsResult } from 'next'
-import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
+
+import { Meta } from '~/components/meta'
 import { WorkItem } from '~/components/work-item/work-item'
+import { HomeLayout } from '~/layouts'
+import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
+import { socialLinks } from '~/utils/constants'
 
 interface ProjectsPageProps {
   workProjects: WorkProject[]

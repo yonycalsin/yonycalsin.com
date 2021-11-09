@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+
 import { isProduction } from '~/utils'
+import { cookieNames } from '~/utils/constants'
 import env from '~/utils/env'
 
 function HeadScripts() {
@@ -33,7 +35,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.0.1" />
+          <script
+            id="theme-mode-script"
+            dangerouslySetInnerHTML={{
+              __html: `!function(){"use strict";var e="string"==typeof(e=localStorage.getItem("${cookieNames.THEME_MODE}"))?e:"boolean"==typeof(e=matchMedia("(prefers-color-scheme: dark)")).matches&&e.matches?"dark":"light";"dark"===e?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark"),localStorage.setItem("${cookieNames.THEME_MODE}",e)}();`,
+            }}
+          />
           {isProduction && <HeadScripts />}
         </Head>
         <body className="dark:bg-gray-900">

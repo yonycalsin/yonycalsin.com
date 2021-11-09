@@ -5,6 +5,7 @@ import { sample } from 'lodash'
 
 import { Clock } from '~/icons/clock'
 import { dateFormat } from '~/utils/constants'
+
 import { Tag } from '../tag'
 
 export interface WorkItemProps {
@@ -35,17 +36,26 @@ export function WorkItem(props: WorkItemProps) {
         <p>{description}</p>
         <div className="mb-3 flex gap-2 dark:invert">
           {webHref && (
-            <a href={webHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Website">
+            <a href={webHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Website" rel="noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://cdn-icons-png.flaticon.com/512/2301/2301129.png" alt="Website" />
             </a>
           )}
           {repositoryHref && (
-            <a href={repositoryHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Repository">
+            <a
+              href={repositoryHref}
+              target="_blank"
+              className="w-3 h-3 hover:scale-110"
+              title="Repository"
+              rel="noreferrer"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://cdn.svgporn.com/logos/github-icon.svg" alt="Repository" />
             </a>
           )}
           {packageHref && (
-            <a href={packageHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Package">
+            <a href={packageHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Package" rel="noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://cdn-icons-png.flaticon.com/512/726/726546.png" className="w-3 h-3" alt="Package" />
             </a>
           )}

@@ -26,6 +26,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://cdn.svgporn.com/logos/github.svg"
               alt="Linkedin"
@@ -38,6 +39,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://cdn.svgporn.com/logos/linkedin.svg" alt="Linkedin" className="h-2 md:h-3" />
           </a>
         </div>

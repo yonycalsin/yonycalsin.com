@@ -1,18 +1,22 @@
-const fs = require('fs')
-const path = require('path')
-
-const internalModules = fs
-  .readdirSync('src')
-  .filter(name => !name.endsWith('.d.ts'))
-  .map(name => name.replace(path.extname(name), ''))
-  .join('|')
-
 module.exports = {
-  env: {
-    node: true,
-  },
-  extends: ['react-app', 'plugin:prettier/recommended'],
   plugins: ['simple-import-sort'],
+  extends: ['next', 'prettier'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  env: {
+    browser: true,
+    es2021: true,
+  },
   rules: {
     'simple-import-sort/imports': [
       'error',
@@ -23,13 +27,13 @@ module.exports = {
           // Packages. `react` related packages come first.
           ['^react', '^@?\\w'],
           // Internal modules.
-          [`^(${internalModules})(/.*|$)`],
+          ['^~/?\\w'],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.
           ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
           // Style imports.
-          ['^.+\\.css$', '^.+\\.scss$'],
+          ['^.+\\.css$'],
         ],
       },
     ],
@@ -41,8 +45,6 @@ module.exports = {
         allow: ['warn', 'error'],
       },
     ],
-    'import/no-anonymous-default-export': 'off',
-    'jsx-a11y/anchor-is-valid': 'off',
   },
   overrides: [
     {

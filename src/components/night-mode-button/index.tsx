@@ -1,15 +1,15 @@
 import * as React from 'react'
 import clsx from 'clsx'
 
-import s from './night-mode-button.module.css'
+import { cookieNames } from '~/utils/constants'
 
-const STORAGE_KEY = 'color-mode'
+import s from './night-mode-button.module.css'
 
 const NightModeButton = () => {
   function onToggleDark() {
     const isDark = document.documentElement.classList.contains('dark')
 
-    localStorage.setItem(STORAGE_KEY, isDark ? 'light' : 'dark')
+    localStorage.setItem(cookieNames.THEME_MODE, isDark ? 'light' : 'dark')
 
     if (isDark) {
       document.documentElement.classList.remove('dark')

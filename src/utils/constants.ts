@@ -14,3 +14,7 @@ export const dateFormat = {
   // 20 May, 2021
   PROJECT_DATE: 'D MMM, YYYY',
 }
+
+export const cookieNames = {
+  THEME_MODE: '_theme-mode',
+}

@@ -9,7 +9,8 @@
   "scripts": {
     "dev": " next dev",
     "build": "next build",
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
     "format": "npm run prettier -- --write",
     "check:format": "npm run prettier -- --list-different",
@@ -35,6 +36,7 @@
     "autoprefixer": "^10.3.4",
     "babel-plugin-lodash": "^3.3.4",
     "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.3",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
