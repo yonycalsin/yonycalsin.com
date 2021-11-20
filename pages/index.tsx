@@ -45,19 +45,51 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <pre>
-          <code className="gradient-primary text-black font-bold">
-            {JSON.stringify(
-              {
-                nombre: 'Yony Calsin',
-                usuario: '@yonycalsin',
-                rol: 'Ingeniero Frontend',
-                país: 'Peru',
-              },
-              undefined,
-              2,
-            )}
+      <div className="mt-4">
+        <div className="rehype-code-title">src/profile.json</div>
+        <pre className="language-json">
+          <code className="language-json code-highlight">
+            {/* @ts-ignore */}
+            <span className="code-line line-number" line="1">
+              <span className="token punctuation">{'{'}</span>
+              {'\n'}
+            </span>
+            {/* @ts-ignore */}
+            <span className="code-line line-number highlight-line" line="2">
+              {'  '}
+              <span className="token property">{'"nombre"'}</span>
+              <span className="token operator">:</span> <span className="token string">{'"Yony Calsin"'}</span>
+              <span className="token punctuation">,</span>
+              {'\n'}
+            </span>
+            {/* @ts-ignore */}
+            <span className="code-line line-number" line="3">
+              {'  '}
+              <span className="token property">{'"usuario"'}</span>
+              <span className="token operator">:</span> <span className="token string">{'"@yonycalsin"'}</span>
+              <span className="token punctuation">,</span>
+              {'\n'}
+            </span>
+            {/* @ts-ignore */}
+            <span className="code-line line-number highlight-line" line="4">
+              {'  '}
+              <span className="token property">{'"rol"'}</span>
+              <span className="token operator">:</span> <span className="token string">{'"Ingeniero Frontend"'}</span>
+              <span className="token punctuation">,</span>
+              {'\n'}
+            </span>
+            {/* @ts-ignore */}
+            <span className="code-line line-number" line="5">
+              {'  '}
+              <span className="token property">{'"país"'}</span>
+              <span className="token operator">:</span> <span className="token string">{'"Peru"'}</span>
+              {'\n'}
+            </span>
+            {/* @ts-ignore */}
+            <span className="code-line line-number" line="6">
+              <span className="token punctuation">{'}'}</span>
+              {'\n'}
+            </span>
           </code>
         </pre>
       </div>

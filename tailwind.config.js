@@ -1,3 +1,5 @@
+const commonTheme = require('@yonycalsin/tailwindcss-theme')
+
 const spacingSize = 8
 
 const getSpacing = (count = 50) => Array.from({ length: count + 1 }).map((_, index) => `${index * spacingSize}px`)
@@ -101,6 +103,7 @@ module.exports = {
       ...spacing,
       0.5: '4px',
       1.5: '12px',
+      2.5: '20px',
       3.5: '28px',
     },
     container: {
@@ -114,9 +117,74 @@ module.exports = {
         inherit: 'inherit',
       },
       fontSize: {
+        ...commonTheme.theme.fontSize,
         xl: ['1.25rem', '1.99rem'],
         '2xl': ['1.5rem', '2.5rem'],
       },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.700'),
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: theme('colors.primary.700'),
+              },
+              code: { color: theme('colors.primary.400') },
+            },
+            'h2,h3,h4': {
+              'scroll-margin-top': spacing[32],
+            },
+            thead: {
+              borderBottomColor: theme('colors.gray.200'),
+            },
+            code: { color: theme('colors.secondary.500') },
+            'blockquote p:first-of-type::before': false,
+            'blockquote p:last-of-type::after': false,
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.gray.200'),
+            a: {
+              color: theme('colors.primary.400'),
+              '&:hover': {
+                color: theme('colors.primary.600'),
+              },
+              code: { color: theme('colors.primary.400') },
+            },
+            blockquote: {
+              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.gray.300'),
+            },
+            'h2,h3,h4': {
+              color: theme('colors.gray.100'),
+              'scroll-margin-top': spacing[32],
+            },
+            hr: { borderColor: theme('colors.gray.700') },
+            ol: {
+              li: {
+                '&:before': { color: theme('colors.gray.500') },
+              },
+            },
+            ul: {
+              li: {
+                '&:before': { backgroundColor: theme('colors.gray.500') },
+              },
+            },
+            strong: { color: theme('colors.gray.100') },
+            thead: {
+              color: theme('colors.gray.100'),
+              borderBottomColor: theme('colors.gray.600'),
+            },
+            tbody: {
+              tr: {
+                borderBottomColor: theme('colors.gray.700'),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
@@ -124,8 +192,10 @@ module.exports = {
       rotate: ['dark'],
       filter: ['dark'],
     },
+    typography: ['dark'],
   },
   corePlugins: {
     float: false,
   },
+  plugins: [require('@tailwindcss/typography')],
 }

@@ -9,5 +9,6 @@
   "editor.detectIndentation": false,
   "files.associations": {
     "*.mdx": "markdown"
-  }
+  },
+  "css.validate": false
 }
