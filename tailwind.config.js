@@ -10,7 +10,7 @@ const spacing = Object.assign({}, getSpacing(25))
 module.exports = {
   mode: 'jit',
   purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './gatsby-ssr.js'],
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/*.tsx'],
     options: {
       keyframes: true,
       fontFace: true,

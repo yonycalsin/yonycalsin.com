@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document'
 
 import { isProduction } from '~/utils'
 import { cookieNames } from '~/utils/constants'
