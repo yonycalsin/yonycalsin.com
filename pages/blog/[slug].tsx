@@ -1,4 +1,10 @@
+import React from 'react'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+
+import MDXComponents from '~/components/mdx-components'
+import { HomeLayout } from '~/layouts'
+import BlogLayout from '~/layouts/blog/blog-layout'
 
 import { allBlogs } from '.contentlayer/data'
 import type { Blog } from '.contentlayer/types'
@@ -8,10 +14,14 @@ interface BlogSlugPageProps {
 }
 
 function BlogSlugPage(props: BlogSlugPageProps) {
+  const { post } = props
+
+  const Component = useMDXComponent(post.body.code)
+
   return (
-    <>
-      <h1>This is a Blog page</h1>
-    </>
+    <BlogLayout post={post}>
+      <Component components={MDXComponents} />
+    </BlogLayout>
   )
 }
 

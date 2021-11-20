@@ -16,10 +16,11 @@
     "check:format": "npm run prettier -- --list-different",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf .next",
+    "clean": "rimraf .next && rimraf node_modules/.contentlayer",
     "boot": "npm run clean  && npm run build && npm run start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "airtable": "^0.11.1",
     "clsx": "^1.1.1",
     "contentlayer": "0.0.31",
