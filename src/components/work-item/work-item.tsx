@@ -1,7 +1,7 @@
 import * as React from 'react'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
-import { sample } from 'lodash'
+import random from 'just-random'
 
 import { Clock } from '~/icons/clock'
 import { dateFormat } from '~/utils/constants'
@@ -65,7 +65,7 @@ export function WorkItem(props: WorkItemProps) {
             <Tag
               key={item}
               className={clsx(
-                sample(['bg-primary', 'bg-secondary', 'bg-success', 'bg-error']),
+                random(['bg-primary', 'bg-secondary', 'bg-success', 'bg-error']),
                 'opacity-60 hover:opacity-90 text-xs',
               )}
             >
