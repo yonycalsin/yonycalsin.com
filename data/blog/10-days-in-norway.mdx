@@ -20,6 +20,14 @@ SWR first returns the data from cache (stale), then sends the fetch request (rev
 This is important for our dashboard page because it can be left open and the data will remain fresh.
 If you re-focus or switch between tabs, SWR will [automatically revalidate data](https://swr.now.sh/#focus-revalidation).
 
+```js {1,3-4}
+function fancyAlert(arg) {
+  if (arg) {
+    $.facebox({ div: '#foo' })
+  }
+}
+```
+
 To use SWR, we can import the hook and define which route to fetch.
 
 ```js

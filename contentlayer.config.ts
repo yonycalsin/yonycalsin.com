@@ -39,7 +39,12 @@ export default makeSource({
     rehypePlugins: [
       rehypeSlug,
       rehypeCodeTitles,
-      rehypePrism,
+      [
+        rehypePrism,
+        {
+          showLineNumbers: true,
+        },
+      ],
       [
         rehypeAutolinkHeadings,
         {

@@ -364,3 +364,16 @@ pre[class*='language-'] {
 .prose *:hover > .anchor {
   @apply visible no-underline;
 }
+
+/* rehype-code-title */
+
+.rehype-code-title {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @apply px-2.5 py-1.5 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t-lg dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800;
+}
+
+.rehype-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}
