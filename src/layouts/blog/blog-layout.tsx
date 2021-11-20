@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { HomeLayout } from '..'
+import { HomeLayout } from '../home.layout'
 
 import type { Blog } from '.contentlayer/types'
 
@@ -9,7 +9,7 @@ interface BlogLayoutProps {
   post: Blog
 }
 
-function BlogLayout(props: BlogLayoutProps) {
+export function BlogLayout(props: BlogLayoutProps) {
   const { post, children } = props
 
   return (
@@ -21,5 +21,3 @@ function BlogLayout(props: BlogLayoutProps) {
     </HomeLayout>
   )
 }
-
-export default BlogLayout

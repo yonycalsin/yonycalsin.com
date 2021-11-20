@@ -3,8 +3,7 @@ import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult,
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import MDXComponents from '~/components/mdx-components'
-import { HomeLayout } from '~/layouts'
-import BlogLayout from '~/layouts/blog/blog-layout'
+import { BlogLayout } from '~/layouts/blog/blog-layout'
 
 import { allBlogs } from '.contentlayer/data'
 import type { Blog } from '.contentlayer/types'
