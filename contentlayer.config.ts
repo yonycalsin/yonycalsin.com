@@ -1,6 +1,10 @@
 import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files'
 import readingTime from 'reading-time'
-import highlight from 'rehype-highlight'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeCodeTitles from 'rehype-code-titles'
+import rehypePrism from 'rehype-prism-plus'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
 
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: doc => readingTime(doc.body.raw) },
@@ -30,5 +34,20 @@ const Blog = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog],
-  markdown: { rehypePlugins: [highlight] },
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeCodeTitles,
+      rehypePrism,
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ['anchor'],
+          },
+        },
+      ],
+    ],
+  },
 })
