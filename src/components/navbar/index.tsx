@@ -1,10 +1,14 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useFeature } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
+import Features from '~/common/features'
 
 export const Navbar = () => {
+  const hasResume = useFeature(Features.RESUME)
+
   return (
     <div className="dark:bg-gray-900">
       <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
@@ -26,6 +30,11 @@ export const Navbar = () => {
           <Link href="/me">
             <a>Sobre Mi</a>
           </Link>
+          {hasResume && (
+            <Link href="/resume">
+              <a>Resume</a>
+            </Link>
+          )}
         </div>
       </div>
     </div>

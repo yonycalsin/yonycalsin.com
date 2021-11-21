@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "~/server*": ["./server*"]
+      "~/server*": ["./server*"],
+      "~/common*": ["./common*"]
     },
     "importsNotUsedAsValues": "error",
     "incremental": true,
