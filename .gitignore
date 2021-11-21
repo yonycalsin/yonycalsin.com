@@ -38,3 +38,5 @@ yarn-error.log*
 storybook-build
 
 .env
+
+tsconfig.tsbuildinfo
