@@ -7,7 +7,7 @@ import { FieldText } from '~/components/field-text'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import cookielib from '~/lib/cookielib'
-import { cookieNames } from '~/utils/constants'
+import { cookieNames, socialLinks } from '~/utils/constants'
 import formConstraints from '~/utils/form-constraints'
 import validationResolver from '~/utils/validation-resolver'
 
@@ -19,7 +19,21 @@ interface FormFields {
   email: string
 }
 
+const Item = ({ children, href }: any) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    className="transition-all border-b-2 border-transparent hover:border-primary hover:text-primary-500 no-underline"
+    style={{ textDecoration: 'none' }}
+  >
+    {children}
+  </a>
+)
+
 function ResumePage(props: ResumePageProps) {
+  const { hasGuestSessionToken } = props
+
   const formMethods = useForm<FormFields>({
     resolver: validationResolver,
     context: pick(formConstraints, 'email'),
@@ -38,9 +52,58 @@ function ResumePage(props: ResumePageProps) {
       const data = await response.json()
 
       cookielib.setCookie(null, cookieNames.GUEST_SESSION_TOKEN, data.data.token)
+
+      window.location.reload()
     } catch (error) {
       console.error(error)
     }
+  }
+
+  if (hasGuestSessionToken) {
+    return (
+      <HomeLayout>
+        <Meta title="Resume - Yony Calsin" notRobots />
+        <div className="max-w-xl mx-auto flex flex-col items-center mt-3 ">
+          <h1>¡Resume!</h1>
+          <p>
+            <b>Iniciaste session como invitado</b>, ahora puedes contactarme por los siguientes medios:
+          </p>
+          <ul className="w-full m-0 list-disc">
+            <li>
+              <Item href={socialLinks.GITHUB}>Github</Item>
+            </li>
+            <li>
+              <Item href={socialLinks.LINKEDIN}>Linkedin</Item>
+            </li>
+            <li>
+              <Item href={socialLinks.TWITTER}>Twitter</Item>
+            </li>
+            <li>
+              <Item href={socialLinks.EMAIL}>Email</Item>
+            </li>
+          </ul>
+
+          <p>
+            <a href="/resume/review" target="_blank" className="text-secondary">
+              Ver <q>resume</q> en PDF 😀
+            </a>
+          </p>
+
+          <div className="w-full">
+            <button
+              className="text-h4 font-bold hover:bg-gray-300 rounded-md px-1"
+              onClick={() => {
+                cookielib.destroyCookie(null, cookieNames.GUEST_SESSION_TOKEN)
+
+                window.location.reload()
+              }}
+            >
+              Cerrar sesion{' '}
+            </button>
+          </div>
+        </div>
+      </HomeLayout>
+    )
   }
 
   return (
