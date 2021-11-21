@@ -1,4 +1,5 @@
 import debug from 'debug'
+import type { NextHandler } from 'next-connect'
 
 import type HttpRequest from '../../Shared/Http/Definitions/HttpRequest'
 import type HttpResponse from '../../Shared/Http/Definitions/HttpResponse'
@@ -10,7 +11,16 @@ import HttpStatusMessages from '../../Shared/Http/Status/HttpStatusMessages'
 const logger = debug('api:apps:client-front-rest:middlewares:error:handler')
 
 class ErrorHandlerMiddleware {
-  public execute(errorException: HttpException, request: HttpRequest, response: HttpResponse) {
+  public execute(
+    errorException: HttpException | Error,
+    request: HttpRequest,
+    response: HttpResponse,
+    next: NextHandler,
+  ) {
+    if (!(errorException instanceof Error)) {
+      return next()
+    }
+
     const defaultResponseData = {
       statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
       data: null,
