@@ -1,5 +1,4 @@
-import SignInCommandHandler from '~/server/contexts/client-front/Modules/Auth/Guest/Application/SignIn/SignInCommandHandler'
-
+import SignInCommandHandler from '../../../contexts/client-front/Modules/Auth/Guest/Application/SignIn/SignInCommandHandler'
 import SignInAction from '../Actions/Auth/Guest/SignIn/SignInAction'
 import SignInActionResponder from '../Actions/Auth/Guest/SignIn/SignInActionResponder'
 

@@ -1,3 +1,5 @@
+import debug from 'debug'
+
 import type HttpRequest from '~/server/apps/client-front-rest/Shared/Http/Definitions/HttpRequest'
 import type HttpResponse from '~/server/apps/client-front-rest/Shared/Http/Definitions/HttpResponse'
 import SignInCommand from '~/server/contexts/client-front/Modules/Auth/Guest/Application/SignIn/SignInCommand'
@@ -7,6 +9,8 @@ import Action from '../../../Action'
 
 import type SignInActionResponder from './SignInActionResponder'
 import SignInActionValidator from './SignInActionValidator'
+
+const logger = debug('api:apps:client-front-rest:auth:guest:signin:action')
 
 class SignInAction extends Action {
   private readonly handler: SignInCommandHandler
