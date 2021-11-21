@@ -4,6 +4,7 @@ import pick from 'just-pick'
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 
 import { FieldText } from '~/components/field-text'
+import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import cookielib from '~/lib/cookielib'
 import { cookieNames } from '~/utils/constants'
@@ -24,13 +25,27 @@ function ResumePage(props: ResumePageProps) {
     context: pick(formConstraints, 'email'),
   })
 
-  const onSubmit = (values: FormFields) => {
-    // eslint-disable-next-line no-console
-    console.log(values)
+  const onSubmit = async (values: FormFields) => {
+    try {
+      const response = await fetch('/api/auth/guest/signin', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const data = await response.json()
+
+      cookielib.setCookie(null, cookieNames.GUEST_SESSION_TOKEN, data.data.token)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
     <HomeLayout>
+      <Meta title="Resume - Yony Calsin" notRobots />
       <div className="max-w-xl mx-auto mt-3">
         <h1>Ingresa tu email</h1>
       </div>
