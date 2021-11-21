@@ -15,10 +15,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "~/server*": ["./server*"]
     },
     "importsNotUsedAsValues": "error",
-    "incremental": true
+    "incremental": true,
+    "noImplicitOverride": true,
+    "strictPropertyInitialization": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
   "exclude": ["node_modules", ".next", "out"]
