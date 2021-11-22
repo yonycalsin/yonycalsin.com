@@ -10,4 +10,19 @@ module.exports = withContentlayer()({
     FF_BLOG: process.env.FF_BLOG,
   },
   swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: '/resume/preview',
+        destination: '/resumes/2021-11-22T00-17-12.292Z.pdf',
+        permanent: true,
+        has: [
+          {
+            type: 'cookie',
+            key: '_guest-session-token-v1.0.0',
+          },
+        ],
+      },
+    ]
+  },
 })

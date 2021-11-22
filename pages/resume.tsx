@@ -68,7 +68,7 @@ function ResumePage(props: ResumePageProps) {
           <p>
             <b>Iniciaste session como invitado</b>, ahora puedes contactarme por los siguientes medios:
           </p>
-          <ul className="w-full m-0 list-disc">
+          <ul className="w-full m-0 list-disc list-inside">
             <li>
               <Item href={socialLinks.GITHUB}>Github</Item>
             </li>
@@ -84,7 +84,7 @@ function ResumePage(props: ResumePageProps) {
           </ul>
 
           <p>
-            <a href="/resume/review" target="_blank" className="text-secondary">
+            <a href="/resume/preview" target="_blank" className="text-secondary">
               Ver <q>resume</q> en PDF 😀
             </a>
           </p>
