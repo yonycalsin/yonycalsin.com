@@ -19,7 +19,7 @@ class UserRepositoryPrisma implements UserRepository {
   }
 
   public async getByEmail(email: string): Promise<User | null> {
-    const user = this.prismaConnection.getConnection().user.findUnique({
+    const user = await this.prismaConnection.getConnection().user.findUnique({
       where: {
         email: email,
       },
@@ -30,6 +30,16 @@ class UserRepositoryPrisma implements UserRepository {
     }
 
     return this.prismaInstanceToDomain(user)
+  }
+
+  public async create(user: User): Promise<UserId> {
+    const dbUser = await this.prismaConnection.getConnection().user.create({
+      data: {
+        email: user.getEmail(),
+      },
+    })
+
+    return UserId.create(dbUser.id)
   }
 }
 
