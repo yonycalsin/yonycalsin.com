@@ -35,7 +35,7 @@ class SignInCommandHandler implements CommandHandler<SignInDto, SignInCommand> {
     }
 
     const payload = {
-      id: userId,
+      id: userId?.getValue(),
       role: 'guest',
       email: command.getEmail(),
     }
