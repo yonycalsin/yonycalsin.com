@@ -10,5 +10,8 @@
   "files.associations": {
     "*.mdx": "markdown"
   },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
   "css.validate": false
 }
