@@ -21,6 +21,7 @@
     "contentlayer:build": "./node_modules/.bin/contentlayer build"
   },
   "dependencies": {
+    "@prisma/client": "^3.5.0",
     "@tailwindcss/typography": "^0.4.1",
     "@yonycalsin/tailwindcss-theme": "^1.14.0",
     "airtable": "^0.11.1",
@@ -42,6 +43,7 @@
     "next-joi": "^2.2.1",
     "nextjs-cors": "^2.1.0",
     "nookies": "^2.5.2",
+    "prisma": "^3.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.20.2",
