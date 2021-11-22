@@ -1,7 +1,15 @@
 import type { NextFetchEvent, NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
+import { isProduction } from '~/utils'
+
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
+  const response = NextResponse.next()
+
+  if (!isProduction) {
+    return response
+  }
+
   const ContentSecurityPolicy = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.googletagmanager.com;
@@ -12,8 +20,6 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
     connect-src *;
     font-src 'self';
   `
-
-  const response = NextResponse.next()
 
   response.headers.set('Content-Security-Policy', ContentSecurityPolicy.replace(/\n/g, ''))
 
