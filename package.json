@@ -9,7 +9,7 @@
   "scripts": {
     "dev": " next dev",
     "build": "next build",
-    "vercel-build": "prisma generate && next build",
+    "vercel-build": "prisma generate && npm run contentlayer:build && next build",
     "lint": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
