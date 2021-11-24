@@ -5,6 +5,7 @@ import { Meta } from '~/components/meta'
 
 import { HomeLayout } from '../home.layout'
 
+// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 interface BlogLayoutProps {
