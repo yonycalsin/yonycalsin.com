@@ -40,3 +40,4 @@ storybook-build
 .env
 
 tsconfig.tsbuildinfo
+.vercel
