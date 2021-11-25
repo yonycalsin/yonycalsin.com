@@ -35,12 +35,16 @@ const Item = ({ children, href }: any) => (
 function ResumePage(props: ResumePageProps) {
   const { hasGuestSessionToken } = props
 
+  const [isLoading, setIsLoading] = React.useState<boolean>()
+
   const formMethods = useForm<FormFields>({
     resolver: validationResolver,
     context: pick(formConstraints, 'email'),
   })
 
   const onSubmit = async (values: FormFields) => {
+    setIsLoading(true)
+
     try {
       const response = await fetch('/api/auth/guest/signin', {
         method: 'POST',
@@ -57,6 +61,8 @@ function ResumePage(props: ResumePageProps) {
       window.location.reload()
     } catch (error) {
       console.error(error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -116,7 +122,9 @@ function ResumePage(props: ResumePageProps) {
       <FormProvider {...formMethods}>
         <form className="max-w-xl mx-auto my-5 space-y-2" onSubmit={formMethods.handleSubmit(onSubmit)}>
           <FieldText name="email" type="email" label="Correo electronico" />
-          <Button isFullWidth>Ver resume</Button>
+          <Button isFullWidth isDisabled={isLoading}>
+            {isLoading ? 'Cargando...' : 'Ingresar'}
+          </Button>
         </form>
       </FormProvider>
     </HomeLayout>

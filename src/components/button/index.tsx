@@ -5,6 +5,7 @@ export interface ButtonProps {
   children: React.ReactNode
   colorScheme?: 'primary' | 'secondary' | 'gray'
   isFullWidth?: boolean
+  isDisabled?: boolean
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
@@ -17,12 +18,16 @@ const styles = {
 }
 
 export function Button(props: ButtonProps) {
-  const { children, colorScheme = 'primary', isFullWidth, onClick } = props
+  const { children, colorScheme = 'primary', isFullWidth, onClick, isDisabled } = props
 
   const buttonStyle = styles[colorScheme]
 
   return (
-    <button className={clsx(buttonStyle, isFullWidth && 'w-full')} onClick={onClick}>
+    <button
+      className={clsx(buttonStyle, isFullWidth && 'w-full', isDisabled && 'cursor-not-allowed opacity-75')}
+      disabled={isDisabled}
+      onClick={onClick}
+    >
       {children}
     </button>
   )
