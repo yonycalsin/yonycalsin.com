@@ -1,13 +1,15 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useFeature } from 'toggled'
+import { useFeature, useFlagQuery } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import Features from '~/common/features'
 
 export const Navbar = () => {
   const hasResume = useFeature(Features.RESUME)
+
+  const hasBlog = useFeature(Features.BLOG)
 
   return (
     <div className="dark:bg-gray-900 shadow-sm">
@@ -30,6 +32,11 @@ export const Navbar = () => {
           <Link href="/me">
             <a>Sobre Mi</a>
           </Link>
+          {hasBlog && (
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+          )}
           {hasResume && (
             <Link href="/resume">
               <a>Resume</a>

@@ -69,7 +69,7 @@ function ResumePage(props: ResumePageProps) {
   if (hasGuestSessionToken) {
     return (
       <HomeLayout>
-        <Meta title="Resume - Yony Calsin" notRobots />
+        <Meta title="Resume" notRobots />
         <div className="max-w-xl mx-auto flex flex-col items-center mt-3 ">
           <h1>¡Resume!</h1>
           <p>
@@ -89,13 +89,11 @@ function ResumePage(props: ResumePageProps) {
               <Item href={socialLinks.EMAIL}>Email</Item>
             </li>
           </ul>
-
           <p>
             <a href="/resume/preview" target="_blank" className="text-secondary">
               Ver <q>resume</q> en PDF 😀
             </a>
           </p>
-
           <div className="w-full">
             <Button
               onClick={() => {

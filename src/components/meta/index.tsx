@@ -7,7 +7,7 @@ type MetaProps = {
 }
 
 export const Meta = (props: MetaProps) => {
-  const { title, notRobots = false } = props
+  const { notRobots = false } = props
 
   const { description, titleTemplate, defaultTitle, twitterUsername, websiteUrl, socialBannerImage } = {
     description:
