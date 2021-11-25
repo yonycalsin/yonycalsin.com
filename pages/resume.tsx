@@ -3,6 +3,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 import pick from 'just-pick'
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 
+import { Button } from '~/components/button'
 import { FieldText } from '~/components/field-text'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
@@ -90,16 +91,16 @@ function ResumePage(props: ResumePageProps) {
           </p>
 
           <div className="w-full">
-            <button
-              className="text-h4 font-bold hover:bg-gray-300 rounded-md px-1"
+            <Button
               onClick={() => {
                 cookielib.destroyCookie(null, cookieNames.GUEST_SESSION_TOKEN)
 
                 window.location.reload()
               }}
+              colorScheme="gray"
             >
               Cerrar sesion{' '}
-            </button>
+            </Button>
           </div>
         </div>
       </HomeLayout>
@@ -115,7 +116,7 @@ function ResumePage(props: ResumePageProps) {
       <FormProvider {...formMethods}>
         <form className="max-w-xl mx-auto my-5 space-y-2" onSubmit={formMethods.handleSubmit(onSubmit)}>
           <FieldText name="email" type="email" label="Correo electronico" />
-          <button className="w-full bg-primary-700 text-white rounded-md py-1">Ver resume</button>
+          <Button isFullWidth>Ver resume</Button>
         </form>
       </FormProvider>
     </HomeLayout>
