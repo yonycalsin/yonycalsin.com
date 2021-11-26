@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['simple-import-sort'],
-  extends: ['next', 'prettier'],
+  extends: ['next', 'prettier', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
