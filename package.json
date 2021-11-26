@@ -18,10 +18,12 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
     "start": "next start",
+    "storybook": "npm run storybook:clean && npm run storybook:dev",
+    "storybook:build": "build-storybook -s public -o storybook-build",
+    "storybook:clean": "rimraf -r storybook-build",
+    "storybook:dev": "start-storybook -p 6006",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "prisma generate && next build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
     "@prisma/client": "^3.5.0",
