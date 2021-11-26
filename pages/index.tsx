@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import github from '~/assets/images/github.svg'
+import linkedin from '~/assets/images/linkedin.svg'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
@@ -27,11 +29,7 @@ export default function Home() {
             rel="noreferrer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://cdn.svgporn.com/logos/github.svg"
-              alt="Linkedin"
-              className="h-2 md:h-3 filter dark:invert"
-            />
+            <img src={github.src} alt="Github" className="h-2 md:h-3 filter dark:invert" />
           </a>
           <a
             href={socialLinks.LINKEDIN}
@@ -40,7 +38,7 @@ export default function Home() {
             rel="noreferrer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://cdn.svgporn.com/logos/linkedin.svg" alt="Linkedin" className="h-2 md:h-3" />
+            <img src={linkedin.src} alt="Linkedin" className="h-2 md:h-3" />
           </a>
         </div>
       </div>
