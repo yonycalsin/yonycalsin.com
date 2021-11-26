@@ -41,3 +41,6 @@ storybook-build
 
 tsconfig.tsbuildinfo
 .vercel
+
+
+theme-preview-build
