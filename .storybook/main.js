@@ -1,5 +1,6 @@
 const path = require('path')
 const tsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const prettierConfig = require('../.prettierrc.json')
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -11,6 +12,14 @@ module.exports = {
       options: {
         postcssLoaderOptions: {
           implementation: require('postcss'),
+        },
+      },
+    },
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        loaderOptions: {
+          prettierConfig,
         },
       },
     },
