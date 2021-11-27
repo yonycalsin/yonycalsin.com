@@ -13,4 +13,7 @@ export const parameters = {
   docs: {
     theme,
   },
+  backgrounds: {
+    default: 'light',
+  },
 }
