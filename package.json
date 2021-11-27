@@ -21,7 +21,7 @@
     "storybook": "npm run storybook:clean && npm run storybook:dev",
     "storybook:build": "build-storybook -s public -o storybook-build",
     "storybook:clean": "rimraf -r storybook-build",
-    "storybook:dev": "start-storybook -p 6006",
+    "storybook:dev": "start-storybook -p 6006 -s ./public",
     "theme-preview:build": "tailwind-config-viewer export ./theme-preview-build",
     "typecheck": "tsc --noEmit",
     "vercel-build": "prisma generate && next build"
@@ -70,6 +70,7 @@
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-essentials": "^6.4.0",
     "@storybook/addon-links": "^6.4.0",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.4.0",
     "@storybook/manager-webpack5": "^6.4.0",
     "@storybook/react": "^6.4.0",
