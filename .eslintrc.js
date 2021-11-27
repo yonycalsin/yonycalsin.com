@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', 'testing-library'],
   extends: ['next', 'prettier', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaFeatures: {
@@ -52,6 +52,10 @@ module.exports = {
       rules: {
         'no-unused-vars': 'off',
       },
+    },
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
     },
   ],
 }

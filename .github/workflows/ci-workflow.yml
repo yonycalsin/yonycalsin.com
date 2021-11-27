@@ -64,3 +64,55 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+  testing:
+    timeout-minutes: 15
+
+    runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: 'mysql://root:123456@127.0.0.1:3306/yonycalsin_personal_website_ci_test'
+      SHADOW_DATABASE_URL: 'mysql://root:123456@127.0.0.1:3306/yonycalsin_personal_website_ci_test'
+      AUTH_JWT_SECRET: 'daemon_ci'
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [14.17.0]
+
+    needs: [install_dependencies]
+
+    steps:
+      - run: |
+          docker run \
+          --name mysql \
+          -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
+          -e MYSQL_DATABASE=yonycalsin_personal_website_ci_test \
+          -e MYSQL_USER=root \
+          -e MYSQL_PASSWORD=123456 \
+          --health-cmd='mysqladmin ping' \
+          --health-interval=10s \
+          --health-timeout=5s \
+          --health-retries=5 \
+          -p 3306:3306 \
+          -d mysql:8.0.13 \
+          --sql-mode='' \
+          --default-authentication-plugin='mysql_native_password' \
+
+      - uses: actions/checkout@v2.1.1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: node-modules
+
+      - run: tar -zxf node_modules.tar.gz
+
+      - name: Wait for MySQL
+        run: npx wait-on tcp:3306 && echo "MySQL is up"
+
+      - run: npm run test:ci
