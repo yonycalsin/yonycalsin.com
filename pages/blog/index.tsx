@@ -22,14 +22,11 @@ function BlogPage(props: BlogPageProps) {
     <>
       <HomeLayout>
         <Meta title="Blog" />
-
         <h1>Blog - Articles</h1>
-
         <p>
           Tutoriales, artículos técnicos, fragmentos, materiales de referencia y todos los recursos relacionados con el
           desarrollo que he escrito.
         </p>
-
         {allPosts.map((post, index) => {
           return (
             <Link href={`/blog/${post.slug}`} key={post._id}>
@@ -37,7 +34,7 @@ function BlogPage(props: BlogPageProps) {
                 className="flex items-center font-normal justify-between dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 px-2 py-1"
                 style={{ textDecoration: 'none' }}
               >
-                <h3 className="text-h3 no-underline">
+                <h3 className="md:text-h3 no-underline">
                   <span className="flex-shrink-0">{index + 1}.- </span> {post.title}
                 </h3>
                 <span className="text-h5">{post.readingTime.text}</span>
