@@ -30,24 +30,6 @@ export default function Home() {
             @yonycalsin
           </a>
         </li>
-        <li>
-          <strong>Patreon</strong>:{' '}
-          <a href="https://patreon.com/yonycalsin" target="_blank" rel="noreferrer">
-            @yonycalsin
-          </a>
-        </li>
-        <li>
-          <strong>Ko-Fi</strong>:{' '}
-          <a href="https://ko-fi.com/yonycalsin" target="_blank" rel="noreferrer">
-            @yonycalsin
-          </a>
-        </li>
-        <li>
-          <strong>Feed</strong>:{' '}
-          <a href="https://yonycalsin.netlify.app/rss.xml" target="_blank" rel="noreferrer">
-            RSS
-          </a>
-        </li>
       </ul>
     </HomeLayout>
   )

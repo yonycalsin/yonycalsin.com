@@ -18,8 +18,11 @@ export default function Home() {
 
       <div className="text-center break-words">
         <p className="lead dark:text-gray-100">
-          Soy un desarrollador frontend creando proyectos de código abierto y escribiendo de JavaScript moderno,
-          Node.js, Typescript y Graphql.
+          Hola, Soy un ingeniero Fullstack React/Node en{' '}
+          <a href="https://riqra.com/" target="_blank" rel="noreferrer">
+            Riqra
+          </a>
+          . A menudo hago proyectos de código abierto y escribo sobre JavaScript moderno, Node.js, Typescript y Graphql.
         </p>
         <div className="flex items-center justify-center space-x-1">
           <a
