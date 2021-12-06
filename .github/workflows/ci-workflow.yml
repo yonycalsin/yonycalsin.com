@@ -71,9 +71,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DATABASE_URL: 'mysql://root:123456@127.0.0.1:3306/yonycalsin_personal_website_ci_test'
-      SHADOW_DATABASE_URL: 'mysql://root:123456@127.0.0.1:3306/yonycalsin_personal_website_ci_test'
-      AUTH_JWT_SECRET: 'daemon_ci'
+      DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
+      SHADOW_DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
+      AUTH_JWT_SECRET: deamon
 
     strategy:
       fail-fast: false
@@ -87,9 +87,9 @@ jobs:
           docker run \
           --name mysql \
           -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
-          -e MYSQL_DATABASE=yonycalsin_personal_website_ci_test \
-          -e MYSQL_USER=root \
-          -e MYSQL_PASSWORD=123456 \
+          -e MYSQL_DATABASE=personal_website \
+          -e MYSQL_USER=githubci \
+          -e MYSQL_PASSWORD=githubci \
           --health-cmd='mysqladmin ping' \
           --health-interval=10s \
           --health-timeout=5s \
