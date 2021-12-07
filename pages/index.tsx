@@ -6,10 +6,10 @@ import { useFeature } from 'toggled'
 
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
-import Features from '~/common/features'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import { dateFormat, socialLinks } from '~/utils/constants'
+import Features from '~/utils/features-flags'
 
 // @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'

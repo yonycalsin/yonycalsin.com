@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useFeature, useFlagQuery } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
-import Features from '~/common/features'
+import Features from '~/utils/features-flags'
 
 export const Navbar = () => {
   const hasResume = useFeature(Features.RESUME)
