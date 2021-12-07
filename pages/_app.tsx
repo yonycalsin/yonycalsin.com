@@ -4,8 +4,8 @@ import type { AppProps } from 'next/dist/shared/lib/router/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
-import Features from '~/asdasd/features-flags'
 import env from '~/utils/env'
+import Features from '~/utils/features-flags'
 
 import '~/styles/global.css'
 import '~/styles/nprogress.css'

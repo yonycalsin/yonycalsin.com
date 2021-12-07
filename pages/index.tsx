@@ -4,12 +4,12 @@ import type { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
 import { useFeature } from 'toggled'
 
-import Features from '~/asdasd/features-flags'
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 import { dateFormat, socialLinks } from '~/utils/constants'
+import Features from '~/utils/features-flags'
 
 // @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'

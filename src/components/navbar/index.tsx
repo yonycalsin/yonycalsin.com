@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useFeature, useFlagQuery } from 'toggled'
 
-import Features from '~/asdasd/features-flags'
 import JavascriptLogo from '~/assets/images/javascript.webp'
+import Features from '~/utils/features-flags'
 
 export const Navbar = () => {
   const hasResume = useFeature(Features.RESUME)
