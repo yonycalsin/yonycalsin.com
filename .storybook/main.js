@@ -1,6 +1,8 @@
 const path = require('path')
 const tsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-const prettierConfig = require('../.prettierrc.json')
+const prettierConfig = require('../.prettierrc')
+
+console.log({ prettierConfig })
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
