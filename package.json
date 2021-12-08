@@ -26,7 +26,7 @@
     "test:ci": "jest --ci",
     "theme-preview:build": "tailwind-config-viewer export ./theme-preview-build",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "prisma generate && next build"
+    "vercel-build": "prisma generate && TZ=utc sh ./scripts/vercel-submodule-workaround.sh && next build"
   },
   "dependencies": {
     "@prisma/client": "^3.5.0",
