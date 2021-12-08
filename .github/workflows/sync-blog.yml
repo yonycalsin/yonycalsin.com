@@ -23,7 +23,7 @@ jobs:
 
           echo $COMMIT_DYNAMIC_MESSAGE
 
-          git remote set-url origin https://yonycalsin:$PERSONAL_GITHUB_TOKEN@github.com/yonycalsin/yonycalsin.com-blog.git
+          git remote set-url origin https://yonycalsin:$PERSONAL_GITHUB_TOKEN@github.com/yonycalsin/yonycalsin-com-blog.git
 
           sed -i -e "s/git@github.com:/https:\/\/$CI_USER_TOKEN@github.com\//" ./.gitmodules
 

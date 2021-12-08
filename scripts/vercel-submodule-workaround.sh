@@ -9,7 +9,7 @@
 
 
 # github submodule repo address without https:// prefix
-SUBMODULE_GITHUB=github.com/yonycalsin/yonycalsin.com-blog
+SUBMODULE_GITHUB=github.com/yonycalsin/yonycalsin-com-blog
 
 # .gitmodules submodule path
 SUBMODULE_PATH=data/blog
