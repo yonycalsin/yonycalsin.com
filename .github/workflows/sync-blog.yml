@@ -29,9 +29,9 @@ jobs:
 
           cat .gitmodules
 
-          git config --global user.email "helloyonycalsin@gmail.com"
+          git config user.name yonycalsin
 
-          git config --global user.name "Yony Calsin"
+          git config user.email helloyonycalsin@gmail.com
 
           git submodule init
 
