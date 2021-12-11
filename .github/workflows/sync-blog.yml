@@ -19,19 +19,19 @@ jobs:
           CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
 
         run: |
-          COMMIT_DYNAMIC_MESSAGE=$(echo "sync: blog was updated on $EVENT_URL")
+          COMMIT_DYNAMIC_MESSAGE=$(echo "sync: update blog on $EVENT_URL")
 
           echo $COMMIT_DYNAMIC_MESSAGE
 
-          git remote set-url origin https://yonycalsin:$PERSONAL_GITHUB_TOKEN@github.com/yonycalsin/yonycalsin-com-blog.git
+          git remote set-url origin https://yonycalsin:$PERSONAL_GITHUB_TOKEN@github.com/yonycalsin/yonycalsin.com.git
 
           sed -i -e "s/git@github.com:/https:\/\/$CI_USER_TOKEN@github.com\//" ./.gitmodules
 
           cat .gitmodules
 
-          git config user.name yonycalsin
+          git config user.email "helloyonycalsin@gmail.com"
 
-          git config user.email helloyonycalsin@gmail.com
+          git config user.name "Yony Calsin"
 
           git submodule init
 
