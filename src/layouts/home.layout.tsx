@@ -29,7 +29,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
             </p>
 
             <p>
-              <small>With NextJs, Typescript, TailwindCss, and Vercel</small>
+              <small>Built with Next.js, MDX, Tailwind and Vercel</small>
             </p>
           </div>
         </div>

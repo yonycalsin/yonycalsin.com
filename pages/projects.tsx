@@ -17,28 +17,37 @@ function ProjectsPage(props: ProjectsPageProps) {
   return (
     <HomeLayout>
       <Meta title="Proyectos" notRobots />
-      <h1>Proyectos ({workProjects.length}) </h1>
-      <p>
-        Aqui algunos de mis proyectos destacados. Véalos todos{' '}
-        <a href={socialLinks.GITHUB} target="blank">
-          en mi GitHub
-        </a>
-        .
-      </p>
-      <div className="timeline relative space-y-5">
-        {workProjects.map(work => (
-          <WorkItem
-            key={work.id}
-            title={work.name}
-            webHref={work.webUrl}
-            repositoryHref={work.repositoryUrl}
-            packageHref={work.packageUrl}
-            description={work.description}
-            tags={work.technologies}
-            startedAt={work.startedAt}
-          />
-        ))}
-      </div>
+      <article className="article">
+        <header>
+          <h1>Proyectos ({workProjects.length}) </h1>
+          <p>
+            Aqui algunos de mis proyectos destacados. Véalos todos{' '}
+            <a href={socialLinks.GITHUB} target="blank">
+              en mi GitHub
+            </a>
+            .
+          </p>
+        </header>
+        <ul
+          className="timeline relative space-y-5 lg:space-y-7"
+          style={{
+            listStyleType: 'none',
+          }}
+        >
+          {workProjects.map(work => (
+            <WorkItem
+              key={work.id}
+              title={work.name}
+              webHref={work.webUrl}
+              repositoryHref={work.repositoryUrl}
+              packageHref={work.packageUrl}
+              description={work.description}
+              tags={work.technologies}
+              startedAt={work.startedAt}
+            />
+          ))}
+        </ul>
+      </article>
     </HomeLayout>
   )
 }

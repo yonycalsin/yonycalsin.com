@@ -22,17 +22,19 @@ export function WorkItem(props: WorkItemProps) {
   const { tags = [], title, description, webHref, startedAt = new Date(), repositoryHref, packageHref } = props
 
   return (
-    <div className="border-r-8 border-transparent hover:border-gray-200 border-double">
+    <li className="border-r-8 border-transparent hover:border-gray-200 border-double">
       <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
         <div className="absolute right-9 whitespace-nowrap hidden lg:block">
-          <span className="italic">{dayjs(startedAt).format(dateFormat.PROJECT_DATE)}</span>
+          <span className="italic text-base">{dayjs(startedAt).format(dateFormat.PROJECT_DATE)}</span>
         </div>
         <Clock className="w-full h-full" />
       </div>
       <div className="ml-9">
-        <a href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank">
-          <h4 className="font-bold m-0 inline">{title}</h4>
-        </a>
+        <h4>
+          <a href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank">
+            {title}
+          </a>
+        </h4>
         <p>{description}</p>
         <div className="mb-3 flex gap-2 dark:invert">
           {webHref && (
@@ -45,7 +47,7 @@ export function WorkItem(props: WorkItemProps) {
             <a
               href={repositoryHref}
               target="_blank"
-              className="w-3 h-3 hover:scale-110"
+              className="w-3 h-3 hover:scale-110 hover:bg-transparent"
               title="Repository"
               rel="noreferrer"
             >
@@ -54,7 +56,13 @@ export function WorkItem(props: WorkItemProps) {
             </a>
           )}
           {packageHref && (
-            <a href={packageHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Package" rel="noreferrer">
+            <a
+              href={packageHref}
+              target="_blank"
+              className="w-3 h-3 hover:scale-110 hover:bg-transparent"
+              title="Package"
+              rel="noreferrer"
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://cdn-icons-png.flaticon.com/512/726/726546.png" className="w-3 h-3" alt="Package" />
             </a>
@@ -74,6 +82,6 @@ export function WorkItem(props: WorkItemProps) {
           ))}
         </div>
       </div>
-    </div>
+    </li>
   )
 }

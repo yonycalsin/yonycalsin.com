@@ -18,22 +18,69 @@ body {
 }
 
 a {
-  @apply text-base dark:text-gray-300 font-bold underline hover:text-primary;
+  @apply text-base no-underline dark:text-gray-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-extrabold dark:text-gray-400;
 }
 
 h1 {
-  @apply font-extrabold text-3xl dark:text-gray-400;
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+h5 {
+  @apply text-base;
+}
+
+h6 {
+  @apply text-sm;
+}
+
+blockquote,
+ol,
+ul,
+p,
+table,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-3;
 }
 
 p {
-  @apply text-base dark:text-gray-200;
-  @apply mb-2 mt-2;
+  @apply text-base dark:text-gray-400;
+}
+
+ul,
+li {
+  @apply dark:text-gray-400;
 }
 
 pre {
   @apply bg-gray-800 text-gray-200 overflow-x-auto rounded-lg;
+
   @apply p-1;
-  @apply mb-2 mt-2;
 }
 
 blockquote {
@@ -41,55 +88,31 @@ blockquote {
   @apply text-base;
   @apply border-l-4;
   @apply pl-2;
-  @apply mb-2 mt-2;
-  @apply dark:text-gray-300;
+  @apply dark:text-gray-400;
 }
 
 @screen lg {
-  a {
-    @apply text-xl;
-  }
-
-  h1 {
-    @apply text-7xl;
-  }
-
-  p {
-    @apply text-xl;
-    @apply mb-3 mt-3;
-  }
-
-  pre {
-    @apply text-xl;
-    @apply p-2;
-    @apply mb-3 mt-3;
-  }
-
+  a,
+  p,
+  li,
+  pre,
   blockquote {
     @apply text-xl;
-    @apply mb-3 mt-3;
-    @apply pl-2;
   }
-}
 
-@screen xl {
   h1 {
-    @apply text-7xl;
-  }
-
-  h2 {
     @apply text-5xl;
   }
 
-  h3 {
+  h2 {
     @apply text-4xl;
   }
 
-  h4 {
+  h3 {
     @apply text-3xl;
   }
 
-  h5 {
+  h4 {
     @apply text-2xl;
   }
 
@@ -97,21 +120,30 @@ blockquote {
     @apply text-xl;
   }
 
-  p {
-    @apply text-2xl;
-    @apply mb-4 mt-4;
+  h6 {
+    @apply text-lg;
   }
 
   pre {
-    @apply text-2xl;
-    @apply p-3;
-    @apply mb-4 mt-4;
+    @apply p-2;
   }
 
   blockquote {
-    @apply text-2xl;
-    @apply mb-4 mt-4;
-    @apply pl-3;
+    @apply pl-2;
+  }
+
+  blockquote,
+  ol,
+  ul,
+  p,
+  table,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-4;
   }
 }
 
@@ -382,4 +414,28 @@ pre[class*='language-'] {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
   }
+}
+
+/* Article Styles */
+
+.article ul,
+.article ol {
+  @apply list-inside;
+}
+
+.article ul {
+  @apply list-disc;
+}
+
+.article ol {
+  @apply list-decimal;
+}
+
+.article a {
+  @apply hover:bg-primary hover:text-white font-bold border-b-2 border-primary;
+}
+
+.article ul a,
+.article ol a {
+  @apply border-b-0;
 }

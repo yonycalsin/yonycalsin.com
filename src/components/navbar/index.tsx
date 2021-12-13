@@ -20,14 +20,14 @@ export const Navbar = () => {
               <div className="block h-3 w-3 mr-1 md:mr-2 md:h-4 md:w-4">
                 <Image src={JavascriptLogo} layout="intrinsic" width={32} height={32} priority alt="" />
               </div>
-              <h1 className="text-2xl text-gray">Yony Calsin</h1>
+              <h1 className="text-2xl text-gray m-0">Yony Calsin</h1>
             </a>
           </Link>
         </div>
 
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 font-medium">
           <Link href="/projects">
-            <a>Work</a>
+            <a>Proyectos</a>
           </Link>
           <Link href="/me">
             <a>Sobre Mi</a>

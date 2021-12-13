@@ -138,7 +138,9 @@ module.exports = {
             thead: {
               borderBottomColor: theme('colors.gray.200'),
             },
-            code: { color: theme('colors.secondary.500') },
+            code: {
+              color: theme('colors.secondary.500'),
+            },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false,
           },
