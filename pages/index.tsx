@@ -48,7 +48,7 @@ function HomePage(props: HomePageProps) {
             href={socialLinks.GITHUB}
             className="border border-transparent hover:border-primary-100 p-1 rounded-sm"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={github.src} alt="Github" className="h-2 md:h-3 filter dark:invert" />
@@ -57,7 +57,7 @@ function HomePage(props: HomePageProps) {
             href={socialLinks.LINKEDIN}
             className="hover:bg-primary-100 p-1 rounded-sm"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={linkedin.src} alt="Linkedin" className="h-2 md:h-3" />
