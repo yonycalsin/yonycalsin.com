@@ -12,7 +12,7 @@ export default function Home() {
         <header>
           <h1>Sobre Mi</h1>
           <blockquote>
-            <q>Desarrollador de software, creador de código abierto (OSS).</q>
+            <q>Desarrollador de software, open-sourcerer (OSS).</q>
           </blockquote>
         </header>
 

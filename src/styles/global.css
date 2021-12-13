@@ -17,6 +17,10 @@ body {
   @apply max-w-4xl mx-auto p-2 md:p-3;
 }
 
+.bg-transparent {
+  background: transparent !important;
+}
+
 a {
   @apply text-base no-underline dark:text-gray-300;
 }
