@@ -37,7 +37,7 @@ export default function Home() {
           <li>Escribo sobre GraphQL y Api REST.</li>
           <li>Creando mi blog con contentlayer, prisma, planetscale (MYSQL), y MDX.</li>
           <li>
-             Leyendo el libro{' '}
+            Leyendo el libro{' '}
             <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">
               Shape Up
             </a>{' '}

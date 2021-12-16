@@ -16,7 +16,7 @@
     "format": "npm run prettier -- --write",
     "lint": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
+    "prettier": "prettier \"**/*.{js,json,ts,tsx,scss,css,md}\"",
     "start": "next start",
     "storybook": "npm run storybook:clean && npm run storybook:dev",
     "storybook:build": "build-storybook -s public -o storybook-build",
