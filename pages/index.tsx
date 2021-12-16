@@ -6,9 +6,10 @@ import { useFeature } from 'toggled'
 
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
+import BlogPostList from '~/components/blog-post-list/blog-post-list'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
-import { dateFormat, socialLinks } from '~/utils/constants'
+import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
 
 // @ts-ignore
@@ -73,85 +74,20 @@ function HomePage(props: HomePageProps) {
         </div>
         {hasBlog && (
           <div className="mt-4">
-            <div className="flex justify-between">
-              <h2 className="text-h1 font-bold">Latest Articles</h2>
+            <div className="flex items-center justify-between">
+              <h4 className="mb-0">Latest Articles</h4>
               <Link href="/blog">
                 <a>View All</a>
               </Link>
             </div>
 
             <div className="mt-2">
-              {latestBlogs.map((post, index) => {
-                return (
-                  <Link href={`/blog/${post.slug}`} key={post._id}>
-                    <a
-                      className="flex items-center font-normal justify-between dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 px-2 py-1"
-                      style={{ textDecoration: 'none' }}
-                    >
-                      <h3 className="md:text-h3 no-underline">
-                        <span className="flex-shrink-0">{index + 1}.- </span> {post.title}
-                      </h3>
-                      <span className="text-h5">{dayjs(post.publishedAt).format(dateFormat.PROJECT_DATE)}</span>
-                    </a>
-                  </Link>
-                )
-              })}
+              <BlogPostList posts={latestBlogs} />
             </div>
           </div>
         )}
-        {!hasBlog && (
-          <div className="mt-4">
-            <div className="rehype-code-title">src/profile.json</div>
-            <pre className="language-json">
-              <code className="language-json code-highlight">
-                {/* @ts-ignore */}
-                <span className="code-line line-number" line="1">
-                  <span className="token punctuation">{'{'}</span>
-                  {'\n'}
-                </span>
-                {/* @ts-ignore */}
-                <span className="code-line line-number highlight-line" line="2">
-                  {'  '}
-                  <span className="token property">{'"nombre"'}</span>
-                  <span className="token operator">:</span> <span className="token string">{'"Yony Calsin"'}</span>
-                  <span className="token punctuation">,</span>
-                  {'\n'}
-                </span>
-                {/* @ts-ignore */}
-                <span className="code-line line-number" line="3">
-                  {'  '}
-                  <span className="token property">{'"usuario"'}</span>
-                  <span className="token operator">:</span> <span className="token string">{'"@yonycalsin"'}</span>
-                  <span className="token punctuation">,</span>
-                  {'\n'}
-                </span>
-                {/* @ts-ignore */}
-                <span className="code-line line-number highlight-line" line="4">
-                  {'  '}
-                  <span className="token property">{'"rol"'}</span>
-                  <span className="token operator">:</span>{' '}
-                  <span className="token string">{'"Ingeniero Frontend"'}</span>
-                  <span className="token punctuation">,</span>
-                  {'\n'}
-                </span>
-                {/* @ts-ignore */}
-                <span className="code-line line-number" line="5">
-                  {'  '}
-                  <span className="token property">{'"país"'}</span>
-                  <span className="token operator">:</span> <span className="token string">{'"Peru"'}</span>
-                  {'\n'}
-                </span>
-                {/* @ts-ignore */}
-                <span className="code-line line-number" line="6">
-                  <span className="token punctuation">{'}'}</span>
-                  {'\n'}
-                </span>
-              </code>
-            </pre>
-          </div>
-        )}
 
-        <div className="grid lg:grid-cols-2 gap-2">
+        <div className="grid lg:grid-cols-2 gap-2 mt-4">
           {[
             {
               phrase: 'Hazlo simple: tan simple como sea posible, pero no más.',
