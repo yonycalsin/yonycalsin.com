@@ -435,7 +435,7 @@ pre[class*='language-'] {
   @apply list-decimal;
 }
 
-.article a {
+.article a:not(.not) {
   @apply hover:bg-primary hover:text-white font-bold border-b-2 border-primary;
 }
 

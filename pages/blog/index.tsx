@@ -1,6 +1,7 @@
 import type { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
 
+import BlogPostList from '~/components/blog-post-list/blog-post-list'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 
@@ -27,21 +28,7 @@ function BlogPage(props: BlogPageProps) {
           Tutoriales, artículos técnicos, fragmentos, materiales de referencia y todos los recursos relacionados con el
           desarrollo que he escrito.
         </p>
-        {allPosts.map((post, index) => {
-          return (
-            <Link href={`/blog/${post.slug}`} key={post._id}>
-              <a
-                className="flex items-center font-normal justify-between dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 px-2 py-1"
-                style={{ textDecoration: 'none' }}
-              >
-                <h3 className="md:text-h3 no-underline">
-                  <span className="flex-shrink-0">{index + 1}.- </span> {post.title}
-                </h3>
-                <span className="text-h5">{post.readingTime.text}</span>
-              </a>
-            </Link>
-          )
-        })}
+        <BlogPostList posts={allPosts} />
       </HomeLayout>
     </>
   )
