@@ -1,6 +1,7 @@
 // @ts-ignore
 import Link from 'next/link'
 
+// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 interface BlogPostListProps {
