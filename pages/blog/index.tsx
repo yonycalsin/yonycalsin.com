@@ -1,7 +1,6 @@
 import type { GetStaticPropsResult } from 'next'
-import Link from 'next/link'
 
-import BlogPostList from '~/components/blog-post-list/blog-post-list'
+import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { HomeLayout } from '~/layouts'
 
@@ -28,7 +27,7 @@ function BlogPage(props: BlogPageProps) {
           Tutoriales, artículos técnicos, fragmentos, materiales de referencia y todos los recursos relacionados con el
           desarrollo que he escrito.
         </p>
-        <BlogPostList posts={allPosts} />
+        <BlogPosts title="All Articles" posts={allPosts} className="mt-4" />
       </HomeLayout>
     </>
   )

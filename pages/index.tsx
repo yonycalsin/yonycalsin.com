@@ -1,12 +1,11 @@
 import * as React from 'react'
 import type { GetStaticPropsResult } from 'next'
-import Link from 'next/link'
 import { useFeature } from 'toggled'
 
 import motivationQuotes from '~/assets/data/motivation-quotes.json'
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
-import BlogPostList from '~/components/blog-post-list/blog-post-list'
+import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
 import { HomeLayout } from '~/layouts'
@@ -74,18 +73,13 @@ function HomePage(props: HomePageProps) {
           </div>
         </div>
         {hasBlog && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between">
-              <h4 className="mb-0">Latest Articles</h4>
-              <Link href="/blog">
-                <a>View All</a>
-              </Link>
-            </div>
-
-            <div className="mt-2">
-              <BlogPostList posts={latestBlogs} />
-            </div>
-          </div>
+          <BlogPosts
+            title="Latest Articles"
+            actionHref="/blog"
+            actionLabel="View All"
+            posts={latestBlogs}
+            className="mt-4"
+          />
         )}
         <QuoteList className="mt-4" quotes={motivationQuotes} />
       </article>

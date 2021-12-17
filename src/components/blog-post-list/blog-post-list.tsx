@@ -4,7 +4,7 @@ import Link from 'next/link'
 // @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
-interface BlogPostListProps {
+export interface BlogPostListProps {
   posts: Blog[]
 }
 
