@@ -1,13 +1,14 @@
 import * as React from 'react'
-import dayjs from 'dayjs'
 import type { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
 import { useFeature } from 'toggled'
 
+import motivationQuotes from '~/assets/data/motivation-quotes.json'
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
 import BlogPostList from '~/components/blog-post-list/blog-post-list'
 import { Meta } from '~/components/meta'
+import { QuoteList } from '~/components/quotes/quote-list'
 import { HomeLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
@@ -86,37 +87,7 @@ function HomePage(props: HomePageProps) {
             </div>
           </div>
         )}
-
-        <div className="grid lg:grid-cols-2 gap-2 mt-4">
-          {[
-            {
-              phrase: 'Hazlo simple: tan simple como sea posible, pero no más.',
-              author: 'Albert Einstein',
-            },
-            {
-              phrase:
-                'Los programadores de verdad no documentan. Si fue difícil de escribir, debe ser difícil de entender.',
-              author: 'Anónimo',
-            },
-            {
-              phrase: 'La constancia es la madre del dominio.',
-              author: 'Yony Calsin',
-            },
-            {
-              phrase:
-                'El hardware es aquello a lo que puedes dar patadas. Software es aquello a lo que sólo puedes insultar.',
-              author: 'Anónimo',
-            },
-          ].map((quote: any) => (
-            <div key={quote.phrase}>
-              <blockquote>
-                {quote.phrase}
-                <br />
-                <b>— {quote.author}</b>
-              </blockquote>
-            </div>
-          ))}
-        </div>
+        <QuoteList className="mt-4" quotes={motivationQuotes} />
       </article>
     </HomeLayout>
   )

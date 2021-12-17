@@ -1,15 +1,15 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useFeature, useFlagQuery } from 'toggled'
+import { useFlag } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import Features from '~/utils/features-flags'
 
 export const Navbar = () => {
-  const hasResume = useFeature(Features.RESUME)
+  const hasResume = useFlag(Features.RESUME)
 
-  const hasBlog = useFeature(Features.BLOG)
+  const hasBlog = useFlag(Features.BLOG)
 
   return (
     <div className="dark:bg-gray-900 shadow-sm">
