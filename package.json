@@ -10,7 +10,7 @@
     "boot": "npm run clean  && npm run build && npm run start",
     "build": "next build",
     "check:format": "npm run prettier -- --list-different",
-    "clean": "rimraf .next && rimraf node_modules/.contentlayer",
+    "clean": "rimraf -rf .next node_modules/.contentlayer .vercel",
     "contentlayer:build": "./node_modules/.bin/contentlayer build",
     "dev": " next dev",
     "format": "npm run prettier -- --write",
