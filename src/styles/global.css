@@ -439,7 +439,7 @@ pre[class*='language-'] {
   @apply hover:bg-primary hover:text-white font-bold border-b-2 border-primary;
 }
 
-.article ul a,
-.article ol a {
+.article ul a:not(.not),
+.article ol a:not(.not) {
   @apply border-b-0;
 }

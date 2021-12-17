@@ -10,6 +10,7 @@ const env = {
    */
   FF_RESUME: process.env.FF_RESUME ? JSON.parse(process.env.FF_RESUME) : null,
   FF_BLOG: process.env.FF_BLOG ? JSON.parse(process.env.FF_BLOG) : null,
+  FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS ? JSON.parse(process.env.FF_OSS_PROJECTS) : null,
 }
 
 export default env

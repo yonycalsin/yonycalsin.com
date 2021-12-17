@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { IdProvider } from '@radix-ui/react-id'
 import { useRouter } from 'next/dist/client/router'
 import type { AppProps } from 'next/dist/shared/lib/router/router'
 import NProgress from 'nprogress'
@@ -24,6 +25,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (env.FF_BLOG) {
       data.push({
         slug: Features.BLOG,
+      })
+    }
+
+    if (env.FF_OSS_PROJECTS) {
+      data.push({
+        slug: Features.OSS_PROJECTS,
       })
     }
 
@@ -54,9 +61,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router])
 
   return (
-    <FeatureProvider features={features}>
-      <Component {...pageProps} />
-    </FeatureProvider>
+    <IdProvider>
+      <FeatureProvider features={features}>
+        <Component {...pageProps} />
+      </FeatureProvider>
+    </IdProvider>
   )
 }
 

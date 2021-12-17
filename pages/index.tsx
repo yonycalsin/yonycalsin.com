@@ -1,13 +1,16 @@
 import * as React from 'react'
 import type { GetStaticPropsResult } from 'next'
-import { useFeature } from 'toggled'
+import { useFlag } from 'toggled'
 
 import motivationQuotes from '~/assets/data/motivation-quotes.json'
+import openSourceProjects from '~/assets/data/open-source-projects.json'
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
+import { Section } from '~/components/section/section'
+import { SectionHeader } from '~/components/section/section-header'
 import { HomeLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
@@ -26,10 +29,12 @@ interface HomePageProps {
 function HomePage(props: HomePageProps) {
   const { latestBlogs } = props
 
-  const hasBlog = useFeature(Features.BLOG)
+  const hasBlog = useFlag(Features.BLOG)
+
+  const hasOssProjects = useFlag(Features.OSS_PROJECTS)
 
   return (
-    <HomeLayout isStandaloneBrand>
+    <HomeLayout>
       <Meta />
       <article className="article">
         <header>
@@ -74,14 +79,46 @@ function HomePage(props: HomePageProps) {
         </div>
         {hasBlog && (
           <BlogPosts
-            title="Latest Articles"
+            title="Últimos artículos"
             actionHref="/blog"
-            actionLabel="View All"
+            actionLabel="Ver Todo"
             posts={latestBlogs}
             className="mt-4"
           />
         )}
-        <QuoteList className="mt-4" quotes={motivationQuotes} />
+        {hasOssProjects && (
+          <Section>
+            <SectionHeader
+              title="Proyectos de código abierto"
+              actionLabel="Ver todo"
+              actionHref={socialLinks.GITHUB}
+              actionHrefExternal
+            />
+            <div className="mt-3 space-y-2">
+              {openSourceProjects.map(project => (
+                <div key={project.name}>
+                  <div className="flex justify-between mb-1">
+                    <p className="md:text-h4 mb-0 text-gray-500 font-bold">{project.name}</p>
+                    <a
+                      className="md:text-base mb-0 text-gray-500 "
+                      href={project.repositoryUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="hidden md:block">Codigo Fuente</span>
+                      <span className="block md:hidden">Ver</span>
+                    </a>
+                  </div>
+                  <p className="mb-0 text-base">{project.summary}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+        <Section>
+          <SectionHeader title="Citas" />
+          <QuoteList className="mt-3" quotes={motivationQuotes} />
+        </Section>
       </article>
     </HomeLayout>
   )

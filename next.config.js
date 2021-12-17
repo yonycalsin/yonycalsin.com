@@ -8,6 +8,7 @@ module.exports = withContentlayer()({
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
     FF_RESUME: process.env.FF_RESUME,
     FF_BLOG: process.env.FF_BLOG,
+    FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,
   },
   swcMinify: true,
   async rewrites() {

@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { SectionHeader } from '../section/section-header'
+
 import BlogPostList from './blog-post-list'
 // @ts-ignore
 import type { Blog } from '.contentlayer/types'
@@ -17,14 +19,7 @@ export function BlogPosts(props: BlogPostsProps) {
 
   return (
     <div className={className}>
-      <div className="flex items-center justify-between">
-        <h4 className="mb-0">{title}</h4>
-        {actionHref ? (
-          <Link href={actionHref}>
-            <a>{actionLabel}</a>
-          </Link>
-        ) : null}
-      </div>
+      <SectionHeader title={title} actionHref={actionHref} actionLabel={actionLabel} actionComponent={Link} />
       <div className="mt-2">
         <BlogPostList posts={posts} />
       </div>
