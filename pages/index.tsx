@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type { GetStaticPropsResult } from 'next'
+import Link from 'next/link'
 import { useFlag } from 'toggled'
 
 import motivationQuotes from '~/assets/data/motivation-quotes.json'
@@ -7,6 +8,7 @@ import openSourceProjects from '~/assets/data/open-source-projects.json'
 import github from '~/assets/images/github.svg'
 import linkedin from '~/assets/images/linkedin.svg'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
+import { Button } from '~/components/button'
 import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
@@ -40,42 +42,17 @@ function HomePage(props: HomePageProps) {
         <header>
           <div className="text-center">
             <h1 className="dark:text-white hidden md:block">Hola, soy Yony.</h1>
-            <p className="text-gray-500">
-              <i>
-                Full Stack React/Node Engineer en{' '}
-                <a href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
-                  Riqra
-                </a>
-              </i>
-            </p>
           </div>
         </header>
         <div className="text-center break-words">
           <p className="lead dark:text-gray-100">
-            Soy desarrollador de software <b>autodidacta</b>. Me encanta crear proyectos de código abierto y compartir
-            lo que aprendo. Este sitio web es mi patio digital, un compendio de las cosas que he aprendido y creado a lo
-            largo de los años.
+            Soy un desarrollador de software <b>autodidacta</b> que actualmente trabaja en Riqra. Este es mi sitio web
+            personal - donde encontrarás todas las cosas que he aprendido y creado a lo largo de los años
           </p>
-          <div className="flex items-center justify-center space-x-1">
-            <a
-              href={socialLinks.GITHUB}
-              className="p-1 rounded-sm bg-transparent"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={github.src} alt="Github" className="h-2 filter dark:invert" />
-            </a>
-            <a
-              href={socialLinks.LINKEDIN}
-              className="p-1 rounded-sm bg-transparent"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={linkedin.src} alt="Linkedin" className="h-2" />
-            </a>
-          </div>
+          {/* eslint-disable-next-line @next/next/link-passhref */}
+          <Link href="/me">
+            <Button variant="light">Más sobre mí</Button>
+          </Link>
         </div>
         {hasBlog && (
           <BlogPosts

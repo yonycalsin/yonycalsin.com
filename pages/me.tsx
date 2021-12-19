@@ -25,6 +25,11 @@ export default function Home() {
           quiera mostrar al mundo.
         </p>
 
+        <p>
+          Me encanta crear proyectos de código abierto y compartir lo que aprendo. Este sitio web es mi patio digital,
+          un compendio de las cosas que he aprendido y creado a lo largo de los años.
+        </p>
+
         <h3>Lo que estoy haciendo ahora</h3>
 
         <ul>
