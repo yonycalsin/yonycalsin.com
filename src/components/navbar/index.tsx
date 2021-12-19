@@ -12,7 +12,7 @@ export const Navbar = () => {
   const hasBlog = useFlag(Features.BLOG)
 
   return (
-    <div className="dark:bg-gray-900 shadow-sm">
+    <div className="shadow-sm sticky top-0 backdrop-filter backdrop-grayscale backdrop-blur-md">
       <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
         <div>
           <Link href="/">
@@ -20,7 +20,7 @@ export const Navbar = () => {
               <div className="block h-3 w-3 mr-1 md:mr-2 md:h-4 md:w-4">
                 <Image src={JavascriptLogo} layout="intrinsic" width={32} height={32} priority alt="" />
               </div>
-              <h1 className="text-2xl text-gray m-0">Yony Calsin</h1>
+              <h1 className="text-lg md:text-2xl text-gray m-0">Yony Calsin</h1>
             </a>
           </Link>
         </div>
