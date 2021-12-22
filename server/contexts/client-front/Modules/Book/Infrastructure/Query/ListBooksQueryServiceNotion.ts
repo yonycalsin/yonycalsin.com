@@ -1,4 +1,3 @@
-import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import _ from 'lodash'
 
 import type Criteria from '~/server/contexts/shared/Modules/Shared/Application/Criteria/Criteria'
@@ -38,7 +37,7 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
         author: _.head<any>(properties['Author'].rich_text).plain_text,
         tags: _.map(properties['Tags'].multi_select, 'name'),
         images: _.map(properties['Images'].files, file => ({
-          name: FileSystemFileEntry.name,
+          name: file.name,
           url: file.file.url,
         })),
         createdAt: new Date(item.created_time),
