@@ -29,6 +29,7 @@
     "vercel-build": "prisma generate && TZ=utc sh ./scripts/vercel-submodule-workaround.sh && next build"
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.11",
     "@prisma/client": "^3.5.0",
     "@radix-ui/react-id": "^0.1.4",
     "@tailwindcss/typography": "^0.4.1",

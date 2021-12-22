@@ -9,6 +9,7 @@ module.exports = withContentlayer()({
     FF_RESUME: process.env.FF_RESUME,
     FF_BLOG: process.env.FF_BLOG,
     FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,
+    FF_BOOKS: process.env.FF_BOOKS,
   },
   swcMinify: true,
   async rewrites() {
