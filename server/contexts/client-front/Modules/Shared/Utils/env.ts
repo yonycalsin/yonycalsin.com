@@ -8,6 +8,11 @@ const env = {
    * Authentication
    */
   AUTH_JWT_SECRET: Buffer.from(process.env.AUTH_JWT_SECRET as string, 'base64'),
+
+  /**
+   * Databases
+   */
+  BOOKS_NOTION_TOKEN: process.env.BOOKS_NOTION_TOKEN,
 }
 
 export default env
