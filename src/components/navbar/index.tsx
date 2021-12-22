@@ -12,7 +12,7 @@ export const Navbar = () => {
   const hasBlog = useFlag(Features.BLOG)
 
   return (
-    <div className="shadow-sm sticky top-0 backdrop-filter backdrop-grayscale backdrop-blur-md">
+    <div className="shadow-sm sticky top-0 backdrop-filter backdrop-grayscale backdrop-blur-md z-10">
       <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
         <div>
           <Link href="/">
