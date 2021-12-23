@@ -11,6 +11,8 @@ export const Navbar = () => {
 
   const hasBlog = useFlag(Features.BLOG)
 
+  const hasBooks = useFlag(Features.BOOKS)
+
   return (
     <div className="shadow-sm sticky top-0 backdrop-filter backdrop-grayscale backdrop-blur-md z-10">
       <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
@@ -35,6 +37,11 @@ export const Navbar = () => {
           {hasBlog && (
             <Link href="/blog">
               <a>Blog</a>
+            </Link>
+          )}
+          {hasBooks && (
+            <Link href="/books">
+              <a>Books</a>
             </Link>
           )}
           {hasResume && (

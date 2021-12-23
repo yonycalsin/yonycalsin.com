@@ -45,6 +45,7 @@ module.exports = {
         allow: ['warn', 'error'],
       },
     ],
+    '@next/next/no-img-element': 'off',
   },
   overrides: [
     {
