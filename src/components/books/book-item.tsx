@@ -16,7 +16,7 @@ export function BookItem(props: BookItemProps) {
       <div>
         <h5 className="mb-1">{name}</h5>
         <p className="mb-1 text-gray-400">{author}</p>
-        <span className="text-sm">(Reviews {rating})</span>
+        <span className="text-sm">(Rating {rating})</span>
       </div>
     </div>
   )

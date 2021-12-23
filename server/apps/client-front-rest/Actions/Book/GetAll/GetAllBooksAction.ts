@@ -28,6 +28,7 @@ class GetAllBooksAction implements Action {
     const query = new ListBooksQuery({
       page: values.page,
       limit: values.limit,
+      status: values.status,
     })
 
     const result = await this.listBooksQueryHandler.handle(query)

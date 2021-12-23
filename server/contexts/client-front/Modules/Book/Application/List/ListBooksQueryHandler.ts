@@ -16,7 +16,9 @@ class ListBooksQueryHandler implements QueryHandler<ListBooksPaginationDto, List
   }
 
   public async handle(query: ListBooksQuery): Promise<ListBooksPaginationDto> {
-    const filtering = CriteriaFiltering.create<ListBooksCriteriaFilteringFields>({})
+    const filtering = CriteriaFiltering.create<ListBooksCriteriaFilteringFields>({
+      status: query.getStatus(),
+    })
 
     const pagination = new PaginationOffset(query.getPage(), query.getLimit())
 

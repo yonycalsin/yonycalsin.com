@@ -5,11 +5,13 @@ import Validator from '../../Validator'
 interface Payload {
   page: number
   limit: number
+  status: string
 }
 
 const Schema: Joi.ObjectSchema<Payload> = Joi.object({
   page: Joi.number().integer().positive(),
   limit: Joi.number().integer().positive(),
+  status: Joi.string().trim(),
 })
 
 class GetAllBooksActionValidator extends Validator<Payload> {

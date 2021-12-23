@@ -3,6 +3,7 @@ import type Query from '~/server/contexts/shared/Modules/Shared/Application/Quer
 interface ListBooksQueryProps {
   page?: number
   limit?: number
+  status?: string
 }
 
 class ListBooksQuery implements Query {
@@ -10,10 +11,14 @@ class ListBooksQuery implements Query {
 
   private readonly limit: number | undefined
 
+  private readonly status: string | undefined
+
   public constructor(props: ListBooksQueryProps) {
     this.page = props.page
 
     this.limit = props.limit
+
+    this.status = props.status
   }
 
   public getPage(): number | undefined {
@@ -22,6 +27,10 @@ class ListBooksQuery implements Query {
 
   public getLimit(): number | undefined {
     return this.limit
+  }
+
+  public getStatus(): string | undefined {
+    return this.status
   }
 }
 

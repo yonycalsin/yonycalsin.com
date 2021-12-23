@@ -19,8 +19,24 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
   public async execute(criteria: Criteria<ListBooksCriteriaFilteringFields>): Promise<ListBooksPaginationDto> {
     const pagination = criteria.getPagination()
 
+    const filteringFields = criteria.getFilterFields()
+
+    const filter = {
+      and: [],
+    } as any
+
+    if (!_.isNil(filteringFields.status)) {
+      filter.and.push({
+        property: 'Status',
+        select: {
+          equals: 'Published',
+        },
+      })
+    }
+
     const response = await this.sdkClientNotion.getClient().databases.query({
       database_id: env.BOOKS_NOTION_ID,
+      filter,
     })
 
     pagination.setTotal(response.results.length)

@@ -13,9 +13,11 @@ interface BooksPageProps {
 }
 
 function BooksPage() {
-  const response = useQuery<BookQueryWithMeta>('/books', {
+  const allBooksResponse = useQuery<BookQueryWithMeta>('/books', {
     staleTime: Infinity,
   })
+
+  const readingBooksResponse = useQuery<BookQueryWithMeta>(['/books', { status: 'Reading' }], { staleTime: Infinity })
 
   return (
     <HomeLayout>
@@ -25,8 +27,25 @@ function BooksPage() {
           <h1>Libros</h1>
           <p>Esta página contiene los libros que me gustan con mis notas, resaltados y reseñas.</p>
         </header>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3">
-          {response.data?.data.map((book: Book) => (
+
+        <h3>Actualmente leyendo</h3>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-2">
+          {readingBooksResponse.data?.data.map((book: Book) => (
+            <BookItem
+              key={book.id}
+              name={book.name}
+              imageSrc={book.images[0].url}
+              author={book.author}
+              rating={book.rating}
+            />
+          ))}
+        </div>
+
+        <h3>Todos los libros</h3>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-2">
+          {allBooksResponse.data?.data.map((book: Book) => (
             <BookItem
               key={book.id}
               name={book.name}
@@ -50,9 +69,9 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
     },
   })
 
-  await queryClient.prefetchQuery<BookQueryWithMeta>('/books', {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<BookQueryWithMeta>('/books', { staleTime: Infinity })
+
+  await queryClient.prefetchQuery<BookQueryWithMeta>(['/books', { status: 'Reading' }], { staleTime: Infinity })
 
   return {
     props: {
