@@ -58,6 +58,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
     props: {
       dehydratedState: dehydrate(queryClient),
     },
+    revalidate: 10,
   }
 }
 
