@@ -29,7 +29,7 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
       filter.and.push({
         property: 'Status',
         select: {
-          equals: 'Published',
+          equals: filteringFields.status,
         },
       })
     }
