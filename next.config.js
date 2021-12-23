@@ -6,6 +6,7 @@ module.exports = withContentlayer()({
   env: {
     APP_ENV: process.env.APP_ENV,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
+    API_BASE_URL: process.env.API_BASE_URL,
     FF_RESUME: process.env.FF_RESUME,
     FF_BLOG: process.env.FF_BLOG,
     FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,

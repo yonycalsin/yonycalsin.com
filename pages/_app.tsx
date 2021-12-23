@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { IdProvider } from '@radix-ui/react-id'
 import { useRouter } from 'next/dist/client/router'
 import type { AppProps } from 'next/dist/shared/lib/router/router'
@@ -34,6 +35,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_BOOKS) {
+      data.push({
+        slug: Features.BOOKS,
+      })
+    }
+
     return data
   }, [])
 
@@ -60,12 +67,18 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router])
 
+  const [queryClient] = React.useState(() => new QueryClient())
+
   return (
-    <IdProvider>
-      <FeatureProvider features={features}>
-        <Component {...pageProps} />
-      </FeatureProvider>
-    </IdProvider>
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <IdProvider>
+          <FeatureProvider features={features}>
+            <Component {...pageProps} />
+          </FeatureProvider>
+        </IdProvider>
+      </Hydrate>
+    </QueryClientProvider>
   )
 }
 

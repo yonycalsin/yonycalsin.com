@@ -3,6 +3,7 @@ const env = {
   GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   IS_ENV_DEV: process.env.NODE_ENV === 'development',
   IS_ENV_PROD: process.env.NODE_ENV === 'production',
+  API_BASE_URL: process.env.API_BASE_URL,
 
   /**
    * Feature Flags
@@ -11,6 +12,7 @@ const env = {
   FF_RESUME: process.env.FF_RESUME ? JSON.parse(process.env.FF_RESUME) : null,
   FF_BLOG: process.env.FF_BLOG ? JSON.parse(process.env.FF_BLOG) : null,
   FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS ? JSON.parse(process.env.FF_OSS_PROJECTS) : null,
+  FF_BOOKS: process.env.FF_BOOKS ? JSON.parse(process.env.FF_BOOKS) : null,
 }
 
 export default env

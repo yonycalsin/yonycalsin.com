@@ -29,6 +29,7 @@
     "vercel-build": "prisma generate && TZ=utc sh ./scripts/vercel-submodule-workaround.sh && next build"
   },
   "dependencies": {
+    "@chaitin/querystring": "^1.1.0",
     "@notionhq/client": "^0.4.11",
     "@prisma/client": "^3.5.0",
     "@radix-ui/react-id": "^0.1.4",
@@ -58,6 +59,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.20.2",
+    "react-query": "^3.34.5",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.0",
     "rehype-code-titles": "^1.0.3",
