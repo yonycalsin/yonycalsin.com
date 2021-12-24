@@ -14,7 +14,7 @@ export const Navbar = () => {
   const hasBooks = useFlag(Features.BOOKS)
 
   return (
-    <div className="shadow-sm sticky top-0 backdrop-filter backdrop-grayscale backdrop-blur-md z-10">
+    <div className="shadow-sm sticky top-0 backdrop-blur-lg z-10">
       <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
         <div>
           <Link href="/">

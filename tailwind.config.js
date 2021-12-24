@@ -10,14 +10,7 @@ const spacing = Object.assign({}, getSpacing(25))
  * @type import("tailwindcss/tailwind-config").TailwindConfig
  */
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.tsx'],
-    options: {
-      keyframes: true,
-      fontFace: true,
-    },
-  },
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.tsx'],
   darkMode: 'class',
   theme: {
     colors: {
@@ -188,13 +181,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    extend: {
-      rotate: ['dark'],
-      filter: ['dark'],
-    },
-    typography: ['dark'],
   },
   corePlugins: {
     float: false,
