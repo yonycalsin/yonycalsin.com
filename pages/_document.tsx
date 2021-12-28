@@ -42,7 +42,7 @@ function MyDocument() {
         />
         {isProduction && <HeadScripts />}
       </Head>
-      <body className="dark:bg-gray-900">
+      <body>
         <Main />
         <NextScript />
       </body>

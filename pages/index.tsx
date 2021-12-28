@@ -5,8 +5,6 @@ import { useFlag } from 'toggled'
 
 import motivationQuotes from '~/assets/data/motivation-quotes.json'
 import openSourceProjects from '~/assets/data/open-source-projects.json'
-import github from '~/assets/images/github.svg'
-import linkedin from '~/assets/images/linkedin.svg'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Button } from '~/components/button'
 import { Meta } from '~/components/meta'
@@ -39,12 +37,8 @@ function HomePage(props: HomePageProps) {
     <MainLayout>
       <Meta />
       <article className="article">
-        <header>
-          <div className="text-center">
-            <h1 className="dark:text-white hidden md:block">Hola, soy Yony.</h1>
-          </div>
-        </header>
-        <div className="text-center break-words">
+        <div className="break-words">
+          <h2 className="dark:text-white">Hola, soy Yony.</h2>
           <p className="lead dark:text-gray-100">
             Soy un desarrollador de software <b>autodidacta</b> que actualmente trabaja en Riqra. Este es mi sitio web
             personal - donde encontrarás todas las cosas que he aprendido y creado a lo largo de los años

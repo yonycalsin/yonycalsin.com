@@ -4,7 +4,11 @@
 
 body {
   overflow-y: scroll;
+
   @apply text-gray-700;
+
+  @apply bg-white dark:bg-gray-900;
+
   font-family: Archia, Wotfard, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }

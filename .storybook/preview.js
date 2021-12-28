@@ -14,16 +14,16 @@ export const parameters = {
     theme,
   },
   backgrounds: {
-    default: 'light',
+    disable: true,
   },
   themes: {
-    clearable: false,
+    default: 'Light',
+    target: 'html',
     list: [
       {
         name: 'Light',
-        class: [],
+        class: ['light'],
         color: '#ffffff',
-        default: true,
       },
       {
         name: 'Dark',

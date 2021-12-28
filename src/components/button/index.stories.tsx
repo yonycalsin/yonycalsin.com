@@ -18,13 +18,13 @@ Default.args = {
 export const Disabled = Template.bind({})
 
 Disabled.args = {
-  children: 'Click Me',
+  children: 'Click Me!',
   isDisabled: true,
 }
 
 export const FullWidth = Template.bind({})
 
 FullWidth.args = {
-  children: 'Click Me',
+  children: 'Click Me!',
   isFullWidth: true,
 }
