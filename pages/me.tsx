@@ -17,7 +17,7 @@ export default function Home() {
         </header>
 
         <p>
-          Hola, soy Yony. Soy una desarrollador de software <b>autodidacta</b> que trabaja en{' '}
+          Hola, soy Yony. Soy un desarrollador de software <b>autodidacta</b> que trabaja en{' '}
           <a href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
             Riqra
           </a>
