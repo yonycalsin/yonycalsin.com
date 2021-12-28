@@ -5,7 +5,7 @@ import type { GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import { createQueryFn } from '~/clients/query-client'
 import { BookItem } from '~/components/books/book-item'
 import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
 
 interface BooksPageProps {
@@ -20,7 +20,7 @@ function BooksPage() {
   const readingBooksResponse = useQuery<BookQueryWithMeta>(['/books', { status: 'Reading' }], { staleTime: Infinity })
 
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta title="Libros" />
       <article className="article">
         <header>
@@ -56,7 +56,7 @@ function BooksPage() {
           ))}
         </div>
       </article>
-    </HomeLayout>
+    </MainLayout>
   )
 }
 

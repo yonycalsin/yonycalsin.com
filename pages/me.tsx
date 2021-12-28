@@ -1,11 +1,11 @@
 import * as React from 'react'
 
 import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 
 export default function Home() {
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta title="Sobre Mi" />
 
       <article className="article">
@@ -134,6 +134,6 @@ export default function Home() {
           <li>etc...</li>
         </ul>
       </article>
-    </HomeLayout>
+    </MainLayout>
   )
 }

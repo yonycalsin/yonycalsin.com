@@ -6,7 +6,7 @@ import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 import { Button } from '~/components/button'
 import { FieldText } from '~/components/field-text'
 import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 import cookielib from '~/lib/cookielib'
 import { cookieNames, socialLinks } from '~/utils/constants'
 import formConstraints from '~/utils/form-constraints'
@@ -68,7 +68,7 @@ function ResumePage(props: ResumePageProps) {
 
   if (hasGuestSessionToken) {
     return (
-      <HomeLayout>
+      <MainLayout>
         <Meta title="Resume" notRobots />
         <div className="max-w-xl mx-auto flex flex-col items-center mt-3 ">
           <h1>¡Resume!</h1>
@@ -107,12 +107,12 @@ function ResumePage(props: ResumePageProps) {
             </Button>
           </div>
         </div>
-      </HomeLayout>
+      </MainLayout>
     )
   }
 
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta title="Resume - Yony Calsin" notRobots />
       <div className="max-w-xl mx-auto mt-3">
         <h1>Ingresa tu email</h1>
@@ -125,7 +125,7 @@ function ResumePage(props: ResumePageProps) {
           </Button>
         </form>
       </FormProvider>
-    </HomeLayout>
+    </MainLayout>
   )
 }
 

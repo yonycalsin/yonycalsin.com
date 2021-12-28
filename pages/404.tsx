@@ -2,11 +2,11 @@ import * as React from 'react'
 import Head from 'next/head'
 
 import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 
 const NotFoundPage = () => {
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta title="Page not found - Yony Calsin" notRobots />
 
       <div className="my-5">
@@ -14,7 +14,7 @@ const NotFoundPage = () => {
           <h1 className="text-center my-5">Page Not Found</h1>
         </div>
       </div>
-    </HomeLayout>
+    </MainLayout>
   )
 }
 

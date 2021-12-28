@@ -3,7 +3,7 @@ import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
 import { WorkItem } from '~/components/work-item/work-item'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
 import { socialLinks } from '~/utils/constants'
 
@@ -15,7 +15,7 @@ function ProjectsPage(props: ProjectsPageProps) {
   const { workProjects = [] } = props
 
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta title="Proyectos" notRobots />
       <article className="article">
         <header>
@@ -48,7 +48,7 @@ function ProjectsPage(props: ProjectsPageProps) {
           ))}
         </ul>
       </article>
-    </HomeLayout>
+    </MainLayout>
   )
 }
 

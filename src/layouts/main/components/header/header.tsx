@@ -6,7 +6,7 @@ import { useFlag } from 'toggled'
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import Features from '~/utils/features-flags'
 
-export const Navbar = () => {
+export const Header = () => {
   const hasResume = useFlag(Features.RESUME)
 
   const hasBlog = useFlag(Features.BLOG)

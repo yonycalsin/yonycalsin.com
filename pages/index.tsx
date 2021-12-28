@@ -13,7 +13,7 @@ import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
 
@@ -36,7 +36,7 @@ function HomePage(props: HomePageProps) {
   const hasOssProjects = useFlag(Features.OSS_PROJECTS)
 
   return (
-    <HomeLayout>
+    <MainLayout>
       <Meta />
       <article className="article">
         <header>
@@ -97,7 +97,7 @@ function HomePage(props: HomePageProps) {
           <QuoteList className="mt-3" quotes={motivationQuotes} />
         </Section>
       </article>
-    </HomeLayout>
+    </MainLayout>
   )
 }
 

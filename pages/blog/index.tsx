@@ -2,7 +2,7 @@ import type { GetStaticPropsResult } from 'next'
 
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
-import { HomeLayout } from '~/layouts'
+import { MainLayout } from '~/layouts'
 
 // @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
@@ -20,7 +20,7 @@ function BlogPage(props: BlogPageProps) {
 
   return (
     <>
-      <HomeLayout>
+      <MainLayout>
         <Meta title="Blog" />
         <h1>Blog - Articles</h1>
         <p>
@@ -28,7 +28,7 @@ function BlogPage(props: BlogPageProps) {
           desarrollo que he escrito.
         </p>
         <BlogPosts title="All Articles" posts={allPosts} className="mt-4" />
-      </HomeLayout>
+      </MainLayout>
     </>
   )
 }
