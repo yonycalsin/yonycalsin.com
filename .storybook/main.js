@@ -23,6 +23,7 @@ module.exports = {
         },
       },
     },
+    'storybook-addon-themes',
   ],
   framework: '@storybook/react',
   core: {
