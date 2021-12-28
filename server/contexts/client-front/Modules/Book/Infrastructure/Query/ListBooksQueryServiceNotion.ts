@@ -52,10 +52,19 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
         status: properties['Status'].select.name,
         author: _.head<any>(properties['Author'].rich_text).plain_text,
         tags: _.map(properties['Tags'].multi_select, 'name'),
-        images: _.map(properties['Images'].files, file => ({
-          name: file.name,
-          url: file.file.url,
-        })),
+        images: _.map(properties['Images'].files, file => {
+          if (file.type === 'file') {
+            return {
+              name: file.name,
+              url: file.file.url,
+            }
+          }
+
+          return {
+            name: file.name,
+            url: file.external.url,
+          }
+        }),
         createdAt: new Date(item.created_time),
         updatedAt: new Date(item.last_edited_time),
       })
