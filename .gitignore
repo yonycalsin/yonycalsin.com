@@ -46,3 +46,4 @@ tsconfig.tsbuildinfo
 theme-preview-build
 
 temp
+mockServiceWorker.js

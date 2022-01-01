@@ -26,6 +26,8 @@ async function fetchSubmodule(submodule: Submodule) {
 
   const tempFolder = `temp/${config.PATH}`
 
+  console.log({ submodule, tempFolder })
+
   const output = await execCommand(`
     rm -rf ${tempFolder} || true &&
 
