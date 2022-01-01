@@ -44,7 +44,7 @@ async function fetchSubmodule(submodule: Submodule) {
 
     git checkout ${submodule.commitHash} &&
 
-    cd .. &&
+    cd ../.. &&
 
     rm -rf ${tempFolder}/.git &&
 

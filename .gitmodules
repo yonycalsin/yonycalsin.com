@@ -1,6 +1,6 @@
 [submodule "data/blog"]
 	path = data/blog
-	url = git@github.com:yonycalsin/yonycalsin-com-blog.git
+	url = https://github.com/yonycalsin/yonycalsin-com-blog.git
 [submodule "data/snippets"]
 	path = data/snippets
-	url = git@github.com:yonycalsin/yonycalsin-com-snippets.git
+	url = https://github.com/yonycalsin/yonycalsin-com-snippets.git
