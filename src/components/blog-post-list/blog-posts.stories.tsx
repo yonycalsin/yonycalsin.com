@@ -1,9 +1,7 @@
 import type { ComponentMeta } from '@storybook/react'
 
 import { BlogPosts, BlogPostsProps } from './blog-posts'
-// @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
-// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 const basicPosts = (allBlogsContent ?? []) as Blog[]

@@ -15,9 +15,7 @@ import { MainLayout } from '~/layouts'
 import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
 
-// @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
-// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 const allBlogs = (allBlogsContent ?? []) as Blog[]

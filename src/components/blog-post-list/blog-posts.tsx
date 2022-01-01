@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { SectionHeader } from '../section/section-header'
 
 import BlogPostList from './blog-post-list'
-// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 export interface BlogPostsProps {

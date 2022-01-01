@@ -4,9 +4,7 @@ import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { MainLayout } from '~/layouts'
 
-// @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
-// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 const allBlogs = (allBlogsContent ?? []) as Blog[]

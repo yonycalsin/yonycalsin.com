@@ -4,7 +4,6 @@ import { Meta } from '~/components/meta'
 
 import { MainLayout } from '../main/main.layout'
 
-// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
 interface BlogLayoutProps {
