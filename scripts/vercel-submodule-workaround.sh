@@ -34,18 +34,6 @@ no_prefix=${output#*-} # get rid of the prefix
 
 COMMIT=${no_prefix% *} # get rid of the suffix
 
-echo "------------"
-
-echo ${output}
-
-echo "------------"
-
-echo ${no_prefix}
-
-echo "------------"
-
-echo ${COMMIT}
-
 
 # set up an empty temporary work directory
 
