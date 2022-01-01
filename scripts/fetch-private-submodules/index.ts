@@ -59,7 +59,7 @@ async function fetchSubmodule(submodule: Submodule) {
   const output = await execCommand(command)
 
   // eslint-disable-next-line no-console
-  console.log(output.stdout)
+  console.log('output', output)
 }
 
 async function bootstrap() {
