@@ -50,13 +50,10 @@ async function fetchSubmodule(submodule: Submodule) {
     rm -rf ${tempFolder}
     `
 
-  // eslint-disable-next-line no-console
-  console.log({ submodule, tempFolder, command })
-
   const output = await execCommand(command)
 
   // eslint-disable-next-line no-console
-  console.log('output', output)
+  console.log(output)
 }
 
 async function bootstrap() {
