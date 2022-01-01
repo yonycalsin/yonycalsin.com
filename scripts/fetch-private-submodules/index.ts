@@ -26,9 +26,6 @@ async function fetchSubmodule(submodule: Submodule) {
 
   const tempFolder = `temp/${config.PATH}`
 
-  // eslint-disable-next-line no-console
-  console.log({ submodule, tempFolder })
-
   const command = `
     rm -rf ${tempFolder} || true &&
 
@@ -44,7 +41,7 @@ async function fetchSubmodule(submodule: Submodule) {
 
     git checkout ${submodule.commitHash} &&
 
-    cd ../.. &&
+    cd ../../.. &&
 
     rm -rf ${tempFolder}/.git &&
 
