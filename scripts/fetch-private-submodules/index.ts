@@ -26,6 +26,7 @@ async function fetchSubmodule(submodule: Submodule) {
 
   const tempFolder = `temp/${config.PATH}`
 
+  // eslint-disable-next-line no-console
   console.log({ submodule, tempFolder })
 
   const output = await execCommand(`
@@ -68,6 +69,7 @@ async function bootstrap() {
         .replace(START_AND_END_WHITE_SPACE_MATCH, '')
         .replace(HEAD_COMMIT_MATCH, '')
         .replace(START_AND_END_WHITE_SPACE_MATCH, '')
+        .replace(/^(\-)/, '')
 
       const [commitHash, path] = sanitized.split(' ')
 
