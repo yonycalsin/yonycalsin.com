@@ -29,7 +29,7 @@ async function fetchSubmodule(submodule: Submodule) {
   // eslint-disable-next-line no-console
   console.log({ submodule, tempFolder })
 
-  const output = await execCommand(`
+  const command = `
     rm -rf ${tempFolder} || true &&
 
     mkdir -p ${tempFolder} &&
@@ -51,7 +51,12 @@ async function fetchSubmodule(submodule: Submodule) {
     mv ${tempFolder}/* ${submodule.config.PATH}
 
     rm -rf ${tempFolder}
-  `)
+    `
+
+  // eslint-disable-next-line no-console
+  console.log({ submodule, tempFolder, command })
+
+  const output = await execCommand(command)
 
   // eslint-disable-next-line no-console
   console.log(output.stdout)
