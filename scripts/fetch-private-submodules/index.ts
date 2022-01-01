@@ -40,9 +40,9 @@ async function fetchSubmodule(submodule: Submodule) {
 
     git remote add origin https://${process.env.GITHUB_ACCESS_TOKEN}@${config.GITHUB_URL} &&
 
-    git fetch --depth=1 origin ${submodule.commit} &&
+    git fetch --depth=1 origin ${submodule.commitHash} &&
 
-    git checkout ${submodule.commit} &&
+    git checkout ${submodule.commitHash} &&
 
     cd .. &&
 
