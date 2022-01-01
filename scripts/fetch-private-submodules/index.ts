@@ -48,7 +48,7 @@ async function fetchSubmodule(submodule: Submodule) {
 
     rm -rf ${tempFolder}/.git &&
 
-    mv ${tempFolder}/* ${submodule.config.PATH}
+    mv ${tempFolder}/* ${submodule.config.PATH} &&
 
     rm -rf ${tempFolder}
     `
