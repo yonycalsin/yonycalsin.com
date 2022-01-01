@@ -25,9 +25,7 @@ jobs:
 
           git remote set-url origin https://yonycalsin:$PERSONAL_GITHUB_TOKEN@github.com/yonycalsin/yonycalsin.com.git
 
-          sed -i -e "s/git@github.com:/https:\/\/$CI_USER_TOKEN@github.com\//" ./.gitmodules
-
-          cat .gitmodules
+          sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
 
           git config user.email "helloyonycalsin@gmail.com"
 
