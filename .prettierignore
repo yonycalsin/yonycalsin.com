@@ -45,4 +45,5 @@ tsconfig.tsbuildinfo
 
 theme-preview-build
 
-data/blog
+data
+temp

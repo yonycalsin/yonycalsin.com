@@ -13,10 +13,12 @@
     "clean": "rimraf -rf .next node_modules/.contentlayer .vercel",
     "contentlayer:build": "./node_modules/.bin/contentlayer build",
     "dev": " next dev",
+    "fetch:submodules": "npm run script:run -- scripts/fetch-private-submodules/index.ts",
     "format": "npm run prettier -- --write",
     "lint": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier \"**/*.{js,json,ts,tsx,scss,css,md}\"",
+    "script:run": "ts-node --project scripts/tsconfig.json",
     "start": "next start",
     "storybook": "npm run storybook:clean && npm run storybook:dev",
     "storybook:build": "npm run contentlayer:build && npx build-storybook -s public -o storybook-build",
@@ -26,7 +28,7 @@
     "test:ci": "jest --ci",
     "theme-preview:build": "tailwind-config-viewer export ./theme-preview-build",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "prisma generate && TZ=utc sh ./scripts/vercel-submodule-workaround.sh && next build"
+    "vercel-build": "prisma generate && npm run fetch:submodules && next build"
   },
   "dependencies": {
     "@chaitin/querystring": "^1.1.0",
@@ -115,6 +117,7 @@
     "tailwind-config-viewer": "^1.6.2",
     "tailwindcss": "^3.0.7",
     "ts-jest": "^27.1.0",
+    "ts-node": "^10.4.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.4.3",
     "wait-on": "^6.0.0",
