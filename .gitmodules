@@ -1,6 +1,6 @@
-[submodule "data/blog"]
-	path = data/blog
+[submodule "content/blog"]
+	path = content/blog
 	url = https://github.com/yonycalsin/yonycalsin-com-blog.git
-[submodule "data/snippets"]
-	path = data/snippets
+[submodule "content/snippets"]
+	path = content/snippets
 	url = https://github.com/yonycalsin/yonycalsin-com-snippets.git
