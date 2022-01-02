@@ -1,10 +1,10 @@
 [
   {
-    "PATH": "data/blog",
+    "PATH": "content/blog",
     "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-blog"
   },
   {
-    "PATH": "data/snippets",
+    "PATH": "content/snippets",
     "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-snippets"
   }
 ]

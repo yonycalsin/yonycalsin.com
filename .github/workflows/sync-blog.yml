@@ -35,7 +35,7 @@ jobs:
 
           git submodule update --remote --init
 
-          git add ./data
+          git add ./content
 
           git commit -m "$COMMIT_DYNAMIC_MESSAGE"
 
