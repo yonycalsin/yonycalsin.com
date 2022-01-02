@@ -30,7 +30,7 @@
     "typecheck": "tsc --noEmit",
     "vercel-build": "prisma generate && npm run fetch:submodules && next build",
     "test:static": "run-p check:format lint typecheck",
-    "cy:run": "cypress run --record",
+    "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test:e2e": "is-ci \"test:e2e:run\" \"test:e2e:dev\"",
     "pretest:e2e:run": "npm run build",
