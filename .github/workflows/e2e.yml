@@ -31,9 +31,10 @@ jobs:
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
-          build: npm run contentlayer:build && npm run build
+          build: npm run build
           start: npm run start
           command: npm run test:e2e
+          install: false
 
       - run: npx cypress info
 
