@@ -18,16 +18,24 @@ jobs:
 
           git submodule update --init --recursive
 
+          ls content
+
       - name: Use Node 14.17.0
         uses: actions/setup-node@v2
         with:
           node-version: 14.17.0
 
+      # report machine parameters
+      - run: yarn cypress info
+
+      - run: node -p 'os.cpus()'
+
       - name: E2E Testing
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
-          record: true
+          build: npm run build
+          start: npm run start
           command: npm run test:e2e
 
         env:
