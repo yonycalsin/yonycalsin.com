@@ -9,8 +9,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        with:
-          submodules: recursive
+
+      - env:
+          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+
+      - name: Checkout submodules
+        run: |
+
+          sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
+
+          git submodule update --init --recursive
 
       - name: Use Node 14.17.0
         uses: actions/setup-node@v2
