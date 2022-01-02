@@ -1,23 +1,9 @@
-name: E2E
+name: End-to-end tests
 
-on:
-  workflow_dispatch:
-    inputs:
-      force:
-        description: 'Force the workflow execution without the PR state'
-        required: false
-        default: '1'
-
-      apiUrl:
-        description: 'Override the API_URL env var, i.e. Review App, Tunnel'
-        required: false
+on: [push]
 
 jobs:
-  e2e:
-    name: Run E2E Tests
-
-    if: github.event.inputs.force == '1'
-
+  cypress-run:
     runs-on: ubuntu-latest
 
     steps:
