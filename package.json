@@ -24,11 +24,12 @@
     "storybook:build": "npm run contentlayer:build && npx build-storybook -s public -o storybook-build",
     "storybook:clean": "rimraf -r node_modules/.cache storybook-build",
     "storybook:dev": "start-storybook -p 6006 -s ./public",
-    "test": "jest --watch",
-    "test:ci": "jest --ci",
+    "test:unit": "jest --watch",
+    "test:unit:ci": "jest --ci",
     "theme-preview:build": "tailwind-config-viewer export ./theme-preview-build",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "prisma generate && npm run fetch:submodules && next build"
+    "vercel-build": "prisma generate && npm run fetch:submodules && next build",
+    "test:static": "run-p check:format lint typecheck"
   },
   "dependencies": {
     "@chaitin/querystring": "^1.1.0",
@@ -109,6 +110,7 @@
     "jest": "^27.3.1",
     "jest-watch-typeahead": "^1.0.0",
     "msw": "^0.35.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "prettier-plugin-packagejson": "^2.2.12",
