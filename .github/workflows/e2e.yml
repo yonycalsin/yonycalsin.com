@@ -25,9 +25,6 @@ jobs:
         with:
           node-version: 14.17.0
 
-      # report machine parameters
-      - run: yarn cypress info
-
       - run: node -p 'os.cpus()'
 
       - name: E2E Testing
@@ -38,7 +35,11 @@ jobs:
           start: npm run start
           command: npm run test:e2e
 
+      - run: npx cypress info
+
         env:
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APP_ENV: development
           API_BASE_URL: ${{ github.event.inputs.apiUrl || 'http://localhost:3000/api' }}
           AUTH_JWT_SECRET: daemon
