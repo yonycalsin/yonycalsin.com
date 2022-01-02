@@ -10,12 +10,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - env:
-          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-
       - name: Checkout submodules
+        env:
+          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: |
-
           sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
 
           git submodule update --init --recursive
