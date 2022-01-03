@@ -11,6 +11,7 @@ module.exports = withContentlayer()({
     FF_BLOG: process.env.FF_BLOG,
     FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,
     FF_BOOKS: process.env.FF_BOOKS,
+    FF_PROJECTS: process.env.FF_PROJECTS,
   },
   swcMinify: true,
   async rewrites() {

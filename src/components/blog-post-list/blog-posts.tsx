@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
+import type { Blog } from '~/lib/contentlayer-data/blog'
+
 import { SectionHeader } from '../section/section-header'
 
 import BlogPostList from './blog-post-list'
-import type { Blog } from '.contentlayer/types'
 
 export interface BlogPostsProps {
   posts: Blog[]

@@ -1,10 +1,9 @@
 import * as React from 'react'
 
 import { Meta } from '~/components/meta'
+import type { Blog } from '~/lib/contentlayer-data/blog'
 
 import { MainLayout } from '../main/main.layout'
-
-import type { Blog } from '.contentlayer/types'
 
 interface BlogLayoutProps {
   children: React.ReactNode
