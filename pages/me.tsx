@@ -1,6 +1,8 @@
 import * as React from 'react'
 
 import { Meta } from '~/components/meta'
+import { QuoteList } from '~/components/quotes/quote-list'
+import recommendations from '~/data/config/es/recomendations.json'
 import { MainLayout } from '~/layouts'
 
 export default function Home() {
@@ -133,6 +135,20 @@ export default function Home() {
           </li>
           <li>etc...</li>
         </ul>
+
+        <div className="grid gap-3 md:grid-cols-2">
+          {recommendations.map(recommendation => (
+            <blockquote key={recommendation.text}>
+              <p className="mb-1">{recommendation.text}</p>
+              <div className="text-left">
+                <a href={recommendation.author.linkedin} target="_blank" rel="noreferrer">
+                  <b>— {recommendation.author.name}</b>
+                </a>
+                <p className="mt-1 mb-0 text-gray text-sm ">{recommendation.author.title}</p>
+              </div>
+            </blockquote>
+          ))}
+        </div>
       </article>
     </MainLayout>
   )
