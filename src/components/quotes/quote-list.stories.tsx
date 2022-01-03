@@ -1,6 +1,6 @@
 import type { ComponentMeta } from '@storybook/react'
 
-import motivationQuotes from '~/assets/data/motivation-quotes.json'
+import quotes from '~/data/config/es/quotes.json'
 
 import { QuoteList, QuoteListProps } from './quote-list'
 
@@ -14,5 +14,5 @@ export const Default = (args: QuoteListProps) => {
 }
 
 Default.args = {
-  quotes: motivationQuotes,
+  quotes: quotes,
 } as QuoteListProps

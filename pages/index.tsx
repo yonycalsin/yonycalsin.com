@@ -3,7 +3,6 @@ import type { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
 import { useFlag } from 'toggled'
 
-import motivationQuotes from '~/assets/data/motivation-quotes.json'
 import openSourceProjects from '~/assets/data/open-source-projects.json'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Button } from '~/components/button'
@@ -11,6 +10,7 @@ import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
+import quotes from '~/data/config/es/quotes.json'
 import { MainLayout } from '~/layouts'
 import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import { socialLinks } from '~/utils/constants'
@@ -82,7 +82,7 @@ function HomePage(props: HomePageProps) {
         )}
         <Section>
           <SectionHeader title="Citas" />
-          <QuoteList className="mt-3" quotes={motivationQuotes} />
+          <QuoteList className="mt-3" quotes={quotes} />
         </Section>
       </article>
     </MainLayout>
