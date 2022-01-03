@@ -72,6 +72,14 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2.1.1
 
+      - name: Checkout submodules
+        env:
+          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        run: |
+          sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
+
+          git submodule update --init --recursive
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1.4.4
         with:
