@@ -6,6 +6,7 @@ import { WorkItem } from '~/components/work-item/work-item'
 import { MainLayout } from '~/layouts'
 import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
 import { socialLinks } from '~/utils/constants'
+import env from '~/utils/env'
 
 interface ProjectsPageProps {
   workProjects: WorkProject[]
@@ -57,13 +58,15 @@ export async function getStaticProps(): Promise<
     workProjects: WorkProject[]
   }>
 > {
-  const workProjects = await getWorkProjects()
+  const hasWorkProjects = env.FF_PROJECTS
+
+  const workProjects = hasWorkProjects ? await getWorkProjects() : []
 
   return {
     props: {
       workProjects: workProjects,
     },
-    revalidate: 10,
+    revalidate: hasWorkProjects ? 10 : false,
   }
 }
 

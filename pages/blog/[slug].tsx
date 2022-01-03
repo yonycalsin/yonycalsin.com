@@ -4,11 +4,14 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import MDXComponents from '~/components/mdx-components'
 import { BlogLayout } from '~/layouts/blog/blog-layout'
+import env from '~/utils/env'
 
+// @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
+// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
-const allBlogs = (allBlogsContent ?? []) as Blog[]
+const allBlogs = env.FF_PROJECTS ? ((allBlogsContent ?? []) as Blog[]) : []
 
 interface BlogSlugPageProps {
   post: Blog

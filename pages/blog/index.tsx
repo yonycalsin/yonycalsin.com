@@ -3,11 +3,14 @@ import type { GetStaticPropsResult } from 'next'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { MainLayout } from '~/layouts'
+import env from '~/utils/env'
 
+// @ts-ignore
 import { allBlogs as allBlogsContent } from '.contentlayer/data'
+// @ts-ignore
 import type { Blog } from '.contentlayer/types'
 
-const allBlogs = (allBlogsContent ?? []) as Blog[]
+const allBlogs = env.FF_PROJECTS ? ((allBlogsContent ?? []) as Blog[]) : []
 
 interface BlogPageProps {
   allPosts: Blog[]

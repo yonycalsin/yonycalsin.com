@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useFlag } from 'toggled'
+import { Feature, useFlag } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import Features from '~/utils/features-flags'
@@ -12,6 +12,8 @@ export const Header = () => {
   const hasBlog = useFlag(Features.BLOG)
 
   const hasBooks = useFlag(Features.BOOKS)
+
+  const hasProjects = useFlag(Features.PROJECTS)
 
   return (
     <div className="shadow-sm sticky top-0 backdrop-blur-lg z-10">
@@ -27,9 +29,11 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center space-x-3 font-medium">
-          <Link href="/projects">
-            <a>Proyectos</a>
-          </Link>
+          {hasProjects && (
+            <Link href="/projects">
+              <a>Proyectos</a>
+            </Link>
+          )}
           <Link href="/me">
             <a>Sobre Mi</a>
           </Link>

@@ -3,44 +3,10 @@ name: End-to-end tests
 on: [push]
 
 jobs:
-  install_dependencies:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2.1.1
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.4
-        with:
-          node-version: 14.17.0
-
-      - name: Cache node modules
-        id: node-modules
-        uses: actions/cache@v1.2.0
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            node-modules-
-
-      - if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
-
-      - run: tar -zcf node_modules.tar.gz node_modules
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: node-modules
-          path: node_modules.tar.gz
-          retention-days: 1
-
   cypress-run:
     runs-on: ubuntu-latest
 
-    needs: [install_dependencies]
-
     strategy:
-      fail-fast: false
       matrix:
         node-version: [14.17.0]
 
@@ -63,33 +29,21 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: node-modules
-
-      - name: Install Cache Dependencies
-        run: tar -zxf node_modules.tar.gz
-
-      - run: npx cypress info
-
-      - run: npm run contentlayer:build
-
-      - run: node -p 'os.cpus()'
-
       - name: E2E Testing
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
-          build: npm run build
-          start: npm run start
           command: npm run test:e2e
-          install: false
-
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APP_ENV: development
-          API_BASE_URL: ${{ github.event.inputs.apiUrl || 'http://localhost:3000/api' }}
+          API_BASE_URL: 'http://localhost:3000/api'
           AUTH_JWT_SECRET: daemon
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          FF_BOOKS: false
+          FF_BLOG: false
+          FF_PROJECTS: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: npx cypress info
+
+      - run: node -p 'os.cpus()'
