@@ -4,11 +4,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import MDXComponents from '~/components/mdx-components'
 import { BlogLayout } from '~/layouts/blog/blog-layout'
-
-import { allBlogs as allBlogsContent } from '.contentlayer/data'
-import type { Blog } from '.contentlayer/types'
-
-const allBlogs = (allBlogsContent ?? []) as Blog[]
+import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 
 interface BlogSlugPageProps {
   post: Blog

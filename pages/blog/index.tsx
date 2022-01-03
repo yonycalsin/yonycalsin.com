@@ -3,11 +3,7 @@ import type { GetStaticPropsResult } from 'next'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Meta } from '~/components/meta'
 import { MainLayout } from '~/layouts'
-
-import { allBlogs as allBlogsContent } from '.contentlayer/data'
-import type { Blog } from '.contentlayer/types'
-
-const allBlogs = (allBlogsContent ?? []) as Blog[]
+import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 
 interface BlogPageProps {
   allPosts: Blog[]

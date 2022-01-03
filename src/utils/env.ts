@@ -13,6 +13,7 @@ const env = {
   FF_BLOG: process.env.FF_BLOG ? JSON.parse(process.env.FF_BLOG) : null,
   FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS ? JSON.parse(process.env.FF_OSS_PROJECTS) : null,
   FF_BOOKS: process.env.FF_BOOKS ? JSON.parse(process.env.FF_BOOKS) : null,
+  FF_PROJECTS: process.env.FF_PROJECTS ? JSON.parse(process.env.FF_PROJECTS) : null,
 }
 
 export default env

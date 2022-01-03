@@ -1,10 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
 
-import { BlogPosts, BlogPostsProps } from './blog-posts'
-import { allBlogs as allBlogsContent } from '.contentlayer/data'
-import type { Blog } from '.contentlayer/types'
+import { allBlogs } from '~/lib/contentlayer-data/blog'
 
-const basicPosts = (allBlogsContent ?? []) as Blog[]
+import { BlogPosts, BlogPostsProps } from './blog-posts'
 
 export default {
   title: 'Blog/Post/Posts',
@@ -17,7 +15,7 @@ export const Default = (args: BlogPostsProps) => {
 
 Default.args = {
   title: 'All Posts',
-  posts: basicPosts,
+  posts: allBlogs,
   actionHref: '/',
   actionLabel: 'See All',
 } as BlogPostsProps

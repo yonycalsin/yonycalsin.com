@@ -47,3 +47,5 @@ theme-preview-build
 
 temp
 mockServiceWorker.js
+cypress/videos
+cypress/screenshots

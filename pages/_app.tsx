@@ -41,6 +41,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_PROJECTS) {
+      data.push({
+        slug: Features.PROJECTS,
+      })
+    }
+
     return data
   }, [])
 

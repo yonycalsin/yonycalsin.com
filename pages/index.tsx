@@ -12,13 +12,9 @@ import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { MainLayout } from '~/layouts'
+import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import { socialLinks } from '~/utils/constants'
 import Features from '~/utils/features-flags'
-
-import { allBlogs as allBlogsContent } from '.contentlayer/data'
-import type { Blog } from '.contentlayer/types'
-
-const allBlogs = (allBlogsContent ?? []) as Blog[]
 
 interface HomePageProps {
   latestBlogs: Blog[]

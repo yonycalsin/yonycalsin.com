@@ -1,0 +1,49 @@
+name: End-to-end tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.17.0]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2.1.1
+
+      - name: Checkout submodules
+        env:
+          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        run: |
+          sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
+
+          git submodule update --init --recursive
+
+          ls -R content
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: E2E Testing
+        uses: cypress-io/github-action@v2
+        timeout-minutes: 10
+        with:
+          command: npm run test:e2e
+        env:
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          APP_ENV: development
+          API_BASE_URL: 'http://localhost:3000/api'
+          AUTH_JWT_SECRET: daemon
+          FF_BOOKS: false
+          FF_BLOG: false
+          FF_PROJECTS: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: npx cypress info
+
+      - run: node -p 'os.cpus()'

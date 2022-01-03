@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import type { Blog } from '.contentlayer/types'
+import type { Blog } from '~/lib/contentlayer-data/blog'
 
 export interface BlogPostListProps {
   posts: Blog[]
