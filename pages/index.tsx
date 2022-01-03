@@ -12,16 +12,9 @@ import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { MainLayout } from '~/layouts'
+import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import { socialLinks } from '~/utils/constants'
-import env from '~/utils/env'
 import Features from '~/utils/features-flags'
-
-// @ts-ignore
-import { allBlogs as allBlogsContent } from '.contentlayer/data'
-// @ts-ignore
-import type { Blog } from '.contentlayer/types'
-
-const allBlogs = env.FF_PROJECTS ? ((allBlogsContent ?? []) as Blog[]) : []
 
 interface HomePageProps {
   latestBlogs: Blog[]
