@@ -8,7 +8,7 @@ import type Responder from '../../../Responder/Responder'
 import type HttpResponse from '../../../Shared/Http/Definitions/HttpResponse'
 
 class GetOneResumeActionResponder implements Responder<GetResumeDto> {
-  public answer(response: HttpResponse<any>, payload?: GetResumeDto): HttpResponse {
+  public answer(response: HttpResponse, payload?: GetResumeDto): HttpResponse {
     if (_.isNil(payload)) {
       const responder = new NotFoundResponder()
 
