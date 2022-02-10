@@ -1,4 +1,3 @@
-import ListBooksQuery from '~/server/contexts/client-front/Modules/Book/Application/List/ListBooksQuery'
 import ListBooksQueryHandler from '~/server/contexts/client-front/Modules/Book/Application/List/ListBooksQueryHandler'
 import ListBooksQueryServiceNotion from '~/server/contexts/client-front/Modules/Book/Infrastructure/Query/ListBooksQueryServiceNotion'
 import SdkClientNotion from '~/server/contexts/shared/Modules/Shared/Infrastructure/Sdk/SdkClientNotion'
