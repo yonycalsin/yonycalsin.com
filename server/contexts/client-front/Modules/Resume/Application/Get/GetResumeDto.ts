@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 import type JsonSerializable from '../../../Shared/Serializer/JsonSerializable'
 
 interface GetResumeJsonDto {
@@ -16,6 +18,16 @@ interface GetResumeJsonDto {
     linkedin: string | null
     twitter: string | null
   }
+  workExperiences: {
+    jobTitle: string
+    employmentType: string
+    country: string
+    city: string | null
+    isRemote: boolean
+    technologiesUsed: string[]
+    startedAt: string
+    endAt: string | null
+  }[]
   languages: {
     name: string
     score: number
@@ -39,6 +51,16 @@ interface GetResumeDtoProps {
     linkedin?: string
     twitter?: string
   }
+  workExperiences: {
+    jobTitle: string
+    employmentType: string
+    country: string
+    city?: string
+    isRemote: boolean
+    technologiesUsed: string[]
+    startedAt: Date
+    endAt?: Date
+  }[]
   languages: {
     name: string
     score: number
@@ -63,6 +85,8 @@ class GetResumeDto implements JsonSerializable<GetResumeJsonDto> {
 
   private readonly socials: GetResumeDtoProps['socials']
 
+  private readonly workExperiences: GetResumeDtoProps['workExperiences']
+
   private readonly languages: GetResumeDtoProps['languages']
 
   public constructor(props: GetResumeDtoProps) {
@@ -81,6 +105,8 @@ class GetResumeDto implements JsonSerializable<GetResumeJsonDto> {
     this.contact = props.contact
 
     this.socials = props.socials
+
+    this.workExperiences = props.workExperiences
 
     this.languages = props.languages
   }
@@ -106,9 +132,21 @@ class GetResumeDto implements JsonSerializable<GetResumeJsonDto> {
         linkedin: this.socials.linkedin ?? null,
         twitter: this.socials.twitter ?? null,
       },
+      workExperiences: _.map(this.workExperiences, workExperience => ({
+        jobTitle: workExperience.jobTitle,
+        employmentType: workExperience.employmentType,
+        country: workExperience.country,
+        city: workExperience.city ?? null,
+        isRemote: workExperience.isRemote,
+        technologiesUsed: workExperience.technologiesUsed,
+        startedAt: workExperience.startedAt.toISOString(),
+        endAt: workExperience.endAt?.toISOString() ?? null,
+      })),
       languages: this.languages,
     }
   }
 }
+
+export type { GetResumeDtoProps }
 
 export default GetResumeDto
