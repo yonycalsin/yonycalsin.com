@@ -58,7 +58,6 @@ export default function Home() {
           <li>
             Me fascina escribir código limpio y hermoso <i>(Clean Code)</i>.
           </li>
-          <li>Escribí mi primera linea de codigo a los 14 años.</li>
           <li>Mi tipo de juego favorito actual es el de estrategia.</li>
           <li>Llevo escribiendo en este blog desde 2017.</li>
         </ul>
