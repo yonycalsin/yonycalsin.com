@@ -18,4 +18,3 @@ export default function Resume() {
   )
 }
 
-// Resume.bodyClassName = 'h-full w-full overflow-hidden m-0 bg-[rgb(82, 86, 89)]'
