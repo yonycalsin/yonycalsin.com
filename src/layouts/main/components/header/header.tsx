@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Feature, useFlag } from 'toggled'
+import { useFlag } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import Features from '~/utils/features-flags'
@@ -16,8 +16,8 @@ export const Header = () => {
   const hasProjects = useFlag(Features.PROJECTS)
 
   return (
-    <div className="shadow-sm sticky top-0 backdrop-blur-lg z-10">
-      <div className="container flex items-center justify-between flex-col h-auto md:flex-row md:h-7 lg:h-10">
+    <div className="shadow-sm fixed top-0 backdrop-blur-lg z-10 w-full dark:bg-[#1c1e24]">
+      <div className="container flex items-center justify-between flex-col md:flex-row h-13 md:h-7 lg:h-10">
         <div>
           <Link href="/">
             <a className="flex flex-row items-center no-underline" title="">

@@ -7,6 +7,8 @@ import { PageTransition } from '~/components/page-transition/page-transition'
 import { Footer } from './components/footer/footer'
 import { Header } from './components/header/header'
 
+import s from './home.layout.module.css'
+
 type MainLayoutProps = {
   children: React.ReactNode
 }
@@ -18,9 +20,9 @@ export const MainLayout = (props: MainLayoutProps) => {
     <>
       <NightModeButton />
       <Header />
-      <div className="container">
+      <main className={s.main}>
         <PageTransition>{children}</PageTransition>
-      </div>
+      </main>
       <Footer />
       <FloatSocials />
     </>
