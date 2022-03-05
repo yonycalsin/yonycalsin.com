@@ -1,7 +1,9 @@
 import * as React from 'react'
 import type { GetStaticPropsResult } from 'next'
 
+import { Anchor } from '~/components/anchor/anchor'
 import { Meta } from '~/components/meta'
+import { Typography } from '~/components/typography/typography'
 import { WorkItem } from '~/components/work-item/work-item'
 import { MainLayout } from '~/layouts'
 import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
@@ -18,16 +20,18 @@ function ProjectsPage(props: ProjectsPageProps) {
   return (
     <MainLayout>
       <Meta title="Proyectos" notRobots />
-      <article className="article">
-        <header>
-          <h1>Proyectos ({workProjects.length}) </h1>
-          <p>
+      <article className="py-4">
+        <header className="mb-3">
+          <Typography variant="h2" gutterBottom fontWeight="extrabold">
+            Proyectos ({workProjects.length})
+          </Typography>
+          <Typography>
             Aqui algunos de mis proyectos destacados. Véalos todos{' '}
-            <a href={socialLinks.GITHUB} target="blank">
+            <Anchor variant="decorated" href={socialLinks.GITHUB} target="blank">
               en mi GitHub
-            </a>
+            </Anchor>
             .
-          </p>
+          </Typography>
         </header>
         <ul
           className="timeline relative space-y-5 lg:space-y-7"

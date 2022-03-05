@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { useFlag } from 'toggled'
 
 import openSourceProjects from '~/assets/data/open-source-projects.json'
+import { Anchor } from '~/components/anchor/anchor'
 import { BlogPosts } from '~/components/blog-post-list/blog-posts'
 import { Button } from '~/components/button'
 import { Meta } from '~/components/meta'
 import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
+import { Typography } from '~/components/typography/typography'
 import quotes from '~/data/config/es/quotes.json'
 import { MainLayout } from '~/layouts'
 import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
@@ -30,19 +32,30 @@ function HomePage(props: HomePageProps) {
   return (
     <MainLayout>
       <Meta />
-      <article className="article">
-        <div className="break-words">
-          <h2 className="dark:text-white">Hola, soy Yony.</h2>
-          <p className="lead dark:text-gray-100">
-            Soy un desarrollador de software <b>autodidacta</b> que actualmente trabaja en Riqra. Este es mi sitio web
-            personal - donde encontrarás todas las cosas que he aprendido y creado a lo largo de los años
-          </p>
-          {/* eslint-disable-next-line @next/next/link-passhref */}
-          <Link href="/me">
-            <Button variant="light">Más sobre mí</Button>
-          </Link>
-        </div>
-        {hasBlog && (
+      <div className="break-words pt-4">
+        <Typography variant="h2" gutterBottom fontWeight="extrabold">
+          Hola, soy Yony.
+        </Typography>
+        <Typography gutterBottom>
+          Soy un desarrollador de software{' '}
+          <Anchor component="span" variant="decorated">
+            autodidacta
+          </Anchor>
+          . Este es mi sitio web personal - donde encontrarás todas las cosas que he aprendido y creado a lo largo de
+          los años
+        </Typography>
+        <Link href="/me" passHref>
+          <Button variant="light">Más sobre mí</Button>
+        </Link>
+      </div>
+      {hasBlog && (
+        <Section>
+          <SectionHeader
+            title="Proyectos de código abierto"
+            actionLabel="Ver todo"
+            actionHref={socialLinks.GITHUB}
+            actionHrefExternal
+          />
           <BlogPosts
             title="Últimos artículos"
             actionHref="/blog"
@@ -50,41 +63,41 @@ function HomePage(props: HomePageProps) {
             posts={latestBlogs}
             className="mt-4"
           />
-        )}
-        {hasOssProjects && (
-          <Section>
-            <SectionHeader
-              title="Proyectos de código abierto"
-              actionLabel="Ver todo"
-              actionHref={socialLinks.GITHUB}
-              actionHrefExternal
-            />
-            <div className="mt-3 space-y-2">
-              {openSourceProjects.map(project => (
-                <div key={project.name}>
-                  <div className="flex justify-between mb-1">
-                    <p className="md:text-h4 mb-0 text-gray-500 font-bold">{project.name}</p>
-                    <a
-                      className="md:text-base mb-0 text-gray-500 "
-                      href={project.repositoryUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="hidden md:block">Codigo Fuente</span>
-                      <span className="block md:hidden">Ver</span>
-                    </a>
-                  </div>
-                  <p className="mb-0 text-base">{project.summary}</p>
-                </div>
-              ))}
-            </div>
-          </Section>
-        )}
-        <Section>
-          <SectionHeader title="Citas" />
-          <QuoteList className="my-3" quotes={quotes} />
         </Section>
-      </article>
+      )}
+      {hasOssProjects && (
+        <Section>
+          <SectionHeader
+            title="Proyectos de código abierto"
+            actionLabel="Ver todo"
+            actionHref={socialLinks.GITHUB}
+            actionHrefExternal
+          />
+          <div className="mt-3 space-y-2">
+            {openSourceProjects.map(project => (
+              <div key={project.name}>
+                <div className="flex justify-between mb-1">
+                  <p className="md:text-lg mb-0 text-gray-500 font-bold">{project.name}</p>
+                  <a
+                    className="md:text-base mb-0 text-gray-500 "
+                    href={project.repositoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="hidden md:block">Codigo Fuente</span>
+                    <span className="block md:hidden">Ver</span>
+                  </a>
+                </div>
+                <p className="mb-0 text-base">{project.summary}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+      <Section>
+        <SectionHeader title="Quotes" />
+        <QuoteList className="my-3" quotes={quotes} />
+      </Section>
     </MainLayout>
   )
 }

@@ -1,5 +1,5 @@
 .root {
-  @apply bg-white appearance-none block w-full border border-gray-300 text-inherit h-5 text-h5 transition duration-200 relative pl-2 pr-2 overflow-visible outline-none m-0 min-w-0 rounded-md align-top;
+  @apply bg-white appearance-none block w-full border border-gray-300 text-inherit h-5 text-base transition duration-200 relative pl-2 pr-2 overflow-visible outline-none m-0 min-w-0 rounded-md align-top;
 
   @apply hover:border-gray-400 focus:border-primary;
 }

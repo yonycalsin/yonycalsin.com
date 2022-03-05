@@ -1,3 +1,5 @@
+import { Typography } from '../typography/typography'
+
 export interface SectionHeaderProps {
   title: string
   actionHref?: string
@@ -11,7 +13,7 @@ export function SectionHeader(props: SectionHeaderProps) {
 
   return (
     <div className="flex items-center justify-between">
-      <h3 className="mb-0">{title}</h3>
+      <Typography variant="h3">{title}</Typography>
       {actionHref ? (
         <ActionComponent href={actionHref} target={actionHrefExternal ? '_blank' : null}>
           {actionLabel}
