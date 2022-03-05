@@ -19,7 +19,7 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
   public async execute(criteria: Criteria<ListBooksCriteriaFilteringFields>): Promise<ListBooksPaginationDto> {
     const pagination = criteria.getPagination()
 
-    const filteringFields = criteria.getFilterFields()
+    const filteringFields = criteria.getFilteringFields()
 
     const filter = {
       and: [],
@@ -35,7 +35,7 @@ class ListBooksQueryServiceNotion implements ListBooksQueryService {
     }
 
     const response = await this.sdkClientNotion.getClient().databases.query({
-      database_id: env.BOOKS_NOTION_ID,
+      database_id: env.NOTION_BOOKS_DATABASE_ID,
       filter,
     })
 
