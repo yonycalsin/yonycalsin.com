@@ -14,7 +14,7 @@ class Criteria<F extends CriteriaFilteringFields<F>> {
     this.pagination = pagination
   }
 
-  public getFilterFields(): Readonly<CriteriaFilteringFields<F>> {
+  public getFilteringFields(): Readonly<CriteriaFilteringFields<F>> {
     return Object.freeze(this.filtering.getFields())
   }
 

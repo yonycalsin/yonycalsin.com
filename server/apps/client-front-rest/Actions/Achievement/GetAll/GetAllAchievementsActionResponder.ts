@@ -1,11 +1,11 @@
-import type ListBooksPaginationDto from '~/server/contexts/client-front/Modules/Book/Application/List/ListBooksPaginationDto'
+import type ListAchievementsPaginationDto from '~/server/contexts/client-front/Modules/Achievement/Application/List/LIstAchievementsPaginationDto'
 
 import JsonWithMetaResponder from '../../../Responder/JsonWithMetaResponder'
 import type Responder from '../../../Responder/Responder'
 import type HttpResponse from '../../../Shared/Http/Definitions/HttpResponse'
 
-class GetAllBooksActionResponder implements Responder<ListBooksPaginationDto> {
-  public answer(response: HttpResponse, payload: ListBooksPaginationDto): HttpResponse {
+class GetAllAchievementsActionResponder implements Responder<ListAchievementsPaginationDto> {
+  public answer(response: HttpResponse, payload: ListAchievementsPaginationDto): HttpResponse {
     const jsonResponder = new JsonWithMetaResponder()
 
     return jsonResponder.answer(response, {
@@ -15,4 +15,4 @@ class GetAllBooksActionResponder implements Responder<ListBooksPaginationDto> {
   }
 }
 
-export default GetAllBooksActionResponder
+export default GetAllAchievementsActionResponder

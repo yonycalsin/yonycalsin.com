@@ -7,7 +7,7 @@ import type SdkClient from '../../Domain/Sdk/SdkClient'
 class SdkClientNotion implements SdkClient<Client> {
   public getClient(): Client {
     const notion = new Client({
-      auth: env.BOOKS_NOTION_TOKEN,
+      auth: env.NOTION_API_ACCESS_TOKEN,
     })
 
     return notion

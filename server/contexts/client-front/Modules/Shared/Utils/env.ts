@@ -12,8 +12,9 @@ const env = {
   /**
    * Databases
    */
-  BOOKS_NOTION_TOKEN: process.env.BOOKS_NOTION_TOKEN as string,
-  BOOKS_NOTION_ID: process.env.BOOKS_NOTION_ID as string,
+  NOTION_API_ACCESS_TOKEN: process.env.NOTION_API_ACCESS_TOKEN as string,
+  NOTION_BOOKS_DATABASE_ID: process.env.NOTION_BOOKS_DATABASE_ID as string,
+  NOTION_ACHIEVEMENTS_DATABASE_ID: process.env.NOTION_ACHIEVEMENTS_DATABASE_ID as string,
 }
 
 export default env
