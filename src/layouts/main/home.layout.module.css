@@ -1,5 +1,5 @@
 .main {
-  @apply container mt-13 md:mt-7 lg:mt-10;
+  @apply mt-13 md:mt-7 lg:mt-10;
 
   min-height: calc(100vh - (theme('spacing.13') + theme('spacing.12')));
 
@@ -7,7 +7,7 @@
     min-height: calc(100vh - (theme('spacing.7') + theme('spacing.15')));
   }
 
-  @media screen(md) {
+  @media screen(lg) {
     min-height: calc(100vh - (theme('spacing.10') + theme('spacing.20')));
   }
 }

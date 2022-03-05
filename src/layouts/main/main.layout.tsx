@@ -1,4 +1,5 @@
 import * as React from 'react'
+import clsx from 'clsx'
 
 import { FloatSocials } from '~/components'
 import NightModeButton from '~/components/night-mode-button'
@@ -20,7 +21,7 @@ export const MainLayout = (props: MainLayoutProps) => {
     <>
       <NightModeButton />
       <Header />
-      <main className={s.main}>
+      <main className={clsx('container', s.main)}>
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
