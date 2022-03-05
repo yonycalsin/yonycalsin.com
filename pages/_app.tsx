@@ -9,7 +9,7 @@ import { DefaultFeature, FeatureProvider } from 'toggled'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
-import '~/styles/global.css'
+import '~/styles/index.css'
 import '~/styles/nprogress.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
