@@ -12,7 +12,7 @@ export function QuoteList(props: QuoteListProps) {
   const { quotes, className } = props
 
   return (
-    <div className={clsx('grid lg:grid-cols-2 gap-2', className)}>
+    <div className={clsx('grid lg:grid-cols-2 gap-2 md:gap-3', className)}>
       {quotes.map(quote => (
         <QuoteItem phrase={quote.phrase} author={quote.author} key={quote.phrase} />
       ))}

@@ -82,7 +82,7 @@ function HomePage(props: HomePageProps) {
         )}
         <Section>
           <SectionHeader title="Citas" />
-          <QuoteList className="mt-3" quotes={quotes} />
+          <QuoteList className="my-3" quotes={quotes} />
         </Section>
       </article>
     </MainLayout>
