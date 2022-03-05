@@ -1,5 +1,3 @@
-const commonTheme = require('@yonycalsin/tailwindcss-theme')
-
 const spacingSize = 8
 
 const getSpacing = (count = 50) => Array.from({ length: count + 1 }).map((_, index) => `${index * spacingSize}px`)
@@ -108,11 +106,6 @@ module.exports = {
       },
       backgroundColor: {
         inherit: 'inherit',
-      },
-      fontSize: {
-        ...commonTheme.theme.fontSize,
-        xl: ['1.25rem', '1.99rem'],
-        '2xl': ['1.5rem', '2.5rem'],
       },
       typography: theme => ({
         DEFAULT: {

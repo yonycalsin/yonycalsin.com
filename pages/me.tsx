@@ -1,7 +1,7 @@
 import * as React from 'react'
 
+import { Anchor } from '~/components/anchor/anchor'
 import { Meta } from '~/components/meta'
-import { QuoteList } from '~/components/quotes/quote-list'
 import recommendations from '~/data/config/es/recomendations.json'
 import { MainLayout } from '~/layouts'
 
@@ -10,7 +10,7 @@ export default function Home() {
     <MainLayout>
       <Meta title="Sobre Mi" />
 
-      <article className="article">
+      <article className="markdown article pt-4">
         <header>
           <h1>Sobre Mi</h1>
           <blockquote>
@@ -20,9 +20,9 @@ export default function Home() {
 
         <p>
           Hola, soy Yony. Soy un desarrollador de software <b>autodidacta</b> que trabaja en{' '}
-          <a href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
+          <Anchor variant="decorated" href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
             Riqra
-          </a>
+          </Anchor>
           . Bienvenidos a mi espacio en la web para proyectos que he creado, reflexiones y cualquier otra cosa que
           quiera mostrar al mundo.
         </p>
@@ -37,17 +37,17 @@ export default function Home() {
         <ul>
           <li>
             Actualmente trabajo a tiempo completo en{' '}
-            <a href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://riqra.com/" target="_blank" rel="noopener noreferrer">
               Riqra.
-            </a>
+            </Anchor>
           </li>
           <li>Escribo sobre GraphQL y Api REST.</li>
           <li>Creando mi blog con contentlayer, prisma, planetscale (MYSQL), y MDX.</li>
           <li>
             Leyendo el libro{' '}
-            <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">
               Shape Up
-            </a>{' '}
+            </Anchor>{' '}
             de Basecamp.
           </li>
         </ul>
@@ -71,21 +71,26 @@ export default function Home() {
         <ul>
           <li>
             <strong>GitHub</strong>:{' '}
-            <a href="https://github.com/yonycalsin" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://github.com/yonycalsin" target="_blank" rel="noopener noreferrer">
               @yonycalsin
-            </a>
+            </Anchor>
           </li>
           <li>
             <strong>Twitter</strong>:{' '}
-            <a href="https://twitter.com/yonycalsin" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://twitter.com/yonycalsin" target="_blank" rel="noopener noreferrer">
               @yonycalsin
-            </a>
+            </Anchor>
           </li>
           <li>
             <strong>Linkedin</strong>:{' '}
-            <a href="https://www.linkedin.com/in/yonycalsin/" target="_blank" rel="noopener noreferrer">
+            <Anchor
+              variant="decorated"
+              href="https://www.linkedin.com/in/yonycalsin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               @yonycalsin
-            </a>
+            </Anchor>
           </li>
         </ul>
 
@@ -93,44 +98,51 @@ export default function Home() {
 
         <ul>
           <li>
-            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">
               Visual Studio Code
-            </a>
+            </Anchor>
             {' + '}
-            <a href="https://www.nano-editor.org/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://www.nano-editor.org/" target="_blank" rel="noopener noreferrer">
               Nano
-            </a>
+            </Anchor>
           </li>
           <li>Windows Powershell + Windows Subsystem for Linux (Ubuntu)</li>
           <li>Docker Desktop</li>
           <li>
-            <a href="https://www.google.com/intl/en-419/chrome/" target="_blank" rel="noopener noreferrer">
+            <Anchor
+              variant="decorated"
+              href="https://www.google.com/intl/en-419/chrome/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Chrome Navigator
-            </a>
+            </Anchor>
           </li>
           <li>
-            <a href="https://github.com/" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://github.com/" rel="noopener noreferrer">
               Github
-            </a>
+            </Anchor>
             {' + '}
-            <a href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">
               Github CLI
-            </a>
+            </Anchor>
             {' + '}
-            <a href="https://github.com/features/actions">Github Actions (CI/CD)</a>
+            <Anchor variant="decorated" href="https://github.com/features/actions">
+              Github Actions (CI/CD)
+            </Anchor>
           </li>
           <li>
-            <a href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
               Notion
-            </a>
+            </Anchor>
           </li>
           <li>Vercel + Netlify + Heroku</li>
           <li>Git</li>
           <li>Node Version Manager (NVM)</li>
           <li>
-            <a href="https://insomnia.rest/" target="_blank" rel="noopener noreferrer">
+            <Anchor variant="decorated" href="https://insomnia.rest/" target="_blank" rel="noopener noreferrer">
               Insomnia (The Collaborative API Client and Design Tool)
-            </a>
+            </Anchor>
           </li>
           <li>etc...</li>
         </ul>
@@ -140,9 +152,9 @@ export default function Home() {
             <blockquote key={recommendation.text}>
               <p className="mb-1">{recommendation.text}</p>
               <div className="text-left">
-                <a href={recommendation.author.linkedin} target="_blank" rel="noreferrer">
+                <Anchor variant="decorated" href={recommendation.author.linkedin} target="_blank" rel="noreferrer">
                   <b>— {recommendation.author.name}</b>
-                </a>
+                </Anchor>
                 <p className="mt-1 mb-0 text-gray text-sm ">{recommendation.author.title}</p>
               </div>
             </blockquote>

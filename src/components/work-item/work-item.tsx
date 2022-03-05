@@ -6,7 +6,9 @@ import random from 'just-random'
 import { Clock } from '~/icons/clock'
 import { dateFormat } from '~/utils/constants'
 
+import { Anchor } from '../anchor/anchor'
 import { Tag } from '../tag'
+import { Typography } from '../typography/typography'
 
 export interface WorkItemProps {
   title: string
@@ -30,12 +32,12 @@ export function WorkItem(props: WorkItemProps) {
         <Clock className="w-full h-full" />
       </div>
       <div className="ml-9">
-        <h4>
-          <a href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank">
+        <Typography variant="h4" gutterBottom>
+          <Anchor href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank">
             {title}
-          </a>
-        </h4>
-        <p>{description}</p>
+          </Anchor>
+        </Typography>
+        <Typography gutterBottom>{description}</Typography>
         <div className="mb-3 flex gap-2 dark:invert">
           {webHref && (
             <a href={webHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Website" rel="noreferrer">
