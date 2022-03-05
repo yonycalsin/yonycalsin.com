@@ -77,7 +77,7 @@ function HomePage(props: HomePageProps) {
             {openSourceProjects.map(project => (
               <div key={project.name}>
                 <div className="flex justify-between mb-1">
-                  <p className="md:text-h4 mb-0 text-gray-500 font-bold">{project.name}</p>
+                  <p className="md:text-lg mb-0 text-gray-500 font-bold">{project.name}</p>
                   <a
                     className="md:text-base mb-0 text-gray-500 "
                     href={project.repositoryUrl}
