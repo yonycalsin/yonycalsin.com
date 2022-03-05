@@ -3,6 +3,7 @@ import type Query from '~/server/contexts/shared/Modules/Shared/Application/Quer
 interface ListAchievementsQueryProps {
   page?: number
   limit?: number
+  isFeatured?: boolean
 }
 
 class ListAchievementsQuery implements Query {
@@ -10,10 +11,14 @@ class ListAchievementsQuery implements Query {
 
   private readonly limit: number | undefined
 
-  public constructor(props: ListAchievementsQueryProps) {
+  private readonly isFeatured: boolean | undefined
+
+  constructor(props: ListAchievementsQueryProps) {
     this.page = props.page
 
     this.limit = props.limit
+
+    this.isFeatured = props.isFeatured
   }
 
   public getPage(): number | undefined {
@@ -22,6 +27,10 @@ class ListAchievementsQuery implements Query {
 
   public getLimit(): number | undefined {
     return this.limit
+  }
+
+  public getIsFeatured(): boolean | undefined {
+    return this.isFeatured
   }
 }
 

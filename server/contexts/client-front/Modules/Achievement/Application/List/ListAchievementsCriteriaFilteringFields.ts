@@ -1,6 +1,8 @@
 import type { CriteriaFilteringFields } from '~/server/contexts/shared/Modules/Shared/Application/Criteria/CriteriaFiltering'
 
-interface ListAchievementsFilteringFields {}
+interface ListAchievementsFilteringFields {
+  isFeatured?: boolean
+}
 
 type ListAchievementsCriteriaFilteringFields = CriteriaFilteringFields<ListAchievementsFilteringFields>
 

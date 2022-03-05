@@ -16,7 +16,9 @@ class ListAchievementsQueryHandler implements QueryHandler<ListAchievementsPagin
   }
 
   public async handle(query: ListAchievementsQuery): Promise<ListAchievementsPaginationDto> {
-    const filtering = CriteriaFiltering.create<ListAchievementsCriteriaFilteringFields>({})
+    const filtering = CriteriaFiltering.create<ListAchievementsCriteriaFilteringFields>({
+      isFeatured: query.getIsFeatured(),
+    })
 
     const pagination = new PaginationOffset(query.getPage(), query.getLimit())
 

@@ -26,12 +26,20 @@ class ListAchievementsQueryServiceNotion implements ListAchievementsQueryService
   ): Promise<ListAchievementsPaginationDto> {
     const pagination = criteria.getPagination()
 
+    const filtering = criteria.getFilteringFields()
+
     const filter = {
       and: [
         {
           property: 'Is Published',
           checkbox: {
             equals: true,
+          },
+        },
+        {
+          property: 'Is Featured',
+          checkbox: {
+            equals: filtering.isFeatured ?? false,
           },
         },
       ],

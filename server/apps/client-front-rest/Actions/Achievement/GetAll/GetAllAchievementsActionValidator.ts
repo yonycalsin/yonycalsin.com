@@ -5,11 +5,13 @@ import Validator from '../../Validator'
 interface Payload {
   page: number
   limit: number
+  isFeatured?: boolean
 }
 
 const Schema: Joi.ObjectSchema<Payload> = Joi.object({
   page: Joi.number().integer().positive(),
   limit: Joi.number().integer().positive(),
+  isFeatured: Joi.boolean().default(false),
 })
 
 class GetAllAchievementsActionValidator extends Validator<Payload> {
