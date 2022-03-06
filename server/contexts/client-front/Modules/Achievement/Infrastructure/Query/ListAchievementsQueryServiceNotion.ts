@@ -51,6 +51,12 @@ class ListAchievementsQueryServiceNotion implements ListAchievementsQueryService
     const response = await this.sdkClientNotion.getClient().databases.query({
       database_id: env.NOTION_ACHIEVEMENTS_DATABASE_ID,
       filter,
+      sorts: [
+        {
+          property: 'Score',
+          direction: 'ascending',
+        },
+      ],
     })
 
     const dtos: ListAchievementsDto[] = _.map(response.results, (item: any) => {
