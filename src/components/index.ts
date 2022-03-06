@@ -1,2 +1,2 @@
 export * from './float-socials'
-export * from './tag'
+export * from './tag-legacy'

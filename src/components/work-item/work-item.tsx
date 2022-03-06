@@ -7,7 +7,7 @@ import { Clock } from '~/icons/clock'
 import { dateFormats } from '~/utils/constants'
 
 import { Anchor } from '../anchor/anchor'
-import { Tag } from '../tag'
+import { TagLegacy } from '../tag-legacy'
 import { Typography } from '../typography/typography'
 
 export interface WorkItemProps {
@@ -72,7 +72,7 @@ export function WorkItem(props: WorkItemProps) {
         </div>
         <div className="flex flex-wrap gap-1">
           {tags.map((item: any) => (
-            <Tag
+            <TagLegacy
               key={item}
               className={clsx(
                 random(['bg-primary', 'bg-secondary', 'bg-success', 'bg-error']),
@@ -80,7 +80,7 @@ export function WorkItem(props: WorkItemProps) {
               )}
             >
               {item}
-            </Tag>
+            </TagLegacy>
           ))}
         </div>
       </div>

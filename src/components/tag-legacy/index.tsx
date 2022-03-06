@@ -8,7 +8,7 @@ export interface TagProps {
   className?: string
 }
 
-export const Tag = (props: TagProps) => {
+export const TagLegacy = (props: TagProps) => {
   const { children, className = 'bg-secondary-300' } = props
 
   return (
