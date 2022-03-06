@@ -20,7 +20,7 @@ export const Header = () => {
   const hasAchievementsFF = useFlag(Features.ACHIEVEMENTS)
 
   return (
-    <div className="shadow-sm fixed top-0 backdrop-blur-lg z-10 w-full dark:bg-[#1c1e24] ">
+    <div className="shadow-sm fixed top-0 backdrop-blur-lg z-10 w-full">
       <div className="container flex items-center justify-between flex-col lg:flex-row h-13 md:h-7 lg:h-10 py-2 lg:py-0">
         <div>
           <Link href="/">
