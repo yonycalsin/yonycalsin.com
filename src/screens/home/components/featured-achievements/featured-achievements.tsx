@@ -16,7 +16,7 @@ export function FeaturedAchievements() {
 
   return (
     <Section>
-      <SectionHeader title="Achievements">
+      <SectionHeader title="Achievements" hasBetaTag>
         <Typography className="my-3">Things I Have Achieved</Typography>
       </SectionHeader>
       <Achievements achievements={achievements} />
