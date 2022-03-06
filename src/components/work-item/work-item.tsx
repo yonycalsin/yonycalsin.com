@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 import random from 'just-random'
 
 import { Clock } from '~/icons/clock'
-import { dateFormat } from '~/utils/constants'
+import { dateFormats } from '~/utils/constants'
 
 import { Anchor } from '../anchor/anchor'
 import { Tag } from '../tag'
@@ -27,7 +27,7 @@ export function WorkItem(props: WorkItemProps) {
     <li className="border-r-8 border-transparent hover:border-gray-200 border-double">
       <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
         <div className="absolute right-9 whitespace-nowrap hidden lg:block">
-          <span className="italic text-base">{dayjs(startedAt).format(dateFormat.PROJECT_DATE)}</span>
+          <span className="italic text-base">{dayjs(startedAt).format(dateFormats.HUMAN_DATE)}</span>
         </div>
         <Clock className="w-full h-full" />
       </div>

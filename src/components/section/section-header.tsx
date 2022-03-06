@@ -6,19 +6,30 @@ export interface SectionHeaderProps {
   actionLabel?: string
   actionHrefExternal?: boolean
   actionComponent?: any
+  children?: React.ReactNode
 }
 
 export function SectionHeader(props: SectionHeaderProps) {
-  const { title, actionHref, actionLabel, actionComponent: ActionComponent = 'a', actionHrefExternal = false } = props
+  const {
+    title,
+    actionHref,
+    actionLabel,
+    actionComponent: ActionComponent = 'a',
+    actionHrefExternal = false,
+    children,
+  } = props
 
   return (
-    <div className="flex items-center justify-between">
-      <Typography variant="h3">{title}</Typography>
-      {actionHref ? (
-        <ActionComponent href={actionHref} target={actionHrefExternal ? '_blank' : null}>
-          {actionLabel}
-        </ActionComponent>
-      ) : null}
+    <div>
+      <div className="flex items-center justify-between">
+        <Typography variant="h3">{title}</Typography>
+        {actionHref ? (
+          <ActionComponent href={actionHref} target={actionHrefExternal ? '_blank' : null}>
+            {actionLabel}
+          </ActionComponent>
+        ) : null}
+      </div>
+      {children}
     </div>
   )
 }

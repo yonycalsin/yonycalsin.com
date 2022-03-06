@@ -47,6 +47,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_ACHIEVEMENTS) {
+      data.push({
+        slug: Features.ACHIEVEMENTS,
+      })
+    }
+
     return data
   }, [])
 
