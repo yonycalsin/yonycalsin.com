@@ -1,6 +1,8 @@
 import { useQuery } from 'react-query'
+import Link from 'next/link'
 
 import { Achievements } from '~/components/achievements'
+import { Anchor } from '~/components/anchor/anchor'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { Typography } from '~/components/typography/typography'
@@ -16,8 +18,14 @@ export function FeaturedAchievements() {
 
   return (
     <Section>
-      <SectionHeader title="Achievements" hasBetaTag>
-        <Typography className="my-3">Things I Have Achieved</Typography>
+      <SectionHeader title="Logros" hasBetaTag>
+        <Typography className="my-3">
+          Logros destacados que he conseguido a lo largo de mi carrera,{' '}
+          <Link href="/achievements" passHref>
+            <Anchor variant="decorated">ver todo</Anchor>
+          </Link>
+          .
+        </Typography>
       </SectionHeader>
       <Achievements achievements={achievements} />
     </Section>

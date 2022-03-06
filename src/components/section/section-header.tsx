@@ -29,7 +29,7 @@ export function SectionHeader(props: SectionHeaderProps) {
           {title}
           {hasBetaTag && (
             <Tag className="ml-2 align-middle">
-              <TagLabel>Beta</TagLabel>
+              <TagLabel>New</TagLabel>
             </Tag>
           )}
         </Typography>

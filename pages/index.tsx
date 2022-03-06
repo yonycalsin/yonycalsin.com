@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { dehydrate, DehydratedState, QueryClient } from 'react-query'
-import ms from 'ms'
 import type { GetStaticPropsResult } from 'next'
 import Link from 'next/link'
 import { useFlag } from 'toggled'
@@ -20,7 +19,7 @@ import { MainLayout } from '~/layouts'
 import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
 import { FeaturedAchievements } from '~/screens/home/components'
-import { queryKeys, socialLinks } from '~/utils/constants'
+import { queryKeys, socialLinks, timings } from '~/utils/constants'
 import Features from '~/utils/features-flags'
 
 interface HomePageProps {
@@ -135,7 +134,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
       latestBlogs,
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: ms('30m'),
+    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

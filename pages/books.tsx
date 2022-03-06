@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { dehydrate, DehydratedState, QueryClient, useQuery } from 'react-query'
-import type { GetStaticPropsContext, GetStaticPropsResult } from 'next'
+import type { GetStaticPropsResult } from 'next'
 
 import { createQueryFn } from '~/clients/query-client'
 import { BookItem } from '~/components/books/book-item'
@@ -8,6 +8,7 @@ import { Meta } from '~/components/meta'
 import { Typography } from '~/components/typography/typography'
 import { MainLayout } from '~/layouts'
 import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
+import { timings } from '~/utils/constants'
 
 interface BooksPageProps {
   dehydratedState: DehydratedState
@@ -86,7 +87,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: 10,
+    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

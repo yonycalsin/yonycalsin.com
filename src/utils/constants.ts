@@ -27,4 +27,9 @@ export const queryKeys = {
       isFeatured: true,
     },
   ],
+  PUBLISHED_ACHIEVEMENTS: ['/achievements'],
+}
+
+export const timings = {
+  REVALIDATE_STATIC_PAGES_TIME: 10, // in seconds
 }

@@ -5,6 +5,7 @@ import { useFlag } from 'toggled'
 
 import JavascriptLogo from '~/assets/images/javascript.webp'
 import { Anchor } from '~/components/anchor/anchor'
+import { Tag, TagLabel } from '~/components/tag'
 import Features from '~/utils/features-flags'
 
 export const Header = () => {
@@ -15,6 +16,8 @@ export const Header = () => {
   const hasBooks = useFlag(Features.BOOKS)
 
   const hasProjects = useFlag(Features.PROJECTS)
+
+  const hasAchievementsFF = useFlag(Features.ACHIEVEMENTS)
 
   return (
     <div className="shadow-sm fixed top-0 backdrop-blur-lg z-10 w-full dark:bg-[#1c1e24] ">
@@ -29,10 +32,22 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="flex items-center space-x-3 font-medium lg:text-lg">
+        <div className="flex items-center space-x-4 font-medium lg:text-lg">
           {hasProjects && (
             <Link href="/projects" passHref>
               <Anchor>Proyectos</Anchor>
+            </Link>
+          )}
+          {hasAchievementsFF && (
+            <Link href="/achievements" passHref>
+              <Anchor className="relative hidden lg:block">
+                <span>Logros</span>
+                <div className="absolute -top-1 -right-3">
+                  <Tag className="bg-secondary-100">
+                    <TagLabel className="text-[11px]">New</TagLabel>
+                  </Tag>
+                </div>
+              </Anchor>
             </Link>
           )}
           <Link href="/me" passHref>
