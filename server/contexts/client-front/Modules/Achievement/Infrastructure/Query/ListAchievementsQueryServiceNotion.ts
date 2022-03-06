@@ -36,13 +36,16 @@ class ListAchievementsQueryServiceNotion implements ListAchievementsQueryService
             equals: true,
           },
         },
-        {
-          property: 'Is Featured',
-          checkbox: {
-            equals: filtering.isFeatured ?? false,
-          },
-        },
       ],
+    }
+
+    if (filtering.isFeatured) {
+      filter.and.push({
+        property: 'Is Featured',
+        checkbox: {
+          equals: filtering.isFeatured,
+        },
+      })
     }
 
     const response = await this.sdkClientNotion.getClient().databases.query({
@@ -56,6 +59,8 @@ class ListAchievementsQueryServiceNotion implements ListAchievementsQueryService
       return ListAchievementsDto.create({
         id: item.id,
         title: _.head<any>(properties['Title'].title).plain_text,
+        // @ts-expect-error
+        shortDescription: _.head(properties['Short Description'].rich_text).plain_text,
         type: properties['Type'].select.name,
         date: new Date(properties['Date'].date.start),
         isFeatured: properties['Is Featured'].checkbox,

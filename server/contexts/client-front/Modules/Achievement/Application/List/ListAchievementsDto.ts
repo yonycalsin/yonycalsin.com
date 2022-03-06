@@ -3,6 +3,7 @@ import type JsonSerializable from '../../../Shared/Serializer/JsonSerializable'
 interface ListAchievementsJsonDto {
   id: string
   title: string
+  shortDescription: string
   type: string
   date: string
   isFeatured: boolean
@@ -12,6 +13,7 @@ interface ListAchievementsJsonDto {
 interface ListAchievementsDtoProps {
   id: string
   title: string
+  shortDescription: string
   type: string
   date: Date
   isFeatured: boolean
@@ -22,6 +24,8 @@ class ListAchievementsDto implements JsonSerializable<ListAchievementsJsonDto> {
   private readonly id!: string
 
   private readonly title!: string
+
+  private readonly shortDescription!: string
 
   private readonly type!: string
 
@@ -35,6 +39,8 @@ class ListAchievementsDto implements JsonSerializable<ListAchievementsJsonDto> {
     this.id = props.id
 
     this.title = props.title
+
+    this.shortDescription = props.shortDescription
 
     this.type = props.type
 
@@ -53,6 +59,7 @@ class ListAchievementsDto implements JsonSerializable<ListAchievementsJsonDto> {
     return {
       id: this.id,
       title: this.title,
+      shortDescription: this.shortDescription,
       type: this.type,
       date: this.date.toISOString(),
       isFeatured: this.isFeatured,
