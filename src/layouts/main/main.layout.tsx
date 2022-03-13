@@ -2,7 +2,7 @@ import * as React from 'react'
 import clsx from 'clsx'
 
 import { FloatSocials } from '~/components'
-import NightModeButton from '~/components/night-mode-button'
+import { NightModeButton } from '~/components/night-mode-button'
 import { PageTransition } from '~/components/page-transition/page-transition'
 
 import { Footer } from './components/footer/footer'
