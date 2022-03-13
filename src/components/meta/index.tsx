@@ -31,8 +31,11 @@ export const Meta = (props: MetaProps) => {
 
   return (
     <Head>
-      <meta name="robots" content={notRobots ? 'noindex, nofollow' : 'index,follow'} />
-      <meta name="googlebot" content={notRobots ? 'noindex, nofollow' : 'index,follow'} />
+      <meta name="robots" content={notRobots ? 'noindex, nofollow, noimageindex, indexifembedded' : 'index, follow'} />
+      <meta
+        name="googlebot"
+        content={notRobots ? 'noindex, nofollow, noimageindex, indexifembedded' : 'index, follow'}
+      />
 
       <meta name="description" content={description} />
       <meta name="image" content={socialBannerImage} />
