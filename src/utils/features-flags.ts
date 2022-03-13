@@ -5,6 +5,7 @@ enum Features {
   OSS_PROJECTS = 'oss-projects',
   BOOKS = 'books',
   PROJECTS = 'projects',
+  RECOMMENDATIONS = 'recommendations',
 }
 
 export default Features

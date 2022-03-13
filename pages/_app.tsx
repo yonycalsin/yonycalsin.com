@@ -54,6 +54,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_RECOMMENDATIONS) {
+      data.push({
+        slug: Features.RECOMMENDATIONS,
+      })
+    }
+
     return data
   }, [])
 

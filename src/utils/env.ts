@@ -15,6 +15,7 @@ const env = {
   FF_BOOKS: process.env.FF_BOOKS ? JSON.parse(process.env.FF_BOOKS) : null,
   FF_PROJECTS: process.env.FF_PROJECTS ? JSON.parse(process.env.FF_PROJECTS) : null,
   FF_ACHIEVEMENTS: process.env.FF_ACHIEVEMENTS ? JSON.parse(process.env.FF_ACHIEVEMENTS) : null,
+  FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS ? JSON.parse(process.env.FF_RECOMMENDATIONS) : null,
 }
 
 export default env

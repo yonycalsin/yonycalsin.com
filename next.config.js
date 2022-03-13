@@ -13,6 +13,7 @@ module.exports = withContentlayer()({
     FF_BOOKS: process.env.FF_BOOKS,
     FF_PROJECTS: process.env.FF_PROJECTS,
     FF_ACHIEVEMENTS: process.env.FF_ACHIEVEMENTS,
+    FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS,
   },
   swcMinify: true,
   async rewrites() {

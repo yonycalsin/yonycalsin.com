@@ -22,6 +22,10 @@ export const cookieNames = {
   GUEST_SESSION_TOKEN: '_guest-session-token-v1.0.0',
 }
 
+/**
+ * @deprecated
+ * @todo move these keys to src/constants/query-keys.ts
+ */
 export const queryKeys = {
   FEATURED_ACHIEVEMENTS: [
     '/achievements',
