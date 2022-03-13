@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "2.0.1",
+  "version": "4.0.0",
   "description": "Personal website running on Nextjs, Typescript, React, and Node.js.",
   "keywords": [],
   "license": "MIT",
