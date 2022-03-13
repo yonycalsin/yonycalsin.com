@@ -35,7 +35,13 @@
     "test:e2e": "is-ci \"test:e2e:run\" \"test:e2e:dev\"",
     "pretest:e2e:run": "npm run build",
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
-    "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open"
+    "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix --max-warnings=0"
+    ]
   },
   "dependencies": {
     "@chaitin/querystring": "^1.1.0",
@@ -118,9 +124,11 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-storybook": "^0.5.0",
     "eslint-plugin-testing-library": "^5.0.0",
+    "husky": "^7.0.4",
     "is-ci-cli": "^2.2.0",
     "jest": "^27.3.1",
     "jest-watch-typeahead": "^1.0.0",
+    "lint-staged": "12.3.5",
     "msw": "^0.35.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
