@@ -1,3 +1,5 @@
+import ms from 'ms'
+
 export const authorInfo = {
   EMAIL: 'helloyonycalsin@gmail.com',
   RESUME: 'https://resume.yonycalsin.com/',
@@ -31,5 +33,5 @@ export const queryKeys = {
 }
 
 export const timings = {
-  REVALIDATE_STATIC_PAGES_TIME: 10, // in seconds
+  REVALIDATE_STATIC_PAGES_TIME: ms('30m') / 1000, // in seconds
 }

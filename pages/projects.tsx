@@ -7,7 +7,7 @@ import { Typography } from '~/components/typography/typography'
 import { WorkItem } from '~/components/work-item/work-item'
 import { MainLayout } from '~/layouts'
 import { getWorkProjects, WorkProject } from '~/lib/airtable-api'
-import { socialLinks } from '~/utils/constants'
+import { socialLinks, timings } from '~/utils/constants'
 import env from '~/utils/env'
 
 interface ProjectsPageProps {
@@ -70,7 +70,7 @@ export async function getStaticProps(): Promise<
     props: {
       workProjects: workProjects,
     },
-    revalidate: hasWorkProjects ? 10 : false,
+    revalidate: hasWorkProjects ? timings.REVALIDATE_STATIC_PAGES_TIME : false,
   }
 }
 
