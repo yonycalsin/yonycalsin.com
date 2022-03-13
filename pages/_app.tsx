@@ -6,6 +6,7 @@ import type { AppProps } from 'next/dist/shared/lib/router/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
+import { NightModeButton } from '~/components/night-mode-button'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
@@ -82,15 +83,18 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient())
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <IdProvider>
-          <FeatureProvider features={features}>
-            <Component {...pageProps} />
-          </FeatureProvider>
-        </IdProvider>
-      </Hydrate>
-    </QueryClientProvider>
+    <>
+      <NightModeButton />
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <IdProvider>
+            <FeatureProvider features={features}>
+              <Component {...pageProps} />
+            </FeatureProvider>
+          </IdProvider>
+        </Hydrate>
+      </QueryClientProvider>
+    </>
   )
 }
 
