@@ -1,6 +1,6 @@
 import debug from 'debug'
-import type { NextHandler } from 'next-connect'
 
+import type { HttpNextHandler } from '../../Shared/Http/Definitions/HttpNextHandler'
 import type HttpRequest from '../../Shared/Http/Definitions/HttpRequest'
 import type HttpResponse from '../../Shared/Http/Definitions/HttpResponse'
 import HttpException from '../../Shared/Http/Exceptions/HttpException'
@@ -15,7 +15,7 @@ class ErrorHandlerMiddleware {
     errorException: HttpException | Error,
     request: HttpRequest,
     response: HttpResponse,
-    next: NextHandler,
+    next: HttpNextHandler,
   ) {
     if (!(errorException instanceof Error)) {
       return next()

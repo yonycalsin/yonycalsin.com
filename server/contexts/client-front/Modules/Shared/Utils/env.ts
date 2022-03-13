@@ -10,6 +10,11 @@ const env = {
   AUTH_JWT_SECRET: Buffer.from(process.env.AUTH_JWT_SECRET as string, 'base64'),
 
   /**
+   * Webhooks
+   */
+  REVALIDATE_WEBHOOKS_PUBLIC_KEY: process.env.REVALIDATE_WEBHOOKS_PUBLIC_KEY as string,
+
+  /**
    * Databases
    */
   NOTION_API_ACCESS_TOKEN: process.env.NOTION_API_ACCESS_TOKEN as string,
