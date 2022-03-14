@@ -41,7 +41,7 @@ class ListRecommendationsDto implements JsonSerializable<ListRecommendationsJson
 
   private readonly createdAt!: Date
 
-  public constructor(props: ListRecommendationsDtoProps) {
+  private constructor(props: ListRecommendationsDtoProps) {
     this.id = props.id
 
     this.type = props.type

@@ -25,7 +25,7 @@ export function SectionHeader(props: SectionHeaderProps) {
   return (
     <div>
       <div className="flex items-center justify-between relative">
-        <Typography variant="h3" className="relative">
+        <Typography variant="h3" className="relative" fontWeight="medium">
           {title}
           {hasBetaTag && (
             <Tag className="ml-2 align-middle">
