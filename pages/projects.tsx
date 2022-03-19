@@ -20,8 +20,8 @@ function ProjectsPage(props: ProjectsPageProps) {
   return (
     <MainLayout>
       <Meta title="Proyectos" notRobots />
-      <article className="py-4">
-        <header className="mb-3">
+      <article className="py-8">
+        <header className="mb-6">
           <Typography variant="h2" gutterBottom fontWeight="extrabold">
             Proyectos ({workProjects.length})
           </Typography>
@@ -34,7 +34,7 @@ function ProjectsPage(props: ProjectsPageProps) {
           </Typography>
         </header>
         <ul
-          className="timeline relative space-y-5 lg:space-y-7"
+          className="timeline relative space-y-10 lg:space-y-14"
           style={{
             listStyleType: 'none',
           }}

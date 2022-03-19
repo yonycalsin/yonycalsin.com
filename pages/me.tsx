@@ -2,15 +2,17 @@ import * as React from 'react'
 
 import { Anchor } from '~/components/anchor/anchor'
 import { Meta } from '~/components/meta'
+import { Recommendations } from '~/components/recommendations'
 import recommendations from '~/data/config/es/recomendations.json'
 import { MainLayout } from '~/layouts'
+import { FeaturedRecommendations } from '~/screens/home/components/featured-recommendations/featured-recommendations'
 
 export default function Home() {
   return (
     <MainLayout>
       <Meta title="Sobre Mi" />
 
-      <article className="markdown article pt-4">
+      <article className="markdown article pt-8">
         <header>
           <h1>Sobre Mi</h1>
           <blockquote>
@@ -147,19 +149,7 @@ export default function Home() {
           <li>etc...</li>
         </ul>
 
-        <div className="grid gap-3 md:grid-cols-2">
-          {recommendations.map(recommendation => (
-            <blockquote key={recommendation.text}>
-              <p className="mb-1">{recommendation.text}</p>
-              <div className="text-left">
-                <Anchor variant="decorated" href={recommendation.author.linkedin} target="_blank" rel="noreferrer">
-                  <b>— {recommendation.author.name}</b>
-                </Anchor>
-                <p className="mt-1 mb-0 text-gray text-sm ">{recommendation.author.title}</p>
-              </div>
-            </blockquote>
-          ))}
-        </div>
+        <FeaturedRecommendations />
       </article>
     </MainLayout>
   )

@@ -12,9 +12,9 @@ export function Recommendation(props: RecommendationProps) {
   const { recommendation } = props
 
   return (
-    <blockquote className="border border-l-4 dark:bg-gray-900 p-2 rounded-lg dark:border-transparent border-l-primary-300 dark:border-l-primary mb-0">
-      <Typography className="mb-1 dark:text-gray-500">{recommendation.text}</Typography>
-      <Typography variant="h6" className="italic mb-1" fontWeight="extrabold">
+    <blockquote className="border border-l-4 dark:bg-gray-900 p-4 rounded-lg dark:border-transparent border-l-primary-300 dark:border-l-primary mb-0">
+      <Typography className="mb-2 dark:text-gray-500">{recommendation.text}</Typography>
+      <Typography variant="h6" className="italic mb-2" fontWeight="extrabold">
         -{' '}
         <Anchor href={recommendation.author.linkedin} target="_blank" variant="decorated">
           {recommendation.author.name}

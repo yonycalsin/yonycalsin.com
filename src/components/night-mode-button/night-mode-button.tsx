@@ -21,7 +21,7 @@ export const NightModeButton = () => {
   return (
     <>
       <button
-        className="fixed left-2 top-2 text-2xl md:text-4xl lg:left-3 lg:top-3 lg:text-5xl z-20"
+        className="fixed left-4 top-4 text-2xl md:text-4xl lg:left-6 lg:top-6 lg:text-5xl z-20"
         onClick={onToggleDark}
       >
         <SunIcon className="dark:block hidden transition-all" />

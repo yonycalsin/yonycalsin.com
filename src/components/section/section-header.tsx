@@ -28,7 +28,7 @@ export function SectionHeader(props: SectionHeaderProps) {
         <Typography variant="h3" className="relative" fontWeight="medium">
           {title}
           {hasBetaTag && (
-            <Tag className="ml-2 align-middle">
+            <Tag className="ml-4 align-middle">
               <TagLabel>New</TagLabel>
             </Tag>
           )}

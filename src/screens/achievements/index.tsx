@@ -17,7 +17,7 @@ function AchievementsScreen() {
   return (
     <MainLayout>
       <Meta title="Logros" notRobots />
-      <article className="py-4">
+      <article className="py-8">
         <header>
           <Typography variant="h2" gutterBottom fontWeight="extrabold">
             Logros ({achievementsData.length})

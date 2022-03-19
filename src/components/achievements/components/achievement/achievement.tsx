@@ -15,7 +15,7 @@ export function Achievement(props: AchievementProps) {
   const { achievement } = props
 
   return (
-    <div className="grid grid-cols-[50px_1fr] lg:grid-cols-[90px_1fr_150px] gap-3 items-center">
+    <div className="grid grid-cols-[50px_1fr] lg:grid-cols-[90px_1fr_150px] gap-6 items-center">
       <div>
         <AchievementTypeIllustration type={achievement.type} />
       </div>

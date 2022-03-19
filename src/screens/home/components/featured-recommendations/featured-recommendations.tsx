@@ -26,7 +26,7 @@ export function FeaturedRecommendations() {
         actionComponent={Link}
         actionHref="/recommendations"
       />
-      <Recommendations className="mt-3" recommendations={recommendations} />
+      <Recommendations className="mt-6 mb-6" recommendations={recommendations} />
     </Section>
   )
 }

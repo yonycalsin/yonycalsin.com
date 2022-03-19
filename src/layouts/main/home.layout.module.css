@@ -1,13 +1,13 @@
 .main {
-  @apply mt-13 md:mt-7 lg:mt-10;
+  @apply mt-28 md:mt-14 lg:mt-20;
 
-  min-height: calc(100vh - (theme('spacing.13') + theme('spacing.12')));
+  min-height: calc(100vh - (theme('spacing.28') + theme('spacing.24')));
 
   @media screen(md) {
-    min-height: calc(100vh - (theme('spacing.7') + theme('spacing.15')));
+    min-height: calc(100vh - (theme('spacing.14') + theme('spacing.32')));
   }
 
   @media screen(lg) {
-    min-height: calc(100vh - (theme('spacing.10') + theme('spacing.20')));
+    min-height: calc(100vh - (theme('spacing.20') + theme('spacing.40')));
   }
 }

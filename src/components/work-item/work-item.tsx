@@ -25,22 +25,22 @@ export function WorkItem(props: WorkItemProps) {
 
   return (
     <li className="border-r-8 border-transparent hover:border-gray-200 border-double">
-      <div className="bg-white dark:bg-gray-700 shadow-md absolute h-6 w-6 p-1 flex items-center justify-center rounded-full dark:text-white">
-        <div className="absolute right-9 whitespace-nowrap hidden lg:block">
+      <div className="bg-white dark:bg-gray-700 shadow-md absolute h-12 w-12 p-2 flex items-center justify-center rounded-full dark:text-white">
+        <div className="absolute right-20 whitespace-nowrap hidden lg:block">
           <span className="italic text-base">{dayjs(startedAt).format(dateFormats.HUMAN_DATE)}</span>
         </div>
         <Clock className="w-full h-full" />
       </div>
-      <div className="ml-9">
+      <div className="ml-20">
         <Typography variant="h4" gutterBottom>
           <Anchor href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank">
             {title}
           </Anchor>
         </Typography>
         <Typography gutterBottom>{description}</Typography>
-        <div className="mb-3 flex gap-2 dark:invert">
+        <div className="mb-6 flex gap-4 dark:invert">
           {webHref && (
-            <a href={webHref} target="_blank" className="w-3 h-3 hover:scale-110" title="Website" rel="noreferrer">
+            <a href={webHref} target="_blank" className="w-6 h-6 hover:scale-110" title="Website" rel="noreferrer">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://cdn-icons-png.flaticon.com/512/2301/2301129.png" alt="Website" />
             </a>
@@ -49,7 +49,7 @@ export function WorkItem(props: WorkItemProps) {
             <a
               href={repositoryHref}
               target="_blank"
-              className="w-3 h-3 hover:scale-110 hover:bg-transparent"
+              className="w-6 h-6 hover:scale-110 hover:bg-transparent"
               title="Repository"
               rel="noreferrer"
             >
@@ -61,7 +61,7 @@ export function WorkItem(props: WorkItemProps) {
             <a
               href={packageHref}
               target="_blank"
-              className="w-3 h-3 hover:scale-110 hover:bg-transparent"
+              className="w-6 h-6 hover:scale-110 hover:bg-transparent"
               title="Package"
               rel="noreferrer"
             >

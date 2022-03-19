@@ -19,7 +19,7 @@ export function FeaturedAchievements() {
   return (
     <Section>
       <SectionHeader title="Logros" hasBetaTag>
-        <Typography className="my-3">
+        <Typography className="my-6">
           Logros destacados que he conseguido a lo largo de mi carrera,{' '}
           <Link href="/achievements" passHref>
             <Anchor variant="decorated">ver todo</Anchor>

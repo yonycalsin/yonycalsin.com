@@ -90,13 +90,6 @@ module.exports = {
         900: '#FF8500',
       },
     },
-    spacing: {
-      ...spacing,
-      0.5: '4px',
-      1.5: '12px',
-      2.5: '20px',
-      3.5: '28px',
-    },
     container: {
       center: true,
     },

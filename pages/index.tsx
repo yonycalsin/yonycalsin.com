@@ -14,14 +14,16 @@ import { QuoteList } from '~/components/quotes/quote-list'
 import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { Typography } from '~/components/typography/typography'
-import { QUERY_KEY_FEATURED_RECOMMENDATIONS } from '~/constants/query-keys'
+import { QUERY_KEY_FEATURED_RECOMMENDATIONS, QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
 import quotes from '~/data/config/es/quotes.json'
 import { MainLayout } from '~/layouts'
 import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
+import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
 import type { IRecommendationQueryWithMeta } from '~/module-types/api-rest/recommendations'
 import { FeaturedAchievements } from '~/screens/home/components'
 import { FeaturedRecommendations } from '~/screens/home/components/featured-recommendations/featured-recommendations'
+import { PinnedProjects } from '~/screens/home/components/pinned-projects'
 import { queryKeys, socialLinks, timings } from '~/utils/constants'
 import Features from '~/utils/features-flags'
 
@@ -44,7 +46,7 @@ function HomePage(props: HomePageProps) {
   return (
     <MainLayout>
       <Meta />
-      <div className="break-words pt-4">
+      <div className="break-words pt-8">
         <Typography variant="h2" gutterBottom fontWeight="extrabold">
           Hola, soy Yony.
         </Typography>
@@ -108,10 +110,10 @@ function HomePage(props: HomePageProps) {
           </div>
         </Section>
       )}
-      <Section>
+      {/* <Section>
         <SectionHeader title="Quotes" />
         <QuoteList className="my-3" quotes={quotes} />
-      </Section>
+      </Section> */}
     </MainLayout>
   )
 }
@@ -136,6 +138,10 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
   })
 
   await queryClient.prefetchQuery<IRecommendationQueryWithMeta>(QUERY_KEY_FEATURED_RECOMMENDATIONS, {
+    staleTime: Infinity,
+  })
+
+  await queryClient.prefetchQuery<IProjectQueryWithMeta>(QUERY_KEY_PINNED_PROJECTS, {
     staleTime: Infinity,
   })
 

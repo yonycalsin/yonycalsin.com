@@ -13,7 +13,7 @@ export function Achievements(props: AchievementsProps) {
   const { achievements, className } = props
 
   return (
-    <div className={clsx('space-y-3', className)}>
+    <div className={clsx('space-y-6', className)}>
       {achievements.map(achievement => (
         <Achievement key={achievement.id} achievement={achievement} />
       ))}
