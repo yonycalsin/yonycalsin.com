@@ -14,7 +14,7 @@ interface ListProjectsJsonDto {
   type: 'project' | 'package' | 'contribution'
   status: 'published' | 'draft'
   maintenanceStatus: 'active' | 'deprecated' | 'inactive'
-  isFeatured: boolean
+  isPinned: boolean
   shortDescription: string
   websiteUrl: string | null
   repositoryUrl: string | null
@@ -35,7 +35,7 @@ interface ListProjectsDtoProps {
   type: 'project' | 'package' | 'contribution'
   status: 'published' | 'draft'
   maintenanceStatus: 'active' | 'deprecated' | 'inactive'
-  isFeatured: boolean
+  isPinned: boolean
   shortDescription: string
   websiteUrl?: string
   repositoryUrl?: string
@@ -57,7 +57,7 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
 
   private readonly maintenanceStatus!: 'active' | 'deprecated' | 'inactive'
 
-  private readonly isFeatured!: boolean
+  private readonly isPinned!: boolean
 
   private readonly shortDescription!: string
 
@@ -84,7 +84,7 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
 
     this.maintenanceStatus = props.maintenanceStatus
 
-    this.isFeatured = props.isFeatured
+    this.isPinned = props.isPinned
 
     this.shortDescription = props.shortDescription
 
@@ -111,7 +111,7 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
       type: this.type!,
       status: this.status!,
       maintenanceStatus: this.maintenanceStatus!,
-      isFeatured: this.isFeatured!,
+      isPinned: this.isPinned!,
       shortDescription: this.shortDescription!,
       websiteUrl: this.websiteUrl ?? null,
       repositoryUrl: this.repositoryUrl ?? null,

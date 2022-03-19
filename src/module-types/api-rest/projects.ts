@@ -27,7 +27,7 @@ export interface IProject {
   type: IProjectType
   status: IProjectStatus
   maintenanceStatus: IProjectMaintenanceStatus
-  isFeatured: boolean
+  isPinned: boolean
   shortDescription: string
   websiteUrl: string | null
   repositoryUrl: string | null

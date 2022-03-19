@@ -16,7 +16,9 @@ class ListProjectsQueryHandler implements QueryHandler<ListProjectsPaginationDto
   }
 
   public async handle(query: ListProjectsQuery): Promise<ListProjectsPaginationDto> {
-    const filtering = CriteriaFiltering.create<ListProjectsCriteriaFilteringFields>({})
+    const filtering = CriteriaFiltering.create<ListProjectsCriteriaFilteringFields>({
+      isPinned: query.getIsPinned(),
+    })
 
     const pagination = new PaginationOffset(query.getPage(), query.getLimit())
 

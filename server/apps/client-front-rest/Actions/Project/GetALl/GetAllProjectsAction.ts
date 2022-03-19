@@ -28,6 +28,7 @@ class GetAllProjectsAction implements Action {
     const query = new ListProjectsQuery({
       page: values.page,
       limit: values.limit,
+      isPinned: values.isPinned,
     })
 
     const result = await this.listProjectsQueryHandler.handle(query)

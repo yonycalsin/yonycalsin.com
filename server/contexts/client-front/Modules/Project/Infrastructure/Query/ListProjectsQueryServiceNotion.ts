@@ -22,20 +22,33 @@ class ListProjectsQueryServiceNotion implements ListProjectsQueryService {
   }
 
   public async execute(criteria: Criteria<ListProjectsCriteriaFilteringFields>) {
+    const filtering = criteria.getFilteringFields()
+
     const pagination = criteria.getPagination()
+
+    const filter: any = {
+      and: [
+        {
+          property: 'Status',
+          select: {
+            equals: 'Published',
+          },
+        },
+      ],
+    }
+
+    if (filtering.isPinned) {
+      filter.and.push({
+        property: 'Is Pinned',
+        checkbox: {
+          equals: filtering.isPinned,
+        },
+      })
+    }
 
     const response = await this.sdkClientNotion.getClient().databases.query({
       database_id: env.NOTION_PROJECTS_DATABASE_ID,
-      filter: {
-        and: [
-          {
-            property: 'Status',
-            select: {
-              equals: 'Published',
-            },
-          },
-        ],
-      },
+      filter,
     })
 
     const dtos: ListProjectsDto[] = _.map(response.results, (result: any) => {
@@ -48,9 +61,8 @@ class ListProjectsQueryServiceNotion implements ListProjectsQueryService {
         type: properties['Type'].select.name,
         status: properties['Status'].select.name,
         maintenanceStatus: properties['Maintenance status'].select.name,
-        isFeatured: properties['Is Featured'].checkbox,
+        isPinned: properties['Is Pinned'].checkbox,
         shortDescription: _.head<any>(properties['Short Description'].rich_text).plain_text,
-
         websiteUrl: properties['Website Url'].url,
         repositoryUrl: properties['Repository Url'].url,
         packageUrl: properties['Package Url'].url,

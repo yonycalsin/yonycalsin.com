@@ -3,6 +3,7 @@ import type Query from '~/server/contexts/shared/Modules/Shared/Application/Quer
 interface ListProjectsQueryProps {
   page?: number
   limit?: number
+  isPinned?: boolean
 }
 
 class ListProjectsQuery implements Query {
@@ -10,10 +11,14 @@ class ListProjectsQuery implements Query {
 
   private readonly limit: number | undefined
 
+  private readonly isPinned: boolean | undefined
+
   public constructor(props: ListProjectsQueryProps) {
     this.page = props.page
 
     this.limit = props.limit
+
+    this.isPinned = props.isPinned
   }
 
   public getPage(): number | undefined {
@@ -22,6 +27,10 @@ class ListProjectsQuery implements Query {
 
   public getLimit(): number | undefined {
     return this.limit
+  }
+
+  public getIsPinned(): boolean | undefined {
+    return this.isPinned
   }
 }
 

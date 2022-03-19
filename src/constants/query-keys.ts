@@ -4,6 +4,6 @@ export const QUERY_KEY_FEATURED_RECOMMENDATIONS = ['/recommendations']
 export const QUERY_KEY_PINNED_PROJECTS = [
   '/projects',
   {
-    isFeatured: true,
+    isPinned: true,
   },
 ]
