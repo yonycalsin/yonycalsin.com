@@ -6,6 +6,7 @@ import type { AppProps } from 'next/dist/shared/lib/router/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
+import { createQueryFn } from '~/clients/query-client'
 import { NightModeButton } from '~/components/night-mode-button'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
@@ -86,7 +87,16 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router])
 
-  const [queryClient] = React.useState(() => new QueryClient())
+  const [queryClient] = React.useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            queryFn: createQueryFn(),
+          },
+        },
+      }),
+  )
 
   return (
     <>
