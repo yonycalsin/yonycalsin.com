@@ -8,7 +8,7 @@ import type HttpResponse from '~/server/apps/client-front-rest/Shared/Http/Defin
 
 async function handler(req: HttpRequest, res: HttpResponse) {
   try {
-    await res.unstable_revalidate('/home')
+    await res.unstable_revalidate('/')
 
     return res.json({ revalidated: true })
   } catch (err) {
