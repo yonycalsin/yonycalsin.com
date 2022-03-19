@@ -9,6 +9,12 @@ body {
 
   @apply bg-white dark:bg-black transition-colors;
 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gradient-to-tr from-white to-gray-300 dark:from-black dark:to-gray-800;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   font-family: Archia, Wotfard, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
