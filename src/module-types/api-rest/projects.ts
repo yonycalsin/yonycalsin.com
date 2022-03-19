@@ -22,6 +22,7 @@ export interface IProjectTechStack {
 
 export interface IProject {
   id: number
+  slug: string
   name: string
   type: IProjectType
   status: IProjectStatus

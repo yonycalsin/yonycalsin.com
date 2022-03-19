@@ -44,6 +44,7 @@ class ListProjectsQueryServiceNotion implements ListProjectsQueryService {
       return ListProjectsDto.create({
         id: result.id,
         name: _.head<any>(properties['Name'].title).plain_text,
+        slug: _.head<any>(properties['Slug'].rich_text).plain_text,
         type: properties['Type'].select.name,
         status: properties['Status'].select.name,
         maintenanceStatus: properties['Maintenance status'].select.name,

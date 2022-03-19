@@ -10,6 +10,7 @@ interface ListProjectsJsonTechStackDto {
 interface ListProjectsJsonDto {
   id: string
   name: string
+  slug: string
   type: 'project' | 'package' | 'contribution'
   status: 'published' | 'draft'
   maintenanceStatus: 'active' | 'deprecated' | 'inactive'
@@ -30,6 +31,7 @@ interface ListProjectsDtoTechStackProps {
 interface ListProjectsDtoProps {
   id: string
   name: string
+  slug: string
   type: 'project' | 'package' | 'contribution'
   status: 'published' | 'draft'
   maintenanceStatus: 'active' | 'deprecated' | 'inactive'
@@ -46,6 +48,8 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
   private readonly id!: string
 
   private readonly name!: string
+
+  private readonly slug!: string
 
   private readonly type!: 'project' | 'package' | 'contribution'
 
@@ -71,6 +75,8 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
     this.id = props.id
 
     this.name = props.name
+
+    this.slug = props.slug
 
     this.type = props.type
 
@@ -101,6 +107,7 @@ class ListProjectsDto implements JsonSerializable<ListProjectsJsonDto> {
     return {
       id: this.id!,
       name: this.name!,
+      slug: this.slug!,
       type: this.type!,
       status: this.status!,
       maintenanceStatus: this.maintenanceStatus!,
