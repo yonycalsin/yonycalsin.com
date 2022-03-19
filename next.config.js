@@ -14,6 +14,7 @@ module.exports = withContentlayer()({
     FF_PROJECTS: process.env.FF_PROJECTS,
     FF_ACHIEVEMENTS: process.env.FF_ACHIEVEMENTS,
     FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS,
+    FF_PINNED_PROJECTS: process.env.FF_PINNED_PROJECTS,
   },
   swcMinify: true,
   async rewrites() {

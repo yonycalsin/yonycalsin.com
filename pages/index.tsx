@@ -43,6 +43,8 @@ function HomePage(props: HomePageProps) {
 
   const hasRecommendationsFF = useFlag(Features.RECOMMENDATIONS)
 
+  const hasPinnedProjectsFF = useFlag(Features.PINNED_PROJECTS)
+
   return (
     <MainLayout>
       <Meta />
@@ -62,6 +64,7 @@ function HomePage(props: HomePageProps) {
           <Button variant="light">Más sobre mí</Button>
         </Link>
       </div>
+      {hasPinnedProjectsFF && <PinnedProjects />}
       {hasAchievementsFF && <FeaturedAchievements />}
       {hasRecommendationsFF && <FeaturedRecommendations />}
       {hasBlog && (

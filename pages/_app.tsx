@@ -61,6 +61,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_PINNED_PROJECTS) {
+      data.push({
+        slug: Features.PINNED_PROJECTS,
+      })
+    }
+
     return data
   }, [])
 

@@ -11,7 +11,7 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-gradient-to-tr from-white to-gray-300 dark:from-black dark:to-gray-800;
+  @apply bg-gradient-to-tr from-white to-gray-100 dark:from-black dark:to-gray-800;
   background-size: cover;
   background-repeat: no-repeat;
 
