@@ -9,7 +9,7 @@ export interface AnchorProps
 
 const variants = {
   regular: 'no-underline dark:text-gray-300',
-  decorated: 'hover:bg-primary hover:text-white border-b-2 border-primary',
+  decorated: 'hover:bg-primary hover:text-white border-b-2 border-primary font-bold',
 }
 
 const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(function Anchor(props: AnchorProps, ref) {
