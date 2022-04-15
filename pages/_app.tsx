@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { IdProvider } from '@radix-ui/react-id'
 import { useRouter } from 'next/dist/client/router'
-import type { AppProps } from 'next/dist/shared/lib/router/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
