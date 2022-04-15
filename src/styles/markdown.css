@@ -76,30 +76,37 @@
     pre,
     blockquote {
       @apply text-xl;
+      @apply leading-9;
     }
 
     h1 {
       @apply text-5xl;
+      @apply leading-9;
     }
 
     h2 {
       @apply text-4xl;
+      @apply leading-9;
     }
 
     h3 {
       @apply text-3xl;
+      @apply leading-9;
     }
 
     h4 {
       @apply text-2xl;
+      @apply leading-9;
     }
 
     h5 {
       @apply text-xl;
+      @apply leading-9;
     }
 
     h6 {
       @apply text-lg;
+      @apply leading-9;
     }
 
     pre {

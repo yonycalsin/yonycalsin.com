@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Anchor } from '~/components/anchor/anchor'
 import { Meta } from '~/components/meta'
 import { MainLayout } from '~/layouts'
-import { FeaturedRecommendations } from '~/screens/home/components/featured-recommendations/featured-recommendations'
 
 export default function Home() {
   return (
@@ -146,8 +145,6 @@ export default function Home() {
           </li>
           <li>etc...</li>
         </ul>
-
-        <FeaturedRecommendations />
       </article>
     </MainLayout>
   )
