@@ -151,8 +151,7 @@
     "webpack": "5.72.0"
   },
   "engines": {
-    "node": "14.x",
-    "npm": "6.x"
+    "node": "14.x"
   },
   "msw": {
     "workerDirectory": "public"

@@ -19,12 +19,12 @@ jobs:
         uses: actions/cache@v1.2.0
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             node-modules-
 
       - if: steps.node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - run: tar -zcf node_modules.tar.gz node_modules
 
@@ -97,10 +97,10 @@ jobs:
         run: npx wait-on tcp:3306 && echo "MySQL is up"
 
       - name: Build
-        run: npm run contentlayer:build
+        run: yarn contentlayer:build
 
       - name: Static Testing
-        run: npm run test:static
+        run: yarn test:static
 
       - name: Unit Testing
-        run: npm run test:unit:ci
+        run: yarn test:unit:ci
