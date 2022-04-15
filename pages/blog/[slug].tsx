@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
@@ -13,7 +13,7 @@ interface BlogSlugPageProps {
 function BlogSlugPage(props: BlogSlugPageProps) {
   const { post } = props
 
-  const Component = useMDXComponent(post.body.raw)
+  const Component = useMDXComponent(post.body.code)
 
   return (
     <BlogLayout post={post}>
