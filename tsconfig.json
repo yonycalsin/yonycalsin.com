@@ -17,13 +17,14 @@
     "paths": {
       "~/*": ["./src/*"],
       "~/server*": ["./server*"],
-      "~/data*": ["./data*"]
+      "~/data*": ["./data*"],
+      "~/contentlayer/generated": ["./.contentlayer/generated"]
     },
     "importsNotUsedAsValues": "error",
     "incremental": true,
     "noImplicitOverride": true,
     "strictPropertyInitialization": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", ".contentlayer/generated"],
   "exclude": ["node_modules", ".next", "out"]
 }

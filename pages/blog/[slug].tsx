@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
