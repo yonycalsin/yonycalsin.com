@@ -15,7 +15,7 @@ export function createQueryFn(options?: { baseUrl: string }) {
       queryKey: [endpoint, query],
     } = queryCtx
 
-    const baseURL = options?.baseUrl || env.API_BASE_URL
+    const baseURL = options?.baseUrl || env.REST_API_URL
 
     const queryString = getQueryString(endpoint as string, query as IParseInput)
 
