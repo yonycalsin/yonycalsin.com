@@ -3,7 +3,7 @@ const env = {
   GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   IS_ENV_DEV: process.env.NODE_ENV === 'development',
   IS_ENV_PROD: process.env.NODE_ENV === 'production',
-  API_BASE_URL: process.env.API_BASE_URL,
+  REST_API_URL: process.env.REST_API_URL,
 
   /**
    * Feature Flags
