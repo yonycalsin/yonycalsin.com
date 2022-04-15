@@ -8,8 +8,6 @@ import { SectionHeader } from '~/components/section/section-header'
 import { QUERY_KEY_FEATURED_RECOMMENDATIONS } from '~/constants/query-keys'
 import type { IRecommendationQueryWithMeta } from '~/module-types/api-rest/recommendations'
 
-export interface FeaturedRecommendationsProps {}
-
 export function FeaturedRecommendations() {
   const queryResult = useQuery<IRecommendationQueryWithMeta>(QUERY_KEY_FEATURED_RECOMMENDATIONS, {
     staleTime: Infinity,

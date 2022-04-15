@@ -1,21 +1,19 @@
 module.exports = {
-  plugins: ['simple-import-sort', 'testing-library'],
-  extends: ['next', 'prettier', 'plugin:storybook/recommended'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'testing-library'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'next',
+    'next/core-web-vitals',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  env: {
-    browser: true,
-    es2021: true,
   },
   rules: {
     'simple-import-sort/imports': [
@@ -38,22 +36,20 @@ module.exports = {
       },
     ],
     'simple-import-sort/exports': 'error',
-    'no-unused-vars': 'warn',
-    'no-console': [
-      'warn',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    '@next/next/no-img-element': 'off',
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
       {
-        allow: ['warn', 'error'],
+        'ts-expect-error': 'allow-with-description',
+        'ts-ignore': 'allow-with-description',
+        'ts-nocheck': true,
+        'ts-check': false,
+        minimumDescriptionLength: 3,
       },
     ],
-    '@next/next/no-img-element': 'off',
   },
   overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'no-unused-vars': 'off',
-      },
-    },
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],

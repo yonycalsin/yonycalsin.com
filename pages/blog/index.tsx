@@ -28,6 +28,7 @@ function BlogPage(props: BlogPageProps) {
 }
 
 export function getStaticProps(): GetStaticPropsResult<BlogPageProps> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const allPosts = allBlogs.map(({ body, ...post }) => post) as Blog[]
 
   return {

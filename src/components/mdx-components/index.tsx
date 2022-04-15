@@ -2,7 +2,12 @@ import * as React from 'react'
 import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
 
-function CustomLink(props: any) {
+interface CustomLinkProps {
+  href: string
+  children: React.ReactNode
+}
+
+function CustomLink(props: CustomLinkProps) {
   const { href, children } = props
 
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))

@@ -10,6 +10,11 @@ import HttpStatusMessages from '../../Shared/Http/Status/HttpStatusMessages'
 
 const logger = debug('api:apps:client-front-rest:middlewares:error:handler')
 
+interface ErrorItem {
+  errorCode?: string
+  message: string
+}
+
 class ErrorHandlerMiddleware {
   public execute(
     errorException: HttpException | Error,
@@ -24,7 +29,7 @@ class ErrorHandlerMiddleware {
     const defaultResponseData = {
       statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
       data: null,
-      errors: [] as any[],
+      errors: [] as ErrorItem[],
     }
 
     // prettier-ignore
@@ -32,7 +37,7 @@ class ErrorHandlerMiddleware {
     logger('error stack: ', (errorException as InternalServerErrorException).innerError?.stack ?? errorException.stack)
 
     if (errorException instanceof HttpException) {
-      const error = {
+      const error: ErrorItem = {
         errorCode: errorException.getErrorCode(),
         message: errorException.getMessage(),
         ...errorException.getExtraData(),

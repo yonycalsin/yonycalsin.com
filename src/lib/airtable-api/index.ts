@@ -8,7 +8,8 @@ import Airtable from 'airtable'
  */
 const db = process.env.AIRTABLE_BASE_ID
   ? Airtable.base(process.env.AIRTABLE_BASE_ID as string)
-  : (null as unknown as any)
+  : // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (null as unknown as any)
 
 export interface WorkProject {
   id: string
@@ -39,6 +40,7 @@ export async function getWorkProjects(): Promise<WorkProject[]> {
     .all()
 
   return records.map(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (item: any): WorkProject => ({
       id: item.id,
       name: item.get('Name') as string,

@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server'
 
 import { isProduction } from '~/utils'
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function middleware(req: NextRequest, fetchEvent: NextFetchEvent) {
   const response = NextResponse.next()
 
   if (!isProduction) {

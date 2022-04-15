@@ -6,6 +6,7 @@ export interface SectionHeaderProps {
   actionHref?: string
   actionLabel?: string
   actionHrefExternal?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   actionComponent?: any
   children?: React.ReactNode
   hasBetaTag?: boolean

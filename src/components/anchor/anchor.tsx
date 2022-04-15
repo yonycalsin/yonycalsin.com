@@ -7,7 +7,7 @@ export interface AnchorProps
   component?: 'a' | 'span'
 }
 
-const variants: any = {
+const variants = {
   regular: 'no-underline dark:text-gray-300',
   decorated: 'hover:bg-primary hover:text-white border-b-2 border-primary',
 }

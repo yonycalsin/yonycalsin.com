@@ -12,6 +12,7 @@ declare global {
   }
 
   interface AppProps extends NextAppProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Component: NextComponentType<NextPageContext, any, any>
     pageProps: {
       dehydratedState: DehydratedState

@@ -67,7 +67,7 @@ export function Typography(props: TypographyProps) {
 
   const variantStyle = variantStyles[variant]
 
-  // @ts-expect-error
+  // @ts-expect-error: `variantStyle` is not undefined
   const fontWeightStyle = fontWeightStyles[fontWeight || variantStyle.fontWeight]
 
   const gutterBottomStyle = gutterBottom ? variantStyle.gutterBottomStyle : ''

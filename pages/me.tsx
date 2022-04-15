@@ -2,8 +2,6 @@ import * as React from 'react'
 
 import { Anchor } from '~/components/anchor/anchor'
 import { Meta } from '~/components/meta'
-import { Recommendations } from '~/components/recommendations'
-import recommendations from '~/data/config/es/recomendations.json'
 import { MainLayout } from '~/layouts'
 import { FeaturedRecommendations } from '~/screens/home/components/featured-recommendations/featured-recommendations'
 

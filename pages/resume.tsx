@@ -20,7 +20,12 @@ interface FormFields {
   email: string
 }
 
-const Item = ({ children, href }: any) => (
+interface ItemProps {
+  href: string
+  children: React.ReactNode
+}
+
+const Item = ({ children, href }: ItemProps) => (
   <a
     href={href}
     target="_blank"

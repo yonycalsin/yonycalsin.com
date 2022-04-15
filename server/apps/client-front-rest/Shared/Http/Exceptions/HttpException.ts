@@ -6,6 +6,7 @@ interface HttpExceptionOptions {
   statusCode: number
   errorCode?: string
   message?: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraData?: Record<string, any>
 }
 
@@ -18,6 +19,7 @@ abstract class HttpException extends Error {
 
   private readonly errorCode?: string
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private readonly extraData: Record<string, any>
 
   public constructor(options: HttpExceptionOptions) {
@@ -76,6 +78,7 @@ abstract class HttpException extends Error {
     return this.errorCode
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public getExtraData(): Readonly<Record<string, any>> {
     return Object.freeze(this.extraData)
   }

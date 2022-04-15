@@ -8,9 +8,11 @@ const validateConfig: ValidateOption = {
   fullMessages: false,
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const validationResolver: Resolver<any, any> = (formValues, context) => {
   const errors = validate(formValues, context, validateConfig)
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const normalizedErrors = errors ? mapValues(errors, (error: any) => ({ message: error[0] })) : {}
 
   return {

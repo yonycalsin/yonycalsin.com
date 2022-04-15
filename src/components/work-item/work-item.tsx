@@ -71,6 +71,7 @@ export function WorkItem(props: WorkItemProps) {
           )}
         </div>
         <div className="flex flex-wrap gap-1">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {tags.map((item: any) => (
             <TagLegacy
               key={item}

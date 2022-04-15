@@ -3,6 +3,7 @@ import { render } from '@testing-library/react'
 // import { TranslationProvider } from "my-i18n-lib"
 // import defaultStrings from "i18n/en-x-default"
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Providers = ({ children }: any) => {
   return children
   // return (
@@ -14,6 +15,7 @@ const Providers = ({ children }: any) => {
   // )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const customRender = (ui: any, options = {}) => render(ui, { wrapper: Providers, ...options })
 
 // re-export everything

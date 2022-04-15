@@ -2,7 +2,12 @@ import * as React from 'react'
 
 import { socialLinks } from '~/utils/constants'
 
-const Item = ({ children, href }: any) => (
+interface ItemProps {
+  children: React.ReactNode
+  href: string
+}
+
+const Item = ({ children, href }: ItemProps) => (
   <a
     href={href}
     target="_blank"

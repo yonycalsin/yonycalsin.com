@@ -5,6 +5,7 @@ const decode = (cookieValue: string) => JSON.parse(decodeURIComponent(decodeURIC
 const encode = (cookieValue: string) => encodeURIComponent(encodeURIComponent(JSON.stringify(cookieValue)))
 
 function parseCookies(...[ctx, options]: Parameters<typeof nookies.get>) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return nookies.get(ctx, { ...options, decode }) as Record<string, any>
 }
 
