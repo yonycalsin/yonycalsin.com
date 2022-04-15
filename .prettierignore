@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.contentlayer
 
 # testing
 /coverage
@@ -48,3 +49,6 @@ theme-preview-build
 data
 temp
 content
+mockServiceWorker.js
+cypress/videos
+cypress/screenshots
