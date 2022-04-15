@@ -13,7 +13,7 @@ interface BlogSlugPageProps {
 function BlogSlugPage(props: BlogSlugPageProps) {
   const { post } = props
 
-  const Component = useMDXComponent(post.body.code)
+  const Component = useMDXComponent(post.body.raw)
 
   return (
     <BlogLayout post={post}>
