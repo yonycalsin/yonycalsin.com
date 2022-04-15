@@ -111,10 +111,6 @@ function HomePage(props: HomePageProps) {
           </div>
         </Section>
       )}
-      {/* <Section>
-        <SectionHeader title="Quotes" />
-        <QuoteList className="my-3" quotes={quotes} />
-      </Section> */}
     </MainLayout>
   )
 }

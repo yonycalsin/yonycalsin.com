@@ -16,7 +16,7 @@ export const TagLegacy = (props: TagProps) => {
       variant="h6"
       as="span"
       fontWeight="normal"
-      className={clsx(className, 'text-white px-1 py-0.5 rounded-md')}
+      className={clsx(className, 'text-white px-2 py-0.5 rounded-md')}
     >
       {children}
     </Typography>

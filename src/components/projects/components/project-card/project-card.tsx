@@ -22,7 +22,7 @@ export function ProjectCard(props: ProjectCardProps) {
       animate={{
         height: isOpen ? 'auto' : 60,
       }}
-      className="flex overflow-hidden relative flex-col no-underline dark:hover:bg-gray-900  border-secondary-200 bg-secondary-50 dark:bg-black rounded-md border dark:border-white/10 md:rounded-lg"
+      className="flex overflow-hidden relative flex-col no-underline dark:hover:bg-gray-900  border-primary-200 bg-primary-50 dark:bg-black rounded-md border dark:border-white/10 md:rounded-lg"
     >
       <ProjectCardButton isOpen={isOpen} onToggle={onToggle} project={project} />
       <ProjectCardContent isOpen={isOpen} project={project} />

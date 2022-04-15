@@ -22,7 +22,7 @@ export function ProjectCardContent(props: ProjectCardContentProps) {
                 href={(project.repositoryUrl ?? project.packageUrl ?? project.websiteUrl) as string}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center py-2 px-6 space-x-2 text-white no-underline bg-secondary-700 dark:bg-white/10 rounded-full transition-transform duration-500 hover:scale-95 select-none"
+                className="inline-flex items-center py-2 px-6 space-x-2 text-white no-underline bg-primary-700 dark:bg-white/10 rounded-full transition-transform duration-500 hover:scale-95 select-none"
               >
                 <span>Ver proyecto</span>
                 <svg
