@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
-import { IdProvider } from '@radix-ui/react-id'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
@@ -108,11 +107,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NightModeButton />
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
-          <IdProvider>
-            <FeatureProvider features={features}>
-              <Component {...pageProps} />
-            </FeatureProvider>
-          </IdProvider>
+          <FeatureProvider features={features}>
+            <Component {...pageProps} />
+          </FeatureProvider>
         </Hydrate>
       </QueryClientProvider>
     </>
