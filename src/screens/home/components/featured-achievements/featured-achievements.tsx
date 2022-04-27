@@ -1,9 +1,9 @@
+import * as React from 'react'
 import { useQuery } from 'react-query'
-import Link from 'next/link'
+import { Box, Link } from '@chakra-ui/react'
+import RouterLink from 'next/link'
 
 import { Achievements } from '~/components/achievements'
-import { Anchor } from '~/components/anchor/anchor'
-import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { Typography } from '~/components/typography/typography'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
@@ -17,17 +17,17 @@ export function FeaturedAchievements() {
   const achievements = queryResult.data?.data ?? []
 
   return (
-    <Section>
-      <SectionHeader title="Logros" hasBetaTag>
+    <Box py="3">
+      <SectionHeader title="Logros">
         <Typography className="my-6">
           Logros destacados que he conseguido a lo largo de mi carrera,{' '}
-          <Link href="/achievements" passHref>
-            <Anchor variant="decorated">ver todo</Anchor>
-          </Link>
+          <RouterLink href="/achievements" passHref>
+            <Link color="primary.500">ver todo</Link>
+          </RouterLink>
           .
         </Typography>
       </SectionHeader>
       <Achievements achievements={achievements} />
-    </Section>
+    </Box>
   )
 }

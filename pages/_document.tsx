@@ -1,8 +1,9 @@
 import * as React from 'react'
+import { ColorModeScript } from '@chakra-ui/react'
 import { Head, Html, Main, NextScript } from 'next/document'
 
+import { mainTheme } from '~/themes/main'
 import { isProduction } from '~/utils'
-import { cookieNames } from '~/utils/constants'
 import env from '~/utils/env'
 
 function HeadScripts() {
@@ -31,16 +32,9 @@ function HeadScripts() {
 function MyDocument() {
   return (
     <Html>
-      <Head>
-        <script
-          id="theme-mode-script"
-          dangerouslySetInnerHTML={{
-            __html: `!function(){"use strict";var e="string"==typeof(e=localStorage.getItem("${cookieNames.THEME_MODE}"))?e:"boolean"==typeof(e=matchMedia("(prefers-color-scheme: dark)")).matches&&e.matches?"dark":"light";"dark"===e?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark"),localStorage.setItem("${cookieNames.THEME_MODE}",e)}();`,
-          }}
-        />
-        {isProduction && <HeadScripts />}
-      </Head>
+      <Head>{isProduction && <HeadScripts />}</Head>
       <body>
+        <ColorModeScript initialColorMode={mainTheme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { useQuery } from 'react-query'
+import { Box, SimpleGrid } from '@chakra-ui/react'
 import Link from 'next/link'
 
 import { ProjectCard } from '~/components/projects/components/project-card/project-card'
-import { Section } from '~/components/section/section'
 import { SectionHeader } from '~/components/section/section-header'
 import { QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
 import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
@@ -16,19 +16,23 @@ export function PinnedProjects() {
   const pinnedProjects = queryResult.data?.data ?? []
 
   return (
-    <Section>
-      <SectionHeader
-        title="Proyectos fijados"
-        actionLabel="Ver más"
-        actionComponent={Link}
-        actionHref="/projects"
-        key="654654"
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-3 gap-3">
+    <Box py="3">
+      <SectionHeader title="Proyectos fijados" actionLabel="Ver más" actionComponent={Link} actionHref="/projects" />
+      <SimpleGrid
+        columns={{
+          base: 1,
+          md: 2,
+        }}
+        spacing={{
+          base: 3,
+          md: 4,
+        }}
+        py="3"
+      >
         {pinnedProjects.map(pinnedProject => (
           <ProjectCard key={pinnedProject.id} project={pinnedProject} />
         ))}
-      </div>
-    </Section>
+      </SimpleGrid>
+    </Box>
   )
 }

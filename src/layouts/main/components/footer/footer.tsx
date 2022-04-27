@@ -1,24 +1,17 @@
 import * as React from 'react'
-
-import { Typography } from '~/components/typography/typography'
+import { Box, Container, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
 export function Footer() {
-  return (
-    <footer className="bg-gray-50 dark:bg-gray-900 h-24 md:h-32 lg:h-40 dark:border-gray-700 flex items-center justify-center">
-      <div className="flex flex-col items-center">
-        <Typography className="mb-4">
-          <small>
-            Created By{' '}
-            <i>
-              <b>Yony Calsin</b>
-            </i>{' '}
-          </small>
-        </Typography>
+  const backgroundColor = useColorModeValue('gray.50', 'gray.900')
 
-        <Typography variant="h4" fontWeight="normal" className="italic">
-          <small>Built with Next.js, MDX, Tailwind and Vercel</small>
-        </Typography>
-      </div>
-    </footer>
+  return (
+    <Box as="footer" bg={backgroundColor} py="6">
+      <Container maxW="container.md">
+        <VStack>
+          <Text fontWeight="bold">Created By Yony Calsin</Text>
+          <Text textColor="gray.600">Built with Next.js, MDX, Tailwind and Vercel</Text>
+        </VStack>
+      </Container>
+    </Box>
   )
 }

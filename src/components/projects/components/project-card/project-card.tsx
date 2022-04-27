@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { motion } from 'framer-motion'
+import { useColorModeValue } from '@chakra-ui/react'
 
+import { MotionBox } from '~/components/motion'
 import type { IProject } from '~/module-types/api-rest/projects'
 
 import { ProjectCardButton } from './project-card-button'
@@ -13,19 +14,30 @@ export interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps) {
   const { project } = props
 
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
+
+  const backgroundColor = useColorModeValue('gray.50', 'gray.900')
+
   const [isOpen, setIsOpen] = React.useState(false)
 
   const onToggle = () => setIsOpen(prevIsOpen => !prevIsOpen)
 
   return (
-    <motion.div
+    <MotionBox
       animate={{
         height: isOpen ? 'auto' : 60,
       }}
-      className="flex overflow-hidden relative flex-col no-underline dark:hover:bg-gray-900  border-primary-200 bg-primary-50 dark:bg-black rounded-md border dark:border-white/10 md:rounded-lg"
+      display="flex"
+      overflow="hidden"
+      position="relative"
+      flexDirection="column"
+      borderRadius="md"
+      border="1px"
+      backgroundColor={backgroundColor}
+      borderColor={borderColor}
     >
       <ProjectCardButton isOpen={isOpen} onToggle={onToggle} project={project} />
       <ProjectCardContent isOpen={isOpen} project={project} />
-    </motion.div>
+    </MotionBox>
   )
 }

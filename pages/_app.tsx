@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
+import { ChakraProvider } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
 import { createQueryFn } from '~/clients/query-client'
 import { NightModeButton } from '~/components/night-mode-button'
+import { mainTheme } from '~/themes/main'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
@@ -104,11 +106,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <NightModeButton />
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
           <FeatureProvider features={features}>
-            <Component {...pageProps} />
+            <ChakraProvider theme={mainTheme}>
+              <NightModeButton />
+              <Component {...pageProps} />
+            </ChakraProvider>
           </FeatureProvider>
         </Hydrate>
       </QueryClientProvider>

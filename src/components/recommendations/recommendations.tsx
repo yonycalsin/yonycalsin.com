@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { SimpleGrid } from '@chakra-ui/react'
 
 import type { IRecommendation } from '~/module-types/api-rest/recommendations'
 
@@ -7,17 +7,25 @@ import { Recommendation } from './components/recommendation'
 
 export interface RecommendationsProps {
   recommendations: IRecommendation[]
-  className?: string
 }
 
 export function Recommendations(props: RecommendationsProps) {
-  const { recommendations, className } = props
+  const { recommendations } = props
 
   return (
-    <div className={clsx('grid lg:grid-cols-2 gap-4 md:gap-6', className)}>
+    <SimpleGrid
+      columns={{
+        base: 1,
+        md: 2,
+      }}
+      spacing={{
+        base: 3,
+        md: 4,
+      }}
+    >
       {recommendations.map(recommendation => (
         <Recommendation key={recommendation.id} recommendation={recommendation} />
       ))}
-    </div>
+    </SimpleGrid>
   )
 }
