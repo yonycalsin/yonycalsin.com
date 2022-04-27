@@ -4,7 +4,6 @@ import type { GetStaticPropsResult } from 'next'
 
 import { createQueryFn } from '~/clients/query-client'
 import { QUERY_KEY_FEATURED_RECOMMENDATIONS, QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
-import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
 import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
 import type { IRecommendationQueryWithMeta } from '~/module-types/api-rest/recommendations'
@@ -12,14 +11,11 @@ import { HomeScreen } from '~/screens/home'
 import { queryKeys, timings } from '~/utils/constants'
 
 interface HomePageProps {
-  latestBlogs: Blog[]
   dehydratedState: DehydratedState
 }
 
-function HomePage(props: HomePageProps) {
-  const { latestBlogs } = props
-
-  return <HomeScreen latestBlogs={latestBlogs} />
+function HomePage() {
+  return <HomeScreen />
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
@@ -30,12 +26,6 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
       },
     },
   })
-
-  const latestBlogs = allBlogs
-    .sort((a, b) => {
-      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    })
-    .slice(0, 5)
 
   await queryClient.prefetchQuery<IAchievementQueryWithMeta>(queryKeys.FEATURED_ACHIEVEMENTS, {
     staleTime: Infinity,
@@ -51,7 +41,6 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
 
   return {
     props: {
-      latestBlogs,
       dehydratedState: dehydrate(queryClient),
     },
     revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
