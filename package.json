@@ -1,6 +1,6 @@
 {
   "name": "@yonycalsin/yonycalsin.com",
-  "version": "2.0.1",
+  "version": "5.0.0",
   "private": "true",
   "description": "Personal website running on Nextjs, Typescript, React, and Node.js.",
   "keywords": [],
