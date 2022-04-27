@@ -1,7 +1,6 @@
 import * as React from 'react'
+import { Link, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
-import { Anchor } from '~/components/anchor/anchor'
-import { Typography } from '~/components/typography/typography'
 import type { IRecommendation } from '~/module-types/api-rest/recommendations'
 
 export interface RecommendationProps {
@@ -11,18 +10,29 @@ export interface RecommendationProps {
 export function Recommendation(props: RecommendationProps) {
   const { recommendation } = props
 
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
+
   return (
-    <blockquote className="border border-l-4 dark:bg-gray-900 p-4 rounded-lg dark:border-transparent border-l-primary-300 dark:border-l-primary mb-0">
-      <Typography className="mb-2 dark:text-gray-500">{recommendation.text}</Typography>
-      <Typography variant="h6" className="italic mb-2" fontWeight="extrabold">
+    <VStack
+      as="blockquote"
+      alignItems="flex-start"
+      border="1px"
+      borderColor={borderColor}
+      p="4"
+      borderRadius="md"
+      borderLeft="4px"
+      borderLeftColor="primary.500"
+    >
+      <Text>{recommendation.text}</Text>
+      <Text fontSize="sm" className="italic mb-2" fontWeight="extrabold">
         -{' '}
-        <Anchor href={recommendation.author.linkedin} target="_blank" variant="decorated">
+        <Link href={recommendation.author.linkedin} target="_blank">
           {recommendation.author.name}
-        </Anchor>
-      </Typography>
-      <Typography variant="h6" fontWeight="light" className="italic text-gray-500">
+        </Link>
+      </Text>
+      <Text fontSize="sm" fontWeight="normal" textColor="gray" className="italic">
         {recommendation.author.jobTitle}
-      </Typography>
-    </blockquote>
+      </Text>
+    </VStack>
   )
 }

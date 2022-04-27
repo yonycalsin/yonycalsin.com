@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Box, useColorMode } from '@chakra-ui/react'
 
 import { cookieNames } from '~/utils/constants'
 
@@ -6,6 +7,8 @@ import { MoonIcon } from './components/moon-icon'
 import { SunIcon } from './components/sun-icon'
 
 export const NightModeButton = () => {
+  const { colorMode, setColorMode } = useColorMode()
+
   const onToggleDark = () => {
     const isDark = document.documentElement.classList.contains('dark')
 
@@ -13,20 +16,37 @@ export const NightModeButton = () => {
 
     if (isDark) {
       document.documentElement.classList.remove('dark')
+
+      setColorMode('light')
     } else {
       document.documentElement.classList.add('dark')
+
+      setColorMode('dark')
     }
   }
 
   return (
     <>
-      <button
-        className="fixed left-4 top-4 text-2xl md:text-4xl lg:left-6 lg:top-6 lg:text-5xl z-20"
+      <Box
+        as="button"
+        position="fixed"
+        left={{
+          base: 4,
+          md: 8,
+        }}
+        top={{
+          base: 20,
+          md: 8,
+        }}
+        fontSize={{
+          base: '2xl',
+          md: '4xl',
+        }}
+        zIndex="sticky"
         onClick={onToggleDark}
       >
-        <SunIcon className="dark:block hidden transition-all" />
-        <MoonIcon className="dark:hidden block transition-all" />
-      </button>
+        {colorMode === 'dark' ? <SunIcon className="transition-all" /> : <MoonIcon className="transition-all" />}
+      </Box>
     </>
   )
 }

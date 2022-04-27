@@ -1,5 +1,5 @@
-import { Tag, TagLabel } from '../tag'
-import { Typography } from '../typography/typography'
+import * as React from 'react'
+import { Box, Heading } from '@chakra-ui/react'
 
 export interface SectionHeaderProps {
   title: string
@@ -9,7 +9,6 @@ export interface SectionHeaderProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   actionComponent?: any
   children?: React.ReactNode
-  hasBetaTag?: boolean
 }
 
 export function SectionHeader(props: SectionHeaderProps) {
@@ -20,26 +19,20 @@ export function SectionHeader(props: SectionHeaderProps) {
     actionComponent: ActionComponent = 'a',
     actionHrefExternal = false,
     children,
-    hasBetaTag,
   } = props
 
   return (
     <div>
-      <div className="flex items-center justify-between relative">
-        <Typography variant="h3" className="relative" fontWeight="medium">
+      <Box display="flex" alignItems="center" justifyContent="space-between" position="relative">
+        <Heading size="md" fontWeight="medium">
           {title}
-          {hasBetaTag && (
-            <Tag className="ml-4 align-middle">
-              <TagLabel>New</TagLabel>
-            </Tag>
-          )}
-        </Typography>
+        </Heading>
         {actionHref ? (
           <ActionComponent href={actionHref} target={actionHrefExternal ? '_blank' : null}>
             {actionLabel}
           </ActionComponent>
         ) : null}
-      </div>
+      </Box>
       {children}
     </div>
   )
