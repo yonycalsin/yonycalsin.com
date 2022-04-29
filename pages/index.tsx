@@ -3,6 +3,7 @@ import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { createQueryFn } from '~/clients/query-client'
+import { Meta } from '~/components/meta'
 import { QUERY_KEY_FEATURED_RECOMMENDATIONS, QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
 import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
@@ -15,7 +16,12 @@ interface HomePageProps {
 }
 
 function HomePage() {
-  return <HomeScreen />
+  return (
+    <>
+      <Meta />
+      <HomeScreen />
+    </>
+  )
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
