@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Container } from '@chakra-ui/react'
 
 import { FloatSocials } from '~/components'
 import { PageTransition } from '~/components/page-transition/page-transition'
@@ -17,9 +16,7 @@ export const MainLayout = (props: MainLayoutProps) => {
   return (
     <>
       <Header />
-      <Container maxW="container.md" as="main">
-        <PageTransition>{children}</PageTransition>
-      </Container>
+      <PageTransition>{children}</PageTransition>
       <Footer />
       <FloatSocials />
     </>

@@ -3,6 +3,7 @@ import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { createQueryFn } from '~/clients/query-client'
+import { Meta } from '~/components/meta'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
 import AchievementsScreen from '~/screens/achievements'
 import { queryKeys, timings } from '~/utils/constants'
@@ -12,7 +13,12 @@ export interface AchievementsPageProps {
 }
 
 function AchievementsPage() {
-  return <AchievementsScreen />
+  return (
+    <>
+      <Meta title="Logros" notRobots />
+      <AchievementsScreen />
+    </>
+  )
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<AchievementsPageProps>> {

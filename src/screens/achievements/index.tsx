@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query'
+import { Container } from '@chakra-ui/react'
 
 import { Achievements } from '~/components/achievements'
-import { Meta } from '~/components/meta'
 import { Typography } from '~/components/typography/typography'
 import { MainLayout } from '~/layouts'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
@@ -16,8 +16,7 @@ function AchievementsScreen() {
 
   return (
     <MainLayout>
-      <Meta title="Logros" notRobots />
-      <article className="py-8">
+      <Container maxW="container.md" as="main" py="10">
         <header>
           <Typography variant="h2" gutterBottom fontWeight="extrabold">
             Logros ({achievementsData.length})
@@ -27,7 +26,7 @@ function AchievementsScreen() {
           </Typography>
         </header>
         <Achievements achievements={achievementsData} />
-      </article>
+      </Container>
     </MainLayout>
   )
 }

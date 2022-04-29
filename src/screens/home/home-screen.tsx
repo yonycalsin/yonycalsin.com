@@ -1,8 +1,7 @@
 import * as React from 'react'
-import { Divider } from '@chakra-ui/react'
+import { Container, Divider } from '@chakra-ui/react'
 import { useFlag } from 'toggled'
 
-import { Meta } from '~/components/meta'
 import { MainLayout } from '~/layouts'
 import Features from '~/utils/features-flags'
 
@@ -20,14 +19,15 @@ export function HomeScreen() {
 
   return (
     <MainLayout>
-      <Meta />
-      <IntroductionSection />
-      <Divider my="6" />
-      {hasPinnedProjectsFF && <PinnedProjects />}
-      <Divider my="6" />
-      {hasAchievementsFF && <FeaturedAchievements />}
-      <Divider my="6" />
-      {hasRecommendationsFF && <FeaturedRecommendations />}
+      <Container maxW="container.md" as="main" py="10">
+        <IntroductionSection />
+        <Divider my="6" />
+        {hasPinnedProjectsFF && <PinnedProjects />}
+        <Divider my="6" />
+        {hasAchievementsFF && <FeaturedAchievements />}
+        <Divider my="6" />
+        {hasRecommendationsFF && <FeaturedRecommendations />}
+      </Container>
     </MainLayout>
   )
 }
