@@ -13,6 +13,7 @@ import Features from '~/utils/features-flags'
 
 import '~/styles/index.css'
 import '~/styles/nprogress.css'
+import '~/assets/styles/fonts.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

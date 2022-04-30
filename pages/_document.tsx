@@ -32,7 +32,10 @@ function HeadScripts() {
 function MyDocument() {
   return (
     <Html>
-      <Head>{isProduction && <HeadScripts />}</Head>
+      <Head>
+        {isProduction && <HeadScripts />}
+        <link rel="preload" href="/static/fonts/Inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </Head>
       <body>
         <ColorModeScript initialColorMode={mainTheme.config.initialColorMode} />
         <Main />
