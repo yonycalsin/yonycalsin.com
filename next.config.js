@@ -32,4 +32,7 @@ module.exports = withContentlayer({
       },
     ]
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 })

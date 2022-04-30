@@ -3,8 +3,6 @@ import { Box, Container, HStack, Link, useColorModeValue } from '@chakra-ui/reac
 import Image from 'next/image'
 import RouterLink from 'next/link'
 
-import JavascriptLogo from '~/assets/images/javascript.webp'
-
 export const Header = () => {
   const backgroundColor = useColorModeValue('gray.50', 'gray.900')
 
@@ -22,7 +20,14 @@ export const Header = () => {
       >
         <RouterLink href="/" passHref>
           <Link display="contents">
-            <Image src={JavascriptLogo} layout="intrinsic" width={32} height={32} priority alt="" />
+            <Image
+              src="https://avatars.githubusercontent.com/u/58490737?v=4"
+              layout="intrinsic"
+              width={32}
+              height={32}
+              priority
+              alt=""
+            />
           </Link>
         </RouterLink>
 

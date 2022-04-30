@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Box, Container, Heading, Link, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
+import Image from 'next/image'
 
 import { MainLayout } from '~/layouts'
 
@@ -8,13 +9,38 @@ export function MeScreen() {
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
         <VStack spacing="5" alignItems="flex-start">
-          <header>
-            <Heading>Sobre Mi</Heading>
+          <Box display="flex" justifyContent="space-between" w="full">
+            <header>
+              <Heading>Sobre Mi</Heading>
 
-            <Box as="blockquote" borderLeft="4px" p="3" mt="3">
-              <Text as="q">Desarrollador de software, open-sourcerer (OSS).</Text>
-            </Box>
-          </header>
+              <Box as="blockquote" borderLeft="4px" p="3" mt="3">
+                <Text as="q">Desarrollador de software, open-sourcerer (OSS).</Text>
+              </Box>
+            </header>
+
+            <figure>
+              <Box border="2px" borderColor="gray.500" borderStyle="dashed" display="flex">
+                <Image
+                  src="https://avatars.githubusercontent.com/u/58490737?v=4"
+                  layout="intrinsic"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Box>
+              <Text
+                as="figcaption"
+                color="gray.500"
+                fontSize={{
+                  base: 'xs',
+                  md: 'sm',
+                }}
+                textAlign="center"
+              >
+                Avatar by Me
+              </Text>
+            </figure>
+          </Box>
 
           <Text>
             Hola, soy Yony. Soy un desarrollador de software <b>autodidacta</b> que trabaja en{' '}
