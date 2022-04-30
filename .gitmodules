@@ -1,9 +1,6 @@
 [submodule "content/blog"]
 	path = content/blog
 	url = https://github.com/yonycalsin/yonycalsin-com-blog.git
-[submodule "content/snippets"]
-	path = content/snippets
-	url = https://github.com/yonycalsin/yonycalsin-com-snippets.git
 [submodule "data/config"]
 	path = data/config
 	url = https://github.com/yonycalsin/yonycalsin-com-config.git

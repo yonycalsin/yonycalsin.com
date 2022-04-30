@@ -4,10 +4,6 @@
     "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-blog"
   },
   {
-    "PATH": "content/snippets",
-    "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-snippets"
-  },
-  {
     "PATH": "data/config",
     "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-config"
   }
