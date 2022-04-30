@@ -1,11 +1,20 @@
 import * as React from 'react'
+import { useQuery } from 'react-query'
 import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 
+import { QUERY_KEY_SNIPPETS } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'
+import type { ISnippetQueryWithMeta } from '~/module-types/api-rest/snippets'
 
 import { SnippetCard } from './components/snippet-card'
 
 export function SnippetsScreen() {
+  const queryResult = useQuery<ISnippetQueryWithMeta>(QUERY_KEY_SNIPPETS, {
+    staleTime: Infinity,
+  })
+
+  const snippetsData = queryResult.data?.data ?? []
+
   return (
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
@@ -18,10 +27,9 @@ export function SnippetsScreen() {
           </Text>
         </VStack>
         <VStack spacing="6">
-          <SnippetCard />
-          <SnippetCard />
-          <SnippetCard />
-          <SnippetCard />
+          {snippetsData.map(snippetData => (
+            <SnippetCard key={snippetData.slug} title={snippetData.title} updatedAt={snippetData.updatedAt} />
+          ))}
         </VStack>
       </Container>
     </MainLayout>

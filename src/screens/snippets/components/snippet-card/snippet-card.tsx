@@ -1,13 +1,20 @@
 import * as React from 'react'
 import { Badge, Box, Text, useColorModeValue } from '@chakra-ui/react'
 
-export function SnippetCard() {
+export interface SnippetCardProps {
+  title: string
+  updatedAt: string
+}
+
+export function SnippetCard(props: SnippetCardProps) {
+  const { title, updatedAt } = props
+
   const backgroundColor = useColorModeValue('gray.100', 'gray.900')
 
   return (
     <Box backgroundColor={backgroundColor} borderRadius="md" w="full">
       <Box px="6" py="4">
-        <Text fontWeight="bold">First example snippet with jsx</Text>
+        <Text fontWeight="bold">{title}</Text>
       </Box>
       <Box as="pre" backgroundColor="gray.700" px="6" py="4" textColor="white">
         <code>
@@ -31,9 +38,10 @@ export function SnippetCard() {
         <div>
           <Text fontSize="sm" textColor="gray" fontStyle="italic">
             Created at{' '}
+            {/* https://bobbyhadz.com/blog/javascript-convert-iso-string-to-date-object#convert-an-iso-string-to-a-date-object-in-javascript */}
             {Intl.DateTimeFormat('en', {
               dateStyle: 'full',
-            }).format()}{' '}
+            }).format(new Date(updatedAt.slice(0, -1)))}{' '}
           </Text>
         </div>
       </Box>

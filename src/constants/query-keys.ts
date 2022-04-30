@@ -7,3 +7,5 @@ export const QUERY_KEY_PINNED_PROJECTS = [
     isPinned: true,
   },
 ]
+
+export const QUERY_KEY_SNIPPETS = ['/snippets']
