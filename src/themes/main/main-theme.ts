@@ -6,6 +6,10 @@ const mainTheme = extendTheme({
     initialColorMode: 'system',
     useSystemColorMode: true,
   },
+  fonts: {
+    heading: 'Inter, sans-serif',
+    body: 'Inter, sans-serif',
+  },
   colors: {
     primary: {
       50: '#def0fc',
