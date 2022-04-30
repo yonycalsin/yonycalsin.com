@@ -2,6 +2,9 @@ import * as React from 'react'
 import { Box, Container, HStack, Link, useColorModeValue } from '@chakra-ui/react'
 import Image from 'next/image'
 import RouterLink from 'next/link'
+import { Flag } from 'toggled'
+
+import Features from '~/utils/features-flags'
 
 export const Header = () => {
   const backgroundColor = useColorModeValue('gray.50', 'gray.900')
@@ -42,6 +45,13 @@ export const Header = () => {
               Sobre Mi
             </Link>
           </RouterLink>
+          <Flag flagQuery={Features.SNIPPETS}>
+            <RouterLink href="/snippets" passHref>
+              <Link color="primary.500" fontWeight="bold">
+                Snippets
+              </Link>
+            </RouterLink>
+          </Flag>
         </HStack>
       </Container>
     </Box>

@@ -68,6 +68,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_SNIPPETS) {
+      data.push({
+        slug: Features.SNIPPETS,
+      })
+    }
+
     return data
   }, [])
 
