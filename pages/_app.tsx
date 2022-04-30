@@ -106,18 +106,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 
   return (
-    <>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <FeatureProvider features={features}>
-            <ChakraProvider theme={mainTheme}>
-              <NightModeButton />
-              <Component {...pageProps} />
-            </ChakraProvider>
-          </FeatureProvider>
-        </Hydrate>
-      </QueryClientProvider>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <FeatureProvider features={features}>
+          <ChakraProvider resetCSS theme={mainTheme}>
+            <NightModeButton />
+            <Component {...pageProps} />
+          </ChakraProvider>
+        </FeatureProvider>
+      </Hydrate>
+    </QueryClientProvider>
   )
 }
 

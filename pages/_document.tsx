@@ -2,7 +2,6 @@ import * as React from 'react'
 import { ColorModeScript } from '@chakra-ui/react'
 import { Head, Html, Main, NextScript } from 'next/document'
 
-import { mainTheme } from '~/themes/main'
 import { isProduction } from '~/utils'
 import env from '~/utils/env'
 
@@ -37,7 +36,8 @@ function MyDocument() {
         <link rel="preload" href="/static/fonts/Inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
       <body>
-        <ColorModeScript initialColorMode={mainTheme.config.initialColorMode} />
+        {/* Make Color mode to persists when you refresh the page. */}
+        <ColorModeScript />
         <Main />
         <NextScript />
       </body>

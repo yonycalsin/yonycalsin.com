@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
-import { Typography } from '~/components/typography/typography'
 import type { IAchievement } from '~/module-types/api-rest/achievements'
 import { dateFormats } from '~/utils/constants'
 
@@ -25,11 +24,27 @@ export function Achievement(props: AchievementProps) {
         <Text fontSize="sm" textColor="gray">
           {achievement.shortDescription}
         </Text>
-        <Text fontSize="sm">- {dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}</Text>
+        <Text
+          display={{
+            base: 'block',
+            lg: 'none',
+          }}
+          fontSize="sm"
+          fontStyle="italic"
+        >
+          - {dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}
+        </Text>
       </VStack>
-      <Typography className="hidden lg:block italic" variant="h6" fontWeight="light">
+      <Text
+        fontStyle="italic"
+        display={{
+          base: 'none',
+          lg: 'block',
+        }}
+        fontWeight="light"
+      >
         -{dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}
-      </Typography>
+      </Text>
     </div>
   )
 }

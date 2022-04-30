@@ -24,13 +24,13 @@ export function Recommendation(props: RecommendationProps) {
       borderLeftColor="primary.500"
     >
       <Text>{recommendation.text}</Text>
-      <Text fontSize="sm" className="italic mb-2" fontWeight="extrabold">
+      <Text fontSize="sm" fontStyle="italic" className="mb-2" fontWeight="extrabold">
         -{' '}
         <Link href={recommendation.author.linkedin} target="_blank">
           {recommendation.author.name}
         </Link>
       </Text>
-      <Text fontSize="sm" fontWeight="normal" textColor="gray" className="italic">
+      <Text fontSize="sm" fontWeight="normal" textColor="gray" fontStyle="italic">
         {recommendation.author.jobTitle}
       </Text>
     </VStack>
