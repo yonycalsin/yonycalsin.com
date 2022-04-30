@@ -1,4 +1,4 @@
-import connect from 'next-connect'
+import nextConnect from 'next-connect'
 import NextCors from 'nextjs-cors'
 
 import ErrorMiddlewareFactory from '~/server/apps/client-front-rest/Factories/ErrorMiddlewareFactory'
@@ -18,7 +18,7 @@ async function handler(req: HttpRequest, res: HttpResponse) {
   }
 }
 
-export default connect<HttpRequest, HttpResponse>({
+export default nextConnect<HttpRequest, HttpResponse>({
   onError: ErrorMiddlewareFactory.Reporter(),
 })
   .use(NextCors)
