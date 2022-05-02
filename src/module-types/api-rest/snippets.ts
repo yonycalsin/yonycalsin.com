@@ -2,6 +2,14 @@ export interface ISnippet {
   title: string
   description: string
   slug: string
+  body: {
+    mdxCode: string
+  }
+  readingStats: {
+    minutes: number
+    time: number
+    words: number
+  }
   createdAt: string
   updatedAt: string
 }

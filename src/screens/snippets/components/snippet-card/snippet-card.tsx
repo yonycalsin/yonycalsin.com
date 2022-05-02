@@ -1,32 +1,31 @@
 import * as React from 'react'
 import { Badge, Box, Text, useColorModeValue } from '@chakra-ui/react'
+import nextBase64 from 'next-base64'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+
+import MDXComponents from '~/components/mdx-components'
+import type { ISnippet } from '~/module-types/api-rest/snippets'
 
 export interface SnippetCardProps {
-  title: string
-  updatedAt: string
+  snippetData: ISnippet
 }
 
 export function SnippetCard(props: SnippetCardProps) {
-  const { title, updatedAt } = props
+  const { snippetData: snippet } = props
 
-  const backgroundColor = useColorModeValue('gray.100', 'gray.900')
+  const containerBackgroundColor = useColorModeValue('primary.100', 'gray.900')
+
+  const codeContainerBackgroundColor = useColorModeValue('gray.200', 'gray.700')
+
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(snippet.body.mdxCode))))
 
   return (
-    <Box backgroundColor={backgroundColor} borderRadius="md" w="full">
+    <Box backgroundColor={containerBackgroundColor} borderRadius="md" w="full">
       <Box px="6" py="4">
-        <Text fontWeight="bold">{title}</Text>
+        <Text fontWeight="bold">{snippet.title}</Text>
       </Box>
-      <Box as="pre" backgroundColor="gray.700" px="6" py="4" textColor="white">
-        <code>
-          {`()=> {
-    return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    )
-}
-`}
-        </code>
+      <Box backgroundColor={codeContainerBackgroundColor} px="6" py="4">
+        <Component components={MDXComponents} />
       </Box>
       <Box px="6" py="4" display="flex" alignItems="center" justifyContent="space-between" gap="6">
         <Box display="flex" flexWrap="wrap" gap="3">
@@ -36,12 +35,12 @@ export function SnippetCard(props: SnippetCardProps) {
           <Badge colorScheme="purple">Arch Linux</Badge>
         </Box>
         <div>
-          <Text fontSize="sm" textColor="gray" fontStyle="italic">
-            Created at{' '}
+          <Text fontSize="xs" textColor="gray" fontStyle="italic">
+            Last Updated at{' '}
             {/* https://bobbyhadz.com/blog/javascript-convert-iso-string-to-date-object#convert-an-iso-string-to-a-date-object-in-javascript */}
             {Intl.DateTimeFormat('en', {
               dateStyle: 'full',
-            }).format(new Date(updatedAt.slice(0, -1)))}{' '}
+            }).format(new Date(snippet.updatedAt.slice(0, -1)))}{' '}
           </Text>
         </div>
       </Box>

@@ -19,7 +19,7 @@ export function SnippetsScreen() {
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
         <VStack spacing="6" mb="6">
-          <Heading>Snippets (30)</Heading>
+          <Heading>Snippets ({snippetsData.length})</Heading>
           <Text>
             These are a collection of code snippets I&rsquo;ve used in the past and saved. Some are Serverless
             Functions, which include set up instructions. Others are anything from random CSS snippets to Node.js
@@ -28,7 +28,7 @@ export function SnippetsScreen() {
         </VStack>
         <VStack spacing="6">
           {snippetsData.map(snippetData => (
-            <SnippetCard key={snippetData.slug} title={snippetData.title} updatedAt={snippetData.updatedAt} />
+            <SnippetCard key={snippetData.slug} snippetData={snippetData} />
           ))}
         </VStack>
       </Container>

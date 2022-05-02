@@ -4041,15 +4041,6 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
-"@tailwindcss/typography@0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.2.tgz#24b069dab24d7a2467d01aca0dd432cb4b29f0ee"
-  integrity sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==
-  dependencies:
-    lodash.castarray "^4.4.0"
-    lodash.isplainobject "^4.0.6"
-    lodash.merge "^4.6.2"
-
 "@testing-library/cypress@8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-8.0.2.tgz#b13f0ff2424dec4368b6670dfbfb7e43af8eefc9"
@@ -5024,13 +5015,6 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@yonycalsin/prettier-config-react-typescript/-/prettier-config-react-typescript-1.0.1.tgz#18075df514e4b37f1569c4b279b95f791f66c2db"
   integrity sha512-yHFhAAfVHHKDP9Gm8OpLg87sGhIuNNH29TElAkIVzd/Y6/NijtcDWPBBjxNAmHR1wnZxBXVzcQGXzBWgvZspuQ==
-
-"@yonycalsin/tailwindcss-theme@1.15.1":
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/@yonycalsin/tailwindcss-theme/-/tailwindcss-theme-1.15.1.tgz#e27fa6bc9884fcc6d25648e179afc73ea0b9dab9"
-  integrity sha512-BRdX/FFm4eEP6XjE4nulaDofLuPgPEzh7pSDB9VFvtcs5sr9lV7AtioxLmOnNvYKxKUnMY/oqbjrvp0Z6oS9hg==
-  dependencies:
-    merge "^2.1.1"
 
 abab@^2.0.5, abab@^2.0.6:
   version "2.0.6"
@@ -11666,11 +11650,6 @@ lodash.camelcase@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
-lodash.castarray@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.castarray/-/lodash.castarray-4.4.0.tgz#c02513515e309daddd4c24c60cfddcf5976d9115"
-  integrity sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=
-
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -12203,11 +12182,6 @@ merge2@^1.2.3, merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
-
-merge@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/merge/-/merge-2.1.1.tgz#59ef4bf7e0b3e879186436e8481c06a6c162ca98"
-  integrity sha512-jz+Cfrg9GWOZbQAnDQ4hlVnQky+341Yk5ru8bZSe6sIDTCIg8n9i/u7hSQGSVOF3C7lH6mGtqjkiT9G4wFLL0w==
 
 methods@^1.1.2, methods@~1.1.2:
   version "1.1.2"
@@ -12891,6 +12865,11 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
+
+next-base64@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/next-base64/-/next-base64-1.1.0.tgz#5b073054ca566c83ff47220b425bc9d5f2e5c77d"
+  integrity sha512-roPubI4go4Cnb8oBp3OcXWoNmzDiMv8ykBfFe02c5imGuZJlXMBXfr6vc9gpr0rvImtgvL1FcQCZAvI/ZESVgg==
 
 next-connect@0.12.2:
   version "0.12.2"
