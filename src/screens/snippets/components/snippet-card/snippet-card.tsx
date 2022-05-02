@@ -5,6 +5,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import MDXComponents from '~/components/mdx-components'
 import type { ISnippet } from '~/module-types/api-rest/snippets'
+import { getRandomBadgeColors } from '~/utils/get-random-colors'
 
 export interface SnippetCardProps {
   snippetData: ISnippet
@@ -29,10 +30,11 @@ export function SnippetCard(props: SnippetCardProps) {
       </Box>
       <Box px="6" py="4" display="flex" alignItems="center" justifyContent="space-between" gap="6">
         <Box display="flex" flexWrap="wrap" gap="3">
-          <Badge colorScheme="facebook">React</Badge>
-          <Badge colorScheme="orange">Typescript</Badge>
-          <Badge colorScheme="green">Git</Badge>
-          <Badge colorScheme="purple">Arch Linux</Badge>
+          {snippet.tags.map(tag => (
+            <Badge key={tag} colorScheme={getRandomBadgeColors()}>
+              {tag}
+            </Badge>
+          ))}
         </Box>
         <div>
           <Text fontSize="xs" textColor="gray" fontStyle="italic">

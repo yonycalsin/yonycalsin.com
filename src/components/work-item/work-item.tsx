@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Avatar, Badge, Box, Heading, HStack, Link, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
-import random from 'just-random'
 
 import { Clock } from '~/icons/clock'
 import { dateFormats } from '~/utils/constants'
+import { getRandomBadgeColors } from '~/utils/get-random-colors'
 
 export interface WorkItemProps {
   title: string
@@ -75,29 +75,7 @@ export function WorkItem(props: WorkItemProps) {
         </HStack>
         <Box flexWrap="wrap" display="flex" gap="2">
           {tags.map(item => (
-            <Badge
-              key={item}
-              variant="outline"
-              colorScheme={random([
-                'blackAlpha',
-                'gray',
-                'red',
-                'orange',
-                'yellow',
-                'green',
-                'teal',
-                'blue',
-                'cyan',
-                'purple',
-                'pink',
-                'linkedin',
-                'facebook',
-                'messenger',
-                'whatsapp',
-                'twitter',
-                'telegram',
-              ])}
-            >
+            <Badge key={item} variant="outline" colorScheme={getRandomBadgeColors()}>
               {item}
             </Badge>
           ))}

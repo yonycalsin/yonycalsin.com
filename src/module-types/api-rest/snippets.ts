@@ -10,6 +10,7 @@ export interface ISnippet {
     time: number
     words: number
   }
+  tags: string[]
   createdAt: string
   updatedAt: string
 }
