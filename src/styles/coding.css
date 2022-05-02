@@ -4,13 +4,13 @@ pre {
 }
 
 /**
-     * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
-     * 1. Make the element just wide enough to fit its content.
-     * 2. Always fill the visible space in .code-highlight.
-     */
+* Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+* 1. Make the element just wide enough to fit its content.
+* 2. Always fill the visible space in .code-highlight.
+*/
+
 .code-highlight {
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+  float: left;
 }
 
 .code-line {
@@ -193,14 +193,6 @@ code[class*='language-'] ::selection {
   text-shadow: none;
   color: inherit;
   background: rgba(150, 150, 150, 0.3) !important;
-}
-
-@screen md {
-  pre[class*='language-'],
-  .filename {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
 }
 
 pre[class*='language-'].line-numbers {

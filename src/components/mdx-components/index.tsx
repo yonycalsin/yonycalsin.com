@@ -1,34 +1,63 @@
 import * as React from 'react'
+import * as Chakra from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Image, { ImageProps } from 'next/image'
-import Link from 'next/link'
 
-interface CustomLinkProps {
-  href: string
-  children: React.ReactNode
-}
+import { Anchor } from './components/anchor'
+import { LinkedHeading } from './components/linked-heading'
+import { Table, TableCell, TableHead } from './components/table'
 
-function CustomLink(props: CustomLinkProps) {
-  const { href, children } = props
-
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
-
-  if (isInternalLink) {
-    return (
-      <Link href={href}>
-        <a {...props}>{children}</a>
-      </Link>
-    )
-  }
-
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
-}
+const { chakra } = Chakra
 
 function RoundedImage(props: ImageProps) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 
 const MDXComponents = {
-  a: CustomLink,
+  ...Chakra,
+
+  /**
+   * Heading
+   */
+  h1: (props: never) => <chakra.h1 apply="mdx.h1" {...props} />,
+  h2: (props: never) => <LinkedHeading apply="mdx.h2" {...props} />,
+  h3: (props: never) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
+  h4: (props: never) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
+
+  /**
+   * Other
+   */
+  hr: (props: never) => <chakra.hr apply="mdx.hr" {...props} />,
+  strong: (props: never) => <Box as="strong" fontWeight="semibold" {...props} />,
+  kbd: Chakra.Kbd,
+  /**
+   * Link
+   */
+  a: Anchor,
+
+  /**
+   *
+   * @param props Typography
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  br: ({ reset, ...props }: any) => (
+    <Box as={reset ? 'br' : undefined} height={reset ? undefined : '24px'} {...props} />
+  ),
+  p: (props: never) => <chakra.p apply="mdx.p" {...props} />,
+  ul: (props: never) => <chakra.ul apply="mdx.ul" {...props} />,
+  ol: (props: never) => <chakra.ol apply="mdx.ul" {...props} />,
+  li: (props: never) => <chakra.li pb="4px" {...props} />,
+
+  /**
+   * Table
+   */
+  table: Table,
+  th: TableHead,
+  td: TableCell,
+
+  /**
+   * Image
+   */
   Image: RoundedImage,
 }
 
