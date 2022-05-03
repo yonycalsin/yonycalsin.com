@@ -18,7 +18,6 @@ export const dateFormats = {
 }
 
 export const cookieNames = {
-  THEME_MODE: '_theme-mode',
   GUEST_SESSION_TOKEN: '_guest-session-token-v1.0.0',
 }
 
