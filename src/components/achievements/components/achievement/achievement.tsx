@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, VStack } from '@chakra-ui/react'
+import { Grid, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
 import type { IAchievement } from '~/module-types/api-rest/achievements'
@@ -15,7 +15,14 @@ export function Achievement(props: AchievementProps) {
   const { achievement } = props
 
   return (
-    <div className="grid grid-cols-[50px_1fr] lg:grid-cols-[90px_1fr_150px] gap-6 items-center">
+    <Grid
+      templateColumns={{
+        base: 'var(--yony-space-14) 1fr',
+        lg: 'var(--yony-space-20) 1fr var(--yony-space-24)',
+      }}
+      gap="6"
+      alignItems="center"
+    >
       <div>
         <AchievementTypeIllustration type={achievement.type} />
       </div>
@@ -37,6 +44,7 @@ export function Achievement(props: AchievementProps) {
       </VStack>
       <Text
         fontStyle="italic"
+        fontSize="sm"
         display={{
           base: 'none',
           lg: 'block',
@@ -45,7 +53,7 @@ export function Achievement(props: AchievementProps) {
       >
         -{dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}
       </Text>
-    </div>
+    </Grid>
   )
 }
 
