@@ -11,9 +11,7 @@ import { mainTheme } from '~/themes/main'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
-import '~/styles/index.css'
-import '~/styles/nprogress.css'
-import '~/assets/styles/fonts.css'
+import '~/assets/styles/index.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

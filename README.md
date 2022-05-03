@@ -6,7 +6,7 @@
 - **ORM**: [Prisma](https://prisma.io/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://github.com/mdx-js/mdx) - [Contentlayer](https://www.contentlayer.dev/docs)
-- **Styling**: [TailwindCSS v3](https://tailwindcss.com/)
+- **Component Library**: [Chakra UI](https://chakra-ui.com/)
 - **UI Component Explorer**: [Storybook 6](https://storybook.js.org/)
 - **Form Library**: [React Hook Form](https://react-hook-form.com/)
 

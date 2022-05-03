@@ -1,6 +1,6 @@
 import theme from './theme'
 
-import '~/styles/global.css'
+import '~/assets/styles/index.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useQuery } from 'react-query'
-import { Box, SimpleGrid } from '@chakra-ui/react'
+import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 
 import { ProjectCard } from '~/components/projects/components/project-card/project-card'
@@ -17,7 +17,10 @@ export function PinnedProjects() {
 
   return (
     <Box py="3">
-      <SectionHeader title="Proyectos fijados" actionLabel="Ver más" actionComponent={Link} actionHref="/projects" />
+      <SectionHeader title="Proyectos fijados" actionLabel="Ver más" actionComponent={Link} actionHref="/projects">
+        <Text mt="3">Aqui algunos de mis proyectos destacados</Text>
+      </SectionHeader>
+      <br />
       <SimpleGrid
         columns={{
           base: 1,
