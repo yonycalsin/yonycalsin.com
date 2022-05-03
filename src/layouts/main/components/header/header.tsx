@@ -37,7 +37,7 @@ export const Header = () => {
         <HStack spacing="4">
           <RouterLink href="/projects" passHref>
             <Link color="primary.500" fontWeight="bold">
-              Projectos
+              Proyectos
             </Link>
           </RouterLink>
           <RouterLink href="/me" passHref>
