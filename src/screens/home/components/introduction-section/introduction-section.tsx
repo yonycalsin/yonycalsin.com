@@ -3,6 +3,7 @@ import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
 import { Button, Heading, HStack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
+import { ExternalAnchor } from '~/components/external-anchor'
 import { socialLinks } from '~/utils/constants'
 
 export function IntroductionSection() {
@@ -14,21 +15,13 @@ export function IntroductionSection() {
 
   return (
     <VStack spacing="6" alignItems="flex-start" py="3">
-      <Heading fontWeight="extrabold">Hola, soy Yony</Heading>
-      <Text>
-        Soy un desarrollador de software{' '}
-        <Text
-          as="span"
-          textDecoration="underline"
-          _hover={{
-            backgroundColor: 'primary.600',
-            textColor: 'white',
-          }}
-        >
-          autodidacta
-        </Text>
-        . Este es mi sitio web personal, donde encontrarás todas las cosas que he aprendido y creado a lo largo de los
-        años
+      <Heading as="h1" size="lg" fontWeight="extrabold">
+        Hola, soy Yony Calsin.
+      </Heading>
+      <Text lineHeight="7">
+        Soy desarrollador de software. Trabajo en{' '}
+        <ExternalAnchor href="https://www.linkedin.com/company/riqra/mycompany/">Riqra</ExternalAnchor> como Full Stack
+        React/Node Engineer.
       </Text>
       <HStack>
         <Button
