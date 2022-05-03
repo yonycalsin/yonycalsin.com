@@ -18,9 +18,17 @@ export function ProjectCardContent(props: ProjectCardContentProps) {
     <AnimatePresence>
       {isOpen && (
         <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} display="flex" h="full">
-          <VStack py="4" px="5" alignItems="flex-start" w="full">
+          <VStack spacing="3" py="4" px="5" alignItems="flex-start" w="full">
             <Text>{project.shortDescription}</Text>
-            <Button size="sm" colorScheme="primary" rightIcon={<MdLaunch />}>
+            <Button
+              as="a"
+              href={(project.repositoryUrl ?? project.packageUrl ?? project.websiteUrl) as string}
+              target="_blank"
+              rel="noreferrer"
+              size="sm"
+              colorScheme="primary"
+              rightIcon={<MdLaunch />}
+            >
               Ver Proyecto
             </Button>
           </VStack>
