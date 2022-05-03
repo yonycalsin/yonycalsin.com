@@ -1,0 +1,9 @@
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: var(--yony-space-1);
+  left: calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2));
+  background: linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
+}

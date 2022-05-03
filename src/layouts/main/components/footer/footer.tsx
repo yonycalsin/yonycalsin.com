@@ -9,7 +9,7 @@ export function Footer() {
       <Container maxW="container.md">
         <VStack>
           <Text fontWeight="bold">Created By Yony Calsin</Text>
-          <Text textColor="gray.600">Built with Next.js, MDX, Tailwind and Vercel</Text>
+          <Text textColor="gray.600">Built with Next.js, MDX, Chakra-Ui and Vercel</Text>
         </VStack>
       </Container>
     </Box>
