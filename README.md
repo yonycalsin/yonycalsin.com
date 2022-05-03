@@ -20,10 +20,6 @@ Node.js v14.17.0 LTS & Yarn v14.x
 
 https://yonycalsin-storybook.vercel.app
 
-### Theme Preview
-
-https://yonycalsin-theme-preview.vercel.app
-
 ## License
 
 [LICENSE - ©2022 Yony Calsin.](LICENSE)
