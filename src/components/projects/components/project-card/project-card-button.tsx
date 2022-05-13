@@ -30,9 +30,7 @@ export function ProjectCardButton(props: ProjectCardButtonProps) {
       title={project.name}
     >
       <HStack flex="1" alignItems="center">
-        <Text isTruncated fontWeight="bold">
-          {project.slug}
-        </Text>
+        <Text fontWeight="bold">{project.slug}</Text>
         <span>⭐</span>
       </HStack>
       <div>
