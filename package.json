@@ -147,10 +147,10 @@
     "webpack": "5.72.1"
   },
   "engines": {
-    "node": "16.13.0"
+    "node": "16.14.0"
   },
   "volta": {
-    "node": "16.13.0"
+    "node": "16.14.0"
   },
   "msw": {
     "workerDirectory": "public"

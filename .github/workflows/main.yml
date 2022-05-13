@@ -12,7 +12,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.4
         with:
-          node-version: 16.13.0
+          node-version: 16.14.0
 
       - name: Cache node modules
         id: node-modules
@@ -47,7 +47,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [16.13.0]
+        node-version: [16.14.0]
 
     needs: [install_dependencies]
 
