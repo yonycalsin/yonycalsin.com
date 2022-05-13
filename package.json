@@ -149,10 +149,10 @@
   "engines": {
     "node": "16.13.0"
   },
-  "msw": {
-    "workerDirectory": "public"
-  },
   "volta": {
     "node": "16.13.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
