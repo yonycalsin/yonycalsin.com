@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
+import Zoom from 'react-medium-image-zoom'
 import * as Chakra from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import Image, { ImageProps } from 'next/image'
@@ -7,10 +9,25 @@ import { Anchor } from './components/anchor'
 import { LinkedHeading } from './components/linked-heading'
 import { Table, TableCell, TableHead } from './components/table'
 
+import 'react-medium-image-zoom/dist/styles.css'
+
 const { chakra } = Chakra
 
 function RoundedImage(props: ImageProps) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
+}
+
+function ZoomImage(props: any) {
+  return (
+    <Zoom
+      wrapStyle={{
+        marginTop: '1.25rem',
+      }}
+    >
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <img {...props} />
+    </Zoom>
+  )
 }
 
 const MDXComponents = {
@@ -43,7 +60,13 @@ const MDXComponents = {
   br: ({ reset, ...props }: any) => (
     <Box as={reset ? 'br' : undefined} height={reset ? undefined : '24px'} {...props} />
   ),
-  p: (props: never) => <chakra.p apply="mdx.p" {...props} />,
+  p: (props: any) => {
+    if (typeof props.children === 'string') {
+      return <chakra.p apply="mdx.p" {...props} />
+    }
+
+    return props.children
+  },
   ul: (props: never) => <chakra.ul apply="mdx.ul" {...props} />,
   ol: (props: never) => <chakra.ol apply="mdx.ul" {...props} />,
   li: (props: never) => <chakra.li pb="4px" {...props} />,
@@ -59,6 +82,7 @@ const MDXComponents = {
    * Image
    */
   Image: RoundedImage,
+  img: ZoomImage,
 }
 
 export default MDXComponents
