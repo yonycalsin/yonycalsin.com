@@ -4897,6 +4897,13 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+"@yonycalsin/eslint-plugin-import-sort@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@yonycalsin/eslint-plugin-import-sort/-/eslint-plugin-import-sort-1.0.1.tgz#18bc91f6f96ecce3d8107450ffc0af51c77044a3"
+  integrity sha512-dncTI4+Ao2dwKioU3g3D/N33uq9yZ7ed91DUxpRPWiGZN0BR32StiQh13tdeckhnCdXFX++il9tqY9Hf+97I9A==
+  dependencies:
+    eslint-plugin-simple-import-sort "7.0.0"
+
 "@yonycalsin/prettier-config-react-typescript@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@yonycalsin/prettier-config-react-typescript/-/prettier-config-react-typescript-1.0.1.tgz#18075df514e4b37f1569c4b279b95f791f66c2db"
