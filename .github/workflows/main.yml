@@ -42,7 +42,6 @@ jobs:
     env:
       DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
       SHADOW_DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
-      AUTH_JWT_SECRET: deamon
 
     strategy:
       fail-fast: false

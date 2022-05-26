@@ -37,7 +37,6 @@ jobs:
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           APP_ENV: development
-          AUTH_JWT_SECRET: daemon
           FF_BOOKS: false
           FF_BLOG: false
           FF_PROJECTS: false

@@ -1823,6 +1823,39 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
+"@dotenv-cloak/cli@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@dotenv-cloak/cli/-/cli-2.0.0.tgz#121d1cbc212abb3ae24672a2a7e3f3908eeb2c54"
+  integrity sha512-QCzb7fbot6c0WpaJeActNqOmdQ0/e3IQfrsFdu6ntTvAfJxLJTK9QDv6z5ct9MQHLPKcwd+jtqNm75cC2Ubi/A==
+  dependencies:
+    "@dotenv-cloak/core" "3.0.0"
+
+"@dotenv-cloak/config@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dotenv-cloak/config/-/config-3.0.0.tgz#d03a7564c952bc082e1b2022869b15506511e3e0"
+  integrity sha512-Wis7JSLkMIqhRWkCx5y762wxz3sNv87w9nPqF4mC13d2IcixbaiBOKqQfSc+shLM0VF1Sg0g2+3HPWrL92QKEQ==
+
+"@dotenv-cloak/core@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dotenv-cloak/core/-/core-3.0.0.tgz#f31dc247d60c1d23688d4d0dd3b84fcd40d86037"
+  integrity sha512-teWObowDg288ovzA0UpwKrE+XpF22El4opXupyQVA4N8amVnT8uFBV0jM42CGvzNZoTknidaBC9ppdakN6WueA==
+  dependencies:
+    "@dotenv-cloak/config" "3.0.0"
+    "@dotenv-cloak/parse" "3.0.0"
+    "@dotenv-cloak/stringify" "4.0.0"
+
+"@dotenv-cloak/parse@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dotenv-cloak/parse/-/parse-3.0.0.tgz#24d536151e187b0ff5b9ddd0c03bd8d3f0bee97b"
+  integrity sha512-E7ry+KM2edr2/+r/J+yviLAdBXSxvzIQZLN3KT0O7ogtidMS3Nw5cvDuJD7TJkr0iwErHrflHDmBE7AFlxDa9g==
+
+"@dotenv-cloak/stringify@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@dotenv-cloak/stringify/-/stringify-4.0.0.tgz#8772213420592892728d5dd0bb051ec77a2dfd47"
+  integrity sha512-qwMQ/rQkoqJNpAWySHmz+fm3g0olcBxXkzKcu7BKOHzQF222h6aIzs7jvthZ2HJYrAKG2So/Wee7aUKIpeFJLA==
+  dependencies:
+    "@dotenv-cloak/parse" "3.0.0"
+
 "@effect-ts/core@^0.58.0":
   version "0.58.1"
   resolved "https://registry.yarnpkg.com/@effect-ts/core/-/core-0.58.1.tgz#9ddb527c8b19501cb1f12bda23c16af722258964"
