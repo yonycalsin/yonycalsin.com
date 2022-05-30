@@ -34,7 +34,7 @@
     "cy:open": "pnpm exec cypress open",
     "test:e2e": "pnpm exec is-ci-cli \"test:e2e:run\" \"test:e2e:dev\"",
     "pretest:e2e:run": "pnpm run build",
-    "test:e2e:run": "pnpm exec start-server-and-test start http://localhost:3000 cy:run",
+    "test:e2e:run": "pnpm run build && pnpm exec start-server-and-test start http://localhost:3000 cy:run",
     "test:e2e:dev": "pnpm exec start-server-and-test dev http://localhost:3000 cy:open",
     "prepare": "pnpm exec husky install"
   },
