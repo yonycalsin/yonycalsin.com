@@ -3,37 +3,6 @@ name: CI
 on: push
 
 jobs:
-  install_dependencies:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2.1.1
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.4
-        with:
-          node-version: 16.14.0
-
-      - name: Cache node modules
-        id: node-modules
-        uses: actions/cache@v1.2.0
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            node-modules-
-
-      - if: steps.node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
-
-      - run: tar -zcf node_modules.tar.gz node_modules
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: node-modules
-          path: node_modules.tar.gz
-          retention-days: 1
-
   testing:
     timeout-minutes: 15
 
@@ -47,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [16.14.0]
-
-    needs: [install_dependencies]
 
     steps:
       - name: Setup Database with Mysql
@@ -68,10 +35,8 @@ jobs:
           --sql-mode='' \
           --default-authentication-plugin='mysql_native_password' \
 
-      - name: Checkout Repo
-        uses: actions/checkout@v2.1.1
-
-      - name: Checkout submodules
+      - name: Check out code
+        uses: actions/checkout@v3
         env:
           CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: |
@@ -79,27 +44,25 @@ jobs:
 
           git submodule update --init --recursive
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.1.3
+
+      - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.4
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Download Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: node-modules
-
-      - name: Install Cache Dependencies
-        run: tar -zxf node_modules.tar.gz
+          node-version: 16.14.0
+          cache: pnpm
 
       - name: Wait for MySQL
-        run: npx wait-on tcp:3306 && echo "MySQL is up"
+        run: pnpm dlx wait-on tcp:3306 && echo "MySQL is up"
 
       - name: Build
-        run: yarn contentlayer:build
+        run: pnpm run contentlayer:build
 
       - name: Static Testing
-        run: yarn test:static
+        run: pnpm run test:static
 
       - name: Unit Testing
-        run: yarn test:unit:ci
+        run: pnpm run test:unit:ci

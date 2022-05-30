@@ -33,7 +33,7 @@ jobs:
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
-          command: yarn test:e2e
+          command: pnpm run test:e2e
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           APP_ENV: development

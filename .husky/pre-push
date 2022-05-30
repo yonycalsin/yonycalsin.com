@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn cloak
+pnpm exec cloak
 
-yarn typecheck
+pnpm run typecheck
