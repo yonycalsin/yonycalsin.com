@@ -57,6 +57,9 @@ jobs:
           node-version: 16.14.0
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Wait for MySQL
         run: pnpm dlx wait-on tcp:3306 && echo "MySQL is up"
 

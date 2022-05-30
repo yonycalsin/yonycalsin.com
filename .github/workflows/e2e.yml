@@ -35,6 +35,9 @@ jobs:
           node-version: 16.14.0
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install
+
       - name: E2E Testing
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
