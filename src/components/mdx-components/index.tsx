@@ -36,16 +36,16 @@ const MDXComponents = {
   /**
    * Heading
    */
-  h1: (props: never) => <chakra.h1 apply="mdx.h1" {...props} />,
-  h2: (props: never) => <LinkedHeading apply="mdx.h2" {...props} />,
-  h3: (props: never) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
-  h4: (props: never) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
+  h1: (props: any) => <chakra.h1 apply="mdx.h1" {...props} />,
+  h2: (props: any) => <LinkedHeading apply="mdx.h2" {...props} />,
+  h3: (props: any) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
+  h4: (props: any) => <LinkedHeading as="h4" apply="mdx.h4" {...props} />,
 
   /**
    * Other
    */
-  hr: (props: never) => <chakra.hr apply="mdx.hr" {...props} />,
-  strong: (props: never) => <Box as="strong" fontWeight="semibold" {...props} />,
+  hr: (props: any) => <chakra.hr apply="mdx.hr" {...props} />,
+  strong: (props: any) => <Box as="strong" fontWeight="semibold" {...props} />,
   kbd: Chakra.Kbd,
   /**
    * Link
@@ -56,7 +56,6 @@ const MDXComponents = {
    *
    * @param props Typography
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   br: ({ reset, ...props }: any) => (
     <Box as={reset ? 'br' : undefined} height={reset ? undefined : '24px'} {...props} />
   ),
@@ -67,9 +66,9 @@ const MDXComponents = {
 
     return props.children
   },
-  ul: (props: never) => <chakra.ul apply="mdx.ul" {...props} />,
-  ol: (props: never) => <chakra.ol apply="mdx.ul" {...props} />,
-  li: (props: never) => <chakra.li pb="4px" {...props} />,
+  ul: (props: any) => <chakra.ul apply="mdx.ul" {...props} />,
+  ol: (props: any) => <chakra.ol apply="mdx.ul" {...props} />,
+  li: (props: any) => <chakra.li pb="4px" {...props} />,
 
   /**
    * Table
