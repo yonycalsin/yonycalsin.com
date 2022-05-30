@@ -11,7 +11,7 @@
     "build": "next build",
     "check:format": "pnpm run prettier --list-different",
     "clean": "rimraf -rf .next .contentlayer .vercel",
-    "contentlayer:build": "./node_modules/.bin/contentlayer build",
+    "contentlayer:build": "pnpm exec contentlayer build",
     "dev": " next dev",
     "fetch:submodules": "pnpm run script:run scripts/fetch-private-submodules/index.ts",
     "format": "pnpm run prettier -- --write",
