@@ -12,7 +12,7 @@
 
 ## Requirements
 
-Node.js v16.14.0 LTS & Yarn x1.22.18
+Node.js v16.14.0 LTS & pnpm 7.1.3
 
 > `You can use nvm-sh or nvm-windows`
 

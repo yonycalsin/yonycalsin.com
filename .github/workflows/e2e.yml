@@ -4,15 +4,17 @@ on: [push]
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [16.14.0]
+        node: ['16.14.0']
+        os: [ubuntu-20.04]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2.1.1
+      - name: Check out code
+        uses: actions/checkout@v3
 
       - name: Checkout submodules
         env:
@@ -24,16 +26,26 @@ jobs:
 
           ls -R content
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1.4.4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
         with:
-          node-version: ${{ matrix.node-version }}
+          version: 7.1.3
+
+      - name: Setup Node.js (${{ matrix.node }}) environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: E2E Testing
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
-          command: yarn test:e2e
+          install: false
+          command: pnpm run test:e2e
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           APP_ENV: development
@@ -41,6 +53,7 @@ jobs:
           FF_BLOG: false
           FF_PROJECTS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REST_API_URL: https://api.yonycalsin.com
 
       - run: npx cypress info
 
