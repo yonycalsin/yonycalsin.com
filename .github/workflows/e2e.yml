@@ -11,10 +11,8 @@ jobs:
         node-version: [16.14.0]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2.1.1
-
-      - name: Checkout submodules
+      - name: Check out code
+        uses: actions/checkout@v3
         env:
           CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: |
@@ -24,15 +22,22 @@ jobs:
 
           ls -R content
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.1.3
+
+      - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16.14.0
+          cache: pnpm
 
       - name: E2E Testing
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
         with:
+          install: false
           command: pnpm run test:e2e
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build

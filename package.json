@@ -28,6 +28,7 @@
     "test:unit:ci": "jest --ci",
     "typecheck": "tsc --noEmit",
     "vercel-build": "run-s prisma generate fetch:submodules build",
+    "prisma": "pnpm exec prisma",
     "test:static": "run-p check:format lint typecheck",
     "cy:run": "cypress run",
     "cy:open": "cypress open",

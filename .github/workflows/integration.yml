@@ -1,9 +1,9 @@
-name: CI
+name: Integration
 
 on: push
 
 jobs:
-  testing:
+  integration:
     timeout-minutes: 15
 
     runs-on: ubuntu-latest
