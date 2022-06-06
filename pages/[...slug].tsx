@@ -11,6 +11,7 @@ import { Meta } from '~/components/meta'
 import { QUERY_KEY_PAGES } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'
 import type { IPage, IPageQueryWithData, IPageQueryWithMeta } from '~/module-types/api-rest/pages'
+import { timings } from '~/utils/constants'
 
 interface PageSLugPageProps {
   page: IPage
@@ -87,6 +88,7 @@ export async function getStaticProps(
     props: {
       page: page.data,
     },
+    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 
