@@ -72,6 +72,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_USES) {
+      data.push({
+        slug: Features.USES,
+      })
+    }
+
     return data
   }, [])
 

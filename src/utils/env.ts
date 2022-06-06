@@ -18,6 +18,7 @@ const env = {
   FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS ? JSON.parse(process.env.FF_RECOMMENDATIONS) : null,
   FF_PINNED_PROJECTS: process.env.FF_PINNED_PROJECTS ? JSON.parse(process.env.FF_PINNED_PROJECTS) : null,
   FF_SNIPPETS: process.env.FF_SNIPPETS ? JSON.parse(process.env.FF_SNIPPETS) : null,
+  FF_USES: process.env.FF_USES ? JSON.parse(process.env.FF_USES) : null,
 }
 
 export default env
