@@ -47,7 +47,14 @@ export const Header = () => {
           </RouterLink>
           <Flag flagQuery={Features.SNIPPETS}>
             <RouterLink href="/snippets" passHref>
-              <Link color="primary.500" fontWeight="bold">
+              <Link
+                color="primary.500"
+                fontWeight="bold"
+                display={{
+                  base: 'none',
+                  md: 'block',
+                }}
+              >
                 Snippets
               </Link>
             </RouterLink>
