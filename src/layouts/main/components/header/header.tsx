@@ -52,6 +52,13 @@ export const Header = () => {
               </Link>
             </RouterLink>
           </Flag>
+          <Flag flagQuery={Features.USES}>
+            <RouterLink href="/uses" passHref>
+              <Link color="primary.500" fontWeight="bold">
+                Uses
+              </Link>
+            </RouterLink>
+          </Flag>
         </HStack>
       </Container>
     </Box>
