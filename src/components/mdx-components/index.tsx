@@ -3,6 +3,7 @@ import * as React from 'react'
 import Zoom from 'react-medium-image-zoom'
 import * as Chakra from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
+import { isPlainObject } from 'lodash'
 import Image, { ImageProps } from 'next/image'
 
 import { Anchor } from './components/anchor'
@@ -60,11 +61,12 @@ const MDXComponents = {
     <Box as={reset ? 'br' : undefined} height={reset ? undefined : '24px'} {...props} />
   ),
   p: (props: any) => {
-    if (typeof props.children === 'string') {
-      return <chakra.p apply="mdx.p" {...props} />
+    // We dont want to wrap a image with p tag
+    if (isPlainObject(props.children) && !!props.children?.props?.src) {
+      return props.children
     }
 
-    return props.children
+    return <chakra.p apply="mdx.p" {...props} />
   },
   ul: (props: any) => <chakra.ul apply="mdx.ul" {...props} />,
   ol: (props: any) => <chakra.ol apply="mdx.ul" {...props} />,
