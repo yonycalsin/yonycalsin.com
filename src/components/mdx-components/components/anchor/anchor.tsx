@@ -5,6 +5,10 @@ import { chakra } from '@chakra-ui/react'
 export const Anchor = React.forwardRef((props: any, ref: any) => {
   const isNotExternal = props.href.startsWith('/')
 
+  if (isNotExternal) {
+    return <chakra.a ref={ref} apply="mdx.a" {...props} />
+  }
+
   return (
     <chakra.a
       ref={ref}

@@ -12,6 +12,7 @@ import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
 import '~/assets/styles/index.css'
+import 'prism-theme-night-owl/build/style.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

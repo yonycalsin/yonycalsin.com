@@ -20,7 +20,7 @@ export function BlogPostScreen(props: BlogPostScreenProps) {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" py="6">
+      <Container maxW="container.md" py="6" pb="12">
         <VStack as="header" alignItems="flex-start">
           <Heading>{post.title}</Heading>
           <Text textColor="gray">{dayjs(post.publishedAt).format(dateFormats.HUMAN_DATE)}</Text>

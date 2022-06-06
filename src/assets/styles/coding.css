@@ -1,16 +1,6 @@
-/* prism */
-pre {
-  overflow-x: auto;
-}
-
-/**
-  * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
-  * 1. Make the element just wide enough to fit its content.
-  * 2. Always fill the visible space in .code-highlight.
-  */
-
 .code-highlight {
   float: left;
+  width: 100%;
 }
 
 .code-line {
@@ -24,11 +14,13 @@ pre {
 }
 
 .code-line.inserted {
-  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+  /* Set inserted line (+) color */
+  /* background-color: rgba(16, 185, 129, 0.2); */
 }
 
 .code-line.deleted {
-  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+  /* Set deleted line (-) color */
+  /* background-color: rgba(239, 68, 68, 0.2); */
 }
 
 .highlight-line {
@@ -49,157 +41,6 @@ pre {
   content: attr(line);
 }
 
-:root {
-  --code-font-family: Menlo, 'DM Mono', 'Roboto Mono', Courier New, monospace;
-  --code-font-color: #b3b9c5;
-  --code-background-color: #333;
-  --string: #92d192;
-  --variable: #f2777a;
-  --property: #abb2bf;
-  --number: #fca369;
-  --operator: #ac8d58;
-  --punctuation: #d5d8df;
-  --comment: #848991;
-  --function: #62cfcf;
-  --keyword: #ffeead;
-  --attribute: #ffd479;
-  --class: #e1a6f2;
-  --tag: #6ab0f3;
-  --error: #f2777a;
-  --terminal-color: var(--primary);
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata,
-.token.important {
-  color: var(--comment);
-}
-
-.token.punctuation {
-  color: var(--punctuation);
-}
-
-.token.namespace {
-  opacity: 0.7;
-}
-
-.token.property {
-  color: var(--property);
-}
-
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: var(--tag);
-}
-
-.token.number {
-  color: var(--number);
-}
-
-.token.char,
-.token.builtin,
-.token.url,
-.token.inserted {
-  color: var(--code-font-color);
-}
-
-.token.attr-name,
-.token.selector {
-  color: var(--attribute);
-}
-
-.token.attr-value,
-.token.string {
-  color: var(--string);
-}
-
-.token.operator {
-  color: var(--operator);
-}
-
-.token.atrule,
-.token.keyword {
-  color: var(--keyword);
-}
-
-.token.function {
-  color: var(--function);
-}
-
-.language-css,
-.token.boolean,
-.token.class-name {
-  color: var(--class) !important;
-}
-
-.token.regex {
-  color: var(--keyword);
-}
-
-.token.variable {
-  color: var(--variable);
-}
-
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.language-jsx .token.class-name {
-  color: var(--tag) !important;
-}
-
-pre::-moz-selection,
-pre::-moz-selection,
-code::-moz-selection,
-code::-moz-selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important;
-}
-
-pre::selection,
-pre::selection,
-code::selection,
-code::selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important;
-}
-
-pre[class*='language-']::-moz-selection,
-pre[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important;
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-']::selection,
-code[class*='language-'] ::selection,
-code[class*='language-'] ::selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important;
-}
-
-pre[class*='language-'].line-numbers {
-  padding-left: 3.5rem;
-}
-
 pre[class*='language-'] {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  border-radius: 0.3rem;
 }
