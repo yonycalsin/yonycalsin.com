@@ -79,6 +79,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
     }
 
+    if (env.FF_FAQ) {
+      data.push({
+        slug: Features.FAQ,
+      })
+    }
+
     return data
   }, [])
 

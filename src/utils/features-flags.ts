@@ -9,6 +9,7 @@ enum Features {
   PINNED_PROJECTS = 'pinned-projects',
   SNIPPETS = 'snippets',
   USES = 'uses',
+  FAQ = 'faq',
 }
 
 export default Features

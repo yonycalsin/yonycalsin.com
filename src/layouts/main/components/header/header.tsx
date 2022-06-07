@@ -45,6 +45,28 @@ export const Header = () => {
               Sobre Mi
             </Link>
           </RouterLink>
+          <Flag flagQuery={Features.FAQ}>
+            <RouterLink href="/faq" passHref>
+              <Link color="primary.500" fontWeight="bold">
+                FAQ
+              </Link>
+            </RouterLink>
+          </Flag>
+
+          <Flag flagQuery={Features.USES}>
+            <RouterLink href="/uses" passHref>
+              <Link
+                color="primary.500"
+                fontWeight="bold"
+                display={{
+                  base: 'none',
+                  md: 'block',
+                }}
+              >
+                Uses
+              </Link>
+            </RouterLink>
+          </Flag>
           <Flag flagQuery={Features.SNIPPETS}>
             <RouterLink href="/snippets" passHref>
               <Link
@@ -56,13 +78,6 @@ export const Header = () => {
                 }}
               >
                 Snippets
-              </Link>
-            </RouterLink>
-          </Flag>
-          <Flag flagQuery={Features.USES}>
-            <RouterLink href="/uses" passHref>
-              <Link color="primary.500" fontWeight="bold">
-                Uses
               </Link>
             </RouterLink>
           </Flag>
