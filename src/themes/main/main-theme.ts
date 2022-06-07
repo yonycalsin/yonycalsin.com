@@ -10,18 +10,34 @@ const mainTheme = extendTheme({
     heading: 'Inter, sans-serif',
     body: 'Inter, sans-serif',
   },
+  semanticTokens: {
+    colors: {
+      'mdx-blockquote-bg': {
+        _light: 'primary.50',
+        _dark: 'gray.900',
+      },
+      'mdx-blockquote-border-color': {
+        _light: 'primary.100',
+        _dark: 'primary.600',
+      },
+      'mdx-blockquote-border-left-color': {
+        _light: 'primary.600',
+        _dark: 'primary.500',
+      },
+    },
+  },
   colors: {
     primary: {
-      50: '#def0fc',
-      100: '#bcd7e3',
-      200: '#9ab9c9',
-      300: '#779daf',
-      400: '#5d889c',
-      500: '#427389',
-      600: '#366579',
-      700: '#285163',
-      800: '#1b3f4e',
-      900: '#092a37',
+      50: '#eff6ff',
+      100: '#dbeafe',
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',
+      500: '#3b82f6',
+      600: '#2563eb',
+      700: '#1d4ed8',
+      800: '#1e40af',
+      900: '#1e3a8a',
     },
     secondary: {
       50: '#e6f1ef',
@@ -35,18 +51,6 @@ const mainTheme = extendTheme({
       800: '#51645e',
       900: '#454646',
     },
-    // gray: {
-    //   50: '#F3F9FF',
-    //   100: '#ECF1F7',
-    //   200: '#E2E7ED',
-    //   300: '#D1D7DD',
-    //   400: '#ADB3B8',
-    //   500: '#8D9298',
-    //   600: '#656A70',
-    //   700: '#52575C',
-    //   800: '#34393D',
-    //   900: '#14191D',
-    // },
     error: {
       50: '#FFE9EF',
       100: '#FFC9D5',
@@ -120,12 +124,12 @@ const mainTheme = extendTheme({
       fontSize: '1.125rem',
     },
     a: {
-      color: 'teal.500',
+      color: 'primary.500',
       fontWeight: 'semibold',
       transition: 'color 0.15s',
       transitionTimingFunction: 'ease-out',
       _hover: {
-        color: 'teal.600',
+        color: 'primary.600',
       },
     },
     p: {
@@ -139,9 +143,11 @@ const mainTheme = extendTheme({
       my: '4rem',
     },
     blockquote: {
-      bg: 'orange.100',
+      bg: 'mdx-blockquote-bg',
       borderWidth: '1px',
-      borderColor: 'orange.200',
+      borderColor: 'mdx-blockquote-border-color',
+      borderLeft: '5px solid',
+      borderLeftColor: 'mdx-blockquote-border-left-color',
       rounded: 'lg',
       px: '1.25rem',
       py: '1rem',

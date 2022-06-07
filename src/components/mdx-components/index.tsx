@@ -71,6 +71,7 @@ const MDXComponents = {
   ul: (props: any) => <chakra.ul apply="mdx.ul" {...props} />,
   ol: (props: any) => <chakra.ol apply="mdx.ul" {...props} />,
   li: (props: any) => <chakra.li pb="4px" {...props} />,
+  blockquote: (props: any) => <chakra.blockquote apply="mdx.blockquote" {...props} />,
 
   /**
    * Table
