@@ -24,7 +24,7 @@ function PageSLugPage(props: PageSLugPageProps) {
 
   return (
     <>
-      <Meta title={`${page.title} - Yony Calsin`} notRobots={page.visibility !== 'public'} />
+      <Meta title={page.title} notRobots={page.visibility !== 'public'} />
       <MainLayout>
         <Container maxW="container.md" pb="12">
           <BodyComponent components={MDXComponents} />

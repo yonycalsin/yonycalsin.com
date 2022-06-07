@@ -2,12 +2,15 @@ import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ChakraProvider } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
+import { analytics } from '~/analytics/google-analytics'
 import { createQueryFn } from '~/clients/query-client'
 import { NightModeButton } from '~/components/night-mode-button'
 import { mainTheme } from '~/themes/main'
+import { isProduction } from '~/utils'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
 
@@ -89,27 +92,44 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
 
   React.useEffect(() => {
-    const handleStart = () => {
+    const handleRouteStart = () => {
       NProgress.start()
     }
-    const handleStop = () => {
+
+    const handleRouteStop = () => {
       NProgress.done()
     }
 
-    router.events.on('routeChangeStart', handleStart)
+    router.events.on('routeChangeStart', handleRouteStart)
 
-    router.events.on('routeChangeComplete', handleStop)
+    router.events.on('routeChangeComplete', handleRouteStop)
 
-    router.events.on('routeChangeError', handleStop)
+    router.events.on('routeChangeError', handleRouteStop)
 
     return () => {
-      router.events.off('routeChangeStart', handleStart)
+      router.events.off('routeChangeStart', handleRouteStart)
 
-      router.events.off('routeChangeComplete', handleStop)
+      router.events.off('routeChangeComplete', handleRouteStop)
 
-      router.events.off('routeChangeError', handleStop)
+      router.events.off('routeChangeError', handleRouteStop)
     }
   }, [router])
+
+  React.useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      analytics.pageView(url)
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    router.events.on('hashChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+
+      router.events.off('hashChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   const [queryClient] = React.useState(
     () =>
@@ -128,6 +148,31 @@ function MyApp({ Component, pageProps }: AppProps) {
         <FeatureProvider features={features}>
           <ChakraProvider resetCSS theme={mainTheme}>
             <NightModeButton />
+            {isProduction && (
+              <>
+                <Script
+                  strategy="afterInteractive"
+                  src={`https://www.googletagmanager.com/gtag/js?id=${env.GOOGLE_ANALYTICS_ID}`}
+                />
+                <Script
+                  id="gtag-init"
+                  strategy="afterInteractive"
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+
+                        function gtag(){dataLayer.push(arguments);}
+
+                        gtag('js', new Date());
+
+                        gtag('config', '${env.GOOGLE_ANALYTICS_ID}', {
+                            page_path: window.location.pathname,
+                        });
+                    `,
+                  }}
+                />
+              </>
+            )}
             <Component {...pageProps} />
           </ChakraProvider>
         </FeatureProvider>
