@@ -1,6 +1,7 @@
 export interface IPage {
   title: string
   slug: string
+  visibility: string
   body: {
     type: string
     code: string
