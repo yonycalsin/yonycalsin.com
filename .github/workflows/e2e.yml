@@ -53,7 +53,6 @@ jobs:
           FF_BLOG: false
           FF_PROJECTS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REST_API_URL: https://api.yonycalsin.com
 
       - run: npx cypress info
 
