@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -51,7 +51,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -59,7 +59,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
 }
 
 @font-face {
@@ -67,5 +67,23 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(/static/fonts/Inter.woff2) format('woff2');
+  src: url('/static/fonts/Inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/static/fonts/SofiaRegularWebfont.woff2') format('woff2'),
+    url('/static/fonts/SofiaRegularWebfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/static/fonts/SofiaProSemiboldWebfont.woff2') format('woff2'),
+    url('/static/fonts/SofiaProSemiboldWebfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

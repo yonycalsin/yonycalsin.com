@@ -1,4 +1,6 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, ThemeComponentProps } from '@chakra-ui/react'
+// @ts-expect-error ts(2307)
+import { mode } from '@chakra-ui/theme-tools'
 
 const mainTheme = extendTheme({
   config: {
@@ -7,8 +9,9 @@ const mainTheme = extendTheme({
     useSystemColorMode: true,
   },
   fonts: {
-    heading: 'Inter, sans-serif',
-    body: 'Inter, sans-serif',
+    heading:
+      "'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    body: "'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   },
   semanticTokens: {
     colors: {
@@ -25,6 +28,31 @@ const mainTheme = extendTheme({
         _dark: 'primary.500',
       },
     },
+  },
+  styles: {
+    global: (props: ThemeComponentProps) => ({
+      'html, body': {
+        fontSize: {
+          base: 'md',
+          lg: 'lg',
+        },
+      },
+      '::selection': {
+        backgroundColor: mode('secondary.100', 'secondary.600')(props),
+      },
+    }),
+  },
+  fontSizes: {
+    xs: '12px',
+    sm: '14px',
+    md: '16px',
+    lg: '18px',
+    xl: '20px',
+    '2xl': '24px',
+    '3xl': '28px',
+    '4xl': '36px',
+    '5xl': '48px',
+    '6xl': '64px',
   },
   colors: {
     primary: {
