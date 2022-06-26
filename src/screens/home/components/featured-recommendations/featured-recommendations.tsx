@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useQuery } from 'react-query'
 import { Box } from '@chakra-ui/react'
-import Link from 'next/link'
 
 import { Recommendations } from '~/components/recommendations'
 import { SectionHeader } from '~/components/section/section-header'
@@ -17,12 +16,7 @@ export function FeaturedRecommendations() {
 
   return (
     <Box py="3">
-      <SectionHeader
-        title="Recomendaciones"
-        actionLabel="Ver más"
-        actionComponent={Link}
-        actionHref="/recommendations"
-      />
+      <SectionHeader title="Recomendaciones" />
       {/* TODO: use a padding or margin instead of this */}
       <Box py="3" />
       <Recommendations recommendations={recommendations} />
