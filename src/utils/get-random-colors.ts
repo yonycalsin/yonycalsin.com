@@ -2,8 +2,6 @@ import random from 'just-random'
 
 export function getRandomBadgeColors() {
   return random([
-    'blackAlpha',
-    'gray',
     'red',
     'orange',
     'yellow',
