@@ -2,16 +2,19 @@ import * as React from 'react'
 import { BsLink } from 'react-icons/bs'
 import { FaNpm } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
-import { RiMapPinTimeLine } from 'react-icons/ri'
-import { Badge, Box, Heading, Icon, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
+import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
+import type { IProjectType } from '~/module-types/api-rest/projects'
 import { dateFormats } from '~/utils/constants'
 import { getRandomBadgeColors } from '~/utils/get-random-colors'
 import normalizeDisplayUrl from '~/utils/normalize-display-url'
 
+import { getWorkItemColors, WorkItemIcon } from './components'
+
 export interface WorkItemProps {
   title: string
+  type: IProjectType
   description: string
   webHref?: string | null
   repositoryHref?: string | null
@@ -21,7 +24,11 @@ export interface WorkItemProps {
 }
 
 export function WorkItem(props: WorkItemProps) {
-  const { tags = [], title, description, webHref, startedAt = new Date(), repositoryHref, packageHref } = props
+  const { tags = [], title, type, description, webHref, startedAt = new Date(), repositoryHref, packageHref } = props
+
+  const colors = React.useMemo(() => {
+    return getWorkItemColors(type)
+  }, [type])
 
   return (
     <Box as="li">
@@ -40,7 +47,7 @@ export function WorkItem(props: WorkItemProps) {
         alignItems="center"
         justifyContent="center"
         borderRadius="full"
-        backgroundColor="primary.100"
+        backgroundColor={colors.backgroundColor}
         p="3"
       >
         <Box
@@ -54,7 +61,7 @@ export function WorkItem(props: WorkItemProps) {
         >
           <Text fontStyle="italic">{dayjs(startedAt).format(dateFormats.HUMAN_DATE)}</Text>
         </Box>
-        <Icon fill="primary.900" w="full" h="full" as={RiMapPinTimeLine} />
+        <WorkItemIcon projectType={type} />
       </Box>
       <VStack
         spacing="6"

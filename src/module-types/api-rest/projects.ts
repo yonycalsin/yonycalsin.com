@@ -2,6 +2,7 @@ export enum IProjectType {
   PROJECT = 'project',
   PACKAGE = 'package',
   CONTRIBUTION = 'contribution',
+  TEMPLATE = 'template',
 }
 
 export enum IProjectStatus {

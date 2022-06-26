@@ -18,21 +18,22 @@ export function ProjectsScreen() {
   return (
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
-        <Heading as="h1" fontWeight="extrabold">
-          Proyectos ({projects.length})
-        </Heading>
+        <VStack alignItems="flex-start" mb="10" spacing="6">
+          <Heading as="h1" fontWeight="extrabold">
+            Proyectos ({projects.length})
+          </Heading>
 
-        <Text mt="6">
-          Aqui algunos de mis proyectos destacados. Véalos todos{' '}
-          <Link color="primary.500" fontWeight="bold" href={socialLinks.GITHUB} target="blank">
-            en mi GitHub
-          </Link>
-          .
-        </Text>
+          <Text>
+            Aqui algunos de mis proyectos destacados. Véalos todos{' '}
+            <Link color="primary.500" fontWeight="bold" href={socialLinks.GITHUB} target="blank">
+              en mi GitHub
+            </Link>
+            .
+          </Text>
+        </VStack>
 
         <VStack
           spacing="12"
-          mt="6"
           as="ul"
           alignItems="flex-start"
           position="relative"
@@ -49,13 +50,14 @@ export function ProjectsScreen() {
             },
             // prettier-ignore
             // background: 'linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
-            background: 'gray.500',
+            background: 'gray.100',
           }}
         >
           {projects.map(project => (
             <WorkItem
               key={project.id}
               title={project.name}
+              type={project.type}
               webHref={project.websiteUrl}
               repositoryHref={project.repositoryUrl}
               packageHref={project.packageUrl}
