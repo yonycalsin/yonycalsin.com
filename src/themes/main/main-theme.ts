@@ -9,9 +9,9 @@ const mainTheme = extendTheme({
     useSystemColorMode: true,
   },
   fonts: {
-    heading:
-      "'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    body: "'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    heading: `"Sofia Pro", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    body: `"Sofia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
   },
   semanticTokens: {
     colors: {
@@ -27,6 +27,22 @@ const mainTheme = extendTheme({
         _light: 'primary.600',
         _dark: 'primary.500',
       },
+      'chakra-body-text': {
+        _light: 'gray.800',
+        _dark: 'whiteAlpha.800',
+      },
+      'chakra-body-bg': {
+        _light: 'white',
+        _dark: 'gray.900',
+      },
+      'chakra-border-color': {
+        _light: 'gray.200',
+        _dark: 'whiteAlpha.300',
+      },
+      'chakra-placeholder-color': {
+        _light: 'gray.500',
+        _dark: 'whiteAlpha.400',
+      },
     },
   },
   styles: {
@@ -38,7 +54,7 @@ const mainTheme = extendTheme({
         },
       },
       '::selection': {
-        backgroundColor: mode('secondary.100', 'secondary.600')(props),
+        backgroundColor: mode('secondary.100', 'secondary.800')(props),
       },
     }),
   },
@@ -56,28 +72,28 @@ const mainTheme = extendTheme({
   },
   colors: {
     primary: {
-      50: '#eff6ff',
-      100: '#dbeafe',
-      200: '#bfdbfe',
-      300: '#93c5fd',
-      400: '#60a5fa',
-      500: '#3b82f6',
-      600: '#2563eb',
-      700: '#1d4ed8',
-      800: '#1e40af',
-      900: '#1e3a8a',
+      50: '#ffeef1',
+      100: '#ffd5d9',
+      200: '#f8a8a5',
+      300: '#f28882',
+      400: '#ff6e61',
+      500: '#ff6247',
+      600: '#f75b48',
+      700: '#e45141',
+      800: '#d74b3b',
+      900: '#c8412f',
     },
     secondary: {
-      50: '#e6f1ef',
-      100: '#c1ddd8',
-      200: '#9dc8c0',
-      300: '#7fb2a7',
-      400: '#6fa296',
-      500: '#679186',
-      600: '#60847a',
-      700: '#58746b',
-      800: '#51645e',
-      900: '#454646',
+      50: '#ddfcff',
+      100: '#a9f7fe',
+      200: '#61f2ff',
+      300: '#00eafe',
+      400: '#00e3fa',
+      500: '#00dcf9',
+      600: '#00cbe4',
+      700: '#00b4c8',
+      800: '#00a0ae',
+      900: '#007b7f',
     },
     error: {
       50: '#FFE9EF',
