@@ -5,7 +5,7 @@ import { mode } from '@chakra-ui/theme-tools'
 const mainTheme = extendTheme({
   config: {
     cssVarPrefix: 'yony',
-    initialColorMode: 'system',
+    initialColorMode: 'dark',
     useSystemColorMode: true,
   },
   fonts: {
