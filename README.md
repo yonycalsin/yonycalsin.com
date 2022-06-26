@@ -2,7 +2,7 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Data-Fetching Library**: [React Query](https://react-query.tanstack.com/)
-- **Databases**: [Notion](https://www.notion.so/) - [Airtable](https://www.airtable.com/) - [PlanetScale](https://planetscale.com/)
+- **Databases**: [Notion](https://www.notion.so/) - [PlanetScale](https://planetscale.com/)
 - **ORM**: [Prisma](https://prisma.io/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://github.com/mdx-js/mdx) - [Contentlayer](https://www.contentlayer.dev/docs)

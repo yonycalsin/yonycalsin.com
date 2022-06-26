@@ -1,23 +1,25 @@
 import * as React from 'react'
+import { useQuery } from 'react-query'
 import { Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
 
 import { WorkItem } from '~/components/work-item/work-item'
+import { QUERY_KEY_PROJECTS } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'
-import type { WorkProject } from '~/lib/airtable-api'
+import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
 import { socialLinks } from '~/utils/constants'
 
-export interface ProjectsScreenProps {
-  workProjects: WorkProject[]
-}
+export function ProjectsScreen() {
+  const queryResult = useQuery<IProjectQueryWithMeta>(QUERY_KEY_PROJECTS, {
+    staleTime: Infinity,
+  })
 
-export function ProjectsScreen(props: ProjectsScreenProps) {
-  const { workProjects } = props
+  const projects = queryResult.data?.data ?? []
 
   return (
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
         <Heading as="h1" fontWeight="extrabold">
-          Proyectos ({workProjects.length})
+          Proyectos ({projects.length})
         </Heading>
 
         <Text mt="6">
@@ -34,19 +36,32 @@ export function ProjectsScreen(props: ProjectsScreenProps) {
           as="ul"
           alignItems="flex-start"
           position="relative"
-          className="timeline"
           listStyleType="none"
+          _before={{
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            height: 'full',
+            width: '1',
+            left: {
+              base: 'calc((var(--yony-space-9) / 2) - (var(--yony-space-1) / 2))',
+              lg: 'calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2))',
+            },
+            // prettier-ignore
+            // background: 'linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
+            background: 'gray.500',
+          }}
         >
-          {workProjects.map(work => (
+          {projects.map(project => (
             <WorkItem
-              key={work.id}
-              title={work.name}
-              webHref={work.webUrl}
-              repositoryHref={work.repositoryUrl}
-              packageHref={work.packageUrl}
-              description={work.description}
-              tags={work.technologies}
-              startedAt={work.startedAt}
+              key={project.id}
+              title={project.name}
+              webHref={project.websiteUrl}
+              repositoryHref={project.repositoryUrl}
+              packageHref={project.packageUrl}
+              description={project.shortDescription}
+              tags={project.techStack.map(stack => stack.name)}
+              startedAt={project.startedAt}
             />
           ))}
         </VStack>
