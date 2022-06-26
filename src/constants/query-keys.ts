@@ -8,6 +8,8 @@ export const QUERY_KEY_PINNED_PROJECTS = [
   },
 ]
 
+export const QUERY_KEY_PROJECTS = ['/projects']
+
 export const QUERY_KEY_SNIPPETS = ['/snippets']
 
 export const QUERY_KEY_PAGES = ['/pages']
