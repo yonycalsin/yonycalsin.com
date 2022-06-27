@@ -11,9 +11,9 @@ export const Meta = (props: MetaProps) => {
 
   const { description, titleTemplate, defaultTitle, twitterUsername, websiteUrl, socialBannerImage } = {
     description:
-      'Frontend developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.',
+      'Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.',
     titleTemplate: '%s - Yony Calsin',
-    defaultTitle: 'Yony Calsin - Frontend Developer',
+    defaultTitle: 'Yony Calsin - Software Developer',
     twitterUsername: '@yonycalsin',
     websiteUrl: 'https://www.yonycalsin.com',
     socialBannerImage: 'https://avatars.githubusercontent.com/u/58490737?v=4',
@@ -55,7 +55,7 @@ export const Meta = (props: MetaProps) => {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={socialBannerImage} />
 
-      <title>{props.title ? titleTemplate.replace('%s', props.title) : 'Yony Calsin - Desarrollador Frontend'}</title>
+      <title>{props.title ? titleTemplate.replace('%s', props.title) : 'Yony Calsin - Software Developer'}</title>
     </Head>
   )
 }
