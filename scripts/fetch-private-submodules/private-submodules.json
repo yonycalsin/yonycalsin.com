@@ -2,9 +2,5 @@
   {
     "PATH": "content/blog",
     "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-blog"
-  },
-  {
-    "PATH": "data/config",
-    "GITHUB_URL": "github.com/yonycalsin/yonycalsin-com-config"
   }
 ]
