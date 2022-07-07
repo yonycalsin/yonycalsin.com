@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { RiArrowDownSLine } from 'react-icons/ri'
-import { Box, HStack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
+import { getWorkItemColors, getWorkItemIcon } from '~/components/work-item/components'
 import type { IProject } from '~/module-types/api-rest/projects'
 
 export interface ProjectCardButtonProps {
@@ -14,7 +15,15 @@ export interface ProjectCardButtonProps {
 export function ProjectCardButton(props: ProjectCardButtonProps) {
   const { isOpen, onToggle, project } = props
 
-  const borderColor = useColorModeValue('gray.200', 'gray.700')
+  const icon = React.useMemo(() => {
+    return getWorkItemIcon(project.type)
+  }, [project.type])
+
+  const colors = React.useMemo(() => {
+    return getWorkItemColors(project.type)
+  }, [project.type])
+
+  const borderColor = useColorModeValue('gray.100', 'gray.700')
 
   return (
     <Box
@@ -22,16 +31,16 @@ export function ProjectCardButton(props: ProjectCardButtonProps) {
       type="button"
       display="flex"
       alignItems="center"
-      py="4"
-      px="5"
+      py="3"
+      px="4"
       borderBottom={isOpen ? '1px' : 'none'}
       borderColor={borderColor}
       onClick={onToggle}
       title={project.name}
     >
       <HStack flex="1" alignItems="center">
-        <Text fontWeight="bold">{project.slug}</Text>
-        <span>⭐</span>
+        <Icon as={icon} fill={colors.fill} />
+        <Text>{project.slug}</Text>
       </HStack>
       <div>
         <motion.div animate={{ rotate: isOpen ? -90 : 0 }}>

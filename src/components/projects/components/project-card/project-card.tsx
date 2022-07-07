@@ -14,9 +14,7 @@ export interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps) {
   const { project } = props
 
-  const borderColor = useColorModeValue('gray.200', 'gray.700')
-
-  const backgroundColor = useColorModeValue('gray.50', 'gray.900')
+  const backgroundColor = useColorModeValue('gray.50', 'gray.800')
 
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -25,16 +23,14 @@ export function ProjectCard(props: ProjectCardProps) {
   return (
     <MotionBox
       animate={{
-        height: isOpen ? 'auto' : 60,
+        height: isOpen ? 'auto' : 58,
       }}
       display="flex"
       overflow="hidden"
       position="relative"
       flexDirection="column"
       borderRadius="md"
-      border="1px"
       backgroundColor={backgroundColor}
-      borderColor={borderColor}
     >
       <ProjectCardButton isOpen={isOpen} onToggle={onToggle} project={project} />
       <ProjectCardContent isOpen={isOpen} project={project} />

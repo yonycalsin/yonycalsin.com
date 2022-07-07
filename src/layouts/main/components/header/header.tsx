@@ -7,7 +7,7 @@ import { Flag } from 'toggled'
 import Features from '~/utils/features-flags'
 
 export const Header = () => {
-  const backgroundColor = useColorModeValue('gray.50', 'gray.900')
+  const backgroundColor = useColorModeValue('white', 'gray.900')
 
   return (
     <Box w="full" top="0" zIndex="banner" left="0" background={backgroundColor}>

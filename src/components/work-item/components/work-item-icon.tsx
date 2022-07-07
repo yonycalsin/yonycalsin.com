@@ -10,7 +10,7 @@ export interface WorkItemIconProps {
   projectType: IProjectType
 }
 
-function getWorkItemIcon(projectType: IProjectType) {
+export function getWorkItemIcon(projectType: IProjectType) {
   switch (projectType) {
     case IProjectType.PROJECT: {
       return MdWorkOutline
