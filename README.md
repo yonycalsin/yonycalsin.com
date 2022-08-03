@@ -2,7 +2,7 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Data-Fetching Library**: [React Query](https://react-query.tanstack.com/)
-- **Databases**: [Notion](https://www.notion.so/) - [PlanetScale](https://planetscale.com/)
+- **Databases** (REST API): [Notion](https://www.notion.so/) - [PlanetScale](https://planetscale.com/)
 - **ORM**: [Prisma](https://prisma.io/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://github.com/mdx-js/mdx) - [Contentlayer](https://www.contentlayer.dev/docs)
@@ -22,4 +22,4 @@ https://yonycalsin-storybook.vercel.app
 
 ## License
 
-[LICENSE - ©2022 Yony Calsin.](LICENSE)
+[LICENSE (GNU General Public License v3.0) - ©2022 Yony Calsin](LICENSE)
