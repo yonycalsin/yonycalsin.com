@@ -21,12 +21,24 @@ export function HomeScreen() {
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
         <IntroductionSection />
-        <Divider my="6" />
-        {hasPinnedProjectsFF && <PinnedProjects />}
-        <Divider my="6" />
-        {hasAchievementsFF && <FeaturedAchievements />}
-        <Divider my="6" />
-        {hasRecommendationsFF && <FeaturedRecommendations />}
+        {hasPinnedProjectsFF && (
+          <>
+            <Divider my="6" />
+            <PinnedProjects />
+          </>
+        )}
+        {hasAchievementsFF && (
+          <>
+            <Divider my="6" />
+            <FeaturedAchievements />
+          </>
+        )}
+        {hasRecommendationsFF && (
+          <>
+            <Divider my="6" />
+            <FeaturedRecommendations />
+          </>
+        )}
       </Container>
     </MainLayout>
   )
