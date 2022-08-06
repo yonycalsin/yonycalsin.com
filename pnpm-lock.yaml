@@ -8,7 +8,6 @@ specifiers:
   '@emotion/react': '11'
   '@emotion/styled': '11'
   '@notionhq/client': 1.0.4
-  '@prisma/client': 3.14.0
   '@react-pdf/renderer': 2.1.1
   '@storybook/addon-actions': 6.5.6
   '@storybook/addon-essentials': 6.5.6
@@ -78,7 +77,6 @@ specifiers:
   prettier: 2.6.2
   prettier-plugin-packagejson: 2.2.18
   prism-theme-night-owl: 1.4.0
-  prisma: 3.14.0
   react: 18.1.0
   react-dom: 18.1.0
   react-hook-form: 7.31.3
@@ -112,7 +110,6 @@ dependencies:
   '@emotion/react': 11.9.0_wyic7k6y4scqvmgrpshixuqwly
   '@emotion/styled': 11.8.1_v7eedgdx7xjx7aqq5pyjhqmfyu
   '@notionhq/client': 1.0.4
-  '@prisma/client': 3.14.0_prisma@3.14.0
   '@react-pdf/renderer': 2.1.1_react@18.1.0
   clsx: 1.1.1
   contentlayer: 0.2.5
@@ -137,7 +134,6 @@ dependencies:
   nookies: 2.5.2
   nprogress: 0.2.0
   prism-theme-night-owl: 1.4.0
-  prisma: 3.14.0
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-hook-form: 7.31.3_react@18.1.0
@@ -3690,29 +3686,6 @@ packages:
 
   /@popperjs/core/2.11.5:
     resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
-    dev: false
-
-  /@prisma/client/3.14.0_prisma@3.14.0:
-    resolution: {integrity: sha512-atb41UpgTR1MCst0VIbiHTMw8lmXnwUvE1KyUCAkq08+wJyjRE78Due+nSf+7uwqQn+fBFYVmoojtinhlLOSaA==}
-    engines: {node: '>=12.6'}
-    requiresBuild: true
-    peerDependencies:
-      prisma: '*'
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-    dependencies:
-      '@prisma/engines-version': 3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a
-      prisma: 3.14.0
-    dev: false
-
-  /@prisma/engines-version/3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a:
-    resolution: {integrity: sha512-D+yHzq4a2r2Rrd0ZOW/mTZbgDIkUkD8ofKgusEI1xPiZz60Daks+UM7Me2ty5FzH3p/TgyhBpRrfIHx+ha20RQ==}
-    dev: false
-
-  /@prisma/engines/3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a:
-    resolution: {integrity: sha512-LwZvI3FY6f43xFjQNRuE10JM5R8vJzFTSmbV9X0Wuhv9kscLkjRlZt0BEoiHmO+2HA3B3xxbMfB5du7ZoSFXGg==}
-    requiresBuild: true
     dev: false
 
   /@protobufjs/aspromise/1.1.2:
@@ -15054,15 +15027,6 @@ packages:
 
   /prism-theme-night-owl/1.4.0:
     resolution: {integrity: sha512-1N1GVbVorGd5t1Vw76yL/3rhqdiCpDrJg26Is+jGeMV7qiIMZL+bC7Mjx7HMMuVKZoi+2nWSbU5IutBYNy9tiQ==}
-    dev: false
-
-  /prisma/3.14.0:
-    resolution: {integrity: sha512-l9MOgNCn/paDE+i1K2fp9NZ+Du4trzPTJsGkaQHVBufTGqzoYHuNk8JfzXuIn0Gte6/ZjyKj652Jq/Lc1tp2yw==}
-    engines: {node: '>=12.6'}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      '@prisma/engines': 3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a
     dev: false
 
   /prismjs/1.27.0:
