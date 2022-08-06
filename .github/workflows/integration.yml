@@ -8,10 +8,6 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
-    env:
-      DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
-      SHADOW_DATABASE_URL: 'mysql://githubci:githubci@127.0.0.1:3306/personal_website'
-
     strategy:
       fail-fast: false
       matrix:
