@@ -1,22 +1,25 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { pathsToModuleNameMapper } = require('ts-jest')
-const { compilerOptions } = require('./tsconfig')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextJest = require('next/jest')
 
-const moduleNameMapper = {
-  '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-  '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
-  ...pathsToModuleNameMapper(compilerOptions.paths),
-}
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+})
 
-module.exports = {
-  roots: ['<rootDir>'],
-  testEnvironment: 'jsdom',
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
-  testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next)[/\\\\]'],
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+// Add any custom config to be passed to Jest
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    // Handle module aliases (this will be automatically configured for you soon)
+    '^~/(.*)$': '<rootDir>/src/$1',
+
+    // Optionals
+    '^~/server/(.*)$': '<rootDir>/server/$1',
+    '^~/data/(.*)$': '<rootDir>/data/$1',
+    '^~/contentlayer/generated$': '<rootDir>/.contentlayer/generated',
   },
-  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
-  moduleNameMapper,
+  testEnvironment: 'jest-environment-jsdom',
 }
+
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)
