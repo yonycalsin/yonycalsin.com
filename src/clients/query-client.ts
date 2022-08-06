@@ -1,5 +1,5 @@
-import type { QueryFunctionContext, QueryKey } from 'react-query'
 import { IParseInput, stringify } from '@chaitin/querystring'
+import type { QueryFunctionContext, QueryKey } from '@tanstack/react-query'
 
 import env from '~/utils/env'
 

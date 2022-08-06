@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { useQuery } from 'react-query'
 import { Container, Heading, Text, VStack } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
 
 import { QUERY_KEY_SNIPPETS } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'

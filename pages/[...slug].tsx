@@ -1,5 +1,5 @@
-import { QueryClient } from 'react-query'
 import { Container } from '@chakra-ui/react'
+import { QueryClient } from '@tanstack/react-query'
 import { map } from 'lodash'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import nextBase64 from 'next-base64'
@@ -74,7 +74,7 @@ export async function getStaticProps(
     },
   })
 
-  const page = await queryClient.fetchQuery<IPageQueryWithData>(`/pages/${pageSlug}`, {
+  const page = await queryClient.fetchQuery<IPageQueryWithData>([`/pages/${pageSlug}`], {
     staleTime: Infinity,
   })
 

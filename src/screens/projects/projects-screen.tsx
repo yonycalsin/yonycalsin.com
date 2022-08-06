@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { useQuery } from 'react-query'
 import { Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
 
 import { WorkItem } from '~/components/work-item/work-item'
 import { QUERY_KEY_PROJECTS } from '~/constants/query-keys'

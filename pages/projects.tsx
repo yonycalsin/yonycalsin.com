@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { dehydrate, DehydratedState, QueryClient } from 'react-query'
+import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { createQueryFn } from '~/clients/query-client'
