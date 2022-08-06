@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { useQuery } from 'react-query'
 import { Container } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
 
 import { BookItem } from '~/components/books/book-item'
 import { Typography } from '~/components/typography/typography'
@@ -8,7 +8,7 @@ import { MainLayout } from '~/layouts'
 import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
 
 export function BooksScreen() {
-  const allBooksResponse = useQuery<BookQueryWithMeta>('/books', {
+  const allBooksResponse = useQuery<BookQueryWithMeta>(['/books'], {
     staleTime: Infinity,
   })
 

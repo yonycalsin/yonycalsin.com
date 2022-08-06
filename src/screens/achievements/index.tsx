@@ -1,5 +1,5 @@
-import { useQuery } from 'react-query'
 import { Container } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
 
 import { Achievements } from '~/components/achievements'
 import { Typography } from '~/components/typography/typography'

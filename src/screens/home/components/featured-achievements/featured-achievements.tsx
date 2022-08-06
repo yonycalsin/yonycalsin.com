@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { useQuery } from 'react-query'
 import { Box, Text } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
 
 import { Achievements } from '~/components/achievements'
 import { SectionHeader } from '~/components/section/section-header'

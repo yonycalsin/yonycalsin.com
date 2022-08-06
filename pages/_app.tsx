@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ChakraProvider } from '@chakra-ui/react'
+import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import NProgress from 'nprogress'
