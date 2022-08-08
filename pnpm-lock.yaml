@@ -20,6 +20,7 @@ specifiers:
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^14.4.2
   '@types/debug': 4.1.7
+  '@types/jest': 28.1.6
   '@types/jsonwebtoken': 8.5.8
   '@types/lodash': 4.14.182
   '@types/ms': 0.7.31
@@ -159,6 +160,7 @@ devDependencies:
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.4.2
   '@types/debug': 4.1.7
+  '@types/jest': 28.1.6
   '@types/jsonwebtoken': 8.5.8
   '@types/lodash': 4.14.182
   '@types/ms': 0.7.31
@@ -11109,7 +11111,7 @@ packages:
     engines: {node: '>=12.0.0'}
     dependencies:
       ansi-escapes: 4.3.2
-      chalk: 4.1.1
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-width: 3.0.0
       external-editor: 3.1.0

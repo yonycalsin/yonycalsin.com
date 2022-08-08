@@ -23,8 +23,10 @@
     "importsNotUsedAsValues": "error",
     "incremental": true,
     "noImplicitOverride": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["jest", "node"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", ".contentlayer/generated"],
-  "exclude": ["node_modules", ".next", "out", "cypress.config.ts"]
+  "exclude": ["node_modules", ".next", "./cypress.config.ts", "cypress", "scripts"]
 }
