@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Container } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import { BookItem } from '~/components/books/book-item'
-import { Typography } from '~/components/typography/typography'
 import { MainLayout } from '~/layouts'
 import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
 
@@ -17,48 +16,70 @@ export function BooksScreen() {
   return (
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
-        <article className="py-4">
+        <VStack alignItems="flex-start" spacing="6">
           <header>
-            <Typography variant="h2" gutterBottom fontWeight="extrabold">
-              Libros
-            </Typography>
-            <Typography gutterBottom>
-              Esta página contiene los libros que me gustan con mis notas, resaltados y reseñas.
-            </Typography>
+            <Heading>Books</Heading>
+            <Text mt="3">This page contains the books I have been.</Text>
           </header>
 
-          <Typography variant="h4" gutterBottom>
-            Actualmente leyendo
-          </Typography>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-2">
-            {readingBooksResponse.data?.data.map((book: Book) => (
-              <BookItem
-                key={book.id}
-                name={book.name}
-                imageSrc={book.images[0].url}
-                author={book.author}
-                rating={book.rating}
-              />
-            ))}
+          <div>
+            <Heading
+              size={{
+                base: 'md',
+                lg: 'lg',
+              }}
+            >
+              Reading:
+            </Heading>
+            <SimpleGrid
+              mt="3"
+              columns={{
+                base: 2,
+                lg: 3,
+              }}
+              spacing="6"
+            >
+              {readingBooksResponse.data?.data.map((book: Book) => (
+                <BookItem
+                  key={book.id}
+                  name={book.name}
+                  imageSrc={book.images[0].url}
+                  author={book.author}
+                  rating={book.rating}
+                />
+              ))}
+            </SimpleGrid>
           </div>
 
-          <Typography variant="h4" gutterBottom>
-            Todos los libros
-          </Typography>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-2">
-            {allBooksResponse.data?.data.map((book: Book) => (
-              <BookItem
-                key={book.id}
-                name={book.name}
-                imageSrc={book.images[0].url}
-                author={book.author}
-                rating={book.rating}
-              />
-            ))}
+          <div>
+            <Heading
+              size={{
+                base: 'md',
+                lg: 'lg',
+              }}
+            >
+              All:
+            </Heading>
+            <SimpleGrid
+              mt="3"
+              columns={{
+                base: 2,
+                lg: 3,
+              }}
+              spacing="6"
+            >
+              {allBooksResponse.data?.data.map((book: Book) => (
+                <BookItem
+                  key={book.id}
+                  name={book.name}
+                  imageSrc={book.images[0].url}
+                  author={book.author}
+                  rating={book.rating}
+                />
+              ))}
+            </SimpleGrid>
           </div>
-        </article>
+        </VStack>
       </Container>
     </MainLayout>
   )
