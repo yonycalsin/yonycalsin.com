@@ -1,3 +1,7 @@
+import * as React from 'react'
+import { AiFillStar } from 'react-icons/ai'
+import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
+
 interface BookItemProps {
   name: string
   imageSrc: string
@@ -9,15 +13,16 @@ export function BookItem(props: BookItemProps) {
   const { name, imageSrc, author, rating } = props
 
   return (
-    <div>
-      <div className="mb-1">
-        <img src={imageSrc} alt={name} className="w-full rounded-md" />
-      </div>
+    <VStack alignItems="flex-start" spacing="2">
       <div>
-        <h5 className="mb-1">{name}</h5>
-        <p className="mb-1 text-gray-400">{author}</p>
-        <span className="text-sm">(Rating {rating})</span>
+        <Image src={imageSrc} alt={name} w="full" borderRadius="md" />
       </div>
-    </div>
+      <Heading size="md">{name}</Heading>
+      <Text>{author}</Text>
+      <HStack alignItems="center" fontSize="sm">
+        <AiFillStar />
+        <Text>Rating {rating}</Text>
+      </HStack>
+    </VStack>
   )
 }
