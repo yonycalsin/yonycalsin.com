@@ -8,6 +8,7 @@
 - **Component Library**: [Chakra UI](https://chakra-ui.com/)
 - **UI Component Explorer**: [Storybook 6](https://storybook.js.org/)
 - **Form Library**: [React Hook Form](https://react-hook-form.com/)
+- **Testing**: [Jest](https://jestjs.io/) - [Testing Library](https://testing-library.com/) - [Cypress](https://www.cypress.io/)
 
 ## Requirements
 
