@@ -5,6 +5,9 @@ import { analyticsEvents } from '~/analytics/events'
 import { analytics } from '~/analytics/google-analytics'
 import { socialLinks } from '~/utils/constants'
 
+/**
+ * @deprecated this component will be remove in the future
+ */
 export const FloatSocials = () => {
   const onEventClick = (social: string) => {
     analytics.event({

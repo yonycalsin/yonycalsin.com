@@ -16,6 +16,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  ignorePatterns: ['!.storybook'],
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     '@next/next/no-img-element': 'off',
