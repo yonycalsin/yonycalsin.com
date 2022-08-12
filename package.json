@@ -10,7 +10,7 @@
     "boot": "run-s clean build start",
     "build": "pnpm exec next build",
     "check:format": "pnpm run prettier --list-different",
-    "clean": "pnpm exec rimraf -rf .next .contentlayer .vercel",
+    "clean": "pnpm exec rimraf -rf .next .contentlayer .vercel coverage storybook-build",
     "contentlayer:build": "pnpm exec contentlayer build",
     "dev": " pnpm exec next dev",
     "fetch:submodules": "pnpm run script:run scripts/fetch-private-submodules/index.ts",
