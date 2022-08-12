@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Container, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
-import { BookItem } from '~/components/books/book-item'
 import { MainLayout } from '~/layouts'
 import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
+import { BookItem } from '~/screens/books/components/book-item/book-item'
 
 export function BooksScreen() {
   const allBooksResponse = useQuery<BookQueryWithMeta>(['/books'], {

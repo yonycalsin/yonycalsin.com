@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Container, Divider, Heading, Text, VStack } from '@chakra-ui/react'
 
-import BlogPostList from '~/components/blog-post-list/blog-post-list'
 import { MainLayout } from '~/layouts'
 import type { Blog } from '~/lib/contentlayer-data/blog'
 
@@ -26,7 +25,8 @@ export function BlogScreen(props: BlogScreenProps) {
         <Divider />
 
         <VStack mt="2" alignItems="flex-start">
-          <BlogPostList posts={posts} />
+          {JSON.stringify(posts)}
+          {/* <BlogPostList posts={posts} /> */}
         </VStack>
       </Container>
     </MainLayout>

@@ -3,10 +3,11 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
 
-import { ProjectCard } from '~/components/projects/components/project-card/project-card'
 import { SectionHeader } from '~/components/section/section-header'
 import { QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
 import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
+
+import { ProjectCard } from './project-card'
 
 export function PinnedProjects() {
   const queryResult = useQuery<IProjectQueryWithMeta>(QUERY_KEY_PINNED_PROJECTS, {

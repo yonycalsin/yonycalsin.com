@@ -1,8 +1,8 @@
-import { Container } from '@chakra-ui/react'
+import * as React from 'react'
+import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import { Achievements } from '~/components/achievements'
-import { Typography } from '~/components/typography/typography'
 import { MainLayout } from '~/layouts'
 import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
 import { queryKeys } from '~/utils/constants'
@@ -17,14 +17,10 @@ function AchievementsScreen() {
   return (
     <MainLayout>
       <Container maxW="container.md" as="main" py="10">
-        <header>
-          <Typography variant="h2" gutterBottom fontWeight="extrabold">
-            Logros ({achievementsData.length})
-          </Typography>
-          <Typography gutterBottom>
-            En esta página le mostraré todos los logros que he conseguido a lo largo de mi carrera.
-          </Typography>
-        </header>
+        <VStack as="header" mb="6">
+          <Heading>Achievements ({achievementsData.length})</Heading>
+          <Text>All the achievements I&apos;ve achieved along my career.</Text>
+        </VStack>
         <Achievements achievements={achievementsData} />
       </Container>
     </MainLayout>

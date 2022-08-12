@@ -6,6 +6,9 @@ export interface ExternalAnchorProps extends LinkProps {
   children: React.ReactNode
 }
 
+/**
+ * @author yonycalsin
+ */
 export function ExternalAnchor(props: ExternalAnchorProps) {
   const { children, ...restProps } = props
 
