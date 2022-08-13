@@ -20,11 +20,7 @@ function RoundedImage(props: ImageProps) {
 
 function ZoomImage(props: any) {
   return (
-    <Zoom
-      wrapStyle={{
-        marginTop: '1.25rem',
-      }}
-    >
+    <Zoom>
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <img {...props} />
     </Zoom>
