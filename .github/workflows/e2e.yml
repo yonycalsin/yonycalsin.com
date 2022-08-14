@@ -39,6 +39,9 @@ jobs:
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           APP_ENV: development
+          REST_API_URL: https://api.yonycalsin.com
+          REST_API_MOCKING: true
+          DEBUG: api:*
           FF_BOOKS: false
           FF_BLOG: false
           FF_PROJECTS: false
