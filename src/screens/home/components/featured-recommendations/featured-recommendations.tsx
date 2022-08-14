@@ -16,7 +16,7 @@ export function FeaturedRecommendations() {
 
   return (
     <Box py="3">
-      <SectionHeader title="Recomendaciones" />
+      <SectionHeader title="Recommendations" />
       {/* TODO: use a padding or margin instead of this */}
       <Box py="3" />
       <Recommendations recommendations={recommendations} />

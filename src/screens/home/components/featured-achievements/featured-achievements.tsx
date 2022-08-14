@@ -16,8 +16,8 @@ export function FeaturedAchievements() {
 
   return (
     <Box py="3">
-      <SectionHeader title="Logros">
-        <Text mt="3">Logros destacados que he conseguido a lo largo de mi carrera.</Text>
+      <SectionHeader title="Achievements">
+        <Text mt="3">Featured achievements that I have achieved along my career.</Text>
       </SectionHeader>
       <br />
       <Achievements achievements={achievements} />

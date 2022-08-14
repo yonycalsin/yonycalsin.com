@@ -17,8 +17,8 @@ export function BookItem(props: BookItemProps) {
       <div>
         <Image src={imageSrc} alt={name} w="full" borderRadius="md" />
       </div>
-      <Heading size="md">{name}</Heading>
-      <Text>{author}</Text>
+      <Heading size="sm">{name}</Heading>
+      <Text fontSize="sm">{author}</Text>
       <HStack alignItems="center" fontSize="sm">
         <AiFillStar />
         <Text>Rating {rating}</Text>

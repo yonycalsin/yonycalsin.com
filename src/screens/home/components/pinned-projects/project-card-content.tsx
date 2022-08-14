@@ -29,7 +29,7 @@ export function ProjectCardContent(props: ProjectCardContentProps) {
               colorScheme="primary"
               rightIcon={<MdLaunch />}
             >
-              Ver Proyecto
+              See project
             </Button>
           </VStack>
         </MotionBox>

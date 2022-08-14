@@ -18,8 +18,8 @@ export function PinnedProjects() {
 
   return (
     <Box py="3">
-      <SectionHeader title="Proyectos fijados" actionLabel="Ver más" actionComponent={Link} actionHref="/projects">
-        <Text mt="3">Aqui algunos de mis proyectos destacados</Text>
+      <SectionHeader title="Featured Projects" actionLabel="See more" actionComponent={Link} actionHref="/projects">
+        <Text mt="3">List of some featured projects.</Text>
       </SectionHeader>
       <br />
       <SimpleGrid

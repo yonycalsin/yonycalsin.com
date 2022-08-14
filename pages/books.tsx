@@ -15,7 +15,7 @@ interface BooksPageProps {
 function BooksPage() {
   return (
     <>
-      <Meta title="Libros" />
+      <Meta title="Books" />
       <BooksScreen />
     </>
   )

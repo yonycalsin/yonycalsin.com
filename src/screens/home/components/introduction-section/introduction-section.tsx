@@ -16,26 +16,26 @@ export function IntroductionSection() {
   return (
     <VStack spacing="6" alignItems="flex-start" py="3">
       <Heading as="h1" size="lg" fontWeight="extrabold">
-        Hola, soy Yony Calsin.
+        Hi, I&rsquo;m Yony Calsin.
       </Heading>
       <Text lineHeight="7">
-        Soy desarrollador de software. Trabajo en{' '}
-        <ExternalAnchor href="https://www.linkedin.com/company/riqra/mycompany/">Riqra</ExternalAnchor> como Full Stack
-        React/Node Engineer.
+        I&rsquo;m a software developer from <b>Perú</b>. I work at{' '}
+        <ExternalAnchor href="https://www.linkedin.com/company/making-sense-llc">Making Sense</ExternalAnchor> as a{' '}
+        <b>Frontend Developer.</b>
       </Text>
       <HStack>
         <Button
           as="a"
-          href={socialLinks.TWITTER}
+          href={socialLinks.LINKEDIN}
           target="_blank"
           rel="noreferrer"
-          leftIcon={<TiSocialTwitter />}
+          leftIcon={<TiSocialLinkedin />}
           rightIcon={<BiLinkExternal />}
           variant="ghost"
-          colorScheme="twitter"
+          colorScheme="linkedin"
           size={socialButtonSize}
         >
-          Twitter
+          Linkedin
         </Button>
         <Button
           as="a"
@@ -52,16 +52,16 @@ export function IntroductionSection() {
         </Button>
         <Button
           as="a"
-          href={socialLinks.LINKEDIN}
+          href={socialLinks.TWITTER}
           target="_blank"
           rel="noreferrer"
-          leftIcon={<TiSocialLinkedin />}
+          leftIcon={<TiSocialTwitter />}
           rightIcon={<BiLinkExternal />}
           variant="ghost"
-          colorScheme="linkedin"
+          colorScheme="twitter"
           size={socialButtonSize}
         >
-          Linkedin
+          Twitter
         </Button>
       </HStack>
     </VStack>

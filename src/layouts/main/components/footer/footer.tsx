@@ -5,7 +5,7 @@ export function Footer() {
   const backgroundColor = useColorModeValue('gray.50', 'gray.900')
 
   return (
-    <Box as="footer" bg={backgroundColor} py="6">
+    <Box as="footer" bg={backgroundColor} py="12">
       <Container maxW="container.md">
         <VStack>
           <Text fontWeight="bold">Created By Yony Calsin</Text>

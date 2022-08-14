@@ -15,7 +15,7 @@ export interface AchievementsPageProps {
 function AchievementsPage() {
   return (
     <>
-      <Meta title="Logros" notRobots />
+      <Meta title="Achievements" notRobots />
       <AchievementsScreen />
     </>
   )
