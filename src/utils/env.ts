@@ -4,6 +4,7 @@ const env = {
   IS_ENV_DEV: process.env.NODE_ENV === 'development',
   IS_ENV_PROD: process.env.NODE_ENV === 'production',
   REST_API_URL: process.env.REST_API_URL,
+  REST_API_MOCKING: process.env.REST_API_MOCKING ? JSON.parse(process.env.REST_API_MOCKING) : null,
 
   /**
    * Feature Flags

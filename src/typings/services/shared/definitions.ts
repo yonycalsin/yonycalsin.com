@@ -14,10 +14,10 @@ export interface ServerListPaginationResponse {
 export interface ServerListResponse<T> {
   data: T[]
   meta: ServerListPaginationResponse
-  error: ServerErrorResponse
+  error: ServerErrorResponse | null
 }
 
 export interface ServerResponse<T> {
   data: T
-  error: ServerErrorResponse
+  error: ServerErrorResponse | null
 }

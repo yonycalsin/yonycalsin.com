@@ -27,13 +27,13 @@ function BlogSlugPage(props: BlogSlugPageProps) {
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   const queryClient = new QueryClient()
 
-  const posts = await queryClient.fetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
+  const postsResponse = await queryClient.fetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
     staleTime: Infinity,
   })
 
   return {
     fallback: false,
-    paths: posts.data.map(post => ({
+    paths: postsResponse.data.map(post => ({
       params: {
         slug: post.slug,
       },
@@ -50,11 +50,11 @@ export async function getStaticProps(
 
   const postSlug = (params?.slug ?? '') as string
 
-  const response = await queryClient.fetchQuery([blogApiEndpoints.POST(postSlug)], () => getPostApi(postSlug), {
+  const postResponse = await queryClient.fetchQuery([blogApiEndpoints.POST(postSlug)], () => getPostApi(postSlug), {
     staleTime: Infinity,
   })
 
-  if (!response.data) {
+  if (!postResponse.data) {
     return {
       notFound: true,
     }
@@ -62,7 +62,7 @@ export async function getStaticProps(
 
   return {
     props: {
-      post: response.data,
+      post: postResponse.data,
     },
     revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }

@@ -17,6 +17,12 @@ import Features from '~/utils/features-flags'
 import '~/assets/styles/index.css'
 import 'prism-theme-night-owl/build/style.css'
 
+if (env.REST_API_MOCKING) {
+  import('~/mock-server').then(result => {
+    result.initMocks()
+  })
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
