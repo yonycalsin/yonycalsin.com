@@ -17,7 +17,7 @@ interface ProjectsPageProps {
 function ProjectsPage() {
   return (
     <>
-      <Meta title="Proyectos" notRobots />
+      <Meta title="Projects" notRobots />
       <ProjectsScreen />
     </>
   )

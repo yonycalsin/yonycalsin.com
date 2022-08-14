@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Box, Container, Divider, Heading, Link, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
+import RouterLink from 'next/link'
 
 import { MainLayout } from '~/layouts'
 import { getPostsApi } from '~/services/blog/posts'
@@ -19,18 +20,18 @@ export function BlogScreen() {
         <VStack spacing="6" mb="6">
           <Heading>Posts ({posts.length})</Heading>
           <Text>
-            Tutoriales, artículos técnicos, fragmentos, materiales de referencia y todos los recursos relacionados con
-            el desarrollo que he escrito.
+            Tutorials, tricks, personal articles, technical articles, fragments, reference resources and all resources
+            related to the software development.
           </Text>
         </VStack>
-
         <Divider />
-
         <VStack mt="2" alignItems="flex-start">
           {posts.map(post => (
-            <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <Box>{post.title}</Box>
-            </Link>
+            <RouterLink href={`/blog/${post.slug}`} key={post.slug}>
+              <Link>
+                <Box>{post.title}</Box>
+              </Link>
+            </RouterLink>
           ))}
         </VStack>
       </Container>

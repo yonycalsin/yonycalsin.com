@@ -20,13 +20,13 @@ export function ProjectsScreen() {
       <Container maxW="container.md" as="main" py="10">
         <VStack alignItems="flex-start" mb="10" spacing="6">
           <Heading as="h1" fontWeight="extrabold">
-            Proyectos ({projects.length})
+            Projects ({projects.length})
           </Heading>
 
           <Text>
-            Aqui algunos de mis proyectos destacados. Véalos todos{' '}
+            Let me show you some of my projects. See all of them{' '}
             <Link color="primary.500" fontWeight="bold" href={socialLinks.GITHUB} target="blank">
-              en mi GitHub
+              on my GitHub
             </Link>
             .
           </Text>

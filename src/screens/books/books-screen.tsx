@@ -19,18 +19,10 @@ export function BooksScreen() {
         <VStack alignItems="flex-start" spacing="6">
           <header>
             <Heading>Books</Heading>
-            <Text mt="3">This page contains the books I have been.</Text>
+            <Text mt="3">This page contains the books I have read along of my life.</Text>
           </header>
-
           <div>
-            <Heading
-              size={{
-                base: 'md',
-                lg: 'lg',
-              }}
-            >
-              Reading:
-            </Heading>
+            <Heading size="md">Reading:</Heading>
             <SimpleGrid
               mt="3"
               columns={{
@@ -52,14 +44,7 @@ export function BooksScreen() {
           </div>
 
           <div>
-            <Heading
-              size={{
-                base: 'md',
-                lg: 'lg',
-              }}
-            >
-              All:
-            </Heading>
+            <Heading size="md">All:</Heading>
             <SimpleGrid
               mt="3"
               columns={{

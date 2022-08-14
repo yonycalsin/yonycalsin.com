@@ -19,7 +19,7 @@ function AchievementsScreen() {
       <Container maxW="container.md" as="main" py="10">
         <VStack as="header" mb="6">
           <Heading>Achievements ({achievementsData.length})</Heading>
-          <Text>All the achievements I&apos;ve achieved along my career.</Text>
+          <Text>This page contains all the achievements I&apos;ve achieved along my career.</Text>
         </VStack>
         <Achievements achievements={achievementsData} />
       </Container>
