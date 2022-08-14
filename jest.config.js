@@ -16,7 +16,6 @@ const customJestConfig = {
     // Optionals
     '^~/server/(.*)$': '<rootDir>/server/$1',
     '^~/data/(.*)$': '<rootDir>/data/$1',
-    '^~/contentlayer/generated$': '<rootDir>/.contentlayer/generated',
   },
   testEnvironment: 'jest-environment-jsdom',
 }

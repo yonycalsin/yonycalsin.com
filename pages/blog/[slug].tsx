@@ -1,12 +1,16 @@
 import * as React from 'react'
+import { QueryClient } from '@tanstack/react-query'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 
 import { Meta } from '~/components/meta'
-import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import { BlogPostScreen } from '~/screens/blog-post'
+import { getPostApi, getPostsApi } from '~/services/blog/posts'
+import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
+import type { PostResponsePayload } from '~/typings/services'
+import { timings } from '~/utils/constants'
 
 interface BlogSlugPageProps {
-  post: Blog
+  post: PostResponsePayload
 }
 
 function BlogSlugPage(props: BlogSlugPageProps) {
@@ -20,10 +24,16 @@ function BlogSlugPage(props: BlogSlugPageProps) {
   )
 }
 
-export function getStaticPaths(): GetStaticPathsResult {
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  const queryClient = new QueryClient()
+
+  const posts = await queryClient.fetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
+    staleTime: Infinity,
+  })
+
   return {
     fallback: false,
-    paths: allBlogs.map(post => ({
+    paths: posts.data.map(post => ({
       params: {
         slug: post.slug,
       },
@@ -31,14 +41,20 @@ export function getStaticPaths(): GetStaticPathsResult {
   }
 }
 
-export function getStaticProps(
+export async function getStaticProps(
   context: GetStaticPropsContext<{ slug: string }, PreviewData>,
-): GetStaticPropsResult<BlogSlugPageProps> {
+): Promise<GetStaticPropsResult<BlogSlugPageProps>> {
   const { params } = context
 
-  const post = allBlogs.find(post => post.slug === params?.slug)
+  const queryClient = new QueryClient()
 
-  if (!post) {
+  const postSlug = (params?.slug ?? '') as string
+
+  const response = await queryClient.fetchQuery([blogApiEndpoints.POST(postSlug)], () => getPostApi(postSlug), {
+    staleTime: Infinity,
+  })
+
+  if (!response.data) {
     return {
       notFound: true,
     }
@@ -46,8 +62,9 @@ export function getStaticProps(
 
   return {
     props: {
-      post,
+      post: response.data,
     },
+    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 
