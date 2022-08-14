@@ -1,4 +1,4 @@
-name: End-to-end tests
+name: E2E Tests
 
 on: [push]
 
@@ -28,22 +28,30 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          pnpm install
 
-      - name: E2E Testing
-        uses: cypress-io/github-action@v2
+          pnpm exec cypress install
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
+          browser: chrome
           install: false
           command: pnpm run test:e2e
+          component: false
         env:
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           APP_ENV: development
+          REST_API_URL: https://api.yonycalsin.com
+          REST_API_MOCKING: true
+          DEBUG: api:*
           FF_BOOKS: false
           FF_BLOG: false
           FF_PROJECTS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npx cypress info
+      - run: pnpm exec cypress info
 
       - run: node -p 'os.cpus()'

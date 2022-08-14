@@ -5,6 +5,7 @@ module.exports = {
     APP_ENV: process.env.APP_ENV,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
     REST_API_URL: process.env.REST_API_URL,
+    REST_API_MOCKING: process.env.REST_API_MOCKING,
     FF_RESUME: process.env.FF_RESUME,
     FF_BLOG: process.env.FF_BLOG,
     FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,
