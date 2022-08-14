@@ -35,14 +35,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Checkout submodules
-        env:
-          CI_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-        run: |
-          sed -i -e "s/https:\/\/github.com/https:\/\/$CI_USER_TOKEN@github.com/" ./.gitmodules
-
-          git submodule update --init --recursive
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
