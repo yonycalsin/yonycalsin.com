@@ -4,7 +4,7 @@
 - **Data-Fetching Library**: [React Query](https://react-query.tanstack.com/)
 - **Databases** (REST API): [Notion](https://www.notion.so/) - [PlanetScale](https://planetscale.com/)
 - **Deployment**: [Vercel](https://vercel.com)
-- **Content**: [MDX](https://github.com/mdx-js/mdx) - [Contentlayer](https://www.contentlayer.dev/docs)
+- **Content**: [MDX](https://github.com/mdx-js/mdx)
 - **Component Library**: [Chakra UI](https://chakra-ui.com/)
 - **UI Component Explorer**: [Storybook 6](https://storybook.js.org/)
 - **Form Library**: [React Hook Form](https://react-hook-form.com/)

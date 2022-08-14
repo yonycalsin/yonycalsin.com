@@ -1,32 +1,37 @@
+import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
-import { allBlogs, Blog } from '~/lib/contentlayer-data/blog'
 import { BlogScreen } from '~/screens/blog'
+import { getPostsApi } from '~/services/blog/posts'
+import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
+import { timings } from '~/utils/constants'
 
 interface BlogPageProps {
-  allPosts: Blog[]
+  dehydratedState: DehydratedState
 }
 
-function BlogPage(props: BlogPageProps) {
-  const { allPosts } = props
-
+function BlogPage() {
   return (
     <>
       <Meta title="Blog" />
-      <BlogScreen posts={allPosts} />
+      <BlogScreen />
     </>
   )
 }
 
-export function getStaticProps(): GetStaticPropsResult<BlogPageProps> {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const allPosts = allBlogs.map(({ body, ...post }) => post) as Blog[]
+export async function getStaticProps(): Promise<GetStaticPropsResult<BlogPageProps>> {
+  const queryClient = new QueryClient()
+
+  await queryClient.prefetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
+    staleTime: Infinity,
+  })
 
   return {
     props: {
-      allPosts,
+      dehydratedState: dehydrate(queryClient),
     },
+    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

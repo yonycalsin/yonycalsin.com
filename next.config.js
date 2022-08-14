@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { withContentlayer } = require('next-contentlayer')
-
 /** @type {import('next').NextConfig} */
-module.exports = withContentlayer({
+module.exports = {
   reactStrictMode: true,
   env: {
     APP_ENV: process.env.APP_ENV,
@@ -38,4 +35,4 @@ module.exports = withContentlayer({
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
-})
+}

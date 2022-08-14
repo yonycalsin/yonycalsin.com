@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Badge, Box, Text, useColorModeValue } from '@chakra-ui/react'
 import nextBase64 from 'next-base64'
-import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import MDXComponents from '~/components/mdx-components'
+import { useMDXComponent } from '~/hooks/useMDXComponent'
 import type { ISnippet } from '~/module-types/api-rest/snippets'
 import { getRandomBadgeColors } from '~/utils/get-random-colors'
 
