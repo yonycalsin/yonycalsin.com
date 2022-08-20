@@ -36,6 +36,8 @@ describe('Achievements', () => {
 
     expect(title).toBeInTheDocument()
 
+    expect(title).toHaveStyleRule('font-weight', 'bold')
+
     expect(view.container).toMatchSnapshot()
   })
 })
