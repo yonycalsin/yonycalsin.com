@@ -1,6 +1,6 @@
 const fonts = {
-  heading: `"Sofia Pro", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-  body: `"Sofia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  heading: `"Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif`,
+  body: `"Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif`,
   mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
 }
 
