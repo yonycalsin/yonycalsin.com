@@ -26,6 +26,7 @@ specifiers:
   '@types/nprogress': 0.2.0
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
+  '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.33.0
   '@typescript-eslint/parser': 5.33.0
   '@yonycalsin/eslint-plugin-import-sort': 1.0.7
@@ -129,6 +130,7 @@ devDependencies:
   '@types/nprogress': 0.2.0
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
+  '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.33.0_njno5y7ry2l2lcmiu4tywxkwnq
   '@typescript-eslint/parser': 5.33.0_qugx7qdu5zevzvxaiqyxfiwquq
   '@yonycalsin/eslint-plugin-import-sort': 1.0.7_eslint@8.21.0

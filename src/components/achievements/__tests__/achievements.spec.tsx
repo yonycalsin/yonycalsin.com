@@ -1,5 +1,3 @@
-import '@testing-library/jest-dom'
-
 import { render, screen } from '@testing-library/react'
 import dayjs from 'dayjs'
 import timezone from 'dayjs/plugin/timezone'
@@ -34,7 +32,9 @@ describe('Achievements', () => {
       />,
     )
 
-    screen.getByText(/Revelation of the year - 2022/)
+    const title = screen.getByText(/Revelation of the year - 2022/)
+
+    expect(title).toBeInTheDocument()
 
     expect(view.container).toMatchSnapshot()
   })
