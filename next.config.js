@@ -19,20 +19,6 @@ module.exports = {
     FF_FAQ: process.env.FF_FAQ,
   },
   swcMinify: true,
-  async rewrites() {
-    return [
-      {
-        source: '/resume/preview',
-        destination: '/resumes/2021-11-22T00-17-12.292Z.pdf',
-        has: [
-          {
-            type: 'cookie',
-            key: '_guest-session-token-v1.0.0',
-          },
-        ],
-      },
-    ]
-  },
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
