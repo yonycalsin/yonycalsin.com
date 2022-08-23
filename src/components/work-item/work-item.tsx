@@ -5,7 +5,7 @@ import { FiGithub } from 'react-icons/fi'
 import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
-import type { IProjectType } from '~/module-types/api-rest/projects'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 import { dateFormats } from '~/utils/constants'
 import { getRandomBadgeColors } from '~/utils/get-random-colors'
 import normalizeDisplayUrl from '~/utils/normalize-display-url'
@@ -14,7 +14,7 @@ import { getWorkItemColors, WorkItemIcon } from './components'
 
 export interface WorkItemProps {
   title: string
-  type: IProjectType
+  type: ProjectResponsePayload['type']
   description: string
   webHref?: string | null
   repositoryHref?: string | null

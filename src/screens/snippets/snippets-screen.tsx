@@ -2,16 +2,20 @@ import * as React from 'react'
 import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
-import { QUERY_KEY_SNIPPETS } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'
-import type { ISnippetQueryWithMeta } from '~/module-types/api-rest/snippets'
+import { getAllSnippets } from '~/services/snippet/snippets'
+import { snippetApiEndpoints } from '~/services/snippet/utils/snippet-api-endpoints'
+import type { ServerListResponse } from '~/typings/services'
+import type { SnippetResponsePayload } from '~/typings/services/snippet/snippets'
 
 import { SnippetCard } from './components/snippet-card'
 
 export function SnippetsScreen() {
-  const queryResult = useQuery<ISnippetQueryWithMeta>(QUERY_KEY_SNIPPETS, {
-    staleTime: Infinity,
-  })
+  const queryResult = useQuery<ServerListResponse<SnippetResponsePayload>>(
+    [snippetApiEndpoints.ALL_SNIPPETS],
+    () => getAllSnippets(),
+    { staleTime: Infinity },
+  )
 
   const snippetsData = queryResult.data?.data ?? []
 

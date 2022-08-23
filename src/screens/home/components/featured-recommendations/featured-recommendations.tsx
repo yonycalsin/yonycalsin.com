@@ -4,13 +4,17 @@ import { useQuery } from '@tanstack/react-query'
 
 import { Recommendations } from '~/components/recommendations'
 import { SectionHeader } from '~/components/section/section-header'
-import { QUERY_KEY_FEATURED_RECOMMENDATIONS } from '~/constants/query-keys'
-import type { IRecommendationQueryWithMeta } from '~/module-types/api-rest/recommendations'
+import { getFeaturedRecommendations } from '~/services/recommendation/recomendations'
+import { recommendationApiEndpoints } from '~/services/recommendation/utils/recomendation-api-endpoints'
+import type { ServerListResponse } from '~/typings/services'
+import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
 
 export function FeaturedRecommendations() {
-  const queryResult = useQuery<IRecommendationQueryWithMeta>(QUERY_KEY_FEATURED_RECOMMENDATIONS, {
-    staleTime: Infinity,
-  })
+  const queryResult = useQuery<ServerListResponse<RecommendationResponsePayload>>(
+    [recommendationApiEndpoints.FEATURED_RECOMMENDATIONS],
+    () => getFeaturedRecommendations(),
+    { staleTime: Infinity },
+  )
 
   const recommendations = queryResult.data?.data ?? []
 

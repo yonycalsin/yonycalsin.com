@@ -4,12 +4,12 @@ import { Box, HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 import { getWorkItemColors, getWorkItemIcon } from '~/components/work-item/components'
-import type { IProject } from '~/module-types/api-rest/projects'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 
 export interface ProjectCardButtonProps {
   isOpen: boolean
   onToggle: () => void
-  project: IProject
+  project: ProjectResponsePayload
 }
 
 export function ProjectCardButton(props: ProjectCardButtonProps) {

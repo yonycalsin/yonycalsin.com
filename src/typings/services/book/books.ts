@@ -1,4 +1,4 @@
-export interface Book {
+export interface BookResponsePayload {
   id: string
   name: string
   rating: number
@@ -12,13 +12,4 @@ export interface Book {
   }[]
   createdAt: string
   updatedAt: string
-}
-
-export interface BookQueryWithMeta {
-  data: Book[]
-  meta: PaginationMeta
-}
-
-export interface BookQueryWithData {
-  data: Book
 }

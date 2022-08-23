@@ -38,7 +38,6 @@
     ]
   },
   "dependencies": {
-    "@chaitin/querystring": "1.1.0",
     "@chakra-ui/react": "2.2.6",
     "@emotion/react": "11.10.0",
     "@emotion/styled": "11.10.0",
@@ -81,6 +80,7 @@
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "14.4.3",
     "@types/debug": "4.1.7",
+    "@types/gtag.js": "0.0.10",
     "@types/jest": "28.1.6",
     "@types/lodash": "4.14.182",
     "@types/ms": "0.7.31",

@@ -3,15 +3,24 @@ import { Container, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import { MainLayout } from '~/layouts'
-import type { Book, BookQueryWithMeta } from '~/module-types/api-rest/books'
 import { BookItem } from '~/screens/books/components/book-item/book-item'
+import { getAllBooks, getReadingBooks } from '~/services/book/books'
+import { bookApiEndpoints } from '~/services/book/utils/book-api-endpoints'
+import type { ServerListResponse } from '~/typings/services'
+import type { BookResponsePayload } from '~/typings/services/book/books'
 
 export function BooksScreen() {
-  const allBooksResponse = useQuery<BookQueryWithMeta>(['/books'], {
-    staleTime: Infinity,
-  })
+  const allBooksResponse = useQuery<ServerListResponse<BookResponsePayload>>(
+    [bookApiEndpoints.ALL_BOOKS],
+    () => getAllBooks(),
+    { staleTime: Infinity },
+  )
 
-  const readingBooksResponse = useQuery<BookQueryWithMeta>(['/books', { status: 'Reading' }], { staleTime: Infinity })
+  const readingBooksResponse = useQuery<ServerListResponse<BookResponsePayload>>(
+    [bookApiEndpoints.READING_BOOKS],
+    () => getReadingBooks(),
+    { staleTime: Infinity },
+  )
 
   return (
     <MainLayout>
@@ -31,7 +40,7 @@ export function BooksScreen() {
               }}
               spacing="6"
             >
-              {readingBooksResponse.data?.data.map((book: Book) => (
+              {readingBooksResponse.data?.data.map((book: BookResponsePayload) => (
                 <BookItem
                   key={book.id}
                   name={book.name}
@@ -53,7 +62,7 @@ export function BooksScreen() {
               }}
               spacing="6"
             >
-              {allBooksResponse.data?.data.map((book: Book) => (
+              {allBooksResponse.data?.data.map((book: BookResponsePayload) => (
                 <BookItem
                   key={book.id}
                   name={book.name}

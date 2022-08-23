@@ -1,19 +1,22 @@
 import * as React from 'react'
-import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
-import { createQueryFn } from '~/clients/query-client'
 import { Meta } from '~/components/meta'
-import { QUERY_KEY_FEATURED_RECOMMENDATIONS, QUERY_KEY_PINNED_PROJECTS } from '~/constants/query-keys'
-import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
-import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
-import type { IRecommendationQueryWithMeta } from '~/module-types/api-rest/recommendations'
+import { NUMERICS } from '~/constants/numerics'
 import { HomeScreen } from '~/screens/home'
-import { queryKeys, timings } from '~/utils/constants'
-
-interface HomePageProps {
-  dehydratedState: DehydratedState
-}
+import { getFeaturedAchievements } from '~/services/achievement/achievements'
+import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
+import { getPinnedProjects } from '~/services/project/projects'
+import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
+import { getFeaturedRecommendations } from '~/services/recommendation/recomendations'
+import { recommendationApiEndpoints } from '~/services/recommendation/utils/recomendation-api-endpoints'
+import type { HomePageProps } from '~/typings/pages/home'
+import type { ServerListResponse } from '~/typings/services'
+import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
+import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
+import { timings } from '~/utils/constants'
 
 function HomePage() {
   return (
@@ -28,22 +31,28 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
 
-  await queryClient.prefetchQuery<IAchievementQueryWithMeta>(queryKeys.FEATURED_ACHIEVEMENTS, {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<ServerListResponse<AchievementResponsePayload>>(
+    [achievementApiEndpoints.FEATURED_ACHIEVEMENTS],
+    () => getFeaturedAchievements(),
+    { staleTime: Infinity },
+  )
 
-  await queryClient.prefetchQuery<IRecommendationQueryWithMeta>(QUERY_KEY_FEATURED_RECOMMENDATIONS, {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<ServerListResponse<RecommendationResponsePayload>>(
+    [recommendationApiEndpoints.FEATURED_RECOMMENDATIONS],
+    () => getFeaturedRecommendations(),
+    { staleTime: Infinity },
+  )
 
-  await queryClient.prefetchQuery<IProjectQueryWithMeta>(QUERY_KEY_PINNED_PROJECTS, {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<ServerListResponse<ProjectResponsePayload>>(
+    [projectApiEndpoints.PINNED_PROJECTS],
+    () => getPinnedProjects(),
+    { staleTime: Infinity },
+  )
 
   return {
     props: {

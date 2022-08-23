@@ -1,4 +1,4 @@
-export interface ISnippet {
+export interface SnippetResponsePayload {
   title: string
   description: string
   slug: string
@@ -13,13 +13,4 @@ export interface ISnippet {
   tags: string[]
   createdAt: string
   updatedAt: string
-}
-
-export interface ISnippetQueryWithMeta {
-  data: ISnippet[]
-  meta: PaginationMeta
-}
-
-export interface ISnippetQueryWithData {
-  data: ISnippet
 }

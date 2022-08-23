@@ -1,16 +1,16 @@
 import * as React from 'react'
-import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
-import { createQueryFn } from '~/clients/query-client'
 import { Meta } from '~/components/meta'
-import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
+import { NUMERICS } from '~/constants/numerics'
 import AchievementsScreen from '~/screens/achievements'
-import { queryKeys, timings } from '~/utils/constants'
-
-export interface AchievementsPageProps {
-  dehydratedState: DehydratedState
-}
+import { getAllAchievements } from '~/services/achievement/achievements'
+import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
+import type { AchievementsPageProps } from '~/typings/pages/achievements'
+import type { ServerListResponse } from '~/typings/services'
+import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
+import { timings } from '~/utils/constants'
 
 function AchievementsPage() {
   return (
@@ -25,14 +25,16 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<Achievement
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
 
-  await queryClient.prefetchQuery<IAchievementQueryWithMeta>(queryKeys.PUBLISHED_ACHIEVEMENTS, {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<ServerListResponse<AchievementResponsePayload>>(
+    [achievementApiEndpoints.ALL_ACHIEVEMENTS],
+    () => getAllAchievements(),
+    { staleTime: Infinity },
+  )
 
   return {
     props: {

@@ -4,11 +4,11 @@ import nextBase64 from 'next-base64'
 
 import MDXComponents from '~/components/mdx-components'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
-import type { ISnippet } from '~/module-types/api-rest/snippets'
+import type { SnippetResponsePayload } from '~/typings/services/snippet/snippets'
 import { getRandomBadgeColors } from '~/utils/get-random-colors'
 
 export interface SnippetCardProps {
-  snippetData: ISnippet
+  snippetData: SnippetResponsePayload
 }
 
 export function SnippetCard(props: SnippetCardProps) {

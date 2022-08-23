@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Link, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
-import type { IRecommendation } from '~/module-types/api-rest/recommendations'
+import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
 
 export interface RecommendationProps {
-  recommendation: IRecommendation
+  recommendation: RecommendationResponsePayload
 }
 
 export function Recommendation(props: RecommendationProps) {

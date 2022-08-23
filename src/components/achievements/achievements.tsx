@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { VStack } from '@chakra-ui/react'
 
-import type { IAchievement } from '~/module-types/api-rest/achievements'
+import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
 
 import { Achievement } from './components/achievement'
 
 export interface AchievementsProps {
-  achievements: IAchievement[]
+  achievements: AchievementResponsePayload[]
 }
 
 export function Achievements(props: AchievementsProps) {

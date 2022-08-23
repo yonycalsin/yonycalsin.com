@@ -3,15 +3,19 @@ import { Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import { WorkItem } from '~/components/work-item/work-item'
-import { QUERY_KEY_PROJECTS } from '~/constants/query-keys'
 import { MainLayout } from '~/layouts'
-import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
+import { getAllProjects } from '~/services/project/projects'
+import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
+import type { ServerListResponse } from '~/typings/services'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 import { socialLinks } from '~/utils/constants'
 
 export function ProjectsScreen() {
-  const queryResult = useQuery<IProjectQueryWithMeta>(QUERY_KEY_PROJECTS, {
-    staleTime: Infinity,
-  })
+  const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(
+    [projectApiEndpoints.ALL_PROJECTS],
+    () => getAllProjects(),
+    { staleTime: Infinity },
+  )
 
   const projects = queryResult.data?.data ?? []
 
