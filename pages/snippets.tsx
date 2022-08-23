@@ -1,16 +1,16 @@
 import * as React from 'react'
-import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
-import { createQueryFn } from '~/clients/query-client'
 import { Meta } from '~/components/meta'
-import { QUERY_KEY_SNIPPETS } from '~/constants/query-keys'
+import { NUMERICS } from '~/constants/numerics'
 import { SnippetsScreen } from '~/screens/snippets'
+import { getAllSnippets } from '~/services/snippet/snippets'
+import { snippetApiEndpoints } from '~/services/snippet/utils/snippet-api-endpoints'
+import type { SnippetsPageProps } from '~/typings/pages/snippets'
+import type { ServerListResponse } from '~/typings/services'
+import type { SnippetResponsePayload } from '~/typings/services/snippet/snippets'
 import { timings } from '~/utils/constants'
-
-interface SnippetsPageProps {
-  dehydratedState: DehydratedState
-}
 
 function SnippetsPage() {
   return (
@@ -25,14 +25,16 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<SnippetsPag
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
 
-  await queryClient.prefetchQuery(QUERY_KEY_SNIPPETS, {
-    staleTime: Infinity,
-  })
+  await queryClient.prefetchQuery<ServerListResponse<SnippetResponsePayload>>(
+    [snippetApiEndpoints.ALL_SNIPPETS],
+    () => getAllSnippets(),
+    { staleTime: Infinity },
+  )
 
   return {
     props: {

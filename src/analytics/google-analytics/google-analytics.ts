@@ -4,7 +4,7 @@ import env from '~/utils/env'
 const googleAnalytics = {
   // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
   pageView: (url: string) => {
-    if (!isProduction) {
+    if (!isProduction || !env.GOOGLE_ANALYTICS_ID) {
       return
     }
 

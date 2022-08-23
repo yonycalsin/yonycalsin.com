@@ -2,13 +2,13 @@ import * as React from 'react'
 import { useColorModeValue } from '@chakra-ui/react'
 
 import { MotionBox } from '~/components/motion'
-import type { IProject } from '~/module-types/api-rest/projects'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 
 import { ProjectCardButton } from './project-card-button'
 import { ProjectCardContent } from './project-card-content'
 
 export interface ProjectCardProps {
-  project: IProject
+  project: ProjectResponsePayload
 }
 
 export function ProjectCard(props: ProjectCardProps) {

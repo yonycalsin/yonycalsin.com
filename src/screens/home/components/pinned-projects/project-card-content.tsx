@@ -4,11 +4,11 @@ import { Button, Text, VStack } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 
 import { MotionBox } from '~/components/motion'
-import type { IProject } from '~/module-types/api-rest/projects'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 
 export interface ProjectCardContentProps {
   isOpen: boolean
-  project: IProject
+  project: ProjectResponsePayload
 }
 
 export function ProjectCardContent(props: ProjectCardContentProps) {

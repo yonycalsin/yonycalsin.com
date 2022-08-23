@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': 7.18.10
-  '@chaitin/querystring': 1.1.0
   '@chakra-ui/react': 2.2.6
   '@dotenv-cloak/cli': 2.0.0
   '@emotion/jest': 11.10.0
@@ -20,6 +19,7 @@ specifiers:
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': 14.4.3
   '@types/debug': 4.1.7
+  '@types/gtag.js': 0.0.10
   '@types/jest': 28.1.6
   '@types/lodash': 4.14.182
   '@types/ms': 0.7.31
@@ -82,7 +82,6 @@ specifiers:
   webpack: 5.74.0
 
 dependencies:
-  '@chaitin/querystring': 1.1.0
   '@chakra-ui/react': 2.2.6_jqesa6ebkoapfeenc26drtibfe
   '@emotion/react': 11.10.0_msmmgljd7hl2w2irtggflhmema
   '@emotion/styled': 11.10.0_5sec57kzpgkzooe4crua5kfcly
@@ -125,6 +124,7 @@ devDependencies:
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.4.3_wl4iynrlixafokvgqnhzlvigei
   '@types/debug': 4.1.7
+  '@types/gtag.js': 0.0.10
   '@types/jest': 28.1.6
   '@types/lodash': 4.14.182
   '@types/ms': 0.7.31
@@ -1612,10 +1612,6 @@ packages:
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
-
-  /@chaitin/querystring/1.1.0:
-    resolution: {integrity: sha512-3YXFzaJxX7dnCPaxWnfaw5/A99qVrj92lTLVdJyqvXd0LY4I4t2ql3LKIayj/eNNssX2lKuFzmqBh7pV/VyNBA==}
-    dev: false
 
   /@chakra-ui/accordion/2.0.8_uou7hfcfnvpdvo2j7lwjxvb2ny:
     resolution: {integrity: sha512-KpZbVwPwoYuLUrWsxE85SsBv5c/jXLUEVTginR+7Z3bqjvLfP5cI0BlzzTq0KJgikdmhXoLnscookyZAKv1ixA==}
@@ -4937,6 +4933,10 @@ packages:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
       '@types/node': 18.7.3
+    dev: true
+
+  /@types/gtag.js/0.0.10:
+    resolution: {integrity: sha512-98Hy7woUb3jMAMXkZQwfIOYNyfxmI0+U4m0PpCGdnd/FHk0tDpQFCqgXdNkdEoXsKkcGya/2Gew1cAJjKJspVw==}
     dev: true
 
   /@types/hast/2.3.4:

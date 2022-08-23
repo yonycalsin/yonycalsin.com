@@ -1,23 +1,23 @@
+import * as React from 'react'
 import { Container } from '@chakra-ui/react'
 import { QueryClient } from '@tanstack/react-query'
 import { map } from 'lodash'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import nextBase64 from 'next-base64'
 
-import { createQueryFn } from '~/clients/query-client'
 import MDXComponents from '~/components/mdx-components'
 import { Meta } from '~/components/meta'
-import { QUERY_KEY_PAGES } from '~/constants/query-keys'
+import { NUMERICS } from '~/constants/numerics'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
 import { MainLayout } from '~/layouts'
-import type { IPage, IPageQueryWithData, IPageQueryWithMeta } from '~/module-types/api-rest/pages'
+import { getAllPages, getPage } from '~/services/page/pages'
+import { pageApiEndpoints } from '~/services/page/utils/page-api-endpoints'
+import type { PagePageProps, PagePageQueryParams } from '~/typings/pages/pages'
+import type { ServerListResponse, ServerResponse } from '~/typings/services'
+import type { PageResponsePayload } from '~/typings/services/page/pages'
 import { timings } from '~/utils/constants'
 
-interface PageSLugPageProps {
-  page: IPage
-}
-
-function PageSLugPage(props: PageSLugPageProps) {
+function PagePage(props: PagePageProps) {
   const { page } = props
 
   const BodyComponent = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(page.body.code))))
@@ -34,18 +34,20 @@ function PageSLugPage(props: PageSLugPageProps) {
   )
 }
 
-export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+export async function getStaticPaths(): Promise<GetStaticPathsResult<PagePageQueryParams>> {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
 
-  const pages = await queryClient.fetchQuery<IPageQueryWithMeta>(QUERY_KEY_PAGES, {
-    staleTime: Infinity,
-  })
+  const pages = await queryClient.fetchQuery<ServerListResponse<PageResponsePayload>>(
+    [pageApiEndpoints.ALL_PAGES],
+    () => getAllPages(),
+    { staleTime: Infinity },
+  )
 
   return {
     fallback: false,
@@ -60,23 +62,31 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
 }
 
 export async function getStaticProps(
-  context: GetStaticPropsContext<{ slug: string[] }>,
-): Promise<GetStaticPropsResult<PageSLugPageProps>> {
+  context: GetStaticPropsContext<PagePageQueryParams>,
+): Promise<GetStaticPropsResult<PagePageProps>> {
   const { params } = context
 
   const pageSlug = params?.slug.join('/')
 
+  if (!pageSlug) {
+    return {
+      notFound: true,
+    }
+  }
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
 
-  const page = await queryClient.fetchQuery<IPageQueryWithData>([`/pages/${pageSlug}`], {
-    staleTime: Infinity,
-  })
+  const page = await queryClient.fetchQuery<ServerResponse<PageResponsePayload>>(
+    [pageApiEndpoints.PAGE(pageSlug)],
+    () => getPage(pageSlug),
+    { staleTime: Infinity },
+  )
 
   if (!page.data) {
     return {
@@ -92,4 +102,4 @@ export async function getStaticProps(
   }
 }
 
-export default PageSLugPage
+export default PagePage

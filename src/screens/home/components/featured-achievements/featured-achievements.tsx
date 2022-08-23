@@ -4,13 +4,17 @@ import { useQuery } from '@tanstack/react-query'
 
 import { Achievements } from '~/components/achievements'
 import { SectionHeader } from '~/components/section/section-header'
-import type { IAchievementQueryWithMeta } from '~/module-types/api-rest/achievements'
-import { queryKeys } from '~/utils/constants'
+import { getFeaturedAchievements } from '~/services/achievement/achievements'
+import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
+import type { ServerListResponse } from '~/typings/services'
+import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
 
 export function FeaturedAchievements() {
-  const queryResult = useQuery<IAchievementQueryWithMeta>(queryKeys.FEATURED_ACHIEVEMENTS, {
-    staleTime: Infinity,
-  })
+  const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
+    [achievementApiEndpoints.FEATURED_ACHIEVEMENTS],
+    () => getFeaturedAchievements(),
+    { staleTime: Infinity },
+  )
 
   const achievements = queryResult.data?.data ?? []
 

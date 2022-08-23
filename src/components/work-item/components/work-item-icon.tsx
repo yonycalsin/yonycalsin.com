@@ -4,27 +4,27 @@ import { FaHandsHelping, FaNpm } from 'react-icons/fa'
 import { MdWorkOutline } from 'react-icons/md'
 import { Icon } from '@chakra-ui/react'
 
-import { IProjectType } from '~/module-types/api-rest/projects'
+import { ProjectResponsePayload, ProjectTypeResponsePayload } from '~/typings/services/project/projects'
 
 export interface WorkItemIconProps {
-  projectType: IProjectType
+  projectType: ProjectResponsePayload['type']
 }
 
-export function getWorkItemIcon(projectType: IProjectType) {
+export function getWorkItemIcon(projectType: ProjectResponsePayload['type']) {
   switch (projectType) {
-    case IProjectType.PROJECT: {
+    case ProjectTypeResponsePayload.PROJECT: {
       return MdWorkOutline
     }
 
-    case IProjectType.PACKAGE: {
+    case ProjectTypeResponsePayload.PACKAGE: {
       return FaNpm
     }
 
-    case IProjectType.CONTRIBUTION: {
+    case ProjectTypeResponsePayload.CONTRIBUTION: {
       return FaHandsHelping
     }
 
-    case IProjectType.TEMPLATE: {
+    case ProjectTypeResponsePayload.TEMPLATE: {
       return CgTemplate
     }
 
@@ -34,30 +34,30 @@ export function getWorkItemIcon(projectType: IProjectType) {
   }
 }
 
-export function getWorkItemColors(projectType: IProjectType) {
+export function getWorkItemColors(projectType: ProjectResponsePayload['type']) {
   switch (projectType) {
-    case IProjectType.PROJECT: {
+    case ProjectTypeResponsePayload.PROJECT: {
       return {
         fill: 'secondary.900',
         backgroundColor: 'secondary.100',
       }
     }
 
-    case IProjectType.PACKAGE: {
+    case ProjectTypeResponsePayload.PACKAGE: {
       return {
         fill: 'error.900',
         backgroundColor: 'error.100',
       }
     }
 
-    case IProjectType.CONTRIBUTION: {
+    case ProjectTypeResponsePayload.CONTRIBUTION: {
       return {
         fill: 'success.900',
         backgroundColor: 'success.100',
       }
     }
 
-    case IProjectType.TEMPLATE: {
+    case ProjectTypeResponsePayload.TEMPLATE: {
       return {
         fill: 'purple.900',
         backgroundColor: 'purple.100',

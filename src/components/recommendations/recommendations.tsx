@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { SimpleGrid } from '@chakra-ui/react'
 
-import type { IRecommendation } from '~/module-types/api-rest/recommendations'
+import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
 
 import { Recommendation } from './components/recommendation'
 
 export interface RecommendationsProps {
-  recommendations: IRecommendation[]
+  recommendations: RecommendationResponsePayload[]
 }
 
 export function Recommendations(props: RecommendationsProps) {

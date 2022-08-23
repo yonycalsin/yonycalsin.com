@@ -21,20 +21,6 @@ export const cookieNames = {
   GUEST_SESSION_TOKEN: '_guest-session-token-v1.0.0',
 }
 
-/**
- * @deprecated
- * @todo move these keys to src/constants/query-keys.ts
- */
-export const queryKeys = {
-  FEATURED_ACHIEVEMENTS: [
-    '/achievements',
-    {
-      isFeatured: true,
-    },
-  ],
-  PUBLISHED_ACHIEVEMENTS: ['/achievements'],
-}
-
 export const timings = {
   REVALIDATE_STATIC_PAGES_TIME: ms('30m') / 1000, // in seconds
 }

@@ -1,18 +1,17 @@
 import * as React from 'react'
-import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
-import { createQueryFn } from '~/clients/query-client'
 import { Meta } from '~/components/meta'
-import { QUERY_KEY_PROJECTS } from '~/constants/query-keys'
-import type { IProjectQueryWithMeta } from '~/module-types/api-rest/projects'
+import { NUMERICS } from '~/constants/numerics'
 import { ProjectsScreen } from '~/screens/projects'
+import { getAllProjects } from '~/services/project/projects'
+import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
+import type { ProjectsPageProps } from '~/typings/pages/projects'
+import type { ServerListResponse } from '~/typings/services'
+import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 import { timings } from '~/utils/constants'
 import env from '~/utils/env'
-
-interface ProjectsPageProps {
-  dehydratedState: DehydratedState
-}
 
 function ProjectsPage() {
   return (
@@ -27,7 +26,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<ProjectsPag
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        queryFn: createQueryFn(),
+        retry: NUMERICS.RETRY_QUERY,
       },
     },
   })
@@ -35,9 +34,11 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<ProjectsPag
   const hasWorkProjects = !!env.FF_PROJECTS
 
   if (hasWorkProjects) {
-    await queryClient.prefetchQuery<IProjectQueryWithMeta>(QUERY_KEY_PROJECTS, {
-      staleTime: Infinity,
-    })
+    await queryClient.prefetchQuery<ServerListResponse<ProjectResponsePayload>>(
+      [projectApiEndpoints.ALL_PROJECTS],
+      () => getAllProjects(),
+      { staleTime: Infinity },
+    )
   }
 
   return {

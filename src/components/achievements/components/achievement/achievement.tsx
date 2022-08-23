@@ -2,13 +2,13 @@ import * as React from 'react'
 import { Grid, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
-import type { IAchievement } from '~/module-types/api-rest/achievements'
+import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
 import { dateFormats } from '~/utils/constants'
 
 import { AchievementTypeIllustration } from './achievement-type-illustration'
 
 export interface AchievementProps {
-  achievement: IAchievement
+  achievement: AchievementResponsePayload
 }
 
 export function Achievement(props: AchievementProps) {

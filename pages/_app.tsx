@@ -7,9 +7,10 @@ import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
 import { analytics } from '~/analytics/google-analytics'
-import { createQueryFn } from '~/clients/query-client'
 import { NightModeButton } from '~/components/night-mode-button'
+import { NUMERICS } from '~/constants/numerics'
 import { mainTheme } from '~/themes/main'
+import type { MyAppPageProps } from '~/typings/pages/app'
 import { isProduction } from '~/utils'
 import env from '~/utils/env'
 import Features from '~/utils/features-flags'
@@ -23,7 +24,9 @@ if (env.REST_API_MOCKING) {
   })
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp(props: MyAppPageProps) {
+  const { Component, pageProps } = props
+
   const router = useRouter()
 
   const features = React.useMemo(() => {
@@ -142,7 +145,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            queryFn: createQueryFn(),
+            refetchOnWindowFocus: false,
+            retry: NUMERICS.RETRY_QUERY,
           },
         },
       }),

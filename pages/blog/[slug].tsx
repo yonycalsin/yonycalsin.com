@@ -3,17 +3,14 @@ import { QueryClient } from '@tanstack/react-query'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 
 import { Meta } from '~/components/meta'
+import { NUMERICS } from '~/constants/numerics'
 import { BlogPostScreen } from '~/screens/blog-post'
 import { getPostApi, getPostsApi } from '~/services/blog/posts'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { PostResponsePayload } from '~/typings/services'
+import type { BlogPostPageProps, BlogPostPageQueryParams } from '~/typings/pages/blog-post'
 import { timings } from '~/utils/constants'
 
-interface BlogSlugPageProps {
-  post: PostResponsePayload
-}
-
-function BlogSlugPage(props: BlogSlugPageProps) {
+function BlogSlugPage(props: BlogPostPageProps) {
   const { post } = props
 
   return (
@@ -24,8 +21,14 @@ function BlogSlugPage(props: BlogSlugPageProps) {
   )
 }
 
-export async function getStaticPaths(): Promise<GetStaticPathsResult> {
-  const queryClient = new QueryClient()
+export async function getStaticPaths(): Promise<GetStaticPathsResult<BlogPostPageQueryParams>> {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: NUMERICS.RETRY_QUERY,
+      },
+    },
+  })
 
   const postsResponse = await queryClient.fetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
     staleTime: Infinity,
@@ -42,11 +45,17 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
 }
 
 export async function getStaticProps(
-  context: GetStaticPropsContext<{ slug: string }, PreviewData>,
-): Promise<GetStaticPropsResult<BlogSlugPageProps>> {
+  context: GetStaticPropsContext<BlogPostPageQueryParams, PreviewData>,
+): Promise<GetStaticPropsResult<BlogPostPageProps>> {
   const { params } = context
 
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: NUMERICS.RETRY_QUERY,
+      },
+    },
+  })
 
   const postSlug = (params?.slug ?? '') as string
 
