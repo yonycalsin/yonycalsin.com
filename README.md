@@ -2,7 +2,7 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Data-Fetching Library**: [React Query](https://react-query.tanstack.com/)
-- **Databases** (REST API): [Notion](https://www.notion.so/) - [PlanetScale](https://planetscale.com/)
+- **Databases** (REST API): [Notion](https://www.notion.so/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Content**: [MDX](https://github.com/mdx-js/mdx)
 - **Component Library**: [Chakra UI](https://chakra-ui.com/)
