@@ -3,7 +3,8 @@ const env = {
   GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   IS_ENV_DEV: process.env.NODE_ENV === 'development',
   IS_ENV_PROD: process.env.NODE_ENV === 'production',
-  REST_API_URL: process.env.REST_API_URL,
+  REST_API_URL: process.env.REST_API_URL as string,
+  REST_API_PUBLIC_KEY: process.env.REST_API_PUBLIC_KEY as string,
   REST_API_MOCKING: process.env.REST_API_MOCKING ? JSON.parse(process.env.REST_API_MOCKING) : null,
 
   /**

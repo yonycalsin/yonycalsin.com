@@ -11,7 +11,7 @@ export async function getAllAchievements() {
     headers: defaultHeaders,
   })
 
-  const payload = formatResponse<ServerListResponse<AchievementResponsePayload>>(response)
+  const payload = await formatResponse<ServerListResponse<AchievementResponsePayload>>(response)
 
   return payload
 }

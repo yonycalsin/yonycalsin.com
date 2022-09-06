@@ -11,7 +11,7 @@ export async function getAllPages() {
     headers: defaultHeaders,
   })
 
-  const payload = formatResponse<ServerListResponse<PageResponsePayload>>(response)
+  const payload = await formatResponse<ServerListResponse<PageResponsePayload>>(response)
 
   return payload
 }
