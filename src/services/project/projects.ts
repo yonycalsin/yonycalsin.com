@@ -11,7 +11,7 @@ export async function getAllProjects() {
     headers: defaultHeaders,
   })
 
-  const payload = formatResponse<ServerListResponse<ProjectResponsePayload>>(response)
+  const payload = await formatResponse<ServerListResponse<ProjectResponsePayload>>(response)
 
   return payload
 }
