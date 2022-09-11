@@ -4,18 +4,18 @@ import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult,
 import { Meta } from '~/components/meta'
 import { NUMERICS } from '~/constants/numerics'
 import { BlogCategoryScreen } from '~/screens/blog-category'
-import { getCategoriesApi, getCategoryApi } from '~/services/blog'
+import { getCategoriesApi, getCategoryApi, getPostsApi } from '~/services/blog'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogCategoryPageProps, BlogCategoryPageQueryParams } from '~/typings/pages/blog-category'
 import { timings } from '~/utils/constants'
 
 function BlogCategoryPage(props: BlogCategoryPageProps) {
-  const { category } = props
+  const { category, posts } = props
 
   return (
     <>
       <Meta title={`${category.title} - Yony Calsin`} />
-      <BlogCategoryScreen category={category} />
+      <BlogCategoryScreen category={category} posts={posts} />
     </>
   )
 }
@@ -76,9 +76,16 @@ export async function getStaticProps(
     }
   }
 
+  const postsResponse = await queryClient.fetchQuery(
+    [blogApiEndpoints.POSTS, categorySlug],
+    () => getPostsApi({ filters: { category: [categorySlug] } }),
+    { staleTime: Infinity },
+  )
+
   return {
     props: {
       category: categoryResponse.data,
+      posts: postsResponse.data,
     },
     revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
   }

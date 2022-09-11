@@ -1,3 +1,7 @@
+export interface ListQueryParamsRequest<F> {
+  filters: F
+}
+
 export interface ServerErrorResponse {
   code: string
   message: string
