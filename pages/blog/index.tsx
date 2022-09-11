@@ -28,7 +28,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BlogPagePro
     },
   })
 
-  await queryClient.prefetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
+  await queryClient.prefetchQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
 

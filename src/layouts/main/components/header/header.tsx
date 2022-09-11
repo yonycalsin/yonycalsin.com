@@ -33,7 +33,6 @@ export const Header = () => {
             />
           </Link>
         </RouterLink>
-
         <HStack spacing="4">
           <RouterLink href="/projects" passHref>
             <Link color="primary.500" fontWeight="bold">
@@ -52,7 +51,6 @@ export const Header = () => {
               </Link>
             </RouterLink>
           </Flag>
-
           <Flag flagQuery={Features.USES}>
             <RouterLink href="/uses" passHref>
               <Link
@@ -68,7 +66,7 @@ export const Header = () => {
             </RouterLink>
           </Flag>
           <Flag flagQuery={Features.SNIPPETS}>
-            <RouterLink href="/snippets" passHref>
+            <RouterLink href="/blog/categories/snippet" passHref>
               <Link
                 color="primary.500"
                 fontWeight="bold"

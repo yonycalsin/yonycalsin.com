@@ -20,7 +20,7 @@ import { getPostsApi } from '~/services/blog/posts'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 
 export function BlogScreen() {
-  const getPostsResponse = useQuery([blogApiEndpoints.POSTS], getPostsApi, {
+  const getPostsResponse = useQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
 
