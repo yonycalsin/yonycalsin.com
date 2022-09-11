@@ -1,5 +1,17 @@
 import * as React from 'react'
-import { Box, Container, Divider, Heading, Link, Text, VStack } from '@chakra-ui/react'
+import { BsChevronCompactRight } from 'react-icons/bs'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Container,
+  Heading,
+  Link,
+  ListItem,
+  Text,
+  UnorderedList,
+  VStack,
+} from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import RouterLink from 'next/link'
 
@@ -16,23 +28,41 @@ export function BlogScreen() {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" as="main" py="10">
-        <VStack spacing="6" mb="6">
+      <Container maxW="container.md" py="6" pb="12">
+        <VStack
+          as="header"
+          alignItems="flex-start"
+          spacing={{
+            base: '2',
+            md: '5',
+          }}
+        >
+          <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
+            <BreadcrumbItem>
+              <RouterLink href="/" passHref>
+                <BreadcrumbLink>Home</BreadcrumbLink>
+              </RouterLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
           <Heading>Posts ({posts.length})</Heading>
           <Text>
             Tutorials, tricks, personal articles, technical articles, fragments, reference resources and all resources
             related to the software development.
           </Text>
         </VStack>
-        <Divider />
-        <VStack mt="2" alignItems="flex-start">
-          {posts.map(post => (
-            <RouterLink href={`/blog/${post.slug}`} key={post.slug}>
-              <Link>
-                <Box>{post.title}</Box>
-              </Link>
-            </RouterLink>
-          ))}
+        <VStack mt="6" alignItems="flex-start">
+          <UnorderedList>
+            {posts.map(post => (
+              <RouterLink href={`/blog/${post.slug}`} key={post.slug} passHref>
+                <Link>
+                  <ListItem>{post.title}</ListItem>
+                </Link>
+              </RouterLink>
+            ))}
+          </UnorderedList>
         </VStack>
       </Container>
     </MainLayout>

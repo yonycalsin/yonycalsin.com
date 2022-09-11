@@ -12,7 +12,7 @@ import type { AchievementResponsePayload } from '~/typings/services/achievement/
 function AchievementsScreen() {
   const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
     [achievementApiEndpoints.ALL_ACHIEVEMENTS],
-    () => getAllAchievements(),
+    getAllAchievements,
     { staleTime: Infinity },
   )
 

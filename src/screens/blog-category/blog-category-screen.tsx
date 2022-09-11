@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { BsChevronCompactRight } from 'react-icons/bs'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
@@ -8,17 +7,17 @@ import nextBase64 from 'next-base64'
 import MDXComponents from '~/components/mdx-components'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
 import { MainLayout } from '~/layouts'
-import type { PostResponsePayload } from '~/typings/services'
+import type { CategoryResponsePayload } from '~/typings/services'
 import { dateFormats } from '~/utils/constants'
 
-export interface BlogPostScreenProps {
-  post: PostResponsePayload
+export interface BlogCategoryScreenProps {
+  category: CategoryResponsePayload
 }
 
-export function BlogPostScreen(props: BlogPostScreenProps) {
-  const { post } = props
+export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
+  const { category } = props
 
-  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(post.body.code))))
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(category.body.code))))
 
   return (
     <MainLayout>
@@ -37,15 +36,23 @@ export function BlogPostScreen(props: BlogPostScreenProps) {
                 <BreadcrumbLink>Home</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
+            <BreadcrumbItem>
               <RouterLink href="/blog" passHref>
-                <BreadcrumbLink>Blog</BreadcrumbLink>
+                <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
+            <BreadcrumbItem>
+              <RouterLink href="/blog/categories" passHref>
+                <BreadcrumbLink href="/blog/categories">Categories</BreadcrumbLink>
+              </RouterLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink>{category.title}</BreadcrumbLink>
+            </BreadcrumbItem>
           </Breadcrumb>
-          <Heading>{post.title}</Heading>
+          <Heading>{category.title}</Heading>
           <Text textColor="gray" fontStyle="italic">
-            Last updated at {dayjs(post.updatedAt).format(dateFormats.HUMAN_DATE)}
+            Last updated at {dayjs(category.updatedAt).format(dateFormats.HUMAN_DATE)}
           </Text>
         </VStack>
         <Component components={MDXComponents} />
