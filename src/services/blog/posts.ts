@@ -1,11 +1,19 @@
-import type { PostResponsePayload, ServerListResponse, ServerResponse } from '~/typings/services'
+import type {
+  ListQueryParamsRequest,
+  PostListQueryParamsRequestPayload,
+  PostResponsePayload,
+  ServerListResponse,
+  ServerResponse,
+} from '~/typings/services'
 
-import { defaultHeaders, formatResponse } from '../shared'
+import { defaultHeaders, formatRequestUrl, formatResponse } from '../shared'
 
 import { blogApiEndpoints } from './utils/blog-api-endpoints'
 
-export async function getPostsApi() {
-  const response = await fetch(blogApiEndpoints.POSTS, {
+export async function getPostsApi(queryParams?: ListQueryParamsRequest<PostListQueryParamsRequestPayload>) {
+  const url = formatRequestUrl(blogApiEndpoints.POSTS, queryParams ?? {})
+
+  const response = await fetch(url, {
     method: 'GET',
     headers: defaultHeaders,
   })

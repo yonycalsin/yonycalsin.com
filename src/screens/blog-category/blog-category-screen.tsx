@@ -1,5 +1,16 @@
 import { BsChevronCompactRight } from 'react-icons/bs'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Container,
+  Heading,
+  Link,
+  ListItem,
+  Text,
+  UnorderedList,
+  VStack,
+} from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import RouterLink from 'next/link'
 import nextBase64 from 'next-base64'
@@ -7,15 +18,16 @@ import nextBase64 from 'next-base64'
 import MDXComponents from '~/components/mdx-components'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
 import { MainLayout } from '~/layouts'
-import type { CategoryResponsePayload } from '~/typings/services'
+import type { CategoryResponsePayload, PostResponsePayload } from '~/typings/services'
 import { dateFormats } from '~/utils/constants'
 
 export interface BlogCategoryScreenProps {
   category: CategoryResponsePayload
+  posts: PostResponsePayload[]
 }
 
 export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
-  const { category } = props
+  const { category, posts } = props
 
   const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(category.body.code))))
 
@@ -50,12 +62,21 @@ export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
               <BreadcrumbLink>{category.title}</BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
-          <Heading>{category.title}</Heading>
+          <Heading>Category: {category.title}</Heading>
           <Text textColor="gray" fontStyle="italic">
             Last updated at {dayjs(category.updatedAt).format(dateFormats.HUMAN_DATE)}
           </Text>
         </VStack>
         <Component components={MDXComponents} />
+        <UnorderedList mt="6">
+          {posts.map(post => (
+            <RouterLink href={`/blog/${post.slug}`} key={post.title} passHref>
+              <Link>
+                <ListItem>{post.title}</ListItem>
+              </Link>
+            </RouterLink>
+          ))}
+        </UnorderedList>
       </Container>
     </MainLayout>
   )

@@ -10,7 +10,7 @@ export function NotFoundScreen() {
       <Container maxW="container.md" as="main" py="12">
         <VStack spacing="12">
           <Heading>😢</Heading>
-          <Heading>Página no encontrada</Heading>
+          <Heading>Page not found</Heading>
           <Box
             display="flex"
             flexDirection={{
@@ -21,7 +21,7 @@ export function NotFoundScreen() {
           >
             <RouterLink href="/" passHref>
               <Button as="a" variant="link" colorScheme="primary">
-                Ir al inicio
+                Go to home
               </Button>
             </RouterLink>
             <Text
@@ -34,7 +34,7 @@ export function NotFoundScreen() {
             </Text>
             <RouterLink href="/me" passHref>
               <Button as="a" variant="link" colorScheme="primary">
-                Ir a acerca de mí
+                Go to about-me page
               </Button>
             </RouterLink>
             <Text
@@ -47,7 +47,7 @@ export function NotFoundScreen() {
             </Text>
             <RouterLink href="/projects" passHref>
               <Button as="a" variant="link" colorScheme="primary">
-                Ir a los proyectos
+                Go to projects page
               </Button>
             </RouterLink>
           </Box>

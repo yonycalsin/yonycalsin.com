@@ -30,7 +30,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<BlogPostPag
     },
   })
 
-  const postsResponse = await queryClient.fetchQuery([blogApiEndpoints.POSTS], getPostsApi, {
+  const postsResponse = await queryClient.fetchQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
 

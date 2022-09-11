@@ -11,3 +11,7 @@ export interface PostResponsePayload {
   createdAt: string
   updatedAt: string
 }
+
+export interface PostListQueryParamsRequestPayload {
+  category: string[]
+}
