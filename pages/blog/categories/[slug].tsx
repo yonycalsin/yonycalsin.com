@@ -7,7 +7,7 @@ import { BlogCategoryScreen } from '~/screens/blog-category'
 import { getCategoriesApi, getCategoryApi, getPostsApi } from '~/services/blog'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogCategoryPageProps, BlogCategoryPageQueryParams } from '~/typings/pages/blog-category'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function BlogCategoryPage(props: BlogCategoryPageProps) {
   const { category, posts } = props

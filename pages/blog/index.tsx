@@ -8,7 +8,7 @@ import { BlogScreen } from '~/screens/blog'
 import { getPostsApi } from '~/services/blog/posts'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogPageProps } from '~/typings/pages/blog'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function BlogPage() {
   return (

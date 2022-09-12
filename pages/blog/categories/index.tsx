@@ -8,7 +8,7 @@ import { getCategoriesApi } from '~/services/blog'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogCategoriesPageProps } from '~/typings/pages/blog-categories'
 import type { CategoryResponsePayload, ServerListResponse } from '~/typings/services'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function BlogCategoriesPage() {
   return (

@@ -8,7 +8,7 @@ import { BlogPostScreen } from '~/screens/blog-post'
 import { getPostApi, getPostsApi } from '~/services/blog/posts'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogPostPageProps, BlogPostPageQueryParams } from '~/typings/pages/blog-post'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function BlogSlugPage(props: BlogPostPageProps) {
   const { post } = props

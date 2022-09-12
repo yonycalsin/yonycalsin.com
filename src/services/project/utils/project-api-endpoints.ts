@@ -1,4 +1,4 @@
-import env from '~/utils/env'
+import env from '~/utils/constants/env'
 
 export const projectApiEndpoints = {
   ALL_PROJECTS: `${env.REST_API_URL}/projects`,

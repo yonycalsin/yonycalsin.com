@@ -10,7 +10,7 @@ import { achievementApiEndpoints } from '~/services/achievement/utils/achievemen
 import type { AchievementsPageProps } from '~/typings/pages/achievements'
 import type { ServerListResponse } from '~/typings/services'
 import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function AchievementsPage() {
   return (

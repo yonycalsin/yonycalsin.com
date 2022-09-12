@@ -8,7 +8,7 @@ import { getAllProjects } from '~/services/project/projects'
 import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
 import type { ServerListResponse } from '~/typings/services'
 import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { socialLinks } from '~/utils/constants'
+import { socialLinks } from '~/utils/constants/constants'
 
 export function ProjectsScreen() {
   const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(

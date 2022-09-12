@@ -4,7 +4,7 @@ import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/t
 import { Button, Heading, HStack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
 import { ExternalAnchor } from '~/components/external-anchor'
-import { socialLinks } from '~/utils/constants'
+import { socialLinks } from '~/utils/constants/constants'
 
 export function IntroductionSection() {
   const socialButtonSize = useBreakpointValue({

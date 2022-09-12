@@ -1,5 +1,5 @@
-import { isProduction } from '~/utils'
-import env from '~/utils/env'
+import env from '~/utils/constants/env'
+import isProduction from '~/utils/constants/is-production'
 
 const googleAnalytics = {
   // https://developers.google.com/analytics/devguides/collection/gtagjs/pages

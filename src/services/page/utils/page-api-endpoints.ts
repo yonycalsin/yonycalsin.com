@@ -1,4 +1,4 @@
-import env from '~/utils/env'
+import env from '~/utils/constants/env'
 
 export const pageApiEndpoints = {
   ALL_PAGES: `${env.REST_API_URL}/pages`,

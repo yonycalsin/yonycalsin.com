@@ -10,8 +10,8 @@ import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoi
 import type { ProjectsPageProps } from '~/typings/pages/projects'
 import type { ServerListResponse } from '~/typings/services'
 import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { timings } from '~/utils/constants'
-import env from '~/utils/env'
+import { timings } from '~/utils/constants/constants'
+import env from '~/utils/constants/env'
 
 function ProjectsPage() {
   return (

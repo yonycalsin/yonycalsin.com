@@ -15,7 +15,7 @@ import { pageApiEndpoints } from '~/services/page/utils/page-api-endpoints'
 import type { PagePageProps, PagePageQueryParams } from '~/typings/pages/pages'
 import type { ServerListResponse, ServerResponse } from '~/typings/services'
 import type { PageResponsePayload } from '~/typings/services/page/pages'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function PagePage(props: PagePageProps) {
   const { page } = props

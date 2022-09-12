@@ -6,7 +6,7 @@ import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } fro
 import dayjs from 'dayjs'
 
 import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { dateFormats } from '~/utils/constants'
+import { dateFormats } from '~/utils/constants/constants'
 import { getRandomBadgeColors } from '~/utils/get-random-colors'
 import normalizeDisplayUrl from '~/utils/normalize-display-url'
 

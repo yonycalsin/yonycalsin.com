@@ -10,7 +10,7 @@ import { bookApiEndpoints } from '~/services/book/utils/book-api-endpoints'
 import type { BooksPageProps } from '~/typings/pages/books'
 import type { ServerListResponse } from '~/typings/services'
 import type { BookResponsePayload } from '~/typings/services/book/books'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
 
 function BooksPage() {
   return (
