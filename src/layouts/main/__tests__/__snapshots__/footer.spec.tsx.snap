@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layouts / Main renders the layout footer 1`] = `
+.emotion-0 {
+  background: gray.50;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.emotion-1 {
+  max-width: container.md;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-2>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-3 {
+  font-weight: bold;
+}
+
+.emotion-4 {
+  color: gray.600;
+}
+
+<body>
+  <div>
+    <footer
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <div
+          class="chakra-stack emotion-2"
+        >
+          <p
+            class="chakra-text emotion-3"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-4"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+`;

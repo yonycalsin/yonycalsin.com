@@ -34,9 +34,11 @@ const customJestConfig = {
     '!src/**/*.stories.tsx',
     '!src/typings/**/*.*',
     '!src/themes/**/*.*',
+    '!src/screens/**/*.*',
     '!src/mock-server/**/*.*',
     '!src/services/**/*.*',
     '!src/assets/**/*.*',
+    '!src/utils/constants/*.*',
   ],
   transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 }

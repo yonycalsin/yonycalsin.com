@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Page Transaction wrappers a component with page-transaction correctly 1`] = `
+<body>
+  <div>
+    <div
+      style="opacity: 0; transform: translateY(8px) translateZ(0);"
+    >
+      <h1>
+        Content
+      </h1>
+    </div>
+  </div>
+</body>
+`;
