@@ -50,8 +50,6 @@ specifiers:
   is-ci-cli: 2.2.0
   jest: 28.1.3
   jest-environment-jsdom: 28.1.3
-  just-is-empty: 3.2.1
-  just-map-values: 3.1.1
   just-random: 3.1.1
   lint-staged: 13.0.3
   lodash: 4.17.21
@@ -78,7 +76,6 @@ specifiers:
   toggled: 2.1.0
   tsconfig-paths-webpack-plugin: 4.0.0
   typescript: 4.7.4
-  validate.js: 0.13.1
   wait-on: 6.0.1
   webpack: 5.74.0
 
@@ -90,8 +87,6 @@ dependencies:
   dayjs: 1.11.5
   debug: 4.3.4
   framer-motion: 7.1.0_biqbaboplfbrettd7655fr4n2y
-  just-is-empty: 3.2.1
-  just-map-values: 3.1.1
   just-random: 3.1.1
   lodash: 4.17.21
   ms: 2.1.3
@@ -108,7 +103,6 @@ dependencies:
   react-icons: 4.4.0_react@18.2.0
   react-medium-image-zoom: 5.0.1_biqbaboplfbrettd7655fr4n2y
   toggled: 2.1.0_react@18.2.0
-  validate.js: 0.13.1
 
 devDependencies:
   '@babel/core': 7.18.10
@@ -11237,14 +11231,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /just-is-empty/3.2.1:
-    resolution: {integrity: sha512-Es/0J1qVNmcT2O5TR4jQNc4R6kHl438BQJjyEsuXnQEQlix6gSmPU+JWbZDSSgN8hNBCoYpxCp2chls6iCtjhg==}
-    dev: false
-
-  /just-map-values/3.1.1:
-    resolution: {integrity: sha512-te7sWH0edcRLXCDLZu+kNr7mBPOBON4hTxnE6/pIWjUiyv08MvdTUo2Iw9nySwb5TfoMNb5ZdodER8RD1Zu5jA==}
-    dev: false
-
   /just-random/3.1.1:
     resolution: {integrity: sha512-nb9chl3E511Zu68G1EfC6jGh/aU0lojFOo7zaSEPznktuQhr8TkH4z7DyWebgwdLki8ekLOmzia3UTlv4zBWHQ==}
     dev: false
@@ -15601,10 +15587,6 @@ packages:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
     dev: true
-
-  /validate.js/0.13.1:
-    resolution: {integrity: sha512-PnFM3xiZ+kYmLyTiMgTYmU7ZHkjBZz2/+F0DaALc/uUtVzdCt1wAosvYJ5hFQi/hz8O4zb52FQhHZRC+uVkJ+g==}
-    dev: false
 
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
