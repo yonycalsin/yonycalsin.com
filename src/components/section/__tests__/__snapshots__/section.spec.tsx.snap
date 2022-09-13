@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Section renders an section 1`] = `
+<body>
+  <div>
+    <section
+      class="mt-6 md:mt-10"
+    >
+      <div>
+        Section Content
+      </div>
+    </section>
+  </div>
+</body>
+`;
