@@ -8,12 +8,12 @@ import { DefaultFeature, FeatureProvider } from 'toggled'
 
 import { analytics } from '~/analytics/google-analytics'
 import { NightModeButton } from '~/components/night-mode-button'
-import { NUMERICS } from '~/constants/numerics'
 import { mainTheme } from '~/themes/main'
 import type { MyAppPageProps } from '~/typings/pages/app'
 import env from '~/utils/constants/env'
 import Features from '~/utils/constants/features-flags'
 import isProduction from '~/utils/constants/is-production'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 import '~/assets/styles/index.css'
 import 'prism-theme-night-owl/build/style.css'

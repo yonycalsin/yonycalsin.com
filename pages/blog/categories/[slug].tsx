@@ -2,12 +2,12 @@ import { QueryClient } from '@tanstack/react-query'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { BlogCategoryScreen } from '~/screens/blog-category'
 import { getCategoriesApi, getCategoryApi, getPostsApi } from '~/services/blog'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogCategoryPageProps, BlogCategoryPageQueryParams } from '~/typings/pages/blog-category'
 import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function BlogCategoryPage(props: BlogCategoryPageProps) {
   const { category, posts } = props

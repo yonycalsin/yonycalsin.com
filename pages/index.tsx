@@ -3,7 +3,6 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { HomeScreen } from '~/screens/home'
 import { getFeaturedAchievements } from '~/services/achievement/achievements'
 import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
@@ -17,6 +16,7 @@ import type { AchievementResponsePayload } from '~/typings/services/achievement/
 import type { ProjectResponsePayload } from '~/typings/services/project/projects'
 import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
 import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function HomePage() {
   return (
