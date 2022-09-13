@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / ExternalAnchor renders an external anchor 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: primary.500;
+}
+
+.emotion-1 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: gray.700;
+}
+
+<body>
+  <div>
+    <span>
+      <a
+        class="chakra-link emotion-0"
+        d="inline-flex"
+        href="https://domain.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Go to home
+      </a>
+      <svg
+        class="chakra-icon emotion-1"
+        d="inline"
+        fill="none"
+        focusable="false"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="7"
+          x2="17"
+          y1="17"
+          y2="7"
+        />
+        <polyline
+          points="7 7 17 7 17 17"
+        />
+      </svg>
+    </span>
+  </div>
+</body>
+`;

@@ -8,6 +8,15 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
+  displayName: '@yonycalsin/yonycalsin.com',
+  //   coverageThreshold: {
+  //     global: {
+  //       statements: 80,
+  //       branches: 70,
+  //       functions: 75,
+  //       lines: 80,
+  //     },
+  //   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
@@ -15,10 +24,23 @@ const customJestConfig = {
 
     // Optionals
     '^~/server/(.*)$': '<rootDir>/server/$1',
-    '^~/data/(.*)$': '<rootDir>/data/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
   snapshotSerializers: ['@emotion/jest/serializer'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/index.{ts,tsx}',
+    '!src/**/*.stories.tsx',
+    '!src/typings/**/*.*',
+    '!src/themes/**/*.*',
+    '!src/screens/**/*.*',
+    '!src/mock-server/**/*.*',
+    '!src/services/**/*.*',
+    '!src/assets/**/*.*',
+    '!src/utils/constants/*.*',
+  ],
+  transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

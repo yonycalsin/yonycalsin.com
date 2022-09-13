@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hooks / useMDXComponent returns the mdx processed code 1`] = `
+<body>
+  <div />
+  <div>
+    <p>
+      Hello World
+    </p>
+  </div>
+</body>
+`;

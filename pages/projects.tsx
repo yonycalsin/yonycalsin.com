@@ -3,15 +3,15 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { ProjectsScreen } from '~/screens/projects'
 import { getAllProjects } from '~/services/project/projects'
 import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
 import type { ProjectsPageProps } from '~/typings/pages/projects'
 import type { ServerListResponse } from '~/typings/services'
 import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { timings } from '~/utils/constants'
-import env from '~/utils/env'
+import { timings } from '~/utils/constants/constants'
+import env from '~/utils/constants/env'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function ProjectsPage() {
   return (

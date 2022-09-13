@@ -13,6 +13,7 @@ export const NightModeButton = () => {
   return (
     <>
       <Box
+        role="button"
         as="button"
         position="fixed"
         left={{

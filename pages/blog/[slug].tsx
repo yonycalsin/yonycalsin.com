@@ -3,12 +3,12 @@ import { QueryClient } from '@tanstack/react-query'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { BlogPostScreen } from '~/screens/blog-post'
 import { getPostApi, getPostsApi } from '~/services/blog/posts'
 import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
 import type { BlogPostPageProps, BlogPostPageQueryParams } from '~/typings/pages/blog-post'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function BlogSlugPage(props: BlogPostPageProps) {
   const { post } = props

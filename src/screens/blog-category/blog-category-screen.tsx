@@ -19,7 +19,7 @@ import MDXComponents from '~/components/mdx-components'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
 import { MainLayout } from '~/layouts'
 import type { CategoryResponsePayload, PostResponsePayload } from '~/typings/services'
-import { dateFormats } from '~/utils/constants'
+import { dateFormats } from '~/utils/constants/constants'
 
 export interface BlogCategoryScreenProps {
   category: CategoryResponsePayload

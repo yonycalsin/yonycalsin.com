@@ -3,7 +3,7 @@ import { Container, Divider } from '@chakra-ui/react'
 import { useFlag } from 'toggled'
 
 import { MainLayout } from '~/layouts'
-import Features from '~/utils/features-flags'
+import Features from '~/utils/constants/features-flags'
 
 import { FeaturedRecommendations } from './components/featured-recommendations/featured-recommendations'
 import { IntroductionSection } from './components/introduction-section'

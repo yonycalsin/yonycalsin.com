@@ -3,7 +3,7 @@ import { Grid, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
 import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
-import { dateFormats } from '~/utils/constants'
+import { dateFormats } from '~/utils/constants/constants'
 
 import { AchievementTypeIllustration } from './achievement-type-illustration'
 

@@ -3,14 +3,14 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import AchievementsScreen from '~/screens/achievements'
 import { getAllAchievements } from '~/services/achievement/achievements'
 import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
 import type { AchievementsPageProps } from '~/typings/pages/achievements'
 import type { ServerListResponse } from '~/typings/services'
 import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function AchievementsPage() {
   return (

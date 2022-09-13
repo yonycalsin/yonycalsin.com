@@ -3,7 +3,7 @@ import { Link, VStack } from '@chakra-ui/react'
 
 import { analyticsEvents } from '~/analytics/events'
 import { analytics } from '~/analytics/google-analytics'
-import { socialLinks } from '~/utils/constants'
+import { socialLinks } from '~/utils/constants/constants'
 
 /**
  * @deprecated this component will be remove in the future

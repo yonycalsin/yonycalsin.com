@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / SectionHeader renders the section header 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-1 {
+  font-weight: medium;
+}
+
+<body>
+  <div>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <h2
+          class="chakra-heading emotion-1"
+        >
+          Customers
+        </h2>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Components / SectionHeader renders the section header with anchor 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-1 {
+  font-weight: medium;
+}
+
+<body>
+  <div>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <h2
+          class="chakra-heading emotion-1"
+        >
+          Customers
+        </h2>
+        <a
+          href="/customers"
+        >
+          See all
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Components / SectionHeader renders the section header with external anchor 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-1 {
+  font-weight: medium;
+}
+
+<body>
+  <div>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <h2
+          class="chakra-heading emotion-1"
+        >
+          Customers
+        </h2>
+        <a
+          href="/customers"
+          target="_blank"
+        >
+          See all
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+`;

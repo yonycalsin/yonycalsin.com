@@ -3,14 +3,14 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
 
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { BooksScreen } from '~/screens/books'
 import { getAllBooks, getReadingBooks } from '~/services/book/books'
 import { bookApiEndpoints } from '~/services/book/utils/book-api-endpoints'
 import type { BooksPageProps } from '~/typings/pages/books'
 import type { ServerListResponse } from '~/typings/services'
 import type { BookResponsePayload } from '~/typings/services/book/books'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function BooksPage() {
   return (

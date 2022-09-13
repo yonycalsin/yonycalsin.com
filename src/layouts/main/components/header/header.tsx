@@ -4,7 +4,7 @@ import Image from 'next/image'
 import RouterLink from 'next/link'
 import { Flag } from 'toggled'
 
-import Features from '~/utils/features-flags'
+import Features from '~/utils/constants/features-flags'
 
 export const Header = () => {
   const backgroundColor = useColorModeValue('white', 'gray.900')

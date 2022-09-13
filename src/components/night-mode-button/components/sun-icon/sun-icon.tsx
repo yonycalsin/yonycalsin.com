@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import { MOTION_TRANSITION, MOTION_WHILE_TYPE_VARIANT } from '~/constants/motion'
+import { MOTION_TRANSITION, MOTION_WHILE_TYPE_VARIANT } from '~/utils/constants/motion'
 
 export interface SunIconProps {
   className?: string

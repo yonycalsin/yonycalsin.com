@@ -7,7 +7,6 @@ import nextBase64 from 'next-base64'
 
 import MDXComponents from '~/components/mdx-components'
 import { Meta } from '~/components/meta'
-import { NUMERICS } from '~/constants/numerics'
 import { useMDXComponent } from '~/hooks/useMDXComponent'
 import { MainLayout } from '~/layouts'
 import { getAllPages, getPage } from '~/services/page/pages'
@@ -15,7 +14,8 @@ import { pageApiEndpoints } from '~/services/page/utils/page-api-endpoints'
 import type { PagePageProps, PagePageQueryParams } from '~/typings/pages/pages'
 import type { ServerListResponse, ServerResponse } from '~/typings/services'
 import type { PageResponsePayload } from '~/typings/services/page/pages'
-import { timings } from '~/utils/constants'
+import { timings } from '~/utils/constants/constants'
+import { NUMERICS } from '~/utils/constants/numerics'
 
 function PagePage(props: PagePageProps) {
   const { page } = props

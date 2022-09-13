@@ -1,4 +1,4 @@
-import env from '~/utils/env'
+import env from '~/utils/constants/env'
 
 export const blogApiEndpoints = {
   POST: (postSlug: string) => `${env.REST_API_URL}/blog/posts/${postSlug}`,
