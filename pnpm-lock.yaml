@@ -33,6 +33,7 @@ specifiers:
   '@yonycalsin/eslint-plugin-import-sort': 1.0.7
   '@yonycalsin/prettier-config-react-typescript': 1.0.1
   babel-loader: 8.2.5
+  cross-env: 7.0.3
   cypress: 10.4.0
   dayjs: 1.11.5
   debug: 4.3.4
@@ -138,6 +139,7 @@ devDependencies:
   '@yonycalsin/eslint-plugin-import-sort': 1.0.7_eslint@8.21.0
   '@yonycalsin/prettier-config-react-typescript': 1.0.1
   babel-loader: 8.2.5_xc6oct4hcywdrbo4ned6ytbybm
+  cross-env: 7.0.3
   cypress: 10.4.0
   eslint: 8.21.0
   eslint-config-next: 12.2.5_qugx7qdu5zevzvxaiqyxfiwquq
@@ -7289,6 +7291,14 @@ packages:
       ripemd160: 2.0.2
       safe-buffer: 5.2.1
       sha.js: 2.4.11
+    dev: true
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: true
 
   /cross-spawn/6.0.5:
