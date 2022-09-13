@@ -41,6 +41,7 @@ const customJestConfig = {
     '!src/utils/constants/*.*',
   ],
   transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
