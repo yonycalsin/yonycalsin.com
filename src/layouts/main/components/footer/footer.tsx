@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Box, Container, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
+import { CommandBarStartAction } from '~/components/command-bar'
+
 export function Footer() {
   const backgroundColor = useColorModeValue('gray.50', 'gray.900')
 
@@ -10,6 +12,7 @@ export function Footer() {
         <VStack>
           <Text fontWeight="bold">Created By Yony Calsin</Text>
           <Text textColor="gray.600">Built with Next.js, MDX, Chakra-Ui and Vercel</Text>
+          <CommandBarStartAction />
         </VStack>
       </Container>
     </Box>

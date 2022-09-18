@@ -3,6 +3,7 @@ import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
 import { Button, Heading, HStack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
+import { CommandBarStartAction } from '~/components/command-bar'
 import { ExternalAnchor } from '~/components/external-anchor'
 import { socialLinks } from '~/utils/constants/constants'
 
@@ -23,6 +24,7 @@ export function IntroductionSection() {
         <ExternalAnchor href="https://www.linkedin.com/company/making-sense-llc">Making Sense</ExternalAnchor> as a{' '}
         <b>Frontend Developer.</b>
       </Text>
+      <CommandBarStartAction />
       <HStack>
         <Button
           as="a"
