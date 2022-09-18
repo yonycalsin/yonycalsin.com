@@ -3,7 +3,8 @@ import { BiMoon } from 'react-icons/bi'
 import { BsToggles } from 'react-icons/bs'
 import { RiComputerLine } from 'react-icons/ri'
 import { useColorMode } from '@chakra-ui/react'
-import { Action, useRegisterActions } from '@chakra-ui-kbar/core'
+import type { Action } from '@chakra-ui-kbar/core'
+import { useRegisterActions } from '@chakra-ui-kbar/core'
 
 import { CommandBarSections } from './command-bar-utils'
 
