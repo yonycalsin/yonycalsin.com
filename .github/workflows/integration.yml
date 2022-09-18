@@ -13,6 +13,7 @@ jobs:
       matrix:
         node: ['16.14.0']
         os: [ubuntu-latest]
+        pnpm: [7.1.3]
 
     steps:
       - name: Setup Database with Mysql
@@ -38,7 +39,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7.1.3
+          version: ${{ matrix.pnpm }}
 
       - name: Setup Node.js (${{ matrix.node }}) environment
         uses: actions/setup-node@v3

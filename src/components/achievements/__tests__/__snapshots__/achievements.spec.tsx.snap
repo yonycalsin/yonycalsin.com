@@ -16,7 +16,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-0>*:not(style)~*:not(style) {
-  margin-top: 3px;
+  margin-top: var(--chakra-space-3);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   margin-bottom: 0px;
@@ -26,16 +26,18 @@ exports[`Achievements renders the achievements correctly 1`] = `
 
 .emotion-1 {
   display: grid;
-  grid-gap: 6px;
+  grid-gap: var(--chakra-space-6);
+  grid-template-columns: var(--yony-space-14) 1fr;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.emotion-1 gridTemplateColumns {
-  base: var(--yony-space-14) 1fr;
-  lg: var(--yony-space-20) 1fr var(--yony-space-24);
+@media screen and (min-width: 62em) {
+  .emotion-1 {
+    grid-template-columns: var(--yony-space-20) 1fr var(--yony-space-24);
+  }
 }
 
 .emotion-2 {
@@ -53,7 +55,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-2>*:not(style)~*:not(style) {
-  margin-top: 1px;
+  margin-top: var(--chakra-space-1);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   margin-bottom: 0px;
@@ -62,33 +64,37 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-3 {
-  font-weight: bold;
+  font-weight: var(--chakra-fontWeights-bold);
 }
 
 .emotion-4 {
-  font-size: sm;
+  font-size: var(--chakra-fontSizes-sm);
   color: gray;
 }
 
 .emotion-5 {
-  font-size: sm;
+  display: block;
+  font-size: var(--chakra-fontSizes-sm);
   font-style: italic;
 }
 
-.emotion-5 display {
-  base: block;
-  lg: none;
+@media screen and (min-width: 62em) {
+  .emotion-5 {
+    display: none;
+  }
 }
 
 .emotion-6 {
   font-style: italic;
-  font-size: sm;
-  font-weight: light;
+  font-size: var(--chakra-fontSizes-sm);
+  display: none;
+  font-weight: var(--chakra-fontWeights-light);
 }
 
-.emotion-6 display {
-  base: none;
-  lg: block;
+@media screen and (min-width: 62em) {
+  .emotion-6 {
+    display: block;
+  }
 }
 
 <div>
@@ -482,5 +488,9 @@ exports[`Achievements renders the achievements correctly 1`] = `
       </p>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

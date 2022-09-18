@@ -1,25 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / SectionHeader renders the section header 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: medium;
-}
-
 <body>
   <div>
     <div>
@@ -27,7 +8,7 @@ exports[`Components / SectionHeader renders the section header 1`] = `
         class="emotion-0"
       >
         <h2
-          class="chakra-heading emotion-1"
+          class="chakra-heading emotion-0"
         >
           Customers
         </h2>
@@ -38,25 +19,6 @@ exports[`Components / SectionHeader renders the section header 1`] = `
 `;
 
 exports[`Components / SectionHeader renders the section header with anchor 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: medium;
-}
-
 <body>
   <div>
     <div>
@@ -64,7 +26,7 @@ exports[`Components / SectionHeader renders the section header with anchor 1`] =
         class="emotion-0"
       >
         <h2
-          class="chakra-heading emotion-1"
+          class="chakra-heading emotion-0"
         >
           Customers
         </h2>
@@ -80,25 +42,6 @@ exports[`Components / SectionHeader renders the section header with anchor 1`] =
 `;
 
 exports[`Components / SectionHeader renders the section header with external anchor 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: medium;
-}
-
 <body>
   <div>
     <div>
@@ -106,7 +49,7 @@ exports[`Components / SectionHeader renders the section header with external anc
         class="emotion-0"
       >
         <h2
-          class="chakra-heading emotion-1"
+          class="chakra-heading emotion-0"
         >
           Customers
         </h2>

@@ -1,26 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / NightModeButton renders the moon icon 1`] = `
-.emotion-0 {
-  position: fixed;
-  z-index: sticky;
-}
-
-.emotion-0 left {
-  base: 4px;
-  md: 8px;
-}
-
-.emotion-0 top {
-  base: 20px;
-  md: 8px;
-}
-
-.emotion-0 fontSize {
-  base: 2xl;
-  md: 4xl;
-}
-
 <body>
   <div>
     <button
@@ -97,26 +77,6 @@ exports[`Components / NightModeButton renders the moon icon 1`] = `
 `;
 
 exports[`Components / NightModeButton renders the sun icon 1`] = `
-.emotion-0 {
-  position: fixed;
-  z-index: sticky;
-}
-
-.emotion-0 left {
-  base: 4px;
-  md: 8px;
-}
-
-.emotion-0 top {
-  base: 20px;
-  md: 8px;
-}
-
-.emotion-0 fontSize {
-  base: 2xl;
-  md: 4xl;
-}
-
 <body>
   <div>
     <button
