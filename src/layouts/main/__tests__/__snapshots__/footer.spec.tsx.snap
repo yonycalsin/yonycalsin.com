@@ -2,13 +2,22 @@
 
 exports[`Layouts / Main renders the layout footer 1`] = `
 .emotion-0 {
-  background: gray.50;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  background: var(--yony-colors-gray-900);
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
 }
 
 .emotion-1 {
-  max-width: container.md;
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
 }
 
 .emotion-2 {
@@ -35,14 +44,16 @@ exports[`Layouts / Main renders the layout footer 1`] = `
 }
 
 .emotion-3 {
-  font-weight: bold;
+  font-weight: var(--yony-fontWeights-bold);
 }
 
 .emotion-4 {
-  color: gray.600;
+  color: var(--yony-colors-gray-600);
 }
 
-<body>
+<body
+  class="chakra-ui-dark"
+>
   <div>
     <footer
       class="emotion-0"
@@ -66,6 +77,50 @@ exports[`Layouts / Main renders the layout footer 1`] = `
         </div>
       </div>
     </footer>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
   </div>
 </body>
 `;
