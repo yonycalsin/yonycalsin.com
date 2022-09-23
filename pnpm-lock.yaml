@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': 7.19.1
   '@chakra-ui-kbar/core': 2.0.0
   '@chakra-ui/react': 2.3.2
+  '@chakra-ui/theme-tools': 2.0.11
   '@dotenv-cloak/cli': 2.0.0
   '@emotion/jest': 11.10.0
   '@emotion/react': 11.10.4
@@ -85,6 +86,7 @@ specifiers:
 dependencies:
   '@chakra-ui-kbar/core': 2.0.0_ws5d4l3sn3yi7qiciga26p5mga
   '@chakra-ui/react': 2.3.2_tnnftml3dsxhbuoyamgi3vcjo4
+  '@chakra-ui/theme-tools': 2.0.11_ixdfg65nzjkaw36n6br7hh33cu
   '@emotion/react': 11.10.4_axxkdcpdr7up57umjkldobkynm
   '@emotion/styled': 11.10.4_sn4wuyy54zwps25tv4w7lbiz6i
   '@tanstack/react-query': 4.3.4_biqbaboplfbrettd7655fr4n2y

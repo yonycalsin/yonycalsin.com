@@ -1,5 +1,4 @@
 import type { ThemeComponentProps } from '@chakra-ui/react'
-// @ts-expect-error ts(2307)
 import { mode } from '@chakra-ui/theme-tools'
 
 const styles = {
