@@ -58,7 +58,7 @@
     "next-connect": "0.13.0",
     "nextjs-cors": "2.1.1",
     "nprogress": "0.2.0",
-    "prism-theme-night-owl": "1.4.0",
+    "prism-theme-vars": "0.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.35.0",

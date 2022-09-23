@@ -67,7 +67,7 @@ specifiers:
   nprogress: 0.2.0
   prettier: 2.7.1
   prettier-plugin-packagejson: 2.2.18
-  prism-theme-night-owl: 1.4.0
+  prism-theme-vars: 0.2.4
   react: 18.2.0
   react-dom: 18.2.0
   react-hook-form: 7.35.0
@@ -103,7 +103,7 @@ dependencies:
   next-connect: 0.13.0
   nextjs-cors: 2.1.1_next@12.3.0
   nprogress: 0.2.0
-  prism-theme-night-owl: 1.4.0
+  prism-theme-vars: 0.2.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.35.0_react@18.2.0
@@ -13635,8 +13635,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /prism-theme-night-owl/1.4.0:
-    resolution: {integrity: sha512-1N1GVbVorGd5t1Vw76yL/3rhqdiCpDrJg26Is+jGeMV7qiIMZL+bC7Mjx7HMMuVKZoi+2nWSbU5IutBYNy9tiQ==}
+  /prism-theme-vars/0.2.4:
+    resolution: {integrity: sha512-B3Pht+GCT87sZph7hMRLlCQXzCM0awW7Rhk08RavpqRW4LEQOeqN0uMG4QCWkul2tr8PB61YAOJGUrEW+1uuJA==}
     dev: false
 
   /prismjs/1.27.0:

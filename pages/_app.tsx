@@ -16,8 +16,9 @@ import Features from '~/utils/constants/features-flags'
 import isProduction from '~/utils/constants/is-production'
 import { NUMERICS } from '~/utils/constants/numerics'
 
+import 'prism-theme-vars/base.css'
+import 'prism-theme-vars/themes/vitesse-dark.css'
 import '~/assets/styles/index.css'
-import 'prism-theme-night-owl/build/style.css'
 
 if (env.REST_API_MOCKING) {
   import('~/mock-server').then(result => {
