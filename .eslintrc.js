@@ -30,6 +30,16 @@ module.exports = {
         minimumDescriptionLength: 3,
       },
     ],
+    /**
+     * @see https://github.com/jsx-eslint/eslint-plugin-react/issues/2628#issuecomment-984160944
+     */
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: "ImportDeclaration[source.value='react'][specifiers.0.type='ImportDefaultSpecifier']",
+        message: 'Default React import not allowed',
+      },
+    ],
   },
   overrides: [
     {
