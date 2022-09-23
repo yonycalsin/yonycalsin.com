@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { render, screen } from '@testing-library/react'
 
+import { mainTheme } from '~/themes/main'
 import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
 
 import Achievements from '../achievements'
@@ -46,7 +47,7 @@ const defaultAchievements: AchievementResponsePayload[] = [
 
 const setup = (achievements = defaultAchievements) => {
   return render(
-    <ChakraProvider>
+    <ChakraProvider theme={mainTheme}>
       <Achievements achievements={achievements} />
     </ChakraProvider>,
   )

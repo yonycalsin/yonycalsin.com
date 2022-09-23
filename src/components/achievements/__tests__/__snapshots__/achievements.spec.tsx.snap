@@ -16,7 +16,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-0>*:not(style)~*:not(style) {
-  margin-top: var(--chakra-space-3);
+  margin-top: var(--yony-space-3);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   margin-bottom: 0px;
@@ -26,7 +26,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 
 .emotion-1 {
   display: grid;
-  grid-gap: var(--chakra-space-6);
+  grid-gap: var(--yony-space-6);
   grid-template-columns: var(--yony-space-14) 1fr;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -55,7 +55,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-2>*:not(style)~*:not(style) {
-  margin-top: var(--chakra-space-1);
+  margin-top: var(--yony-space-1);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   margin-bottom: 0px;
@@ -64,17 +64,17 @@ exports[`Achievements renders the achievements correctly 1`] = `
 }
 
 .emotion-3 {
-  font-weight: var(--chakra-fontWeights-bold);
+  font-weight: var(--yony-fontWeights-bold);
 }
 
 .emotion-4 {
-  font-size: var(--chakra-fontSizes-sm);
+  font-size: var(--yony-fontSizes-sm);
   color: gray;
 }
 
 .emotion-5 {
   display: block;
-  font-size: var(--chakra-fontSizes-sm);
+  font-size: var(--yony-fontSizes-sm);
   font-style: italic;
 }
 
@@ -86,9 +86,9 @@ exports[`Achievements renders the achievements correctly 1`] = `
 
 .emotion-6 {
   font-style: italic;
-  font-size: var(--chakra-fontSizes-sm);
+  font-size: var(--yony-fontSizes-sm);
   display: none;
-  font-weight: var(--chakra-fontWeights-light);
+  font-weight: var(--yony-fontWeights-light);
 }
 
 @media screen and (min-width: 62em) {

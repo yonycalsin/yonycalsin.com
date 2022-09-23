@@ -7,6 +7,7 @@ import NProgress from 'nprogress'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
 import { analytics } from '~/analytics/google-analytics'
+import { CommandBar } from '~/components/command-bar'
 import { NightModeButton } from '~/components/night-mode-button'
 import { mainTheme } from '~/themes/main'
 import type { MyAppPageProps } from '~/typings/pages/app'
@@ -183,7 +184,9 @@ function MyApp(props: MyAppPageProps) {
                 />
               </>
             )}
-            <Component {...pageProps} />
+            <CommandBar>
+              <Component {...pageProps} />
+            </CommandBar>
           </ChakraProvider>
         </FeatureProvider>
       </Hydrate>

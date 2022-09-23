@@ -80,6 +80,24 @@ exports[`Layouts / Main renders the main layout 1`] = `
           >
             Built with Next.js, MDX, Chakra-Ui and Vercel
           </p>
+          <button
+            class="chakra-button emotion-0"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-0"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-0"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
         </div>
       </div>
     </footer>
@@ -119,7 +137,6 @@ exports[`Layouts / Main renders the main layout 1`] = `
         Email
       </a>
     </div>
-    ,
   </div>
 </body>
 `;

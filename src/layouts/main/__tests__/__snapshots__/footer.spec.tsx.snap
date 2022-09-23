@@ -51,6 +51,103 @@ exports[`Layouts / Main renders the layout footer 1`] = `
   color: var(--yony-colors-gray-600);
 }
 
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-5:focus-visible,
+.emotion-5[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-5[disabled],
+.emotion-5[aria-disabled=true],
+.emotion-5[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-5:hover,
+.emotion-5[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-5:hover[disabled],
+.emotion-5[data-hover][disabled],
+.emotion-5:hover[aria-disabled=true],
+.emotion-5[data-hover][aria-disabled=true],
+.emotion-5:hover[data-disabled],
+.emotion-5[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5:active,
+.emotion-5[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-6 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
 <body
   class="chakra-ui-dark"
 >
@@ -74,6 +171,24 @@ exports[`Layouts / Main renders the layout footer 1`] = `
           >
             Built with Next.js, MDX, Chakra-Ui and Vercel
           </p>
+          <button
+            class="chakra-button emotion-5"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-6"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-6"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
         </div>
       </div>
     </footer>
