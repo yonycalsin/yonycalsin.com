@@ -44,3 +44,8 @@
 pre[class*='language-'] {
   border-radius: 0.3rem;
 }
+
+/* Prism Theme Vars - Override */
+html[data-theme='dark'] {
+  --prism-background: #121212 !important;
+}
