@@ -1,0 +1,24 @@
+diff --git a/node/package.json b/node/package.json
+index 3d1591115dc1820a41f4e6856fc826d7b33ce5e1..e2973aca850627dba3d827811834dda8057633d2 100644
+--- a/node/package.json
++++ b/node/package.json
+@@ -1,5 +1,4 @@
+ {
+   "main": "../lib/node/index.js",
+-  "module": "../lib/node/index.mjs",
+   "typings": "../lib/node/index.d.ts"
+ }
+diff --git a/package.json b/package.json
+index 774bb92744f66d6254ced09050a6b2c29cae8d90..0c4e5eb3cc99ff3a7899949774bfc9ac51bf83cd 100644
+--- a/package.json
++++ b/package.json
+@@ -14,8 +14,7 @@
+     },
+     "./node": {
+       "types": "./lib/node/index.d.ts",
+-      "require": "./lib/node/index.js",
+-      "default": "./lib/node/index.mjs"
++      "default": "./lib/node/index.js"
+     }
+   },
+   "bin": {
