@@ -1,16 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layouts / Main renders a header 1`] = `
+.emotion-0 {
+  width: full;
+  top: 0px;
+  z-index: banner;
+  left: 0px;
+  background: white;
+}
+
+.emotion-1 {
+  max-width: container.md;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 py {
+  base: 5;
+  md: 8;
+}
+
+.emotion-2 {
+  display: contents;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 4px;
+  margin-inline-start: 4px;
+}
+
+.emotion-4 {
+  color: primary.500;
+  font-weight: bold;
+}
+
 <body>
   <div>
     <div
       class="emotion-0"
     >
       <div
-        class="chakra-container emotion-0"
+        class="chakra-container emotion-1"
       >
         <a
-          class="chakra-link emotion-0"
+          class="chakra-link emotion-2"
           href="/"
         >
           <span
@@ -37,16 +97,16 @@ exports[`Layouts / Main renders a header 1`] = `
           </span>
         </a>
         <div
-          class="chakra-stack emotion-0"
+          class="chakra-stack emotion-3"
         >
           <a
-            class="chakra-link emotion-0"
+            class="chakra-link emotion-4"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-0"
+            class="chakra-link emotion-4"
             href="/me"
           >
             About Me

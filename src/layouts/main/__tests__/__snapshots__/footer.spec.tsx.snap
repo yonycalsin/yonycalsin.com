@@ -98,6 +98,7 @@ exports[`Layouts / Main renders the layout footer 1`] = `
   box-shadow: var(--yony-shadows-outline);
 }
 
+.emotion-5:disabled,
 .emotion-5[disabled],
 .emotion-5[aria-disabled=true],
 .emotion-5[data-disabled] {
@@ -112,6 +113,8 @@ exports[`Layouts / Main renders the layout footer 1`] = `
   text-decoration: underline;
 }
 
+.emotion-5:hover:disabled,
+.emotion-5[data-hover]:disabled,
 .emotion-5:hover[disabled],
 .emotion-5[data-hover][disabled],
 .emotion-5:hover[aria-disabled=true],
