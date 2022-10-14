@@ -17,7 +17,7 @@ const semanticTokens = {
       _dark: 'whiteAlpha.800',
     },
     'chakra-body-bg': {
-      _light: 'white',
+      _light: '#F8F7F3',
       _dark: 'gray.900',
     },
     'chakra-border-color': {

@@ -6,7 +6,13 @@ exports[`Layouts / Main renders a header 1`] = `
   top: 0px;
   z-index: banner;
   left: 0px;
-  background: white;
+  box-shadow: xs;
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: lg;
 }
 
 .emotion-1 {

@@ -17,7 +17,7 @@ exports[`Components / SectionHeader renders the section header 1`] = `
 }
 
 .emotion-1 {
-  font-weight: medium;
+  font-weight: bold;
 }
 
 <body>
@@ -54,7 +54,7 @@ exports[`Components / SectionHeader renders the section header with anchor 1`] =
 }
 
 .emotion-1 {
-  font-weight: medium;
+  font-weight: bold;
 }
 
 <body>
@@ -96,7 +96,7 @@ exports[`Components / SectionHeader renders the section header with external anc
 }
 
 .emotion-1 {
-  font-weight: medium;
+  font-weight: bold;
 }
 
 <body>
