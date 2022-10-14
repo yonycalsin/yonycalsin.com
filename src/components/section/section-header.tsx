@@ -24,7 +24,7 @@ export function SectionHeader(props: SectionHeaderProps) {
   return (
     <div>
       <Box display="flex" alignItems="center" justifyContent="space-between" position="relative">
-        <Heading size="md" fontWeight="medium">
+        <Heading size="lg" fontWeight="bold">
           {title}
         </Heading>
         {actionHref ? (

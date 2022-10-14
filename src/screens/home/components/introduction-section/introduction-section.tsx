@@ -16,10 +16,17 @@ export function IntroductionSection() {
 
   return (
     <VStack spacing="6" alignItems="flex-start" py="3">
-      <Heading as="h1" size="lg" fontWeight="extrabold">
+      <Heading as="h1" fontWeight="extrabold">
         Hi, I&rsquo;m Yony Calsin.
       </Heading>
-      <Text lineHeight="7">
+      <Text
+        lineHeight="7"
+        fontSize="lg"
+        fontStyle="italic"
+        letterSpacing="wider"
+        fontWeight="normal"
+        fontFamily="heading"
+      >
         I&rsquo;m a software developer from <b>Perú</b>. I work at{' '}
         <ExternalAnchor href="https://www.linkedin.com/company/making-sense-llc">Making Sense</ExternalAnchor> as a{' '}
         <b>Frontend Developer.</b>
