@@ -6,7 +6,13 @@ exports[`Layouts / Main renders the main layout 1`] = `
   top: 0px;
   z-index: banner;
   left: 0px;
-  background: white;
+  box-shadow: xs;
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: lg;
 }
 
 .emotion-1 {
@@ -62,7 +68,6 @@ exports[`Layouts / Main renders the main layout 1`] = `
 }
 
 .emotion-6 {
-  background: gray.50;
   padding-top: 12px;
   padding-bottom: 12px;
 }

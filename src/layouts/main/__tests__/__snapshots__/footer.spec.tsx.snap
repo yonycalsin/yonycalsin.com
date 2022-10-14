@@ -2,7 +2,6 @@
 
 exports[`Layouts / Main renders the layout footer 1`] = `
 .emotion-0 {
-  background: var(--yony-colors-gray-900);
   padding-top: var(--yony-space-12);
   padding-bottom: var(--yony-space-12);
 }

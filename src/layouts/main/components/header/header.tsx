@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Container, HStack, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, HStack, Link } from '@chakra-ui/react'
 import Image from 'next/image'
 import RouterLink from 'next/link'
 import { Flag } from 'toggled'
@@ -7,10 +7,17 @@ import { Flag } from 'toggled'
 import Features from '~/utils/constants/features-flags'
 
 export const Header = () => {
-  const backgroundColor = useColorModeValue('white', 'gray.900')
-
   return (
-    <Box w="full" top="0" zIndex="banner" left="0" background={backgroundColor}>
+    <Box
+      w="full"
+      top="0"
+      zIndex="banner"
+      left="0"
+      boxShadow="xs"
+      _dark={{
+        boxShadow: 'lg',
+      }}
+    >
       <Container
         maxW="container.md"
         py={{
