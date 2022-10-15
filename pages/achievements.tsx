@@ -1,16 +1,14 @@
+import type { GetStaticPropsResult } from 'next'
 import * as React from 'react'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
-import type { GetStaticPropsResult } from 'next'
 
-import { Meta } from '~/components/meta'
-import AchievementsScreen from '~/screens/achievements'
-import { getAllAchievements } from '~/services/achievement/achievements'
-import { achievementApiEndpoints } from '~/services/achievement/utils/achievement-api-endpoints'
-import type { AchievementsPageProps } from '~/typings/pages/achievements'
-import type { ServerListResponse } from '~/typings/services'
-import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { AchievementsPageProps } from 'typings/pages'
+import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
+import { getAllAchievements } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import AchievementsScreen from 'screens/achievements'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function AchievementsPage() {
   return (
@@ -31,7 +29,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<Achievement
   })
 
   await queryClient.prefetchQuery<ServerListResponse<AchievementResponsePayload>>(
-    [achievementApiEndpoints.ALL_ACHIEVEMENTS],
+    [API_ENDPOINTS.ALL_ACHIEVEMENTS],
     () => getAllAchievements(),
     { staleTime: Infinity },
   )
@@ -40,7 +38,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<Achievement
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

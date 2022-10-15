@@ -1,9 +1,9 @@
-export interface SectionProps {
-  children: React.ReactNode
-}
+import type { SectionProps } from 'typings/components'
 
-export function Section(props: SectionProps) {
+function Section(props: SectionProps) {
   const { children } = props
 
   return <section className="mt-6 md:mt-10">{children}</section>
 }
+
+export default Section

@@ -18,9 +18,26 @@ const customJestConfig = {
   //     },
   //   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  moduleDirectories: ['node_modules', '<rootDir>/'],
   moduleNameMapper: {
-    // Handle module aliases (this will be automatically configured for you soon)
-    '^~/(.*)$': '<rootDir>/src/$1',
+    '^/(.*)$': '<rootDir>/src/$1',
+
+    /**
+     * @todo add regex to handle global paths
+     * @author yonycalsin
+     */
+    '^assets/(.*)$': '<rootDir>/src/assets/$1',
+    '^typings/(.*)$': '<rootDir>/src/typings/$1',
+    '^mock-server/(.*)$': '<rootDir>/src/mock-server/$1',
+    '^analytics/(.*)$': '<rootDir>/src/analytics/$1',
+    '^services/(.*)$': '<rootDir>/src/services/$1',
+    '^themes/(.*)$': '<rootDir>/src/themes/$1',
+    '^hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^screens/(.*)$': '<rootDir>/src/screens/$1',
+    '^layouts/(.*)$': '<rootDir>/src/layouts/$1',
+    '^containers/(.*)$': '<rootDir>/src/containers/$1',
+    '^components/(.*)$': '<rootDir>/src/components/$1',
+    '^utils/(.*)$': '<rootDir>/src/utils/$1',
 
     // Optionals
     '^~/server/(.*)$': '<rootDir>/server/$1',

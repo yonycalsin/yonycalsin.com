@@ -4,9 +4,9 @@ import Image from 'next/image'
 import RouterLink from 'next/link'
 import { Flag } from 'toggled'
 
-import Features from '~/utils/constants/features-flags'
+import { Features } from 'utils/constants'
 
-export const Header = () => {
+const Header = () => {
   return (
     <Box
       w="full"
@@ -91,3 +91,5 @@ export const Header = () => {
     </Box>
   )
 }
+
+export default Header

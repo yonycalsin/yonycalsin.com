@@ -1,15 +1,10 @@
 import * as React from 'react'
 import { SimpleGrid } from '@chakra-ui/react'
 
-import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
+import type { RecommendationsProps } from 'typings/components'
+import { Recommendation } from './components'
 
-import { Recommendation } from './components/recommendation'
-
-export interface RecommendationsProps {
-  recommendations: RecommendationResponsePayload[]
-}
-
-export function Recommendations(props: RecommendationsProps) {
+function Recommendations(props: RecommendationsProps) {
   const { recommendations } = props
 
   return (
@@ -29,3 +24,5 @@ export function Recommendations(props: RecommendationsProps) {
     </SimpleGrid>
   )
 }
+
+export default Recommendations

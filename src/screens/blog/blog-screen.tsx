@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { BsChevronCompactRight } from 'react-icons/bs'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,13 +13,14 @@ import {
 } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import RouterLink from 'next/link'
+import { BsChevronCompactRight } from 'react-icons/bs'
 
-import { MainLayout } from '~/layouts'
-import { getPostsApi } from '~/services/blog/posts'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
+import { getPostsApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import { MainLayout } from 'layouts'
 
-export function BlogScreen() {
-  const getPostsResponse = useQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
+function BlogScreen() {
+  const getPostsResponse = useQuery([API_ENDPOINTS.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
 
@@ -68,3 +68,5 @@ export function BlogScreen() {
     </MainLayout>
   )
 }
+
+export default BlogScreen

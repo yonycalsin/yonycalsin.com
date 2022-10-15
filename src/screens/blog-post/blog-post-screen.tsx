@@ -1,21 +1,17 @@
 import * as React from 'react'
-import { BsChevronCompactRight } from 'react-icons/bs'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import RouterLink from 'next/link'
 import nextBase64 from 'next-base64'
+import { BsChevronCompactRight } from 'react-icons/bs'
 
-import MDXComponents from '~/components/mdx-components'
-import { useMDXComponent } from '~/hooks/useMDXComponent'
-import { MainLayout } from '~/layouts'
-import type { PostResponsePayload } from '~/typings/services'
-import { dateFormats } from '~/utils/constants/constants'
+import type { BlogPostScreenProps } from 'typings/screens'
+import { useMDXComponent } from 'hooks'
+import { MainLayout } from 'layouts'
+import { MDXComponents } from 'components'
+import { DATE_FORMATS } from 'utils/constants'
 
-export interface BlogPostScreenProps {
-  post: PostResponsePayload
-}
-
-export function BlogPostScreen(props: BlogPostScreenProps) {
+function BlogPostScreen(props: BlogPostScreenProps) {
   const { post } = props
 
   const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(post.body.code))))
@@ -45,7 +41,7 @@ export function BlogPostScreen(props: BlogPostScreenProps) {
           </Breadcrumb>
           <Heading>{post.title}</Heading>
           <Text textColor="gray" fontStyle="italic">
-            Last updated at {dayjs(post.updatedAt).format(dateFormats.HUMAN_DATE)}
+            Last updated at {dayjs(post.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
           </Text>
         </VStack>
         <Component components={MDXComponents} />
@@ -53,3 +49,5 @@ export function BlogPostScreen(props: BlogPostScreenProps) {
     </MainLayout>
   )
 }
+
+export default BlogPostScreen

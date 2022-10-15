@@ -1,13 +1,10 @@
 import * as React from 'react'
 import { Box, useColorMode } from '@chakra-ui/react'
 
-import { analyticsEvents } from '~/analytics/events'
-import { analytics } from '~/analytics/google-analytics'
+import { analytics, ANALYTICS_EVENTS } from 'analytics'
+import { MoonIcon, SunIcon } from './components'
 
-import { MoonIcon } from './components/moon-icon'
-import { SunIcon } from './components/sun-icon'
-
-export const NightModeButton = () => {
+function NightModeButton() {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -31,7 +28,7 @@ export const NightModeButton = () => {
         zIndex="sticky"
         onClick={() => {
           analytics.event({
-            action: analyticsEvents.TOGGLE_NIGHT_MODE_BUTTON,
+            action: ANALYTICS_EVENTS.TOGGLE_NIGHT_MODE_BUTTON,
             category: 'ui-theme',
             label: colorMode,
           })
@@ -44,3 +41,5 @@ export const NightModeButton = () => {
     </>
   )
 }
+
+export default NightModeButton

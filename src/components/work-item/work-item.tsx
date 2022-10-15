@@ -1,29 +1,16 @@
 import * as React from 'react'
+import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
+import dayjs from 'dayjs'
 import { BsLink } from 'react-icons/bs'
 import { FaNpm } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
-import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
-import dayjs from 'dayjs'
 
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { dateFormats } from '~/utils/constants/constants'
-import { getRandomBadgeColors } from '~/utils/get-random-colors'
-import normalizeDisplayUrl from '~/utils/normalize-display-url'
-
+import type { WorkItemProps } from 'typings/components'
+import { getRandomBadgeColors, normalizeDisplayUrl } from 'utils'
+import { DATE_FORMATS } from 'utils/constants'
 import { getWorkItemColors, WorkItemIcon } from './components'
 
-export interface WorkItemProps {
-  title: string
-  type: ProjectResponsePayload['type']
-  description: string
-  webHref?: string | null
-  repositoryHref?: string | null
-  packageHref?: string | null
-  tags?: string[]
-  startedAt: string
-}
-
-export function WorkItem(props: WorkItemProps) {
+function WorkItem(props: WorkItemProps) {
   const { tags = [], title, type, description, webHref, startedAt = new Date(), repositoryHref, packageHref } = props
 
   const colors = React.useMemo(() => {
@@ -59,7 +46,7 @@ export function WorkItem(props: WorkItemProps) {
             lg: 'block',
           }}
         >
-          <Text fontStyle="italic">{dayjs(startedAt).format(dateFormats.HUMAN_DATE)}</Text>
+          <Text fontStyle="italic">{dayjs(startedAt).format(DATE_FORMATS.HUMAN_DATE)}</Text>
         </Box>
         <WorkItemIcon projectType={type} />
       </Box>
@@ -141,3 +128,5 @@ export function WorkItem(props: WorkItemProps) {
     </Box>
   )
 }
+
+export default WorkItem

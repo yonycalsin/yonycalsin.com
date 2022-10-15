@@ -1,5 +1,4 @@
 import HttpStatus from '../Status/HttpStatus'
-
 import HttpException, { HttpExceptionConstructorOptions } from './HttpException'
 
 class ValidationErrorException extends HttpException {

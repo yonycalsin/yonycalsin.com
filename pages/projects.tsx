@@ -1,17 +1,14 @@
+import type { GetStaticPropsResult } from 'next'
 import * as React from 'react'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
-import type { GetStaticPropsResult } from 'next'
 
-import { Meta } from '~/components/meta'
-import { ProjectsScreen } from '~/screens/projects'
-import { getAllProjects } from '~/services/project/projects'
-import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
-import type { ProjectsPageProps } from '~/typings/pages/projects'
-import type { ServerListResponse } from '~/typings/services'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { timings } from '~/utils/constants/constants'
-import env from '~/utils/constants/env'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { ProjectsPageProps } from 'typings/pages'
+import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
+import { getAllProjects } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import ProjectsScreen from 'screens/projects'
+import { Meta } from 'components'
+import { ENV, NUMERICS, TIMINGS } from 'utils/constants'
 
 function ProjectsPage() {
   return (
@@ -31,11 +28,11 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<ProjectsPag
     },
   })
 
-  const hasWorkProjects = !!env.FF_PROJECTS
+  const hasWorkProjects = !!ENV.FF_PROJECTS
 
   if (hasWorkProjects) {
     await queryClient.prefetchQuery<ServerListResponse<ProjectResponsePayload>>(
-      [projectApiEndpoints.ALL_PROJECTS],
+      [API_ENDPOINTS.ALL_PROJECTS],
       () => getAllProjects(),
       { staleTime: Infinity },
     )
@@ -45,7 +42,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<ProjectsPag
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: hasWorkProjects ? timings.REVALIDATE_STATIC_PAGES_TIME : false,
+    revalidate: hasWorkProjects ? TIMINGS.REVALIDATE_STATIC_PAGES_TIME : false,
   }
 }
 

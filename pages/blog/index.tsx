@@ -1,14 +1,13 @@
+import type { GetStaticPropsResult } from 'next'
 import * as React from 'react'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
-import type { GetStaticPropsResult } from 'next'
 
-import { Meta } from '~/components/meta'
-import { BlogScreen } from '~/screens/blog'
-import { getPostsApi } from '~/services/blog/posts'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { BlogPageProps } from '~/typings/pages/blog'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { BlogPageProps } from 'typings/pages'
+import { getPostsApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import BlogScreen from 'screens/blog'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function BlogPage() {
   return (
@@ -28,7 +27,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BlogPagePro
     },
   })
 
-  await queryClient.prefetchQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
+  await queryClient.prefetchQuery([API_ENDPOINTS.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
 
@@ -36,7 +35,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BlogPagePro
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

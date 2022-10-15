@@ -1,14 +1,13 @@
-import { dehydrate, QueryClient } from '@tanstack/react-query'
 import type { GetStaticPropsResult } from 'next'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 
-import { Meta } from '~/components/meta'
-import { BlogCategoriesScreen } from '~/screens/blog-categories'
-import { getCategoriesApi } from '~/services/blog'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { BlogCategoriesPageProps } from '~/typings/pages/blog-categories'
-import type { CategoryResponsePayload, ServerListResponse } from '~/typings/services'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { BlogCategoriesPageProps } from 'typings/pages'
+import type { CategoryResponsePayload, ServerListResponse } from 'typings/services'
+import { getCategoriesApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import BlogCategoriesScreen from 'screens/blog-categories'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function BlogCategoriesPage() {
   return (
@@ -29,7 +28,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BlogCategor
   })
 
   await queryClient.prefetchQuery<ServerListResponse<CategoryResponsePayload>>(
-    [blogApiEndpoints.CATEGORIES],
+    [API_ENDPOINTS.CATEGORIES],
     getCategoriesApi,
     { staleTime: Infinity },
   )
@@ -38,7 +37,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BlogCategor
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { chakra, HTMLChakraProps } from '@chakra-ui/react'
 
-export function LinkedHeading(props: HTMLChakraProps<'h2'>) {
+function LinkedHeading(props: HTMLChakraProps<'h2'>) {
   return (
     <chakra.h2 data-group="" css={{ scrollMarginBlock: '6.875rem' }} {...props}>
       <span className="content">{props.children}</span>
@@ -23,3 +23,5 @@ export function LinkedHeading(props: HTMLChakraProps<'h2'>) {
     </chakra.h2>
   )
 }
+
+export default LinkedHeading

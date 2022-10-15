@@ -1,0 +1,9 @@
+const NUMERICS = {
+  RETRY_QUERY: 2,
+}
+
+const TIMINGS = {
+  REVALIDATE_STATIC_PAGES_TIME: 60 * 30, // 30m
+}
+
+export { NUMERICS, TIMINGS }

@@ -1,4 +1,3 @@
-import { BsChevronCompactRight } from 'react-icons/bs'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,19 +13,15 @@ import {
 import dayjs from 'dayjs'
 import RouterLink from 'next/link'
 import nextBase64 from 'next-base64'
+import { BsChevronCompactRight } from 'react-icons/bs'
 
-import MDXComponents from '~/components/mdx-components'
-import { useMDXComponent } from '~/hooks/useMDXComponent'
-import { MainLayout } from '~/layouts'
-import type { CategoryResponsePayload, PostResponsePayload } from '~/typings/services'
-import { dateFormats } from '~/utils/constants/constants'
+import type { BlogCategoryScreenProps } from 'typings/screens'
+import { useMDXComponent } from 'hooks'
+import { MainLayout } from 'layouts'
+import { MDXComponents } from 'components'
+import { DATE_FORMATS } from 'utils/constants'
 
-export interface BlogCategoryScreenProps {
-  category: CategoryResponsePayload
-  posts: PostResponsePayload[]
-}
-
-export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
+function BlogCategoryScreen(props: BlogCategoryScreenProps) {
   const { category, posts } = props
 
   const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(category.body.code))))
@@ -64,7 +59,7 @@ export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
           </Breadcrumb>
           <Heading>Category: {category.title}</Heading>
           <Text textColor="gray" fontStyle="italic">
-            Last updated at {dayjs(category.updatedAt).format(dateFormats.HUMAN_DATE)}
+            Last updated at {dayjs(category.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
           </Text>
         </VStack>
         <Component components={MDXComponents} />
@@ -81,3 +76,5 @@ export function BlogCategoryScreen(props: BlogCategoryScreenProps) {
     </MainLayout>
   )
 }
+
+export default BlogCategoryScreen

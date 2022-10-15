@@ -1,12 +1,11 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'testing-library'],
+  plugins: ['@typescript-eslint', 'testing-library', '@yonycalsin/import-sort'],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'next',
     'next/core-web-vitals',
     'prettier',
     'plugin:storybook/recommended',
-    'plugin:@yonycalsin/import-sort/react',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -45,6 +44,34 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
+    },
+    {
+      files: ['server/**/*.[jt]s?(x)'],
+      extends: ['plugin:@yonycalsin/import-sort/react'],
+    },
+    {
+      files: ['src/**/*.[jt]s?(x)', 'pages/**/*.[jt]s?(x)'],
+      rules: {
+        '@yonycalsin/import-sort/typescript-react-imports': [
+          'error',
+          {
+            modules: [
+              'typings',
+              'mock-server',
+              'analytics',
+              'services',
+              'themes',
+              'hooks',
+              'screens',
+              'layouts',
+              'containers',
+              'components',
+              'utils',
+            ],
+          },
+        ],
+        '@yonycalsin/import-sort/typescript-react-exports': 'error',
+      },
     },
   ],
 }

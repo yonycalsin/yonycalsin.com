@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
 import { FeatureProvider } from 'toggled'
 
-import { Header } from '../components/header'
+import { Header } from 'layouts/main'
 
-describe('Layouts / Main', () => {
+describe('MainLayout/Header', () => {
   it('renders a header', () => {
     const view = render(
       <FeatureProvider features={[]}>

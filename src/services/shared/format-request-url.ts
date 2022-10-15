@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function formatRequestUrl<T extends Record<string, any> = Record<string, any>>(endpoint: string, data: T) {
+function formatRequestUrl<T extends Record<string, any> = Record<string, any>>(endpoint: string, data: T) {
   const url = new URL(endpoint)
 
   const setSearchParams = (values: T) => {
@@ -34,3 +34,5 @@ export function formatRequestUrl<T extends Record<string, any> = Record<string, 
 
   return url.href
 }
+
+export default formatRequestUrl

@@ -1,16 +1,14 @@
+import type { GetStaticPropsResult } from 'next'
 import * as React from 'react'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
-import type { GetStaticPropsResult } from 'next'
 
-import { Meta } from '~/components/meta'
-import { BooksScreen } from '~/screens/books'
-import { getAllBooks, getReadingBooks } from '~/services/book/books'
-import { bookApiEndpoints } from '~/services/book/utils/book-api-endpoints'
-import type { BooksPageProps } from '~/typings/pages/books'
-import type { ServerListResponse } from '~/typings/services'
-import type { BookResponsePayload } from '~/typings/services/book/books'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { BooksPageProps } from 'typings/pages'
+import type { BookResponsePayload, ServerListResponse } from 'typings/services'
+import { getAllBooks, getReadingBooks } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import BooksScreen from 'screens/books'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function BooksPage() {
   return (
@@ -31,13 +29,13 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
   })
 
   await queryClient.prefetchQuery<ServerListResponse<BookResponsePayload>>(
-    [bookApiEndpoints.ALL_BOOKS],
+    [API_ENDPOINTS.ALL_BOOKS],
     () => getAllBooks(),
     { staleTime: Infinity },
   )
 
   await queryClient.prefetchQuery<ServerListResponse<BookResponsePayload>>(
-    [bookApiEndpoints.READING_BOOKS],
+    [API_ENDPOINTS.READING_BOOKS],
     () => getReadingBooks(),
     { staleTime: Infinity },
   )
@@ -46,7 +44,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

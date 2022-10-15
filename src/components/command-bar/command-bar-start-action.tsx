@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Button, Kbd } from '@chakra-ui/react'
 import { useKBar } from '@chakra-ui-kbar/core'
 
-export function CommandBarStartAction(): JSX.Element {
+function CommandBarStartAction(): JSX.Element {
   const { query } = useKBar()
 
   const [device, setDevice] = React.useState<string | null>(null)
@@ -59,3 +59,5 @@ export function CommandBarStartAction(): JSX.Element {
     }
   }
 }
+
+export default CommandBarStartAction

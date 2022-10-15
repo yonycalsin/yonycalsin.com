@@ -1,13 +1,12 @@
 import * as React from 'react'
+import { Button, Heading, HStack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
-import { Button, Heading, HStack, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
-import { CommandBarStartAction } from '~/components/command-bar'
-import { ExternalAnchor } from '~/components/external-anchor'
-import { socialLinks } from '~/utils/constants/constants'
+import { CommandBarStartAction, ExternalAnchor } from 'components'
+import { SOCIAL_LINKS } from 'utils/constants'
 
-export function IntroductionSection() {
+function IntroductionSection() {
   const socialButtonSize = useBreakpointValue({
     base: 'xs',
     md: 'sm',
@@ -35,7 +34,7 @@ export function IntroductionSection() {
       <HStack>
         <Button
           as="a"
-          href={socialLinks.LINKEDIN}
+          href={SOCIAL_LINKS.LINKEDIN}
           target="_blank"
           rel="noreferrer"
           leftIcon={<TiSocialLinkedin />}
@@ -48,7 +47,7 @@ export function IntroductionSection() {
         </Button>
         <Button
           as="a"
-          href={socialLinks.GITHUB}
+          href={SOCIAL_LINKS.GITHUB}
           target="_blank"
           rel="noreferrer"
           leftIcon={<TiSocialGithub />}
@@ -61,7 +60,7 @@ export function IntroductionSection() {
         </Button>
         <Button
           as="a"
-          href={socialLinks.TWITTER}
+          href={SOCIAL_LINKS.TWITTER}
           target="_blank"
           rel="noreferrer"
           leftIcon={<TiSocialTwitter />}
@@ -76,3 +75,5 @@ export function IntroductionSection() {
     </VStack>
   )
 }
+
+export default IntroductionSection

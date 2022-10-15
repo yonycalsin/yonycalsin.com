@@ -1,25 +1,9 @@
 import random from 'just-random'
 
-export const badgeColors = [
-  'red',
-  'orange',
-  'yellow',
-  'green',
-  'teal',
-  'blue',
-  'cyan',
-  'purple',
-  'pink',
-  'linkedin',
-  'facebook',
-  'messenger',
-  'whatsapp',
-  'twitter',
-  'telegram',
-  'primary',
-  'secondary',
-]
+import { CHAKRA_BADGE_COLORS } from './constants'
 
-export function getRandomBadgeColors() {
-  return random(badgeColors)
+function getRandomBadgeColors() {
+  return random(CHAKRA_BADGE_COLORS)
 }
+
+export default getRandomBadgeColors

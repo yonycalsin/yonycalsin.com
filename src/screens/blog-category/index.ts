@@ -1,1 +1,1 @@
-export * from './blog-category-screen'
+export { default } from './blog-category-screen'

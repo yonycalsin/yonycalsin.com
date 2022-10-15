@@ -1,9 +1,10 @@
-import { badgeColors, getRandomBadgeColors } from '../get-random-colors'
+import { getRandomBadgeColors } from 'utils'
+import { CHAKRA_BADGE_COLORS } from 'utils/constants'
 
-describe('Utils / getRandomBadgeColors', () => {
+describe('getRandomBadgeColors', () => {
   it('gets random badge color', () => {
     const result = getRandomBadgeColors()
 
-    expect(badgeColors).toContain(result)
+    expect(CHAKRA_BADGE_COLORS).toContain(result)
   })
 })

@@ -1,15 +1,10 @@
 import * as React from 'react'
-import { AiFillStar } from 'react-icons/ai'
 import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { AiFillStar } from 'react-icons/ai'
 
-interface BookItemProps {
-  name: string
-  imageSrc: string
-  author: string
-  rating: number
-}
+import type { BookItemProps } from 'typings/screens'
 
-export function BookItem(props: BookItemProps) {
+function BookItem(props: BookItemProps) {
   const { name, imageSrc, author, rating } = props
 
   return (
@@ -26,3 +21,5 @@ export function BookItem(props: BookItemProps) {
     </VStack>
   )
 }
+
+export default BookItem

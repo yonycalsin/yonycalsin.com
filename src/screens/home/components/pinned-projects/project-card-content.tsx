@@ -1,17 +1,12 @@
 import * as React from 'react'
-import { MdLaunch } from 'react-icons/md'
 import { Button, Text, VStack } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
+import { MdLaunch } from 'react-icons/md'
 
-import { MotionBox } from '~/components/motion'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
+import type { ProjectCardContentProps } from 'typings/screens'
+import { MotionBox } from 'components'
 
-export interface ProjectCardContentProps {
-  isOpen: boolean
-  project: ProjectResponsePayload
-}
-
-export function ProjectCardContent(props: ProjectCardContentProps) {
+function ProjectCardContent(props: ProjectCardContentProps) {
   const { isOpen, project } = props
 
   return (
@@ -37,3 +32,5 @@ export function ProjectCardContent(props: ProjectCardContentProps) {
     </AnimatePresence>
   )
 }
+
+export default ProjectCardContent

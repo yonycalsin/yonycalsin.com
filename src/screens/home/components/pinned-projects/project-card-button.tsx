@@ -1,16 +1,10 @@
 import * as React from 'react'
-import { RiArrowDownSLine } from 'react-icons/ri'
 import { Box, HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { RiArrowDownSLine } from 'react-icons/ri'
 
-import { getWorkItemColors, getWorkItemIcon } from '~/components/work-item/components'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-
-export interface ProjectCardButtonProps {
-  isOpen: boolean
-  onToggle: () => void
-  project: ProjectResponsePayload
-}
+import type { ProjectCardButtonProps } from 'typings/screens'
+import { getWorkItemColors, getWorkItemIcon } from 'components/work-item/components'
 
 export function ProjectCardButton(props: ProjectCardButtonProps) {
   const { isOpen, onToggle, project } = props

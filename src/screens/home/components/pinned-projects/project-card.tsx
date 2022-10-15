@@ -1,17 +1,12 @@
 import * as React from 'react'
 import { useColorModeValue } from '@chakra-ui/react'
 
-import { MotionBox } from '~/components/motion'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-
+import type { ProjectCardProps } from 'typings/screens'
+import { MotionBox } from 'components'
 import { ProjectCardButton } from './project-card-button'
-import { ProjectCardContent } from './project-card-content'
+import ProjectCardContent from './project-card-content'
 
-export interface ProjectCardProps {
-  project: ProjectResponsePayload
-}
-
-export function ProjectCard(props: ProjectCardProps) {
+function ProjectCard(props: ProjectCardProps) {
   const { project } = props
 
   const backgroundColor = useColorModeValue('gray.50', 'gray.800')
@@ -37,3 +32,5 @@ export function ProjectCard(props: ProjectCardProps) {
     </MotionBox>
   )
 }
+
+export default ProjectCard

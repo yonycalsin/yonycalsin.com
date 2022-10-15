@@ -9,12 +9,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: ['16.14.0']
-        os: [ubuntu-20.04]
+        node: [16.14.0]
+        os: [ubuntu-latest]
         pnpm: [7.11.0]
 
     steps:
-      - name: Check out code
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - name: Install pnpm
@@ -22,7 +22,7 @@ jobs:
         with:
           version: ${{ matrix.pnpm }}
 
-      - name: Setup Node.js (${{ matrix.node }}) environment
+      - name: Setup Node.js (${{ matrix.node }})
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}

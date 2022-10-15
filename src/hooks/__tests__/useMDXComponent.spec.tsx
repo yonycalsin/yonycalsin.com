@@ -1,8 +1,8 @@
 import { render, renderHook } from '@testing-library/react'
 
-import { useMDXComponent } from '../useMDXComponent'
+import { useMDXComponent } from 'hooks'
 
-describe('Hooks / useMDXComponent', () => {
+describe('useMDXComponent', () => {
   it('returns the mdx processed code', () => {
     const utils = renderHook(() =>
       useMDXComponent(

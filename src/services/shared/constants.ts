@@ -1,7 +1,9 @@
-import env from '~/utils/constants/env'
+import { ENV } from 'utils/constants'
 
-export const defaultHeaders = {
+const DEFAULT_HEADERS = {
   'Content-Type': 'application/json',
   Accept: 'application/json',
-  'X-Api-Public-Key': env.REST_API_PUBLIC_KEY,
+  'X-Api-Public-Key': ENV.REST_API_PUBLIC_KEY,
 }
+
+export { DEFAULT_HEADERS }

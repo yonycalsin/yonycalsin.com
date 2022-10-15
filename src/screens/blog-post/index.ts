@@ -1,1 +1,1 @@
-export * from './blog-post-screen'
+export { default } from './blog-post-screen'

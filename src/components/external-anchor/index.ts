@@ -1,1 +1,1 @@
-export * from './external-anchor'
+export { default as ExternalAnchor } from './external-anchor'

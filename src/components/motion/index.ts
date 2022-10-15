@@ -1,1 +1,1 @@
-export * from './components/motion-box'
+export { default as MotionBox } from './motion-box'

@@ -2,17 +2,16 @@ import * as React from 'react'
 import { Container, Heading, Link, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
-import { WorkItem } from '~/components/work-item/work-item'
-import { MainLayout } from '~/layouts'
-import { getAllProjects } from '~/services/project/projects'
-import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
-import type { ServerListResponse } from '~/typings/services'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
-import { socialLinks } from '~/utils/constants/constants'
+import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
+import { getAllProjects } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import { MainLayout } from 'layouts'
+import { WorkItem } from 'components'
+import { SOCIAL_LINKS } from 'utils/constants'
 
-export function ProjectsScreen() {
+function ProjectsScreen() {
   const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(
-    [projectApiEndpoints.ALL_PROJECTS],
+    [API_ENDPOINTS.ALL_PROJECTS],
     () => getAllProjects(),
     { staleTime: Infinity },
   )
@@ -29,7 +28,7 @@ export function ProjectsScreen() {
 
           <Text>
             Let me show you some of my projects. See all of them{' '}
-            <Link color="primary.500" fontWeight="bold" href={socialLinks.GITHUB} target="blank">
+            <Link color="primary.500" fontWeight="bold" href={SOCIAL_LINKS.GITHUB} target="blank">
               on my GitHub
             </Link>
             .
@@ -53,8 +52,9 @@ export function ProjectsScreen() {
               lg: 'calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2))',
             },
             // prettier-ignore
-            // background: 'linear-gradient(45deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
-            background: 'gray.100',
+            background: 'linear-gradient(135deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251))',
+            opacity: '.5',
+            // background: 'primary.100',
           }}
         >
           {projects.map(project => (
@@ -75,3 +75,5 @@ export function ProjectsScreen() {
     </MainLayout>
   )
 }
+
+export default ProjectsScreen

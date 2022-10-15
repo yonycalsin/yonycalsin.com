@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 
-import { SectionHeader, SectionHeaderProps } from '../section-header'
+import type { SectionHeaderProps } from 'typings/components'
+import { SectionHeader } from 'components'
 
 const defaultSectionHeaderProps: SectionHeaderProps = {
   title: 'Customers',
@@ -10,7 +11,7 @@ const setup = (props?: Partial<SectionHeaderProps>) => {
   return render(<SectionHeader {...props} {...defaultSectionHeaderProps} />)
 }
 
-describe('Components / SectionHeader', () => {
+describe('SectionHeader', () => {
   it('renders the section header', () => {
     const view = setup()
 
