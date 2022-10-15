@@ -38,6 +38,15 @@ jobs:
 
       - name: Build
         run: pnpm run build
+        env:
+          APP_ENV: development
+          REST_API_URL: https://api.yonycalsin.com
+          REST_API_PUBLIC_KEY: ${{ secrets.ENV_REST_API_PUBLIC_KEY }}
+          REST_API_MOCKING: true
+          DEBUG: api:*
+          FF_BOOKS: false
+          FF_BLOG: false
+          FF_PROJECTS: false
 
       - name: Unit Testing
         run: pnpm run test:unit:ci
