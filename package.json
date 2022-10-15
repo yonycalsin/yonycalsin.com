@@ -9,7 +9,7 @@
     "lib:ts": "tsc",
     "lib:es": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "lib:pretty": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
-    "lib:jest": "cross-env TZ=America/Los_Angeles jest --forceExit --detectOpenHandles --env=jsdom --colors",
+    "lib:jest": "cross-env TZ=\"America/Los_Angeles\" jest --forceExit --detectOpenHandles --env=jsdom --colors",
     "start": "next start",
     "build": "next build",
     "dev": " next dev",
