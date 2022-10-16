@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / SectionHeader renders the section header 1`] = `
+exports[`SectionHeader renders the section header 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -37,7 +37,7 @@ exports[`Components / SectionHeader renders the section header 1`] = `
 </body>
 `;
 
-exports[`Components / SectionHeader renders the section header with anchor 1`] = `
+exports[`SectionHeader renders the section header with anchor 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -79,7 +79,7 @@ exports[`Components / SectionHeader renders the section header with anchor 1`] =
 </body>
 `;
 
-exports[`Components / SectionHeader renders the section header with external anchor 1`] = `
+exports[`SectionHeader renders the section header with external anchor 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;

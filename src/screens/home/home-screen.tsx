@@ -2,15 +2,11 @@ import * as React from 'react'
 import { Container, Divider } from '@chakra-ui/react'
 import { useFlag } from 'toggled'
 
-import { MainLayout } from '~/layouts'
-import Features from '~/utils/constants/features-flags'
+import { MainLayout } from 'layouts'
+import { Features } from 'utils/constants'
+import { FeaturedAchievements, FeaturedRecommendations, IntroductionSection, PinnedProjects } from './components'
 
-import { FeaturedRecommendations } from './components/featured-recommendations/featured-recommendations'
-import { IntroductionSection } from './components/introduction-section'
-import { PinnedProjects } from './components/pinned-projects'
-import { FeaturedAchievements } from './components'
-
-export function HomeScreen() {
+function HomeScreen() {
   const hasAchievementsFF = useFlag(Features.ACHIEVEMENTS)
 
   const hasRecommendationsFF = useFlag(Features.RECOMMENDATIONS)
@@ -43,3 +39,5 @@ export function HomeScreen() {
     </MainLayout>
   )
 }
+
+export default HomeScreen

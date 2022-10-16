@@ -1,17 +1,9 @@
 import * as React from 'react'
 import { Box, Heading } from '@chakra-ui/react'
 
-export interface SectionHeaderProps {
-  title: string
-  actionHref?: string
-  actionLabel?: string
-  actionHrefExternal?: boolean
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  actionComponent?: any
-  children?: React.ReactNode
-}
+import type { SectionHeaderProps } from 'typings/components'
 
-export function SectionHeader(props: SectionHeaderProps) {
+function SectionHeader(props: SectionHeaderProps) {
   const {
     title,
     actionHref,
@@ -37,3 +29,5 @@ export function SectionHeader(props: SectionHeaderProps) {
     </div>
   )
 }
+
+export default SectionHeader

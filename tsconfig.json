@@ -15,9 +15,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "~/server*": ["./server*"],
-      "~/data*": ["./data*"]
+      "*": ["./src/*"],
+      "~/server*": ["./server*"]
     },
     "importsNotUsedAsValues": "error",
     "incremental": true,

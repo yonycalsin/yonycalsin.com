@@ -15,6 +15,8 @@ function getMdxComponent(code: string): React.ComponentType<any> {
   return fn(...Object.values(scope)).default
 }
 
-export function useMDXComponent(code: string) {
+function useMDXComponent(code: string) {
   return React.useMemo(() => getMdxComponent(code), [code])
 }
+
+export default useMDXComponent

@@ -1,1 +1,1 @@
-export * from './projects-screen'
+export { default } from './projects-screen'

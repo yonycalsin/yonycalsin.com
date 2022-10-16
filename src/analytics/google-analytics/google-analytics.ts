@@ -1,20 +1,19 @@
-import env from '~/utils/constants/env'
-import isProduction from '~/utils/constants/is-production'
+import { ENV, IS_PRODUCTION } from 'utils/constants'
 
 const googleAnalytics = {
   // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
   pageView: (url: string) => {
-    if (!isProduction || !env.GOOGLE_ANALYTICS_ID) {
+    if (!IS_PRODUCTION || !ENV.GOOGLE_ANALYTICS_ID) {
       return
     }
 
-    window.gtag('config', env.GOOGLE_ANALYTICS_ID, {
+    window.gtag('config', ENV.GOOGLE_ANALYTICS_ID, {
       page_path: url,
     })
   },
   // https://developers.google.com/analytics/devguides/collection/gtagjs/events
   event: (options: { action: string; category: string; label: string; value?: number }) => {
-    if (!isProduction) {
+    if (!IS_PRODUCTION) {
       return
     }
 

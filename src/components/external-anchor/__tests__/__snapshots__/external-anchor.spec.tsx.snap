@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / ExternalAnchor renders an external anchor 1`] = `
+exports[`ExternalAnchor renders an external anchor 1`] = `
 .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;

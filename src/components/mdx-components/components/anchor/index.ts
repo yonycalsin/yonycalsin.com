@@ -1,1 +1,1 @@
-export * from './anchor'
+export { default as Anchor } from './anchor'

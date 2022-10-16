@@ -1,22 +1,10 @@
 import { motion } from 'framer-motion'
 
-import { MOTION_TRANSITION, MOTION_WHILE_TYPE_VARIANT } from '~/utils/constants/motion'
+import type { SunIconProps } from 'typings/components'
+import { MOTION_WHILE_TYPE_VARIANT } from 'utils/constants'
+import { CORE_VARIANTS, RAYS_VARIANTS } from './sun-icon-constants'
 
-export interface SunIconProps {
-  className?: string
-}
-
-const raysVariants = {
-  initial: { rotate: 45 },
-  animate: { rotate: 0, transition: MOTION_TRANSITION },
-}
-
-const coreVariants = {
-  initial: { scale: 1.5 },
-  animate: { scale: 1, transition: MOTION_TRANSITION },
-}
-
-export function SunIcon(props: SunIconProps) {
+function SunIcon(props: SunIconProps) {
   const { className } = props
 
   return (
@@ -39,9 +27,9 @@ export function SunIcon(props: SunIconProps) {
         fill="currentColor"
         initial="initial"
         animate="animate"
-        variants={coreVariants}
+        variants={CORE_VARIANTS}
       />
-      <motion.g initial="initial" animate="animate" variants={raysVariants}>
+      <motion.g initial="initial" animate="animate" variants={RAYS_VARIANTS}>
         <circle cx="3.08982" cy="6.85502" r="1.71143" transform="rotate(-60 3.08982 6.85502)" fill="currentColor" />
         <circle cx="3.0903" cy="17.1436" r="1.71143" transform="rotate(-120 3.0903 17.1436)" fill="currentColor" />
         <circle cx="12" cy="22.2881" r="1.71143" fill="currentColor" />
@@ -52,3 +40,5 @@ export function SunIcon(props: SunIconProps) {
     </motion.svg>
   )
 }
+
+export default SunIcon

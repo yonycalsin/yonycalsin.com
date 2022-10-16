@@ -1,13 +1,13 @@
-import { QueryClient } from '@tanstack/react-query'
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
+import { QueryClient } from '@tanstack/react-query'
 
-import { Meta } from '~/components/meta'
-import { BlogCategoryScreen } from '~/screens/blog-category'
-import { getCategoriesApi, getCategoryApi, getPostsApi } from '~/services/blog'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { BlogCategoryPageProps, BlogCategoryPageQueryParams } from '~/typings/pages/blog-category'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { BlogCategoryPageProps, BlogCategoryPageQueryParams } from 'typings/pages'
+import type { CategoryResponsePayload, PostResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
+import { getCategoriesApi, getCategoryApi, getPostsApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import BlogCategoryScreen from 'screens/blog-category'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function BlogCategoryPage(props: BlogCategoryPageProps) {
   const { category, posts } = props
@@ -29,9 +29,11 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<BlogCategor
     },
   })
 
-  const categoriesResponse = await queryClient.fetchQuery([blogApiEndpoints.CATEGORIES], getCategoriesApi, {
-    staleTime: Infinity,
-  })
+  const categoriesResponse = await queryClient.fetchQuery<ServerListResponse<CategoryResponsePayload>>(
+    [API_ENDPOINTS.CATEGORIES],
+    getCategoriesApi,
+    { staleTime: Infinity },
+  )
 
   return {
     fallback: false,
@@ -64,8 +66,8 @@ export async function getStaticProps(
 
   const categorySlug = params.slug
 
-  const categoryResponse = await queryClient.fetchQuery(
-    [blogApiEndpoints.CATEGORY(categorySlug)],
+  const categoryResponse = await queryClient.fetchQuery<ServerResponse<CategoryResponsePayload>>(
+    [API_ENDPOINTS.CATEGORY(categorySlug)],
     () => getCategoryApi(categorySlug),
     { staleTime: Infinity },
   )
@@ -76,8 +78,8 @@ export async function getStaticProps(
     }
   }
 
-  const postsResponse = await queryClient.fetchQuery(
-    [blogApiEndpoints.POSTS, categorySlug],
+  const postsResponse = await queryClient.fetchQuery<ServerListResponse<PostResponsePayload>>(
+    [API_ENDPOINTS.POSTS, categorySlug],
     () => getPostsApi({ filters: { category: [categorySlug] } }),
     { staleTime: Infinity },
   )
@@ -87,7 +89,7 @@ export async function getStaticProps(
       category: categoryResponse.data,
       posts: postsResponse.data,
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

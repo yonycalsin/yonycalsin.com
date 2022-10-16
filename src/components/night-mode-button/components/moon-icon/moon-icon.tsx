@@ -1,19 +1,10 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
-import { MOTION_TRANSITION, MOTION_WHILE_TYPE_VARIANT } from '~/utils/constants/motion'
+import type { MoonIconProps } from 'typings/components'
+import { VARIANTS } from './moon-icon-constants'
 
-export interface MoonIconProps {
-  className?: string
-}
-
-const variants = {
-  initial: { scale: 0.6, rotate: 90 },
-  animate: { scale: 1, rotate: 0, transition: MOTION_TRANSITION },
-  whileTap: MOTION_WHILE_TYPE_VARIANT,
-}
-
-export function MoonIcon(props: MoonIconProps) {
+function MoonIcon(props: MoonIconProps) {
   const { className } = props
 
   return (
@@ -31,8 +22,10 @@ export function MoonIcon(props: MoonIconProps) {
         initial="initial"
         animate="animate"
         whileTap="whileTap"
-        variants={variants}
+        variants={VARIANTS}
       />
     </motion.svg>
   )
 }
+
+export default MoonIcon

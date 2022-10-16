@@ -2,7 +2,7 @@ import type { useColorMode } from '@chakra-ui/react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { NightModeButton } from '../night-mode-button'
+import { NightModeButton } from 'components'
 
 const mockToggleColorMode = jest.fn()
 

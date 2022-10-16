@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react'
 
-import { ExternalAnchor } from '../external-anchor'
+import { ExternalAnchor } from 'components'
 
-describe('Components / ExternalAnchor', () => {
+describe('ExternalAnchor', () => {
   it('renders an external anchor', () => {
     const view = render(<ExternalAnchor href="https://domain.com">Go to home</ExternalAnchor>)
 

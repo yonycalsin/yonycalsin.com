@@ -2,9 +2,9 @@ import { ChakraKBar } from '@chakra-ui-kbar/core'
 import { render } from '@testing-library/react'
 import { FeatureProvider } from 'toggled'
 
-import { MainLayout } from '../main.layout'
+import { MainLayout } from 'layouts'
 
-describe('Layouts / Main', () => {
+describe('MainLayout', () => {
   it('renders the main layout', () => {
     const view = render(
       <FeatureProvider features={[]}>

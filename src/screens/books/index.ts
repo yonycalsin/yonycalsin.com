@@ -1,1 +1,1 @@
-export * from './books-screen'
+export { default } from './books-screen'

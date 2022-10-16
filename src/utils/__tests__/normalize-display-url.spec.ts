@@ -1,6 +1,6 @@
-import normalizeDisplayUrl from '../normalize-display-url'
+import { normalizeDisplayUrl } from 'utils'
 
-describe('Utils / normalizeDisplayUrl', () => {
+describe('normalizeDisplayUrl', () => {
   it('removes the http prefix', () => {
     const result = normalizeDisplayUrl(`https://www.domain.com/endpoint`)
 

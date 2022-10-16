@@ -1,1 +1,1 @@
-export * from './linked-heading'
+export { default as LinkedHeading } from './linked-heading'

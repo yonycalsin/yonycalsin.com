@@ -1,14 +1,14 @@
+import type { Action } from '@chakra-ui-kbar/core'
 import * as React from 'react'
+import { useColorMode } from '@chakra-ui/react'
+import { useRegisterActions } from '@chakra-ui-kbar/core'
 import { BiMoon } from 'react-icons/bi'
 import { BsToggles } from 'react-icons/bs'
 import { RiComputerLine } from 'react-icons/ri'
-import { useColorMode } from '@chakra-ui/react'
-import type { Action } from '@chakra-ui-kbar/core'
-import { useRegisterActions } from '@chakra-ui-kbar/core'
 
-import { CommandBarSections } from './command-bar-utils'
+import { CommandBarSections } from './command-bar-constants'
 
-export function CommandBarActions() {
+function CommandBarActions() {
   const { setColorMode, toggleColorMode } = useColorMode()
 
   const commandActions = React.useMemo(() => {
@@ -58,3 +58,5 @@ export function CommandBarActions() {
 
   return null
 }
+
+export default CommandBarActions

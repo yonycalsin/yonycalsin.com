@@ -1,14 +1,14 @@
+import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 import * as React from 'react'
 import { QueryClient } from '@tanstack/react-query'
-import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next'
 
-import { Meta } from '~/components/meta'
-import { BlogPostScreen } from '~/screens/blog-post'
-import { getPostApi, getPostsApi } from '~/services/blog/posts'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { BlogPostPageProps, BlogPostPageQueryParams } from '~/typings/pages/blog-post'
-import { timings } from '~/utils/constants/constants'
-import { NUMERICS } from '~/utils/constants/numerics'
+import type { BlogPostPageProps, BlogPostPageQueryParams } from 'typings/pages'
+import type { PostResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
+import { getPostApi, getPostsApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import BlogPostScreen from 'screens/blog-post'
+import { Meta } from 'components'
+import { NUMERICS, TIMINGS } from 'utils/constants'
 
 function BlogSlugPage(props: BlogPostPageProps) {
   const { post } = props
@@ -30,9 +30,11 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<BlogPostPag
     },
   })
 
-  const postsResponse = await queryClient.fetchQuery([blogApiEndpoints.POSTS], () => getPostsApi(), {
-    staleTime: Infinity,
-  })
+  const postsResponse = await queryClient.fetchQuery<ServerListResponse<PostResponsePayload>>(
+    [API_ENDPOINTS.POSTS],
+    () => getPostsApi(),
+    { staleTime: Infinity },
+  )
 
   return {
     fallback: false,
@@ -59,9 +61,11 @@ export async function getStaticProps(
 
   const postSlug = (params?.slug ?? '') as string
 
-  const postResponse = await queryClient.fetchQuery([blogApiEndpoints.POST(postSlug)], () => getPostApi(postSlug), {
-    staleTime: Infinity,
-  })
+  const postResponse = await queryClient.fetchQuery<ServerResponse<PostResponsePayload>>(
+    [API_ENDPOINTS.POST(postSlug)],
+    () => getPostApi(postSlug),
+    { staleTime: Infinity },
+  )
 
   if (!postResponse.data) {
     return {
@@ -73,7 +77,7 @@ export async function getStaticProps(
     props: {
       post: postResponse.data,
     },
-    revalidate: timings.REVALIDATE_STATIC_PAGES_TIME,
+    revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
   }
 }
 

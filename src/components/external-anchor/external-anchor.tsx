@@ -1,15 +1,10 @@
 import * as React from 'react'
+import { Icon, Link, useColorModeValue as mode } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
-import { Icon, Link, LinkProps, useColorModeValue as mode } from '@chakra-ui/react'
 
-export interface ExternalAnchorProps extends LinkProps {
-  children: React.ReactNode
-}
+import type { ExternalAnchorProps } from 'typings/components'
 
-/**
- * @author yonycalsin
- */
-export function ExternalAnchor(props: ExternalAnchorProps) {
+function ExternalAnchor(props: ExternalAnchorProps) {
   const { children, ...restProps } = props
 
   return (
@@ -29,3 +24,5 @@ export function ExternalAnchor(props: ExternalAnchorProps) {
     </span>
   )
 }
+
+export default ExternalAnchor

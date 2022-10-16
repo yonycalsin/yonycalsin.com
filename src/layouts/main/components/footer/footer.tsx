@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Box, Container, Text, VStack } from '@chakra-ui/react'
 
-import { CommandBarStartAction } from '~/components/command-bar'
+import { CommandBarStartAction } from 'components'
 
-export function Footer() {
+function Footer() {
   return (
     <Box as="footer" py="12">
       <Container maxW="container.md">
@@ -16,3 +16,5 @@ export function Footer() {
     </Box>
   )
 }
+
+export default Footer

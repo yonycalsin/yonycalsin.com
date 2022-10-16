@@ -1,1 +1,1 @@
-export * from './pinned-projects'
+export { default as PinnedProjects } from './pinned-projects'

@@ -3,17 +3,15 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
 
-import { SectionHeader } from '~/components/section/section-header'
-import { getPinnedProjects } from '~/services/project/projects'
-import { projectApiEndpoints } from '~/services/project/utils/project-api-endpoints'
-import type { ServerListResponse } from '~/typings/services'
-import type { ProjectResponsePayload } from '~/typings/services/project/projects'
+import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
+import { getPinnedProjects } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import { SectionHeader } from 'components'
+import ProjectCard from './project-card'
 
-import { ProjectCard } from './project-card'
-
-export function PinnedProjects() {
+function PinnedProjects() {
   const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(
-    [projectApiEndpoints.PINNED_PROJECTS],
+    [API_ENDPOINTS.PINNED_PROJECTS],
     () => getPinnedProjects(),
     { staleTime: Infinity },
   )
@@ -44,3 +42,5 @@ export function PinnedProjects() {
     </Box>
   )
 }
+
+export default PinnedProjects

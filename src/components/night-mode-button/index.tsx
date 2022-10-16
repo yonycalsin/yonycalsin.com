@@ -1,1 +1,1 @@
-export * from './night-mode-button'
+export { default as NightModeButton } from './night-mode-button'

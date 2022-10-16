@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layouts / Main renders the main layout 1`] = `
+exports[`MainLayout renders the main layout 1`] = `
 .emotion-0 {
   width: full;
   top: 0px;

@@ -1,16 +1,13 @@
 import * as React from 'react'
+import { Icon } from '@chakra-ui/react'
 import { CgTemplate } from 'react-icons/cg'
 import { FaHandsHelping, FaNpm } from 'react-icons/fa'
 import { MdWorkOutline } from 'react-icons/md'
-import { Icon } from '@chakra-ui/react'
 
-import { ProjectResponsePayload, ProjectTypeResponsePayload } from '~/typings/services/project/projects'
+import { ProjectTypeResponsePayload } from 'typings/services'
+import type { WorkItemIconProps } from 'typings/components'
 
-export interface WorkItemIconProps {
-  projectType: ProjectResponsePayload['type']
-}
-
-export function getWorkItemIcon(projectType: ProjectResponsePayload['type']) {
+export function getWorkItemIcon(projectType: WorkItemIconProps['projectType']) {
   switch (projectType) {
     case ProjectTypeResponsePayload.PROJECT: {
       return MdWorkOutline
@@ -34,7 +31,7 @@ export function getWorkItemIcon(projectType: ProjectResponsePayload['type']) {
   }
 }
 
-export function getWorkItemColors(projectType: ProjectResponsePayload['type']) {
+export function getWorkItemColors(projectType: WorkItemIconProps['projectType']) {
   switch (projectType) {
     case ProjectTypeResponsePayload.PROJECT: {
       return {

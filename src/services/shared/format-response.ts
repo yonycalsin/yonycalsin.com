@@ -1,8 +1,8 @@
-import type { ServerErrorResponse, ServerListResponse, ServerResponse } from '~/typings/services'
+import type { ServerErrorResponse, ServerListResponse, ServerResponse } from 'typings/services'
 
 type ResponseType = ServerResponse<unknown> | ServerListResponse<unknown>
 
-export async function formatResponse<T extends ResponseType>(response: Response): Promise<T> {
+async function formatResponse<T extends ResponseType>(response: Response): Promise<T> {
   const { status: httpCode } = response
 
   try {
@@ -39,3 +39,5 @@ export async function formatResponse<T extends ResponseType>(response: Response)
     return value
   }
 }
+
+export default formatResponse

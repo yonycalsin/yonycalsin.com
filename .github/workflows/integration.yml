@@ -11,29 +11,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: ['16.14.0']
+        node: [16.14.0]
         os: [ubuntu-latest]
         pnpm: [7.11.0]
 
     steps:
-      - name: Setup Database with Mysql
-        run: |
-          docker run \
-          --name mysql \
-          -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
-          -e MYSQL_DATABASE=personal_website \
-          -e MYSQL_USER=githubci \
-          -e MYSQL_PASSWORD=githubci \
-          --health-cmd='mysqladmin ping' \
-          --health-interval=10s \
-          --health-timeout=5s \
-          --health-retries=5 \
-          -p 3306:3306 \
-          -d mysql:8.0.13 \
-          --sql-mode='' \
-          --default-authentication-plugin='mysql_native_password' \
-
-      - name: Check out code
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - name: Install pnpm
@@ -41,7 +24,7 @@ jobs:
         with:
           version: ${{ matrix.pnpm }}
 
-      - name: Setup Node.js (${{ matrix.node }}) environment
+      - name: Setup Node.js (${{ matrix.node }})
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -50,11 +33,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Wait for MySQL
-        run: pnpm dlx wait-on tcp:3306 && echo "MySQL is up"
+      - name: Lint
+        run: pnpm run lint
 
-      - name: Static Testing
-        run: pnpm run test:static
+      - name: Build
+        run: pnpm run build
+        env:
+          APP_ENV: development
+          REST_API_URL: https://api.yonycalsin.com
+          REST_API_PUBLIC_KEY: ${{ secrets.ENV_REST_API_PUBLIC_KEY }}
+          REST_API_MOCKING: true
+          DEBUG: api:*
+          FF_BOOKS: false
+          FF_BLOG: false
+          FF_PROJECTS: false
 
       - name: Unit Testing
         run: pnpm run test:unit:ci

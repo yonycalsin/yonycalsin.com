@@ -1,7 +1,7 @@
-import theme from './theme'
+import 'assets/styles/nprogress.css'
+import 'assets/styles/coding.css'
 
-import '~/assets/styles/nprogress.css'
-import '~/assets/styles/coding.css'
+import theme from './theme'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

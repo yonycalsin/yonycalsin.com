@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Page Transaction wrappers a component with page-transaction correctly 1`] = `
+exports[`PageTransaction wrappers a component with page-transaction correctly 1`] = `
 <body>
   <div>
     <div

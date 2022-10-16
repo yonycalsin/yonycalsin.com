@@ -1,13 +1,9 @@
 import * as React from 'react'
 import { Link, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
-import type { RecommendationResponsePayload } from '~/typings/services/recommendation/recommendations'
+import type { RecommendationProps } from 'typings/components'
 
-export interface RecommendationProps {
-  recommendation: RecommendationResponsePayload
-}
-
-export function Recommendation(props: RecommendationProps) {
+function Recommendation(props: RecommendationProps) {
   const { recommendation } = props
 
   const borderColor = useColorModeValue('gray.200', 'gray.700')
@@ -36,3 +32,5 @@ export function Recommendation(props: RecommendationProps) {
     </VStack>
   )
 }
+
+export default Recommendation

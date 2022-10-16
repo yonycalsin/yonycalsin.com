@@ -1,4 +1,4 @@
-import type { PageResponsePayload } from '../services/page/pages'
+import type { PageResponsePayload } from '../services/pages'
 
 export interface PagePageProps {
   page: PageResponsePayload

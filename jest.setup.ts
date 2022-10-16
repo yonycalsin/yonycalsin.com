@@ -1,3 +1,4 @@
+import * as React from 'react'
 // Optional: configure or set up a testing framework before each test.
 // If you delete this file, remove `setupFilesAfterEnv` from `jest.config.js`
 
@@ -5,7 +6,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
-
 import { matchers } from '@emotion/jest'
 import dayjs from 'dayjs'
 import isToday from 'dayjs/plugin/isToday'
@@ -22,6 +22,14 @@ dayjs.extend(timezone)
 dayjs.extend(isToday)
 
 dayjs.extend(isYesterday)
+
+/**
+ * @todo fix when import modules from this dependency, for now we are mocking to don't throw the error
+ * @author yonycalsin
+ */
+jest.mock('react-medium-image-zoom', () => ({
+  default: () => React.createElement('div'),
+}))
 
 beforeAll(() => {
   Object.defineProperty(window, 'matchMedia', {

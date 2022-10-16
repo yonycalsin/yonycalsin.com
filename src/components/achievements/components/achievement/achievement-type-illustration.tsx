@@ -1,17 +1,13 @@
+import type { AchievementTypeIllustrationProps } from 'typings/components'
 import {
   AwardAchievementIllustration,
   EducationAchievementIllustration,
   SecurityAchievementIllustration,
   WorkAchievementIllustration,
-} from '~/assets/illustrations'
-import { UnsupportedValueError } from '~/errors'
+} from 'components/illustrations'
+import { UnsupportedValueError } from 'utils/exceptions'
 
-export interface AchievementTypeIllustrationProps {
-  type: string
-  className?: string
-}
-
-export function AchievementTypeIllustration(props: AchievementTypeIllustrationProps) {
+function AchievementTypeIllustration(props: AchievementTypeIllustrationProps) {
   const { type, className } = props
 
   switch (type) {
@@ -38,3 +34,5 @@ export function AchievementTypeIllustration(props: AchievementTypeIllustrationPr
     }
   }
 }
+
+export default AchievementTypeIllustration

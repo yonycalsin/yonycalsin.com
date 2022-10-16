@@ -1,4 +1,3 @@
-import { BsChevronCompactRight } from 'react-icons/bs'
 import {
   Box,
   Breadcrumb,
@@ -12,15 +11,16 @@ import {
 } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import RouterLink from 'next/link'
+import { BsChevronCompactRight } from 'react-icons/bs'
 
-import { MainLayout } from '~/layouts'
-import { getCategoriesApi } from '~/services/blog'
-import { blogApiEndpoints } from '~/services/blog/utils/blog-api-endpoints'
-import type { CategoryResponsePayload, ServerListResponse } from '~/typings/services'
+import type { CategoryResponsePayload, ServerListResponse } from 'typings/services'
+import { getCategoriesApi } from 'services'
+import { API_ENDPOINTS } from 'services/shared'
+import { MainLayout } from 'layouts'
 
-export function BlogCategoriesScreen() {
+function BlogCategoriesScreen() {
   const categoriesResponse = useQuery<ServerListResponse<CategoryResponsePayload>>(
-    [blogApiEndpoints.CATEGORIES],
+    [API_ENDPOINTS.CATEGORIES],
     getCategoriesApi,
     { staleTime: Infinity },
   )
@@ -69,3 +69,5 @@ export function BlogCategoriesScreen() {
     </MainLayout>
   )
 }
+
+export default BlogCategoriesScreen

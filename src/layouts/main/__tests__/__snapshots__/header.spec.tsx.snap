@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layouts / Main renders a header 1`] = `
+exports[`MainLayout/Header renders a header 1`] = `
 .emotion-0 {
   width: full;
   top: 0px;

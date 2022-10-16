@@ -2,16 +2,11 @@ import * as React from 'react'
 import { Grid, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
-import type { AchievementResponsePayload } from '~/typings/services/achievement/achievements'
-import { dateFormats } from '~/utils/constants/constants'
+import type { AchievementProps } from 'typings/components'
+import { DATE_FORMATS } from 'utils/constants'
+import AchievementTypeIllustration from './achievement-type-illustration'
 
-import { AchievementTypeIllustration } from './achievement-type-illustration'
-
-export interface AchievementProps {
-  achievement: AchievementResponsePayload
-}
-
-export function Achievement(props: AchievementProps) {
+function Achievement(props: AchievementProps) {
   const { achievement } = props
 
   return (
@@ -39,7 +34,7 @@ export function Achievement(props: AchievementProps) {
           fontSize="sm"
           fontStyle="italic"
         >
-          - {dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}
+          - {dayjs(achievement.date).format(DATE_FORMATS.HUMAN_DATE)}
         </Text>
       </VStack>
       <Text
@@ -51,7 +46,7 @@ export function Achievement(props: AchievementProps) {
         }}
         fontWeight="light"
       >
-        -{dayjs(achievement.date).format(dateFormats.HUMAN_DATE)}
+        -{dayjs(achievement.date).format(DATE_FORMATS.HUMAN_DATE)}
       </Text>
     </Grid>
   )
