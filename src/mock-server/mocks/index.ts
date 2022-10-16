@@ -4,4 +4,4 @@ export * from './categories'
 export * from './pages'
 export * from './posts'
 export * from './projects'
-export * from "./recommendations"
+export * from './recommendations'
