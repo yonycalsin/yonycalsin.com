@@ -1,3 +1,5 @@
+import isotipo from 'assets/brand/images/isotipo.png'
+
 import * as React from 'react'
 import { Box, Container, HStack, Link } from '@chakra-ui/react'
 import Image from 'next/image'
@@ -30,14 +32,7 @@ const Header = () => {
       >
         <RouterLink href="/" passHref>
           <Link display="contents">
-            <Image
-              src="https://avatars.githubusercontent.com/u/58490737?v=4"
-              layout="intrinsic"
-              width={32}
-              height={32}
-              priority
-              alt=""
-            />
+            <Image src={isotipo} layout="intrinsic" width={32} height={32} priority alt="" />
           </Link>
         </RouterLink>
         <HStack spacing="4">

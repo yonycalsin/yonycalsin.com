@@ -41,6 +41,6 @@ interface ProjectResponsePayload {
   startedAt: string
 }
 
-export { ProjectTypeResponsePayload }
+export { ProjectMaintenanceStatusResponsePayload, ProjectStatusResponsePayload, ProjectTypeResponsePayload }
 
 export type { ProjectResponsePayload }
