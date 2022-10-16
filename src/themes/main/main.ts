@@ -6,6 +6,7 @@ import fontSizes from './options/font-sizes'
 import fonts from './options/fonts'
 import mdx from './options/mdx'
 import semanticTokens from './options/semantic-tokens'
+import shadows from './options/shadows'
 import styles from './options/styles'
 
 const ThemeMain = extendTheme({
@@ -15,6 +16,7 @@ const ThemeMain = extendTheme({
   styles,
   fontSizes,
   colors,
+  shadows,
   mdx,
 })
 

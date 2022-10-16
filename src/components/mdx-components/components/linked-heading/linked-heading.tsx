@@ -3,7 +3,7 @@ import { chakra, HTMLChakraProps } from '@chakra-ui/react'
 
 function LinkedHeading(props: HTMLChakraProps<'h2'>) {
   return (
-    <chakra.h2 data-group="" css={{ scrollMarginBlock: '6.875rem' }} {...props}>
+    <chakra.h2 data-group="" {...props}>
       <span className="content">{props.children}</span>
       {props.id && (
         <chakra.a

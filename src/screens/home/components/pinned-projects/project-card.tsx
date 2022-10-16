@@ -1,35 +1,40 @@
 import * as React from 'react'
-import { useColorModeValue } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import RouterLink from 'next/link'
 
 import type { ProjectCardProps } from 'typings/screens'
-import { MotionBox } from 'components'
-import { ProjectCardButton } from './project-card-button'
-import ProjectCardContent from './project-card-content'
 
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props
 
-  const backgroundColor = useColorModeValue('gray.50', 'gray.800')
-
-  const [isOpen, setIsOpen] = React.useState(false)
-
-  const onToggle = () => setIsOpen(prevIsOpen => !prevIsOpen)
-
   return (
-    <MotionBox
-      animate={{
-        height: isOpen ? 'auto' : 58,
-      }}
-      display="flex"
-      overflow="hidden"
-      position="relative"
-      flexDirection="column"
-      borderRadius="md"
-      backgroundColor={backgroundColor}
-    >
-      <ProjectCardButton isOpen={isOpen} onToggle={onToggle} project={project} />
-      <ProjectCardContent isOpen={isOpen} project={project} />
-    </MotionBox>
+    <RouterLink href={`/projects#${project.slug}`} passHref>
+      <Box
+        backgroundColor="white"
+        boxShadow="card"
+        px="4"
+        py="2"
+        borderRadius="lg"
+        as="a"
+        border="1px"
+        borderColor="transparent"
+        borderWidth="medium"
+        _hover={{
+          borderColor: 'primary.600',
+          cursor: 'pointer',
+        }}
+        _dark={{
+          backgroundColor: 'gray.800',
+        }}
+      >
+        <Text noOfLines={1} mb="1" fontWeight="semibold">
+          {project.name}
+        </Text>
+        <Text fontSize="md" fontStyle="italic" textColor="gray" noOfLines={2}>
+          {project.shortDescription}
+        </Text>
+      </Box>
+    </RouterLink>
   )
 }
 

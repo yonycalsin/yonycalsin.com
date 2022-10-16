@@ -1,3 +1,8 @@
 @import './fonts.css';
 @import './nprogress.css';
 @import './coding.css';
+
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 30px;
+}
