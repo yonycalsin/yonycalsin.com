@@ -1,4 +1,4 @@
-import type { CategoryResponsePayload, PostResponsePayload } from '../services'
+import type { CategoryResponsePayload, PostResponsePayload } from 'typings/services'
 
 export interface BlogCategoryPageProps {
   category: CategoryResponsePayload

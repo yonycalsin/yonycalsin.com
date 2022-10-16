@@ -1,5 +1,5 @@
+import type { MockContext, MockRequest, MockResponse } from 'typings/mock-server'
 import type { PostResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
-import type { MockContext, MockRequest, MockResponse } from 'mock-server/mock-server-types'
 import { getPostsDataResponseOk, getPostsResponseOk } from './posts-mock'
 
 function getPostsApi(request: MockRequest, response: MockResponse, context: MockContext) {
@@ -15,13 +15,12 @@ function getPostApi(request: MockRequest<never, { slug: string }>, response: Moc
     return response(context.status(404))
   }
 
-  return response(
-    context.status(200),
-    context.json<ServerResponse<PostResponsePayload>>({
-      error: null,
-      data: post,
-    }),
-  )
+  const payload: ServerResponse<PostResponsePayload> = {
+    error: null,
+    data: post,
+  }
+
+  return response(context.status(200), context.json(payload))
 }
 
 export { getPostApi, getPostsApi }

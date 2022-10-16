@@ -96,8 +96,8 @@ exports[`MainLayout/Header renders a header 1`] = `
               alt=""
               data-nimg="intrinsic"
               decoding="async"
-              src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F58490737%3Fv%3D4&w=64&q=75"
-              srcset="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F58490737%3Fv%3D4&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F58490737%3Fv%3D4&w=64&q=75 2x"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
               style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
             />
           </span>

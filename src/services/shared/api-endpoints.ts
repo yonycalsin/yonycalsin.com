@@ -20,8 +20,8 @@ const API_ENDPOINTS = {
   READING_BOOKS: `${REST_API_URL}/books?status=Reading`,
 
   // Pages
-  ALL_PAGES: `${REST_API_URL}/pages`,
   PAGE: (pageSlug: string) => `${REST_API_URL}/pages/${pageSlug}`,
+  ALL_PAGES: `${REST_API_URL}/pages`,
 
   // Projects
   ALL_PROJECTS: `${REST_API_URL}/projects`,
