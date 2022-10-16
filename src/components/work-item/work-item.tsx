@@ -11,14 +11,24 @@ import { DATE_FORMATS } from 'utils/constants'
 import { getWorkItemColors, WorkItemIcon } from './components'
 
 function WorkItem(props: WorkItemProps) {
-  const { tags = [], title, type, description, webHref, startedAt = new Date(), repositoryHref, packageHref } = props
+  const {
+    tags = [],
+    title,
+    type,
+    slug,
+    description,
+    webHref,
+    startedAt = new Date(),
+    repositoryHref,
+    packageHref,
+  } = props
 
   const colors = React.useMemo(() => {
     return getWorkItemColors(type)
   }, [type])
 
   return (
-    <Box as="li">
+    <Box as="li" id={slug}>
       <Box
         boxShadow="lg"
         position="absolute"

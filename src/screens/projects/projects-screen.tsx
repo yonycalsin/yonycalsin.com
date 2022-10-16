@@ -62,6 +62,7 @@ function ProjectsScreen() {
               key={project.id}
               title={project.name}
               type={project.type}
+              slug={project.slug}
               webHref={project.websiteUrl}
               repositoryHref={project.repositoryUrl}
               packageHref={project.packageUrl}
