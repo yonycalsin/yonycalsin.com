@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { ChakraKBar } from '@chakra-ui-kbar/core'
-import { screen } from '@testing-library/react'
+import { screen, within } from '@testing-library/react'
 import { DefaultFeature, FeatureProvider } from 'toggled'
 
 import { achievementsSuccess } from 'mock-server/mocks/achievements'
@@ -50,7 +50,7 @@ describe('HomeScreen', () => {
     expect(view.baseElement).toMatchSnapshot()
   })
 
-  it('renders the pinned projects section', () => {
+  it('renders the pinned projects section', async () => {
     mockGetPinnedProjectsApi.mockReturnValueOnce(pinnedProjectsSuccess)
 
     const view = setup(
@@ -59,16 +59,20 @@ describe('HomeScreen', () => {
       }),
     )
 
+    await screen.findByRole('progressbar')
+
+    const list = await screen.findByRole('list', { name: /list of featured projects/i })
+
+    const items = within(list).queryAllByRole('listitem')
+
+    expect(items).toHaveLength(pinnedProjectsSuccess.data.length)
+
     expect(mockGetPinnedProjectsApi).toHaveBeenCalledTimes(1)
-
-    const title = screen.queryByRole('heading', { name: /featured projects/i })
-
-    expect(title).toBeInTheDocument()
 
     expect(view.baseElement).toMatchSnapshot()
   })
 
-  it('renders the achievements section', () => {
+  it('renders the achievements section', async () => {
     mockGetFeaturedAchievements.mockReturnValueOnce(achievementsSuccess)
 
     const view = setup(
@@ -77,11 +81,15 @@ describe('HomeScreen', () => {
       }),
     )
 
+    await screen.findByRole('progressbar')
+
+    const list = await screen.findByRole('list', { name: /list of achievements/i })
+
+    const items = within(list).getAllByRole('listitem')
+
+    expect(items).toHaveLength(achievementsSuccess.data.length)
+
     expect(mockGetFeaturedAchievements).toHaveBeenCalledTimes(1)
-
-    const title = screen.queryByRole('heading', { name: /achievements/i })
-
-    expect(title).toBeInTheDocument()
 
     expect(view.baseElement).toMatchSnapshot()
   })
@@ -95,11 +103,15 @@ describe('HomeScreen', () => {
       }),
     )
 
+    await screen.findByRole('progressbar')
+
+    const list = await screen.findByRole('list', { name: /list of recommendations/i })
+
+    const items = within(list).getAllByRole('listitem')
+
+    expect(items).toHaveLength(featuredRecommendationsSuccess.data.length)
+
     expect(mockGetFeaturedRecommendations).toHaveBeenCalledTimes(1)
-
-    const title = screen.queryByRole('heading', { name: /recommendations/i })
-
-    expect(title).toBeInTheDocument()
 
     expect(view.baseElement).toMatchSnapshot()
   })

@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import type { RecommendationResponsePayload, ServerListResponse } from 'typings/services'
 import { getFeaturedRecommendationsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
-import { Recommendations, SectionHeader } from 'components'
+import { LoaderBox, Recommendations, SectionHeader } from 'components'
 
 function FeaturedRecommendations() {
   const queryResult = useQuery<ServerListResponse<RecommendationResponsePayload>>(
@@ -13,6 +13,10 @@ function FeaturedRecommendations() {
     () => getFeaturedRecommendationsApi(),
     { staleTime: Infinity },
   )
+
+  if (queryResult.isLoading) {
+    return <LoaderBox />
+  }
 
   const recommendations = queryResult.data?.data ?? []
 

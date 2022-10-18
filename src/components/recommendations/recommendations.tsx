@@ -18,6 +18,7 @@ function Recommendations(props: RecommendationsProps) {
         md: 4,
       }}
       role="list"
+      aria-label="List of recommendations"
     >
       {recommendations.map(recommendation => (
         <Recommendation key={recommendation.id} recommendation={recommendation} />

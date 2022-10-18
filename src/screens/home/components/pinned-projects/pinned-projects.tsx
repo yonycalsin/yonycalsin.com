@@ -6,7 +6,7 @@ import Link from 'next/link'
 import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
 import { getPinnedProjectsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
-import { SectionHeader } from 'components'
+import { LoaderBox, SectionHeader } from 'components'
 import ProjectCard from './project-card'
 
 function PinnedProjects() {
@@ -15,6 +15,10 @@ function PinnedProjects() {
     () => getPinnedProjectsApi(),
     { staleTime: Infinity },
   )
+
+  if (queryResult.isLoading) {
+    return <LoaderBox />
+  }
 
   const pinnedProjects = queryResult.data?.data ?? []
 

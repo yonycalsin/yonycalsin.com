@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
 import { getFeaturedAchievementsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
-import { Achievements, SectionHeader } from 'components'
+import { Achievements, LoaderBox, SectionHeader } from 'components'
 
 function FeaturedAchievements() {
   const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
@@ -13,6 +13,10 @@ function FeaturedAchievements() {
     () => getFeaturedAchievementsApi(),
     { staleTime: Infinity },
   )
+
+  if (queryResult.isLoading) {
+    return <LoaderBox />
+  }
 
   const achievements = queryResult.data?.data ?? []
 

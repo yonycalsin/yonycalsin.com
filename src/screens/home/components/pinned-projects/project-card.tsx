@@ -17,7 +17,7 @@ function ProjectCard(props: ProjectCardProps) {
   }, [project.type])
 
   return (
-    <RouterLink href={`/projects#${project.slug}`} passHref role="listitem">
+    <RouterLink href={`/projects#${project.slug}`} passHref>
       <Box
         backgroundColor="white"
         boxShadow="card"
@@ -35,6 +35,7 @@ function ProjectCard(props: ProjectCardProps) {
         _dark={{
           backgroundColor: 'gray.800',
         }}
+        role="listitem"
       >
         <HStack>
           <Icon as={icon} fill={colors.fill} />
