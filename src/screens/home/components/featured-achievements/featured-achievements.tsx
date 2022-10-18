@@ -3,14 +3,14 @@ import { Box, Text } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
-import { getFeaturedAchievements } from 'services'
+import { getFeaturedAchievementsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { Achievements, SectionHeader } from 'components'
 
 function FeaturedAchievements() {
   const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
     [API_ENDPOINTS.FEATURED_ACHIEVEMENTS],
-    () => getFeaturedAchievements(),
+    () => getFeaturedAchievementsApi(),
     { staleTime: Infinity },
   )
 

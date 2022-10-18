@@ -7,7 +7,7 @@ import nextBase64 from 'next-base64'
 
 import type { PagePageProps, PagePageQueryParams } from 'typings/pages'
 import type { PageResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
-import { getAllPages, getPage } from 'services'
+import { getAllPagesApi, getPageApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { useMDXComponent } from 'hooks'
 import { MainLayout } from 'layouts'
@@ -42,7 +42,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<PagePageQue
 
   const pages = await queryClient.fetchQuery<ServerListResponse<PageResponsePayload>>(
     [API_ENDPOINTS.ALL_PAGES],
-    () => getAllPages(),
+    () => getAllPagesApi(),
     { staleTime: Infinity },
   )
 
@@ -81,7 +81,7 @@ export async function getStaticProps(
 
   const page = await queryClient.fetchQuery<ServerResponse<PageResponsePayload>>(
     [API_ENDPOINTS.PAGE(pageSlug)],
-    () => getPage(pageSlug),
+    () => getPageApi(pageSlug),
     { staleTime: Infinity },
   )
 

@@ -9,7 +9,7 @@ import type {
   RecommendationResponsePayload,
   ServerListResponse,
 } from 'typings/services'
-import { getFeaturedAchievements, getFeaturedRecommendations, getPinnedProjects } from 'services'
+import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import HomeScreen from 'screens/home'
 import { Meta } from 'components'
@@ -35,19 +35,19 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
 
   await queryClient.prefetchQuery<ServerListResponse<AchievementResponsePayload>>(
     [API_ENDPOINTS.FEATURED_ACHIEVEMENTS],
-    () => getFeaturedAchievements(),
+    () => getFeaturedAchievementsApi(),
     { staleTime: Infinity },
   )
 
   await queryClient.prefetchQuery<ServerListResponse<RecommendationResponsePayload>>(
     [API_ENDPOINTS.FEATURED_RECOMMENDATIONS],
-    () => getFeaturedRecommendations(),
+    () => getFeaturedRecommendationsApi(),
     { staleTime: Infinity },
   )
 
   await queryClient.prefetchQuery<ServerListResponse<ProjectResponsePayload>>(
     [API_ENDPOINTS.PINNED_PROJECTS],
-    () => getPinnedProjects(),
+    () => getPinnedProjectsApi(),
     { staleTime: Infinity },
   )
 

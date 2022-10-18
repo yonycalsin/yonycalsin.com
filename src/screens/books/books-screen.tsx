@@ -3,7 +3,7 @@ import { Container, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import type { BookResponsePayload, ServerListResponse } from 'typings/services'
-import { getAllBooks, getReadingBooks } from 'services'
+import { getAllBooksApi, getReadingBooksApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
 import { BookItem } from './components'
@@ -11,13 +11,13 @@ import { BookItem } from './components'
 function BooksScreen() {
   const allBooksResponse = useQuery<ServerListResponse<BookResponsePayload>>(
     [API_ENDPOINTS.ALL_BOOKS],
-    () => getAllBooks(),
+    () => getAllBooksApi(),
     { staleTime: Infinity },
   )
 
   const readingBooksResponse = useQuery<ServerListResponse<BookResponsePayload>>(
     [API_ENDPOINTS.READING_BOOKS],
-    () => getReadingBooks(),
+    () => getReadingBooksApi(),
     { staleTime: Infinity },
   )
 

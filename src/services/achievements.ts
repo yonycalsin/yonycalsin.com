@@ -1,7 +1,7 @@
 import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
 import { API_ENDPOINTS, DEFAULT_HEADERS, formatResponse } from './shared'
 
-async function getAllAchievements() {
+async function getAllAchievementsApi() {
   const response = await fetch(API_ENDPOINTS.ALL_ACHIEVEMENTS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
@@ -12,7 +12,7 @@ async function getAllAchievements() {
   return payload
 }
 
-async function getFeaturedAchievements() {
+async function getFeaturedAchievementsApi() {
   const response = await fetch(API_ENDPOINTS.FEATURED_ACHIEVEMENTS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
@@ -23,4 +23,4 @@ async function getFeaturedAchievements() {
   return payload
 }
 
-export { getAllAchievements, getFeaturedAchievements }
+export { getAllAchievementsApi, getFeaturedAchievementsApi }

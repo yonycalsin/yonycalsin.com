@@ -4,7 +4,7 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 
 import type { BooksPageProps } from 'typings/pages'
 import type { BookResponsePayload, ServerListResponse } from 'typings/services'
-import { getAllBooks, getReadingBooks } from 'services'
+import { getAllBooksApi, getReadingBooksApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import BooksScreen from 'screens/books'
 import { Meta } from 'components'
@@ -30,13 +30,13 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<BooksPagePr
 
   await queryClient.prefetchQuery<ServerListResponse<BookResponsePayload>>(
     [API_ENDPOINTS.ALL_BOOKS],
-    () => getAllBooks(),
+    () => getAllBooksApi(),
     { staleTime: Infinity },
   )
 
   await queryClient.prefetchQuery<ServerListResponse<BookResponsePayload>>(
     [API_ENDPOINTS.READING_BOOKS],
-    () => getReadingBooks(),
+    () => getReadingBooksApi(),
     { staleTime: Infinity },
   )
 

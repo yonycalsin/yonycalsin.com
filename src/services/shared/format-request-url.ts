@@ -1,5 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function formatRequestUrl<T extends Record<string, any> = Record<string, any>>(endpoint: string, data: T) {
+  const isDataEmpty = !Object.keys(data).length
+
+  if (isDataEmpty) {
+    return endpoint
+  }
+
   const url = new URL(endpoint)
 
   const setSearchParams = (values: T) => {

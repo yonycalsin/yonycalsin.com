@@ -17,6 +17,7 @@ function ExternalAnchor(props: ExternalAnchorProps) {
         isExternal
         target="_blank"
         rel="noreferrer"
+        role="link"
       >
         {children}
       </Link>

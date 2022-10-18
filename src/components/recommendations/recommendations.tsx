@@ -17,6 +17,7 @@ function Recommendations(props: RecommendationsProps) {
         base: 3,
         md: 4,
       }}
+      role="list"
     >
       {recommendations.map(recommendation => (
         <Recommendation key={recommendation.id} recommendation={recommendation} />

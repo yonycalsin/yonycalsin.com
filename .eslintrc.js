@@ -58,6 +58,7 @@ module.exports = {
             modules: [
               'typings',
               'mock-server',
+              'tests',
               'analytics',
               'services',
               'themes',

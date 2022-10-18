@@ -4,7 +4,7 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 
 import type { ProjectsPageProps } from 'typings/pages'
 import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
-import { getAllProjects } from 'services'
+import { getAllProjectsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import ProjectsScreen from 'screens/projects'
 import { Meta } from 'components'
@@ -33,7 +33,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<ProjectsPag
   if (hasWorkProjects) {
     await queryClient.prefetchQuery<ServerListResponse<ProjectResponsePayload>>(
       [API_ENDPOINTS.ALL_PROJECTS],
-      () => getAllProjects(),
+      () => getAllProjectsApi(),
       { staleTime: Infinity },
     )
   }

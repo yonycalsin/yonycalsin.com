@@ -1,0 +1,4829 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders the achievements section 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-extrabold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-9 {
+  line-height: var(--yony-lineHeights-7);
+  font-size: var(--yony-fontSizes-lg);
+  font-style: italic;
+  letter-spacing: var(--yony-letterSpacings-wider);
+  font-weight: var(--yony-fontWeights-normal);
+  font-family: var(--yony-fonts-heading);
+}
+
+.emotion-10 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-300);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10:hover,
+.emotion-10[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:focus-visible,
+.emotion-10[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-11 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--yony-colors-white);
+}
+
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-12:focus-visible,
+.emotion-12[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-12:disabled,
+.emotion-12[disabled],
+.emotion-12[aria-disabled=true],
+.emotion-12[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-12:hover,
+.emotion-12[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12:hover:disabled,
+.emotion-12[data-hover]:disabled,
+.emotion-12:hover[disabled],
+.emotion-12[data-hover][disabled],
+.emotion-12:hover[aria-disabled=true],
+.emotion-12[data-hover][aria-disabled=true],
+.emotion-12:hover[data-disabled],
+.emotion-12[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12:active,
+.emotion-12[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-13 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-15>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-linkedin-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-16:focus-visible,
+.emotion-16[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-16:disabled,
+.emotion-16[disabled],
+.emotion-16[aria-disabled=true],
+.emotion-16[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-16:hover,
+.emotion-16[data-hover] {
+  background: rgba(155, 218, 243, 0.12);
+}
+
+.emotion-16:hover:disabled,
+.emotion-16[data-hover]:disabled,
+.emotion-16:hover[disabled],
+.emotion-16[data-hover][disabled],
+.emotion-16:hover[aria-disabled=true],
+.emotion-16[data-hover][aria-disabled=true],
+.emotion-16:hover[data-disabled],
+.emotion-16[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-16:active,
+.emotion-16[data-active] {
+  background: rgba(155, 218, 243, 0.24);
+}
+
+.emotion-17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-primary-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-19:focus-visible,
+.emotion-19[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-19:disabled,
+.emotion-19[disabled],
+.emotion-19[aria-disabled=true],
+.emotion-19[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-19:hover,
+.emotion-19[data-hover] {
+  background: rgba(248, 168, 165, 0.12);
+}
+
+.emotion-19:hover:disabled,
+.emotion-19[data-hover]:disabled,
+.emotion-19:hover[disabled],
+.emotion-19[data-hover][disabled],
+.emotion-19:hover[aria-disabled=true],
+.emotion-19[data-hover][aria-disabled=true],
+.emotion-19:hover[data-disabled],
+.emotion-19[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-19:active,
+.emotion-19[data-active] {
+  background: rgba(248, 168, 165, 0.24);
+}
+
+.emotion-22 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-twitter-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-22:focus-visible,
+.emotion-22[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-22:disabled,
+.emotion-22[disabled],
+.emotion-22[aria-disabled=true],
+.emotion-22[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-22:hover,
+.emotion-22[data-hover] {
+  background: rgba(168, 220, 250, 0.12);
+}
+
+.emotion-22:hover:disabled,
+.emotion-22[data-hover]:disabled,
+.emotion-22:hover[disabled],
+.emotion-22[data-hover][disabled],
+.emotion-22:hover[aria-disabled=true],
+.emotion-22[data-hover][aria-disabled=true],
+.emotion-22:hover[data-disabled],
+.emotion-22[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-22:active,
+.emotion-22[data-active] {
+  background: rgba(168, 220, 250, 0.24);
+}
+
+.emotion-25 {
+  opacity: 0.6;
+  border: 0;
+  border-color: inherit;
+  border-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  margin-top: var(--yony-space-6);
+  margin-bottom: var(--yony-space-6);
+}
+
+.emotion-26 {
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-28 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-2xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-28 {
+    font-size: var(--yony-fontSizes-3xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-29 {
+  margin-top: var(--yony-space-3);
+}
+
+.emotion-30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-3);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-31 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-32 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-33>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-34 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-35 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-39 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-39>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-39 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-40 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-40:hover,
+.emotion-40[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-40:focus-visible,
+.emotion-40[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="opacity: 0; transform: translateY(8px) translateZ(0);"
+    >
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <h1
+            class="chakra-heading emotion-8"
+          >
+            Hi, I’m Yony Calsin.
+          </h1>
+          <p
+            class="chakra-text emotion-9"
+          >
+            I’m a software developer from 
+            <b>
+              Perú
+            </b>
+            . I work at
+             
+            <span>
+              <a
+                class="chakra-link emotion-10"
+                d="inline-flex"
+                href="https://www.linkedin.com/company/making-sense-llc"
+                rel="noreferrer"
+                role="link"
+                target="_blank"
+              >
+                Making Sense
+              </a>
+              <svg
+                class="chakra-icon emotion-11"
+                d="inline"
+                fill="none"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+             as a
+             
+            <b>
+              Frontend Developer.
+            </b>
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+          <div
+            class="chakra-stack emotion-15"
+          >
+            <a
+              class="chakra-button emotion-16"
+              href="https://www.linkedin.com/in/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"
+                  />
+                  <ellipse
+                    cx="6.5"
+                    cy="6.5"
+                    rx="1.55"
+                    ry="1.5"
+                  />
+                </svg>
+              </span>
+              Linkedin
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-19"
+              href="https://github.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.435 12.973c.269 0 .492.133.686.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.193.265-.417.396-.686.396-.278 0-.522-.131-.715-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.192-.264.436-.396.715-.396m3.44-3.559c.746.811 1.125 1.795 1.125 2.953 0 .748-.086 1.423-.259 2.023-.175.597-.394 1.084-.654 1.459-.264.376-.588.705-.974.989-.386.286-.741.492-1.065.623-.325.132-.695.233-1.111.306-.417.071-.726.111-.943.123l-.685.014-.547.015c-.301.013-.56.016-.762.016s-.461-.003-.762-.016l-.547-.015-.685-.014c-.218-.012-.526-.052-.943-.123-.423-.072-.786-.174-1.111-.306-.324-.131-.68-.337-1.064-.623-.387-.284-.711-.613-.975-.989-.261-.375-.479-.862-.654-1.459-.173-.6-.259-1.275-.259-2.023 0-1.158.379-2.143 1.125-2.953-.082-.041-.085-.447-.008-1.217.063-.771.227-1.482.495-2.132.934.099 2.09.629 3.471 1.581.466-.119 1.101-.183 1.917-.183.852 0 1.491.064 1.918.184.629-.425 1.23-.771 1.805-1.034.584-.261 1.005-.416 1.269-.457l.396-.09c.27.649.434 1.36.496 2.132.076.769.073 1.175-.009 1.216m-5.845 7.82c1.688 0 2.954-.202 3.821-.607.855-.404 1.292-1.238 1.292-2.496 0-.73-.273-1.34-.822-1.828-.278-.263-.613-.425-.989-.486-.375-.061-.949-.061-1.72 0-.769.062-1.298.09-1.582.09-.385 0-.8-.018-1.319-.059-.52-.04-.928-.065-1.223-.078-.294-.009-.609.027-.958.108-.345.082-.629.224-.853.425-.521.469-.79 1.077-.79 1.828 0 1.258.426 2.092 1.28 2.496.85.405 2.113.607 3.802.607h.061m-2.434-4.261c.268 0 .492.133.685.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.192.265-.417.396-.685.396-.279 0-.522-.131-.716-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.193-.264.436-.396.716-.396"
+                  />
+                </svg>
+              </span>
+              Github
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-22"
+              href="https://twitter.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.89 7.012c.808-.496 1.343-1.173 1.605-2.034-.786.417-1.569.703-2.351.861-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078-.715.717-1.076 1.588-1.076 2.605 0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388.549.676 1.254 1.107 2.115 1.291-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841.625.472 1.344.721 2.152.743-1.332 1.045-2.855 1.562-4.578 1.562-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974.784-1.564 1.172-3.192 1.172-4.892v-.468c.758-.57 1.371-1.212 1.84-1.921-.68.293-1.383.492-2.11.593z"
+                  />
+                </svg>
+              </span>
+              Twitter
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <hr
+          aria-orientation="horizontal"
+          class="chakra-divider emotion-25"
+        />
+        <div
+          class="emotion-26"
+        >
+          <div>
+            <div
+              class="emotion-27"
+            >
+              <h2
+                class="chakra-heading emotion-28"
+              >
+                Achievements
+              </h2>
+            </div>
+            <p
+              class="chakra-text emotion-29"
+            >
+              Featured achievements that I have achieved along my career.
+            </p>
+          </div>
+          <br />
+          <div
+            class="chakra-stack emotion-30"
+            role="list"
+          />
+        </div>
+      </main>
+    </div>
+    <footer
+      class="emotion-31"
+    >
+      <div
+        class="chakra-container emotion-32"
+      >
+        <div
+          class="chakra-stack emotion-33"
+        >
+          <p
+            class="chakra-text emotion-34"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-35"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-39"
+    >
+      <a
+        class="chakra-link emotion-40"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;
+
+exports[`HomeScreen renders the home screen 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-extrabold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-9 {
+  line-height: var(--yony-lineHeights-7);
+  font-size: var(--yony-fontSizes-lg);
+  font-style: italic;
+  letter-spacing: var(--yony-letterSpacings-wider);
+  font-weight: var(--yony-fontWeights-normal);
+  font-family: var(--yony-fonts-heading);
+}
+
+.emotion-10 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-300);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10:hover,
+.emotion-10[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:focus-visible,
+.emotion-10[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-11 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--yony-colors-white);
+}
+
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-12:focus-visible,
+.emotion-12[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-12:disabled,
+.emotion-12[disabled],
+.emotion-12[aria-disabled=true],
+.emotion-12[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-12:hover,
+.emotion-12[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12:hover:disabled,
+.emotion-12[data-hover]:disabled,
+.emotion-12:hover[disabled],
+.emotion-12[data-hover][disabled],
+.emotion-12:hover[aria-disabled=true],
+.emotion-12[data-hover][aria-disabled=true],
+.emotion-12:hover[data-disabled],
+.emotion-12[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12:active,
+.emotion-12[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-13 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-15>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-linkedin-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-16:focus-visible,
+.emotion-16[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-16:disabled,
+.emotion-16[disabled],
+.emotion-16[aria-disabled=true],
+.emotion-16[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-16:hover,
+.emotion-16[data-hover] {
+  background: rgba(155, 218, 243, 0.12);
+}
+
+.emotion-16:hover:disabled,
+.emotion-16[data-hover]:disabled,
+.emotion-16:hover[disabled],
+.emotion-16[data-hover][disabled],
+.emotion-16:hover[aria-disabled=true],
+.emotion-16[data-hover][aria-disabled=true],
+.emotion-16:hover[data-disabled],
+.emotion-16[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-16:active,
+.emotion-16[data-active] {
+  background: rgba(155, 218, 243, 0.24);
+}
+
+.emotion-17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-primary-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-19:focus-visible,
+.emotion-19[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-19:disabled,
+.emotion-19[disabled],
+.emotion-19[aria-disabled=true],
+.emotion-19[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-19:hover,
+.emotion-19[data-hover] {
+  background: rgba(248, 168, 165, 0.12);
+}
+
+.emotion-19:hover:disabled,
+.emotion-19[data-hover]:disabled,
+.emotion-19:hover[disabled],
+.emotion-19[data-hover][disabled],
+.emotion-19:hover[aria-disabled=true],
+.emotion-19[data-hover][aria-disabled=true],
+.emotion-19:hover[data-disabled],
+.emotion-19[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-19:active,
+.emotion-19[data-active] {
+  background: rgba(248, 168, 165, 0.24);
+}
+
+.emotion-22 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-twitter-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-22:focus-visible,
+.emotion-22[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-22:disabled,
+.emotion-22[disabled],
+.emotion-22[aria-disabled=true],
+.emotion-22[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-22:hover,
+.emotion-22[data-hover] {
+  background: rgba(168, 220, 250, 0.12);
+}
+
+.emotion-22:hover:disabled,
+.emotion-22[data-hover]:disabled,
+.emotion-22:hover[disabled],
+.emotion-22[data-hover][disabled],
+.emotion-22:hover[aria-disabled=true],
+.emotion-22[data-hover][aria-disabled=true],
+.emotion-22:hover[data-disabled],
+.emotion-22[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-22:active,
+.emotion-22[data-active] {
+  background: rgba(168, 220, 250, 0.24);
+}
+
+.emotion-25 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-26 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-27>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-28 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-29 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-33 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-33>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-33 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-34 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-34:hover,
+.emotion-34[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-34:focus-visible,
+.emotion-34[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="opacity: 0; transform: translateY(8px) translateZ(0);"
+    >
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <h1
+            class="chakra-heading emotion-8"
+          >
+            Hi, I’m Yony Calsin.
+          </h1>
+          <p
+            class="chakra-text emotion-9"
+          >
+            I’m a software developer from 
+            <b>
+              Perú
+            </b>
+            . I work at
+             
+            <span>
+              <a
+                class="chakra-link emotion-10"
+                d="inline-flex"
+                href="https://www.linkedin.com/company/making-sense-llc"
+                rel="noreferrer"
+                role="link"
+                target="_blank"
+              >
+                Making Sense
+              </a>
+              <svg
+                class="chakra-icon emotion-11"
+                d="inline"
+                fill="none"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+             as a
+             
+            <b>
+              Frontend Developer.
+            </b>
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+          <div
+            class="chakra-stack emotion-15"
+          >
+            <a
+              class="chakra-button emotion-16"
+              href="https://www.linkedin.com/in/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"
+                  />
+                  <ellipse
+                    cx="6.5"
+                    cy="6.5"
+                    rx="1.55"
+                    ry="1.5"
+                  />
+                </svg>
+              </span>
+              Linkedin
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-19"
+              href="https://github.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.435 12.973c.269 0 .492.133.686.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.193.265-.417.396-.686.396-.278 0-.522-.131-.715-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.192-.264.436-.396.715-.396m3.44-3.559c.746.811 1.125 1.795 1.125 2.953 0 .748-.086 1.423-.259 2.023-.175.597-.394 1.084-.654 1.459-.264.376-.588.705-.974.989-.386.286-.741.492-1.065.623-.325.132-.695.233-1.111.306-.417.071-.726.111-.943.123l-.685.014-.547.015c-.301.013-.56.016-.762.016s-.461-.003-.762-.016l-.547-.015-.685-.014c-.218-.012-.526-.052-.943-.123-.423-.072-.786-.174-1.111-.306-.324-.131-.68-.337-1.064-.623-.387-.284-.711-.613-.975-.989-.261-.375-.479-.862-.654-1.459-.173-.6-.259-1.275-.259-2.023 0-1.158.379-2.143 1.125-2.953-.082-.041-.085-.447-.008-1.217.063-.771.227-1.482.495-2.132.934.099 2.09.629 3.471 1.581.466-.119 1.101-.183 1.917-.183.852 0 1.491.064 1.918.184.629-.425 1.23-.771 1.805-1.034.584-.261 1.005-.416 1.269-.457l.396-.09c.27.649.434 1.36.496 2.132.076.769.073 1.175-.009 1.216m-5.845 7.82c1.688 0 2.954-.202 3.821-.607.855-.404 1.292-1.238 1.292-2.496 0-.73-.273-1.34-.822-1.828-.278-.263-.613-.425-.989-.486-.375-.061-.949-.061-1.72 0-.769.062-1.298.09-1.582.09-.385 0-.8-.018-1.319-.059-.52-.04-.928-.065-1.223-.078-.294-.009-.609.027-.958.108-.345.082-.629.224-.853.425-.521.469-.79 1.077-.79 1.828 0 1.258.426 2.092 1.28 2.496.85.405 2.113.607 3.802.607h.061m-2.434-4.261c.268 0 .492.133.685.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.192.265-.417.396-.685.396-.279 0-.522-.131-.716-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.193-.264.436-.396.716-.396"
+                  />
+                </svg>
+              </span>
+              Github
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-22"
+              href="https://twitter.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.89 7.012c.808-.496 1.343-1.173 1.605-2.034-.786.417-1.569.703-2.351.861-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078-.715.717-1.076 1.588-1.076 2.605 0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388.549.676 1.254 1.107 2.115 1.291-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841.625.472 1.344.721 2.152.743-1.332 1.045-2.855 1.562-4.578 1.562-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974.784-1.564 1.172-3.192 1.172-4.892v-.468c.758-.57 1.371-1.212 1.84-1.921-.68.293-1.383.492-2.11.593z"
+                  />
+                </svg>
+              </span>
+              Twitter
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer
+      class="emotion-25"
+    >
+      <div
+        class="chakra-container emotion-26"
+      >
+        <div
+          class="chakra-stack emotion-27"
+        >
+          <p
+            class="chakra-text emotion-28"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-29"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-33"
+    >
+      <a
+        class="chakra-link emotion-34"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-34"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-34"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-34"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;
+
+exports[`HomeScreen renders the pinned projects section 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-extrabold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-9 {
+  line-height: var(--yony-lineHeights-7);
+  font-size: var(--yony-fontSizes-lg);
+  font-style: italic;
+  letter-spacing: var(--yony-letterSpacings-wider);
+  font-weight: var(--yony-fontWeights-normal);
+  font-family: var(--yony-fonts-heading);
+}
+
+.emotion-10 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-300);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10:hover,
+.emotion-10[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:focus-visible,
+.emotion-10[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-11 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--yony-colors-white);
+}
+
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-12:focus-visible,
+.emotion-12[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-12:disabled,
+.emotion-12[disabled],
+.emotion-12[aria-disabled=true],
+.emotion-12[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-12:hover,
+.emotion-12[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12:hover:disabled,
+.emotion-12[data-hover]:disabled,
+.emotion-12:hover[disabled],
+.emotion-12[data-hover][disabled],
+.emotion-12:hover[aria-disabled=true],
+.emotion-12[data-hover][aria-disabled=true],
+.emotion-12:hover[data-disabled],
+.emotion-12[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12:active,
+.emotion-12[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-13 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-15>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-linkedin-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-16:focus-visible,
+.emotion-16[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-16:disabled,
+.emotion-16[disabled],
+.emotion-16[aria-disabled=true],
+.emotion-16[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-16:hover,
+.emotion-16[data-hover] {
+  background: rgba(155, 218, 243, 0.12);
+}
+
+.emotion-16:hover:disabled,
+.emotion-16[data-hover]:disabled,
+.emotion-16:hover[disabled],
+.emotion-16[data-hover][disabled],
+.emotion-16:hover[aria-disabled=true],
+.emotion-16[data-hover][aria-disabled=true],
+.emotion-16:hover[data-disabled],
+.emotion-16[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-16:active,
+.emotion-16[data-active] {
+  background: rgba(155, 218, 243, 0.24);
+}
+
+.emotion-17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-primary-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-19:focus-visible,
+.emotion-19[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-19:disabled,
+.emotion-19[disabled],
+.emotion-19[aria-disabled=true],
+.emotion-19[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-19:hover,
+.emotion-19[data-hover] {
+  background: rgba(248, 168, 165, 0.12);
+}
+
+.emotion-19:hover:disabled,
+.emotion-19[data-hover]:disabled,
+.emotion-19:hover[disabled],
+.emotion-19[data-hover][disabled],
+.emotion-19:hover[aria-disabled=true],
+.emotion-19[data-hover][aria-disabled=true],
+.emotion-19:hover[data-disabled],
+.emotion-19[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-19:active,
+.emotion-19[data-active] {
+  background: rgba(248, 168, 165, 0.24);
+}
+
+.emotion-22 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-twitter-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-22:focus-visible,
+.emotion-22[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-22:disabled,
+.emotion-22[disabled],
+.emotion-22[aria-disabled=true],
+.emotion-22[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-22:hover,
+.emotion-22[data-hover] {
+  background: rgba(168, 220, 250, 0.12);
+}
+
+.emotion-22:hover:disabled,
+.emotion-22[data-hover]:disabled,
+.emotion-22:hover[disabled],
+.emotion-22[data-hover][disabled],
+.emotion-22:hover[aria-disabled=true],
+.emotion-22[data-hover][aria-disabled=true],
+.emotion-22:hover[data-disabled],
+.emotion-22[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-22:active,
+.emotion-22[data-active] {
+  background: rgba(168, 220, 250, 0.24);
+}
+
+.emotion-25 {
+  opacity: 0.6;
+  border: 0;
+  border-color: inherit;
+  border-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  margin-top: var(--yony-space-6);
+  margin-bottom: var(--yony-space-6);
+}
+
+.emotion-26 {
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-28 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-2xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-28 {
+    font-size: var(--yony-fontSizes-3xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-29 {
+  margin-top: var(--yony-space-3);
+}
+
+.emotion-30 {
+  display: grid;
+  grid-gap: var(--yony-space-3);
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-30 {
+    grid-gap: var(--yony-space-4);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.emotion-31 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-32 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-33>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-34 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-35 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-39 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-39>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-39 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-40 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-40:hover,
+.emotion-40[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-40:focus-visible,
+.emotion-40[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="opacity: 0; transform: translateY(8px) translateZ(0);"
+    >
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <h1
+            class="chakra-heading emotion-8"
+          >
+            Hi, I’m Yony Calsin.
+          </h1>
+          <p
+            class="chakra-text emotion-9"
+          >
+            I’m a software developer from 
+            <b>
+              Perú
+            </b>
+            . I work at
+             
+            <span>
+              <a
+                class="chakra-link emotion-10"
+                d="inline-flex"
+                href="https://www.linkedin.com/company/making-sense-llc"
+                rel="noreferrer"
+                role="link"
+                target="_blank"
+              >
+                Making Sense
+              </a>
+              <svg
+                class="chakra-icon emotion-11"
+                d="inline"
+                fill="none"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+             as a
+             
+            <b>
+              Frontend Developer.
+            </b>
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+          <div
+            class="chakra-stack emotion-15"
+          >
+            <a
+              class="chakra-button emotion-16"
+              href="https://www.linkedin.com/in/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"
+                  />
+                  <ellipse
+                    cx="6.5"
+                    cy="6.5"
+                    rx="1.55"
+                    ry="1.5"
+                  />
+                </svg>
+              </span>
+              Linkedin
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-19"
+              href="https://github.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.435 12.973c.269 0 .492.133.686.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.193.265-.417.396-.686.396-.278 0-.522-.131-.715-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.192-.264.436-.396.715-.396m3.44-3.559c.746.811 1.125 1.795 1.125 2.953 0 .748-.086 1.423-.259 2.023-.175.597-.394 1.084-.654 1.459-.264.376-.588.705-.974.989-.386.286-.741.492-1.065.623-.325.132-.695.233-1.111.306-.417.071-.726.111-.943.123l-.685.014-.547.015c-.301.013-.56.016-.762.016s-.461-.003-.762-.016l-.547-.015-.685-.014c-.218-.012-.526-.052-.943-.123-.423-.072-.786-.174-1.111-.306-.324-.131-.68-.337-1.064-.623-.387-.284-.711-.613-.975-.989-.261-.375-.479-.862-.654-1.459-.173-.6-.259-1.275-.259-2.023 0-1.158.379-2.143 1.125-2.953-.082-.041-.085-.447-.008-1.217.063-.771.227-1.482.495-2.132.934.099 2.09.629 3.471 1.581.466-.119 1.101-.183 1.917-.183.852 0 1.491.064 1.918.184.629-.425 1.23-.771 1.805-1.034.584-.261 1.005-.416 1.269-.457l.396-.09c.27.649.434 1.36.496 2.132.076.769.073 1.175-.009 1.216m-5.845 7.82c1.688 0 2.954-.202 3.821-.607.855-.404 1.292-1.238 1.292-2.496 0-.73-.273-1.34-.822-1.828-.278-.263-.613-.425-.989-.486-.375-.061-.949-.061-1.72 0-.769.062-1.298.09-1.582.09-.385 0-.8-.018-1.319-.059-.52-.04-.928-.065-1.223-.078-.294-.009-.609.027-.958.108-.345.082-.629.224-.853.425-.521.469-.79 1.077-.79 1.828 0 1.258.426 2.092 1.28 2.496.85.405 2.113.607 3.802.607h.061m-2.434-4.261c.268 0 .492.133.685.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.192.265-.417.396-.685.396-.279 0-.522-.131-.716-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.193-.264.436-.396.716-.396"
+                  />
+                </svg>
+              </span>
+              Github
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-22"
+              href="https://twitter.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.89 7.012c.808-.496 1.343-1.173 1.605-2.034-.786.417-1.569.703-2.351.861-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078-.715.717-1.076 1.588-1.076 2.605 0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388.549.676 1.254 1.107 2.115 1.291-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841.625.472 1.344.721 2.152.743-1.332 1.045-2.855 1.562-4.578 1.562-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974.784-1.564 1.172-3.192 1.172-4.892v-.468c.758-.57 1.371-1.212 1.84-1.921-.68.293-1.383.492-2.11.593z"
+                  />
+                </svg>
+              </span>
+              Twitter
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <hr
+          aria-orientation="horizontal"
+          class="chakra-divider emotion-25"
+        />
+        <div
+          class="emotion-26"
+        >
+          <div>
+            <div
+              class="emotion-27"
+            >
+              <h2
+                class="chakra-heading emotion-28"
+              >
+                Featured Projects
+              </h2>
+              <a
+                href="/projects"
+              >
+                See more
+              </a>
+            </div>
+            <p
+              class="chakra-text emotion-29"
+            >
+              List of some featured projects.
+            </p>
+          </div>
+          <br />
+          <div
+            aria-label="List of featured projects"
+            class="emotion-30"
+            role="list"
+          />
+        </div>
+      </main>
+    </div>
+    <footer
+      class="emotion-31"
+    >
+      <div
+        class="chakra-container emotion-32"
+      >
+        <div
+          class="chakra-stack emotion-33"
+        >
+          <p
+            class="chakra-text emotion-34"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-35"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-39"
+    >
+      <a
+        class="chakra-link emotion-40"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;
+
+exports[`HomeScreen renders the recommendations section 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-extrabold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-9 {
+  line-height: var(--yony-lineHeights-7);
+  font-size: var(--yony-fontSizes-lg);
+  font-style: italic;
+  letter-spacing: var(--yony-letterSpacings-wider);
+  font-weight: var(--yony-fontWeights-normal);
+  font-family: var(--yony-fonts-heading);
+}
+
+.emotion-10 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-300);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10:hover,
+.emotion-10[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:focus-visible,
+.emotion-10[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-11 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--yony-colors-white);
+}
+
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-12:focus-visible,
+.emotion-12[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-12:disabled,
+.emotion-12[disabled],
+.emotion-12[aria-disabled=true],
+.emotion-12[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-12:hover,
+.emotion-12[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12:hover:disabled,
+.emotion-12[data-hover]:disabled,
+.emotion-12:hover[disabled],
+.emotion-12[data-hover][disabled],
+.emotion-12:hover[aria-disabled=true],
+.emotion-12[data-hover][aria-disabled=true],
+.emotion-12:hover[data-disabled],
+.emotion-12[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12:active,
+.emotion-12[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-13 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-15>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-linkedin-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-16:focus-visible,
+.emotion-16[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-16:disabled,
+.emotion-16[disabled],
+.emotion-16[aria-disabled=true],
+.emotion-16[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-16:hover,
+.emotion-16[data-hover] {
+  background: rgba(155, 218, 243, 0.12);
+}
+
+.emotion-16:hover:disabled,
+.emotion-16[data-hover]:disabled,
+.emotion-16:hover[disabled],
+.emotion-16[data-hover][disabled],
+.emotion-16:hover[aria-disabled=true],
+.emotion-16[data-hover][aria-disabled=true],
+.emotion-16:hover[data-disabled],
+.emotion-16[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-16:active,
+.emotion-16[data-active] {
+  background: rgba(155, 218, 243, 0.24);
+}
+
+.emotion-17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-primary-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-19:focus-visible,
+.emotion-19[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-19:disabled,
+.emotion-19[disabled],
+.emotion-19[aria-disabled=true],
+.emotion-19[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-19:hover,
+.emotion-19[data-hover] {
+  background: rgba(248, 168, 165, 0.12);
+}
+
+.emotion-19:hover:disabled,
+.emotion-19[data-hover]:disabled,
+.emotion-19:hover[disabled],
+.emotion-19[data-hover][disabled],
+.emotion-19:hover[aria-disabled=true],
+.emotion-19[data-hover][aria-disabled=true],
+.emotion-19:hover[data-disabled],
+.emotion-19[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-19:active,
+.emotion-19[data-active] {
+  background: rgba(248, 168, 165, 0.24);
+}
+
+.emotion-22 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: var(--yony-sizes-6);
+  min-width: var(--yony-sizes-6);
+  font-size: var(--yony-fontSizes-xs);
+  -webkit-padding-start: var(--yony-space-2);
+  padding-inline-start: var(--yony-space-2);
+  -webkit-padding-end: var(--yony-space-2);
+  padding-inline-end: var(--yony-space-2);
+  color: var(--yony-colors-twitter-200);
+  background: var(--yony-colors-transparent);
+}
+
+.emotion-22:focus-visible,
+.emotion-22[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-22:disabled,
+.emotion-22[disabled],
+.emotion-22[aria-disabled=true],
+.emotion-22[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-22:hover,
+.emotion-22[data-hover] {
+  background: rgba(168, 220, 250, 0.12);
+}
+
+.emotion-22:hover:disabled,
+.emotion-22[data-hover]:disabled,
+.emotion-22:hover[disabled],
+.emotion-22[data-hover][disabled],
+.emotion-22:hover[aria-disabled=true],
+.emotion-22[data-hover][aria-disabled=true],
+.emotion-22:hover[data-disabled],
+.emotion-22[data-hover][data-disabled] {
+  background: initial;
+}
+
+.emotion-22:active,
+.emotion-22[data-active] {
+  background: rgba(168, 220, 250, 0.24);
+}
+
+.emotion-25 {
+  opacity: 0.6;
+  border: 0;
+  border-color: inherit;
+  border-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  margin-top: var(--yony-space-6);
+  margin-bottom: var(--yony-space-6);
+}
+
+.emotion-26 {
+  padding-top: var(--yony-space-3);
+  padding-bottom: var(--yony-space-3);
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emotion-28 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-2xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-28 {
+    font-size: var(--yony-fontSizes-3xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-30 {
+  display: grid;
+  grid-gap: var(--yony-space-3);
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-30 {
+    grid-gap: var(--yony-space-4);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.emotion-31 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-32 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-33>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-34 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-35 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-39 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-39>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-39 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-40 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-40:hover,
+.emotion-40[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-40:focus-visible,
+.emotion-40[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="opacity: 0; transform: translateY(8px) translateZ(0);"
+    >
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <h1
+            class="chakra-heading emotion-8"
+          >
+            Hi, I’m Yony Calsin.
+          </h1>
+          <p
+            class="chakra-text emotion-9"
+          >
+            I’m a software developer from 
+            <b>
+              Perú
+            </b>
+            . I work at
+             
+            <span>
+              <a
+                class="chakra-link emotion-10"
+                d="inline-flex"
+                href="https://www.linkedin.com/company/making-sense-llc"
+                rel="noreferrer"
+                role="link"
+                target="_blank"
+              >
+                Making Sense
+              </a>
+              <svg
+                class="chakra-icon emotion-11"
+                d="inline"
+                fill="none"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+             as a
+             
+            <b>
+              Frontend Developer.
+            </b>
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+          <div
+            class="chakra-stack emotion-15"
+          >
+            <a
+              class="chakra-button emotion-16"
+              href="https://www.linkedin.com/in/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"
+                  />
+                  <ellipse
+                    cx="6.5"
+                    cy="6.5"
+                    rx="1.55"
+                    ry="1.5"
+                  />
+                </svg>
+              </span>
+              Linkedin
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-19"
+              href="https://github.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.435 12.973c.269 0 .492.133.686.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.193.265-.417.396-.686.396-.278 0-.522-.131-.715-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.192-.264.436-.396.715-.396m3.44-3.559c.746.811 1.125 1.795 1.125 2.953 0 .748-.086 1.423-.259 2.023-.175.597-.394 1.084-.654 1.459-.264.376-.588.705-.974.989-.386.286-.741.492-1.065.623-.325.132-.695.233-1.111.306-.417.071-.726.111-.943.123l-.685.014-.547.015c-.301.013-.56.016-.762.016s-.461-.003-.762-.016l-.547-.015-.685-.014c-.218-.012-.526-.052-.943-.123-.423-.072-.786-.174-1.111-.306-.324-.131-.68-.337-1.064-.623-.387-.284-.711-.613-.975-.989-.261-.375-.479-.862-.654-1.459-.173-.6-.259-1.275-.259-2.023 0-1.158.379-2.143 1.125-2.953-.082-.041-.085-.447-.008-1.217.063-.771.227-1.482.495-2.132.934.099 2.09.629 3.471 1.581.466-.119 1.101-.183 1.917-.183.852 0 1.491.064 1.918.184.629-.425 1.23-.771 1.805-1.034.584-.261 1.005-.416 1.269-.457l.396-.09c.27.649.434 1.36.496 2.132.076.769.073 1.175-.009 1.216m-5.845 7.82c1.688 0 2.954-.202 3.821-.607.855-.404 1.292-1.238 1.292-2.496 0-.73-.273-1.34-.822-1.828-.278-.263-.613-.425-.989-.486-.375-.061-.949-.061-1.72 0-.769.062-1.298.09-1.582.09-.385 0-.8-.018-1.319-.059-.52-.04-.928-.065-1.223-.078-.294-.009-.609.027-.958.108-.345.082-.629.224-.853.425-.521.469-.79 1.077-.79 1.828 0 1.258.426 2.092 1.28 2.496.85.405 2.113.607 3.802.607h.061m-2.434-4.261c.268 0 .492.133.685.396.192.265.294.588.294.975 0 .385-.102.711-.294.973-.192.265-.417.396-.685.396-.279 0-.522-.131-.716-.396-.192-.262-.294-.588-.294-.973 0-.387.102-.71.294-.975.193-.264.436-.396.716-.396"
+                  />
+                </svg>
+              </span>
+              Github
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              class="chakra-button emotion-22"
+              href="https://twitter.com/yonycalsin"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span
+                class="chakra-button__icon emotion-17"
+              >
+                <svg
+                  aria-hidden="true"
+                  baseProfile="tiny"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.89 7.012c.808-.496 1.343-1.173 1.605-2.034-.786.417-1.569.703-2.351.861-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078-.715.717-1.076 1.588-1.076 2.605 0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388.549.676 1.254 1.107 2.115 1.291-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841.625.472 1.344.721 2.152.743-1.332 1.045-2.855 1.562-4.578 1.562-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974.784-1.564 1.172-3.192 1.172-4.892v-.468c.758-.57 1.371-1.212 1.84-1.921-.68.293-1.383.492-2.11.593z"
+                  />
+                </svg>
+              </span>
+              Twitter
+              <span
+                class="chakra-button__icon emotion-18"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"
+                  />
+                  <path
+                    d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <hr
+          aria-orientation="horizontal"
+          class="chakra-divider emotion-25"
+        />
+        <div
+          class="emotion-26"
+        >
+          <div>
+            <div
+              class="emotion-27"
+            >
+              <h2
+                class="chakra-heading emotion-28"
+              >
+                Recommendations
+              </h2>
+            </div>
+          </div>
+          <div
+            class="emotion-26"
+          />
+          <div
+            class="emotion-30"
+            role="list"
+          />
+        </div>
+      </main>
+    </div>
+    <footer
+      class="emotion-31"
+    >
+      <div
+        class="chakra-container emotion-32"
+      >
+        <div
+          class="chakra-stack emotion-33"
+        >
+          <p
+            class="chakra-text emotion-34"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-35"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+          <button
+            class="chakra-button emotion-12"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-13"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-39"
+    >
+      <a
+        class="chakra-link emotion-40"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-40"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;

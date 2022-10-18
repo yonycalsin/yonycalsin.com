@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recommendations renders the recommendations 1`] = `
+.emotion-0 {
+  display: grid;
+}
+
+.emotion-0 gridGap {
+  base: 3px;
+  md: 4px;
+}
+
+.emotion-0 gridTemplateColumns {
+  base: repeat(1, minmax(0, 1fr));
+  md: repeat(2, minmax(0, 1fr));
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px;
+  border-color: gray.200;
+  padding: 4px;
+  border-radius: md;
+  border-left: 4px;
+  border-left-color: primary.500;
+}
+
+.emotion-1>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-3 {
+  font-size: sm;
+  font-style: italic;
+  font-weight: extrabold;
+}
+
+.emotion-5 {
+  font-size: sm;
+  font-weight: normal;
+  color: gray;
+  font-style: italic;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0"
+      role="list"
+    >
+      <blockquote
+        class="chakra-stack emotion-1"
+        role="listitem"
+      >
+        <p
+          class="chakra-text emotion-2"
+        >
+          Yony is an amazing person at work
+        </p>
+        <p
+          class="chakra-text mb-2 emotion-3"
+        >
+          -
+           
+          <a
+            class="chakra-link emotion-2"
+            href="https://linkedin.com/in/mock-username"
+            target="_blank"
+          >
+            Elon Musk
+          </a>
+        </p>
+        <p
+          class="chakra-text emotion-5"
+        >
+          CEO of Tesla, and SpaceX
+        </p>
+      </blockquote>
+    </div>
+  </div>
+</body>
+`;

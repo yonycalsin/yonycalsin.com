@@ -6,9 +6,9 @@ exports[`PageTransaction wrappers a component with page-transaction correctly 1`
     <div
       style="opacity: 0; transform: translateY(8px) translateZ(0);"
     >
-      <h1>
-        Content
-      </h1>
+      <div
+        data-testid="mock-content"
+      />
     </div>
   </div>
 </body>

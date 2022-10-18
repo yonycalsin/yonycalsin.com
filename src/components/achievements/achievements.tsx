@@ -8,7 +8,7 @@ function Achievements(props: AchievementsProps) {
   const { achievements } = props
 
   return (
-    <VStack spacing="3">
+    <VStack spacing="3" role="list">
       {achievements.map(achievement => (
         <Achievement key={achievement.id} achievement={achievement} />
       ))}

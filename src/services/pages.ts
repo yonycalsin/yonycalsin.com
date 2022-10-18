@@ -1,7 +1,7 @@
 import type { PageResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
 import { API_ENDPOINTS, DEFAULT_HEADERS, formatResponse } from './shared'
 
-export async function getAllPages() {
+export async function getAllPagesApi() {
   const response = await fetch(API_ENDPOINTS.ALL_PAGES, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
@@ -12,7 +12,7 @@ export async function getAllPages() {
   return payload
 }
 
-export async function getPage(pageSlug: string) {
+export async function getPageApi(pageSlug: string) {
   const response = await fetch(API_ENDPOINTS.PAGE(pageSlug), {
     method: 'GET',
     headers: DEFAULT_HEADERS,

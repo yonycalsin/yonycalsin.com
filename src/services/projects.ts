@@ -1,7 +1,7 @@
 import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
 import { API_ENDPOINTS, DEFAULT_HEADERS, formatResponse } from './shared'
 
-export async function getAllProjects() {
+export async function getAllProjectsApi() {
   const response = await fetch(API_ENDPOINTS.ALL_PROJECTS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
@@ -12,7 +12,7 @@ export async function getAllProjects() {
   return payload
 }
 
-export async function getPinnedProjects() {
+export async function getPinnedProjectsApi() {
   const response = await fetch(API_ENDPOINTS.PINNED_PROJECTS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
