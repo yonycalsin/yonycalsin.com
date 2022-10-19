@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { PageTransition } from 'components'
+import PageTransition from '../page-transition'
 
 const setup = () =>
   render(

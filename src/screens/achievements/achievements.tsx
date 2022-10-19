@@ -6,7 +6,7 @@ import type { AchievementResponsePayload, ServerListResponse } from 'typings/ser
 import { getAllAchievementsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
-import { Achievements } from 'components'
+import { Achievements, LoaderBox } from 'components'
 
 function AchievementsScreen() {
   const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
@@ -14,6 +14,10 @@ function AchievementsScreen() {
     getAllAchievementsApi,
     { staleTime: Infinity },
   )
+
+  if (queryResult.isLoading) {
+    return <LoaderBox />
+  }
 
   const achievementsData = queryResult.data?.data ?? []
 

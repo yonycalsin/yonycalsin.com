@@ -11,14 +11,14 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   displayName: '@yonycalsin/yonycalsin.com',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  //   coverageThreshold: {
-  //     global: {
-  //       statements: 80,
-  //       branches: 80,
-  //       functions: 80,
-  //       lines: 80,
-  //     },
-  //   },
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 50,
+      functions: 75,
+      lines: 80,
+    },
+  },
   moduleNameMapper: {
     '^/(.*)$': '<rootDir>/src/$1',
     /**
@@ -51,6 +51,7 @@ const customJestConfig = {
     '!src/**/index.{ts,tsx}',
     '!src/**/*.stories.tsx',
     '!src/typings/**/*.*',
+    '!src/tests/**/*.*',
     '!src/themes/**/*.*',
     '!src/mock-server/**/*.*',
     '!src/services/**/*.*',

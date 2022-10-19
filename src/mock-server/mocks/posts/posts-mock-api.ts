@@ -1,15 +1,17 @@
 import type { MockContext, MockRequest, MockResponse } from 'typings/mock-server'
-import type { PostResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
-import { getPostsDataResponseOk, getPostsResponseOk } from './posts-mock'
+import type { PostResponsePayload, ServerResponse } from 'typings/services'
+import { postsSuccess } from './posts-mock'
 
 function getPostsApi(request: MockRequest, response: MockResponse, context: MockContext) {
-  return response(context.status(200), context.json<ServerListResponse<PostResponsePayload>>(getPostsResponseOk))
+  const payload = postsSuccess
+
+  return response(context.status(200), context.json(payload))
 }
 
 function getPostApi(request: MockRequest<never, { slug: string }>, response: MockResponse, context: MockContext) {
   const postSlug = request.params.slug
 
-  const post = getPostsDataResponseOk.find(post => post.slug === postSlug)
+  const post = postsSuccess.data.find(post => post.slug === postSlug)
 
   if (!post) {
     return response(context.status(404))

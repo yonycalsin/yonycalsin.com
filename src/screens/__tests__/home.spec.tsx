@@ -1,27 +1,20 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import { ChakraKBar } from '@chakra-ui-kbar/core'
 import { screen, within } from '@testing-library/react'
-import { DefaultFeature, FeatureProvider } from 'toggled'
 
+import type { MainTestProviderProps } from 'typings/tests'
 import { achievementsSuccess } from 'mock-server/mocks/achievements'
 import { pinnedProjectsSuccess } from 'mock-server/mocks/projects'
 import { featuredRecommendationsSuccess } from 'mock-server/mocks/recommendations'
-import { setupWithReactQuery } from 'tests'
+import { setupWithReactQuery, TestProvider } from 'tests'
 import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
-import { ThemeMain } from 'themes'
 import HomeScreen from 'screens/home'
 import { buildFeatures } from 'utils'
 import { Features } from 'utils/constants'
 
-const setup = (features: DefaultFeature[] = []) => {
+const setup = (features: MainTestProviderProps['features'] = []) => {
   const utils = setupWithReactQuery(
-    <ChakraProvider theme={ThemeMain}>
-      <ChakraKBar>
-        <FeatureProvider features={features}>
-          <HomeScreen />
-        </FeatureProvider>
-      </ChakraKBar>
-    </ChakraProvider>,
+    <TestProvider features={features}>
+      <HomeScreen />
+    </TestProvider>,
   )
 
   return utils

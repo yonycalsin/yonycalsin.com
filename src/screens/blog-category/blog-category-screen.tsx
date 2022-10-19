@@ -63,7 +63,7 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
           </Text>
         </VStack>
         <Component components={MDXComponents} />
-        <UnorderedList mt="6">
+        <UnorderedList mt="6" role="list" aria-label="List of category's posts">
           {posts.map(post => (
             <RouterLink href={`/blog/${post.slug}`} key={post.title} passHref>
               <Link>

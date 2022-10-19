@@ -1,18 +1,17 @@
-import { ChakraProvider } from '@chakra-ui/react'
 import { render, screen } from '@testing-library/react'
 
 import type { AchievementResponsePayload } from 'typings/services'
 import { achievementsSuccess } from 'mock-server/mocks/achievements'
-import { ThemeMain } from 'themes'
+import { TestProvider } from 'tests'
 import { Achievements } from 'components'
 
 const defaultAchievements: AchievementResponsePayload[] = achievementsSuccess.data
 
 const setup = (achievements = defaultAchievements) => {
   return render(
-    <ChakraProvider theme={ThemeMain}>
+    <TestProvider>
       <Achievements achievements={achievements} />
-    </ChakraProvider>,
+    </TestProvider>,
   )
 }
 

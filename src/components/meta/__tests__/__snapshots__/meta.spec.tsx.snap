@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meta renders the meta 1`] = `
+<body>
+  <div>
+    <div>
+      <meta
+        content="index, follow"
+        name="robots"
+      />
+      <meta
+        content="index, follow"
+        name="googlebot"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="image"
+      />
+      <script
+        type="application/ld+json"
+      >
+        [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
+      </script>
+      <link
+        href="https://avatars.githubusercontent.com/u/58490737?v=4"
+        rel="icon"
+        type="image/png"
+      />
+      <meta
+        content="https://www.yonycalsin.com"
+        property="og:url"
+      />
+      <meta
+        content="website"
+        property="og:type"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        property="og:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        property="og:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        property="og:image"
+      />
+      <meta
+        content="summary_large_image"
+        name="twitter:card"
+      />
+      <meta
+        content="@yonycalsin"
+        name="twitter:creator"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        name="twitter:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="twitter:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="twitter:image"
+      />
+      <title>
+        Yony Calsin - Software Developer
+      </title>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Meta renders the meta with custom title 1`] = `
+<body>
+  <div>
+    <div>
+      <meta
+        content="index, follow"
+        name="robots"
+      />
+      <meta
+        content="index, follow"
+        name="googlebot"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="image"
+      />
+      <script
+        type="application/ld+json"
+      >
+        [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
+      </script>
+      <link
+        href="https://avatars.githubusercontent.com/u/58490737?v=4"
+        rel="icon"
+        type="image/png"
+      />
+      <meta
+        content="https://www.yonycalsin.com"
+        property="og:url"
+      />
+      <meta
+        content="website"
+        property="og:type"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        property="og:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        property="og:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        property="og:image"
+      />
+      <meta
+        content="summary_large_image"
+        name="twitter:card"
+      />
+      <meta
+        content="@yonycalsin"
+        name="twitter:creator"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        name="twitter:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="twitter:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="twitter:image"
+      />
+      <title>
+        About Me - Yony Calsin
+      </title>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Meta renders the meta with no-robots 1`] = `
+<body>
+  <div>
+    <div>
+      <meta
+        content="noindex, nofollow, noimageindex, indexifembedded"
+        name="robots"
+      />
+      <meta
+        content="noindex, nofollow, noimageindex, indexifembedded"
+        name="googlebot"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="image"
+      />
+      <script
+        type="application/ld+json"
+      >
+        [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
+      </script>
+      <link
+        href="https://avatars.githubusercontent.com/u/58490737?v=4"
+        rel="icon"
+        type="image/png"
+      />
+      <meta
+        content="https://www.yonycalsin.com"
+        property="og:url"
+      />
+      <meta
+        content="website"
+        property="og:type"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        property="og:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        property="og:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        property="og:image"
+      />
+      <meta
+        content="summary_large_image"
+        name="twitter:card"
+      />
+      <meta
+        content="@yonycalsin"
+        name="twitter:creator"
+      />
+      <meta
+        content="Yony Calsin - Software Developer"
+        name="twitter:title"
+      />
+      <meta
+        content="Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql."
+        name="twitter:description"
+      />
+      <meta
+        content="https://avatars.githubusercontent.com/u/58490737?v=4"
+        name="twitter:image"
+      />
+      <title>
+        Yony Calsin - Software Developer
+      </title>
+    </div>
+  </div>
+</body>
+`;

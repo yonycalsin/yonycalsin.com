@@ -99,6 +99,7 @@ exports[`Achievements renders the achievements correctly 1`] = `
 
 <div>
   <div
+    aria-label="List of achievements"
     class="chakra-stack emotion-0"
     role="list"
   >

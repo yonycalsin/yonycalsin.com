@@ -6,6 +6,7 @@ import type { BookResponsePayload, ServerListResponse } from 'typings/services'
 import { getAllBooksApi, getReadingBooksApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
+import { LoaderBox } from 'components'
 import { BookItem } from './components'
 
 function BooksScreen() {
@@ -20,6 +21,12 @@ function BooksScreen() {
     () => getReadingBooksApi(),
     { staleTime: Infinity },
   )
+
+  const isLoading = allBooksResponse.isLoading || readingBooksResponse.isLoading
+
+  if (isLoading) {
+    return <LoaderBox />
+  }
 
   return (
     <MainLayout>
@@ -38,6 +45,8 @@ function BooksScreen() {
                 lg: 3,
               }}
               spacing="6"
+              role="list"
+              aria-label="List of reading books"
             >
               {readingBooksResponse.data?.data.map((book: BookResponsePayload) => (
                 <BookItem
@@ -60,6 +69,8 @@ function BooksScreen() {
                 lg: 3,
               }}
               spacing="6"
+              role="list"
+              aria-label="List of all books"
             >
               {allBooksResponse.data?.data.map((book: BookResponsePayload) => (
                 <BookItem

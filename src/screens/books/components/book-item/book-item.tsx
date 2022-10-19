@@ -8,7 +8,7 @@ function BookItem(props: BookItemProps) {
   const { name, imageSrc, author, rating } = props
 
   return (
-    <VStack alignItems="flex-start" spacing="2">
+    <VStack alignItems="flex-start" spacing="2" role="listitem">
       <div>
         <Image src={imageSrc} alt={name} w="full" borderRadius="md" />
       </div>

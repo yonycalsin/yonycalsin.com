@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProjectsScreen renders the projects screen 1`] = `
+exports[`NotFoundScreen renders the not found screen 1`] = `
 .emotion-0 {
   width: var(--yony-sizes-full);
   top: 0px;
@@ -130,8 +130,8 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   padding-inline-start: var(--yony-space-4);
   -webkit-padding-end: var(--yony-space-4);
   padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-10);
-  padding-bottom: var(--yony-space-10);
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
 }
 
 .emotion-7 {
@@ -139,18 +139,17 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: var(--yony-space-10);
 }
 
 .emotion-7>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-6);
+  margin-top: var(--yony-space-12);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   margin-bottom: 0px;
@@ -160,7 +159,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
 
 .emotion-8 {
   font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-extrabold);
+  font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-3xl);
   line-height: 1.33;
 }
@@ -172,57 +171,34 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: relative;
-  list-style-type: none;
+  gap: var(--yony-space-6);
 }
 
-.emotion-11>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-12);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-11::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  height: var(--yony-sizes-full);
-  width: var(--yony-sizes-1);
-  left: calc((var(--yony-space-9) / 2) - (var(--yony-space-1) / 2));
-  background: linear-gradient(135deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
-  opacity: .5;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-11::before {
-    left: calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2));
+@media screen and (min-width: 48em) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
-.emotion-13 {
-  box-shadow: var(--yony-shadows-lg);
-  position: absolute;
-  height: var(--yony-sizes-9);
-  width: var(--yony-sizes-9);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -231,193 +207,85 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: var(--yony-radii-full);
-  background-color: var(--yony-colors-secondary-100);
-  padding: var(--yony-space-3);
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-13 {
-    height: var(--yony-sizes-12);
-    width: var(--yony-sizes-12);
-  }
-}
-
-.emotion-14 {
-  position: absolute;
-  right: var(--yony-space-20);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
   white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-primary-200);
+}
+
+.emotion-11:focus-visible,
+.emotion-11[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-11:disabled,
+.emotion-11[disabled],
+.emotion-11[aria-disabled=true],
+.emotion-11[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-11:hover,
+.emotion-11[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-11:hover:disabled,
+.emotion-11[data-hover]:disabled,
+.emotion-11:hover[disabled],
+.emotion-11[data-hover][disabled],
+.emotion-11:hover[aria-disabled=true],
+.emotion-11[data-hover][aria-disabled=true],
+.emotion-11:hover[data-disabled],
+.emotion-11[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-11:active,
+.emotion-11[data-active] {
+  color: var(--yony-colors-primary-500);
+}
+
+.emotion-12 {
   display: none;
 }
 
-@media screen and (min-width: 62em) {
-  .emotion-14 {
+@media screen and (min-width: 48em) {
+  .emotion-12 {
     display: block;
   }
 }
 
-.emotion-15 {
-  font-style: italic;
-}
-
 .emotion-16 {
-  width: var(--yony-sizes-full);
-  height: var(--yony-sizes-full);
-  display: inline-block;
-  line-height: 1em;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  color: currentColor;
-  fill: var(--yony-colors-secondary-900);
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-left: var(--yony-space-14);
-}
-
-.emotion-17>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-6);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-17 {
-    margin-left: var(--yony-space-20);
-  }
-}
-
-.emotion-18 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-xl);
-  line-height: 1.2;
-  display: block;
-}
-
-.emotion-18:hover,
-.emotion-18[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-18:focus-visible,
-.emotion-18[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-21 {
-  list-style-type: none;
-  font-size: var(--yony-fontSizes-md);
-}
-
-.emotion-21>*:not(style)~*:not(style) {
-  margin-top: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-21>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-1);
-  }
-}
-
-.emotion-22 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  color: var(--yony-colors-primary-500);
-  display: block;
-}
-
-.emotion-22:hover,
-.emotion-22[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-22:focus-visible,
-.emotion-22[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-23 {
-  width: 1em;
-  height: 1em;
-  display: inline;
-  line-height: 1em;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  color: var(--yony-colors-secondary-900);
-  -webkit-margin-end: var(--yony-space-2);
-  margin-inline-end: var(--yony-space-2);
-  vertical-align: text-bottom;
-}
-
-.emotion-24 {
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: var(--yony-space-2);
-}
-
-.emotion-25 {
-  display: inline-block;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-padding-start: var(--yony-space-1);
-  padding-inline-start: var(--yony-space-1);
-  -webkit-padding-end: var(--yony-space-1);
-  padding-inline-end: var(--yony-space-1);
-  text-transform: uppercase;
-  font-size: var(--yony-fontSizes-xs);
-  border-radius: var(--yony-radii-sm);
-  font-weight: var(--yony-fontWeights-bold);
-  color: rgba(254, 178, 178, 0.8);
-  box-shadow: inset 0 0 0px 1px rgba(254, 178, 178, 0.8);
-}
-
-.emotion-28 {
   padding-top: var(--yony-space-12);
   padding-bottom: var(--yony-space-12);
 }
 
-.emotion-29 {
+.emotion-17 {
   width: 100%;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
@@ -430,7 +298,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   padding-inline-end: var(--yony-space-4);
 }
 
-.emotion-30 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -444,7 +312,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   flex-direction: column;
 }
 
-.emotion-30>*:not(style)~*:not(style) {
+.emotion-18>*:not(style)~*:not(style) {
   margin-top: 0.5rem;
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -453,15 +321,15 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   margin-inline-start: 0px;
 }
 
-.emotion-31 {
+.emotion-19 {
   font-weight: var(--yony-fontWeights-bold);
 }
 
-.emotion-32 {
+.emotion-20 {
   color: var(--yony-colors-gray-600);
 }
 
-.emotion-33 {
+.emotion-21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -503,45 +371,45 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   color: var(--yony-colors-green-200);
 }
 
-.emotion-33:focus-visible,
-.emotion-33[data-focus-visible] {
+.emotion-21:focus-visible,
+.emotion-21[data-focus-visible] {
   box-shadow: var(--yony-shadows-outline);
 }
 
-.emotion-33:disabled,
-.emotion-33[disabled],
-.emotion-33[aria-disabled=true],
-.emotion-33[data-disabled] {
+.emotion-21:disabled,
+.emotion-21[disabled],
+.emotion-21[aria-disabled=true],
+.emotion-21[data-disabled] {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: var(--yony-shadows-none);
 }
 
-.emotion-33:hover,
-.emotion-33[data-hover] {
+.emotion-21:hover,
+.emotion-21[data-hover] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-33:hover:disabled,
-.emotion-33[data-hover]:disabled,
-.emotion-33:hover[disabled],
-.emotion-33[data-hover][disabled],
-.emotion-33:hover[aria-disabled=true],
-.emotion-33[data-hover][aria-disabled=true],
-.emotion-33:hover[data-disabled],
-.emotion-33[data-hover][data-disabled] {
+.emotion-21:hover:disabled,
+.emotion-21[data-hover]:disabled,
+.emotion-21:hover[disabled],
+.emotion-21[data-hover][disabled],
+.emotion-21:hover[aria-disabled=true],
+.emotion-21[data-hover][aria-disabled=true],
+.emotion-21:hover[data-disabled],
+.emotion-21[data-hover][data-disabled] {
   background: initial;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-33:active,
-.emotion-33[data-active] {
+.emotion-21:active,
+.emotion-21[data-active] {
   color: var(--yony-colors-green-500);
 }
 
-.emotion-34 {
+.emotion-22 {
   font-family: var(--yony-fonts-mono);
   background: whiteAlpha;
   border-radius: var(--yony-radii-md);
@@ -561,7 +429,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   margin-inline-end: var(--yony-space-2);
 }
 
-.emotion-36 {
+.emotion-24 {
   display: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -575,7 +443,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   left: var(--yony-space-8);
 }
 
-.emotion-36>*:not(style)~*:not(style) {
+.emotion-24>*:not(style)~*:not(style) {
   margin-top: var(--yony-space-5);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -585,7 +453,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
 }
 
 @media screen and (min-width: 62em) {
-  .emotion-36 {
+  .emotion-24 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -593,7 +461,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   }
 }
 
-.emotion-37 {
+.emotion-25 {
   transition-property: var(--yony-transition-property-common);
   transition-duration: var(--yony-transition-duration-fast);
   transition-timing-function: var(--yony-transition-easing-ease-out);
@@ -605,14 +473,14 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   color: inherit;
 }
 
-.emotion-37:hover,
-.emotion-37[data-hover] {
+.emotion-25:hover,
+.emotion-25[data-hover] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-37:focus-visible,
-.emotion-37[data-focus-visible] {
+.emotion-25:focus-visible,
+.emotion-25[data-focus-visible] {
   box-shadow: var(--yony-shadows-outline);
 }
 
@@ -678,182 +546,83 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
         <div
           class="chakra-stack emotion-7"
         >
-          <h1
+          <h2
             class="chakra-heading emotion-8"
           >
-            Projects (
-            1
-            )
-          </h1>
-          <p
-            class="chakra-text emotion-9"
+            😢
+          </h2>
+          <h2
+            class="chakra-heading emotion-8"
           >
-            Let me show you some of my projects. See all of them
-             
+            Page not found
+          </h2>
+          <div
+            class="emotion-10"
+          >
             <a
-              class="chakra-link emotion-4"
-              href="https://github.com/yonycalsin"
-              target="blank"
+              class="chakra-button emotion-11"
+              href="/"
             >
-              on my GitHub
+              Go to home
             </a>
-            .
-          </p>
+            <p
+              class="chakra-text emotion-12"
+            >
+              •
+            </p>
+            <a
+              class="chakra-button emotion-11"
+              href="/me"
+            >
+              Go to about-me page
+            </a>
+            <p
+              class="chakra-text emotion-12"
+            >
+              •
+            </p>
+            <a
+              class="chakra-button emotion-11"
+              href="/projects"
+            >
+              Go to projects page
+            </a>
+          </div>
         </div>
-        <ul
-          aria-label="List of projects"
-          class="chakra-stack emotion-11"
-          role="list"
-        >
-          <li
-            class="emotion-9"
-            id="AWS Clone"
-            role="listitem"
-          >
-            <div
-              class="emotion-13"
-            >
-              <div
-                class="emotion-14"
-              >
-                <p
-                  class="chakra-text emotion-15"
-                >
-                  15 May, 2021
-                </p>
-              </div>
-              <svg
-                class="chakra-icon emotion-16"
-                fill="currentColor"
-                focusable="false"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>
-                  project
-                </title>
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-17"
-            >
-              <a
-                class="chakra-link chakra-heading emotion-18"
-                href="https://aws-clone.projects.yonycalsin.com"
-                target="__blank"
-              >
-                aws-clone
-              </a>
-              <p
-                class="chakra-text emotion-9"
-              >
-                A clone of aws of amazon
-              </p>
-              <div
-                class="emotion-9"
-              >
-                <ul
-                  class="emotion-21"
-                  role="list"
-                >
-                  <a
-                    class="chakra-link emotion-22"
-                    href="https://aws-clone.projects.yonycalsin.com"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <svg
-                      class="chakra-icon emotion-23"
-                      fill="currentColor"
-                      focusable="false"
-                      height="1em"
-                      role="presentation"
-                      stroke="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 16 16"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
-                      />
-                      <path
-                        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"
-                      />
-                    </svg>
-                    Visit 
-                    aws-clone.projects.yonycalsin.com
-                  </a>
-                </ul>
-              </div>
-              <div
-                class="emotion-24"
-              >
-                <span
-                  class="chakra-badge emotion-25"
-                >
-                  Golang
-                </span>
-                <span
-                  class="chakra-badge emotion-25"
-                >
-                  Kubernetes
-                </span>
-                <span
-                  class="chakra-badge emotion-25"
-                >
-                  Python
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
       </main>
     </div>
     <footer
-      class="emotion-28"
+      class="emotion-16"
     >
       <div
-        class="chakra-container emotion-29"
+        class="chakra-container emotion-17"
       >
         <div
-          class="chakra-stack emotion-30"
+          class="chakra-stack emotion-18"
         >
           <p
-            class="chakra-text emotion-31"
+            class="chakra-text emotion-19"
           >
             Created By Yony Calsin
           </p>
           <p
-            class="chakra-text emotion-32"
+            class="chakra-text emotion-20"
           >
             Built with Next.js, MDX, Chakra-Ui and Vercel
           </p>
           <button
-            class="chakra-button emotion-33"
+            class="chakra-button emotion-21"
             type="button"
           >
             Press 
             <kbd
-              class="chakra-kbd emotion-34"
+              class="chakra-kbd emotion-22"
             >
               Ctrl
             </kbd>
             +
             <kbd
-              class="chakra-kbd emotion-34"
+              class="chakra-kbd emotion-22"
             >
               K
             </kbd>
@@ -863,10 +632,10 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-36"
+      class="chakra-stack emotion-24"
     >
       <a
-        class="chakra-link emotion-37"
+        class="chakra-link emotion-25"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -874,7 +643,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-37"
+        class="chakra-link emotion-25"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -882,7 +651,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-37"
+        class="chakra-link emotion-25"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -890,7 +659,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-37"
+        class="chakra-link emotion-25"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"

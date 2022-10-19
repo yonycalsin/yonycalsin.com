@@ -1,0 +1,662 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BooksScreen renders the books screen 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-9 {
+  margin-top: var(--yony-space-3);
+}
+
+.emotion-10 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-xl);
+  line-height: 1.2;
+}
+
+.emotion-11 {
+  display: grid;
+  grid-gap: var(--yony-space-6);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--yony-space-3);
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-11 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-12>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-2);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-13 {
+  width: var(--yony-sizes-full);
+  border-radius: var(--yony-radii-md);
+}
+
+.emotion-14 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-md);
+  line-height: 1.2;
+}
+
+.emotion-15 {
+  font-size: var(--yony-fontSizes-sm);
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: var(--yony-fontSizes-sm);
+}
+
+.emotion-16>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-26 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-27 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-28>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-29 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-30 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-31 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-31>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-31 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-32 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-32:hover,
+.emotion-32[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-32:focus-visible,
+.emotion-32[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <header>
+            <h2
+              class="chakra-heading emotion-8"
+            >
+              Books
+            </h2>
+            <p
+              class="chakra-text emotion-9"
+            >
+              This page contains the books I have read along of my life.
+            </p>
+          </header>
+          <div>
+            <h2
+              class="chakra-heading emotion-10"
+            >
+              Reading:
+            </h2>
+            <div
+              aria-label="List of reading books"
+              class="emotion-11"
+              role="list"
+            >
+              <div
+                class="chakra-stack emotion-12"
+                role="listitem"
+              >
+                <div>
+                  <img
+                    alt="Clean Architecture"
+                    class="chakra-image emotion-13"
+                    src="https://static.yonycalsin.com/books/clean-arquitecture-front.png"
+                  />
+                </div>
+                <h2
+                  class="chakra-heading emotion-14"
+                >
+                  Clean Architecture
+                </h2>
+                <p
+                  class="chakra-text emotion-15"
+                >
+                  Mark Zuck
+                </p>
+                <div
+                  class="chakra-stack emotion-16"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                    />
+                  </svg>
+                  <p
+                    class="chakra-text emotion-17"
+                  >
+                    Rating 
+                    4.5
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2
+              class="chakra-heading emotion-10"
+            >
+              All:
+            </h2>
+            <div
+              aria-label="List of all books"
+              class="emotion-11"
+              role="list"
+            >
+              <div
+                class="chakra-stack emotion-12"
+                role="listitem"
+              >
+                <div>
+                  <img
+                    alt="Clean Code"
+                    class="chakra-image emotion-13"
+                    src="https://static.yonycalsin.com/books/clean-code-front.png"
+                  />
+                </div>
+                <h2
+                  class="chakra-heading emotion-14"
+                >
+                  Clean Code
+                </h2>
+                <p
+                  class="chakra-text emotion-15"
+                >
+                  Tim Chuckby
+                </p>
+                <div
+                  class="chakra-stack emotion-16"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                    />
+                  </svg>
+                  <p
+                    class="chakra-text emotion-17"
+                  >
+                    Rating 
+                    5
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer
+      class="emotion-26"
+    >
+      <div
+        class="chakra-container emotion-27"
+      >
+        <div
+          class="chakra-stack emotion-28"
+        >
+          <p
+            class="chakra-text emotion-29"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-30"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-31"
+    >
+      <a
+        class="chakra-link emotion-32"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-32"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-32"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-32"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;

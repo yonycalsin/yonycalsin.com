@@ -60,6 +60,7 @@ exports[`Recommendations renders the recommendations 1`] = `
 <body>
   <div>
     <div
+      aria-label="List of recommendations"
       class="emotion-0"
       role="list"
     >

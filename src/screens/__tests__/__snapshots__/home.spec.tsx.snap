@@ -904,9 +904,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
         </div>
       </div>
     </div>
-    <div
-      style="opacity: 0.06760810768397253; transform: translateY(7.45913513852822px) translateZ(0);"
-    >
+    <div>
       <main
         class="chakra-container emotion-6"
       >
@@ -2535,9 +2533,7 @@ exports[`HomeScreen renders the home screen 1`] = `
         </div>
       </div>
     </div>
-    <div
-      style="opacity: 0; transform: translateY(8px) translateZ(0);"
-    >
+    <div>
       <main
         class="chakra-container emotion-6"
       >
@@ -3797,9 +3793,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         </div>
       </div>
     </div>
-    <div
-      style="opacity: 0; transform: translateY(8px) translateZ(0);"
-    >
+    <div>
       <main
         class="chakra-container emotion-6"
       >
@@ -5104,9 +5098,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         </div>
       </div>
     </div>
-    <div
-      style="opacity: 0; transform: translateY(8px) translateZ(0);"
-    >
+    <div>
       <main
         class="chakra-container emotion-6"
       >
