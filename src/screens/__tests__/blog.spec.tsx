@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { postsSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery,TestProvider } from 'tests'
+import { setupWithReactQuery, TestProvider } from 'tests'
 import { getPostsApi } from 'services'
 import BlogScreen from 'screens/blog'
 

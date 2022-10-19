@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { categoriesSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery,TestProvider } from 'tests'
+import { setupWithReactQuery, TestProvider } from 'tests'
 import { getCategoriesApi } from 'services'
 import BlogCategoriesScreen from 'screens/blog-categories'
 

@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { achievementsSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery,TestProvider } from 'tests'
+import { setupWithReactQuery, TestProvider } from 'tests'
 import { getAllAchievementsApi } from 'services'
 import AchievementsScreen from 'screens/achievements'
 
