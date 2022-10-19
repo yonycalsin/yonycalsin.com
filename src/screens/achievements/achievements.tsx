@@ -3,17 +3,21 @@ import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
-import { getAllAchievements } from 'services'
+import { getAllAchievementsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
-import { Achievements } from 'components'
+import { Achievements, LoaderBox } from 'components'
 
 function AchievementsScreen() {
   const queryResult = useQuery<ServerListResponse<AchievementResponsePayload>>(
     [API_ENDPOINTS.ALL_ACHIEVEMENTS],
-    getAllAchievements,
+    getAllAchievementsApi,
     { staleTime: Infinity },
   )
+
+  if (queryResult.isLoading) {
+    return <LoaderBox />
+  }
 
   const achievementsData = queryResult.data?.data ?? []
 

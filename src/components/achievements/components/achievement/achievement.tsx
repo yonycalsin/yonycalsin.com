@@ -17,6 +17,7 @@ function Achievement(props: AchievementProps) {
       }}
       gap="6"
       alignItems="center"
+      role="listitem"
     >
       <div>
         <AchievementTypeIllustration type={achievement.type} />

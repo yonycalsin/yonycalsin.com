@@ -28,6 +28,7 @@ exports[`ExternalAnchor renders an external anchor 1`] = `
         d="inline-flex"
         href="https://domain.com"
         rel="noreferrer"
+        role="link"
         target="_blank"
       >
         Go to home

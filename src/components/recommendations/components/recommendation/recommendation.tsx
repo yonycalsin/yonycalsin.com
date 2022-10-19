@@ -18,6 +18,7 @@ function Recommendation(props: RecommendationProps) {
       borderRadius="md"
       borderLeft="4px"
       borderLeftColor="primary.500"
+      role="listitem"
     >
       <Text>{recommendation.text}</Text>
       <Text fontSize="sm" fontStyle="italic" className="mb-2" fontWeight="extrabold">

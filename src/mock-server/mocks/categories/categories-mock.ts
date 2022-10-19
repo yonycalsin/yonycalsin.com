@@ -30,13 +30,23 @@ const categoriesSuccess: ServerListResponse<CategoryResponsePayload> = {
 
 const categorySuccess: ServerResponse<CategoryResponsePayload> = {
   data: {
-    title: 'Code Interview',
-    slug: 'code-interview',
+    title: 'Cracking the Coding Interview',
+    slug: 'cracking-the-coding-interview',
     body: {
       type: 'mdx',
       code: nextBase64.encode(
         encodeURIComponent(
-          encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Category: Code Interview'})`)),
+          encodeURIComponent(
+            buildMdxRuntimeCode(`jsx('div', {
+                'data-testid': 'mdx-content',
+                children: [
+                    jsx(c.p, {
+                        children: 'Cracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                        key: 'p-1'
+                    })
+                ],
+            })`),
+          ),
         ),
       ),
     },

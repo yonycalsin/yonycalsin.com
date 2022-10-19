@@ -35,6 +35,7 @@ function ProjectCard(props: ProjectCardProps) {
         _dark={{
           backgroundColor: 'gray.800',
         }}
+        role="listitem"
       >
         <HStack>
           <Icon as={icon} fill={colors.fill} />

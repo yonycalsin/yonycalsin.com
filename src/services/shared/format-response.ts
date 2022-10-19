@@ -17,7 +17,7 @@ async function formatResponse<T extends ResponseType>(response: Response): Promi
     const value = {
       data: null,
       error: {
-        code: 'U0',
+        code: 'U00',
         message: `${httpCode} | ${text}`,
       },
     } as T

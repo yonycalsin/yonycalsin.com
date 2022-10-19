@@ -8,12 +8,13 @@ import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import NProgress from 'nprogress'
-import { DefaultFeature, FeatureProvider } from 'toggled'
+import { FeatureProvider } from 'toggled'
 
 import type { MyAppPageProps } from 'typings/pages'
 import { analytics } from 'analytics'
 import { ThemeMain } from 'themes'
 import { CommandBar, NightModeButton } from 'components'
+import { buildFeatures } from 'utils'
 import { ENV, Features, IS_PRODUCTION, NUMERICS } from 'utils/constants'
 
 if (ENV.REST_API_MOCKING) {
@@ -28,74 +29,21 @@ function MyApp(props: MyAppPageProps) {
   const router = useRouter()
 
   const features = React.useMemo(() => {
-    const data: DefaultFeature[] = []
+    const buildedFeatures = buildFeatures({
+      [Features.RESUME]: ENV.FF_RESUME,
+      [Features.BLOG]: ENV.FF_BLOG,
+      [Features.OSS_PROJECTS]: ENV.FF_OSS_PROJECTS,
+      [Features.BOOKS]: ENV.FF_BOOKS,
+      [Features.PROJECTS]: ENV.FF_PROJECTS,
+      [Features.ACHIEVEMENTS]: ENV.FF_ACHIEVEMENTS,
+      [Features.RECOMMENDATIONS]: ENV.FF_RECOMMENDATIONS,
+      [Features.PINNED_PROJECTS]: ENV.FF_PINNED_PROJECTS,
+      [Features.SNIPPETS]: ENV.FF_SNIPPETS,
+      [Features.USES]: ENV.FF_USES,
+      [Features.FAQ]: ENV.FF_FAQ,
+    })
 
-    if (ENV.FF_RESUME) {
-      data.push({
-        slug: Features.RESUME,
-      })
-    }
-    if (ENV.FF_BLOG) {
-      data.push({
-        slug: Features.BLOG,
-      })
-    }
-
-    if (ENV.FF_OSS_PROJECTS) {
-      data.push({
-        slug: Features.OSS_PROJECTS,
-      })
-    }
-
-    if (ENV.FF_BOOKS) {
-      data.push({
-        slug: Features.BOOKS,
-      })
-    }
-
-    if (ENV.FF_PROJECTS) {
-      data.push({
-        slug: Features.PROJECTS,
-      })
-    }
-
-    if (ENV.FF_ACHIEVEMENTS) {
-      data.push({
-        slug: Features.ACHIEVEMENTS,
-      })
-    }
-
-    if (ENV.FF_RECOMMENDATIONS) {
-      data.push({
-        slug: Features.RECOMMENDATIONS,
-      })
-    }
-
-    if (ENV.FF_PINNED_PROJECTS) {
-      data.push({
-        slug: Features.PINNED_PROJECTS,
-      })
-    }
-
-    if (ENV.FF_SNIPPETS) {
-      data.push({
-        slug: Features.SNIPPETS,
-      })
-    }
-
-    if (ENV.FF_USES) {
-      data.push({
-        slug: Features.USES,
-      })
-    }
-
-    if (ENV.FF_FAQ) {
-      data.push({
-        slug: Features.FAQ,
-      })
-    }
-
-    return data
+    return buildedFeatures
   }, [])
 
   React.useEffect(() => {

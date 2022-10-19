@@ -18,11 +18,16 @@ import { BsChevronCompactRight } from 'react-icons/bs'
 import { getPostsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
+import { LoaderBox } from 'components'
 
 function BlogScreen() {
   const getPostsResponse = useQuery([API_ENDPOINTS.POSTS], () => getPostsApi(), {
     staleTime: Infinity,
   })
+
+  if (getPostsResponse.isLoading) {
+    return <LoaderBox />
+  }
 
   const posts = getPostsResponse.data?.data ?? []
 
@@ -54,7 +59,7 @@ function BlogScreen() {
           </Text>
         </VStack>
         <VStack mt="6" alignItems="flex-start">
-          <UnorderedList>
+          <UnorderedList role="list" aria-label="List of posts">
             {posts.map(post => (
               <RouterLink href={`/blog/${post.slug}`} key={post.slug} passHref>
                 <Link>

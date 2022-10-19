@@ -11,14 +11,14 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   displayName: '@yonycalsin/yonycalsin.com',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  //   coverageThreshold: {
-  //     global: {
-  //       statements: 80,
-  //       branches: 70,
-  //       functions: 75,
-  //       lines: 80,
-  //     },
-  //   },
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 50,
+      functions: 75,
+      lines: 80,
+    },
+  },
   moduleNameMapper: {
     '^/(.*)$': '<rootDir>/src/$1',
     /**
@@ -28,6 +28,7 @@ const customJestConfig = {
     '^typings(.*)$': '<rootDir>/src/typings$1',
     '^assets(.*)$': '<rootDir>/src/assets$1',
     '^mock-server(.*)$': '<rootDir>/src/mock-server$1',
+    '^tests(.*)$': '<rootDir>/src/tests$1',
     '^analytics(.*)$': '<rootDir>/src/analytics$1',
     '^services(.*)$': '<rootDir>/src/services$1',
     '^themes(.*)$': '<rootDir>/src/themes$1',
@@ -50,8 +51,8 @@ const customJestConfig = {
     '!src/**/index.{ts,tsx}',
     '!src/**/*.stories.tsx',
     '!src/typings/**/*.*',
+    '!src/tests/**/*.*',
     '!src/themes/**/*.*',
-    '!src/screens/**/*.*',
     '!src/mock-server/**/*.*',
     '!src/services/**/*.*',
     '!src/assets/**/*.*',
@@ -62,4 +63,6 @@ const customJestConfig = {
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig)
+const jestConfig = createJestConfig(customJestConfig)
+
+module.exports = jestConfig

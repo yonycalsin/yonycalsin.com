@@ -4,7 +4,7 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 
 import type { AchievementsPageProps } from 'typings/pages'
 import type { AchievementResponsePayload, ServerListResponse } from 'typings/services'
-import { getAllAchievements } from 'services'
+import { getAllAchievementsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import AchievementsScreen from 'screens/achievements'
 import { Meta } from 'components'
@@ -30,7 +30,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<Achievement
 
   await queryClient.prefetchQuery<ServerListResponse<AchievementResponsePayload>>(
     [API_ENDPOINTS.ALL_ACHIEVEMENTS],
-    () => getAllAchievements(),
+    () => getAllAchievementsApi(),
     { staleTime: Infinity },
   )
 

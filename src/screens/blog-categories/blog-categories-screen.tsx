@@ -17,6 +17,7 @@ import type { CategoryResponsePayload, ServerListResponse } from 'typings/servic
 import { getCategoriesApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
+import { LoaderBox } from 'components'
 
 function BlogCategoriesScreen() {
   const categoriesResponse = useQuery<ServerListResponse<CategoryResponsePayload>>(
@@ -24,6 +25,10 @@ function BlogCategoriesScreen() {
     getCategoriesApi,
     { staleTime: Infinity },
   )
+
+  if (categoriesResponse.isLoading) {
+    return <LoaderBox />
+  }
 
   const categories = categoriesResponse.data?.data ?? []
 
@@ -56,10 +61,10 @@ function BlogCategoriesScreen() {
           <Heading>Blog Categories ({categories.length})</Heading>
           <Text>This page contains all the categories.</Text>
         </VStack>
-        <Box display="flex" mt="6">
+        <Box display="flex" mt="6" role="list" aria-label="List of categories">
           {categories.map(category => (
             <RouterLink href={`/blog/categories/${category.slug}`} key={category.title} passHref>
-              <Link border="1px" py="2" px="4" borderRadius="md" color="primary">
+              <Link border="1px" py="2" px="4" borderRadius="md" color="primary" role="listitem">
                 {category.title}
               </Link>
             </RouterLink>

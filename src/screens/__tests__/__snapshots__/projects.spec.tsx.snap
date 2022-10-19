@@ -1,0 +1,947 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsScreen renders the projects screen 1`] = `
+.emotion-0 {
+  width: var(--yony-sizes-full);
+  top: 0px;
+  z-index: var(--yony-zIndices-banner);
+  left: 0px;
+  box-shadow: var(--yony-shadows-xs);
+}
+
+.chakra-ui-dark .emotion-0:not([data-theme]),
+[data-theme=dark] .emotion-0:not([data-theme]),
+.emotion-0[data-theme=dark] {
+  box-shadow: var(--yony-shadows-lg);
+}
+
+.emotion-1 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-5);
+  padding-bottom: var(--yony-space-5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    padding-top: var(--yony-space-8);
+    padding-bottom: var(--yony-space-8);
+  }
+}
+
+.emotion-2 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  display: contents;
+}
+
+.emotion-2:hover,
+.emotion-2[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus-visible,
+.emotion-2[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-3>*:not(style)~*:not(style) {
+  margin-top: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: var(--yony-space-4);
+  margin-inline-start: var(--yony-space-4);
+}
+
+.emotion-4 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--yony-colors-primary-500);
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-4:hover,
+.emotion-4[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4:focus-visible,
+.emotion-4[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-6 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding-top: var(--yony-space-10);
+  padding-bottom: var(--yony-space-10);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: var(--yony-space-10);
+}
+
+.emotion-7>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-8 {
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-extrabold);
+  font-size: var(--yony-fontSizes-3xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-8 {
+    font-size: var(--yony-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  list-style-type: none;
+}
+
+.emotion-11>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-12);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-11::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  height: var(--yony-sizes-full);
+  width: var(--yony-sizes-1);
+  left: calc((var(--yony-space-9) / 2) - (var(--yony-space-1) / 2));
+  background: linear-gradient(135deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
+  opacity: .5;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-11::before {
+    left: calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2));
+  }
+}
+
+.emotion-13 {
+  box-shadow: var(--yony-shadows-lg);
+  position: absolute;
+  height: var(--yony-sizes-9);
+  width: var(--yony-sizes-9);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: var(--yony-radii-full);
+  background-color: var(--yony-colors-secondary-100);
+  padding: var(--yony-space-3);
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-13 {
+    height: var(--yony-sizes-12);
+    width: var(--yony-sizes-12);
+  }
+}
+
+.emotion-14 {
+  position: absolute;
+  right: var(--yony-space-20);
+  white-space: nowrap;
+  display: none;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-14 {
+    display: block;
+  }
+}
+
+.emotion-15 {
+  font-style: italic;
+}
+
+.emotion-16 {
+  width: var(--yony-sizes-full);
+  height: var(--yony-sizes-full);
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: currentColor;
+  fill: var(--yony-colors-secondary-900);
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: var(--yony-space-14);
+}
+
+.emotion-17>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-6);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-17 {
+    margin-left: var(--yony-space-20);
+  }
+}
+
+.emotion-18 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  font-family: var(--yony-fonts-heading);
+  font-weight: var(--yony-fontWeights-bold);
+  font-size: var(--yony-fontSizes-xl);
+  line-height: 1.2;
+  display: block;
+}
+
+.emotion-18:hover,
+.emotion-18[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-18:focus-visible,
+.emotion-18[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-21 {
+  list-style-type: none;
+  font-size: var(--yony-fontSizes-md);
+}
+
+.emotion-21>*:not(style)~*:not(style) {
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-21>*:not(style)~*:not(style) {
+    margin-top: var(--yony-space-1);
+  }
+}
+
+.emotion-22 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+  color: var(--yony-colors-primary-500);
+  display: block;
+}
+
+.emotion-22:hover,
+.emotion-22[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-22:focus-visible,
+.emotion-22[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-23 {
+  width: 1em;
+  height: 1em;
+  display: inline;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--yony-colors-secondary-900);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+  vertical-align: text-bottom;
+}
+
+.emotion-24 {
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--yony-space-2);
+}
+
+.emotion-25 {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-padding-start: var(--yony-space-1);
+  padding-inline-start: var(--yony-space-1);
+  -webkit-padding-end: var(--yony-space-1);
+  padding-inline-end: var(--yony-space-1);
+  text-transform: uppercase;
+  font-size: var(--yony-fontSizes-xs);
+  border-radius: var(--yony-radii-sm);
+  font-weight: var(--yony-fontWeights-bold);
+  color: rgba(254, 178, 178, 0.8);
+  box-shadow: inset 0 0 0px 1px rgba(254, 178, 178, 0.8);
+}
+
+.emotion-28 {
+  padding-top: var(--yony-space-12);
+  padding-bottom: var(--yony-space-12);
+}
+
+.emotion-29 {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: var(--yony-sizes-container-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+}
+
+.emotion-30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-31 {
+  font-weight: var(--yony-fontWeights-bold);
+}
+
+.emotion-32 {
+  color: var(--yony-colors-gray-600);
+}
+
+.emotion-33 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: baseline;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: var(--yony-lineHeights-normal);
+  border-radius: var(--yony-radii-md);
+  font-weight: var(--yony-fontWeights-semibold);
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-normal);
+  height: auto;
+  min-width: var(--yony-sizes-10);
+  font-size: var(--yony-fontSizes-md);
+  -webkit-padding-start: var(--yony-space-4);
+  padding-inline-start: var(--yony-space-4);
+  -webkit-padding-end: var(--yony-space-4);
+  padding-inline-end: var(--yony-space-4);
+  padding: 0px;
+  color: var(--yony-colors-green-200);
+}
+
+.emotion-33:focus-visible,
+.emotion-33[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+.emotion-33:disabled,
+.emotion-33[disabled],
+.emotion-33[aria-disabled=true],
+.emotion-33[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--yony-shadows-none);
+}
+
+.emotion-33:hover,
+.emotion-33[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-33:hover:disabled,
+.emotion-33[data-hover]:disabled,
+.emotion-33:hover[disabled],
+.emotion-33[data-hover][disabled],
+.emotion-33:hover[aria-disabled=true],
+.emotion-33[data-hover][aria-disabled=true],
+.emotion-33:hover[data-disabled],
+.emotion-33[data-hover][data-disabled] {
+  background: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-33:active,
+.emotion-33[data-active] {
+  color: var(--yony-colors-green-500);
+}
+
+.emotion-34 {
+  font-family: var(--yony-fonts-mono);
+  background: whiteAlpha;
+  border-radius: var(--yony-radii-md);
+  border-width: 1px;
+  border-bottom-width: 3px;
+  font-size: 0.8em;
+  font-weight: var(--yony-fontWeights-bold);
+  line-height: var(--yony-lineHeights-normal);
+  -webkit-padding-start: 0.4em;
+  padding-inline-start: 0.4em;
+  -webkit-padding-end: 0.4em;
+  padding-inline-end: 0.4em;
+  white-space: nowrap;
+  -webkit-margin-start: var(--yony-space-2);
+  margin-inline-start: var(--yony-space-2);
+  -webkit-margin-end: var(--yony-space-2);
+  margin-inline-end: var(--yony-space-2);
+}
+
+.emotion-36 {
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--yony-space-8);
+  left: var(--yony-space-8);
+}
+
+.emotion-36>*:not(style)~*:not(style) {
+  margin-top: var(--yony-space-5);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-36 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-37 {
+  transition-property: var(--yony-transition-property-common);
+  transition-duration: var(--yony-transition-duration-fast);
+  transition-timing-function: var(--yony-transition-easing-ease-out);
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: inherit;
+}
+
+.emotion-37:hover,
+.emotion-37[data-hover] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-37:focus-visible,
+.emotion-37[data-focus-visible] {
+  box-shadow: var(--yony-shadows-outline);
+}
+
+<body
+  class="chakra-ui-dark"
+>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="chakra-container emotion-1"
+      >
+        <a
+          class="chakra-link emotion-2"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt=""
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="chakra-stack emotion-3"
+        >
+          <a
+            class="chakra-link emotion-4"
+            href="/projects"
+          >
+            Projects
+          </a>
+          <a
+            class="chakra-link emotion-4"
+            href="/me"
+          >
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <main
+        class="chakra-container emotion-6"
+      >
+        <div
+          class="chakra-stack emotion-7"
+        >
+          <h1
+            class="chakra-heading emotion-8"
+          >
+            Projects (
+            1
+            )
+          </h1>
+          <p
+            class="chakra-text emotion-9"
+          >
+            Let me show you some of my projects. See all of them
+             
+            <a
+              class="chakra-link emotion-4"
+              href="https://github.com/yonycalsin"
+              target="blank"
+            >
+              on my GitHub
+            </a>
+            .
+          </p>
+        </div>
+        <ul
+          aria-label="List of projects"
+          class="chakra-stack emotion-11"
+          role="list"
+        >
+          <li
+            class="emotion-9"
+            id="AWS Clone"
+            role="listitem"
+          >
+            <div
+              class="emotion-13"
+            >
+              <div
+                class="emotion-14"
+              >
+                <p
+                  class="chakra-text emotion-15"
+                >
+                  15 May, 2021
+                </p>
+              </div>
+              <svg
+                class="chakra-icon emotion-16"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  project
+                </title>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="chakra-stack emotion-17"
+            >
+              <a
+                class="chakra-link chakra-heading emotion-18"
+                href="https://aws-clone.projects.yonycalsin.com"
+                target="__blank"
+              >
+                aws-clone
+              </a>
+              <p
+                class="chakra-text emotion-9"
+              >
+                A clone of aws of amazon
+              </p>
+              <div
+                class="emotion-9"
+              >
+                <ul
+                  class="emotion-21"
+                  role="list"
+                >
+                  <a
+                    class="chakra-link emotion-22"
+                    href="https://aws-clone.projects.yonycalsin.com"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <svg
+                      class="chakra-icon emotion-23"
+                      fill="currentColor"
+                      focusable="false"
+                      height="1em"
+                      role="presentation"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                      />
+                      <path
+                        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"
+                      />
+                    </svg>
+                    Visit 
+                    aws-clone.projects.yonycalsin.com
+                  </a>
+                </ul>
+              </div>
+              <div
+                class="emotion-24"
+              >
+                <span
+                  class="chakra-badge emotion-25"
+                >
+                  Golang
+                </span>
+                <span
+                  class="chakra-badge emotion-25"
+                >
+                  Kubernetes
+                </span>
+                <span
+                  class="chakra-badge emotion-25"
+                >
+                  Python
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <footer
+      class="emotion-28"
+    >
+      <div
+        class="chakra-container emotion-29"
+      >
+        <div
+          class="chakra-stack emotion-30"
+        >
+          <p
+            class="chakra-text emotion-31"
+          >
+            Created By Yony Calsin
+          </p>
+          <p
+            class="chakra-text emotion-32"
+          >
+            Built with Next.js, MDX, Chakra-Ui and Vercel
+          </p>
+          <button
+            class="chakra-button emotion-33"
+            type="button"
+          >
+            Press 
+            <kbd
+              class="chakra-kbd emotion-34"
+            >
+              Ctrl
+            </kbd>
+            +
+            <kbd
+              class="chakra-kbd emotion-34"
+            >
+              K
+            </kbd>
+             to start →
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="chakra-stack emotion-36"
+    >
+      <a
+        class="chakra-link emotion-37"
+        href="https://github.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+      <a
+        class="chakra-link emotion-37"
+        href="https://www.linkedin.com/in/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+      <a
+        class="chakra-link emotion-37"
+        href="https://twitter.com/yonycalsin"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Twitter
+      </a>
+      <a
+        class="chakra-link emotion-37"
+        href="mailto:helloyonycalsin@gmail.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Email
+      </a>
+    </div>
+    <span
+      hidden=""
+      id="__chakra_env"
+    />
+  </div>
+  <div
+    class="chakra-portal"
+  >
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-top-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-left"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
+    />
+    <ul
+      aria-live="polite"
+      id="chakra-toast-manager-bottom-right"
+      role="region"
+      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
+    />
+  </div>
+</body>
+`;

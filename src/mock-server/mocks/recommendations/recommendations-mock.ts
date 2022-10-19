@@ -9,7 +9,7 @@ const featuredRecommendationsSuccess: ServerListResponse<RecommendationResponseP
       text: 'Yony is an amazing person at work',
       author: {
         name: 'Elon Musk',
-        jobTitle: 'Software Engineer',
+        jobTitle: 'CEO of Tesla, and SpaceX',
         avatar: null,
         linkedin: 'https://linkedin.com/in/mock-username',
       },

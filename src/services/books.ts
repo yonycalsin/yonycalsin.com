@@ -1,7 +1,7 @@
 import type { BookResponsePayload, ServerListResponse } from 'typings/services'
 import { API_ENDPOINTS, DEFAULT_HEADERS, formatResponse } from './shared'
 
-export async function getAllBooks() {
+export async function getAllBooksApi() {
   const response = await fetch(API_ENDPOINTS.ALL_BOOKS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
@@ -12,7 +12,7 @@ export async function getAllBooks() {
   return payload
 }
 
-export async function getReadingBooks() {
+export async function getReadingBooksApi() {
   const response = await fetch(API_ENDPOINTS.READING_BOOKS, {
     method: 'GET',
     headers: DEFAULT_HEADERS,

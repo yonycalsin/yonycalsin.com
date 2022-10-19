@@ -28,7 +28,7 @@ function WorkItem(props: WorkItemProps) {
   }, [type])
 
   return (
-    <Box as="li" id={slug}>
+    <Box as="li" id={slug} role="listitem">
       <Box
         boxShadow="lg"
         position="absolute"
