@@ -1,6 +1,7 @@
 import 'prism-theme-vars/base.css'
 import 'assets/styles/index.css'
 import 'prism-theme-vars/themes/vitesse-dark.css'
+import '@runts/react/styles/runts-playground.css'
 
 import * as React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
@@ -97,6 +98,11 @@ function MyApp(props: MyAppPageProps) {
         },
       }),
   )
+
+  // @ts-expect-error ts(2339)
+  if (Component.Standalone) {
+    return <Component {...pageProps} />
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
