@@ -9,7 +9,8 @@ function MyDocument() {
     <Html>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        {/* eslint-disable-next-line @next/next/google-font-display */}
         <link rel="preload" href="/static/fonts/Inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
