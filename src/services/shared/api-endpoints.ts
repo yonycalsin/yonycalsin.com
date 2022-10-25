@@ -33,6 +33,10 @@ const API_ENDPOINTS = {
    * @author yonycalsin
    */
   FEATURED_RECOMMENDATIONS: `${REST_API_URL}/recommendations`,
+
+  // Exercises
+  EXERCISE: (exerciseSlug: string) => `${REST_API_URL}/exercises/${exerciseSlug}`,
+  ALL_EXERCISES: `${REST_API_URL}/exercises`,
 }
 
 export default API_ENDPOINTS

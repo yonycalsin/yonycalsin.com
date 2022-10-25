@@ -22,6 +22,7 @@ const ENV = {
   FF_SNIPPETS: process.env.FF_SNIPPETS ? JSON.parse(process.env.FF_SNIPPETS) : false,
   FF_USES: process.env.FF_USES ? JSON.parse(process.env.FF_USES) : false,
   FF_FAQ: process.env.FF_FAQ ? JSON.parse(process.env.FF_FAQ) : false,
+  FF_EXERCISES: process.env.FF_EXERCISES ? JSON.parse(process.env.FF_EXERCISES) : false,
 }
 
 const IS_PRODUCTION = ENV.APP_ENV === 'production'

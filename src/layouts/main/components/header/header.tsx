@@ -6,9 +6,12 @@ import Image from 'next/image'
 import RouterLink from 'next/link'
 import { Flag } from 'toggled'
 
+import type { HeaderProps } from 'typings/layouts'
 import { Features } from 'utils/constants'
 
-const Header = () => {
+function Header(props: HeaderProps) {
+  const { container } = props
+
   return (
     <Box
       w="full"
@@ -21,7 +24,7 @@ const Header = () => {
       }}
     >
       <Container
-        maxW="container.md"
+        maxW={container}
         py={{
           base: '5',
           md: '8',
@@ -85,6 +88,10 @@ const Header = () => {
       </Container>
     </Box>
   )
+}
+
+Header.defaultProps = {
+  container: 'container.md',
 }
 
 export default Header

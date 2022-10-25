@@ -10,6 +10,7 @@ enum Features {
   SNIPPETS = 'snippets',
   USES = 'uses',
   FAQ = 'faq',
+  EXERCISES = 'exercises',
 }
 
 export { Features }

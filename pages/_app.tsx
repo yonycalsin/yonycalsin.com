@@ -1,6 +1,9 @@
-import 'prism-theme-vars/base.css'
 import 'assets/styles/index.css'
+import 'assets/styles/runts.css'
+import 'prism-theme-vars/base.css'
 import 'prism-theme-vars/themes/vitesse-dark.css'
+import '@runts/react/styles/editor-fonts.css'
+import '@runts/react/styles/runts-playground.css'
 
 import * as React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
@@ -41,6 +44,7 @@ function MyApp(props: MyAppPageProps) {
       [Features.SNIPPETS]: ENV.FF_SNIPPETS,
       [Features.USES]: ENV.FF_USES,
       [Features.FAQ]: ENV.FF_FAQ,
+      [Features.EXERCISES]: ENV.FF_EXERCISES,
     })
 
     return buildedFeatures
@@ -103,7 +107,6 @@ function MyApp(props: MyAppPageProps) {
       <Hydrate state={pageProps.dehydratedState}>
         <FeatureProvider features={features}>
           <ChakraProvider resetCSS theme={ThemeMain}>
-            <NightModeButton />
             {IS_PRODUCTION && (
               <>
                 <Script
@@ -130,6 +133,7 @@ function MyApp(props: MyAppPageProps) {
               </>
             )}
             <CommandBar>
+              <NightModeButton />
               <Component {...pageProps} />
             </CommandBar>
           </ChakraProvider>
