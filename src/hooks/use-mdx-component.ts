@@ -3,7 +3,7 @@ import _jsx_runtime from 'react/jsx-runtime'
 import ReactDOM from 'react-dom'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function getMdxComponent(code: string): React.ComponentType<any> {
+function getMdxComponent(code: string): React.ComponentType<{ components?: Record<string, any> }> {
   const scope = {
     React,
     ReactDOM,

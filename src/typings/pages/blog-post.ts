@@ -1,9 +1,14 @@
 import type { PostResponsePayload } from '../services'
 
-export interface BlogPostPageProps {
+interface BlogPostPageProps {
   post: PostResponsePayload
 }
 
-export type BlogPostPageQueryParams = {
+/**
+ * @see https://stackoverflow.com/a/73665562/19694758
+ */
+type BlogPostPageQueryParams = {
   slug: string
 }
+
+export type { BlogPostPageProps, BlogPostPageQueryParams }

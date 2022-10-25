@@ -1,61 +1,53 @@
 import * as React from 'react'
-import { Box, Container } from '@chakra-ui/react'
+import { Badge, Box, Container, Heading, HStack, StackDivider, Text, VStack } from '@chakra-ui/react'
 import { RuntsPlayground } from '@runts/react'
+import { useDefineLightPlaygroundThemes } from '@runts/react'
+import vitesseDark from '@runts/react/themes/vitesse-dark.json'
+import dayjs from 'dayjs'
+import nextBase64 from 'next-base64'
 
+import type { ExerciseScreenProps } from 'typings/screens'
+import { useMDXComponent } from 'hooks'
 import { Header } from 'layouts'
+import { MDXComponents } from 'components'
+import { DATE_FORMATS } from 'utils/constants'
 
-function ExerciseScreen() {
+function ExerciseScreen(props: ExerciseScreenProps) {
+  const { exercise } = props
+
+  const solution = exercise.solutions[0]
+
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(exercise.body.code))))
+
+  useDefineLightPlaygroundThemes([vitesseDark])
+
   return (
     <>
       <Header container="6xl" />
       <Container maxW="6xl" my="6">
-        <Box overflow="hidden" borderRadius="lg">
-          <RuntsPlayground
-            files={{
-              '/main.ts': `export function twoSum(nums: number[], target: number): number[] {
-    const map = new Map<number, number>()
-
-    for (let i = 0; i < nums.length; i++) {
-        const num = nums[i]
-
-        const complement = target - num
-
-        if (map.has(complement)) {
-        return [map.get(complement), i]
-        }
-
-        map.set(num, i)
-    }
-
-    throw new Error('No two sum solution')
-};`,
-              '/main.test.ts': `import { twoSum } from './main'
-
-describe('main', ()=> {
-    it('case 1', ()=> {
-        const result = twoSum([2, 7, 11, 15], 9)
-        
-        expect(result).toStrictEqual([0,1])
-    })
-
-    it('case 2', ()=> {
-        const result = twoSum([3, 2, 4], 6)
-        
-        expect(result).toStrictEqual([1,2])
-    })
-
-    it('case 3', ()=> {
-        const result = twoSum([3, 3], 6)
-
-        expect(result).toStrictEqual([0,1])
-    })
-})
-`,
-            }}
-            activeFile="/main.ts"
-            theme="vitesse-dark"
-          />
-        </Box>
+        <VStack spacing="6" alignItems="flex-start" w="full">
+          <VStack alignItems="flex-start">
+            <Heading>{exercise.name}</Heading>
+            <HStack divider={<StackDivider />}>
+              <Text fontStyle="italic" textColor="gray">
+                Last updated at {dayjs(exercise.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
+              </Text>
+              <Badge colorScheme="primary">{exercise.difficulty}</Badge>
+              <Badge colorScheme="secondary">{exercise.status}</Badge>
+            </HStack>
+          </VStack>
+          <Box w="full">
+            <RuntsPlayground
+              files={{
+                '/main.ts': solution.body.code,
+                '/main.test.ts': exercise.test.code,
+              }}
+              activeFile="/main.ts"
+              theme="vitesse-dark"
+            />
+          </Box>
+          <Component components={MDXComponents} />
+        </VStack>
       </Container>
     </>
   )

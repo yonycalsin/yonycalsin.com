@@ -51,6 +51,12 @@ export async function getStaticProps(
 ): Promise<GetStaticPropsResult<BlogPostPageProps>> {
   const { params } = context
 
+  if (!params?.slug) {
+    return {
+      notFound: true,
+    }
+  }
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -59,7 +65,7 @@ export async function getStaticProps(
     },
   })
 
-  const postSlug = (params?.slug ?? '') as string
+  const postSlug = params.slug
 
   const postResponse = await queryClient.fetchQuery<ServerResponse<PostResponsePayload>>(
     [API_ENDPOINTS.POST(postSlug)],
