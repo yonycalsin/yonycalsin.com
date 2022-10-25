@@ -45,12 +45,12 @@ function BlogCategoriesScreen() {
         >
           <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
             <BreadcrumbItem>
-              <RouterLink href="/" passHref>
+              <RouterLink href="/" passHref legacyBehavior>
                 <BreadcrumbLink>Home</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <RouterLink href="/blog" passHref>
+              <RouterLink href="/blog" passHref legacyBehavior>
                 <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
@@ -63,7 +63,7 @@ function BlogCategoriesScreen() {
         </VStack>
         <Box display="flex" mt="6" role="list" aria-label="List of categories">
           {categories.map(category => (
-            <RouterLink href={`/blog/categories/${category.slug}`} key={category.title} passHref>
+            <RouterLink href={`/blog/categories/${category.slug}`} key={category.title} passHref legacyBehavior>
               <Link border="1px" py="2" px="4" borderRadius="md" color="primary" role="listitem">
                 {category.title}
               </Link>

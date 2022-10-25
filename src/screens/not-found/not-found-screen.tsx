@@ -19,7 +19,7 @@ function NotFoundScreen() {
             }}
             gap="6"
           >
-            <RouterLink href="/" passHref>
+            <RouterLink href="/" passHref legacyBehavior>
               <Button as="a" variant="link" colorScheme="primary">
                 Go to home
               </Button>
@@ -32,7 +32,7 @@ function NotFoundScreen() {
             >
               •
             </Text>
-            <RouterLink href="/me" passHref>
+            <RouterLink href="/me" passHref legacyBehavior>
               <Button as="a" variant="link" colorScheme="primary">
                 Go to about-me page
               </Button>
@@ -45,7 +45,7 @@ function NotFoundScreen() {
             >
               •
             </Text>
-            <RouterLink href="/projects" passHref>
+            <RouterLink href="/projects" passHref legacyBehavior>
               <Button as="a" variant="link" colorScheme="primary">
                 Go to projects page
               </Button>

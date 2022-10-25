@@ -17,7 +17,7 @@ function ProjectCard(props: ProjectCardProps) {
   }, [project.type])
 
   return (
-    <RouterLink href={`/projects#${project.slug}`} passHref>
+    <RouterLink href={`/projects#${project.slug}`} passHref legacyBehavior>
       <Box
         backgroundColor="white"
         boxShadow="card"
