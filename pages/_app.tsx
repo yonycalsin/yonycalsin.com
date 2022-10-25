@@ -44,6 +44,7 @@ function MyApp(props: MyAppPageProps) {
       [Features.SNIPPETS]: ENV.FF_SNIPPETS,
       [Features.USES]: ENV.FF_USES,
       [Features.FAQ]: ENV.FF_FAQ,
+      [Features.EXERCISES]: ENV.FF_EXERCISES,
     })
 
     return buildedFeatures

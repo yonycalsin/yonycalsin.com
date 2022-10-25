@@ -9,7 +9,7 @@ import { getAllExercisesApi, getExerciseApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import ExerciseScreen from 'screens/exercise'
 import { Meta } from 'components'
-import { NUMERICS, TIMINGS } from 'utils/constants'
+import { ENV, NUMERICS, TIMINGS } from 'utils/constants'
 
 function ExercisePage(props: ExercisePageProps) {
   const { exercise } = props
@@ -30,6 +30,13 @@ async function getStaticPaths(): Promise<GetStaticPathsResult<ExercisePageQueryP
       },
     },
   })
+
+  if (!ENV.FF_EXERCISES) {
+    return {
+      fallback: false,
+      paths: [],
+    }
+  }
 
   const exercisesResponse = await queryClient.fetchQuery<ServerListResponse<ExerciseResponsePayload>>(
     [API_ENDPOINTS.ALL_EXERCISES],
