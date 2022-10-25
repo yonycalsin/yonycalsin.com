@@ -14,7 +14,7 @@ specifiers:
   '@emotion/jest': 11.10.0
   '@emotion/react': 11.10.4
   '@emotion/styled': 11.10.4
-  '@runts/react': 1.1.0
+  '@runts/react': 2.2.0
   '@storybook/addon-actions': 6.5.12
   '@storybook/addon-essentials': 6.5.12
   '@storybook/addon-links': 6.5.12
@@ -94,7 +94,7 @@ dependencies:
   '@chakra-ui/theme-tools': 2.0.12_kzevwk2hxgy6fnrjqv25jdmqp4
   '@emotion/react': 11.10.4_bjroym7kxlcs2vvwnej4p3gzwu
   '@emotion/styled': 11.10.4_ogudqqhlstsi7uge4lir7ff3ty
-  '@runts/react': 1.1.0_biqbaboplfbrettd7655fr4n2y
+  '@runts/react': 2.2.0_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query': 4.12.0_biqbaboplfbrettd7655fr4n2y
   dayjs: 1.11.5
   debug: 4.3.4
@@ -3977,12 +3977,13 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@runts/react/1.1.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-Z+nTMzAWaB058VG2uBILtvZDjP8t9reEa1CaAYT6cu2ho/GrwqXq71J30xkzz828W0ZYXA+MIk8Xxx8GT58WZw==}
+  /@runts/react/2.2.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-6Wgqu7V+PcAyD3PMemUdXreW/JPeSaOv0KnpfDqZXK/N28BRi7NOLkulw842micEhhDgN9kFaXov12s7ar7aUw==}
     dependencies:
       '@codesandbox/sandpack-react': 1.15.2_biqbaboplfbrettd7655fr4n2y
       '@monaco-editor/react': 4.4.6_6vrjaj6ridxbohi43n7zt4gn7q
       monaco-editor: 0.34.1
+      split-grid: 1.0.11
     transitivePeerDependencies:
       - react
       - react-dom
@@ -15520,6 +15521,10 @@ packages:
     resolution: {integrity: sha512-1klA3Gi5PD1Wv9Q0wUoOQN1IWAuPu0D1U03ThXTr0cJ20+/iq2tHSDnK7Kk/0LXJ1ztUB2/1Os0wKmfyNgUQfg==}
     hasBin: true
     dev: true
+
+  /split-grid/1.0.11:
+    resolution: {integrity: sha512-ELtFtxc3r5we5GZfe6Fi0BFFxIi2M6BY1YEntBscKRDD3zx4JVHqx2VnTRSQu1BixCYSTH3MTjKd4esI2R7EgQ==}
+    dev: false
 
   /split-string/3.1.0:
     resolution: {integrity: sha512-NzNVhJDYpwceVVii8/Hu6DKfD2G+NrQHlS/V/qgv763EYudVwEcMQNxd2lh+0VrUByXN/oJkl5grOhYWvQUYiw==}
