@@ -18,6 +18,7 @@ module.exports = {
     FF_SNIPPETS: process.env.FF_SNIPPETS,
     FF_USES: process.env.FF_USES,
     FF_FAQ: process.env.FF_FAQ,
+    FF_EXERCISES: process.env.FF_EXERCISES,
   },
   swcMinify: true,
   images: {
