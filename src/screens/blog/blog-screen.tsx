@@ -44,7 +44,7 @@ function BlogScreen() {
         >
           <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
             <BreadcrumbItem>
-              <RouterLink href="/" passHref>
+              <RouterLink href="/" passHref legacyBehavior>
                 <BreadcrumbLink>Home</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
@@ -61,7 +61,7 @@ function BlogScreen() {
         <VStack mt="6" alignItems="flex-start">
           <UnorderedList role="list" aria-label="List of posts">
             {posts.map(post => (
-              <RouterLink href={`/blog/${post.slug}`} key={post.slug} passHref>
+              <RouterLink href={`/blog/${post.slug}`} key={post.slug} passHref legacyBehavior>
                 <Link>
                   <ListItem>{post.title}</ListItem>
                 </Link>

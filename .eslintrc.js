@@ -39,6 +39,7 @@ module.exports = {
         message: 'Default React import not allowed',
       },
     ],
+    '@next/next/no-head-element': 'off',
   },
   overrides: [
     {

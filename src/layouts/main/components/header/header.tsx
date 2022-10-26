@@ -33,31 +33,31 @@ function Header(props: HeaderProps) {
         justifyContent="space-between"
         alignItems="center"
       >
-        <RouterLink href="/" passHref>
+        <RouterLink href="/" passHref legacyBehavior>
           <Link display="contents">
-            <Image src={isotipo} layout="intrinsic" width={32} height={32} priority alt="" />
+            <Image src={isotipo} width={32} height={32} alt="Logo" />
           </Link>
         </RouterLink>
         <HStack spacing="4">
-          <RouterLink href="/projects" passHref>
+          <RouterLink href="/projects" passHref legacyBehavior>
             <Link color="primary.500" fontWeight="bold">
               Projects
             </Link>
           </RouterLink>
-          <RouterLink href="/me" passHref>
+          <RouterLink href="/me" passHref legacyBehavior>
             <Link color="primary.500" fontWeight="bold">
               About Me
             </Link>
           </RouterLink>
           <Flag flagQuery={Features.FAQ}>
-            <RouterLink href="/faq" passHref>
+            <RouterLink href="/faq" passHref legacyBehavior>
               <Link color="primary.500" fontWeight="bold">
                 FAQ
               </Link>
             </RouterLink>
           </Flag>
           <Flag flagQuery={Features.USES}>
-            <RouterLink href="/uses" passHref>
+            <RouterLink href="/uses" passHref legacyBehavior>
               <Link
                 color="primary.500"
                 fontWeight="bold"
@@ -71,7 +71,7 @@ function Header(props: HeaderProps) {
             </RouterLink>
           </Flag>
           <Flag flagQuery={Features.SNIPPETS}>
-            <RouterLink href="/blog/categories/snippet" passHref>
+            <RouterLink href="/blog/categories/snippet" passHref legacyBehavior>
               <Link
                 color="primary.500"
                 fontWeight="bold"

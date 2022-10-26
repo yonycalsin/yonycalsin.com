@@ -23,8 +23,9 @@
     "noImplicitOverride": true,
     "strictPropertyInitialization": false,
     "typeRoots": ["./node_modules/@types"],
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "plugins": [{ "name": "next" }]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "jest.setup.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "jest.setup.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", ".next", "./cypress.config.ts", "cypress", "scripts"]
 }

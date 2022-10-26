@@ -13,7 +13,7 @@ import { Anchor, LinkedHeading, Table, TableCell, TableHead } from './components
 const { chakra } = Chakra
 
 function RoundedImage(props: ImageProps) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  return <Image className="rounded-lg" {...props} alt={props.alt} />
 }
 
 function ZoomImage(props: any) {

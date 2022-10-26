@@ -29,12 +29,12 @@ function BlogPostScreen(props: BlogPostScreenProps) {
         >
           <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
             <BreadcrumbItem>
-              <RouterLink href="/" passHref>
+              <RouterLink href="/" passHref legacyBehavior>
                 <BreadcrumbLink>Home</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>
-              <RouterLink href="/blog" passHref>
+              <RouterLink href="/blog" passHref legacyBehavior>
                 <BreadcrumbLink>Blog</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>

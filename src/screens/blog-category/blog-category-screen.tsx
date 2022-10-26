@@ -39,17 +39,17 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
         >
           <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
             <BreadcrumbItem>
-              <RouterLink href="/" passHref>
+              <RouterLink href="/" passHref legacyBehavior>
                 <BreadcrumbLink>Home</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <RouterLink href="/blog" passHref>
+              <RouterLink href="/blog" passHref legacyBehavior>
                 <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <RouterLink href="/blog/categories" passHref>
+              <RouterLink href="/blog/categories" passHref legacyBehavior>
                 <BreadcrumbLink href="/blog/categories">Categories</BreadcrumbLink>
               </RouterLink>
             </BreadcrumbItem>
@@ -65,7 +65,7 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
         <Component components={MDXComponents} />
         <UnorderedList mt="6" role="list" aria-label="List of category's posts">
           {posts.map(post => (
-            <RouterLink href={`/blog/${post.slug}`} key={post.title} passHref>
+            <RouterLink href={`/blog/${post.slug}`} key={post.title} passHref legacyBehavior>
               <Link>
                 <ListItem>{post.title}</ListItem>
               </Link>
