@@ -17,7 +17,7 @@ import { FeatureProvider } from 'toggled'
 import type { MyAppPageProps } from 'typings/pages'
 import { analytics } from 'analytics'
 import { ThemeMain } from 'themes'
-import { CommandBar, NightModeButton } from 'components'
+import { NightModeButton } from 'components'
 import { buildFeatures } from 'utils'
 import { ENV, Features, IS_PRODUCTION, NUMERICS } from 'utils/constants'
 
@@ -133,10 +133,8 @@ function MyApp(props: MyAppPageProps) {
                 />
               </>
             )}
-            <CommandBar>
-              <NightModeButton />
-              <Component {...pageProps} />
-            </CommandBar>
+            <NightModeButton />
+            <Component {...pageProps} />
           </ChakraProvider>
         </FeatureProvider>
       </Hydrate>
