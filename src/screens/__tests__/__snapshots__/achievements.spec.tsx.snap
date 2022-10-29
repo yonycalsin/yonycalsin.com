@@ -2,124 +2,6 @@
 
 exports[`AchievementsScreen renders the achievements screen 1`] = `
 .emotion-0 {
-  width: var(--yony-sizes-full);
-  top: 0px;
-  z-index: var(--yony-zIndices-banner);
-  left: 0px;
-  box-shadow: var(--yony-shadows-xs);
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: var(--yony-shadows-lg);
-}
-
-.emotion-1 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-5);
-  padding-bottom: var(--yony-space-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1 {
-    padding-top: var(--yony-space-8);
-    padding-bottom: var(--yony-space-8);
-  }
-}
-
-.emotion-2 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  display: contents;
-}
-
-.emotion-2:hover,
-.emotion-2[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-2:focus-visible,
-.emotion-2[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: var(--yony-space-4);
-  margin-inline-start: var(--yony-space-4);
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
   width: 100%;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
@@ -134,7 +16,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
   padding-bottom: var(--yony-space-10);
 }
 
-.emotion-7 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,7 +31,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
   margin-bottom: var(--yony-space-6);
 }
 
-.emotion-7>*:not(style)~*:not(style) {
+.emotion-1>*:not(style)~*:not(style) {
   margin-top: 0.5rem;
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -158,7 +40,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
   margin-inline-start: 0px;
 }
 
-.emotion-8 {
+.emotion-2 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-3xl);
@@ -166,206 +48,10 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-8 {
+  .emotion-2 {
     font-size: var(--yony-fontSizes-4xl);
     line-height: 1.2;
   }
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-10>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-3);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-11 {
-  display: grid;
-  grid-gap: var(--yony-space-6);
-  grid-template-columns: var(--yony-space-14) 1fr;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-11 {
-    grid-template-columns: var(--yony-space-20) 1fr var(--yony-space-24);
-  }
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-1);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-13 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-14 {
-  font-size: var(--yony-fontSizes-sm);
-  color: gray;
-}
-
-.emotion-15 {
-  display: block;
-  font-size: var(--yony-fontSizes-sm);
-  font-style: italic;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-15 {
-    display: none;
-  }
-}
-
-.emotion-16 {
-  font-style: italic;
-  font-size: var(--yony-fontSizes-sm);
-  display: none;
-  font-weight: var(--yony-fontWeights-light);
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-16 {
-    display: block;
-  }
-}
-
-.emotion-41 {
-  padding-top: var(--yony-space-12);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-42 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-}
-
-.emotion-43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-43>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-45 {
-  color: var(--yony-colors-gray-600);
-}
-
-.emotion-46 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-46>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-46 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.emotion-47 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-47:hover,
-.emotion-47[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-47:focus-visible,
-.emotion-47[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
 }
 
 <body
@@ -373,13 +59,12 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
 >
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -395,542 +80,597 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
           </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/faq"
+          >
+            FAQ
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/snippets"
+          >
+            Snippets
+          </a>
         </div>
       </div>
     </div>
-    <div>
-      <main
-        class="chakra-container emotion-6"
+    <main
+      class="chakra-container emotion-0"
+    >
+      <header
+        class="chakra-stack emotion-1"
       >
-        <header
-          class="chakra-stack emotion-7"
+        <h2
+          class="chakra-heading emotion-2"
         >
-          <h2
-            class="chakra-heading emotion-8"
-          >
-            Achievements (
-            5
-            )
-          </h2>
-          <p
-            class="chakra-text emotion-9"
-          >
-            This page contains all the achievements I've achieved along my career.
-          </p>
-        </header>
+          Achievements (
+          5
+          )
+        </h2>
+        <p
+          class="chakra-text emotion-3"
+        >
+          This page contains all the achievements I've achieved along my career.
+        </p>
+      </header>
+      <div
+        aria-label="List of achievements"
+        class="space-y-3"
+        role="list"
+      >
         <div
-          aria-label="List of achievements"
-          class="chakra-stack emotion-10"
-          role="list"
+          class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
+          role="listitem"
         >
           <div
-            class="emotion-11"
-            role="listitem"
+            class="hidden lg:block"
           >
-            <div>
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="2"
-                viewBox="0 0 170 170"
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 170 170"
+            >
+              <path
+                d="M.87 0h170v170H.87z"
+                fill="none"
+              />
+              <clippath
+                id="briefcase_svg__a"
               >
                 <path
                   d="M.87 0h170v170H.87z"
-                  fill="none"
                 />
-                <clippath
-                  id="briefcase_svg__a"
-                >
-                  <path
-                    d="M.87 0h170v170H.87z"
-                  />
-                </clippath>
-                <g
-                  clip-path="url(#briefcase_svg__a)"
-                >
-                  <circle
-                    cx="85.662"
-                    cy="85.208"
-                    fill="#fff5f5"
-                    r="84.792"
-                  />
-                  <path
-                    d="M100.795 44.028l.087.002.087.003.087.003.087.005.086.006.086.007.086.009.085.009.085.01.085.011.085.013.084.013.083.015.084.015.083.017.082.017.083.019.082.019.081.02.081.022.081.022.08.024.08.024.08.025.079.027.078.027.079.028.077.029.078.03.077.031.076.032.076.032.075.034.075.034.075.036.074.036.073.037.073.038.072.039.072.039.072.041.071.041.07.042.07.043.069.044.068.044.068.046.068.046.067.047.066.048.066.048.065.05.064.05.064.05.063.052.063.052.062.053.061.054.06.054.06.056.06.055.058.057.058.057.058.058.056.059.056.059.055.06.055.061.053.061.053.062.053.063.051.063.051.064.05.064.049.065.049.066.048.066.047.067.046.067.045.068.045.069.043.069.043.07.043.07.041.071.04.071.04.072.039.073.038.073.037.073.036.074.035.074.035.075.033.076.033.076.032.076.031.077.03.077.029.078.028.078.027.079.026.079.026.079.024.08.023.081.023.08.021.081.021.082.019.082.019.082.017.083.016.083.016.083.014.084.014.084.012.085.011.084.011.085.009.086.008.085.007.086.006.087.005.086.004.087.003.087.001.088.001.088v41.255l-.001.087-.001.088-.003.087-.004.087-.005.087-.006.086-.007.086-.008.086-.009.085-.011.085-.011.085-.012.084-.014.084-.014.084-.016.083-.016.083-.017.083-.019.082-.019.082-.021.082-.021.081-.023.081-.023.08-.024.08-.026.08-.026.079-.027.078-.028.078-.029.078-.03.077-.031.077-.032.077-.033.076-.033.075-.035.075-.035.074-.036.074-.037.074-.038.073-.039.072-.04.072-.04.071-.041.071-.043.071-.043.069-.043.069-.045.069-.045.068-.046.067-.047.067-.048.067-.049.065-.049.065-.05.065-.051.064-.051.063-.053.062-.053.062-.053.062-.055.06-.055.06-.056.06-.056.058-.058.058-.058.057-.058.057-.06.056-.06.055-.06.054-.061.054-.062.053-.063.052-.063.052-.064.051-.064.05-.065.049-.066.049-.066.047-.067.047-.068.047-.068.045-.068.044-.069.044-.07.043-.07.042-.071.042-.072.04-.072.04-.072.039-.073.038-.073.037-.074.036-.075.035-.075.035-.075.033-.076.033-.076.032-.077.031-.078.029-.077.029-.079.029-.078.027-.079.026-.08.025-.08.025-.08.023-.081.022-.081.022-.081.02-.082.02-.083.018-.082.018-.083.016-.084.016-.083.014-.084.014-.085.012-.085.011-.085.01-.085.01-.086.008-.086.007-.086.006-.087.005-.087.004-.087.003-.087.001-.088.001H70.618l-.088-.001-.087-.001-.088-.003-.086-.004-.087-.005-.086-.006-.086-.007-.086-.008-.085-.01-.086-.01-.084-.011-.085-.012-.084-.014-.084-.014-.083-.016-.083-.016-.083-.018-.082-.018-.082-.02-.081-.02-.081-.022-.081-.022-.081-.023-.079-.025-.08-.025-.079-.026-.079-.027-.078-.029-.078-.029-.077-.029-.077-.031-.076-.032-.076-.033-.076-.033-.074-.035-.075-.035-.074-.036-.073-.037-.073-.038-.073-.039-.072-.04-.071-.04-.071-.042-.07-.042-.07-.043-.069-.044-.068-.044-.069-.045-.067-.047-.067-.047-.066-.047-.066-.049-.065-.049-.064-.05-.064-.051-.063-.052-.063-.052-.062-.053-.061-.054-.061-.054-.06-.055-.059-.056-.059-.057-.058-.057-.057-.058-.056-.058-.056-.06-.055-.06-.055-.06-.054-.062-.053-.062-.052-.062-.051-.063-.051-.064-.05-.065-.05-.065-.048-.065-.048-.067-.047-.067-.046-.067-.045-.068-.045-.069-.044-.069-.043-.069-.042-.071-.041-.071-.041-.071-.039-.072-.039-.072-.038-.073-.037-.074-.036-.074-.036-.074-.034-.075-.034-.075-.032-.076-.032-.077-.031-.077-.03-.077-.029-.078-.028-.078-.027-.078-.026-.079-.026-.08-.024-.08-.023-.08-.023-.081-.021-.081-.021-.082-.019-.082-.019-.082-.017-.083-.017-.083-.015-.083-.015-.084-.013-.084-.012-.084-.012-.085-.01-.085-.009-.085-.008-.086-.007-.086-.006-.086-.005-.087-.004-.087-.003-.087-.002-.088V50.73l.002-.088.003-.087.004-.087.005-.086.006-.087.007-.086.008-.085.009-.086.01-.085.012-.084.012-.085.013-.084.015-.084.015-.083.017-.083.017-.083.019-.082.019-.082.021-.082.021-.081.023-.08.023-.081.024-.08.026-.079.026-.079.027-.079.028-.078.029-.078.03-.077.031-.077.032-.076.032-.076.034-.076.034-.075.036-.074.036-.074.037-.073.038-.073.039-.073.039-.072.041-.071.041-.071.042-.07.043-.07.044-.069.045-.069.045-.068.046-.067.047-.067.048-.066.048-.066.05-.065.05-.064.051-.064.051-.063.052-.063.053-.062.054-.061.055-.061.055-.06.056-.059.056-.059.057-.058.058-.057.059-.057.059-.055.06-.056.061-.054.061-.054.062-.053.063-.052.063-.052.064-.05.064-.05.065-.05.066-.048.066-.048.067-.047.067-.046.069-.046.068-.044.069-.044.07-.043.07-.042.071-.041.071-.041.072-.039.073-.039.073-.038.073-.037.074-.036.075-.036.074-.034.076-.034.076-.032.076-.032.077-.031.077-.03.078-.029.078-.028.079-.027.079-.027.08-.025.079-.024.081-.024.081-.022.081-.022.081-.02.082-.019.082-.019.083-.017.083-.017.083-.015.084-.015.084-.013.085-.013.084-.011.086-.01.085-.009.086-.009.086-.007.086-.006.087-.005.086-.003.088-.003.087-.002h30.265zm-26.967 10v34.835h23.669V54.028H73.828z"
-                    fill="#9b2c2c"
-                  />
-                  <path
-                    d="M130.965 68.365a6.793 6.793 0 00-6.79-6.79H47.15a6.793 6.793 0 00-6.79 6.79v45.103a6.793 6.793 0 006.79 6.79h77.025a6.793 6.793 0 006.79-6.79V68.365z"
-                    fill="#f56565"
-                  />
-                  <path
-                    d="M85.662 79.55l2.807 8.637h9.082l-7.348 5.338 2.807 8.637-7.348-5.338-7.347 5.338 2.807-8.637-7.348-5.338h9.082l2.806-8.637z"
-                    fill="#fff"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-12"
+              </clippath>
+              <g
+                clip-path="url(#briefcase_svg__a)"
+              >
+                <circle
+                  cx="85.662"
+                  cy="85.208"
+                  fill="#fff5f5"
+                  r="84.792"
+                />
+                <path
+                  d="M100.795 44.028l.087.002.087.003.087.003.087.005.086.006.086.007.086.009.085.009.085.01.085.011.085.013.084.013.083.015.084.015.083.017.082.017.083.019.082.019.081.02.081.022.081.022.08.024.08.024.08.025.079.027.078.027.079.028.077.029.078.03.077.031.076.032.076.032.075.034.075.034.075.036.074.036.073.037.073.038.072.039.072.039.072.041.071.041.07.042.07.043.069.044.068.044.068.046.068.046.067.047.066.048.066.048.065.05.064.05.064.05.063.052.063.052.062.053.061.054.06.054.06.056.06.055.058.057.058.057.058.058.056.059.056.059.055.06.055.061.053.061.053.062.053.063.051.063.051.064.05.064.049.065.049.066.048.066.047.067.046.067.045.068.045.069.043.069.043.07.043.07.041.071.04.071.04.072.039.073.038.073.037.073.036.074.035.074.035.075.033.076.033.076.032.076.031.077.03.077.029.078.028.078.027.079.026.079.026.079.024.08.023.081.023.08.021.081.021.082.019.082.019.082.017.083.016.083.016.083.014.084.014.084.012.085.011.084.011.085.009.086.008.085.007.086.006.087.005.086.004.087.003.087.001.088.001.088v41.255l-.001.087-.001.088-.003.087-.004.087-.005.087-.006.086-.007.086-.008.086-.009.085-.011.085-.011.085-.012.084-.014.084-.014.084-.016.083-.016.083-.017.083-.019.082-.019.082-.021.082-.021.081-.023.081-.023.08-.024.08-.026.08-.026.079-.027.078-.028.078-.029.078-.03.077-.031.077-.032.077-.033.076-.033.075-.035.075-.035.074-.036.074-.037.074-.038.073-.039.072-.04.072-.04.071-.041.071-.043.071-.043.069-.043.069-.045.069-.045.068-.046.067-.047.067-.048.067-.049.065-.049.065-.05.065-.051.064-.051.063-.053.062-.053.062-.053.062-.055.06-.055.06-.056.06-.056.058-.058.058-.058.057-.058.057-.06.056-.06.055-.06.054-.061.054-.062.053-.063.052-.063.052-.064.051-.064.05-.065.049-.066.049-.066.047-.067.047-.068.047-.068.045-.068.044-.069.044-.07.043-.07.042-.071.042-.072.04-.072.04-.072.039-.073.038-.073.037-.074.036-.075.035-.075.035-.075.033-.076.033-.076.032-.077.031-.078.029-.077.029-.079.029-.078.027-.079.026-.08.025-.08.025-.08.023-.081.022-.081.022-.081.02-.082.02-.083.018-.082.018-.083.016-.084.016-.083.014-.084.014-.085.012-.085.011-.085.01-.085.01-.086.008-.086.007-.086.006-.087.005-.087.004-.087.003-.087.001-.088.001H70.618l-.088-.001-.087-.001-.088-.003-.086-.004-.087-.005-.086-.006-.086-.007-.086-.008-.085-.01-.086-.01-.084-.011-.085-.012-.084-.014-.084-.014-.083-.016-.083-.016-.083-.018-.082-.018-.082-.02-.081-.02-.081-.022-.081-.022-.081-.023-.079-.025-.08-.025-.079-.026-.079-.027-.078-.029-.078-.029-.077-.029-.077-.031-.076-.032-.076-.033-.076-.033-.074-.035-.075-.035-.074-.036-.073-.037-.073-.038-.073-.039-.072-.04-.071-.04-.071-.042-.07-.042-.07-.043-.069-.044-.068-.044-.069-.045-.067-.047-.067-.047-.066-.047-.066-.049-.065-.049-.064-.05-.064-.051-.063-.052-.063-.052-.062-.053-.061-.054-.061-.054-.06-.055-.059-.056-.059-.057-.058-.057-.057-.058-.056-.058-.056-.06-.055-.06-.055-.06-.054-.062-.053-.062-.052-.062-.051-.063-.051-.064-.05-.065-.05-.065-.048-.065-.048-.067-.047-.067-.046-.067-.045-.068-.045-.069-.044-.069-.043-.069-.042-.071-.041-.071-.041-.071-.039-.072-.039-.072-.038-.073-.037-.074-.036-.074-.036-.074-.034-.075-.034-.075-.032-.076-.032-.077-.031-.077-.03-.077-.029-.078-.028-.078-.027-.078-.026-.079-.026-.08-.024-.08-.023-.08-.023-.081-.021-.081-.021-.082-.019-.082-.019-.082-.017-.083-.017-.083-.015-.083-.015-.084-.013-.084-.012-.084-.012-.085-.01-.085-.009-.085-.008-.086-.007-.086-.006-.086-.005-.087-.004-.087-.003-.087-.002-.088V50.73l.002-.088.003-.087.004-.087.005-.086.006-.087.007-.086.008-.085.009-.086.01-.085.012-.084.012-.085.013-.084.015-.084.015-.083.017-.083.017-.083.019-.082.019-.082.021-.082.021-.081.023-.08.023-.081.024-.08.026-.079.026-.079.027-.079.028-.078.029-.078.03-.077.031-.077.032-.076.032-.076.034-.076.034-.075.036-.074.036-.074.037-.073.038-.073.039-.073.039-.072.041-.071.041-.071.042-.07.043-.07.044-.069.045-.069.045-.068.046-.067.047-.067.048-.066.048-.066.05-.065.05-.064.051-.064.051-.063.052-.063.053-.062.054-.061.055-.061.055-.06.056-.059.056-.059.057-.058.058-.057.059-.057.059-.055.06-.056.061-.054.061-.054.062-.053.063-.052.063-.052.064-.05.064-.05.065-.05.066-.048.066-.048.067-.047.067-.046.069-.046.068-.044.069-.044.07-.043.07-.042.071-.041.071-.041.072-.039.073-.039.073-.038.073-.037.074-.036.075-.036.074-.034.076-.034.076-.032.076-.032.077-.031.077-.03.078-.029.078-.028.079-.027.079-.027.08-.025.079-.024.081-.024.081-.022.081-.022.081-.02.082-.019.082-.019.083-.017.083-.017.083-.015.084-.015.084-.013.085-.013.084-.011.086-.01.085-.009.086-.009.086-.007.086-.006.087-.005.086-.003.088-.003.087-.002h30.265zm-26.967 10v34.835h23.669V54.028H73.828z"
+                  fill="#9b2c2c"
+                />
+                <path
+                  d="M130.965 68.365a6.793 6.793 0 00-6.79-6.79H47.15a6.793 6.793 0 00-6.79 6.79v45.103a6.793 6.793 0 006.79 6.79h77.025a6.793 6.793 0 006.79-6.79V68.365z"
+                  fill="#f56565"
+                />
+                <path
+                  d="M85.662 79.55l2.807 8.637h9.082l-7.348 5.338 2.807 8.637-7.348-5.338-7.347 5.338 2.807-8.637-7.348-5.338h9.082l2.806-8.637z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <h4
+              class="font-bold"
             >
-              <p
-                class="chakra-text emotion-13"
-              >
-                Revelation of the year - 2022
-              </p>
-              <p
-                class="chakra-text emotion-14"
-              >
-                I was recognized for incredible performance as a software developer in 2022 at CompanyName.
-              </p>
-              <p
-                class="chakra-text emotion-15"
-              >
-                - 
-                12 Sep, 2022
-              </p>
-            </div>
+              Revelation of the year - 2022
+            </h4>
+            <p>
+              I was recognized for incredible performance as a software developer in 2022 at CompanyName.
+            </p>
             <p
-              class="chakra-text emotion-16"
+              class="block lg:hidden italic"
             >
-              -
+              - 
               12 Sep, 2022
             </p>
           </div>
-          <div
-            class="emotion-11"
-            role="listitem"
+          <span
+            class="italic text-sm hidden lg:block whitespace-nowrap"
           >
-            <div>
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="1.414"
-                viewBox="0 0 170 170"
+            -
+            12 Sep, 2022
+          </span>
+        </div>
+        <div
+          class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
+          role="listitem"
+        >
+          <div
+            class="hidden lg:block"
+          >
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="1.414"
+              viewBox="0 0 170 170"
+            >
+              <path
+                d="M0 0h170v170H0z"
+                fill="none"
+              />
+              <clippath
+                id="trophy_svg__a"
               >
                 <path
                   d="M0 0h170v170H0z"
-                  fill="none"
+                />
+              </clippath>
+              <g
+                clip-path="url(#trophy_svg__a)"
+              >
+                <circle
+                  cx="85"
+                  cy="85"
+                  fill="#FFFAF0"
+                  r="85"
+                />
+                <path
+                  d="M106.868 123c0-4.828-3.919-8.747-8.747-8.747H71.879c-4.828 0-8.747 3.919-8.747 8.747h43.736z"
+                  fill="#FBD38D"
+                />
+                <path
+                  d="M80.626 103.756V123h8.748v-19.244h-8.748z"
+                  fill="#FBD38D"
                 />
                 <clippath
-                  id="trophy_svg__a"
+                  id="trophy_svg__b"
                 >
                   <path
-                    d="M0 0h170v170H0z"
+                    d="M45.638 61.77h17.494v17.494H45.638z"
                   />
                 </clippath>
                 <g
-                  clip-path="url(#trophy_svg__a)"
+                  clip-path="url(#trophy_svg__b)"
                 >
                   <circle
-                    cx="85"
-                    cy="85"
-                    fill="#FFFAF0"
-                    r="85"
-                  />
-                  <path
-                    d="M106.868 123c0-4.828-3.919-8.747-8.747-8.747H71.879c-4.828 0-8.747 3.919-8.747 8.747h43.736z"
+                    cx="63.132"
+                    cy="61.77"
                     fill="#FBD38D"
-                  />
-                  <path
-                    d="M80.626 103.756V123h8.748v-19.244h-8.748z"
-                    fill="#FBD38D"
-                  />
-                  <clippath
-                    id="trophy_svg__b"
-                  >
-                    <path
-                      d="M45.638 61.77h17.494v17.494H45.638z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#trophy_svg__b)"
-                  >
-                    <circle
-                      cx="63.132"
-                      cy="61.77"
-                      fill="#FBD38D"
-                      r="17.494"
-                    />
-                  </g>
-                  <clippath
-                    id="trophy_svg__c"
-                  >
-                    <path
-                      d="M106.868 61.77h17.494v17.494h-17.494z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#trophy_svg__c)"
-                  >
-                    <circle
-                      cx="106.868"
-                      cy="61.77"
-                      fill="#FBD38D"
-                      r="17.494"
-                    />
-                  </g>
-                  <path
-                    d="M106.868 53.022H63.132v30.616c0 12.069 9.799 21.868 21.868 21.868 12.069 0 21.868-9.799 21.868-21.868V53.022z"
-                    fill="#ED8936"
-                  />
-                  <path
-                    d="M85 65.398l2.806 8.638h9.082l-7.347 5.338 2.806 8.637L85 82.673l-7.347 5.338 2.806-8.637-7.347-5.338h9.082L85 65.398z"
-                    fill="#fff"
+                    r="17.494"
                   />
                 </g>
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-12"
+                <clippath
+                  id="trophy_svg__c"
+                >
+                  <path
+                    d="M106.868 61.77h17.494v17.494h-17.494z"
+                  />
+                </clippath>
+                <g
+                  clip-path="url(#trophy_svg__c)"
+                >
+                  <circle
+                    cx="106.868"
+                    cy="61.77"
+                    fill="#FBD38D"
+                    r="17.494"
+                  />
+                </g>
+                <path
+                  d="M106.868 53.022H63.132v30.616c0 12.069 9.799 21.868 21.868 21.868 12.069 0 21.868-9.799 21.868-21.868V53.022z"
+                  fill="#ED8936"
+                />
+                <path
+                  d="M85 65.398l2.806 8.638h9.082l-7.347 5.338 2.806 8.637L85 82.673l-7.347 5.338 2.806-8.637-7.347-5.338h9.082L85 65.398z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <h4
+              class="font-bold"
             >
-              <p
-                class="chakra-text emotion-13"
-              >
-                Microsoft Hackaton
-              </p>
-              <p
-                class="chakra-text emotion-14"
-              >
-                I created most creative application
-              </p>
-              <p
-                class="chakra-text emotion-15"
-              >
-                - 
-                12 Jul, 2021
-              </p>
-            </div>
+              Microsoft Hackaton
+            </h4>
+            <p>
+              I created most creative application
+            </p>
             <p
-              class="chakra-text emotion-16"
+              class="block lg:hidden italic"
             >
-              -
+              - 
               12 Jul, 2021
             </p>
           </div>
-          <div
-            class="emotion-11"
-            role="listitem"
+          <span
+            class="italic text-sm hidden lg:block whitespace-nowrap"
           >
-            <div>
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="1.414"
-                viewBox="0 0 170 170"
+            -
+            12 Jul, 2021
+          </span>
+        </div>
+        <div
+          class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
+          role="listitem"
+        >
+          <div
+            class="hidden lg:block"
+          >
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="1.414"
+              viewBox="0 0 170 170"
+            >
+              <path
+                d="M0 0h170v170H0z"
+                fill="none"
+              />
+              <clippath
+                id="certificate_svg__a"
               >
                 <path
                   d="M0 0h170v170H0z"
-                  fill="none"
+                />
+              </clippath>
+              <g
+                clip-path="url(#certificate_svg__a)"
+              >
+                <circle
+                  cx="85"
+                  cy="85"
+                  fill="#F0FFF4"
+                  r="85"
+                />
+                <path
+                  d="M64.829 58h40v52.335h-40z"
+                  fill="#68D391"
                 />
                 <clippath
-                  id="certificate_svg__a"
+                  id="certificate_svg__b"
                 >
                   <path
-                    d="M0 0h170v170H0z"
+                    d="M64.829 52h53.33v10h-53.33z"
                   />
                 </clippath>
                 <g
-                  clip-path="url(#certificate_svg__a)"
+                  clip-path="url(#certificate_svg__b)"
                 >
-                  <circle
-                    cx="85"
-                    cy="85"
-                    fill="#F0FFF4"
-                    r="85"
-                  />
                   <path
-                    d="M64.829 58h40v52.335h-40z"
+                    d="M118.159 58.664A6.667 6.667 0 00111.495 52H71.492a6.667 6.667 0 00-6.663 6.664v6.672A6.667 6.667 0 0071.492 72h40.003a6.667 6.667 0 006.664-6.664v-6.672z"
                     fill="#68D391"
                   />
-                  <clippath
-                    id="certificate_svg__b"
-                  >
-                    <path
-                      d="M64.829 52h53.33v10h-53.33z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#certificate_svg__b)"
-                  >
-                    <path
-                      d="M118.159 58.664A6.667 6.667 0 00111.495 52H71.492a6.667 6.667 0 00-6.663 6.664v6.672A6.667 6.667 0 0071.492 72h40.003a6.667 6.667 0 006.664-6.664v-6.672z"
-                      fill="#68D391"
-                    />
-                  </g>
-                  <clippath
-                    id="certificate_svg__c"
-                  >
-                    <path
-                      d="M51.5 107h53.33v10H51.5z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#certificate_svg__c)"
-                  >
-                    <path
-                      d="M104.83 110.336A6.667 6.667 0 0198.166 117H58.164a6.667 6.667 0 01-6.664-6.664v-6.672A6.667 6.667 0 0158.164 97h40.002a6.667 6.667 0 016.664 6.664v6.672z"
-                      fill="#38A169"
-                    />
-                  </g>
-                  <clippath
-                    id="certificate_svg__d"
-                  >
-                    <path
-                      d="M91.5 107h13.33v10H91.5z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#certificate_svg__d)"
-                  >
-                    <path
-                      d="M104.83 110.335c0 3.679-2.986 6.665-6.665 6.665s-6.665-2.986-6.665-6.665v-6.67c0-3.679 2.986-6.665 6.665-6.665s6.665 2.986 6.665 6.665v6.67z"
-                      fill="#68D391"
-                    />
-                  </g>
-                  <clippath
-                    id="certificate_svg__e"
-                  >
-                    <path
-                      d="M104.829 52h13.33v10h-13.33z"
-                    />
-                  </clippath>
-                  <g
-                    clip-path="url(#certificate_svg__e)"
-                  >
-                    <path
-                      d="M118.159 58.665A6.668 6.668 0 00111.494 52a6.668 6.668 0 00-6.665 6.665v6.67A6.668 6.668 0 00111.494 72a6.668 6.668 0 006.665-6.665v-6.67z"
-                      fill="#38A169"
-                    />
-                  </g>
+                </g>
+                <clippath
+                  id="certificate_svg__c"
+                >
                   <path
-                    d="M84.829 71.194l2.806 8.637h9.082l-7.347 5.338 2.806 8.637-7.347-5.338-7.348 5.338 2.807-8.637-7.348-5.338h9.082l2.807-8.637z"
-                    fill="#fff"
+                    d="M51.5 107h53.33v10H51.5z"
+                  />
+                </clippath>
+                <g
+                  clip-path="url(#certificate_svg__c)"
+                >
+                  <path
+                    d="M104.83 110.336A6.667 6.667 0 0198.166 117H58.164a6.667 6.667 0 01-6.664-6.664v-6.672A6.667 6.667 0 0158.164 97h40.002a6.667 6.667 0 016.664 6.664v6.672z"
+                    fill="#38A169"
                   />
                 </g>
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-12"
+                <clippath
+                  id="certificate_svg__d"
+                >
+                  <path
+                    d="M91.5 107h13.33v10H91.5z"
+                  />
+                </clippath>
+                <g
+                  clip-path="url(#certificate_svg__d)"
+                >
+                  <path
+                    d="M104.83 110.335c0 3.679-2.986 6.665-6.665 6.665s-6.665-2.986-6.665-6.665v-6.67c0-3.679 2.986-6.665 6.665-6.665s6.665 2.986 6.665 6.665v6.67z"
+                    fill="#68D391"
+                  />
+                </g>
+                <clippath
+                  id="certificate_svg__e"
+                >
+                  <path
+                    d="M104.829 52h13.33v10h-13.33z"
+                  />
+                </clippath>
+                <g
+                  clip-path="url(#certificate_svg__e)"
+                >
+                  <path
+                    d="M118.159 58.665A6.668 6.668 0 00111.494 52a6.668 6.668 0 00-6.665 6.665v6.67A6.668 6.668 0 00111.494 72a6.668 6.668 0 006.665-6.665v-6.67z"
+                    fill="#38A169"
+                  />
+                </g>
+                <path
+                  d="M84.829 71.194l2.806 8.637h9.082l-7.347 5.338 2.806 8.637-7.347-5.338-7.348 5.338 2.807-8.637-7.348-5.338h9.082l2.807-8.637z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <h4
+              class="font-bold"
             >
-              <p
-                class="chakra-text emotion-13"
-              >
-                Harvard Business School
-              </p>
-              <p
-                class="chakra-text emotion-14"
-              >
-                I created an amazing payment app
-              </p>
-              <p
-                class="chakra-text emotion-15"
-              >
-                - 
-                10 Jul, 2019
-              </p>
-            </div>
+              Harvard Business School
+            </h4>
+            <p>
+              I created an amazing payment app
+            </p>
             <p
-              class="chakra-text emotion-16"
+              class="block lg:hidden italic"
             >
-              -
+              - 
               10 Jul, 2019
             </p>
           </div>
-          <div
-            class="emotion-11"
-            role="listitem"
+          <span
+            class="italic text-sm hidden lg:block whitespace-nowrap"
           >
-            <div>
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="1.414"
-                viewBox="0 0 170 170"
+            -
+            10 Jul, 2019
+          </span>
+        </div>
+        <div
+          class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
+          role="listitem"
+        >
+          <div
+            class="hidden lg:block"
+          >
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="1.414"
+              viewBox="0 0 170 170"
+            >
+              <path
+                d="M0 0h170v170H0z"
+                fill="none"
+              />
+              <clippath
+                id="lock_svg__a"
               >
                 <path
                   d="M0 0h170v170H0z"
-                  fill="none"
                 />
-                <clippath
-                  id="lock_svg__a"
-                >
-                  <path
-                    d="M0 0h170v170H0z"
-                  />
-                </clippath>
-                <g
-                  clip-path="url(#lock_svg__a)"
-                >
-                  <circle
-                    cx="85"
-                    cy="85"
-                    fill="#EBF8FF"
-                    r="85"
-                  />
-                  <path
-                    d="M85.129 46l.129.002.129.002.129.003.128.003.129.005.128.005.128.006.127.007.128.008.127.008.127.009.127.01.126.011.127.012.126.012.126.014.125.014.126.014.125.016.125.016.124.017.125.018.124.019.124.019.124.02.123.021.123.022.123.022.123.023.122.024.123.025.121.025.122.026.121.027.121.028.121.028.121.029.12.03.12.03.119.031.12.032.119.033.119.033.118.034.118.035.118.036.118.036.117.037.117.037.116.039.117.039.116.039.115.041.116.041.115.041.114.043.115.043.114.044.113.044.227.091.225.094.223.096.223.099.22.101.22.104.217.107.217.109.215.112.213.114.212.117.21.119.208.122.207.124.206.127.204.129.202.131.2.134.199.136.197.138.195.141.193.142.192.146.19.147.188.15.186.151.184.154.183.157.18.158.179.16.176.163.175.164.173.167.17.169.169.17.167.173.164.175.163.176.16.179.158.18.157.183.154.184.151.186.15.188.147.19.146.192.142.193.141.195.138.197.136.199.134.2.131.202.129.204.127.206.124.207.122.208.119.21.117.212.114.213.112.215.109.217.107.217.104.22.101.22.099.223.096.223.094.225.091.227.044.113.044.114.043.115.043.114.041.115.041.116.041.115.039.116.039.117.039.116.037.117.037.117.036.118.036.118.035.118.034.118.033.119.033.119.032.12.031.119.03.12.03.12.029.121.028.121.028.121.027.121.026.122.025.121.025.123.024.122.023.123.022.123.022.123.021.123.02.124.019.124.019.124.018.125.017.124.016.125.016.125.014.126.014.125.014.126.012.126.012.127.011.126.01.127.009.127.008.127.008.128.007.127.006.128.005.128.005.129.003.128.003.129.002.129.002.129V101H65V65.871l.002-.129.002-.129.003-.129.003-.128.005-.129.005-.128.006-.128.007-.127.008-.128.008-.127.009-.127.01-.127.011-.126.012-.127.012-.126.014-.126.014-.125.014-.126.016-.125.016-.125.017-.124.018-.125.019-.124.019-.124.02-.124.021-.123.022-.123.022-.123.023-.123.024-.122.025-.123.025-.121.026-.122.027-.121.028-.121.028-.121.029-.121.03-.12.03-.12.031-.119.032-.12.033-.119.033-.119.034-.118.035-.118.036-.118.036-.118.037-.117.037-.117.039-.116.039-.117.039-.116.041-.115.041-.116.041-.115.043-.114.043-.115.044-.114.044-.113.091-.227.094-.225.096-.223.099-.223.101-.22.104-.22.107-.217.109-.217.112-.215.114-.213.117-.212.119-.21.122-.208.124-.207.127-.206.129-.204.131-.202.134-.2.136-.199.138-.197.141-.195.142-.193.146-.192.147-.19.15-.188.151-.186.154-.184.157-.183.158-.18.16-.179.163-.176.164-.175.167-.173.169-.17.17-.169.173-.167.175-.164.176-.163.179-.16.18-.158.183-.157.184-.154.186-.151.188-.15.19-.147.192-.146.193-.142.195-.141.197-.138.199-.136.2-.134.202-.131.204-.129.206-.127.207-.124.208-.122.21-.119.212-.117.213-.114.215-.112.217-.109.217-.107.22-.104.22-.101.223-.099.223-.096.225-.094.227-.091.113-.044.114-.044.115-.043.114-.043.115-.041.116-.041.115-.041.116-.039.117-.039.116-.039.117-.037.117-.037.118-.036.118-.036.118-.035.118-.034.119-.033.119-.033.12-.032.119-.031.12-.03.12-.03.121-.029.121-.028.121-.028.121-.027.122-.026.121-.025.123-.025.122-.024.123-.023.123-.022.123-.022.123-.021.124-.02.124-.019.124-.019.125-.018.124-.017.125-.016.125-.016.126-.014.125-.014.126-.014.126-.012.127-.012.126-.011.127-.01.127-.009.127-.008.128-.008.127-.007.128-.006.128-.005.129-.005.128-.003.129-.003.129-.002.129-.002h.258zm-.195 10l-.065.001-.065.001-.067.001-.064.002-.065.003-.065.002-.064.003-.065.004-.065.004-.064.004-.063.005-.064.005-.063.005-.064.006-.063.006-.062.007-.064.007-.063.007-.062.008-.062.008-.063.008-.062.009-.062.01-.062.009-.062.01-.061.011-.061.01-.061.012-.061.011-.061.012-.06.012-.061.013-.061.013-.06.013-.06.014-.06.014-.06.014-.059.015-.059.015-.06.016-.06.016-.058.016-.059.016-.059.017-.059.017-.057.018-.059.018-.059.018-.058.019-.058.019-.057.019-.057.02-.058.02-.057.02-.056.021-.058.021-.057.021-.056.022-.042.017-.127.051-.112.046-.111.048-.11.049-.11.05-.11.052-.108.053-.108.055-.107.056-.106.057-.106.058-.105.06-.105.06-.103.062-.103.064-.102.065-.101.065-.1.067-.1.068-.099.07-.098.07-.097.072-.096.073-.096.074-.094.075-.094.076-.093.078-.092.079-.09.079-.09.081-.089.082-.088.083-.087.084-.086.085-.085.086-.084.087-.083.088-.082.089-.081.09-.079.09-.079.092-.077.093-.077.094-.075.094-.074.096-.073.096-.071.097-.071.098-.07.099-.068.1-.067.1-.066.101-.064.102-.064.103-.062.104-.061.104-.059.105-.058.106-.057.106-.056.107-.055.108-.053.109-.051.108-.051.111-.049.11-.048.111-.047.112-.05.126-.016.042-.023.057-.021.058-.021.056-.021.057-.02.057-.02.058-.02.058-.019.056-.019.058-.019.059-.018.058-.018.058-.018.059-.017.059-.017.057-.016.059-.017.06-.015.058-.016.061-.015.06-.015.058-.014.059-.014.062-.014.06-.013.059-.013.059-.013.062-.012.061-.012.062-.011.059-.011.061-.011.063-.011.06-.01.062-.009.063-.01.061-.008.061-.009.062-.008.064-.008.063-.007.062-.007.064-.007.061-.006.064-.006.063-.005.065-.006.063-.004.064-.004.064-.004.064-.004.065-.003.063-.002.066-.003.065-.002.065-.001.065-.001.065-.001.066V91h20V65.934l-.001-.066-.001-.065-.001-.065-.002-.066-.002-.064-.003-.064-.003-.065-.004-.065-.004-.064-.004-.064-.005-.064-.005-.063-.005-.063-.006-.065-.006-.064-.007-.063-.007-.062-.007-.062-.008-.063-.008-.062-.009-.064-.008-.061-.01-.061-.009-.063-.01-.062-.011-.061-.011-.062-.011-.061-.011-.06-.012-.061-.012-.061-.013-.06-.013-.059-.013-.063-.014-.06-.014-.058-.014-.06-.015-.061-.015-.06-.015-.057-.016-.06-.017-.06-.016-.057-.017-.061-.018-.058-.017-.058-.018-.058-.018-.058-.019-.059-.019-.056-.019-.058-.02-.058-.02-.058-.02-.057-.021-.057-.021-.058-.021-.056-.022-.056-.016-.042-.051-.127-.047-.112-.048-.111-.049-.111-.05-.109-.052-.109-.054-.109-.054-.108-.056-.107-.057-.106-.058-.106-.06-.106-.06-.103-.062-.104-.064-.102-.064-.102-.066-.102-.067-.1-.068-.1-.07-.099-.07-.098-.072-.097-.073-.096-.074-.096-.075-.094-.077-.094-.077-.093-.079-.091-.079-.091-.081-.09-.082-.089-.083-.088-.084-.087-.085-.086-.086-.085-.087-.084-.088-.083-.089-.082-.089-.08-.092-.08-.092-.079-.092-.077-.094-.077-.094-.075-.095-.074-.097-.073-.097-.072-.098-.07-.099-.069-.1-.069-.1-.067-.101-.066-.102-.064-.103-.063-.103-.063-.105-.061-.105-.059-.106-.058-.106-.057-.107-.056-.108-.055-.109-.053-.109-.051-.11-.051-.11-.049-.111-.048-.112-.046-.127-.052-.042-.016-.056-.022-.057-.021-.057-.021-.057-.021-.057-.02-.058-.02-.057-.02-.057-.019-.059-.019-.058-.019-.058-.018-.058-.018-.059-.018-.058-.017-.059-.017-.058-.016-.059-.016-.06-.016-.06-.016-.058-.015-.06-.015-.06-.014-.06-.014-.06-.014-.06-.013-.061-.013-.061-.013-.059-.012-.062-.012-.061-.011-.061-.012-.062-.01-.06-.011-.062-.01-.062-.009-.062-.01-.062-.009-.063-.008-.062-.008-.062-.008-.063-.007-.064-.007-.062-.007-.063-.006-.064-.006-.063-.005-.064-.005-.063-.005-.065-.004-.064-.004-.065-.004-.064-.003-.065-.002-.065-.003-.064-.002-.067-.001-.065-.001-.065-.001h-.132z"
-                    fill="#63B3ED"
-                  />
-                  <path
-                    d="M115 81c0-2.76-2.24-5-5-5H60c-2.76 0-5 2.24-5 5v30c0 2.76 2.24 5 5 5h50c2.76 0 5-2.24 5-5V81z"
-                    fill="#3182CE"
-                  />
-                  <path
-                    d="M85 83l2.806 8.637h9.082l-7.347 5.338 2.806 8.638L85 100.275l-7.347 5.338 2.806-8.638-7.347-5.338h9.082L85 83z"
-                    fill="#fff"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-12"
+              </clippath>
+              <g
+                clip-path="url(#lock_svg__a)"
+              >
+                <circle
+                  cx="85"
+                  cy="85"
+                  fill="#EBF8FF"
+                  r="85"
+                />
+                <path
+                  d="M85.129 46l.129.002.129.002.129.003.128.003.129.005.128.005.128.006.127.007.128.008.127.008.127.009.127.01.126.011.127.012.126.012.126.014.125.014.126.014.125.016.125.016.124.017.125.018.124.019.124.019.124.02.123.021.123.022.123.022.123.023.122.024.123.025.121.025.122.026.121.027.121.028.121.028.121.029.12.03.12.03.119.031.12.032.119.033.119.033.118.034.118.035.118.036.118.036.117.037.117.037.116.039.117.039.116.039.115.041.116.041.115.041.114.043.115.043.114.044.113.044.227.091.225.094.223.096.223.099.22.101.22.104.217.107.217.109.215.112.213.114.212.117.21.119.208.122.207.124.206.127.204.129.202.131.2.134.199.136.197.138.195.141.193.142.192.146.19.147.188.15.186.151.184.154.183.157.18.158.179.16.176.163.175.164.173.167.17.169.169.17.167.173.164.175.163.176.16.179.158.18.157.183.154.184.151.186.15.188.147.19.146.192.142.193.141.195.138.197.136.199.134.2.131.202.129.204.127.206.124.207.122.208.119.21.117.212.114.213.112.215.109.217.107.217.104.22.101.22.099.223.096.223.094.225.091.227.044.113.044.114.043.115.043.114.041.115.041.116.041.115.039.116.039.117.039.116.037.117.037.117.036.118.036.118.035.118.034.118.033.119.033.119.032.12.031.119.03.12.03.12.029.121.028.121.028.121.027.121.026.122.025.121.025.123.024.122.023.123.022.123.022.123.021.123.02.124.019.124.019.124.018.125.017.124.016.125.016.125.014.126.014.125.014.126.012.126.012.127.011.126.01.127.009.127.008.127.008.128.007.127.006.128.005.128.005.129.003.128.003.129.002.129.002.129V101H65V65.871l.002-.129.002-.129.003-.129.003-.128.005-.129.005-.128.006-.128.007-.127.008-.128.008-.127.009-.127.01-.127.011-.126.012-.127.012-.126.014-.126.014-.125.014-.126.016-.125.016-.125.017-.124.018-.125.019-.124.019-.124.02-.124.021-.123.022-.123.022-.123.023-.123.024-.122.025-.123.025-.121.026-.122.027-.121.028-.121.028-.121.029-.121.03-.12.03-.12.031-.119.032-.12.033-.119.033-.119.034-.118.035-.118.036-.118.036-.118.037-.117.037-.117.039-.116.039-.117.039-.116.041-.115.041-.116.041-.115.043-.114.043-.115.044-.114.044-.113.091-.227.094-.225.096-.223.099-.223.101-.22.104-.22.107-.217.109-.217.112-.215.114-.213.117-.212.119-.21.122-.208.124-.207.127-.206.129-.204.131-.202.134-.2.136-.199.138-.197.141-.195.142-.193.146-.192.147-.19.15-.188.151-.186.154-.184.157-.183.158-.18.16-.179.163-.176.164-.175.167-.173.169-.17.17-.169.173-.167.175-.164.176-.163.179-.16.18-.158.183-.157.184-.154.186-.151.188-.15.19-.147.192-.146.193-.142.195-.141.197-.138.199-.136.2-.134.202-.131.204-.129.206-.127.207-.124.208-.122.21-.119.212-.117.213-.114.215-.112.217-.109.217-.107.22-.104.22-.101.223-.099.223-.096.225-.094.227-.091.113-.044.114-.044.115-.043.114-.043.115-.041.116-.041.115-.041.116-.039.117-.039.116-.039.117-.037.117-.037.118-.036.118-.036.118-.035.118-.034.119-.033.119-.033.12-.032.119-.031.12-.03.12-.03.121-.029.121-.028.121-.028.121-.027.122-.026.121-.025.123-.025.122-.024.123-.023.123-.022.123-.022.123-.021.124-.02.124-.019.124-.019.125-.018.124-.017.125-.016.125-.016.126-.014.125-.014.126-.014.126-.012.127-.012.126-.011.127-.01.127-.009.127-.008.128-.008.127-.007.128-.006.128-.005.129-.005.128-.003.129-.003.129-.002.129-.002h.258zm-.195 10l-.065.001-.065.001-.067.001-.064.002-.065.003-.065.002-.064.003-.065.004-.065.004-.064.004-.063.005-.064.005-.063.005-.064.006-.063.006-.062.007-.064.007-.063.007-.062.008-.062.008-.063.008-.062.009-.062.01-.062.009-.062.01-.061.011-.061.01-.061.012-.061.011-.061.012-.06.012-.061.013-.061.013-.06.013-.06.014-.06.014-.06.014-.059.015-.059.015-.06.016-.06.016-.058.016-.059.016-.059.017-.059.017-.057.018-.059.018-.059.018-.058.019-.058.019-.057.019-.057.02-.058.02-.057.02-.056.021-.058.021-.057.021-.056.022-.042.017-.127.051-.112.046-.111.048-.11.049-.11.05-.11.052-.108.053-.108.055-.107.056-.106.057-.106.058-.105.06-.105.06-.103.062-.103.064-.102.065-.101.065-.1.067-.1.068-.099.07-.098.07-.097.072-.096.073-.096.074-.094.075-.094.076-.093.078-.092.079-.09.079-.09.081-.089.082-.088.083-.087.084-.086.085-.085.086-.084.087-.083.088-.082.089-.081.09-.079.09-.079.092-.077.093-.077.094-.075.094-.074.096-.073.096-.071.097-.071.098-.07.099-.068.1-.067.1-.066.101-.064.102-.064.103-.062.104-.061.104-.059.105-.058.106-.057.106-.056.107-.055.108-.053.109-.051.108-.051.111-.049.11-.048.111-.047.112-.05.126-.016.042-.023.057-.021.058-.021.056-.021.057-.02.057-.02.058-.02.058-.019.056-.019.058-.019.059-.018.058-.018.058-.018.059-.017.059-.017.057-.016.059-.017.06-.015.058-.016.061-.015.06-.015.058-.014.059-.014.062-.014.06-.013.059-.013.059-.013.062-.012.061-.012.062-.011.059-.011.061-.011.063-.011.06-.01.062-.009.063-.01.061-.008.061-.009.062-.008.064-.008.063-.007.062-.007.064-.007.061-.006.064-.006.063-.005.065-.006.063-.004.064-.004.064-.004.064-.004.065-.003.063-.002.066-.003.065-.002.065-.001.065-.001.065-.001.066V91h20V65.934l-.001-.066-.001-.065-.001-.065-.002-.066-.002-.064-.003-.064-.003-.065-.004-.065-.004-.064-.004-.064-.005-.064-.005-.063-.005-.063-.006-.065-.006-.064-.007-.063-.007-.062-.007-.062-.008-.063-.008-.062-.009-.064-.008-.061-.01-.061-.009-.063-.01-.062-.011-.061-.011-.062-.011-.061-.011-.06-.012-.061-.012-.061-.013-.06-.013-.059-.013-.063-.014-.06-.014-.058-.014-.06-.015-.061-.015-.06-.015-.057-.016-.06-.017-.06-.016-.057-.017-.061-.018-.058-.017-.058-.018-.058-.018-.058-.019-.059-.019-.056-.019-.058-.02-.058-.02-.058-.02-.057-.021-.057-.021-.058-.021-.056-.022-.056-.016-.042-.051-.127-.047-.112-.048-.111-.049-.111-.05-.109-.052-.109-.054-.109-.054-.108-.056-.107-.057-.106-.058-.106-.06-.106-.06-.103-.062-.104-.064-.102-.064-.102-.066-.102-.067-.1-.068-.1-.07-.099-.07-.098-.072-.097-.073-.096-.074-.096-.075-.094-.077-.094-.077-.093-.079-.091-.079-.091-.081-.09-.082-.089-.083-.088-.084-.087-.085-.086-.086-.085-.087-.084-.088-.083-.089-.082-.089-.08-.092-.08-.092-.079-.092-.077-.094-.077-.094-.075-.095-.074-.097-.073-.097-.072-.098-.07-.099-.069-.1-.069-.1-.067-.101-.066-.102-.064-.103-.063-.103-.063-.105-.061-.105-.059-.106-.058-.106-.057-.107-.056-.108-.055-.109-.053-.109-.051-.11-.051-.11-.049-.111-.048-.112-.046-.127-.052-.042-.016-.056-.022-.057-.021-.057-.021-.057-.021-.057-.02-.058-.02-.057-.02-.057-.019-.059-.019-.058-.019-.058-.018-.058-.018-.059-.018-.058-.017-.059-.017-.058-.016-.059-.016-.06-.016-.06-.016-.058-.015-.06-.015-.06-.014-.06-.014-.06-.014-.06-.013-.061-.013-.061-.013-.059-.012-.062-.012-.061-.011-.061-.012-.062-.01-.06-.011-.062-.01-.062-.009-.062-.01-.062-.009-.063-.008-.062-.008-.062-.008-.063-.007-.064-.007-.062-.007-.063-.006-.064-.006-.063-.005-.064-.005-.063-.005-.065-.004-.064-.004-.065-.004-.064-.003-.065-.002-.065-.003-.064-.002-.067-.001-.065-.001-.065-.001h-.132z"
+                  fill="#63B3ED"
+                />
+                <path
+                  d="M115 81c0-2.76-2.24-5-5-5H60c-2.76 0-5 2.24-5 5v30c0 2.76 2.24 5 5 5h50c2.76 0 5-2.24 5-5V81z"
+                  fill="#3182CE"
+                />
+                <path
+                  d="M85 83l2.806 8.637h9.082l-7.347 5.338 2.806 8.638L85 100.275l-7.347 5.338 2.806-8.638-7.347-5.338h9.082L85 83z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <h4
+              class="font-bold"
             >
-              <p
-                class="chakra-text emotion-13"
-              >
-                Search Engine Bug
-              </p>
-              <p
-                class="chakra-text emotion-14"
-              >
-                I found a bug in search engine
-              </p>
-              <p
-                class="chakra-text emotion-15"
-              >
-                - 
-                15 Feb, 2021
-              </p>
-            </div>
+              Search Engine Bug
+            </h4>
+            <p>
+              I found a bug in search engine
+            </p>
             <p
-              class="chakra-text emotion-16"
+              class="block lg:hidden italic"
             >
-              -
+              - 
               15 Feb, 2021
             </p>
           </div>
-          <div
-            class="emotion-11"
-            role="listitem"
+          <span
+            class="italic text-sm hidden lg:block whitespace-nowrap"
           >
-            <div>
-              <svg
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                stroke-linejoin="round"
-                stroke-miterlimit="2"
-                viewBox="0 0 170 170"
+            -
+            15 Feb, 2021
+          </span>
+        </div>
+        <div
+          class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
+          role="listitem"
+        >
+          <div
+            class="hidden lg:block"
+          >
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 170 170"
+            >
+              <path
+                d="M.87 0h170v170H.87z"
+                fill="none"
+              />
+              <clippath
+                id="briefcase_svg__a"
               >
                 <path
                   d="M.87 0h170v170H.87z"
-                  fill="none"
                 />
-                <clippath
-                  id="briefcase_svg__a"
-                >
-                  <path
-                    d="M.87 0h170v170H.87z"
-                  />
-                </clippath>
-                <g
-                  clip-path="url(#briefcase_svg__a)"
-                >
-                  <circle
-                    cx="85.662"
-                    cy="85.208"
-                    fill="#fff5f5"
-                    r="84.792"
-                  />
-                  <path
-                    d="M100.795 44.028l.087.002.087.003.087.003.087.005.086.006.086.007.086.009.085.009.085.01.085.011.085.013.084.013.083.015.084.015.083.017.082.017.083.019.082.019.081.02.081.022.081.022.08.024.08.024.08.025.079.027.078.027.079.028.077.029.078.03.077.031.076.032.076.032.075.034.075.034.075.036.074.036.073.037.073.038.072.039.072.039.072.041.071.041.07.042.07.043.069.044.068.044.068.046.068.046.067.047.066.048.066.048.065.05.064.05.064.05.063.052.063.052.062.053.061.054.06.054.06.056.06.055.058.057.058.057.058.058.056.059.056.059.055.06.055.061.053.061.053.062.053.063.051.063.051.064.05.064.049.065.049.066.048.066.047.067.046.067.045.068.045.069.043.069.043.07.043.07.041.071.04.071.04.072.039.073.038.073.037.073.036.074.035.074.035.075.033.076.033.076.032.076.031.077.03.077.029.078.028.078.027.079.026.079.026.079.024.08.023.081.023.08.021.081.021.082.019.082.019.082.017.083.016.083.016.083.014.084.014.084.012.085.011.084.011.085.009.086.008.085.007.086.006.087.005.086.004.087.003.087.001.088.001.088v41.255l-.001.087-.001.088-.003.087-.004.087-.005.087-.006.086-.007.086-.008.086-.009.085-.011.085-.011.085-.012.084-.014.084-.014.084-.016.083-.016.083-.017.083-.019.082-.019.082-.021.082-.021.081-.023.081-.023.08-.024.08-.026.08-.026.079-.027.078-.028.078-.029.078-.03.077-.031.077-.032.077-.033.076-.033.075-.035.075-.035.074-.036.074-.037.074-.038.073-.039.072-.04.072-.04.071-.041.071-.043.071-.043.069-.043.069-.045.069-.045.068-.046.067-.047.067-.048.067-.049.065-.049.065-.05.065-.051.064-.051.063-.053.062-.053.062-.053.062-.055.06-.055.06-.056.06-.056.058-.058.058-.058.057-.058.057-.06.056-.06.055-.06.054-.061.054-.062.053-.063.052-.063.052-.064.051-.064.05-.065.049-.066.049-.066.047-.067.047-.068.047-.068.045-.068.044-.069.044-.07.043-.07.042-.071.042-.072.04-.072.04-.072.039-.073.038-.073.037-.074.036-.075.035-.075.035-.075.033-.076.033-.076.032-.077.031-.078.029-.077.029-.079.029-.078.027-.079.026-.08.025-.08.025-.08.023-.081.022-.081.022-.081.02-.082.02-.083.018-.082.018-.083.016-.084.016-.083.014-.084.014-.085.012-.085.011-.085.01-.085.01-.086.008-.086.007-.086.006-.087.005-.087.004-.087.003-.087.001-.088.001H70.618l-.088-.001-.087-.001-.088-.003-.086-.004-.087-.005-.086-.006-.086-.007-.086-.008-.085-.01-.086-.01-.084-.011-.085-.012-.084-.014-.084-.014-.083-.016-.083-.016-.083-.018-.082-.018-.082-.02-.081-.02-.081-.022-.081-.022-.081-.023-.079-.025-.08-.025-.079-.026-.079-.027-.078-.029-.078-.029-.077-.029-.077-.031-.076-.032-.076-.033-.076-.033-.074-.035-.075-.035-.074-.036-.073-.037-.073-.038-.073-.039-.072-.04-.071-.04-.071-.042-.07-.042-.07-.043-.069-.044-.068-.044-.069-.045-.067-.047-.067-.047-.066-.047-.066-.049-.065-.049-.064-.05-.064-.051-.063-.052-.063-.052-.062-.053-.061-.054-.061-.054-.06-.055-.059-.056-.059-.057-.058-.057-.057-.058-.056-.058-.056-.06-.055-.06-.055-.06-.054-.062-.053-.062-.052-.062-.051-.063-.051-.064-.05-.065-.05-.065-.048-.065-.048-.067-.047-.067-.046-.067-.045-.068-.045-.069-.044-.069-.043-.069-.042-.071-.041-.071-.041-.071-.039-.072-.039-.072-.038-.073-.037-.074-.036-.074-.036-.074-.034-.075-.034-.075-.032-.076-.032-.077-.031-.077-.03-.077-.029-.078-.028-.078-.027-.078-.026-.079-.026-.08-.024-.08-.023-.08-.023-.081-.021-.081-.021-.082-.019-.082-.019-.082-.017-.083-.017-.083-.015-.083-.015-.084-.013-.084-.012-.084-.012-.085-.01-.085-.009-.085-.008-.086-.007-.086-.006-.086-.005-.087-.004-.087-.003-.087-.002-.088V50.73l.002-.088.003-.087.004-.087.005-.086.006-.087.007-.086.008-.085.009-.086.01-.085.012-.084.012-.085.013-.084.015-.084.015-.083.017-.083.017-.083.019-.082.019-.082.021-.082.021-.081.023-.08.023-.081.024-.08.026-.079.026-.079.027-.079.028-.078.029-.078.03-.077.031-.077.032-.076.032-.076.034-.076.034-.075.036-.074.036-.074.037-.073.038-.073.039-.073.039-.072.041-.071.041-.071.042-.07.043-.07.044-.069.045-.069.045-.068.046-.067.047-.067.048-.066.048-.066.05-.065.05-.064.051-.064.051-.063.052-.063.053-.062.054-.061.055-.061.055-.06.056-.059.056-.059.057-.058.058-.057.059-.057.059-.055.06-.056.061-.054.061-.054.062-.053.063-.052.063-.052.064-.05.064-.05.065-.05.066-.048.066-.048.067-.047.067-.046.069-.046.068-.044.069-.044.07-.043.07-.042.071-.041.071-.041.072-.039.073-.039.073-.038.073-.037.074-.036.075-.036.074-.034.076-.034.076-.032.076-.032.077-.031.077-.03.078-.029.078-.028.079-.027.079-.027.08-.025.079-.024.081-.024.081-.022.081-.022.081-.02.082-.019.082-.019.083-.017.083-.017.083-.015.084-.015.084-.013.085-.013.084-.011.086-.01.085-.009.086-.009.086-.007.086-.006.087-.005.086-.003.088-.003.087-.002h30.265zm-26.967 10v34.835h23.669V54.028H73.828z"
-                    fill="#9b2c2c"
-                  />
-                  <path
-                    d="M130.965 68.365a6.793 6.793 0 00-6.79-6.79H47.15a6.793 6.793 0 00-6.79 6.79v45.103a6.793 6.793 0 006.79 6.79h77.025a6.793 6.793 0 006.79-6.79V68.365z"
-                    fill="#f56565"
-                  />
-                  <path
-                    d="M85.662 79.55l2.807 8.637h9.082l-7.348 5.338 2.807 8.637-7.348-5.338-7.347 5.338 2.807-8.637-7.348-5.338h9.082l2.806-8.637z"
-                    fill="#fff"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div
-              class="chakra-stack emotion-12"
+              </clippath>
+              <g
+                clip-path="url(#briefcase_svg__a)"
+              >
+                <circle
+                  cx="85.662"
+                  cy="85.208"
+                  fill="#fff5f5"
+                  r="84.792"
+                />
+                <path
+                  d="M100.795 44.028l.087.002.087.003.087.003.087.005.086.006.086.007.086.009.085.009.085.01.085.011.085.013.084.013.083.015.084.015.083.017.082.017.083.019.082.019.081.02.081.022.081.022.08.024.08.024.08.025.079.027.078.027.079.028.077.029.078.03.077.031.076.032.076.032.075.034.075.034.075.036.074.036.073.037.073.038.072.039.072.039.072.041.071.041.07.042.07.043.069.044.068.044.068.046.068.046.067.047.066.048.066.048.065.05.064.05.064.05.063.052.063.052.062.053.061.054.06.054.06.056.06.055.058.057.058.057.058.058.056.059.056.059.055.06.055.061.053.061.053.062.053.063.051.063.051.064.05.064.049.065.049.066.048.066.047.067.046.067.045.068.045.069.043.069.043.07.043.07.041.071.04.071.04.072.039.073.038.073.037.073.036.074.035.074.035.075.033.076.033.076.032.076.031.077.03.077.029.078.028.078.027.079.026.079.026.079.024.08.023.081.023.08.021.081.021.082.019.082.019.082.017.083.016.083.016.083.014.084.014.084.012.085.011.084.011.085.009.086.008.085.007.086.006.087.005.086.004.087.003.087.001.088.001.088v41.255l-.001.087-.001.088-.003.087-.004.087-.005.087-.006.086-.007.086-.008.086-.009.085-.011.085-.011.085-.012.084-.014.084-.014.084-.016.083-.016.083-.017.083-.019.082-.019.082-.021.082-.021.081-.023.081-.023.08-.024.08-.026.08-.026.079-.027.078-.028.078-.029.078-.03.077-.031.077-.032.077-.033.076-.033.075-.035.075-.035.074-.036.074-.037.074-.038.073-.039.072-.04.072-.04.071-.041.071-.043.071-.043.069-.043.069-.045.069-.045.068-.046.067-.047.067-.048.067-.049.065-.049.065-.05.065-.051.064-.051.063-.053.062-.053.062-.053.062-.055.06-.055.06-.056.06-.056.058-.058.058-.058.057-.058.057-.06.056-.06.055-.06.054-.061.054-.062.053-.063.052-.063.052-.064.051-.064.05-.065.049-.066.049-.066.047-.067.047-.068.047-.068.045-.068.044-.069.044-.07.043-.07.042-.071.042-.072.04-.072.04-.072.039-.073.038-.073.037-.074.036-.075.035-.075.035-.075.033-.076.033-.076.032-.077.031-.078.029-.077.029-.079.029-.078.027-.079.026-.08.025-.08.025-.08.023-.081.022-.081.022-.081.02-.082.02-.083.018-.082.018-.083.016-.084.016-.083.014-.084.014-.085.012-.085.011-.085.01-.085.01-.086.008-.086.007-.086.006-.087.005-.087.004-.087.003-.087.001-.088.001H70.618l-.088-.001-.087-.001-.088-.003-.086-.004-.087-.005-.086-.006-.086-.007-.086-.008-.085-.01-.086-.01-.084-.011-.085-.012-.084-.014-.084-.014-.083-.016-.083-.016-.083-.018-.082-.018-.082-.02-.081-.02-.081-.022-.081-.022-.081-.023-.079-.025-.08-.025-.079-.026-.079-.027-.078-.029-.078-.029-.077-.029-.077-.031-.076-.032-.076-.033-.076-.033-.074-.035-.075-.035-.074-.036-.073-.037-.073-.038-.073-.039-.072-.04-.071-.04-.071-.042-.07-.042-.07-.043-.069-.044-.068-.044-.069-.045-.067-.047-.067-.047-.066-.047-.066-.049-.065-.049-.064-.05-.064-.051-.063-.052-.063-.052-.062-.053-.061-.054-.061-.054-.06-.055-.059-.056-.059-.057-.058-.057-.057-.058-.056-.058-.056-.06-.055-.06-.055-.06-.054-.062-.053-.062-.052-.062-.051-.063-.051-.064-.05-.065-.05-.065-.048-.065-.048-.067-.047-.067-.046-.067-.045-.068-.045-.069-.044-.069-.043-.069-.042-.071-.041-.071-.041-.071-.039-.072-.039-.072-.038-.073-.037-.074-.036-.074-.036-.074-.034-.075-.034-.075-.032-.076-.032-.077-.031-.077-.03-.077-.029-.078-.028-.078-.027-.078-.026-.079-.026-.08-.024-.08-.023-.08-.023-.081-.021-.081-.021-.082-.019-.082-.019-.082-.017-.083-.017-.083-.015-.083-.015-.084-.013-.084-.012-.084-.012-.085-.01-.085-.009-.085-.008-.086-.007-.086-.006-.086-.005-.087-.004-.087-.003-.087-.002-.088V50.73l.002-.088.003-.087.004-.087.005-.086.006-.087.007-.086.008-.085.009-.086.01-.085.012-.084.012-.085.013-.084.015-.084.015-.083.017-.083.017-.083.019-.082.019-.082.021-.082.021-.081.023-.08.023-.081.024-.08.026-.079.026-.079.027-.079.028-.078.029-.078.03-.077.031-.077.032-.076.032-.076.034-.076.034-.075.036-.074.036-.074.037-.073.038-.073.039-.073.039-.072.041-.071.041-.071.042-.07.043-.07.044-.069.045-.069.045-.068.046-.067.047-.067.048-.066.048-.066.05-.065.05-.064.051-.064.051-.063.052-.063.053-.062.054-.061.055-.061.055-.06.056-.059.056-.059.057-.058.058-.057.059-.057.059-.055.06-.056.061-.054.061-.054.062-.053.063-.052.063-.052.064-.05.064-.05.065-.05.066-.048.066-.048.067-.047.067-.046.069-.046.068-.044.069-.044.07-.043.07-.042.071-.041.071-.041.072-.039.073-.039.073-.038.073-.037.074-.036.075-.036.074-.034.076-.034.076-.032.076-.032.077-.031.077-.03.078-.029.078-.028.079-.027.079-.027.08-.025.079-.024.081-.024.081-.022.081-.022.081-.02.082-.019.082-.019.083-.017.083-.017.083-.015.084-.015.084-.013.085-.013.084-.011.086-.01.085-.009.086-.009.086-.007.086-.006.087-.005.086-.003.088-.003.087-.002h30.265zm-26.967 10v34.835h23.669V54.028H73.828z"
+                  fill="#9b2c2c"
+                />
+                <path
+                  d="M130.965 68.365a6.793 6.793 0 00-6.79-6.79H47.15a6.793 6.793 0 00-6.79 6.79v45.103a6.793 6.793 0 006.79 6.79h77.025a6.793 6.793 0 006.79-6.79V68.365z"
+                  fill="#f56565"
+                />
+                <path
+                  d="M85.662 79.55l2.807 8.637h9.082l-7.348 5.338 2.807 8.637-7.348-5.338-7.347 5.338 2.807-8.637-7.348-5.338h9.082l2.806-8.637z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <h4
+              class="font-bold"
             >
-              <p
-                class="chakra-text emotion-13"
-              >
-                The best developer in the company
-              </p>
-              <p
-                class="chakra-text emotion-14"
-              >
-                I have done all projects successfully
-              </p>
-              <p
-                class="chakra-text emotion-15"
-              >
-                - 
-                15 Oct, 2022
-              </p>
-            </div>
+              The best developer in the company
+            </h4>
+            <p>
+              I have done all projects successfully
+            </p>
             <p
-              class="chakra-text emotion-16"
+              class="block lg:hidden italic"
             >
-              -
+              - 
               15 Oct, 2022
             </p>
           </div>
+          <span
+            class="italic text-sm hidden lg:block whitespace-nowrap"
+          >
+            -
+            15 Oct, 2022
+          </span>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
     <footer
-      class="emotion-41"
+      class="my-6"
     >
       <div
-        class="chakra-container emotion-42"
+        class="container"
       >
-        <div
-          class="chakra-stack emotion-43"
+        <footer
+          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
         >
-          <p
-            class="chakra-text emotion-13"
+          <span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
           >
-            Created By Yony Calsin
-          </p>
-          <p
-            class="chakra-text emotion-45"
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
+            >
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
           >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
-          </p>
-        </div>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-46"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-47"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -938,7 +678,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-47"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -946,7 +686,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-47"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -954,7 +694,7 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-47"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"

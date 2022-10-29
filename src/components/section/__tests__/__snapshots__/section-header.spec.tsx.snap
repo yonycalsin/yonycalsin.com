@@ -1,36 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionHeader renders the section header 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: bold;
-}
-
 <body>
   <div>
     <div>
       <div
-        class="emotion-0"
+        class="flex items-center justify-between relative"
       >
-        <h2
-          class="chakra-heading emotion-1"
+        <h1
+          class="font-bold font-heading text-xl"
         >
           Customers
-        </h2>
+        </h1>
       </div>
     </div>
   </div>
@@ -38,36 +19,17 @@ exports[`SectionHeader renders the section header 1`] = `
 `;
 
 exports[`SectionHeader renders the section header with anchor 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: bold;
-}
-
 <body>
   <div>
     <div>
       <div
-        class="emotion-0"
+        class="flex items-center justify-between relative"
       >
-        <h2
-          class="chakra-heading emotion-1"
+        <h1
+          class="font-bold font-heading text-xl"
         >
           Customers
-        </h2>
+        </h1>
         <a
           href="/customers"
         >
@@ -80,36 +42,17 @@ exports[`SectionHeader renders the section header with anchor 1`] = `
 `;
 
 exports[`SectionHeader renders the section header with external anchor 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emotion-1 {
-  font-weight: bold;
-}
-
 <body>
   <div>
     <div>
       <div
-        class="emotion-0"
+        class="flex items-center justify-between relative"
       >
-        <h2
-          class="chakra-heading emotion-1"
+        <h1
+          class="font-bold font-heading text-xl"
         >
           Customers
-        </h2>
+        </h1>
         <a
           href="/customers"
           target="_blank"

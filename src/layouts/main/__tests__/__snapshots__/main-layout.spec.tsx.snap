@@ -1,185 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainLayout renders the main layout 1`] = `
-.emotion-0 {
-  width: full;
-  top: 0px;
-  z-index: banner;
-  left: 0px;
-  box-shadow: xs;
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: lg;
-}
-
-.emotion-1 {
-  max-width: container.md;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 py {
-  base: 5;
-  md: 8;
-}
-
-.emotion-2 {
-  display: contents;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 4px;
-  margin-inline-start: 4px;
-}
-
-.emotion-4 {
-  color: primary.500;
-  font-weight: bold;
-}
-
-.emotion-6 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.emotion-7 {
-  max-width: container.md;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-8>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-9 {
-  font-weight: bold;
-}
-
-.emotion-10 {
-  color: gray.600;
-}
-
-.emotion-11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.emotion-12 {
-  font-family: mono;
-  -webkit-margin-start: 2px;
-  margin-inline-start: 2px;
-  -webkit-margin-end: 2px;
-  margin-inline-end: 2px;
-}
-
-.emotion-14 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: 8px;
-  left: 8px;
-}
-
-.emotion-14>*:not(style)~*:not(style) {
-  margin-top: 5px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-14 display {
-  base: none;
-  lg: flex;
-}
-
 <body>
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -195,73 +25,110 @@ exports[`MainLayout renders the main layout 1`] = `
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
           </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/faq"
+          >
+            FAQ
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/snippets"
+          >
+            Snippets
+          </a>
         </div>
       </div>
     </div>
-    <div>
-      <h1>
-        Content
-      </h1>
-    </div>
+    <h1>
+      Content
+    </h1>
     <footer
-      class="emotion-6"
+      class="my-6"
     >
       <div
-        class="chakra-container emotion-7"
+        class="container"
       >
-        <div
-          class="chakra-stack emotion-8"
+        <footer
+          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
         >
-          <p
-            class="chakra-text emotion-9"
+          <span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
           >
-            Created By Yony Calsin
-          </p>
-          <p
-            class="chakra-text emotion-10"
-          >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
-          </p>
-          <button
-            class="chakra-button emotion-11"
-            type="button"
-          >
-            Press 
-            <kbd
-              class="chakra-kbd emotion-12"
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
             >
-              Ctrl
-            </kbd>
-            +
-            <kbd
-              class="chakra-kbd emotion-12"
-            >
-              K
-            </kbd>
-             to start →
-          </button>
-        </div>
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+          >
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-14"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-15"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -269,7 +136,7 @@ exports[`MainLayout renders the main layout 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-15"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -277,7 +144,7 @@ exports[`MainLayout renders the main layout 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-15"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -285,7 +152,7 @@ exports[`MainLayout renders the main layout 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-15"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"

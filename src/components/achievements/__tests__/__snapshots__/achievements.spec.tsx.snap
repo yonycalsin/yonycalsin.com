@@ -1,113 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Achievements renders the achievements correctly 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-0>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-3);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-1 {
-  display: grid;
-  grid-gap: var(--yony-space-6);
-  grid-template-columns: var(--yony-space-14) 1fr;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-1 {
-    grid-template-columns: var(--yony-space-20) 1fr var(--yony-space-24);
-  }
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-2>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-1);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-3 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4 {
-  font-size: var(--yony-fontSizes-sm);
-  color: gray;
-}
-
-.emotion-5 {
-  display: block;
-  font-size: var(--yony-fontSizes-sm);
-  font-style: italic;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-5 {
-    display: none;
-  }
-}
-
-.emotion-6 {
-  font-style: italic;
-  font-size: var(--yony-fontSizes-sm);
-  display: none;
-  font-weight: var(--yony-fontWeights-light);
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-6 {
-    display: block;
-  }
-}
-
 <div>
   <div
     aria-label="List of achievements"
-    class="chakra-stack emotion-0"
+    class="space-y-3"
     role="list"
   >
     <div
-      class="emotion-1"
+      class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
       role="listitem"
     >
-      <div>
+      <div
+        class="hidden lg:block"
+      >
         <svg
           clip-rule="evenodd"
           fill-rule="evenodd"
@@ -151,37 +57,37 @@ exports[`Achievements renders the achievements correctly 1`] = `
         </svg>
       </div>
       <div
-        class="chakra-stack emotion-2"
+        class="space-y-1"
       >
-        <p
-          class="chakra-text emotion-3"
+        <h4
+          class="font-bold"
         >
           Revelation of the year - 2022
-        </p>
-        <p
-          class="chakra-text emotion-4"
-        >
+        </h4>
+        <p>
           I was recognized for incredible performance as a software developer in 2022 at CompanyName.
         </p>
         <p
-          class="chakra-text emotion-5"
+          class="block lg:hidden italic"
         >
           - 
           12 Sep, 2022
         </p>
       </div>
-      <p
-        class="chakra-text emotion-6"
+      <span
+        class="italic text-sm hidden lg:block whitespace-nowrap"
       >
         -
         12 Sep, 2022
-      </p>
+      </span>
     </div>
     <div
-      class="emotion-1"
+      class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
       role="listitem"
     >
-      <div>
+      <div
+        class="hidden lg:block"
+      >
         <svg
           clip-rule="evenodd"
           fill-rule="evenodd"
@@ -263,37 +169,37 @@ exports[`Achievements renders the achievements correctly 1`] = `
         </svg>
       </div>
       <div
-        class="chakra-stack emotion-2"
+        class="space-y-1"
       >
-        <p
-          class="chakra-text emotion-3"
+        <h4
+          class="font-bold"
         >
           Microsoft Hackaton
-        </p>
-        <p
-          class="chakra-text emotion-4"
-        >
+        </h4>
+        <p>
           I created most creative application
         </p>
         <p
-          class="chakra-text emotion-5"
+          class="block lg:hidden italic"
         >
           - 
           12 Jul, 2021
         </p>
       </div>
-      <p
-        class="chakra-text emotion-6"
+      <span
+        class="italic text-sm hidden lg:block whitespace-nowrap"
       >
         -
         12 Jul, 2021
-      </p>
+      </span>
     </div>
     <div
-      class="emotion-1"
+      class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
       role="listitem"
     >
-      <div>
+      <div
+        class="hidden lg:block"
+      >
         <svg
           clip-rule="evenodd"
           fill-rule="evenodd"
@@ -393,37 +299,37 @@ exports[`Achievements renders the achievements correctly 1`] = `
         </svg>
       </div>
       <div
-        class="chakra-stack emotion-2"
+        class="space-y-1"
       >
-        <p
-          class="chakra-text emotion-3"
+        <h4
+          class="font-bold"
         >
           Harvard Business School
-        </p>
-        <p
-          class="chakra-text emotion-4"
-        >
+        </h4>
+        <p>
           I created an amazing payment app
         </p>
         <p
-          class="chakra-text emotion-5"
+          class="block lg:hidden italic"
         >
           - 
           10 Jul, 2019
         </p>
       </div>
-      <p
-        class="chakra-text emotion-6"
+      <span
+        class="italic text-sm hidden lg:block whitespace-nowrap"
       >
         -
         10 Jul, 2019
-      </p>
+      </span>
     </div>
     <div
-      class="emotion-1"
+      class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
       role="listitem"
     >
-      <div>
+      <div
+        class="hidden lg:block"
+      >
         <svg
           clip-rule="evenodd"
           fill-rule="evenodd"
@@ -467,37 +373,37 @@ exports[`Achievements renders the achievements correctly 1`] = `
         </svg>
       </div>
       <div
-        class="chakra-stack emotion-2"
+        class="space-y-1"
       >
-        <p
-          class="chakra-text emotion-3"
+        <h4
+          class="font-bold"
         >
           Search Engine Bug
-        </p>
-        <p
-          class="chakra-text emotion-4"
-        >
+        </h4>
+        <p>
           I found a bug in search engine
         </p>
         <p
-          class="chakra-text emotion-5"
+          class="block lg:hidden italic"
         >
           - 
           15 Feb, 2021
         </p>
       </div>
-      <p
-        class="chakra-text emotion-6"
+      <span
+        class="italic text-sm hidden lg:block whitespace-nowrap"
       >
         -
         15 Feb, 2021
-      </p>
+      </span>
     </div>
     <div
-      class="emotion-1"
+      class="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6"
       role="listitem"
     >
-      <div>
+      <div
+        class="hidden lg:block"
+      >
         <svg
           clip-rule="evenodd"
           fill-rule="evenodd"
@@ -541,31 +447,29 @@ exports[`Achievements renders the achievements correctly 1`] = `
         </svg>
       </div>
       <div
-        class="chakra-stack emotion-2"
+        class="space-y-1"
       >
-        <p
-          class="chakra-text emotion-3"
+        <h4
+          class="font-bold"
         >
           The best developer in the company
-        </p>
-        <p
-          class="chakra-text emotion-4"
-        >
+        </h4>
+        <p>
           I have done all projects successfully
         </p>
         <p
-          class="chakra-text emotion-5"
+          class="block lg:hidden italic"
         >
           - 
           15 Oct, 2022
         </p>
       </div>
-      <p
-        class="chakra-text emotion-6"
+      <span
+        class="italic text-sm hidden lg:block whitespace-nowrap"
       >
         -
         15 Oct, 2022
-      </p>
+      </span>
     </div>
   </div>
   <span

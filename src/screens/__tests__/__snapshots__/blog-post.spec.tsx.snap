@@ -2,124 +2,6 @@
 
 exports[`BlogPost renders the blog post screen 1`] = `
 .emotion-0 {
-  width: var(--yony-sizes-full);
-  top: 0px;
-  z-index: var(--yony-zIndices-banner);
-  left: 0px;
-  box-shadow: var(--yony-shadows-xs);
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: var(--yony-shadows-lg);
-}
-
-.emotion-1 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-5);
-  padding-bottom: var(--yony-space-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1 {
-    padding-top: var(--yony-space-8);
-    padding-bottom: var(--yony-space-8);
-  }
-}
-
-.emotion-2 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  display: contents;
-}
-
-.emotion-2:hover,
-.emotion-2[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-2:focus-visible,
-.emotion-2[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: var(--yony-space-4);
-  margin-inline-start: var(--yony-space-4);
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
   width: 100%;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
@@ -134,7 +16,7 @@ exports[`BlogPost renders the blog post screen 1`] = `
   padding-bottom: var(--yony-space-12);
 }
 
-.emotion-7 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,7 +30,7 @@ exports[`BlogPost renders the blog post screen 1`] = `
   flex-direction: column;
 }
 
-.emotion-7>*:not(style)~*:not(style) {
+.emotion-1>*:not(style)~*:not(style) {
   margin-top: var(--yony-space-2);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -158,12 +40,12 @@ exports[`BlogPost renders the blog post screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-7>*:not(style)~*:not(style) {
+  .emotion-1>*:not(style)~*:not(style) {
     margin-top: var(--yony-space-5);
   }
 }
 
-.emotion-9 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -174,7 +56,7 @@ exports[`BlogPost renders the blog post screen 1`] = `
   align-items: center;
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -185,7 +67,7 @@ exports[`BlogPost renders the blog post screen 1`] = `
   align-items: center;
 }
 
-.emotion-11 {
+.emotion-5 {
   transition-property: var(--yony-transition-property-common);
   transition-duration: var(--yony-transition-duration-fast);
   transition-timing-function: var(--yony-transition-easing-ease-out);
@@ -197,25 +79,25 @@ exports[`BlogPost renders the blog post screen 1`] = `
   color: inherit;
 }
 
-.emotion-11:hover,
-.emotion-11[data-hover] {
+.emotion-5:hover,
+.emotion-5[data-hover] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-11:focus-visible,
-.emotion-11[data-focus-visible] {
+.emotion-5:focus-visible,
+.emotion-5[data-focus-visible] {
   box-shadow: var(--yony-shadows-outline);
 }
 
-.emotion-12 {
+.emotion-6 {
   -webkit-margin-start: 8px;
   margin-inline-start: 8px;
   -webkit-margin-end: 8px;
   margin-inline-end: 8px;
 }
 
-.emotion-15 {
+.emotion-9 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-3xl);
@@ -223,205 +105,24 @@ exports[`BlogPost renders the blog post screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-15 {
+  .emotion-9 {
     font-size: var(--yony-fontSizes-4xl);
     line-height: 1.2;
   }
 }
 
-.emotion-16 {
+.emotion-10 {
   color: gray;
   font-style: italic;
 }
 
-.emotion-17 {
+.emotion-11 {
   margin-top: 1.25rem;
   line-height: 1.7;
 }
 
-blockquote .emotion-17 {
+blockquote .emotion-11 {
   margin-top: 0px;
-}
-
-.emotion-18 {
-  padding-top: var(--yony-space-12);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-19 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-20>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-21 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-22 {
-  color: var(--yony-colors-gray-600);
-}
-
-.emotion-23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  white-space: nowrap;
-  vertical-align: baseline;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  line-height: var(--yony-lineHeights-normal);
-  border-radius: var(--yony-radii-md);
-  font-weight: var(--yony-fontWeights-semibold);
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-normal);
-  height: auto;
-  min-width: var(--yony-sizes-10);
-  font-size: var(--yony-fontSizes-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding: 0px;
-  color: var(--yony-colors-green-200);
-}
-
-.emotion-23:focus-visible,
-.emotion-23[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-23:disabled,
-.emotion-23[disabled],
-.emotion-23[aria-disabled=true],
-.emotion-23[data-disabled] {
-  opacity: 0.4;
-  cursor: not-allowed;
-  box-shadow: var(--yony-shadows-none);
-}
-
-.emotion-23:hover,
-.emotion-23[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-23:hover:disabled,
-.emotion-23[data-hover]:disabled,
-.emotion-23:hover[disabled],
-.emotion-23[data-hover][disabled],
-.emotion-23:hover[aria-disabled=true],
-.emotion-23[data-hover][aria-disabled=true],
-.emotion-23:hover[data-disabled],
-.emotion-23[data-hover][data-disabled] {
-  background: initial;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-23:active,
-.emotion-23[data-active] {
-  color: var(--yony-colors-green-500);
-}
-
-.emotion-24 {
-  font-family: var(--yony-fonts-mono);
-  background: whiteAlpha;
-  border-radius: var(--yony-radii-md);
-  border-width: 1px;
-  border-bottom-width: 3px;
-  font-size: 0.8em;
-  font-weight: var(--yony-fontWeights-bold);
-  line-height: var(--yony-lineHeights-normal);
-  -webkit-padding-start: 0.4em;
-  padding-inline-start: 0.4em;
-  -webkit-padding-end: 0.4em;
-  padding-inline-end: 0.4em;
-  white-space: nowrap;
-  -webkit-margin-start: var(--yony-space-2);
-  margin-inline-start: var(--yony-space-2);
-  -webkit-margin-end: var(--yony-space-2);
-  margin-inline-end: var(--yony-space-2);
-}
-
-.emotion-26 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-26>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-26 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 <body
@@ -429,13 +130,12 @@ blockquote .emotion-17 {
 >
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -451,145 +151,182 @@ blockquote .emotion-17 {
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
           </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/faq"
+          >
+            FAQ
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/snippets"
+          >
+            Snippets
+          </a>
         </div>
       </div>
     </div>
-    <div>
-      <div
-        class="chakra-container emotion-6"
+    <div
+      class="chakra-container emotion-0"
+    >
+      <header
+        class="chakra-stack emotion-1"
       >
-        <header
-          class="chakra-stack emotion-7"
+        <nav
+          aria-label="breadcrumb"
+          class="chakra-breadcrumb emotion-2"
         >
-          <nav
-            aria-label="breadcrumb"
-            class="chakra-breadcrumb emotion-8"
+          <ol
+            class="chakra-breadcrumb__list emotion-3"
           >
-            <ol
-              class="chakra-breadcrumb__list emotion-9"
+            <li
+              class="chakra-breadcrumb__list-item emotion-4"
             >
-              <li
-                class="chakra-breadcrumb__list-item emotion-10"
+              <a
+                class="chakra-breadcrumb__link emotion-5"
+                href="/"
               >
-                <a
-                  class="chakra-breadcrumb__link emotion-11"
-                  href="/"
-                >
-                  Home
-                </a>
-                <span
-                  class="emotion-12"
-                  role="presentation"
-                >
-                  <svg
-                    color="gray.500"
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </li>
-              <li
-                class="chakra-breadcrumb__list-item emotion-10"
+                Home
+              </a>
+              <span
+                class="emotion-6"
+                role="presentation"
               >
-                <a
-                  class="chakra-breadcrumb__link emotion-11"
-                  href="/blog"
+                <svg
+                  color="gray.500"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Blog
-                </a>
-              </li>
-            </ol>
-          </nav>
-          <h2
-            class="chakra-heading emotion-15"
-          >
-            How to mock a rest api
-          </h2>
-          <p
-            class="chakra-text emotion-16"
-          >
-            Last updated at 
-            14 Aug, 2022
-          </p>
-        </header>
-        <div>
-          <p
-            class="emotion-17"
-          >
-            Hello from mdx content
-          </p>
-        </div>
+                  <path
+                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </li>
+            <li
+              class="chakra-breadcrumb__list-item emotion-4"
+            >
+              <a
+                class="chakra-breadcrumb__link emotion-5"
+                href="/blog"
+              >
+                Blog
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <h2
+          class="chakra-heading emotion-9"
+        >
+          How to mock a rest api
+        </h2>
+        <p
+          class="chakra-text emotion-10"
+        >
+          Last updated at 
+          14 Aug, 2022
+        </p>
+      </header>
+      <div>
+        <p
+          class="emotion-11"
+        >
+          Hello from mdx content
+        </p>
       </div>
     </div>
     <footer
-      class="emotion-18"
+      class="my-6"
     >
       <div
-        class="chakra-container emotion-19"
+        class="container"
       >
-        <div
-          class="chakra-stack emotion-20"
+        <footer
+          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
         >
-          <p
-            class="chakra-text emotion-21"
+          <span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
           >
-            Created By Yony Calsin
-          </p>
-          <p
-            class="chakra-text emotion-22"
-          >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
-          </p>
-          <button
-            class="chakra-button emotion-23"
-            type="button"
-          >
-            Press 
-            <kbd
-              class="chakra-kbd emotion-24"
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
             >
-              Ctrl
-            </kbd>
-            +
-            <kbd
-              class="chakra-kbd emotion-24"
-            >
-              K
-            </kbd>
-             to start →
-          </button>
-        </div>
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+          >
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-26"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -597,7 +334,7 @@ blockquote .emotion-17 {
         Github
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -605,7 +342,7 @@ blockquote .emotion-17 {
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -613,7 +350,7 @@ blockquote .emotion-17 {
         Twitter
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"

@@ -7,7 +7,7 @@ function Recommendations(props: RecommendationsProps) {
   const { recommendations } = props
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4" role="list" aria-label="List of recommendations">
       {recommendations.map(recommendation => (
         <Recommendation key={recommendation.id} recommendation={recommendation} />
       ))}

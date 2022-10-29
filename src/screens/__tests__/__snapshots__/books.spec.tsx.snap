@@ -2,124 +2,6 @@
 
 exports[`BooksScreen renders the books screen 1`] = `
 .emotion-0 {
-  width: var(--yony-sizes-full);
-  top: 0px;
-  z-index: var(--yony-zIndices-banner);
-  left: 0px;
-  box-shadow: var(--yony-shadows-xs);
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: var(--yony-shadows-lg);
-}
-
-.emotion-1 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-5);
-  padding-bottom: var(--yony-space-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1 {
-    padding-top: var(--yony-space-8);
-    padding-bottom: var(--yony-space-8);
-  }
-}
-
-.emotion-2 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  display: contents;
-}
-
-.emotion-2:hover,
-.emotion-2[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-2:focus-visible,
-.emotion-2[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: var(--yony-space-4);
-  margin-inline-start: var(--yony-space-4);
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
   width: 100%;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
@@ -134,7 +16,7 @@ exports[`BooksScreen renders the books screen 1`] = `
   padding-bottom: var(--yony-space-10);
 }
 
-.emotion-7 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,7 +30,7 @@ exports[`BooksScreen renders the books screen 1`] = `
   flex-direction: column;
 }
 
-.emotion-7>*:not(style)~*:not(style) {
+.emotion-1>*:not(style)~*:not(style) {
   margin-top: var(--yony-space-6);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -157,7 +39,7 @@ exports[`BooksScreen renders the books screen 1`] = `
   margin-inline-start: 0px;
 }
 
-.emotion-8 {
+.emotion-2 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-3xl);
@@ -165,24 +47,24 @@ exports[`BooksScreen renders the books screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-8 {
+  .emotion-2 {
     font-size: var(--yony-fontSizes-4xl);
     line-height: 1.2;
   }
 }
 
-.emotion-9 {
+.emotion-3 {
   margin-top: var(--yony-space-3);
 }
 
-.emotion-10 {
+.emotion-4 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-xl);
   line-height: 1.2;
 }
 
-.emotion-11 {
+.emotion-5 {
   display: grid;
   grid-gap: var(--yony-space-6);
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -190,12 +72,12 @@ exports[`BooksScreen renders the books screen 1`] = `
 }
 
 @media screen and (min-width: 62em) {
-  .emotion-11 {
+  .emotion-5 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.emotion-12 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +91,7 @@ exports[`BooksScreen renders the books screen 1`] = `
   flex-direction: column;
 }
 
-.emotion-12>*:not(style)~*:not(style) {
+.emotion-6>*:not(style)~*:not(style) {
   margin-top: var(--yony-space-2);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -218,23 +100,23 @@ exports[`BooksScreen renders the books screen 1`] = `
   margin-inline-start: 0px;
 }
 
-.emotion-13 {
+.emotion-7 {
   width: var(--yony-sizes-full);
   border-radius: var(--yony-radii-md);
 }
 
-.emotion-14 {
+.emotion-8 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-md);
   line-height: 1.2;
 }
 
-.emotion-15 {
+.emotion-9 {
   font-size: var(--yony-fontSizes-sm);
 }
 
-.emotion-16 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,7 +131,7 @@ exports[`BooksScreen renders the books screen 1`] = `
   font-size: var(--yony-fontSizes-sm);
 }
 
-.emotion-16>*:not(style)~*:not(style) {
+.emotion-10>*:not(style)~*:not(style) {
   margin-top: 0px;
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -258,122 +140,17 @@ exports[`BooksScreen renders the books screen 1`] = `
   margin-inline-start: 0.5rem;
 }
 
-.emotion-26 {
-  padding-top: var(--yony-space-12);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-27 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-28>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-29 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-30 {
-  color: var(--yony-colors-gray-600);
-}
-
-.emotion-31 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-31>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-31 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.emotion-32 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-32:hover,
-.emotion-32[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-32:focus-visible,
-.emotion-32[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
 <body
   class="chakra-ui-dark"
 >
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -389,188 +166,243 @@ exports[`BooksScreen renders the books screen 1`] = `
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
           </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/faq"
+          >
+            FAQ
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/snippets"
+          >
+            Snippets
+          </a>
         </div>
       </div>
     </div>
-    <div>
-      <main
-        class="chakra-container emotion-6"
-      >
-        <div
-          class="chakra-stack emotion-7"
-        >
-          <header>
-            <h2
-              class="chakra-heading emotion-8"
-            >
-              Books
-            </h2>
-            <p
-              class="chakra-text emotion-9"
-            >
-              This page contains the books I have read along of my life.
-            </p>
-          </header>
-          <div>
-            <h2
-              class="chakra-heading emotion-10"
-            >
-              Reading:
-            </h2>
-            <div
-              aria-label="List of reading books"
-              class="emotion-11"
-              role="list"
-            >
-              <div
-                class="chakra-stack emotion-12"
-                role="listitem"
-              >
-                <div>
-                  <img
-                    alt="Clean Architecture"
-                    class="chakra-image emotion-13"
-                    src="https://static.yonycalsin.com/books/clean-arquitecture-front.png"
-                  />
-                </div>
-                <h2
-                  class="chakra-heading emotion-14"
-                >
-                  Clean Architecture
-                </h2>
-                <p
-                  class="chakra-text emotion-15"
-                >
-                  Mark Zuck
-                </p>
-                <div
-                  class="chakra-stack emotion-16"
-                >
-                  <svg
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 1024 1024"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
-                    />
-                  </svg>
-                  <p
-                    class="chakra-text emotion-17"
-                  >
-                    Rating 
-                    4.5
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2
-              class="chakra-heading emotion-10"
-            >
-              All:
-            </h2>
-            <div
-              aria-label="List of all books"
-              class="emotion-11"
-              role="list"
-            >
-              <div
-                class="chakra-stack emotion-12"
-                role="listitem"
-              >
-                <div>
-                  <img
-                    alt="Clean Code"
-                    class="chakra-image emotion-13"
-                    src="https://static.yonycalsin.com/books/clean-code-front.png"
-                  />
-                </div>
-                <h2
-                  class="chakra-heading emotion-14"
-                >
-                  Clean Code
-                </h2>
-                <p
-                  class="chakra-text emotion-15"
-                >
-                  Tim Chuckby
-                </p>
-                <div
-                  class="chakra-stack emotion-16"
-                >
-                  <svg
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 1024 1024"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
-                    />
-                  </svg>
-                  <p
-                    class="chakra-text emotion-17"
-                  >
-                    Rating 
-                    5
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    <footer
-      class="emotion-26"
+    <main
+      class="chakra-container emotion-0"
     >
       <div
-        class="chakra-container emotion-27"
+        class="chakra-stack emotion-1"
       >
-        <div
-          class="chakra-stack emotion-28"
-        >
-          <p
-            class="chakra-text emotion-29"
+        <header>
+          <h2
+            class="chakra-heading emotion-2"
           >
-            Created By Yony Calsin
-          </p>
+            Books
+          </h2>
           <p
-            class="chakra-text emotion-30"
+            class="chakra-text emotion-3"
           >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
+            This page contains the books I have read along of my life.
           </p>
+        </header>
+        <div>
+          <h2
+            class="chakra-heading emotion-4"
+          >
+            Reading:
+          </h2>
+          <div
+            aria-label="List of reading books"
+            class="emotion-5"
+            role="list"
+          >
+            <div
+              class="chakra-stack emotion-6"
+              role="listitem"
+            >
+              <div>
+                <img
+                  alt="Clean Architecture"
+                  class="chakra-image emotion-7"
+                  src="https://static.yonycalsin.com/books/clean-arquitecture-front.png"
+                />
+              </div>
+              <h2
+                class="chakra-heading emotion-8"
+              >
+                Clean Architecture
+              </h2>
+              <p
+                class="chakra-text emotion-9"
+              >
+                Mark Zuck
+              </p>
+              <div
+                class="chakra-stack emotion-10"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                  />
+                </svg>
+                <p
+                  class="chakra-text emotion-11"
+                >
+                  Rating 
+                  4.5
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+        <div>
+          <h2
+            class="chakra-heading emotion-4"
+          >
+            All:
+          </h2>
+          <div
+            aria-label="List of all books"
+            class="emotion-5"
+            role="list"
+          >
+            <div
+              class="chakra-stack emotion-6"
+              role="listitem"
+            >
+              <div>
+                <img
+                  alt="Clean Code"
+                  class="chakra-image emotion-7"
+                  src="https://static.yonycalsin.com/books/clean-code-front.png"
+                />
+              </div>
+              <h2
+                class="chakra-heading emotion-8"
+              >
+                Clean Code
+              </h2>
+              <p
+                class="chakra-text emotion-9"
+              >
+                Tim Chuckby
+              </p>
+              <div
+                class="chakra-stack emotion-10"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+                  />
+                </svg>
+                <p
+                  class="chakra-text emotion-11"
+                >
+                  Rating 
+                  5
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="my-6"
+    >
+      <div
+        class="container"
+      >
+        <footer
+          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+        >
+          <span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
+            >
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+          >
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-31"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-32"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -578,7 +410,7 @@ exports[`BooksScreen renders the books screen 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-32"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -586,7 +418,7 @@ exports[`BooksScreen renders the books screen 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-32"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -594,7 +426,7 @@ exports[`BooksScreen renders the books screen 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-32"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"

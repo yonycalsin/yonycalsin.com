@@ -2,124 +2,6 @@
 
 exports[`NotFoundScreen renders the not found screen 1`] = `
 .emotion-0 {
-  width: var(--yony-sizes-full);
-  top: 0px;
-  z-index: var(--yony-zIndices-banner);
-  left: 0px;
-  box-shadow: var(--yony-shadows-xs);
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: var(--yony-shadows-lg);
-}
-
-.emotion-1 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-5);
-  padding-bottom: var(--yony-space-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1 {
-    padding-top: var(--yony-space-8);
-    padding-bottom: var(--yony-space-8);
-  }
-}
-
-.emotion-2 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  display: contents;
-}
-
-.emotion-2:hover,
-.emotion-2[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-2:focus-visible,
-.emotion-2[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: var(--yony-space-4);
-  margin-inline-start: var(--yony-space-4);
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
   width: 100%;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
@@ -134,7 +16,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
   padding-bottom: var(--yony-space-12);
 }
 
-.emotion-7 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,7 +30,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
   flex-direction: column;
 }
 
-.emotion-7>*:not(style)~*:not(style) {
+.emotion-1>*:not(style)~*:not(style) {
   margin-top: var(--yony-space-12);
   -webkit-margin-end: 0px;
   margin-inline-end: 0px;
@@ -157,7 +39,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
   margin-inline-start: 0px;
 }
 
-.emotion-8 {
+.emotion-2 {
   font-family: var(--yony-fonts-heading);
   font-weight: var(--yony-fontWeights-bold);
   font-size: var(--yony-fontSizes-3xl);
@@ -165,13 +47,13 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-8 {
+  .emotion-2 {
     font-size: var(--yony-fontSizes-4xl);
     line-height: 1.2;
   }
 }
 
-.emotion-10 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -183,14 +65,14 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-10 {
+  .emotion-4 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-.emotion-11 {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -232,256 +114,52 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
   color: var(--yony-colors-primary-200);
 }
 
-.emotion-11:focus-visible,
-.emotion-11[data-focus-visible] {
+.emotion-5:focus-visible,
+.emotion-5[data-focus-visible] {
   box-shadow: var(--yony-shadows-outline);
 }
 
-.emotion-11:disabled,
-.emotion-11[disabled],
-.emotion-11[aria-disabled=true],
-.emotion-11[data-disabled] {
+.emotion-5:disabled,
+.emotion-5[disabled],
+.emotion-5[aria-disabled=true],
+.emotion-5[data-disabled] {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: var(--yony-shadows-none);
 }
 
-.emotion-11:hover,
-.emotion-11[data-hover] {
+.emotion-5:hover,
+.emotion-5[data-hover] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-11:hover:disabled,
-.emotion-11[data-hover]:disabled,
-.emotion-11:hover[disabled],
-.emotion-11[data-hover][disabled],
-.emotion-11:hover[aria-disabled=true],
-.emotion-11[data-hover][aria-disabled=true],
-.emotion-11:hover[data-disabled],
-.emotion-11[data-hover][data-disabled] {
+.emotion-5:hover:disabled,
+.emotion-5[data-hover]:disabled,
+.emotion-5:hover[disabled],
+.emotion-5[data-hover][disabled],
+.emotion-5:hover[aria-disabled=true],
+.emotion-5[data-hover][aria-disabled=true],
+.emotion-5:hover[data-disabled],
+.emotion-5[data-hover][data-disabled] {
   background: initial;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11:active,
-.emotion-11[data-active] {
+.emotion-5:active,
+.emotion-5[data-active] {
   color: var(--yony-colors-primary-500);
 }
 
-.emotion-12 {
+.emotion-6 {
   display: none;
 }
 
 @media screen and (min-width: 48em) {
-  .emotion-12 {
+  .emotion-6 {
     display: block;
   }
-}
-
-.emotion-16 {
-  padding-top: var(--yony-space-12);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-17 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-18>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-19 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-20 {
-  color: var(--yony-colors-gray-600);
-}
-
-.emotion-21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  white-space: nowrap;
-  vertical-align: baseline;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  line-height: var(--yony-lineHeights-normal);
-  border-radius: var(--yony-radii-md);
-  font-weight: var(--yony-fontWeights-semibold);
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-normal);
-  height: auto;
-  min-width: var(--yony-sizes-10);
-  font-size: var(--yony-fontSizes-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding: 0px;
-  color: var(--yony-colors-green-200);
-}
-
-.emotion-21:focus-visible,
-.emotion-21[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-21:disabled,
-.emotion-21[disabled],
-.emotion-21[aria-disabled=true],
-.emotion-21[data-disabled] {
-  opacity: 0.4;
-  cursor: not-allowed;
-  box-shadow: var(--yony-shadows-none);
-}
-
-.emotion-21:hover,
-.emotion-21[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-21:hover:disabled,
-.emotion-21[data-hover]:disabled,
-.emotion-21:hover[disabled],
-.emotion-21[data-hover][disabled],
-.emotion-21:hover[aria-disabled=true],
-.emotion-21[data-hover][aria-disabled=true],
-.emotion-21:hover[data-disabled],
-.emotion-21[data-hover][data-disabled] {
-  background: initial;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21:active,
-.emotion-21[data-active] {
-  color: var(--yony-colors-green-500);
-}
-
-.emotion-22 {
-  font-family: var(--yony-fonts-mono);
-  background: whiteAlpha;
-  border-radius: var(--yony-radii-md);
-  border-width: 1px;
-  border-bottom-width: 3px;
-  font-size: 0.8em;
-  font-weight: var(--yony-fontWeights-bold);
-  line-height: var(--yony-lineHeights-normal);
-  -webkit-padding-start: 0.4em;
-  padding-inline-start: 0.4em;
-  -webkit-padding-end: 0.4em;
-  padding-inline-end: 0.4em;
-  white-space: nowrap;
-  -webkit-margin-start: var(--yony-space-2);
-  margin-inline-start: var(--yony-space-2);
-  -webkit-margin-end: var(--yony-space-2);
-  margin-inline-end: var(--yony-space-2);
-}
-
-.emotion-24 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-24>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-24 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.emotion-25 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-25:hover,
-.emotion-25[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-25:focus-visible,
-.emotion-25[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
 }
 
 <body
@@ -489,13 +167,12 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
 >
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -511,120 +188,157 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
           </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/faq"
+          >
+            FAQ
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            href="/snippets"
+          >
+            Snippets
+          </a>
         </div>
       </div>
     </div>
-    <div>
-      <main
-        class="chakra-container emotion-6"
-      >
-        <div
-          class="chakra-stack emotion-7"
-        >
-          <h2
-            class="chakra-heading emotion-8"
-          >
-            😢
-          </h2>
-          <h2
-            class="chakra-heading emotion-8"
-          >
-            Page not found
-          </h2>
-          <div
-            class="emotion-10"
-          >
-            <a
-              class="chakra-button emotion-11"
-              href="/"
-            >
-              Go to home
-            </a>
-            <p
-              class="chakra-text emotion-12"
-            >
-              •
-            </p>
-            <a
-              class="chakra-button emotion-11"
-              href="/me"
-            >
-              Go to about-me page
-            </a>
-            <p
-              class="chakra-text emotion-12"
-            >
-              •
-            </p>
-            <a
-              class="chakra-button emotion-11"
-              href="/projects"
-            >
-              Go to projects page
-            </a>
-          </div>
-        </div>
-      </main>
-    </div>
-    <footer
-      class="emotion-16"
+    <main
+      class="chakra-container emotion-0"
     >
       <div
-        class="chakra-container emotion-17"
+        class="chakra-stack emotion-1"
       >
-        <div
-          class="chakra-stack emotion-18"
+        <h2
+          class="chakra-heading emotion-2"
         >
+          😢
+        </h2>
+        <h2
+          class="chakra-heading emotion-2"
+        >
+          Page not found
+        </h2>
+        <div
+          class="emotion-4"
+        >
+          <a
+            class="chakra-button emotion-5"
+            href="/"
+          >
+            Go to home
+          </a>
           <p
-            class="chakra-text emotion-19"
+            class="chakra-text emotion-6"
           >
-            Created By Yony Calsin
+            •
           </p>
+          <a
+            class="chakra-button emotion-5"
+            href="/me"
+          >
+            Go to about-me page
+          </a>
           <p
-            class="chakra-text emotion-20"
+            class="chakra-text emotion-6"
           >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
+            •
           </p>
-          <button
-            class="chakra-button emotion-21"
-            type="button"
+          <a
+            class="chakra-button emotion-5"
+            href="/projects"
           >
-            Press 
-            <kbd
-              class="chakra-kbd emotion-22"
-            >
-              Ctrl
-            </kbd>
-            +
-            <kbd
-              class="chakra-kbd emotion-22"
-            >
-              K
-            </kbd>
-             to start →
-          </button>
+            Go to projects page
+          </a>
         </div>
+      </div>
+    </main>
+    <footer
+      class="my-6"
+    >
+      <div
+        class="container"
+      >
+        <footer
+          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+        >
+          <span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
+            >
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+          >
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-24"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-25"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -632,7 +346,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-25"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -640,7 +354,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-25"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -648,7 +362,7 @@ exports[`NotFoundScreen renders the not found screen 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-25"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"
