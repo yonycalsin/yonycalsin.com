@@ -1,10 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { ChakraKBar } from '@chakra-ui-kbar/core'
 import { screen } from '@testing-library/react'
-import { FeatureProvider } from 'toggled'
 
 import { allProjectsSuccess } from 'mock-server/mocks/projects'
-import { setupWithReactQuery } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getAllProjectsApi } from 'services'
 import { ThemeMain } from 'themes'
 import ProjectsScreen from 'screens/projects'
@@ -17,11 +15,7 @@ const mockGetRandomBadgeColors = getRandomBadgeColors as jest.Mock
 const setup = () => {
   const utils = setupWithReactQuery(
     <ChakraProvider theme={ThemeMain}>
-      <FeatureProvider features={[]}>
-        <ChakraKBar>
-          <ProjectsScreen />
-        </ChakraKBar>
-      </FeatureProvider>
+      <ProjectsScreen />
     </ChakraProvider>,
   )
 
@@ -33,12 +27,20 @@ jest.mock('services/projects')
 const mockGetAllProjectsApi = getAllProjectsApi as jest.Mock
 
 describe('ProjectsScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures({})
+  })
+
   beforeEach(() => {
     mockGetRandomBadgeColors.mockReturnValue('red')
   })
 
   afterEach(() => {
     jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
   })
 
   it('renders the projects screen', async () => {

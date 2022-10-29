@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { achievementsSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
 import { getAllAchievementsApi } from 'services'
 import AchievementsScreen from 'screens/achievements'
 
@@ -18,6 +18,14 @@ function setup() {
 }
 
 describe('AchievementsScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures()
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
+  })
+
   it('renders the achievements screen', async () => {
     mockGetAllAchievementsApi.mockReturnValueOnce(achievementsSuccess)
 

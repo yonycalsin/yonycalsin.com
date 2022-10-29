@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { TestProvider } from 'tests'
+import { overrideFeatures, TEST_ENVS, TestProvider } from 'tests'
 import NotFoundScreen from 'screens/not-found'
 
 const setup = () => {
@@ -12,6 +12,14 @@ const setup = () => {
 }
 
 describe('NotFoundScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures({})
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
+  })
+
   it('renders the not found screen', () => {
     const view = setup()
 

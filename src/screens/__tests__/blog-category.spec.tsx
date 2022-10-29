@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import { categorySuccess, postsSuccess } from 'mock-server/mocks'
-import { TestProvider } from 'tests'
+import { overrideFeatures, TEST_ENVS, TestProvider } from 'tests'
 import BlogCategoryScreen from 'screens/blog-category'
 
 const MOCK_POSTS = postsSuccess.data
@@ -18,6 +18,14 @@ function setup(posts: BlogCategoryScreenProps['posts'] = []) {
 }
 
 describe('BlogCategoryScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures()
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
+  })
+
   it('renders the blog category screen', () => {
     const view = setup()
 

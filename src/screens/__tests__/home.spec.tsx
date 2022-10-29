@@ -1,16 +1,14 @@
 import { screen, within } from '@testing-library/react'
 
-import type { MainTestProviderProps } from 'typings/tests'
 import { achievementsSuccess, featuredRecommendationsSuccess, pinnedProjectsSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
 import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
 import HomeScreen from 'screens/home'
-import { buildFeatures } from 'utils'
 import { Features } from 'utils/constants'
 
-const setup = (features: MainTestProviderProps['features'] = []) => {
+const setup = () => {
   const utils = setupWithReactQuery(
-    <TestProvider features={features}>
+    <TestProvider>
       <HomeScreen />
     </TestProvider>,
   )
@@ -33,22 +31,26 @@ const mockGetFeaturedRecommendations = getFeaturedRecommendationsApi as jest.Moc
 describe('HomeScreen', () => {
   afterEach(() => {
     jest.clearAllMocks()
+
+    process.env = TEST_ENVS
   })
 
   it('renders the home screen', () => {
+    process.env = overrideFeatures({})
+
     const view = setup()
 
     expect(view.baseElement).toMatchSnapshot()
   })
 
   it('renders the pinned projects section', async () => {
+    process.env = overrideFeatures({
+      [Features.PINNED_PROJECTS]: true,
+    })
+
     mockGetPinnedProjectsApi.mockReturnValueOnce(pinnedProjectsSuccess)
 
-    const view = setup(
-      buildFeatures({
-        [Features.PINNED_PROJECTS]: true,
-      }),
-    )
+    const view = setup()
 
     await screen.findByRole('progressbar')
 
@@ -64,13 +66,13 @@ describe('HomeScreen', () => {
   })
 
   it('renders the achievements section', async () => {
+    process.env = overrideFeatures({
+      [Features.ACHIEVEMENTS]: true,
+    })
+
     mockGetFeaturedAchievements.mockReturnValueOnce(achievementsSuccess)
 
-    const view = setup(
-      buildFeatures({
-        [Features.ACHIEVEMENTS]: true,
-      }),
-    )
+    const view = setup()
 
     await screen.findByRole('progressbar')
 
@@ -86,13 +88,13 @@ describe('HomeScreen', () => {
   })
 
   it('renders the recommendations section', async () => {
+    process.env = overrideFeatures({
+      [Features.RECOMMENDATIONS]: true,
+    })
+
     mockGetFeaturedRecommendations.mockReturnValueOnce(featuredRecommendationsSuccess)
 
-    const view = setup(
-      buildFeatures({
-        [Features.RECOMMENDATIONS]: true,
-      }),
-    )
+    const view = setup()
 
     await screen.findByRole('progressbar')
 

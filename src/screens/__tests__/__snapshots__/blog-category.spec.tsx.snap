@@ -172,24 +172,6 @@ blockquote .emotion-17 {
           >
             About Me
           </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/faq"
-          >
-            FAQ
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/uses"
-          >
-            Uses
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/blog/categories/snippet"
-          >
-            Snippets
-          </a>
         </div>
       </div>
     </div>
@@ -654,24 +636,6 @@ blockquote .emotion-17 {
               href="/me"
             >
               About Me
-            </a>
-            <a
-              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              href="/faq"
-            >
-              FAQ
-            </a>
-            <a
-              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              href="/uses"
-            >
-              Uses
-            </a>
-            <a
-              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              href="/blog/categories/snippet"
-            >
-              Snippets
             </a>
           </div>
         </div>
@@ -1140,24 +1104,6 @@ blockquote .emotion-17 {
             href="/me"
           >
             About Me
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/faq"
-          >
-            FAQ
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/uses"
-          >
-            Uses
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/blog/categories/snippet"
-          >
-            Snippets
           </a>
         </div>
       </div>

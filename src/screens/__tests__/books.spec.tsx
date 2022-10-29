@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { allBooksSuccess, readingBooksSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
 import { getAllBooksApi, getReadingBooksApi } from 'services'
 import BooksScreen from 'screens/books'
 
@@ -20,8 +20,16 @@ const mockGetAllBooksApi = getAllBooksApi as jest.Mock
 const mockGetReadingBooksApi = getReadingBooksApi as jest.Mock
 
 describe('BooksScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures()
+  })
+
   afterEach(() => {
     jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
   })
 
   it('renders the books screen', async () => {

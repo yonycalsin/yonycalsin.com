@@ -9,7 +9,7 @@
     "lib:ts": "tsc",
     "lib:es": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "lib:pretty": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
-    "lib:jest": "cross-env TZ=\"America/Los_Angeles\" jest --forceExit --detectOpenHandles --env=jsdom --colors",
+    "lib:jest": "cross-env TZ=\"America/Los_Angeles\" jest --env=jsdom --colors",
     "start": "next start",
     "build": "next build",
     "dev": " next dev",
@@ -68,8 +68,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.38.0",
     "react-icons": "4.6.0",
-    "react-medium-image-zoom": "5.1.1",
-    "toggled": "2.1.0"
+    "react-medium-image-zoom": "5.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.19.6",

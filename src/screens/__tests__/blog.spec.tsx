@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { postsSuccess } from 'mock-server/mocks'
-import { setupWithReactQuery, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
 import { getPostsApi } from 'services'
 import BlogScreen from 'screens/blog'
 
@@ -18,8 +18,16 @@ function setup() {
 }
 
 describe('BlogScreen', () => {
+  beforeAll(() => {
+    process.env = overrideFeatures()
+  })
+
   afterEach(() => {
     jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    process.env = TEST_ENVS
   })
 
   it('renders the blog screen', async () => {
