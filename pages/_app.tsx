@@ -1,5 +1,6 @@
 import 'assets/styles/index.css'
 import 'assets/styles/runts.css'
+import 'assets/styles/tailwind.css'
 import 'prism-theme-vars/base.css'
 import 'prism-theme-vars/themes/vitesse-dark.css'
 import '@runts/react/styles/editor-fonts.css'

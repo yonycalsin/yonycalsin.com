@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { SimpleGrid } from '@chakra-ui/react'
 
 import type { RecommendationsProps } from 'typings/components'
 import { Recommendation } from './components'
@@ -8,22 +7,11 @@ function Recommendations(props: RecommendationsProps) {
   const { recommendations } = props
 
   return (
-    <SimpleGrid
-      columns={{
-        base: 1,
-        md: 2,
-      }}
-      spacing={{
-        base: 3,
-        md: 4,
-      }}
-      role="list"
-      aria-label="List of recommendations"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
       {recommendations.map(recommendation => (
         <Recommendation key={recommendation.id} recommendation={recommendation} />
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 

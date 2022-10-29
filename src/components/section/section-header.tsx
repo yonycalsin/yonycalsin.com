@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Box, Heading } from '@chakra-ui/react'
 
 import type { SectionHeaderProps } from 'typings/components'
+import { Heading } from 'components'
 
 function SectionHeader(props: SectionHeaderProps) {
   const {
@@ -11,20 +11,19 @@ function SectionHeader(props: SectionHeaderProps) {
     actionComponent: ActionComponent = 'a',
     actionHrefExternal = false,
     children,
+    className,
   } = props
 
   return (
-    <div>
-      <Box display="flex" alignItems="center" justifyContent="space-between" position="relative">
-        <Heading size="lg" fontWeight="bold">
-          {title}
-        </Heading>
+    <div className={className}>
+      <div className="flex items-center justify-between relative">
+        <Heading size="h3">{title}</Heading>
         {actionHref ? (
           <ActionComponent href={actionHref} target={actionHrefExternal ? '_blank' : null}>
             {actionLabel}
           </ActionComponent>
         ) : null}
-      </Box>
+      </div>
       {children}
     </div>
   )

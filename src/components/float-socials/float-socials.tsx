@@ -1,12 +1,9 @@
 import * as React from 'react'
-import { Link, VStack } from '@chakra-ui/react'
 
 import { analytics, ANALYTICS_EVENTS } from 'analytics'
+import { Anchor } from 'components'
 import { SOCIAL_LINKS } from 'utils/constants'
 
-/**
- * @deprecated this component will be remove in the future
- */
 function FloatSocials() {
   const onEventClick = (social: string) => {
     analytics.event({
@@ -17,29 +14,20 @@ function FloatSocials() {
   }
 
   return (
-    <VStack
-      display={{
-        base: 'none',
-        lg: 'flex',
-      }}
-      spacing="5"
-      position="fixed"
-      bottom="8"
-      left="8"
-    >
-      <Link target="_blank" rel="noreferrer" href={SOCIAL_LINKS.GITHUB} onClick={() => onEventClick('github')}>
+    <div className="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col">
+      <Anchor target="_blank" rel="noreferrer" href={SOCIAL_LINKS.GITHUB} onClick={() => onEventClick('github')}>
         Github
-      </Link>
-      <Link target="_blank" rel="noreferrer" href={SOCIAL_LINKS.LINKEDIN} onClick={() => onEventClick('linkedin')}>
+      </Anchor>
+      <Anchor target="_blank" rel="noreferrer" href={SOCIAL_LINKS.LINKEDIN} onClick={() => onEventClick('linkedin')}>
         Linkedin
-      </Link>
-      <Link target="_blank" rel="noreferrer" href={SOCIAL_LINKS.TWITTER} onClick={() => onEventClick('twitter')}>
+      </Anchor>
+      <Anchor target="_blank" rel="noreferrer" href={SOCIAL_LINKS.TWITTER} onClick={() => onEventClick('twitter')}>
         Twitter
-      </Link>
-      <Link target="_blank" rel="noreferrer" href={SOCIAL_LINKS.EMAIL} onClick={() => onEventClick('email')}>
+      </Anchor>
+      <Anchor target="_blank" rel="noreferrer" href={SOCIAL_LINKS.EMAIL} onClick={() => onEventClick('email')}>
         Email
-      </Link>
-    </VStack>
+      </Anchor>
+    </div>
   )
 }
 

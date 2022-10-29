@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Grid, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 
 import type { AchievementProps } from 'typings/components'
@@ -10,46 +9,19 @@ function Achievement(props: AchievementProps) {
   const { achievement } = props
 
   return (
-    <Grid
-      templateColumns={{
-        base: 'var(--yony-space-14) 1fr',
-        lg: 'var(--yony-space-20) 1fr var(--yony-space-24)',
-      }}
-      gap="6"
-      alignItems="center"
-      role="listitem"
-    >
-      <div>
+    <div className="grid items-center grid-cols-1 lg:grid-cols-[100px_1fr_100px] gap-6" role="listitem">
+      <div className="hidden lg:block">
         <AchievementTypeIllustration type={achievement.type} />
       </div>
-      <VStack spacing="1" alignItems="flex-start">
-        <Text fontWeight="bold">{achievement.title}</Text>
-        <Text fontSize="sm" textColor="gray">
-          {achievement.shortDescription}
-        </Text>
-        <Text
-          display={{
-            base: 'block',
-            lg: 'none',
-          }}
-          fontSize="sm"
-          fontStyle="italic"
-        >
-          - {dayjs(achievement.date).format(DATE_FORMATS.HUMAN_DATE)}
-        </Text>
-      </VStack>
-      <Text
-        fontStyle="italic"
-        fontSize="sm"
-        display={{
-          base: 'none',
-          lg: 'block',
-        }}
-        fontWeight="light"
-      >
+      <div className="space-y-1">
+        <h4 className="font-bold">{achievement.title}</h4>
+        <p>{achievement.shortDescription}</p>
+        <p className="block lg:hidden italic">- {dayjs(achievement.date).format(DATE_FORMATS.HUMAN_DATE)}</p>
+      </div>
+      <span className="italic text-sm hidden lg:block whitespace-nowrap">
         -{dayjs(achievement.date).format(DATE_FORMATS.HUMAN_DATE)}
-      </Text>
-    </Grid>
+      </span>
+    </div>
   )
 }
 

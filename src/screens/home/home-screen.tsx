@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Container, Divider } from '@chakra-ui/react'
 import { useFlag } from 'toggled'
 
 import { MainLayout } from 'layouts'
+import { Divider } from 'components'
 import { Features } from 'utils/constants'
 import { FeaturedAchievements, FeaturedRecommendations, IntroductionSection, PinnedProjects } from './components'
 
@@ -15,27 +15,27 @@ function HomeScreen() {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" as="main" py="10">
+      <div className="container  py-10">
         <IntroductionSection />
         {hasPinnedProjectsFF && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <PinnedProjects />
           </>
         )}
         {hasAchievementsFF && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <FeaturedAchievements />
           </>
         )}
         {hasRecommendationsFF && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <FeaturedRecommendations />
           </>
         )}
-      </Container>
+      </div>
     </MainLayout>
   )
 }

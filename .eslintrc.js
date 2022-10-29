@@ -51,7 +51,7 @@ module.exports = {
       extends: ['plugin:@yonycalsin/import-sort/react'],
     },
     {
-      files: ['src/**/*.[jt]s?(x)', 'pages/**/*.[jt]s?(x)'],
+      files: ['src/**/*.[jt]s?(x)', 'pages/**/*.[jt]s?(x)', 'app/**/*.[jt]s?(x)'],
       rules: {
         '@yonycalsin/import-sort/typescript-react-imports': [
           'error',
