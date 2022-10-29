@@ -1,5 +1,6 @@
 export * from './achievements'
 export * from './anchor'
+export * from './badge'
 export * from './button'
 export * from './command-bar'
 export * from './divider'

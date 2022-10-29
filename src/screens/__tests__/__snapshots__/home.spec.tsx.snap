@@ -55,7 +55,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>
@@ -1004,7 +1004,7 @@ exports[`HomeScreen renders the home screen 1`] = `
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>
@@ -1459,7 +1459,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>
@@ -1990,7 +1990,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>

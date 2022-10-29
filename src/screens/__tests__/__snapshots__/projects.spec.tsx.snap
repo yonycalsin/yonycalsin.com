@@ -2,171 +2,6 @@
 
 exports[`ProjectsScreen renders the projects screen 1`] = `
 .emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-10);
-  padding-bottom: var(--yony-space-10);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: var(--yony-space-10);
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-6);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-2 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-extrabold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-2 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  list-style-type: none;
-}
-
-.emotion-5>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-12);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-5::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  height: var(--yony-sizes-full);
-  width: var(--yony-sizes-1);
-  left: calc((var(--yony-space-9) / 2) - (var(--yony-space-1) / 2));
-  background: linear-gradient(135deg, rgb(238, 97, 97), rgb(254, 212, 2), rgb(5, 227, 156), rgb(1, 208, 251));
-  opacity: .5;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-5::before {
-    left: calc((var(--yony-space-12) / 2) - (var(--yony-space-1) / 2));
-  }
-}
-
-.emotion-7 {
-  box-shadow: var(--yony-shadows-lg);
-  position: absolute;
-  height: var(--yony-sizes-9);
-  width: var(--yony-sizes-9);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: var(--yony-radii-full);
-  background-color: bg-secondary-100;
-  padding: var(--yony-space-3);
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-7 {
-    height: var(--yony-sizes-12);
-    width: var(--yony-sizes-12);
-  }
-}
-
-.emotion-8 {
-  position: absolute;
-  right: var(--yony-space-20);
-  white-space: nowrap;
-  display: none;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-8 {
-    display: block;
-  }
-}
-
-.emotion-9 {
-  font-style: italic;
-}
-
-.emotion-10 {
   width: var(--yony-sizes-full);
   height: var(--yony-sizes-full);
   display: inline-block;
@@ -176,153 +11,6 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
   flex-shrink: 0;
   color: currentColor;
   fill: fill-secondary-900;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-left: var(--yony-space-14);
-}
-
-.emotion-11>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-6);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-11 {
-    margin-left: var(--yony-space-20);
-  }
-}
-
-.emotion-12 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-xl);
-  line-height: 1.2;
-  display: block;
-}
-
-.emotion-12:hover,
-.emotion-12[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-12:focus-visible,
-.emotion-12[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-15 {
-  list-style-type: none;
-  font-size: var(--yony-fontSizes-md);
-}
-
-.emotion-15>*:not(style)~*:not(style) {
-  margin-top: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-15>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-1);
-  }
-}
-
-.emotion-16 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  color: var(--yony-colors-primary-500);
-  display: block;
-}
-
-.emotion-16:hover,
-.emotion-16[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-16:focus-visible,
-.emotion-16[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-17 {
-  width: 1em;
-  height: 1em;
-  display: inline;
-  line-height: 1em;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  color: var(--yony-colors-secondary-900);
-  -webkit-margin-end: var(--yony-space-2);
-  margin-inline-end: var(--yony-space-2);
-  vertical-align: text-bottom;
-}
-
-.emotion-18 {
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: var(--yony-space-2);
-}
-
-.emotion-19 {
-  display: inline-block;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-padding-start: var(--yony-space-1);
-  padding-inline-start: var(--yony-space-1);
-  -webkit-padding-end: var(--yony-space-1);
-  padding-inline-end: var(--yony-space-1);
-  text-transform: uppercase;
-  font-size: var(--yony-fontSizes-xs);
-  border-radius: var(--yony-radii-sm);
-  font-weight: var(--yony-fontWeights-bold);
-  --badge-color: var(--yony-colors-red-500);
-  color: var(--badge-color);
-  box-shadow: inset 0 0 0px 1px var(--badge-color);
-}
-
-.chakra-ui-dark .emotion-19:not([data-theme]),
-[data-theme=dark] .emotion-19:not([data-theme]),
-.emotion-19[data-theme=dark] {
-  --badge-color: rgba(254, 178, 178, 0.8);
 }
 
 <body
@@ -379,7 +67,7 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>
@@ -387,57 +75,54 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
       </div>
     </div>
     <main
-      class="chakra-container emotion-0"
+      class="container py-10"
     >
       <div
-        class="chakra-stack emotion-1"
+        class="space-y-6 mb-10"
       >
         <h1
-          class="chakra-heading emotion-2"
+          class="font-bold font-heading text-3xl"
         >
           Projects (
           1
           )
         </h1>
-        <p
-          class="chakra-text emotion-3"
-        >
+        <p>
           Let me show you some of my projects. See all of them
            
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            color="primary.500"
             href="https://github.com/yonycalsin"
             target="blank"
           >
-            on my GitHub
+            on my GitHub.
           </a>
-          .
         </p>
       </div>
       <ul
         aria-label="List of projects"
-        class="chakra-stack emotion-5"
+        class="space-y-12 relative before:content-[''] before:absolute before:top-0 before:left-4 lg:before:left-6 before:h-full before:w-1 before:bg-primary-600"
         role="list"
       >
         <li
-          class="emotion-3"
           id="AWS Clone"
           role="listitem"
         >
           <div
-            class="emotion-7"
+            class="shadow-lg absolute h-9 lg:h-12 w-9 lg:w-12 flex items-center justify-center rounded-full p-3 bg-secondary-100"
           >
             <div
-              class="emotion-8"
+              class="absolute whitespace-nowrap hidden lg:block right-20"
             >
               <p
-                class="chakra-text emotion-9"
+                class="italic"
               >
                 15 May, 2021
               </p>
             </div>
             <svg
-              class="chakra-icon emotion-10"
+              class="chakra-icon emotion-0"
               fill="currentColor"
               focusable="false"
               height="1em"
@@ -461,72 +146,72 @@ exports[`ProjectsScreen renders the projects screen 1`] = `
             </svg>
           </div>
           <div
-            class="chakra-stack emotion-11"
+            class="space-y-4 ml-14 lg:ml-20"
           >
             <a
-              class="chakra-link chakra-heading emotion-12"
+              class="block"
               href="https://aws-clone.projects.yonycalsin.com"
               target="__blank"
             >
-              aws-clone
+              <h1
+                class="font-bold font-heading text-lg"
+              >
+                aws-clone
+              </h1>
             </a>
-            <p
-              class="chakra-text emotion-3"
-            >
+            <p>
               A clone of aws of amazon
             </p>
-            <div
-              class="emotion-3"
-            >
+            <div>
               <ul
-                class="emotion-15"
-                role="list"
+                class="space-y-0 lg:space-y-1"
               >
-                <a
-                  class="chakra-link emotion-16"
-                  href="https://aws-clone.projects.yonycalsin.com"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <svg
-                    class="chakra-icon emotion-17"
-                    fill="currentColor"
-                    focusable="false"
-                    height="1em"
-                    role="presentation"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
+                <li>
+                  <a
+                    class="font-medium text-primary-600 dark:text-primary-500 hover:underline flex items-center gap-2"
+                    href="https://aws-clone.projects.yonycalsin.com"
+                    rel="noreferrer"
+                    target="_blank"
                   >
-                    <path
-                      d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
-                    />
-                    <path
-                      d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"
-                    />
-                  </svg>
-                  Visit 
-                  aws-clone.projects.yonycalsin.com
-                </a>
+                    <svg
+                      class="w-4 h-4 inline-block leading-4 shrink-0 text-secondary-900"
+                      fill="currentColor"
+                      height="1em"
+                      role="icon"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"
+                      />
+                      <path
+                        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"
+                      />
+                    </svg>
+                    Visit 
+                    aws-clone.projects.yonycalsin.com
+                  </a>
+                </li>
               </ul>
             </div>
             <div
-              class="emotion-18"
+              class="flex gap-2 flex-wrap"
             >
               <span
-                class="chakra-badge emotion-19"
+                class=" text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-primary-100 text-primary-800"
               >
                 Golang
               </span>
               <span
-                class="chakra-badge emotion-19"
+                class=" text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-primary-100 text-primary-800"
               >
                 Kubernetes
               </span>
               <span
-                class="chakra-badge emotion-19"
+                class=" text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-primary-100 text-primary-800"
               >
                 Python
               </span>

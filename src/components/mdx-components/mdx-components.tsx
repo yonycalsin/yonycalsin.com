@@ -26,8 +26,6 @@ function ZoomImage(props: any) {
 }
 
 const MDXComponents = {
-  ...Chakra,
-
   /**
    * Heading
    */

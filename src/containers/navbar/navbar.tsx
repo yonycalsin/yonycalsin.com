@@ -31,7 +31,7 @@ function Navbar() {
             </Link>
           )}
           {ENV.FF_SNIPPETS && (
-            <Link href="/snippets" legacyBehavior={true} passHref={true}>
+            <Link href="/blog/categories/snippet" legacyBehavior={true} passHref={true}>
               <Anchor>Snippets</Anchor>
             </Link>
           )}

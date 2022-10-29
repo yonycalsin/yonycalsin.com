@@ -179,7 +179,7 @@ blockquote .emotion-11 {
           </a>
           <a
             class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/snippets"
+            href="/blog/categories/snippet"
           >
             Snippets
           </a>

@@ -1,9 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import type { MainTestProviderProps } from 'typings/tests'
-import { achievementsSuccess } from 'mock-server/mocks/achievements'
-import { pinnedProjectsSuccess } from 'mock-server/mocks/projects'
-import { featuredRecommendationsSuccess } from 'mock-server/mocks/recommendations'
+import { achievementsSuccess, featuredRecommendationsSuccess, pinnedProjectsSuccess } from 'mock-server/mocks'
 import { setupWithReactQuery, TestProvider } from 'tests'
 import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
 import HomeScreen from 'screens/home'

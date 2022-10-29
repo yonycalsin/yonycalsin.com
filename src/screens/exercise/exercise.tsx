@@ -8,7 +8,7 @@ import nextBase64 from 'next-base64'
 
 import type { ExerciseScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
-import { Header } from 'layouts'
+import { Navbar } from 'containers'
 import { MDXComponents } from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
@@ -23,7 +23,7 @@ function ExerciseScreen(props: ExerciseScreenProps) {
 
   return (
     <>
-      <Header container="6xl" />
+      <Navbar />
       <Container maxW="6xl" my="6">
         <VStack spacing="6" alignItems="flex-start" w="full">
           <VStack alignItems="flex-start">
