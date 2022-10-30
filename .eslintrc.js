@@ -62,7 +62,6 @@ module.exports = {
               'tests',
               'analytics',
               'services',
-              'themes',
               'hooks',
               'screens',
               'layouts',

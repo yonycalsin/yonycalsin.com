@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FloatSocials clicks on link 1`] = `
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
@@ -41,50 +39,6 @@ exports[`FloatSocials clicks on link 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
@@ -127,9 +81,5 @@ exports[`FloatSocials renders the float socials 1`] = `
       Email
     </a>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;

@@ -1,10 +1,8 @@
-import { ChakraProvider } from '@chakra-ui/react'
 import { screen } from '@testing-library/react'
 
 import { allProjectsSuccess } from 'mock-server/mocks/projects'
 import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getAllProjectsApi } from 'services'
-import { ThemeMain } from 'themes'
 import ProjectsScreen from 'screens/projects'
 import { getRandomBadgeColors } from 'utils'
 
@@ -13,11 +11,7 @@ jest.mock('utils/get-random-badge-colors')
 const mockGetRandomBadgeColors = getRandomBadgeColors as jest.Mock
 
 const setup = () => {
-  const utils = setupWithReactQuery(
-    <ChakraProvider theme={ThemeMain}>
-      <ProjectsScreen />
-    </ChakraProvider>,
-  )
+  const utils = setupWithReactQuery(<ProjectsScreen />)
 
   return utils
 }

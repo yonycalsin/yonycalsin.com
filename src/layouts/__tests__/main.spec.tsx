@@ -1,4 +1,3 @@
-import { ChakraKBar } from '@chakra-ui-kbar/core'
 import { render } from '@testing-library/react'
 
 import { overrideFeatures, TEST_ENVS } from 'tests'
@@ -15,11 +14,9 @@ describe('MainLayout', () => {
 
   it('renders the main layout', () => {
     const view = render(
-      <ChakraKBar>
-        <MainLayout>
-          <h1>Content</h1>
-        </MainLayout>
-      </ChakraKBar>,
+      <MainLayout>
+        <h1>Content</h1>
+      </MainLayout>,
     )
 
     expect(view.baseElement).toMatchSnapshot()

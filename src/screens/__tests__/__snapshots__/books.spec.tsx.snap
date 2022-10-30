@@ -1,148 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BooksScreen renders the books screen 1`] = `
-.emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-10);
-  padding-bottom: var(--yony-space-10);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-6);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-2 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-2 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-3 {
-  margin-top: var(--yony-space-3);
-}
-
-.emotion-4 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-xl);
-  line-height: 1.2;
-}
-
-.emotion-5 {
-  display: grid;
-  grid-gap: var(--yony-space-6);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: var(--yony-space-3);
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-5 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-6>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-2);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-7 {
-  width: var(--yony-sizes-full);
-  border-radius: var(--yony-radii-md);
-}
-
-.emotion-8 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-md);
-  line-height: 1.2;
-}
-
-.emotion-9 {
-  font-size: var(--yony-fontSizes-sm);
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  font-size: var(--yony-fontSizes-sm);
-}
-
-.emotion-10>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0.5rem;
-  margin-inline-start: 0.5rem;
-}
-
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -184,136 +43,136 @@ exports[`BooksScreen renders the books screen 1`] = `
       </div>
     </div>
     <main
-      class="chakra-container emotion-0"
+      class="container space-y-6 py-10"
     >
-      <div
-        class="chakra-stack emotion-1"
+      <header
+        class="space-y-3"
       >
-        <header>
-          <h2
-            class="chakra-heading emotion-2"
-          >
-            Books
-          </h2>
-          <p
-            class="chakra-text emotion-3"
-          >
-            This page contains the books I have read along of my life.
-          </p>
-        </header>
-        <div>
-          <h2
-            class="chakra-heading emotion-4"
-          >
-            Reading:
-          </h2>
+        <h1
+          class="font-bold font-heading text-4xl"
+        >
+          Books (
+          1
+          )
+        </h1>
+        <p>
+          This page contains the books I have read along of my life.
+        </p>
+      </header>
+      <div
+        class="space-y-3"
+      >
+        <h1
+          class="font-bold font-heading text-2xl"
+        >
+          Reading:
+        </h1>
+        <div
+          aria-label="List of reading books"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-6"
+          role="list"
+        >
           <div
-            aria-label="List of reading books"
-            class="emotion-5"
-            role="list"
+            class="space-y-3 p-3 bg-white rounded-lg shadow-card"
+            role="listitem"
           >
-            <div
-              class="chakra-stack emotion-6"
-              role="listitem"
+            <div>
+              <img
+                alt="Clean Architecture"
+                class="w-full rounded-md"
+                src="https://static.yonycalsin.com/books/clean-arquitecture-front.png"
+              />
+            </div>
+            <h1
+              class="font-bold font-heading text-base"
             >
-              <div>
-                <img
-                  alt="Clean Architecture"
-                  class="chakra-image emotion-7"
-                  src="https://static.yonycalsin.com/books/clean-arquitecture-front.png"
+              Clean Architecture
+            </h1>
+            <p
+              class="text-sm line-clamp-1"
+            >
+              Mark Zuck
+            </p>
+            <div
+              class="flex flex-row items-center space-x-2"
+            >
+              <svg
+                class="text-primary-600"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
                 />
-              </div>
-              <h2
-                class="chakra-heading emotion-8"
-              >
-                Clean Architecture
-              </h2>
-              <p
-                class="chakra-text emotion-9"
-              >
-                Mark Zuck
-              </p>
-              <div
-                class="chakra-stack emotion-10"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 1024 1024"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
-                  />
-                </svg>
-                <p
-                  class="chakra-text emotion-11"
-                >
-                  Rating 
-                  4.5
-                </p>
-              </div>
+              </svg>
+              <span>
+                Rating 
+                4.5
+              </span>
             </div>
           </div>
         </div>
-        <div>
-          <h2
-            class="chakra-heading emotion-4"
-          >
-            All:
-          </h2>
+      </div>
+      <div
+        class="space-y-3"
+      >
+        <h1
+          class="font-bold font-heading text-2xl"
+        >
+          All:
+        </h1>
+        <div
+          aria-label="List of all books"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-6"
+          role="list"
+        >
           <div
-            aria-label="List of all books"
-            class="emotion-5"
-            role="list"
+            class="space-y-3 p-3 bg-white rounded-lg shadow-card"
+            role="listitem"
           >
-            <div
-              class="chakra-stack emotion-6"
-              role="listitem"
+            <div>
+              <img
+                alt="Clean Code"
+                class="w-full rounded-md"
+                src="https://static.yonycalsin.com/books/clean-code-front.png"
+              />
+            </div>
+            <h1
+              class="font-bold font-heading text-base"
             >
-              <div>
-                <img
-                  alt="Clean Code"
-                  class="chakra-image emotion-7"
-                  src="https://static.yonycalsin.com/books/clean-code-front.png"
+              Clean Code
+            </h1>
+            <p
+              class="text-sm line-clamp-1"
+            >
+              Tim Chuckby
+            </p>
+            <div
+              class="flex flex-row items-center space-x-2"
+            >
+              <svg
+                class="text-primary-600"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
                 />
-              </div>
-              <h2
-                class="chakra-heading emotion-8"
-              >
-                Clean Code
-              </h2>
-              <p
-                class="chakra-text emotion-9"
-              >
-                Tim Chuckby
-              </p>
-              <div
-                class="chakra-stack emotion-10"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 1024 1024"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
-                  />
-                </svg>
-                <p
-                  class="chakra-text emotion-11"
-                >
-                  Rating 
-                  5
-                </p>
-              </div>
+              </svg>
+              <span>
+                Rating 
+                5
+              </span>
             </div>
           </div>
         </div>
@@ -326,10 +185,10 @@ exports[`BooksScreen renders the books screen 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -342,36 +201,20 @@ exports[`BooksScreen renders the books screen 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -416,50 +259,6 @@ exports[`BooksScreen renders the books screen 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;

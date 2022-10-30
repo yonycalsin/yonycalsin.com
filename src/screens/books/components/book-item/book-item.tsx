@@ -1,24 +1,24 @@
 import * as React from 'react'
-import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import { AiFillStar } from 'react-icons/ai'
 
 import type { BookItemProps } from 'typings/screens'
+import { Heading } from 'components'
 
 function BookItem(props: BookItemProps) {
   const { name, imageSrc, author, rating } = props
 
   return (
-    <VStack alignItems="flex-start" spacing="2" role="listitem">
+    <div className="space-y-3 p-3 bg-white rounded-lg shadow-card" role="listitem">
       <div>
-        <Image src={imageSrc} alt={name} w="full" borderRadius="md" />
+        <img src={imageSrc} alt={name} className="w-full rounded-md" />
       </div>
-      <Heading size="sm">{name}</Heading>
-      <Text fontSize="sm">{author}</Text>
-      <HStack alignItems="center" fontSize="sm">
-        <AiFillStar />
-        <Text>Rating {rating}</Text>
-      </HStack>
-    </VStack>
+      <Heading size="h5">{name}</Heading>
+      <p className="text-sm line-clamp-1">{author}</p>
+      <div className="flex flex-row items-center space-x-2">
+        <AiFillStar className="text-primary-600" />
+        <span>Rating {rating}</span>
+      </div>
+    </div>
   )
 }
 

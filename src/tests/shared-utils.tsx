@@ -1,19 +1,12 @@
 import * as React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
-import { ChakraKBar } from '@chakra-ui-kbar/core'
 
 import type { MainTestProviderProps } from 'typings/tests'
-import { ThemeMain } from 'themes'
 import { Features } from 'utils/constants'
 
 function TestProvider(props: MainTestProviderProps) {
   const { children } = props
 
-  return (
-    <ChakraProvider theme={ThemeMain}>
-      <ChakraKBar>{children}</ChakraKBar>
-    </ChakraProvider>
-  )
+  return <>{children}</>
 }
 
 const TEST_ENVS = { ...process.env }

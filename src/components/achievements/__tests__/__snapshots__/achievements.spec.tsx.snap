@@ -472,9 +472,5 @@ exports[`Achievements renders the achievements correctly 1`] = `
       </span>
     </div>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;

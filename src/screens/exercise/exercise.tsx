@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Badge, Box, Container, Heading, HStack, StackDivider, Text, VStack } from '@chakra-ui/react'
 import { RuntsPlayground } from '@runts/react'
 import { useDefineLightPlaygroundThemes } from '@runts/react'
 import vitesseDark from '@runts/react/themes/vitesse-dark.json'
@@ -9,7 +8,7 @@ import nextBase64 from 'next-base64'
 import type { ExerciseScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
 import { Navbar } from 'containers'
-import { MDXComponents } from 'components'
+import { Badge, Heading, MDXComponents } from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function ExerciseScreen(props: ExerciseScreenProps) {
@@ -24,19 +23,19 @@ function ExerciseScreen(props: ExerciseScreenProps) {
   return (
     <>
       <Navbar />
-      <Container maxW="6xl" my="6">
-        <VStack spacing="6" alignItems="flex-start" w="full">
-          <VStack alignItems="flex-start">
-            <Heading>{exercise.name}</Heading>
-            <HStack divider={<StackDivider />}>
-              <Text fontStyle="italic" textColor="gray">
-                Last updated at {dayjs(exercise.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
-              </Text>
-              <Badge colorScheme="primary">{exercise.difficulty}</Badge>
-              <Badge colorScheme="secondary">{exercise.status}</Badge>
-            </HStack>
-          </VStack>
-          <Box w="full">
+      <div className="container py-10 space-y-6">
+        <div className="space-y-3">
+          <Heading size="h1">{exercise.name}</Heading>
+          <div className="flex flex-row items-center space-x-3">
+            <p className="italic text-gray-600">
+              Last updated at {dayjs(exercise.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
+            </p>
+            <Badge palette="primary">{exercise.difficulty}</Badge>
+            <Badge palette="secondary">{exercise.status}</Badge>
+          </div>
+        </div>
+        <div className="w-full relative">
+          <div className="lg:-ml-14 lg:-mr-14 xl:-ml-40 xl:-mr-40">
             <RuntsPlayground
               files={{
                 '/main.ts': solution.body.code,
@@ -45,10 +44,10 @@ function ExerciseScreen(props: ExerciseScreenProps) {
               activeFile="/main.ts"
               theme="vitesse-dark"
             />
-          </Box>
-          <Component components={MDXComponents} />
-        </VStack>
-      </Container>
+          </div>
+        </div>
+        <Component components={MDXComponents} />
+      </div>
     </>
   )
 }

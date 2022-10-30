@@ -1,8 +1,5 @@
 import * as React from 'react'
-import { ColorModeScript } from '@chakra-ui/react'
 import { Head, Html, Main, NextScript } from 'next/document'
-
-import { ThemeMain } from 'themes'
 
 function MyDocument() {
   return (
@@ -17,9 +14,7 @@ function MyDocument() {
           href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700&display=swap"
         />
       </Head>
-      <body>
-        {/* Make Color mode to persists when you refresh the page. */}
-        <ColorModeScript storageKey="color-mode-v1.0.0" initialColorMode={ThemeMain.config.initialColorMode} />
+      <body className="bg-[#F8F7F3] text-gray-800 text-base lg:text-lg">
         <Main />
         <NextScript />
       </body>

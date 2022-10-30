@@ -7,7 +7,6 @@ import '@runts/react/styles/editor-fonts.css'
 import '@runts/react/styles/runts-playground.css'
 
 import * as React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
@@ -15,7 +14,6 @@ import NProgress from 'nprogress'
 
 import type { MyAppPageProps } from 'typings/pages'
 import { analytics } from 'analytics'
-import { ThemeMain } from 'themes'
 import { NightModeButton } from 'components'
 import { ENV, IS_PRODUCTION, NUMERICS } from 'utils/constants'
 
@@ -85,18 +83,17 @@ function MyApp(props: MyAppPageProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <ChakraProvider resetCSS theme={ThemeMain}>
-          {IS_PRODUCTION && (
-            <>
-              <Script
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${ENV.GOOGLE_ANALYTICS_ID}`}
-              />
-              <Script
-                id="gtag-init"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
+        {IS_PRODUCTION && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${ENV.GOOGLE_ANALYTICS_ID}`}
+            />
+            <Script
+              id="gtag-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
                         window.dataLayer = window.dataLayer || [];
 
                         function gtag(){dataLayer.push(arguments);}
@@ -107,13 +104,12 @@ function MyApp(props: MyAppPageProps) {
                             page_path: window.location.pathname,
                         });
                     `,
-                }}
-              />
-            </>
-          )}
-          <NightModeButton />
-          <Component {...pageProps} />
-        </ChakraProvider>
+              }}
+            />
+          </>
+        )}
+        <NightModeButton />
+        <Component {...pageProps} />
       </Hydrate>
     </QueryClientProvider>
   )

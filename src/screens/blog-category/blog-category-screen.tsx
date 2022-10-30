@@ -1,24 +1,21 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Container,
-  Heading,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-  VStack,
-} from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import RouterLink from 'next/link'
+import Link from 'next/link'
 import nextBase64 from 'next-base64'
-import { BsChevronCompactRight } from 'react-icons/bs'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
 import { MainLayout } from 'layouts'
-import { MDXComponents } from 'components'
+import {
+  Anchor,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+  Heading,
+  ListItem,
+  MDXComponents,
+  UnorderedList,
+} from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function BlogCategoryScreen(props: BlogCategoryScreenProps) {
@@ -28,51 +25,47 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" py="6" pb="12">
-        <VStack
-          as="header"
-          alignItems="flex-start"
-          spacing={{
-            base: '2',
-            md: '5',
-          }}
-        >
-          <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
-            <BreadcrumbItem>
-              <RouterLink href="/" passHref legacyBehavior>
-                <BreadcrumbLink>Home</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-              <RouterLink href="/blog" passHref legacyBehavior>
-                <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-              <RouterLink href="/blog/categories" passHref legacyBehavior>
-                <BreadcrumbLink href="/blog/categories">Categories</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink>{category.title}</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-          <Heading>Category: {category.title}</Heading>
-          <Text textColor="gray" fontStyle="italic">
+      <main className="container py-10 space-y-6">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link href="/" legacyBehavior passHref>
+              <Anchor>Home</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Link href="/blog" legacyBehavior passHref>
+              <Anchor>Blog</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Link href="/blog/categories" legacyBehavior passHref>
+              <Anchor>Categories</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Anchor>{category.title}</Anchor>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        <div className="space-y-3">
+          <Heading size="h1">Category: {category.title}</Heading>
+          <p className="italic text-gray-600">
             Last updated at {dayjs(category.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
-          </Text>
-        </VStack>
+          </p>
+        </div>
         <Component components={MDXComponents} />
-        <UnorderedList mt="6" role="list" aria-label="List of category's posts">
+        <UnorderedList role="list" aria-label="List of category's posts">
           {posts.map(post => (
             <RouterLink href={`/blog/${post.slug}`} key={post.title} passHref legacyBehavior>
-              <Link>
+              <Anchor>
                 <ListItem>{post.title}</ListItem>
-              </Link>
+              </Anchor>
             </RouterLink>
           ))}
         </UnorderedList>
-      </Container>
+      </main>
     </MainLayout>
   )
 }

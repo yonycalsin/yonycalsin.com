@@ -27,12 +27,12 @@ function Navbar() {
           )}
           {ENV.FF_USES && (
             <Link href="/uses" legacyBehavior={true} passHref={true}>
-              <Anchor>Uses</Anchor>
+              <Anchor className="hidden lg:inline-block">Uses</Anchor>
             </Link>
           )}
           {ENV.FF_SNIPPETS && (
             <Link href="/blog/categories/snippet" legacyBehavior={true} passHref={true}>
-              <Anchor>Snippets</Anchor>
+              <Anchor className="hidden lg:inline-block">Snippets</Anchor>
             </Link>
           )}
         </div>

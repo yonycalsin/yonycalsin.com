@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomeScreen renders the achievements section 1`] = `
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -51,7 +49,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
         class="space-y-6 flex flex-col py-3 items-start"
       >
         <h1
-          class="font-bold font-heading text-3xl"
+          class="font-bold font-heading text-4xl"
         >
           Hi, I’m Yony Calsin.
         </h1>
@@ -103,12 +101,6 @@ exports[`HomeScreen renders the achievements section 1`] = `
           <b>
             Frontend Developer.
           </b>
-          <a
-            class="emotion-0"
-            href=""
-          >
-            hola
-          </a>
         </p>
         <div
           class="flex flex-wrap gap-3"
@@ -302,7 +294,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
             class="flex items-center justify-between relative"
           >
             <h1
-              class="font-bold font-heading text-xl"
+              class="font-bold font-heading text-2xl"
             >
               Achievements
             </h1>
@@ -793,10 +785,10 @@ exports[`HomeScreen renders the achievements section 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -809,36 +801,20 @@ exports[`HomeScreen renders the achievements section 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -883,58 +859,12 @@ exports[`HomeScreen renders the achievements section 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
 
 exports[`HomeScreen renders the home screen 1`] = `
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -982,7 +912,7 @@ exports[`HomeScreen renders the home screen 1`] = `
         class="space-y-6 flex flex-col py-3 items-start"
       >
         <h1
-          class="font-bold font-heading text-3xl"
+          class="font-bold font-heading text-4xl"
         >
           Hi, I’m Yony Calsin.
         </h1>
@@ -1034,12 +964,6 @@ exports[`HomeScreen renders the home screen 1`] = `
           <b>
             Frontend Developer.
           </b>
-          <a
-            class="emotion-0"
-            href=""
-          >
-            hola
-          </a>
         </p>
         <div
           class="flex flex-wrap gap-3"
@@ -1230,10 +1154,10 @@ exports[`HomeScreen renders the home screen 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -1246,36 +1170,20 @@ exports[`HomeScreen renders the home screen 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -1320,58 +1228,12 @@ exports[`HomeScreen renders the home screen 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
 
 exports[`HomeScreen renders the pinned projects section 1`] = `
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -1419,7 +1281,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         class="space-y-6 flex flex-col py-3 items-start"
       >
         <h1
-          class="font-bold font-heading text-3xl"
+          class="font-bold font-heading text-4xl"
         >
           Hi, I’m Yony Calsin.
         </h1>
@@ -1471,12 +1333,6 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
           <b>
             Frontend Developer.
           </b>
-          <a
-            class="emotion-0"
-            href=""
-          >
-            hola
-          </a>
         </p>
         <div
           class="flex flex-wrap gap-3"
@@ -1670,7 +1526,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             class="flex items-center justify-between relative"
           >
             <h1
-              class="font-bold font-heading text-xl"
+              class="font-bold font-heading text-2xl"
             >
               Featured Projects
             </h1>
@@ -1743,10 +1599,10 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -1759,36 +1615,20 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -1833,58 +1673,12 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
 
 exports[`HomeScreen renders the recommendations section 1`] = `
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -1932,7 +1726,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         class="space-y-6 flex flex-col py-3 items-start"
       >
         <h1
-          class="font-bold font-heading text-3xl"
+          class="font-bold font-heading text-4xl"
         >
           Hi, I’m Yony Calsin.
         </h1>
@@ -1984,12 +1778,6 @@ exports[`HomeScreen renders the recommendations section 1`] = `
           <b>
             Frontend Developer.
           </b>
-          <a
-            class="emotion-0"
-            href=""
-          >
-            hola
-          </a>
         </p>
         <div
           class="flex flex-wrap gap-3"
@@ -2185,7 +1973,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
             class="flex items-center justify-between relative"
           >
             <h1
-              class="font-bold font-heading text-xl"
+              class="font-bold font-heading text-2xl"
             >
               Recommendations
             </h1>
@@ -2232,10 +2020,10 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -2248,36 +2036,20 @@ exports[`HomeScreen renders the recommendations section 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -2322,50 +2094,6 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;

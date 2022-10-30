@@ -1,43 +1,19 @@
 import * as React from 'react'
-import { Box, useColorMode } from '@chakra-ui/react'
 
-import { analytics, ANALYTICS_EVENTS } from 'analytics'
 import { MoonIcon, SunIcon } from './components'
 
-function NightModeButton() {
-  const { colorMode, toggleColorMode } = useColorMode()
+/**
+ * @todo handle dark mode with tailwind
+ * @author yonycalsin
+ */
+const colorMode = 'light' as 'light' | 'dark'
 
+function NightModeButton() {
   return (
     <>
-      <Box
-        role="button"
-        as="button"
-        position="fixed"
-        left={{
-          base: 4,
-          md: 8,
-        }}
-        top={{
-          base: 20,
-          md: 8,
-        }}
-        fontSize={{
-          base: '2xl',
-          md: '4xl',
-        }}
-        zIndex="sticky"
-        onClick={() => {
-          analytics.event({
-            action: ANALYTICS_EVENTS.TOGGLE_NIGHT_MODE_BUTTON,
-            category: 'ui-theme',
-            label: colorMode,
-          })
-
-          toggleColorMode()
-        }}
-      >
+      <button className="fixed left-4 lg:left-8 top-20 lg:top-8 z-50 text-2xl lg:text-4xl" role="button">
         {colorMode === 'dark' ? <SunIcon className="transition-all" /> : <MoonIcon className="transition-all" />}
-      </Box>
+      </button>
     </>
   )
 }

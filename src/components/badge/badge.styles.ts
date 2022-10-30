@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-const badgeStyles = cva(' text-xs font-semibold mr-2 px-2.5 py-0.5 rounded', {
+const badgeStyles = cva('uppercase text-xs font-semibold mr-2 px-2.5 py-0.5 rounded', {
   variants: {
     palette: {
       primary: 'bg-primary-100 text-primary-800',

@@ -1,1 +1,1 @@
-export { default as Anchor } from './anchor'
+export { default as MdxAnchor } from './anchor'

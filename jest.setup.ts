@@ -7,14 +7,11 @@ import * as React from 'react'
 import type { PageTransitionProps } from 'typings/components'
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
-import { matchers } from '@emotion/jest'
 import dayjs from 'dayjs'
 import isToday from 'dayjs/plugin/isToday'
 import isYesterday from 'dayjs/plugin/isYesterday'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
-
-expect.extend(matchers)
 
 dayjs.extend(utc)
 

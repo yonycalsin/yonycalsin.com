@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Icon } from '@chakra-ui/react'
 import { CgTemplate } from 'react-icons/cg'
 import { FaHandsHelping, FaNpm } from 'react-icons/fa'
 import { MdWorkOutline } from 'react-icons/md'
 
 import { ProjectTypeResponsePayload } from 'typings/services'
 import type { WorkItemIconProps } from 'typings/components'
+import { Icon } from 'components/icon'
 
 export function getWorkItemIcon(projectType: WorkItemIconProps['projectType']) {
   switch (projectType) {
@@ -73,7 +73,7 @@ export function getWorkItemColors(projectType: WorkItemIconProps['projectType'])
 export function WorkItemIcon(props: WorkItemIconProps) {
   const { projectType } = props
 
-  const icon = React.useMemo(() => {
+  const Element = React.useMemo(() => {
     return getWorkItemIcon(projectType)
   }, [projectType])
 
@@ -81,5 +81,13 @@ export function WorkItemIcon(props: WorkItemIconProps) {
     return getWorkItemColors(projectType)
   }, [projectType])
 
-  return <Icon title={projectType} fill={colors.fill} w="full" h="full" as={icon} />
+  if (!Element) {
+    return null
+  }
+
+  return (
+    <Icon className={colors.fill}>
+      <Element />
+    </Icon>
+  )
 }

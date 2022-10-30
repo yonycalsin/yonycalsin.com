@@ -8,4 +8,6 @@ type HeadingStylesProps = VariantProps<typeof headingStyles>
 type HeadingProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> &
   HeadingStylesProps
 
-export type { HeadingProps }
+type HeadingLinkedProps = HeadingProps
+
+export type { HeadingLinkedProps, HeadingProps }

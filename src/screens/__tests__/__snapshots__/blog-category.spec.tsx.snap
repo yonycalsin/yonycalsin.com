@@ -1,140 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogCategoryScreen renders the blog category screen 1`] = `
-.emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-6);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-2);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-5);
-  }
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-5:hover,
-.emotion-5[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-5:focus-visible,
-.emotion-5[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
-  -webkit-margin-start: 8px;
-  margin-inline-start: 8px;
-  -webkit-margin-end: 8px;
-  margin-inline-end: 8px;
-}
-
-.emotion-15 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-15 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-16 {
-  color: gray;
-  font-style: italic;
-}
-
-.emotion-17 {
-  margin-top: 1.25rem;
-  line-height: 1.7;
-}
-
-blockquote .emotion-17 {
-  margin-top: 0px;
-}
-
-.emotion-18 {
-  list-style-type: initial;
-  -webkit-margin-start: 1em;
-  margin-inline-start: 1em;
-  margin-top: var(--yony-space-6);
-}
-
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -175,149 +42,133 @@ blockquote .emotion-17 {
         </div>
       </div>
     </div>
-    <div
-      class="chakra-container emotion-0"
+    <main
+      class="container py-10 space-y-6"
     >
-      <header
-        class="chakra-stack emotion-1"
+      <nav
+        class="flex"
       >
-        <nav
-          aria-label="breadcrumb"
-          class="chakra-breadcrumb emotion-2"
+        <ol
+          class="inline-flex items-center space-x-2"
         >
-          <ol
-            class="chakra-breadcrumb__list emotion-3"
-          >
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/"
-              >
-                Home
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              Home
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/blog"
-              >
-                Blog
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/blog"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/blog/categories"
-              >
-                Categories
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              Blog
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span
-                aria-current="page"
-                class="chakra-breadcrumb__link emotion-5"
-              >
-                Cracking the Coding Interview
-              </span>
-            </li>
-          </ol>
-        </nav>
-        <h2
-          class="chakra-heading emotion-15"
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/blog/categories"
+            >
+              Categories
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            >
+              Cracking the Coding Interview
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="space-y-3"
+      >
+        <h1
+          class="font-bold font-heading text-4xl"
         >
           Category: 
           Cracking the Coding Interview
-        </h2>
+        </h1>
         <p
-          class="chakra-text emotion-16"
+          class="italic text-gray-600"
         >
           Last updated at 
           15 Oct, 2022
         </p>
-      </header>
+      </div>
       <div
         data-testid="mdx-content"
       >
         <p
-          class="emotion-17"
+          class="my-5"
         >
           Cracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.
         </p>
       </div>
       <ul
         aria-label="List of category's posts"
-        class="emotion-18"
+        class="space-y-1 list-disc list-inside"
         role="list"
       />
-    </div>
+    </main>
     <footer
       class="my-6"
     >
@@ -325,10 +176,10 @@ blockquote .emotion-17 {
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -341,36 +192,20 @@ blockquote .emotion-17 {
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -415,50 +250,6 @@ blockquote .emotion-17 {
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
@@ -466,140 +257,7 @@ blockquote .emotion-17 {
 exports[`BlogCategoryScreen renders the list of category's posts 1`] = `
 {
   "asFragment": [Function],
-  "baseElement": .emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-6);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-2);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-5);
-  }
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-5:hover,
-.emotion-5[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-5:focus-visible,
-.emotion-5[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
-  -webkit-margin-start: 8px;
-  margin-inline-start: 8px;
-  -webkit-margin-end: 8px;
-  margin-inline-end: 8px;
-}
-
-.emotion-15 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-15 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-16 {
-  color: gray;
-  font-style: italic;
-}
-
-.emotion-17 {
-  margin-top: 1.25rem;
-  line-height: 1.7;
-}
-
-blockquote .emotion-17 {
-  margin-top: 0px;
-}
-
-.emotion-18 {
-  list-style-type: initial;
-  -webkit-margin-start: 1em;
-  margin-inline-start: 1em;
-  margin-top: var(--yony-space-6);
-}
-
-<body
-    class="chakra-ui-dark"
-  >
+  "baseElement": <body>
     <div>
       <div
         class="w-full z-10 shadow-sm"
@@ -640,160 +298,142 @@ blockquote .emotion-17 {
           </div>
         </div>
       </div>
-      <div
-        class="chakra-container emotion-0"
+      <main
+        class="container py-10 space-y-6"
       >
-        <header
-          class="chakra-stack emotion-1"
+        <nav
+          class="flex"
         >
-          <nav
-            aria-label="breadcrumb"
-            class="chakra-breadcrumb emotion-2"
+          <ol
+            class="inline-flex items-center space-x-2"
           >
-            <ol
-              class="chakra-breadcrumb__list emotion-3"
-            >
-              <li
-                class="chakra-breadcrumb__list-item emotion-4"
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/"
               >
-                <a
-                  class="chakra-breadcrumb__link emotion-5"
-                  href="/"
-                >
-                  Home
-                </a>
-                <span
-                  class="emotion-6"
-                  role="presentation"
-                >
-                  <svg
-                    color="gray.500"
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </li>
-              <li
-                class="chakra-breadcrumb__list-item emotion-4"
+                Home
+              </a>
+            </li>
+            <span>
+              <svg
+                class="w-4 h-4 inline-block leading-4 shrink-0"
+                fill="currentColor"
+                height="1em"
+                role="icon"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <a
-                  class="chakra-breadcrumb__link emotion-5"
-                  href="/blog"
-                >
-                  Blog
-                </a>
-                <span
-                  class="emotion-6"
-                  role="presentation"
-                >
-                  <svg
-                    color="gray.500"
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </li>
-              <li
-                class="chakra-breadcrumb__list-item emotion-4"
+                <path
+                  d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/blog"
               >
-                <a
-                  class="chakra-breadcrumb__link emotion-5"
-                  href="/blog/categories"
-                >
-                  Categories
-                </a>
-                <span
-                  class="emotion-6"
-                  role="presentation"
-                >
-                  <svg
-                    color="gray.500"
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </li>
-              <li
-                class="chakra-breadcrumb__list-item emotion-4"
+                Blog
+              </a>
+            </li>
+            <span>
+              <svg
+                class="w-4 h-4 inline-block leading-4 shrink-0"
+                fill="currentColor"
+                height="1em"
+                role="icon"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <span
-                  aria-current="page"
-                  class="chakra-breadcrumb__link emotion-5"
-                >
-                  Cracking the Coding Interview
-                </span>
-              </li>
-            </ol>
-          </nav>
-          <h2
-            class="chakra-heading emotion-15"
+                <path
+                  d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/blog/categories"
+              >
+                Categories
+              </a>
+            </li>
+            <span>
+              <svg
+                class="w-4 h-4 inline-block leading-4 shrink-0"
+                fill="currentColor"
+                height="1em"
+                role="icon"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              >
+                Cracking the Coding Interview
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <div
+          class="space-y-3"
+        >
+          <h1
+            class="font-bold font-heading text-4xl"
           >
             Category: 
             Cracking the Coding Interview
-          </h2>
+          </h1>
           <p
-            class="chakra-text emotion-16"
+            class="italic text-gray-600"
           >
             Last updated at 
             15 Oct, 2022
           </p>
-        </header>
+        </div>
         <div
           data-testid="mdx-content"
         >
           <p
-            class="emotion-17"
+            class="my-5"
           >
             Cracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.
           </p>
         </div>
         <ul
           aria-label="List of category's posts"
-          class="emotion-18"
+          class="space-y-1 list-disc list-inside"
           role="list"
         >
           <a
-            class="chakra-link emotion-5"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/blog/how-to-mock-a-rest-api"
           >
-            <li
-              class="emotion-2"
-            >
+            <li>
               How to mock a rest api
             </li>
           </a>
         </ul>
-      </div>
+      </main>
       <footer
         class="my-6"
       >
@@ -801,10 +441,10 @@ blockquote .emotion-17 {
           class="container"
         >
           <footer
-            class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+            class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
           >
             <span
-              class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+              class="text-gray-500"
             >
               © 2022
                
@@ -817,36 +457,20 @@ blockquote .emotion-17 {
               . All Rights Reserved.
             </span>
             <ul
-              class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+              class="flex flex-wrap gap-3 items-center justify-center"
             >
               <li>
                 <a
-                  class="mr-4 hover:underline md:mr-6 "
-                  href="#"
+                  class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                  href="/me"
                 >
                   About
                 </a>
               </li>
               <li>
                 <a
-                  class="mr-4 hover:underline md:mr-6"
-                  href="#"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  class="mr-4 hover:underline md:mr-6"
-                  href="#"
-                >
-                  Licensing
-                </a>
-              </li>
-              <li>
-                <a
-                  class="hover:underline"
-                  href="#"
+                  class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                  href="/contact"
                 >
                   Contact
                 </a>
@@ -891,184 +515,9 @@ blockquote .emotion-17 {
           Email
         </a>
       </div>
-      <span
-        hidden=""
-        id="__chakra_env"
-      />
-    </div>
-    <div
-      class="chakra-portal"
-    >
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-top"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-      />
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-top-left"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-      />
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-top-right"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-      />
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-bottom-left"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-      />
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-bottom"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-      />
-      <ul
-        aria-live="polite"
-        id="chakra-toast-manager-bottom-right"
-        role="region"
-        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-      />
     </div>
   </body>,
-  "container": .emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-6);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-2);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-5);
-  }
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-5:hover,
-.emotion-5[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-5:focus-visible,
-.emotion-5[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
-  -webkit-margin-start: 8px;
-  margin-inline-start: 8px;
-  -webkit-margin-end: 8px;
-  margin-inline-end: 8px;
-}
-
-.emotion-15 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-15 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-16 {
-  color: gray;
-  font-style: italic;
-}
-
-.emotion-17 {
-  margin-top: 1.25rem;
-  line-height: 1.7;
-}
-
-blockquote .emotion-17 {
-  margin-top: 0px;
-}
-
-.emotion-18 {
-  list-style-type: initial;
-  -webkit-margin-start: 1em;
-  margin-inline-start: 1em;
-  margin-top: var(--yony-space-6);
-}
-
-<div>
+  "container": <div>
     <div
       class="w-full z-10 shadow-sm"
     >
@@ -1108,160 +557,142 @@ blockquote .emotion-17 {
         </div>
       </div>
     </div>
-    <div
-      class="chakra-container emotion-0"
+    <main
+      class="container py-10 space-y-6"
     >
-      <header
-        class="chakra-stack emotion-1"
+      <nav
+        class="flex"
       >
-        <nav
-          aria-label="breadcrumb"
-          class="chakra-breadcrumb emotion-2"
+        <ol
+          class="inline-flex items-center space-x-2"
         >
-          <ol
-            class="chakra-breadcrumb__list emotion-3"
-          >
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/"
-              >
-                Home
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              Home
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/blog"
-              >
-                Blog
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/blog"
             >
-              <a
-                class="chakra-breadcrumb__link emotion-5"
-                href="/blog/categories"
-              >
-                Categories
-              </a>
-              <span
-                class="emotion-6"
-                role="presentation"
-              >
-                <svg
-                  color="gray.500"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </li>
-            <li
-              class="chakra-breadcrumb__list-item emotion-4"
+              Blog
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span
-                aria-current="page"
-                class="chakra-breadcrumb__link emotion-5"
-              >
-                Cracking the Coding Interview
-              </span>
-            </li>
-          </ol>
-        </nav>
-        <h2
-          class="chakra-heading emotion-15"
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/blog/categories"
+            >
+              Categories
+            </a>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            >
+              Cracking the Coding Interview
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="space-y-3"
+      >
+        <h1
+          class="font-bold font-heading text-4xl"
         >
           Category: 
           Cracking the Coding Interview
-        </h2>
+        </h1>
         <p
-          class="chakra-text emotion-16"
+          class="italic text-gray-600"
         >
           Last updated at 
           15 Oct, 2022
         </p>
-      </header>
+      </div>
       <div
         data-testid="mdx-content"
       >
         <p
-          class="emotion-17"
+          class="my-5"
         >
           Cracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.
         </p>
       </div>
       <ul
         aria-label="List of category's posts"
-        class="emotion-18"
+        class="space-y-1 list-disc list-inside"
         role="list"
       >
         <a
-          class="chakra-link emotion-5"
+          class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
           href="/blog/how-to-mock-a-rest-api"
         >
-          <li
-            class="emotion-2"
-          >
+          <li>
             How to mock a rest api
           </li>
         </a>
       </ul>
-    </div>
+    </main>
     <footer
       class="my-6"
     >
@@ -1269,10 +700,10 @@ blockquote .emotion-17 {
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -1285,36 +716,20 @@ blockquote .emotion-17 {
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -1359,10 +774,6 @@ blockquote .emotion-17 {
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

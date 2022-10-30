@@ -14,7 +14,7 @@ function Heading(props: HeadingProps) {
 }
 
 Heading.defaultProps = {
-  size: 'h2',
+  size: 'h5',
 }
 
 export default Heading

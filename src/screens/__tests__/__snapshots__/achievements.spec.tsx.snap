@@ -1,62 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AchievementsScreen renders the achievements screen 1`] = `
-.emotion-0 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-10);
-  padding-bottom: var(--yony-space-10);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: var(--yony-space-6);
-}
-
-.emotion-1>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-2 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-2 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
       class="w-full z-10 shadow-sm"
@@ -98,24 +43,22 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
       </div>
     </div>
     <main
-      class="chakra-container emotion-0"
+      class="container py-10 space-y-6"
     >
-      <header
-        class="chakra-stack emotion-1"
+      <div
+        class="space-y-3"
       >
-        <h2
-          class="chakra-heading emotion-2"
+        <h1
+          class="font-bold font-heading text-4xl"
         >
           Achievements (
           5
           )
-        </h2>
-        <p
-          class="chakra-text emotion-3"
-        >
-          This page contains all the achievements I've achieved along my career.
+        </h1>
+        <p>
+          This page contains all the achievements I've achieved along my career. 
         </p>
-      </header>
+      </div>
       <div
         aria-label="List of achievements"
         class="space-y-3"
@@ -594,10 +537,10 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
         class="container"
       >
         <footer
-          class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
           <span
-            class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            class="text-gray-500"
           >
             © 2022
              
@@ -610,36 +553,20 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
             . All Rights Reserved.
           </span>
           <ul
-            class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6 "
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
               >
                 About
               </a>
             </li>
             <li>
               <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                class="mr-4 hover:underline md:mr-6"
-                href="#"
-              >
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a
-                class="hover:underline"
-                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
               >
                 Contact
               </a>
@@ -684,50 +611,6 @@ exports[`AchievementsScreen renders the achievements screen 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;

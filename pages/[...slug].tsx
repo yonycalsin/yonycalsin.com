@@ -22,7 +22,7 @@ function PagePage(props: PagePageProps) {
     <>
       <Meta title={page.title} notRobots={page.visibility !== 'public'} />
       <MainLayout>
-        <div className="container mb-12">
+        <div className="container pb-10">
           <BodyComponent components={MDXComponents} />
         </div>
       </MainLayout>

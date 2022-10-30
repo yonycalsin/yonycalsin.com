@@ -1,10 +1,8 @@
 import * as React from 'react'
-import { Box } from '@chakra-ui/react'
 import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
 
-import { ExternalAnchor, Icon } from 'components'
-import { Button, Heading } from 'components'
+import { Button, ExternalAnchor, Heading, Icon } from 'components'
 import { SOCIAL_LINKS } from 'utils/constants'
 
 function IntroductionSection() {
@@ -15,9 +13,6 @@ function IntroductionSection() {
         I&rsquo;m a software developer from <b>Perú</b>. I work at{' '}
         <ExternalAnchor href="https://www.linkedin.com/company/making-sense-llc">Making Sense</ExternalAnchor> as a{' '}
         <b>Frontend Developer.</b>
-        <Box as="a" href="">
-          hola
-        </Box>
       </p>
       <div className="flex flex-wrap gap-3">
         <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noreferrer">
