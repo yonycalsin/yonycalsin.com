@@ -1,12 +1,16 @@
 import * as React from 'react'
-import { Badge, Box, Heading, Link, List, ListIcon, ListItem, Text, VStack } from '@chakra-ui/react'
+import clsx from 'clsx'
 import dayjs from 'dayjs'
 import { BsLink } from 'react-icons/bs'
 import { FaNpm } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 
 import type { WorkItemProps } from 'typings/components'
-import { getRandomBadgeColors, normalizeDisplayUrl } from 'utils'
+import { Anchor } from 'components/anchor'
+import { Badge } from 'components/badge'
+import { Heading } from 'components/heading'
+import { Icon } from 'components/icon'
+import { normalizeDisplayUrl } from 'utils'
 import { DATE_FORMATS } from 'utils/constants'
 import { getWorkItemColors, WorkItemIcon } from './components'
 
@@ -28,114 +32,66 @@ function WorkItem(props: WorkItemProps) {
   }, [type])
 
   return (
-    <Box as="li" id={slug} role="listitem">
-      <Box
-        boxShadow="lg"
-        position="absolute"
-        h={{
-          base: '9',
-          lg: '12',
-        }}
-        w={{
-          base: '9',
-          lg: '12',
-        }}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        borderRadius="full"
-        backgroundColor={colors.backgroundColor}
-        p="3"
+    <li id={slug} role="listitem">
+      <div
+        className={clsx(
+          'shadow-lg absolute h-9 lg:h-12 w-9 lg:w-12 flex items-center justify-center rounded-full p-3',
+          colors.backgroundColor,
+        )}
       >
-        <Box
-          position="absolute"
-          right="20"
-          whiteSpace="nowrap"
-          display={{
-            base: 'none',
-            lg: 'block',
-          }}
-        >
-          <Text fontStyle="italic">{dayjs(startedAt).format(DATE_FORMATS.HUMAN_DATE)}</Text>
-        </Box>
+        <div className="absolute whitespace-nowrap hidden lg:block right-20">
+          <p className="italic">{dayjs(startedAt).format(DATE_FORMATS.HUMAN_DATE)}</p>
+        </div>
         <WorkItemIcon projectType={type} />
-      </Box>
-      <VStack
-        spacing="6"
-        ml={{
-          base: '14',
-          lg: '20',
-        }}
-        alignItems="flex-start"
-      >
-        <Heading
-          as={Link}
-          size="md"
-          href={webHref ?? repositoryHref ?? packageHref ?? '#'}
-          target="__blank"
-          display="block"
-        >
-          {title}
-        </Heading>
-        <Text>{description}</Text>
-        <Box>
-          <List
-            spacing={{
-              base: 0,
-              lg: 1,
-            }}
-            fontSize="md"
-          >
+      </div>
+      <div className="space-y-4 ml-14 lg:ml-20">
+        <a href={webHref ?? repositoryHref ?? packageHref ?? '#'} target="__blank" className="block">
+          <Heading size="h4">{title}</Heading>
+        </a>
+        <p>{description}</p>
+        <div>
+          <ul className="space-y-0 lg:space-y-1">
             {webHref && (
-              <ListItem
-                textColor="primary.500"
-                display="block"
-                as={Link}
-                href={webHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ListIcon as={BsLink} color="secondary.900" />
-                Visit {normalizeDisplayUrl(webHref)}
-              </ListItem>
+              <li>
+                <Anchor href={webHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                  <Icon className="text-secondary-900">
+                    <BsLink />
+                  </Icon>
+                  Visit {normalizeDisplayUrl(webHref)}
+                </Anchor>
+              </li>
             )}
             {repositoryHref && (
-              <ListItem
-                textColor="primary.500"
-                display="block"
-                as={Link}
-                href={repositoryHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ListIcon as={FiGithub} color="gray.500" />
-                View source code
-              </ListItem>
+              <li>
+                <Anchor href={repositoryHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                  <Icon className="text-gray-900">
+                    <FiGithub />
+                  </Icon>
+                  View source code
+                </Anchor>
+              </li>
             )}
             {packageHref && (
-              <ListItem
-                textColor="primary.500"
-                display="block"
-                as={Link}
-                href={packageHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ListIcon as={FaNpm} color="error.500" />
-                View package
-              </ListItem>
+              <li>
+                <Anchor href={packageHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                  <Icon className="text-error-900">
+                    <FaNpm />
+                  </Icon>
+                  View package
+                </Anchor>
+              </li>
             )}
-          </List>
-        </Box>
-        <Box flexWrap="wrap" display="flex" gap="2">
+          </ul>
+        </div>
+        <div className="flex gap-2 flex-wrap">
           {tags.map(item => (
-            <Badge key={item} variant="outline" colorScheme={getRandomBadgeColors()}>
+            <Badge key={item} palette="primary">
               {item}
             </Badge>
           ))}
-        </Box>
-      </VStack>
-    </Box>
+        </div>
+      </div>
+    </li>
   )
 }
 

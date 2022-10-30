@@ -4,6 +4,7 @@ interface SectionProps {
 
 interface SectionHeaderProps {
   title: string
+  className?: string
   actionHref?: string
   actionLabel?: string
   actionHrefExternal?: boolean

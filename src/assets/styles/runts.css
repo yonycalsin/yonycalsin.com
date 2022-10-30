@@ -1,3 +1,5 @@
 .runts-playground-layout {
   height: 60vh !important;
+  max-height: 60vh !important;
+  overflow: hidden;
 }

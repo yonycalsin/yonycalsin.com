@@ -1,36 +1,22 @@
 import * as React from 'react'
-import { Link, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 
 import type { RecommendationProps } from 'typings/components'
+import { Anchor } from 'components/anchor'
 
 function Recommendation(props: RecommendationProps) {
   const { recommendation } = props
 
-  const borderColor = useColorModeValue('gray.200', 'gray.700')
-
   return (
-    <VStack
-      as="blockquote"
-      alignItems="flex-start"
-      border="1px"
-      borderColor={borderColor}
-      p="4"
-      borderRadius="md"
-      borderLeft="4px"
-      borderLeftColor="primary.500"
-      role="listitem"
-    >
-      <Text>{recommendation.text}</Text>
-      <Text fontSize="sm" fontStyle="italic" className="mb-2" fontWeight="extrabold">
+    <blockquote className="space-y-3 bg-white p-4 rounded-lg shadow-card border-l-4 border-primary-500" role="listitem">
+      <p>{recommendation.text}</p>
+      <p className="text-sm italic font-extrabold">
         -{' '}
-        <Link href={recommendation.author.linkedin} target="_blank">
+        <Anchor href={recommendation.author.linkedin} target="_blank" className="text-gray-600">
           {recommendation.author.name}
-        </Link>
-      </Text>
-      <Text fontSize="sm" fontWeight="normal" textColor="gray" fontStyle="italic">
-        {recommendation.author.jobTitle}
-      </Text>
-    </VStack>
+        </Anchor>
+      </p>
+      <p className="italic text-xs text-gray-400">{recommendation.author.jobTitle}</p>
+    </blockquote>
   )
 }
 

@@ -1,70 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FloatSocials clicks on link 1`] = `
-.emotion-0 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-0>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.emotion-1 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-1:hover,
-.emotion-1[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1:focus-visible,
-.emotion-1[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
-      class="chakra-stack emotion-0"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-1"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -72,7 +15,7 @@ exports[`FloatSocials clicks on link 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-1"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -80,7 +23,7 @@ exports[`FloatSocials clicks on link 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-1"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -88,7 +31,7 @@ exports[`FloatSocials clicks on link 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-1"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"
@@ -96,116 +39,17 @@ exports[`FloatSocials clicks on link 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;
 
 exports[`FloatSocials renders the float socials 1`] = `
-.emotion-0 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-0>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.emotion-1 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-1:hover,
-.emotion-1[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1:focus-visible,
-.emotion-1[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
 <div>
   <div
-    class="chakra-stack emotion-0"
+    class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
   >
     <a
-      class="chakra-link emotion-1"
+      class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
       href="https://github.com/yonycalsin"
       rel="noreferrer"
       target="_blank"
@@ -213,7 +57,7 @@ exports[`FloatSocials renders the float socials 1`] = `
       Github
     </a>
     <a
-      class="chakra-link emotion-1"
+      class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
       href="https://www.linkedin.com/in/yonycalsin"
       rel="noreferrer"
       target="_blank"
@@ -221,7 +65,7 @@ exports[`FloatSocials renders the float socials 1`] = `
       Linkedin
     </a>
     <a
-      class="chakra-link emotion-1"
+      class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
       href="https://twitter.com/yonycalsin"
       rel="noreferrer"
       target="_blank"
@@ -229,7 +73,7 @@ exports[`FloatSocials renders the float socials 1`] = `
       Twitter
     </a>
     <a
-      class="chakra-link emotion-1"
+      class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
       href="mailto:helloyonycalsin@gmail.com"
       rel="noreferrer"
       target="_blank"
@@ -237,9 +81,5 @@ exports[`FloatSocials renders the float socials 1`] = `
       Email
     </a>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;

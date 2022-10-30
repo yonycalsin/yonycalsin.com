@@ -1,13 +1,12 @@
 import * as React from 'react'
-import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
 
 import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
 import { getPinnedProjectsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
+import { ProjectCard } from 'containers'
 import { LoaderBox, SectionHeader } from 'components'
-import ProjectCard from './project-card'
 
 function PinnedProjects() {
   const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(
@@ -23,29 +22,20 @@ function PinnedProjects() {
   const pinnedProjects = queryResult.data?.data ?? []
 
   return (
-    <Box py="3">
+    <div className="py-3 space-y-3">
       <SectionHeader title="Featured Projects" actionLabel="See more" actionComponent={Link} actionHref="/projects">
-        <Text mt="3">List of some featured projects.</Text>
+        <p className="mt-3">List of some featured projects.</p>
       </SectionHeader>
-      <br />
-      <SimpleGrid
-        columns={{
-          base: 1,
-          md: 2,
-        }}
-        spacing={{
-          base: 3,
-          md: 4,
-        }}
-        py="3"
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
         role="list"
         aria-label="List of featured projects"
       >
         {pinnedProjects.map(pinnedProject => (
           <ProjectCard key={pinnedProject.id} project={pinnedProject} />
         ))}
-      </SimpleGrid>
-    </Box>
+      </div>
+    </div>
   )
 }
 

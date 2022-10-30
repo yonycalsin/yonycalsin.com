@@ -1,41 +1,34 @@
 import * as React from 'react'
-import { Container, Divider } from '@chakra-ui/react'
-import { useFlag } from 'toggled'
 
 import { MainLayout } from 'layouts'
-import { Features } from 'utils/constants'
+import { Divider } from 'components'
+import { ENV } from 'utils/constants'
 import { FeaturedAchievements, FeaturedRecommendations, IntroductionSection, PinnedProjects } from './components'
 
 function HomeScreen() {
-  const hasAchievementsFF = useFlag(Features.ACHIEVEMENTS)
-
-  const hasRecommendationsFF = useFlag(Features.RECOMMENDATIONS)
-
-  const hasPinnedProjectsFF = useFlag(Features.PINNED_PROJECTS)
-
   return (
     <MainLayout>
-      <Container maxW="container.md" as="main" py="10">
+      <div className="container  py-10">
         <IntroductionSection />
-        {hasPinnedProjectsFF && (
+        {ENV.FF_PINNED_PROJECTS && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <PinnedProjects />
           </>
         )}
-        {hasAchievementsFF && (
+        {ENV.FF_ACHIEVEMENTS && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <FeaturedAchievements />
           </>
         )}
-        {hasRecommendationsFF && (
+        {ENV.FF_RECOMMENDATIONS && (
           <>
-            <Divider my="6" />
+            <Divider className="my-6" />
             <FeaturedRecommendations />
           </>
         )}
-      </Container>
+      </div>
     </MainLayout>
   )
 }

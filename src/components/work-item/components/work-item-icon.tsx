@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Icon } from '@chakra-ui/react'
 import { CgTemplate } from 'react-icons/cg'
 import { FaHandsHelping, FaNpm } from 'react-icons/fa'
 import { MdWorkOutline } from 'react-icons/md'
 
 import { ProjectTypeResponsePayload } from 'typings/services'
 import type { WorkItemIconProps } from 'typings/components'
+import { Icon } from 'components/icon'
 
 export function getWorkItemIcon(projectType: WorkItemIconProps['projectType']) {
   switch (projectType) {
@@ -35,36 +35,36 @@ export function getWorkItemColors(projectType: WorkItemIconProps['projectType'])
   switch (projectType) {
     case ProjectTypeResponsePayload.PROJECT: {
       return {
-        fill: 'secondary.900',
-        backgroundColor: 'secondary.100',
+        fill: 'fill-secondary-900',
+        backgroundColor: 'bg-secondary-100',
       }
     }
 
     case ProjectTypeResponsePayload.PACKAGE: {
       return {
-        fill: 'error.900',
-        backgroundColor: 'error.100',
+        fill: 'fill-error-900',
+        backgroundColor: 'bg-error-100',
       }
     }
 
     case ProjectTypeResponsePayload.CONTRIBUTION: {
       return {
-        fill: 'success.900',
-        backgroundColor: 'success.100',
+        fill: 'fill-success-900',
+        backgroundColor: 'bg-success-100',
       }
     }
 
     case ProjectTypeResponsePayload.TEMPLATE: {
       return {
-        fill: 'purple.900',
-        backgroundColor: 'purple.100',
+        fill: 'fill-warning-900',
+        backgroundColor: 'bg-warning-100',
       }
     }
 
     default: {
       return {
-        fill: 'primary.900',
-        backgroundColor: 'primary.100',
+        fill: 'fill-primary-900',
+        backgroundColor: 'bg-primary-100',
       }
     }
   }
@@ -73,7 +73,7 @@ export function getWorkItemColors(projectType: WorkItemIconProps['projectType'])
 export function WorkItemIcon(props: WorkItemIconProps) {
   const { projectType } = props
 
-  const icon = React.useMemo(() => {
+  const Element = React.useMemo(() => {
     return getWorkItemIcon(projectType)
   }, [projectType])
 
@@ -81,5 +81,13 @@ export function WorkItemIcon(props: WorkItemIconProps) {
     return getWorkItemColors(projectType)
   }, [projectType])
 
-  return <Icon title={projectType} fill={colors.fill} w="full" h="full" as={icon} />
+  if (!Element) {
+    return null
+  }
+
+  return (
+    <Icon className={colors.fill}>
+      <Element />
+    </Icon>
+  )
 }

@@ -1,15 +1,9 @@
-import { Box } from '@chakra-ui/react'
-
 import type { LoaderBoxWrapperProps } from 'typings/components'
 
 function LoaderBoxWrapper(props: LoaderBoxWrapperProps) {
   const { children } = props
 
-  return (
-    <Box w="full" h="full" display="flex" alignItems="center" justifyContent="center" minHeight="10">
-      {children}
-    </Box>
-  )
+  return <div className="w-full h-full flex items-center justify-center min-h-[2.5rem]">{children}</div>
 }
 
 export default LoaderBoxWrapper

@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { Container, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import type { BookResponsePayload, ServerListResponse } from 'typings/services'
 import { getAllBooksApi, getReadingBooksApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
-import { LoaderBox } from 'components'
+import { Heading, LoaderBox } from 'components'
 import { BookItem } from './components'
 
 function BooksScreen() {
@@ -30,61 +29,41 @@ function BooksScreen() {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" as="main" py="10">
-        <VStack alignItems="flex-start" spacing="6">
-          <header>
-            <Heading>Books</Heading>
-            <Text mt="3">This page contains the books I have read along of my life.</Text>
-          </header>
-          <div>
-            <Heading size="md">Reading:</Heading>
-            <SimpleGrid
-              mt="3"
-              columns={{
-                base: 2,
-                lg: 3,
-              }}
-              spacing="6"
-              role="list"
-              aria-label="List of reading books"
-            >
-              {readingBooksResponse.data?.data.map((book: BookResponsePayload) => (
-                <BookItem
-                  key={book.id}
-                  name={book.name}
-                  imageSrc={book.images[0].url}
-                  author={book.author}
-                  rating={book.rating}
-                />
-              ))}
-            </SimpleGrid>
+      <main className="container space-y-6 py-10">
+        <header className="space-y-3">
+          <Heading size="h1">Books ({allBooksResponse.data?.data.length})</Heading>
+          <p>This page contains the books I have read along of my life.</p>
+        </header>
+        <div className="space-y-3">
+          <Heading size="h3">Reading:</Heading>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="List of reading books">
+            {readingBooksResponse.data?.data.map((book: BookResponsePayload) => (
+              <BookItem
+                key={book.id}
+                name={book.name}
+                imageSrc={book.images[0].url}
+                author={book.author}
+                rating={book.rating}
+              />
+            ))}
           </div>
+        </div>
 
-          <div>
-            <Heading size="md">All:</Heading>
-            <SimpleGrid
-              mt="3"
-              columns={{
-                base: 2,
-                lg: 3,
-              }}
-              spacing="6"
-              role="list"
-              aria-label="List of all books"
-            >
-              {allBooksResponse.data?.data.map((book: BookResponsePayload) => (
-                <BookItem
-                  key={book.id}
-                  name={book.name}
-                  imageSrc={book.images[0].url}
-                  author={book.author}
-                  rating={book.rating}
-                />
-              ))}
-            </SimpleGrid>
+        <div className="space-y-3">
+          <Heading size="h3">All:</Heading>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="List of all books">
+            {allBooksResponse.data?.data.map((book: BookResponsePayload) => (
+              <BookItem
+                key={book.id}
+                name={book.name}
+                imageSrc={book.images[0].url}
+                author={book.author}
+                rating={book.rating}
+              />
+            ))}
           </div>
-        </VStack>
-      </Container>
+        </div>
+      </main>
     </MainLayout>
   )
 }

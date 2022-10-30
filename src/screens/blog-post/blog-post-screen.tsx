@@ -1,14 +1,12 @@
 import * as React from 'react'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
-import RouterLink from 'next/link'
+import Link from 'next/link'
 import nextBase64 from 'next-base64'
-import { BsChevronCompactRight } from 'react-icons/bs'
 
 import type { BlogPostScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
 import { MainLayout } from 'layouts'
-import { MDXComponents } from 'components'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, MDXComponents } from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function BlogPostScreen(props: BlogPostScreenProps) {
@@ -18,34 +16,28 @@ function BlogPostScreen(props: BlogPostScreenProps) {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" py="6" pb="12">
-        <VStack
-          as="header"
-          alignItems="flex-start"
-          spacing={{
-            base: '2',
-            md: '5',
-          }}
-        >
-          <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
-            <BreadcrumbItem>
-              <RouterLink href="/" passHref legacyBehavior>
-                <BreadcrumbLink>Home</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
-              <RouterLink href="/blog" passHref legacyBehavior>
-                <BreadcrumbLink>Blog</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-          <Heading>{post.title}</Heading>
-          <Text textColor="gray" fontStyle="italic">
+      <div className="container py-10 space-y-6">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link href="/" legacyBehavior passHref>
+              <Anchor>Home</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Link href="/blog" legacyBehavior passHref>
+              <Anchor>Blog</Anchor>
+            </Link>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        <header className="space-y-3">
+          <Heading size="h1">{post.title}</Heading>
+          <p className="italic text-gray-600">
             Last updated at {dayjs(post.updatedAt).format(DATE_FORMATS.HUMAN_DATE)}
-          </Text>
-        </VStack>
+          </p>
+        </header>
         <Component components={MDXComponents} />
-      </Container>
+      </div>
     </MainLayout>
   )
 }

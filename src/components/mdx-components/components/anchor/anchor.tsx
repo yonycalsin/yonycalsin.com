@@ -1,23 +1,30 @@
 import * as React from 'react'
-import { chakra } from '@chakra-ui/react'
+import Link from 'next/link'
 
-// eslint-disable-next-line react/display-name, @typescript-eslint/no-explicit-any
-const Anchor = React.forwardRef((props: any, ref: any) => {
-  const isNotExternal = props.href.startsWith('/')
+import type { AnchorProps } from 'typings/components'
+import { Anchor } from 'components/anchor'
 
-  if (isNotExternal) {
-    return <chakra.a ref={ref} apply="mdx.a" {...props} />
+const MdxAnchor = React.forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) => {
+  const isNotExternal = props.href?.startsWith('/')
+
+  if (isNotExternal && props.href) {
+    return (
+      <Link href={props.href} passHref legacyBehavior>
+        <Anchor ref={ref} {...props} />
+      </Link>
+    )
   }
 
   return (
-    <chakra.a
+    <Anchor
       ref={ref}
-      apply="mdx.a"
-      {...props}
       target={isNotExternal ? undefined : '_blank'}
       rel={isNotExternal ? undefined : 'noopener noreferrer'}
+      {...props}
     />
   )
 })
 
-export default Anchor
+MdxAnchor.displayName = 'MdxAnchor'
+
+export default MdxAnchor

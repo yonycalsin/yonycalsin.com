@@ -1,23 +1,11 @@
-import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Container,
-  Heading,
-  Link,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
-import RouterLink from 'next/link'
-import { BsChevronCompactRight } from 'react-icons/bs'
+import Link from 'next/link'
 
 import type { CategoryResponsePayload, ServerListResponse } from 'typings/services'
 import { getCategoriesApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
-import { LoaderBox } from 'components'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Button, Heading, LoaderBox } from 'components'
 
 function BlogCategoriesScreen() {
   const categoriesResponse = useQuery<ServerListResponse<CategoryResponsePayload>>(
@@ -34,43 +22,38 @@ function BlogCategoriesScreen() {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" py="6" pb="12">
-        <VStack
-          as="header"
-          alignItems="flex-start"
-          spacing={{
-            base: '2',
-            md: '5',
-          }}
-        >
-          <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
-            <BreadcrumbItem>
-              <RouterLink href="/" passHref legacyBehavior>
-                <BreadcrumbLink>Home</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-              <RouterLink href="/blog" passHref legacyBehavior>
-                <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink href="/blog/categories">Categories</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-          <Heading>Blog Categories ({categories.length})</Heading>
-          <Text>This page contains all the categories.</Text>
-        </VStack>
-        <Box display="flex" mt="6" role="list" aria-label="List of categories">
+      <main className="container py-10 space-y-6">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link href="/" legacyBehavior passHref>
+              <Anchor>Home</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Link href="/blog" legacyBehavior passHref>
+              <Anchor>Blog</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Anchor>Categories</Anchor>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        <header className="space-y-3">
+          <Heading size="h1">Blog Categories ({categories.length})</Heading>
+          <p>This page contains all the categories.</p>
+        </header>
+        <div className="flex flex-wrap gap-3 flex-row" role="list" aria-label="List of categories">
           {categories.map(category => (
-            <RouterLink href={`/blog/categories/${category.slug}`} key={category.title} passHref legacyBehavior>
-              <Link border="1px" py="2" px="4" borderRadius="md" color="primary" role="listitem">
+            <Link href={`/blog/categories/${category.slug}`} key={category.title} role="listitem">
+              <Button variant="outline" palette="success">
                 {category.title}
-              </Link>
-            </RouterLink>
+              </Button>
+            </Link>
           ))}
-        </Box>
-      </Container>
+        </div>
+      </main>
     </MainLayout>
   )
 }

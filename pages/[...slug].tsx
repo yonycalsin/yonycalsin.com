@@ -1,6 +1,5 @@
 import type { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import * as React from 'react'
-import { Container } from '@chakra-ui/react'
 import { QueryClient } from '@tanstack/react-query'
 import { map } from 'lodash'
 import nextBase64 from 'next-base64'
@@ -23,9 +22,9 @@ function PagePage(props: PagePageProps) {
     <>
       <Meta title={page.title} notRobots={page.visibility !== 'public'} />
       <MainLayout>
-        <Container maxW="container.md" pb="12">
+        <div className="container pb-10">
           <BodyComponent components={MDXComponents} />
-        </Container>
+        </div>
       </MainLayout>
     </>
   )

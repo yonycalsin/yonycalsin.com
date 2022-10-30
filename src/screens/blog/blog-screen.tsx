@@ -1,24 +1,12 @@
 import * as React from 'react'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Container,
-  Heading,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-  VStack,
-} from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
-import RouterLink from 'next/link'
-import { BsChevronCompactRight } from 'react-icons/bs'
+import Link from 'next/link'
 
 import { getPostsApi } from 'services'
 import { API_ENDPOINTS } from 'services/shared'
 import { MainLayout } from 'layouts'
-import { LoaderBox } from 'components'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, LoaderBox } from 'components'
+import { ListItem, UnorderedList } from 'components'
 
 function BlogScreen() {
   const getPostsResponse = useQuery([API_ENDPOINTS.POSTS], () => getPostsApi(), {
@@ -33,43 +21,37 @@ function BlogScreen() {
 
   return (
     <MainLayout>
-      <Container maxW="container.md" py="6" pb="12">
-        <VStack
-          as="header"
-          alignItems="flex-start"
-          spacing={{
-            base: '2',
-            md: '5',
-          }}
-        >
-          <Breadcrumb spacing="8px" separator={<BsChevronCompactRight color="gray.500" />}>
-            <BreadcrumbItem>
-              <RouterLink href="/" passHref legacyBehavior>
-                <BreadcrumbLink>Home</BreadcrumbLink>
-              </RouterLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-          <Heading>Posts ({posts.length})</Heading>
-          <Text>
+      <div className="container py-10 space-y-6">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <Link href="/" legacyBehavior passHref>
+              <Anchor>Home</Anchor>
+            </Link>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <Anchor>Blog</Anchor>
+          </BreadcrumbItem>
+        </Breadcrumb>
+
+        <div className="space-y-3">
+          <Heading size="h1">Posts ({posts.length})</Heading>
+          <p>
             Tutorials, tricks, personal articles, technical articles, fragments, reference resources and all resources
             related to the software development.
-          </Text>
-        </VStack>
-        <VStack mt="6" alignItems="flex-start">
-          <UnorderedList role="list" aria-label="List of posts">
-            {posts.map(post => (
-              <RouterLink href={`/blog/${post.slug}`} key={post.slug} passHref legacyBehavior>
-                <Link>
-                  <ListItem>{post.title}</ListItem>
-                </Link>
-              </RouterLink>
-            ))}
-          </UnorderedList>
-        </VStack>
-      </Container>
+          </p>
+        </div>
+
+        <UnorderedList role="list" aria-label="List of posts">
+          {posts.map(post => (
+            <Link href={`/blog/${post.slug}`} key={post.slug} passHref legacyBehavior>
+              <Anchor>
+                <ListItem>{post.title}</ListItem>
+              </Anchor>
+            </Link>
+          ))}
+        </UnorderedList>
+      </div>
     </MainLayout>
   )
 }

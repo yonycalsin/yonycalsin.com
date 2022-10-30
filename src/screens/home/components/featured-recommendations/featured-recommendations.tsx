@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Box } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
 
 import type { RecommendationResponsePayload, ServerListResponse } from 'typings/services'
@@ -21,12 +20,10 @@ function FeaturedRecommendations() {
   const recommendations = queryResult.data?.data ?? []
 
   return (
-    <Box py="3">
-      <SectionHeader title="Recommendations" />
-      {/* TODO: use a padding or margin instead of this */}
-      <Box py="3" />
+    <div className="py-3">
+      <SectionHeader title="Recommendations" className="mb-6" />
       <Recommendations recommendations={recommendations} />
-    </Box>
+    </div>
   )
 }
 

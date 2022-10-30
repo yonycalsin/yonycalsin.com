@@ -44,9 +44,18 @@ jobs:
           REST_API_PUBLIC_KEY: ${{ secrets.ENV_REST_API_PUBLIC_KEY }}
           REST_API_MOCKING: true
           DEBUG: api:*
-          FF_BOOKS: false
+          FF_RESUME: false
           FF_BLOG: false
+          FF_OSS_PROJECTS: false
+          FF_BOOKS: false
           FF_PROJECTS: false
+          FF_ACHIEVEMENTS: false
+          FF_RECOMMENDATIONS: false
+          FF_PINNED_PROJECTS: false
+          FF_SNIPPETS: false
+          FF_USES: false
+          FF_FAQ: false
+          FF_EXERCISES: false
 
       - name: Unit Testing
         run: pnpm run test:unit:ci

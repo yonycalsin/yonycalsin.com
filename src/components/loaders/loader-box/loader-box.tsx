@@ -1,11 +1,10 @@
-import { Spinner } from '@chakra-ui/react'
-
+import { Spinner } from 'components/spinner'
 import LoaderBoxWrapper from './loader-box-wrapper'
 
 function LoaderBox() {
   return (
     <LoaderBoxWrapper>
-      <Spinner size="lg" role="progressbar" />
+      <Spinner />
     </LoaderBoxWrapper>
   )
 }

@@ -1,31 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ExternalAnchor renders an external anchor 1`] = `
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: primary.500;
-}
-
-.emotion-1 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  line-height: 1em;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  color: gray.700;
-}
-
 <body>
   <div>
     <span>
       <a
-        class="chakra-link emotion-0"
-        d="inline-flex"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline inline-flex items-center"
         href="https://domain.com"
         rel="noreferrer"
         role="link"
@@ -34,11 +14,10 @@ exports[`ExternalAnchor renders an external anchor 1`] = `
         Go to home
       </a>
       <svg
-        class="chakra-icon emotion-1"
-        d="inline"
+        class="w-4 h-4 inline-block leading-4 shrink-0 align-top"
         fill="none"
-        focusable="false"
         height="1em"
+        role="icon"
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"

@@ -1,357 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogScreen renders the blog screen 1`] = `
-.emotion-0 {
-  width: var(--yony-sizes-full);
-  top: 0px;
-  z-index: var(--yony-zIndices-banner);
-  left: 0px;
-  box-shadow: var(--yony-shadows-xs);
-}
-
-.chakra-ui-dark .emotion-0:not([data-theme]),
-[data-theme=dark] .emotion-0:not([data-theme]),
-.emotion-0[data-theme=dark] {
-  box-shadow: var(--yony-shadows-lg);
-}
-
-.emotion-1 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-5);
-  padding-bottom: var(--yony-space-5);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-1 {
-    padding-top: var(--yony-space-8);
-    padding-bottom: var(--yony-space-8);
-  }
-}
-
-.emotion-2 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-  display: contents;
-}
-
-.emotion-2:hover,
-.emotion-2[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-2:focus-visible,
-.emotion-2[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-3>*:not(style)~*:not(style) {
-  margin-top: 0px;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: var(--yony-space-4);
-  margin-inline-start: var(--yony-space-4);
-}
-
-.emotion-4 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: var(--yony-colors-primary-500);
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-4:hover,
-.emotion-4[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-4:focus-visible,
-.emotion-4[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-6 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-  padding-top: var(--yony-space-6);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-7>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-2);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-7>*:not(style)~*:not(style) {
-    margin-top: var(--yony-space-5);
-  }
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-11 {
-  transition-property: var(--yony-transition-property-common);
-  transition-duration: var(--yony-transition-duration-fast);
-  transition-timing-function: var(--yony-transition-easing-ease-out);
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  color: inherit;
-}
-
-.emotion-11:hover,
-.emotion-11[data-hover] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-11:focus-visible,
-.emotion-11[data-focus-visible] {
-  box-shadow: var(--yony-shadows-outline);
-}
-
-.emotion-12 {
-  -webkit-margin-start: 8px;
-  margin-inline-start: 8px;
-  -webkit-margin-end: 8px;
-  margin-inline-end: 8px;
-}
-
-.emotion-15 {
-  font-family: var(--yony-fonts-heading);
-  font-weight: var(--yony-fontWeights-bold);
-  font-size: var(--yony-fontSizes-3xl);
-  line-height: 1.33;
-}
-
-@media screen and (min-width: 48em) {
-  .emotion-15 {
-    font-size: var(--yony-fontSizes-4xl);
-    line-height: 1.2;
-  }
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: var(--yony-space-6);
-}
-
-.emotion-17>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-18 {
-  list-style-type: initial;
-  -webkit-margin-start: 1em;
-  margin-inline-start: 1em;
-}
-
-.emotion-21 {
-  padding-top: var(--yony-space-12);
-  padding-bottom: var(--yony-space-12);
-}
-
-.emotion-22 {
-  width: 100%;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
-  -webkit-margin-end: auto;
-  margin-inline-end: auto;
-  max-width: var(--yony-sizes-container-md);
-  -webkit-padding-start: var(--yony-space-4);
-  padding-inline-start: var(--yony-space-4);
-  -webkit-padding-end: var(--yony-space-4);
-  padding-inline-end: var(--yony-space-4);
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-23>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-.emotion-24 {
-  font-weight: var(--yony-fontWeights-bold);
-}
-
-.emotion-25 {
-  color: var(--yony-colors-gray-600);
-}
-
-.emotion-26 {
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: var(--yony-space-8);
-  left: var(--yony-space-8);
-}
-
-.emotion-26>*:not(style)~*:not(style) {
-  margin-top: var(--yony-space-5);
-  -webkit-margin-end: 0px;
-  margin-inline-end: 0px;
-  margin-bottom: 0px;
-  -webkit-margin-start: 0px;
-  margin-inline-start: 0px;
-}
-
-@media screen and (min-width: 62em) {
-  .emotion-26 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-<body
-  class="chakra-ui-dark"
->
+<body>
   <div>
     <div
-      class="emotion-0"
+      class="w-full z-10 shadow-sm"
     >
       <div
-        class="chakra-container emotion-1"
+        class="container py-5 md:py-6 flex justify-between items-center"
       >
         <a
-          class="chakra-link emotion-2"
           href="/"
         >
           <img
@@ -367,16 +25,16 @@ exports[`BlogScreen renders the blog screen 1`] = `
           />
         </a>
         <div
-          class="chakra-stack emotion-3"
+          class="space-x-4"
         >
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/projects"
           >
             Projects
           </a>
           <a
-            class="chakra-link emotion-4"
+            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
             href="/me"
           >
             About Me
@@ -384,124 +42,129 @@ exports[`BlogScreen renders the blog screen 1`] = `
         </div>
       </div>
     </div>
-    <div>
-      <div
-        class="chakra-container emotion-6"
+    <div
+      class="container py-10 space-y-6"
+    >
+      <nav
+        class="flex"
       >
-        <header
-          class="chakra-stack emotion-7"
+        <ol
+          class="inline-flex items-center space-x-2"
         >
-          <nav
-            aria-label="breadcrumb"
-            class="chakra-breadcrumb emotion-8"
-          >
-            <ol
-              class="chakra-breadcrumb__list emotion-9"
-            >
-              <li
-                class="chakra-breadcrumb__list-item emotion-10"
-              >
-                <a
-                  class="chakra-breadcrumb__link emotion-11"
-                  href="/"
-                >
-                  Home
-                </a>
-                <span
-                  class="emotion-12"
-                  role="presentation"
-                >
-                  <svg
-                    color="gray.500"
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </li>
-              <li
-                class="chakra-breadcrumb__list-item emotion-10"
-              >
-                <span
-                  aria-current="page"
-                  class="chakra-breadcrumb__link emotion-11"
-                >
-                  Blog
-                </span>
-              </li>
-            </ol>
-          </nav>
-          <h2
-            class="chakra-heading emotion-15"
-          >
-            Posts (
-            1
-            )
-          </h2>
-          <p
-            class="chakra-text emotion-8"
-          >
-            Tutorials, tricks, personal articles, technical articles, fragments, reference resources and all resources related to the software development.
-          </p>
-        </header>
-        <div
-          class="chakra-stack emotion-17"
-        >
-          <ul
-            aria-label="List of posts"
-            class="emotion-18"
-            role="list"
-          >
+          <li>
             <a
-              class="chakra-link emotion-11"
-              href="/blog/how-to-mock-a-rest-api"
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              href="/"
             >
-              <li
-                class="emotion-8"
-              >
-                How to mock a rest api
-              </li>
+              Home
             </a>
-          </ul>
-        </div>
+          </li>
+          <span>
+            <svg
+              class="w-4 h-4 inline-block leading-4 shrink-0"
+              fill="currentColor"
+              height="1em"
+              role="icon"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <li>
+            <a
+              class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+            >
+              Blog
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="space-y-3"
+      >
+        <h1
+          class="font-bold font-heading text-4xl"
+        >
+          Posts (
+          1
+          )
+        </h1>
+        <p>
+          Tutorials, tricks, personal articles, technical articles, fragments, reference resources and all resources related to the software development.
+        </p>
       </div>
+      <ul
+        aria-label="List of posts"
+        class="space-y-1 list-disc list-inside"
+        role="list"
+      >
+        <a
+          class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+          href="/blog/how-to-mock-a-rest-api"
+        >
+          <li>
+            How to mock a rest api
+          </li>
+        </a>
+      </ul>
     </div>
     <footer
-      class="emotion-21"
+      class="my-6"
     >
       <div
-        class="chakra-container emotion-22"
+        class="container"
       >
-        <div
-          class="chakra-stack emotion-23"
+        <footer
+          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
         >
-          <p
-            class="chakra-text emotion-24"
+          <span
+            class="text-gray-500"
           >
-            Created By Yony Calsin
-          </p>
-          <p
-            class="chakra-text emotion-25"
+            © 2022
+             
+            <a
+              class="hover:underline"
+              href="https://yonycalsin.com"
+            >
+              Yony Calsin™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap gap-3 items-center justify-center"
           >
-            Built with Next.js, MDX, Chakra-Ui and Vercel
-          </p>
-        </div>
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/me"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                href="/contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </footer>
     <div
-      class="chakra-stack emotion-26"
+      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
     >
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://github.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -509,7 +172,7 @@ exports[`BlogScreen renders the blog screen 1`] = `
         Github
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://www.linkedin.com/in/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -517,7 +180,7 @@ exports[`BlogScreen renders the blog screen 1`] = `
         Linkedin
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="https://twitter.com/yonycalsin"
         rel="noreferrer"
         target="_blank"
@@ -525,7 +188,7 @@ exports[`BlogScreen renders the blog screen 1`] = `
         Twitter
       </a>
       <a
-        class="chakra-link emotion-11"
+        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
         href="mailto:helloyonycalsin@gmail.com"
         rel="noreferrer"
         target="_blank"
@@ -533,50 +196,6 @@ exports[`BlogScreen renders the blog screen 1`] = `
         Email
       </a>
     </div>
-    <span
-      hidden=""
-      id="__chakra_env"
-    />
-  </div>
-  <div
-    class="chakra-portal"
-  >
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-top-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-left"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;"
-    />
-    <ul
-      aria-live="polite"
-      id="chakra-toast-manager-bottom-right"
-      role="region"
-      style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;"
-    />
   </div>
 </body>
 `;

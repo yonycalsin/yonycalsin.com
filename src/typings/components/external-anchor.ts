@@ -1,8 +1,5 @@
-import type * as React from 'react'
-import type { LinkProps } from '@chakra-ui/react'
+import type { AnchorProps } from './anchor'
 
-interface ExternalAnchorProps extends LinkProps {
-  children: React.ReactNode
-}
+type ExternalAnchorProps = AnchorProps
 
 export type { ExternalAnchorProps }

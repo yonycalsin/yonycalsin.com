@@ -1,27 +1,28 @@
 import * as React from 'react'
-import { Icon, Link, useColorModeValue as mode } from '@chakra-ui/react'
+import clsx from 'clsx'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 import type { ExternalAnchorProps } from 'typings/components'
+import { Anchor } from 'components/anchor'
+import { Icon } from 'components/icon'
 
 function ExternalAnchor(props: ExternalAnchorProps) {
-  const { children, ...restProps } = props
+  const { children, className, ...restProps } = props
 
   return (
     <span>
-      <Link
+      <Anchor
         {...restProps}
-        alignItems="center"
-        d="inline-flex"
-        color={mode('primary.500', 'primary.300')}
-        isExternal
+        className={clsx('inline-flex items-center', className)}
         target="_blank"
         rel="noreferrer"
         role="link"
       >
         {children}
-      </Link>
-      <Icon as={FiArrowUpRight} d="inline" color={mode('gray.700', 'white')} />
+      </Anchor>
+      <Icon className="align-top">
+        <FiArrowUpRight />
+      </Icon>
     </span>
   )
 }
