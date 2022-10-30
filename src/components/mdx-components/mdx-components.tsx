@@ -1,3 +1,5 @@
+'use client'
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import 'react-medium-image-zoom/dist/styles.css'
 
