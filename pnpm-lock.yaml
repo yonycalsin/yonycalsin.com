@@ -8,6 +8,7 @@ patchedDependencies:
 specifiers:
   '@babel/core': 7.19.6
   '@dotenv-cloak/cli': 2.0.0
+  '@next/font': 13.0.0
   '@runts/react': 2.2.0
   '@storybook/addon-actions': 6.5.13
   '@storybook/addon-essentials': 6.5.13
@@ -87,6 +88,7 @@ specifiers:
   webpack: 5.74.0
 
 dependencies:
+  '@next/font': 13.0.0
   '@runts/react': 2.2.0_biqbaboplfbrettd7655fr4n2y
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.1
   '@tanstack/react-query': 4.13.0_biqbaboplfbrettd7655fr4n2y
@@ -2475,6 +2477,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.0:
+    resolution: {integrity: sha512-r5dYkgMD1Qmoip1OhJSrqCSQdZ4eshkQPfe1hhQiKbZoXIbViJksPRLC6GVOgEQE6W4+CXuAXR6IYBy5M6Rixg==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.0:
     resolution: {integrity: sha512-+DUQkYF93gxFjWY+CYWE1QDX6gTgnUiWf+W4UqZjM1Jcef8U97fS6xYh+i+8rH4MM0AXHm7OSakvfOMzmjU6VA==}

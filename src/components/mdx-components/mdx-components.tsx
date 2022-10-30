@@ -1,30 +1,17 @@
-'use client'
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import 'react-medium-image-zoom/dist/styles.css'
-
 import * as React from 'react'
 import { isPlainObject } from 'lodash'
 import Image, { ImageProps } from 'next/image'
-import Zoom from 'react-medium-image-zoom'
 
 import { Blockquote } from 'components/blockquote'
 import { Divider } from 'components/divider'
 import { HeadingLinked } from 'components/heading'
 import { ListItem, UnorderedList } from 'components/list'
-import { MdxAnchor } from './components'
+import { MdxAnchor } from './components/anchor'
+import ZoomImage from './components/zoom-image'
 
 function RoundedImage(props: ImageProps) {
   return <Image className="rounded-lg" {...props} alt={props.alt} />
-}
-
-function ZoomImage(props: any) {
-  return (
-    <Zoom>
-      {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      <img {...props} />
-    </Zoom>
-  )
 }
 
 const MDXComponents = {
@@ -37,7 +24,6 @@ const MDXComponents = {
   h4: (props: any) => <HeadingLinked size="h4" className="my-6" {...props} />,
   h5: (props: any) => <HeadingLinked size="h5" className="my-6" {...props} />,
   h6: (props: any) => <HeadingLinked size="h6" className="my-6" {...props} />,
-
   /**
    * Other
    */
@@ -48,7 +34,6 @@ const MDXComponents = {
    * Link
    */
   a: MdxAnchor,
-
   /**
    * Typography
    */
@@ -58,21 +43,18 @@ const MDXComponents = {
     if (isPlainObject(props.children) && !!props.children?.props?.src) {
       return props.children
     }
-
     return <p className="my-5" {...props} />
   },
   ul: (props: any) => <UnorderedList className="my-6" {...props} />,
   ol: (props: any) => <UnorderedList date-type="ol" className="my-6" {...props} />,
   li: (props: any) => <ListItem {...props} />,
   blockquote: (props: any) => <Blockquote className="my-6" {...props} />,
-
   /**
    * Table
    */
-  //   table: Table,
-  //   th: TableHead,
-  //   td: TableCell,
-
+  // table: Table,
+  // th: TableHead,
+  // td: TableCell,
   /**
    * Image
    */

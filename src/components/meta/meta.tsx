@@ -39,7 +39,6 @@ function Meta(props: MetaProps) {
 
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
-      <link rel="icon" href={socialBannerImage} type="image/png" />
       <meta property="og:url" content={websiteUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={defaultTitle} />
