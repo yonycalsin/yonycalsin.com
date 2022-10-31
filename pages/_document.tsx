@@ -5,6 +5,7 @@ function MyDocument() {
   return (
     <Html>
       <Head>
+        <link rel="icon" href="/static/brand/images/isotipo.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         {/* eslint-disable-next-line @next/next/google-font-display */}
