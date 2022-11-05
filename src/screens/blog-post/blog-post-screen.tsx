@@ -1,12 +1,17 @@
+'use client'
+
 import * as React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
 import nextBase64 from 'next-base64'
 
 import type { BlogPostScreenProps } from 'typings/screens'
-import { useMDXComponent } from 'hooks'
+import useMDXComponent from 'hooks/use-mdx-component'
 import { MainLayout } from 'layouts'
-import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, MDXComponents } from 'components'
+import { Anchor } from 'components/anchor'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator } from 'components/breadcrumb'
+import { Heading } from 'components/heading'
+import { MDXComponents } from 'components/mdx-components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function BlogPostScreen(props: BlogPostScreenProps) {
