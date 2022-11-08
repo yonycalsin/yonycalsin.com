@@ -15,7 +15,7 @@ export async function generateStaticParams(): Promise<BlogCategoryParams[]> {
   }))
 }
 
-function BlogCategoryPage(props: BlogCategoryPageProps) {
+export default function BlogCategoryPage(props: BlogCategoryPageProps) {
   const { params } = props
 
   const categorySlug = params.slug
@@ -36,5 +36,3 @@ function BlogCategoryPage(props: BlogCategoryPageProps) {
 
   return <BlogCategoryScreen category={category} posts={postsResponse.data} />
 }
-
-export default BlogCategoryPage

@@ -1,9 +1,9 @@
-interface BlogPosParams {
+interface BlogPostParams {
   slug: string
 }
 
 interface BlogPostPageProps {
-  params: BlogPosParams
+  params: BlogPostParams
 }
 
-export type { BlogPosParams, BlogPostPageProps }
+export type { BlogPostPageProps, BlogPostParams }

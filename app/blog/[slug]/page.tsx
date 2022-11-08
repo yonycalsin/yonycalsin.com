@@ -3,13 +3,13 @@
 import * as React from 'react'
 import { notFound } from 'next/navigation'
 
-import type { BlogPosParams, BlogPostPageProps } from 'typings/app'
+import type { BlogPostPageProps, BlogPostParams } from 'typings/app'
 import { getPostApi, getPostsApi } from 'services'
 import BlogPostScreen from 'screens/blog-post'
 
 export const dynamicParams = false
 
-export async function generateStaticParams(): Promise<BlogPosParams[]> {
+export async function generateStaticParams(): Promise<BlogPostParams[]> {
   const postsResponse = await getPostsApi()
 
   const posts = postsResponse.data
@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<BlogPosParams[]> {
   }))
 }
 
-function BlogPostPage(props: BlogPostPageProps) {
+export default function BlogPostPage(props: BlogPostPageProps) {
   const { params } = props
 
   const postSlug = params.slug
@@ -34,5 +34,3 @@ function BlogPostPage(props: BlogPostPageProps) {
 
   return <BlogPostScreen post={post} />
 }
-
-export default BlogPostPage
