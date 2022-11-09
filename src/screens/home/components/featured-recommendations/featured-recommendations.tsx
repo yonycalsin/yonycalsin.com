@@ -1,23 +1,13 @@
 import * as React from 'react'
-import { useQuery } from '@tanstack/react-query'
 
-import type { RecommendationResponsePayload, ServerListResponse } from 'typings/services'
 import { getFeaturedRecommendationsApi } from 'services'
-import { API_ENDPOINTS } from 'services/shared'
-import { LoaderBox, Recommendations, SectionHeader } from 'components'
+import { Recommendations } from 'components/recommendations'
+import { SectionHeader } from 'components/section'
 
 function FeaturedRecommendations() {
-  const queryResult = useQuery<ServerListResponse<RecommendationResponsePayload>>(
-    [API_ENDPOINTS.FEATURED_RECOMMENDATIONS],
-    () => getFeaturedRecommendationsApi(),
-    { staleTime: Infinity },
-  )
+  const response = React.use(getFeaturedRecommendationsApi())
 
-  if (queryResult.isLoading) {
-    return <LoaderBox />
-  }
-
-  const recommendations = queryResult.data?.data ?? []
+  const recommendations = response.data ?? []
 
   return (
     <div className="py-3">

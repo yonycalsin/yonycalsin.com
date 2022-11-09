@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import { RuntsPlayground } from '@runts/react'
 import { useDefineLightPlaygroundThemes } from '@runts/react'
@@ -7,7 +9,6 @@ import nextBase64 from 'next-base64'
 
 import type { ExerciseScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
-import { Navbar } from 'containers'
 import { Badge, Heading, MDXComponents } from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
@@ -22,7 +23,6 @@ function ExerciseScreen(props: ExerciseScreenProps) {
 
   return (
     <>
-      <Navbar />
       <div className="container py-10 space-y-6">
         <div className="space-y-3">
           <Heading size="h1">{exercise.name}</Heading>

@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<BlogPostParams[]> {
   }))
 }
 
-export default function BlogPostPage(props: BlogPostPageProps) {
+function BlogPostPage(props: BlogPostPageProps) {
   const { params } = props
 
   const postSlug = params.slug
@@ -34,3 +34,5 @@ export default function BlogPostPage(props: BlogPostPageProps) {
 
   return <BlogPostScreen post={post} />
 }
+
+export default BlogPostPage

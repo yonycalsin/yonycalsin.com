@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import type { SectionHeaderProps } from 'typings/components'
-import { Heading } from 'components'
+import { Heading } from 'components/heading'
 
 function SectionHeader(props: SectionHeaderProps) {
   const {
