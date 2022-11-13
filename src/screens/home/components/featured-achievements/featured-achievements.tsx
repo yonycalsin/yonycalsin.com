@@ -1,8 +1,7 @@
 import * as React from 'react'
 
 import { getFeaturedAchievementsApi } from 'services'
-import { Achievements } from 'components/achievements'
-import { SectionHeader } from 'components/section'
+import { Achievements, SectionHeader } from 'components'
 
 function FeaturedAchievements() {
   const response = React.use(getFeaturedAchievementsApi())

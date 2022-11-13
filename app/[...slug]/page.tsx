@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import type { CustomPagePageProps, CustomPageParams } from 'typings/app'
 import { getAllPagesApi, getPageApi } from 'services'
 import CustomPageScreen from 'screens/custom-page'
+import { PageTransition } from 'components'
 
 export const dynamicParams = true
 
@@ -30,5 +31,9 @@ export default function CustomPagePage(props: CustomPagePageProps) {
     return notFound()
   }
 
-  return <CustomPageScreen customPage={customPage} />
+  return (
+    <PageTransition>
+      <CustomPageScreen customPage={customPage} />
+    </PageTransition>
+  )
 }

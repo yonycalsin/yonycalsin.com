@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import type { BlogPostPageProps, BlogPostParams } from 'typings/app'
 import { getPostApi, getPostsApi } from 'services'
 import BlogPostScreen from 'screens/blog-post'
+import { PageTransition } from 'components'
 
 export const dynamicParams = false
 
@@ -30,7 +31,11 @@ function BlogPostPage(props: BlogPostPageProps) {
     return notFound()
   }
 
-  return <BlogPostScreen post={post} />
+  return (
+    <PageTransition>
+      <BlogPostScreen post={post} />
+    </PageTransition>
+  )
 }
 
 export default BlogPostPage

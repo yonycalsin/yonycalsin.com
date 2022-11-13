@@ -2,8 +2,7 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import type { ProjectCardProps } from 'typings/screens'
-import { Heading } from 'components/heading'
-import { Icon } from 'components/icon'
+import { Heading, Icon } from 'components'
 import { getWorkItemColors, getWorkItemIcon } from 'components/work-item/components'
 
 function ProjectCard(props: ProjectCardProps) {

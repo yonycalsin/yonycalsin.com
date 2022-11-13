@@ -3,7 +3,7 @@ import isotipo from 'assets/brand/images/isotipo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Anchor } from 'components/anchor'
+import { Anchor } from 'components'
 import { ENV } from 'utils/constants'
 
 function Navbar() {

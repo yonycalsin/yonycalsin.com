@@ -2,10 +2,7 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import { getCategoriesApi } from 'services'
-import { Anchor } from 'components/anchor'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator } from 'components/breadcrumb'
-import { Button } from 'components/button'
-import { Heading } from 'components/heading'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Button, Heading } from 'components'
 
 function BlogCategoriesScreen() {
   const categoriesResponse = React.use(getCategoriesApi())

@@ -1,7 +1,12 @@
 import AchievementsScreen from 'screens/achievements'
+import { PageTransition } from 'components'
 
 function AchievementsPage() {
-  return <AchievementsScreen />
+  return (
+    <PageTransition>
+      <AchievementsScreen />
+    </PageTransition>
+  )
 }
 
 export default AchievementsPage

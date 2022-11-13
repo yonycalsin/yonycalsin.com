@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import type { CustomPageHeadProps } from 'typings/app'
 import { getPageApi } from 'services'
-import { Meta } from 'components/meta'
+import { Meta } from 'components'
 
 function Head(props: CustomPageHeadProps) {
   const { params } = props

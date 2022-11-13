@@ -6,11 +6,16 @@ import nextBase64 from 'next-base64'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
-import { Anchor } from 'components/anchor'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator } from 'components/breadcrumb'
-import { Heading } from 'components/heading'
-import { ListItem, UnorderedList } from 'components/list'
-import { MDXComponents } from 'components/mdx-components'
+import {
+  Anchor,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+  Heading,
+  ListItem,
+  MDXComponents,
+  UnorderedList,
+} from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function BlogCategoryScreen(props: BlogCategoryScreenProps) {

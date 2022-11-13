@@ -4,7 +4,6 @@ import * as React from 'react'
 
 // Used for __tests__/testing-library.js
 // Learn more: https://github.com/testing-library/jest-dom
-import type { PageTransitionProps } from 'typings/components'
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
 import dayjs from 'dayjs'
@@ -63,11 +62,6 @@ jest.mock('react', () => {
  */
 jest.mock('react-medium-image-zoom', () => ({
   default: () => React.createElement('div'),
-}))
-
-jest.mock('components/page-transition', () => ({
-  // eslint-disable-next-line react/no-children-prop
-  PageTransition: (props: PageTransitionProps) => React.createElement('div', { children: props.children }),
 }))
 
 /**

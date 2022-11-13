@@ -1,8 +1,7 @@
 import * as React from 'react'
 
 import { getFeaturedRecommendationsApi } from 'services'
-import { Recommendations } from 'components/recommendations'
-import { SectionHeader } from 'components/section'
+import { Recommendations, SectionHeader } from 'components'
 
 function FeaturedRecommendations() {
   const response = React.use(getFeaturedRecommendationsApi())

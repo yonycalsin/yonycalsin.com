@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import type { BlogCategoryPageProps, BlogCategoryParams } from 'typings/app'
 import { getCategoriesApi, getCategoryApi, getPostsApi } from 'services'
 import BlogCategoryScreen from 'screens/blog-category'
+import { PageTransition } from 'components'
 
 export const dynamicParams = false
 
@@ -34,5 +35,9 @@ export default function BlogCategoryPage(props: BlogCategoryPageProps) {
     return notFound()
   }
 
-  return <BlogCategoryScreen category={category} posts={postsResponse.data} />
+  return (
+    <PageTransition>
+      <BlogCategoryScreen category={category} posts={postsResponse.data} />
+    </PageTransition>
+  )
 }
