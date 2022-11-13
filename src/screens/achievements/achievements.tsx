@@ -1,8 +1,7 @@
 import * as React from 'react'
 
 import { getAllAchievementsApi } from 'services'
-import { Achievements } from 'components/achievements'
-import { Heading } from 'components/heading'
+import { Achievements, Heading } from 'components'
 
 function AchievementsScreen() {
   const response = React.use(getAllAchievementsApi())

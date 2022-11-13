@@ -2,10 +2,7 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import { getPostsApi } from 'services'
-import { Anchor } from 'components/anchor'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator } from 'components/breadcrumb'
-import { Heading } from 'components/heading'
-import { ListItem, UnorderedList } from 'components/list'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, ListItem, UnorderedList } from 'components'
 
 function BlogScreen() {
   const postsResponse = React.use(getPostsApi())

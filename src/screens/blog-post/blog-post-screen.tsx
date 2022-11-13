@@ -7,10 +7,7 @@ import nextBase64 from 'next-base64'
 
 import type { BlogPostScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
-import { Anchor } from 'components/anchor'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator } from 'components/breadcrumb'
-import { Heading } from 'components/heading'
-import { MDXComponents } from 'components/mdx-components'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, MDXComponents } from 'components'
 import { DATE_FORMATS } from 'utils/constants'
 
 function BlogPostScreen(props: BlogPostScreenProps) {

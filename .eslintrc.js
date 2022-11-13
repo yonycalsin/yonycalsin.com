@@ -6,6 +6,7 @@ module.exports = {
     'next/core-web-vitals',
     'prettier',
     'plugin:storybook/recommended',
+    'plugin:import/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -40,6 +41,8 @@ module.exports = {
       },
     ],
     '@next/next/no-head-element': 'off',
+    'import/no-named-as-default-member': 'off',
+    'import/named': 'off',
   },
   overrides: [
     {

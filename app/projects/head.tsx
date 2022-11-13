@@ -1,4 +1,4 @@
-import { Meta } from 'components/meta'
+import { Meta } from 'components'
 
 function ProjectsHead() {
   return <Meta title="Projects" />

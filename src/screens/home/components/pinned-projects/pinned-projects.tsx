@@ -2,8 +2,8 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import { getPinnedProjectsApi } from 'services'
-import { ProjectCard } from 'containers/projects'
-import { SectionHeader } from 'components/section'
+import { ProjectCard } from 'containers'
+import { SectionHeader } from 'components'
 
 function PinnedProjects() {
   const response = React.use(getPinnedProjectsApi())

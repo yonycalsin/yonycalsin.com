@@ -1,5 +1,5 @@
 import NotFoundScreen from 'screens/not-found'
-import { Meta } from 'components/meta'
+import { Meta } from 'components'
 
 function NotFoundPage() {
   return (

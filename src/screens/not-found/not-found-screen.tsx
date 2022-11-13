@@ -1,8 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 
-import { Anchor } from 'components/anchor'
-import { Heading } from 'components/heading'
+import { Anchor, Heading } from 'components'
 
 function NotFoundScreen() {
   return (

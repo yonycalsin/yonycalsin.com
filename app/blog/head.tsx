@@ -1,4 +1,4 @@
-import { Meta } from 'components/meta'
+import { Meta } from 'components'
 
 function BlogHead() {
   return <Meta title="Blog" notRobots={true} />

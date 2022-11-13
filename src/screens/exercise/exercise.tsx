@@ -1,8 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { RuntsPlayground } from '@runts/react'
-import { useDefineLightPlaygroundThemes } from '@runts/react'
+import { RuntsPlayground, useDefineLightPlaygroundThemes } from '@runts/react'
 import vitesseDark from '@runts/react/themes/vitesse-dark.json'
 import dayjs from 'dayjs'
 import nextBase64 from 'next-base64'

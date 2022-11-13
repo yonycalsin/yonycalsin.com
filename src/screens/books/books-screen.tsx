@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { getAllBooksApi, getReadingBooksApi } from 'services'
-import { Heading } from 'components/heading'
+import { Heading } from 'components'
 import { BookItem } from './components'
 
 function BooksScreen() {

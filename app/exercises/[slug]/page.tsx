@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import type { ExercisePageParams, ExercisePageProps } from 'typings/app'
 import { getAllExercisesApi, getExerciseApi } from 'services'
 import ExerciseScreen from 'screens/exercise'
+import { PageTransition } from 'components'
 
 export const dynamicParams = false
 
@@ -32,7 +33,11 @@ function ExercisePage(props: ExercisePageProps) {
     return notFound()
   }
 
-  return <ExerciseScreen exercise={exercise} />
+  return (
+    <PageTransition>
+      <ExerciseScreen exercise={exercise} />
+    </PageTransition>
+  )
 }
 
 export default ExercisePage

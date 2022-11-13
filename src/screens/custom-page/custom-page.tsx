@@ -4,7 +4,7 @@ import nextBase64 from 'next-base64'
 
 import type { CustomPageScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
-import { MDXComponents } from 'components/mdx-components'
+import { MDXComponents } from 'components'
 
 function CustomPageScreen(props: CustomPageScreenProps) {
   const { customPage } = props

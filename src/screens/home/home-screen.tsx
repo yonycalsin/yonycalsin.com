@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Divider } from 'components/divider'
+import { Divider } from 'components'
 import { ENV } from 'utils/constants'
 import { FeaturedAchievements, FeaturedRecommendations, IntroductionSection, PinnedProjects } from './components'
 

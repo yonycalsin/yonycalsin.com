@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Anchor } from 'components/anchor'
+import { Anchor } from 'components'
 
 function Footer() {
   return (
