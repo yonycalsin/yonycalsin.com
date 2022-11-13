@@ -4,45 +4,6 @@ exports[`BlogScreen renders the blog screen 1`] = `
 <body>
   <div>
     <div
-      class="w-full z-10 shadow-sm"
-    >
-      <div
-        class="container py-5 md:py-6 flex justify-between items-center"
-      >
-        <a
-          href="/"
-        >
-          <img
-            alt="Logo"
-            data-nimg="1"
-            decoding="async"
-            height="32"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
-            style="color: transparent;"
-            width="32"
-          />
-        </a>
-        <div
-          class="space-x-4"
-        >
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/projects"
-          >
-            Projects
-          </a>
-          <a
-            class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            href="/me"
-          >
-            About Me
-          </a>
-        </div>
-      </div>
-    </div>
-    <div
       class="container py-10 space-y-6"
     >
       <nav
@@ -114,87 +75,6 @@ exports[`BlogScreen renders the blog screen 1`] = `
           </li>
         </a>
       </ul>
-    </div>
-    <footer
-      class="my-6"
-    >
-      <div
-        class="container"
-      >
-        <footer
-          class="p-4 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6"
-        >
-          <span
-            class="text-gray-500"
-          >
-            © 2022
-             
-            <a
-              class="hover:underline"
-              href="https://yonycalsin.com"
-            >
-              Yony Calsin™
-            </a>
-            . All Rights Reserved.
-          </span>
-          <ul
-            class="flex flex-wrap gap-3 items-center justify-center"
-          >
-            <li>
-              <a
-                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                href="/me"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                href="/contact"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </footer>
-      </div>
-    </footer>
-    <div
-      class="space-y-5 fixed bottom-8 left-8 hidden lg:flex flex-col"
-    >
-      <a
-        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-        href="https://github.com/yonycalsin"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Github
-      </a>
-      <a
-        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-        href="https://www.linkedin.com/in/yonycalsin"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Linkedin
-      </a>
-      <a
-        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-        href="https://twitter.com/yonycalsin"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Twitter
-      </a>
-      <a
-        class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-        href="mailto:helloyonycalsin@gmail.com"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Email
-      </a>
     </div>
   </div>
 </body>

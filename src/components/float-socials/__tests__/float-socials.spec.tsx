@@ -1,15 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { TestProvider } from 'tests'
 import { FloatSocials } from 'components'
 
 function setup() {
-  return render(
-    <TestProvider>
-      <FloatSocials />
-    </TestProvider>,
-  )
+  return render(<FloatSocials />)
 }
 
 describe('FloatSocials', () => {

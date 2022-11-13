@@ -21,14 +21,6 @@ dayjs.extend(isToday)
 
 dayjs.extend(isYesterday)
 
-/**
- * @todo fix when import modules from this dependency, for now we are mocking to don't throw the error
- * @author yonycalsin
- */
-jest.mock('react-medium-image-zoom', () => ({
-  default: () => React.createElement('div'),
-}))
-
 beforeAll(() => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
@@ -44,6 +36,34 @@ beforeAll(() => {
     })),
   })
 })
+
+/**
+ * @description the use function is not supported by react-testing-library yet,
+ * so we have to mock it and return the value based on the promise
+ * @todo remove this mock when react supports it in the stable version
+ * @author yonycalsin
+ */
+jest.mock('react', () => {
+  return {
+    ...jest.requireActual('react'),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    use: (promise: any) => {
+      if (typeof promise?.then === 'function') {
+        return promise.value
+      }
+
+      return promise
+    },
+  }
+})
+
+/**
+ * @todo fix when import modules from this dependency, for now we are mocking to don't throw the error
+ * @author yonycalsin
+ */
+jest.mock('react-medium-image-zoom', () => ({
+  default: () => React.createElement('div'),
+}))
 
 jest.mock('components/page-transition', () => ({
   // eslint-disable-next-line react/no-children-prop

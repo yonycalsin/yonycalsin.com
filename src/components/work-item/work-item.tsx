@@ -32,7 +32,7 @@ function WorkItem(props: WorkItemProps) {
   }, [type])
 
   return (
-    <li id={slug} role="listitem">
+    <li id={slug} role="listitem" aria-label="Project Item">
       <div
         className={clsx(
           'shadow-lg absolute h-9 lg:h-12 w-9 lg:w-12 flex items-center justify-center rounded-full p-3',

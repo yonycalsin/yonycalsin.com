@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { categoriesSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getCategoriesApi } from 'services'
 import BlogCategoriesScreen from 'screens/blog-categories'
 
@@ -10,11 +10,7 @@ jest.mock('services/categories')
 const mockGetCategoriesApi = getCategoriesApi as jest.Mock
 
 function setup() {
-  return setupWithReactQuery(
-    <TestProvider>
-      <BlogCategoriesScreen />
-    </TestProvider>,
-  )
+  return setupWithReactQuery(<BlogCategoriesScreen />)
 }
 
 describe('BlogCategoriesScreen', () => {
@@ -30,14 +26,12 @@ describe('BlogCategoriesScreen', () => {
     process.env = TEST_ENVS
   })
 
-  it('renders the blog categories screen', async () => {
+  it('renders the blog categories screen', () => {
     mockGetCategoriesApi.mockReturnValueOnce(categoriesSuccess)
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', { name: /list of categories/i })
+    const list = screen.getByRole('list', { name: /list of categories/i })
 
     const items = within(list).getAllByRole('listitem')
 

@@ -1,16 +1,12 @@
 import { screen, within } from '@testing-library/react'
 
 import { allBooksSuccess, readingBooksSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getAllBooksApi, getReadingBooksApi } from 'services'
 import BooksScreen from 'screens/books'
 
 function setup() {
-  return setupWithReactQuery(
-    <TestProvider>
-      <BooksScreen />
-    </TestProvider>,
-  )
+  return setupWithReactQuery(<BooksScreen />)
 }
 
 jest.mock('services/books')
@@ -32,22 +28,20 @@ describe('BooksScreen', () => {
     process.env = TEST_ENVS
   })
 
-  it('renders the books screen', async () => {
+  it('renders the books screen', () => {
     mockGetAllBooksApi.mockReturnValueOnce(allBooksSuccess)
 
     mockGetReadingBooksApi.mockReturnValueOnce(readingBooksSuccess)
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const allBooksList = await screen.findByRole('list', { name: /list of all books/i })
+    const allBooksList = screen.getByRole('list', { name: /list of all books/i })
 
     const allBooksListItems = within(allBooksList).getAllByRole('listitem')
 
     expect(allBooksListItems).toHaveLength(allBooksSuccess.data.length)
 
-    const allReadingBooksList = await screen.findByRole('list', { name: /list of reading books/i })
+    const allReadingBooksList = screen.getByRole('list', { name: /list of reading books/i })
 
     const allReadingBooksListItems = within(allReadingBooksList).getAllByRole('listitem')
 

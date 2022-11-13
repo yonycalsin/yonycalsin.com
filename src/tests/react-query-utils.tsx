@@ -19,6 +19,9 @@ const queryClientConfig: QueryClientConfig = {
   },
 }
 
+/**
+ * @deprecated
+ */
 function setupWithReactQuery(children: React.ReactNode) {
   const queryClient = new QueryClient(queryClientConfig)
 
@@ -27,6 +30,9 @@ function setupWithReactQuery(children: React.ReactNode) {
   return utils
 }
 
+/**
+ * @deprecated
+ */
 function ReactQueryWrapper(props: React.PropsWithChildren<unknown>) {
   const { children } = props
 

@@ -25,11 +25,6 @@ exports[`Meta renders the meta 1`] = `
       >
         [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
       </script>
-      <link
-        href="https://avatars.githubusercontent.com/u/58490737?v=4"
-        rel="icon"
-        type="image/png"
-      />
       <meta
         content="https://www.yonycalsin.com"
         property="og:url"
@@ -103,11 +98,6 @@ exports[`Meta renders the meta with custom title 1`] = `
       >
         [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
       </script>
-      <link
-        href="https://avatars.githubusercontent.com/u/58490737?v=4"
-        rel="icon"
-        type="image/png"
-      />
       <meta
         content="https://www.yonycalsin.com"
         property="og:url"
@@ -181,11 +171,6 @@ exports[`Meta renders the meta with no-robots 1`] = `
       >
         [{"@context":"https://schema.org","@type":"Organization","url":"https://www.yonycalsin.com","name":"Yony Calsin - Software Developer","alternateName":"Yony Calsin - Software Developer"}]
       </script>
-      <link
-        href="https://avatars.githubusercontent.com/u/58490737?v=4"
-        rel="icon"
-        type="image/png"
-      />
       <meta
         content="https://www.yonycalsin.com"
         property="og:url"
