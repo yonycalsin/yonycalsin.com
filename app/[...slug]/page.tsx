@@ -5,7 +5,7 @@ import type { CustomPagePageProps, CustomPageParams } from 'typings/app'
 import { getAllPagesApi, getPageApi } from 'services'
 import CustomPageScreen from 'screens/custom-page'
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 export async function generateStaticParams(): Promise<CustomPageParams[]> {
   const pagesResponse = await getAllPagesApi()
