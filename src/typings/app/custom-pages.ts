@@ -6,4 +6,8 @@ interface CustomPagePageProps {
   params: CustomPageParams
 }
 
-export type { CustomPagePageProps, CustomPageParams }
+interface CustomPageHeadProps {
+  params: CustomPageParams
+}
+
+export type { CustomPageHeadProps, CustomPagePageProps, CustomPageParams }

@@ -9,14 +9,6 @@ function setup(props = {} as Partial<MetaProps>) {
   return render(<Meta {...props} />)
 }
 
-function HeadMock(props: React.PropsWithChildren<unknown>) {
-  const { children } = props
-
-  return <div>{children}</div>
-}
-
-jest.mock('next/head', () => HeadMock)
-
 describe('Meta', () => {
   afterEach(() => {
     jest.clearAllMocks()

@@ -1,7 +1,7 @@
 import { Meta } from 'components/meta'
 
 function Head() {
-  return <Meta title="Achievements" notRobots={true} />
+  return <Meta />
 }
 
 export default Head
