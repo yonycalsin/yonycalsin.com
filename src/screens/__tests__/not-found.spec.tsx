@@ -1,14 +1,10 @@
 import { render } from '@testing-library/react'
 
-import { overrideFeatures, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import NotFoundScreen from 'screens/not-found'
 
 const setup = () => {
-  return render(
-    <TestProvider>
-      <NotFoundScreen />
-    </TestProvider>,
-  )
+  return render(<NotFoundScreen />)
 }
 
 describe('NotFoundScreen', () => {

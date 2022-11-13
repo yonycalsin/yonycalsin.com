@@ -1,17 +1,13 @@
 import { screen, within } from '@testing-library/react'
 
 import { achievementsSuccess, featuredRecommendationsSuccess, pinnedProjectsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
 import HomeScreen from 'screens/home'
 import { Features } from 'utils/constants'
 
 const setup = () => {
-  const utils = setupWithReactQuery(
-    <TestProvider>
-      <HomeScreen />
-    </TestProvider>,
-  )
+  const utils = setupWithReactQuery(<HomeScreen />)
 
   return utils
 }
@@ -43,7 +39,7 @@ describe('HomeScreen', () => {
     expect(view.baseElement).toMatchSnapshot()
   })
 
-  it('renders the pinned projects section', async () => {
+  it('renders the pinned projects section', () => {
     process.env = overrideFeatures({
       [Features.PINNED_PROJECTS]: true,
     })
@@ -52,9 +48,7 @@ describe('HomeScreen', () => {
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', { name: /list of featured projects/i })
+    const list = screen.getByRole('list', { name: /list of featured projects/i })
 
     const items = within(list).queryAllByRole('listitem')
 
@@ -65,7 +59,7 @@ describe('HomeScreen', () => {
     expect(view.baseElement).toMatchSnapshot()
   })
 
-  it('renders the achievements section', async () => {
+  it('renders the achievements section', () => {
     process.env = overrideFeatures({
       [Features.ACHIEVEMENTS]: true,
     })
@@ -74,9 +68,7 @@ describe('HomeScreen', () => {
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', { name: /list of achievements/i })
+    const list = screen.getByRole('list', { name: /list of achievements/i })
 
     const items = within(list).getAllByRole('listitem')
 
@@ -87,7 +79,7 @@ describe('HomeScreen', () => {
     expect(view.baseElement).toMatchSnapshot()
   })
 
-  it('renders the recommendations section', async () => {
+  it('renders the recommendations section', () => {
     process.env = overrideFeatures({
       [Features.RECOMMENDATIONS]: true,
     })
@@ -96,9 +88,7 @@ describe('HomeScreen', () => {
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', { name: /list of recommendations/i })
+    const list = screen.getByRole('list', { name: /list of recommendations/i })
 
     const items = within(list).getAllByRole('listitem')
 

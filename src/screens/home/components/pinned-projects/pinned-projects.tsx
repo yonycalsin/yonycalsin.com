@@ -1,25 +1,14 @@
 import * as React from 'react'
-import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
 
-import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
 import { getPinnedProjectsApi } from 'services'
-import { API_ENDPOINTS } from 'services/shared'
-import { ProjectCard } from 'containers'
-import { LoaderBox, SectionHeader } from 'components'
+import { ProjectCard } from 'containers/projects'
+import { SectionHeader } from 'components/section'
 
 function PinnedProjects() {
-  const queryResult = useQuery<ServerListResponse<ProjectResponsePayload>>(
-    [API_ENDPOINTS.PINNED_PROJECTS],
-    () => getPinnedProjectsApi(),
-    { staleTime: Infinity },
-  )
+  const response = React.use(getPinnedProjectsApi())
 
-  if (queryResult.isLoading) {
-    return <LoaderBox />
-  }
-
-  const pinnedProjects = queryResult.data?.data ?? []
+  const pinnedProjects = response?.data ?? []
 
   return (
     <div className="py-3 space-y-3">

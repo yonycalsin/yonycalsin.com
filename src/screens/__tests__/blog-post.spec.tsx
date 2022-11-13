@@ -2,17 +2,13 @@ import { render, screen } from '@testing-library/react'
 
 import type { BlogPostScreenProps } from 'typings/screens'
 import { postsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import BlogPostScreen from 'screens/blog-post'
 
 const MOCK_POST = postsSuccess.data[0]
 
 const setup = (post: BlogPostScreenProps['post']) => {
-  return render(
-    <TestProvider>
-      <BlogPostScreen post={post} />
-    </TestProvider>,
-  )
+  return render(<BlogPostScreen post={post} />)
 }
 
 describe('BlogPost', () => {

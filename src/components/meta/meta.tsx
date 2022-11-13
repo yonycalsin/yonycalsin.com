@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Head from 'next/head'
 
 import type { MetaProps } from 'typings/components'
 
@@ -16,18 +15,8 @@ function Meta(props: MetaProps) {
     socialBannerImage: 'https://avatars.githubusercontent.com/u/58490737?v=4',
   }
 
-  const schemaOrgJSONLD = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      url: 'https://www.yonycalsin.com',
-      name: defaultTitle,
-      alternateName: defaultTitle,
-    },
-  ]
-
   return (
-    <Head>
+    <>
       <meta name="robots" content={notRobots ? 'noindex, nofollow, noimageindex, indexifembedded' : 'index, follow'} />
       <meta
         name="googlebot"
@@ -37,9 +26,6 @@ function Meta(props: MetaProps) {
       <meta name="description" content={description} />
       <meta name="image" content={socialBannerImage} />
 
-      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
-
-      <link rel="icon" href={socialBannerImage} type="image/png" />
       <meta property="og:url" content={websiteUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={defaultTitle} />
@@ -53,7 +39,7 @@ function Meta(props: MetaProps) {
       <meta name="twitter:image" content={socialBannerImage} />
 
       <title>{props.title ? titleTemplate.replace('%s', props.title) : 'Yony Calsin - Software Developer'}</title>
-    </Head>
+    </>
   )
 }
 

@@ -2,17 +2,12 @@ import { render, screen } from '@testing-library/react'
 
 import type { AchievementResponsePayload } from 'typings/services'
 import { achievementsSuccess } from 'mock-server/mocks/achievements'
-import { TestProvider } from 'tests'
 import { Achievements } from 'components'
 
 const defaultAchievements: AchievementResponsePayload[] = achievementsSuccess.data
 
 const setup = (achievements = defaultAchievements) => {
-  return render(
-    <TestProvider>
-      <Achievements achievements={achievements} />
-    </TestProvider>,
-  )
+  return render(<Achievements achievements={achievements} />)
 }
 
 describe('Achievements', () => {

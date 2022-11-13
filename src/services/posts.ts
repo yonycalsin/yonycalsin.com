@@ -5,6 +5,7 @@ import type {
   ServerListResponse,
   ServerResponse,
 } from 'typings/services'
+import { TIMINGS } from 'utils/constants'
 import { API_ENDPOINTS, DEFAULT_HEADERS, formatRequestUrl, formatResponse } from './shared'
 
 export async function getPostsApi(queryParams?: ListQueryParamsRequest<PostListQueryParamsRequestPayload>) {
@@ -13,6 +14,9 @@ export async function getPostsApi(queryParams?: ListQueryParamsRequest<PostListQ
   const response = await fetch(url, {
     method: 'GET',
     headers: DEFAULT_HEADERS,
+    next: {
+      revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
+    },
   })
 
   const payload = await formatResponse<ServerListResponse<PostResponsePayload>>(response)
@@ -24,6 +28,9 @@ export async function getPostApi(postSlug: string) {
   const response = await fetch(API_ENDPOINTS.POST(postSlug), {
     method: 'GET',
     headers: DEFAULT_HEADERS,
+    next: {
+      revalidate: TIMINGS.REVALIDATE_STATIC_PAGES_TIME,
+    },
   })
 
   const payload = await formatResponse<ServerResponse<PostResponsePayload>>(response)

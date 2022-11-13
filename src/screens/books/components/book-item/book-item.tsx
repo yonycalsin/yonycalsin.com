@@ -2,7 +2,7 @@ import * as React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 
 import type { BookItemProps } from 'typings/screens'
-import { Heading } from 'components'
+import { Heading } from 'components/heading'
 
 function BookItem(props: BookItemProps) {
   const { name, imageSrc, author, rating } = props

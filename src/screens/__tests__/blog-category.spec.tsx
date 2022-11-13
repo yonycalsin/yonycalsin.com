@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import { categorySuccess, postsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import BlogCategoryScreen from 'screens/blog-category'
 
 const MOCK_POSTS = postsSuccess.data
@@ -10,11 +10,7 @@ const MOCK_POSTS = postsSuccess.data
 const MOCK_CATEGORY = categorySuccess.data
 
 function setup(posts: BlogCategoryScreenProps['posts'] = []) {
-  return render(
-    <TestProvider>
-      <BlogCategoryScreen category={MOCK_CATEGORY} posts={posts} />
-    </TestProvider>,
-  )
+  return render(<BlogCategoryScreen category={MOCK_CATEGORY} posts={posts} />)
 }
 
 describe('BlogCategoryScreen', () => {
@@ -49,6 +45,6 @@ describe('BlogCategoryScreen', () => {
 
     expect(items).toHaveLength(MOCK_POSTS.length)
 
-    expect(view).toMatchSnapshot()
+    expect(view.baseElement).toMatchSnapshot()
   })
 })

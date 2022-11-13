@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { postsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getPostsApi } from 'services'
 import BlogScreen from 'screens/blog'
 
@@ -10,11 +10,7 @@ jest.mock('services/posts')
 const mockGetPostsApi = getPostsApi as jest.Mock
 
 function setup() {
-  return setupWithReactQuery(
-    <TestProvider>
-      <BlogScreen />
-    </TestProvider>,
-  )
+  return setupWithReactQuery(<BlogScreen />)
 }
 
 describe('BlogScreen', () => {
@@ -30,14 +26,12 @@ describe('BlogScreen', () => {
     process.env = TEST_ENVS
   })
 
-  it('renders the blog screen', async () => {
+  it('renders the blog screen', () => {
     mockGetPostsApi.mockReturnValueOnce(postsSuccess)
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', {
+    const list = screen.getByRole('list', {
       name: /list of posts/i,
     })
 

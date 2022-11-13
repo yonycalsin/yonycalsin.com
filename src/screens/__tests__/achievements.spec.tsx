@@ -1,7 +1,7 @@
 import { screen, within } from '@testing-library/react'
 
 import { achievementsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS, TestProvider } from 'tests'
+import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
 import { getAllAchievementsApi } from 'services'
 import AchievementsScreen from 'screens/achievements'
 
@@ -10,11 +10,7 @@ jest.mock('services/achievements')
 const mockGetAllAchievementsApi = getAllAchievementsApi as jest.Mock
 
 function setup() {
-  return setupWithReactQuery(
-    <TestProvider>
-      <AchievementsScreen />
-    </TestProvider>,
-  )
+  return setupWithReactQuery(<AchievementsScreen />)
 }
 
 describe('AchievementsScreen', () => {
@@ -26,14 +22,12 @@ describe('AchievementsScreen', () => {
     process.env = TEST_ENVS
   })
 
-  it('renders the achievements screen', async () => {
+  it('renders the achievements screen', () => {
     mockGetAllAchievementsApi.mockReturnValueOnce(achievementsSuccess)
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
-
-    const list = await screen.findByRole('list', {
+    const list = screen.getByRole('list', {
       name: /list of achievements/i,
     })
 

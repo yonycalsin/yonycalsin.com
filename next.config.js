@@ -25,7 +25,7 @@ const nextConfig = {
     domains: ['avatars.githubusercontent.com'],
   },
   experimental: {
-    appDir: false,
+    appDir: true,
   },
 }
 

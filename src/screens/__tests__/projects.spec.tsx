@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, within } from '@testing-library/react'
 
 import { allProjectsSuccess } from 'mock-server/mocks/projects'
 import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
@@ -37,14 +37,16 @@ describe('ProjectsScreen', () => {
     process.env = TEST_ENVS
   })
 
-  it('renders the projects screen', async () => {
+  it('renders the projects screen', () => {
     mockGetAllProjectsApi.mockReturnValueOnce(allProjectsSuccess)
 
     const view = setup()
 
-    await screen.findByRole('progressbar')
+    const list = screen.getByRole('list', { name: /list of projects/i })
 
-    await screen.findByRole('list', { name: /list of projects/i })
+    const items = within(list).getAllByRole('listitem', { name: /project item/i })
+
+    expect(items).toHaveLength(allProjectsSuccess.data.length)
 
     expect(mockGetAllProjectsApi).toHaveBeenCalledTimes(1)
 

@@ -1,7 +1,9 @@
+'use client'
+
 import * as React from 'react'
 
 import { analytics, ANALYTICS_EVENTS } from 'analytics'
-import { Anchor } from 'components'
+import { Anchor } from 'components/anchor'
 import { SOCIAL_LINKS } from 'utils/constants'
 
 function FloatSocials() {
