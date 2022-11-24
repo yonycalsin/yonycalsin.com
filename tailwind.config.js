@@ -1,18 +1,18 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       boxShadow: {
         card: 'rgb(38 26 25 / 4%) 0px 1.51px 5.3px, rgb(38 26 25 / 5%) 0px 3.03px 4.54px',
       },
       fontFamily: {
-        heading: ['Source Serif Pro', 'sans-serif'],
+        heading: ['var(--font-source-serif-pro)', 'sans-serif'],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
       },
       colors: {
         primary: {
