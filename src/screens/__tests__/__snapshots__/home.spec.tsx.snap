@@ -14,9 +14,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
         >
           Hi, I’m Yony Calsin.
         </h1>
-        <p
-          class="font-heading text-lg"
-        >
+        <p>
           I’m a software developer from 
           <b>
             Perú
@@ -757,9 +755,7 @@ exports[`HomeScreen renders the home screen 1`] = `
         >
           Hi, I’m Yony Calsin.
         </h1>
-        <p
-          class="font-heading text-lg"
-        >
+        <p>
           I’m a software developer from 
           <b>
             Perú
@@ -1006,9 +1002,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         >
           Hi, I’m Yony Calsin.
         </h1>
-        <p
-          class="font-heading text-lg"
-        >
+        <p>
           I’m a software developer from 
           <b>
             Perú
@@ -1331,9 +1325,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         >
           Hi, I’m Yony Calsin.
         </h1>
-        <p
-          class="font-heading text-lg"
-        >
+        <p>
           I’m a software developer from 
           <b>
             Perú
