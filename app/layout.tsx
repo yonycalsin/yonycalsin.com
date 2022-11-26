@@ -12,6 +12,7 @@ import clsx from 'clsx'
 import Script from 'next/script'
 
 import type { AppLayoutProps } from 'typings/app'
+import { VercelInsights } from 'analytics/vercel-insights'
 import { MainLayout } from 'layouts'
 import { ENV, IS_PRODUCTION } from 'utils/constants'
 
@@ -39,6 +40,7 @@ function Layout(props: AppLayoutProps) {
       </head>
       <body className="bg-[#F8F7F3] text-gray-800 text-base lg:text-lg">
         <MainLayout>{children}</MainLayout>
+        <VercelInsights />
         {IS_PRODUCTION && (
           <>
             <Script
