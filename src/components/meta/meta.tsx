@@ -3,7 +3,7 @@ import * as React from 'react'
 import type { MetaProps } from 'typings/components'
 
 function Meta(props: MetaProps) {
-  const { notRobots } = props
+  const { notRobots = false } = props
 
   const { description, titleTemplate, defaultTitle, twitterUsername, websiteUrl, socialBannerImage } = {
     description:
@@ -41,10 +41,6 @@ function Meta(props: MetaProps) {
       <title>{props.title ? titleTemplate.replace('%s', props.title) : 'Yony Calsin - Software Developer'}</title>
     </>
   )
-}
-
-Meta.defaultProps = {
-  notRobots: false,
 }
 
 export default Meta

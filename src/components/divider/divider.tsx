@@ -4,7 +4,7 @@ import type { DividerProps } from 'typings/components'
 import dividerStyles from './divider.styles'
 
 function Divider(props: DividerProps) {
-  const { className, direction, variant } = props
+  const { direction = 'horizontal', variant = 'solid', className } = props
 
   return (
     <hr
@@ -17,11 +17,6 @@ function Divider(props: DividerProps) {
       )}
     />
   )
-}
-
-Divider.defaultProps = {
-  direction: 'horizontal',
-  variant: 'solid',
 }
 
 export default Divider

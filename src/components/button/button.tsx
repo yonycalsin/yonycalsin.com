@@ -5,7 +5,7 @@ import type { ButtonProps } from 'typings/components'
 import buttonStyles from './button.styles'
 
 function Button(props: ButtonProps) {
-  const { children, className, palette, variant, leftElement, rightElement, ...restProps } = props
+  const { children, palette = 'gray', variant = 'solid', className, leftElement, rightElement, ...restProps } = props
 
   return (
     <button
@@ -23,12 +23,6 @@ function Button(props: ButtonProps) {
       {React.isValidElement(rightElement) && <div className="ml-2">{rightElement}</div>}
     </button>
   )
-}
-
-Button.defaultProps = {
-  variant: 'solid',
-  palette: 'gray',
-  as: 'button',
 }
 
 export default Button

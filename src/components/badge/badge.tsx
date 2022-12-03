@@ -2,7 +2,7 @@ import type { BadgeProps } from 'typings/components'
 import badgeStyles from './badge.styles'
 
 function Badge(props: BadgeProps) {
-  const { children, palette } = props
+  const { children, palette = 'primary' } = props
 
   return (
     <span
@@ -13,10 +13,6 @@ function Badge(props: BadgeProps) {
       {children}
     </span>
   )
-}
-
-Badge.defaultProps = {
-  palette: 'primary',
 }
 
 export default Badge

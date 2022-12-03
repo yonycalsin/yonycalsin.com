@@ -1,6 +1,6 @@
 interface MetaProps {
   title?: string
-  notRobots: boolean
+  notRobots?: boolean
 }
 
 export type { MetaProps }
