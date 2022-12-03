@@ -97,7 +97,6 @@ exports[`BlogCategoriesScreen renders the blog categories screen 1`] = `
           role="listitem"
         >
           <button
-            as="button"
             class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none  text-success-700 hover:text-white border-success-700 hover:bg-success-800 focus:ring-success-300"
           >
             Programing

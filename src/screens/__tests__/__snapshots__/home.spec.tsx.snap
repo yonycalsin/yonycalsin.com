@@ -70,7 +70,6 @@ exports[`HomeScreen renders the achievements section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-primary-700 hover:text-white border-primary-700 hover:bg-primary-800 focus:ring-primary-300"
             >
               <div
@@ -131,7 +130,6 @@ exports[`HomeScreen renders the achievements section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none  text-success-700 hover:text-white border-success-700 hover:bg-success-800 focus:ring-success-300"
             >
               <div
@@ -186,7 +184,6 @@ exports[`HomeScreen renders the achievements section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-secondary-700 hover:text-white border-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300"
             >
               <div
@@ -811,7 +808,6 @@ exports[`HomeScreen renders the home screen 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-primary-700 hover:text-white border-primary-700 hover:bg-primary-800 focus:ring-primary-300"
             >
               <div
@@ -872,7 +868,6 @@ exports[`HomeScreen renders the home screen 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none  text-success-700 hover:text-white border-success-700 hover:bg-success-800 focus:ring-success-300"
             >
               <div
@@ -927,7 +922,6 @@ exports[`HomeScreen renders the home screen 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-secondary-700 hover:text-white border-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300"
             >
               <div
@@ -1058,7 +1052,6 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-primary-700 hover:text-white border-primary-700 hover:bg-primary-800 focus:ring-primary-300"
             >
               <div
@@ -1119,7 +1112,6 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none  text-success-700 hover:text-white border-success-700 hover:bg-success-800 focus:ring-success-300"
             >
               <div
@@ -1174,7 +1166,6 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-secondary-700 hover:text-white border-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300"
             >
               <div
@@ -1381,7 +1372,6 @@ exports[`HomeScreen renders the recommendations section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-primary-700 hover:text-white border-primary-700 hover:bg-primary-800 focus:ring-primary-300"
             >
               <div
@@ -1442,7 +1432,6 @@ exports[`HomeScreen renders the recommendations section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none  text-success-700 hover:text-white border-success-700 hover:bg-success-800 focus:ring-success-300"
             >
               <div
@@ -1497,7 +1486,6 @@ exports[`HomeScreen renders the recommendations section 1`] = `
             target="_blank"
           >
             <button
-              as="button"
               class="text-sm font-medium rounded-lg px-4 py-2 text-center inline-flex border focus:ring-4 focus:outline-none text-secondary-700 hover:text-white border-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300"
             >
               <div
