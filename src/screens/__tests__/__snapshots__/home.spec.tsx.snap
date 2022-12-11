@@ -240,7 +240,7 @@ exports[`HomeScreen renders the achievements section 1`] = `
         </div>
       </div>
       <hr
-        class="opacity-[0.6] border-gray-300 border-solid w-full border-b-[1px] my-6"
+        class="opacity-[0.6] border-gray-300 dark:border-gray-800 border-solid w-full border-b-[1px] my-6"
       />
       <div
         class="py-3"
@@ -1222,7 +1222,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
         </div>
       </div>
       <hr
-        class="opacity-[0.6] border-gray-300 border-solid w-full border-b-[1px] my-6"
+        class="opacity-[0.6] border-gray-300 dark:border-gray-800 border-solid w-full border-b-[1px] my-6"
       />
       <div
         class="py-3 space-y-3"
@@ -1257,7 +1257,7 @@ exports[`HomeScreen renders the pinned projects section 1`] = `
             href="/projects#React Hook Form"
           >
             <div
-              class="bg-white shadow-card px-4 py-2 rounded-lg border-transparent border-2 hover:border-primary-600 cursor-pointer h-full"
+              class="bg-white dark:bg-gray-800 shadow-card px-4 py-2 rounded-lg border-transparent border-2 hover:border-primary-600 cursor-pointer h-full"
               role="listitem"
             >
               <div
@@ -1542,7 +1542,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
         </div>
       </div>
       <hr
-        class="opacity-[0.6] border-gray-300 border-solid w-full border-b-[1px] my-6"
+        class="opacity-[0.6] border-gray-300 dark:border-gray-800 border-solid w-full border-b-[1px] my-6"
       />
       <div
         class="py-3"
@@ -1566,7 +1566,7 @@ exports[`HomeScreen renders the recommendations section 1`] = `
           role="list"
         >
           <blockquote
-            class="space-y-3 bg-white p-4 rounded-lg shadow-card border-l-4 border-primary-500"
+            class="space-y-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-card border-l-4 border-primary-500"
             role="listitem"
           >
             <p>

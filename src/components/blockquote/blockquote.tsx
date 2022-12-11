@@ -11,7 +11,12 @@ function Blockquote(props: BlockquoteProps) {
   }
 
   return (
-    <blockquote className={clsx('p-4 my-4 border-l-8 border rounded-lg border-gray-300 bg-gray-100', className)}>
+    <blockquote
+      className={clsx(
+        'p-4 my-4 border-l-8 border rounded-lg border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800',
+        className,
+      )}
+    >
       {React.Children.map(children, child => {
         if (!React.isValidElement(child)) {
           return null
