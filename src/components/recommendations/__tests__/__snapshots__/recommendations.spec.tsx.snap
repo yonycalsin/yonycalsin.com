@@ -9,7 +9,7 @@ exports[`Recommendations renders the recommendations 1`] = `
       role="list"
     >
       <blockquote
-        class="space-y-3 bg-white p-4 rounded-lg shadow-card border-l-4 border-primary-500"
+        class="space-y-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-card border-l-4 border-primary-500"
         role="listitem"
       >
         <p>
