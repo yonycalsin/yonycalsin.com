@@ -19,7 +19,7 @@ function ProjectCard(props: ProjectCardProps) {
   return (
     <Link href={`/projects#${project.slug}`}>
       <div
-        className="bg-white shadow-card px-4 py-2 rounded-lg border-transparent border-2 hover:border-primary-600 cursor-pointer h-full"
+        className="bg-white dark:bg-gray-800 shadow-card px-4 py-2 rounded-lg border-transparent border-2 hover:border-primary-600 cursor-pointer h-full"
         role="listitem"
       >
         <div className="space-y-3">

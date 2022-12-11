@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-const dividerStyles = cva('opacity-[0.6] border-gray-300', {
+const dividerStyles = cva('opacity-[0.6] border-gray-300 dark:border-gray-800', {
   variants: {
     variant: {
       solid: 'border-solid',

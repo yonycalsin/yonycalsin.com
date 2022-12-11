@@ -8,6 +8,7 @@ import '@runts/react/styles/runts-playground.css'
 import isotipo from 'assets/brand/images/isotipo.png'
 
 import { Inter, Source_Serif_Pro } from '@next/font/google'
+import { getJsText } from '@rqbazan/set-initial-color-mode'
 import clsx from 'clsx'
 import Script from 'next/script'
 
@@ -38,7 +39,7 @@ function Layout(props: AppLayoutProps) {
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" href={isotipo.src} type="image/png" />
       </head>
-      <body className="bg-[#F8F7F3] text-gray-800 text-base lg:text-lg">
+      <body className="bg-[#F8F7F3] text-gray-800 dark:bg-gray-900 dark:text-gray-300 text-base lg:text-lg">
         <MainLayout>{children}</MainLayout>
         <VercelInsights />
         {IS_PRODUCTION && (
@@ -66,6 +67,7 @@ function Layout(props: AppLayoutProps) {
             />
           </>
         )}
+        <script id="set-initial-color-mode" dangerouslySetInnerHTML={{ __html: getJsText() }} />
       </body>
     </html>
   )

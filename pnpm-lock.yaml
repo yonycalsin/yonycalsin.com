@@ -9,6 +9,7 @@ specifiers:
   '@babel/core': 7.20.5
   '@dotenv-cloak/cli': 2.0.0
   '@next/font': 13.0.6
+  '@rqbazan/set-initial-color-mode': 1.2.0
   '@runts/react': 2.2.0
   '@storybook/addon-actions': 6.5.14
   '@storybook/addon-essentials': 6.5.14
@@ -90,6 +91,7 @@ specifiers:
 
 dependencies:
   '@next/font': 13.0.6
+  '@rqbazan/set-initial-color-mode': 1.2.0
   '@runts/react': 2.2.0_biqbaboplfbrettd7655fr4n2y
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@tanstack/react-query': 4.19.1_biqbaboplfbrettd7655fr4n2y
@@ -2718,6 +2720,10 @@ packages:
       react: '>=16.8'
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@rqbazan/set-initial-color-mode/1.2.0:
+    resolution: {integrity: sha512-xCBPMjwNnraV9pGQPw6LHeXDqdXp076OfC9SqtMjSKGqMnNBSHuAk1n+jkIyzQnonub4WgT0NxR8t/ont+i2lg==}
     dev: false
 
   /@runts/react/2.2.0_biqbaboplfbrettd7655fr4n2y:

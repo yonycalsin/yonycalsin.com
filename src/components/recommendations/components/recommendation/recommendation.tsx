@@ -7,7 +7,10 @@ function Recommendation(props: RecommendationProps) {
   const { recommendation } = props
 
   return (
-    <blockquote className="space-y-3 bg-white p-4 rounded-lg shadow-card border-l-4 border-primary-500" role="listitem">
+    <blockquote
+      className="space-y-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-card border-l-4 border-primary-500"
+      role="listitem"
+    >
       <p>{recommendation.text}</p>
       <p className="text-sm italic font-extrabold">
         -{' '}
