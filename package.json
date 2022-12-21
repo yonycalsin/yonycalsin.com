@@ -55,7 +55,7 @@
     "framer-motion": "7.10.3",
     "just-random": "3.2.0",
     "lodash": "4.17.21",
-    "next": "13.0.7",
+    "next": "13.0.8-canary.1",
     "next-base64": "1.1.0",
     "next-connect": "0.13.0",
     "nextjs-cors": "2.1.2",
