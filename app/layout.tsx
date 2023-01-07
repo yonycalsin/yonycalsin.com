@@ -8,7 +8,6 @@ import '@runts/react/styles/runts-playground.css'
 import isotipo from 'assets/brand/images/isotipo.png'
 
 import { Inter, Source_Serif_Pro } from '@next/font/google'
-import { getJsText } from '@rqbazan/set-initial-color-mode'
 import clsx from 'clsx'
 import Script from 'next/script'
 
@@ -67,7 +66,6 @@ function Layout(props: AppLayoutProps) {
             />
           </>
         )}
-        <script id="set-initial-color-mode" dangerouslySetInnerHTML={{ __html: getJsText() }} />
       </body>
     </html>
   )
