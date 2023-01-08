@@ -22,4 +22,4 @@ https://yonycalsin-storybook.vercel.app
 
 ## License
 
-[LICENSE (GNU General Public License v3.0) - ©2022 Yony Calsin](LICENSE)
+[LICENSE (GNU General Public License v3.0) - ©2023 Yony Calsin](LICENSE)
