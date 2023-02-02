@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
+    APP_URL: process.env.APP_URL,
     APP_ENV: process.env.APP_ENV,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
     REST_API_URL: process.env.REST_API_URL,
