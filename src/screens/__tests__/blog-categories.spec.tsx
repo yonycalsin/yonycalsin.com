@@ -35,7 +35,7 @@ describe('BlogCategoriesScreen', () => {
 
     const items = within(list).getAllByRole('listitem')
 
-    expect(items).toHaveLength(categoriesSuccess.data.length)
+    expect(items).toHaveLength(categoriesSuccess.data.results.length)
 
     expect(view.baseElement).toMatchSnapshot()
   })

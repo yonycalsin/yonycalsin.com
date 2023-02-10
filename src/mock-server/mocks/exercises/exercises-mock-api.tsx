@@ -11,7 +11,7 @@ function getAllExercisesApi(request: MockRequest, response: MockResponse, contex
 function getExerciseApi(request: MockRequest, response: MockResponse, context: MockContext) {
   const { slug } = request.params as { slug: string }
 
-  const exercise = allExercisesSuccess.data.find(exercise => exercise.slug === slug)
+  const exercise = allExercisesSuccess.data.results.find(exercise => exercise.slug === slug)
 
   if (!exercise) {
     return response(context.status(404))

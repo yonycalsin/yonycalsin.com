@@ -52,7 +52,7 @@ describe('HomeScreen', () => {
 
     const items = within(list).queryAllByRole('listitem')
 
-    expect(items).toHaveLength(pinnedProjectsSuccess.data.length)
+    expect(items).toHaveLength(pinnedProjectsSuccess.data.results.length)
 
     expect(mockGetPinnedProjectsApi).toHaveBeenCalledTimes(1)
 
@@ -72,7 +72,7 @@ describe('HomeScreen', () => {
 
     const items = within(list).getAllByRole('listitem')
 
-    expect(items).toHaveLength(achievementsSuccess.data.length)
+    expect(items).toHaveLength(achievementsSuccess.data.results.length)
 
     expect(mockGetFeaturedAchievements).toHaveBeenCalledTimes(1)
 
@@ -92,7 +92,7 @@ describe('HomeScreen', () => {
 
     const items = within(list).getAllByRole('listitem')
 
-    expect(items).toHaveLength(featuredRecommendationsSuccess.data.length)
+    expect(items).toHaveLength(featuredRecommendationsSuccess.data.results.length)
 
     expect(mockGetFeaturedRecommendations).toHaveBeenCalledTimes(1)
 

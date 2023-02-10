@@ -39,7 +39,7 @@ describe('BlogScreen', () => {
 
     expect(items).toHaveLength(items.length)
 
-    const title = screen.queryByRole('heading', { name: `Posts (${postsSuccess.data.length})` })
+    const title = screen.queryByRole('heading', { name: `Posts (${postsSuccess.data.results.length})` })
 
     expect(title).toBeInTheDocument()
 

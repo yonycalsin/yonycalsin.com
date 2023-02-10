@@ -33,9 +33,9 @@ describe('AchievementsScreen', () => {
 
     const items = within(list).getAllByRole('listitem')
 
-    expect(items).toHaveLength(achievementsSuccess.data.length)
+    expect(items).toHaveLength(achievementsSuccess.data.results.length)
 
-    const title = screen.queryByRole('heading', { name: `Achievements (${achievementsSuccess.data.length})` })
+    const title = screen.queryByRole('heading', { name: `Achievements (${achievementsSuccess.data.results.length})` })
 
     expect(title).toBeInTheDocument()
 

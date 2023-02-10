@@ -46,7 +46,7 @@ describe('ProjectsScreen', () => {
 
     const items = within(list).getAllByRole('listitem', { name: /project item/i })
 
-    expect(items).toHaveLength(allProjectsSuccess.data.length)
+    expect(items).toHaveLength(allProjectsSuccess.data.results.length)
 
     expect(mockGetAllProjectsApi).toHaveBeenCalledTimes(1)
 

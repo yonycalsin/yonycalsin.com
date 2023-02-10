@@ -5,7 +5,7 @@ import { categorySuccess, postsSuccess } from 'mock-server/mocks'
 import { overrideFeatures, TEST_ENVS } from 'tests'
 import BlogCategoryScreen from 'screens/blog-category'
 
-const MOCK_POSTS = postsSuccess.data
+const MOCK_POSTS = postsSuccess.data.results
 
 const MOCK_CATEGORY = categorySuccess.data
 
