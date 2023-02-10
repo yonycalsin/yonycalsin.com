@@ -5,7 +5,7 @@ import { postsSuccess } from 'mock-server/mocks'
 import { overrideFeatures, TEST_ENVS } from 'tests'
 import BlogPostScreen from 'screens/blog-post'
 
-const MOCK_POST = postsSuccess.data[0]
+const MOCK_POST = postsSuccess.data.results[0]
 
 const setup = (post: BlogPostScreenProps['post']) => {
   return render(<BlogPostScreen post={post} />)

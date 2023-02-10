@@ -4,28 +4,32 @@ import type { CategoryResponsePayload, ServerListResponse, ServerResponse } from
 import { buildMdxRuntimeCode } from 'utils'
 
 const categoriesSuccess: ServerListResponse<CategoryResponsePayload> = {
-  data: [
-    {
-      title: 'Programing',
-      slug: 'programing',
-      body: {
-        type: 'mdx',
-        code: nextBase64.encode(
-          encodeURIComponent(encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Category: Programing'})`))),
-        ),
+  data: {
+    results: [
+      {
+        title: 'Programing',
+        slug: 'programing',
+        body: {
+          type: 'mdx',
+          code: nextBase64.encode(
+            encodeURIComponent(
+              encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Category: Programing'})`)),
+            ),
+          ),
+        },
+        createdAt: '2022-10-15T23:49:25.223Z',
+        updatedAt: '2022-10-15T23:49:31.414Z',
       },
-      createdAt: '2022-10-15T23:49:25.223Z',
-      updatedAt: '2022-10-15T23:49:31.414Z',
+    ],
+    meta: {
+      hasPrevPage: false,
+      hasNextPage: false,
+      page: 1,
+      pages: 1,
+      total: 1,
     },
-  ],
-  error: null,
-  meta: {
-    hasPrevPage: false,
-    hasNextPage: false,
-    page: 1,
-    pages: 1,
-    total: 1,
   },
+  error: null,
 }
 
 const categorySuccess: ServerResponse<CategoryResponsePayload> = {

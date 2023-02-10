@@ -11,7 +11,7 @@ function getPostsApi(request: MockRequest, response: MockResponse, context: Mock
 function getPostApi(request: MockRequest<never, { slug: string }>, response: MockResponse, context: MockContext) {
   const postSlug = request.params.slug
 
-  const post = postsSuccess.data.find(post => post.slug === postSlug)
+  const post = postsSuccess.data.results.find(post => post.slug === postSlug)
 
   if (!post) {
     return response(context.status(404))

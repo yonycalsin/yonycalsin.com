@@ -11,7 +11,7 @@ export const dynamicParams = false
 export async function generateStaticParams(): Promise<BlogPostParams[]> {
   const postsResponse = await getPostsApi()
 
-  const posts = postsResponse.data
+  const posts = postsResponse.data.results
 
   return posts.map(post => ({
     slug: post.slug,

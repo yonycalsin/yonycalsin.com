@@ -16,8 +16,10 @@ interface ServerListPaginationResponse {
 }
 
 interface ServerListResponse<T> {
-  data: T[]
-  meta: ServerListPaginationResponse
+  data: {
+    results: T[]
+    meta: ServerListPaginationResponse
+  }
   error: ServerErrorResponse | null
 }
 

@@ -6,7 +6,7 @@ import { Achievements, SectionHeader } from 'components'
 function FeaturedAchievements() {
   const response = React.use(getFeaturedAchievementsApi())
 
-  const achievements = response?.data ?? []
+  const achievements = response?.data?.results ?? []
 
   return (
     <div className="py-3">

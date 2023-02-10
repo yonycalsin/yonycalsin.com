@@ -9,9 +9,11 @@ import { PageTransition } from 'components'
 export const dynamicParams = false
 
 export async function generateStaticParams(): Promise<BlogCategoryParams[]> {
-  const categories = await getCategoriesApi()
+  const response = await getCategoriesApi()
 
-  return categories.data.map(category => ({
+  const categories = response.data.results
+
+  return categories.map(category => ({
     slug: category.slug,
   }))
 }
@@ -37,7 +39,7 @@ export default function BlogCategoryPage(props: BlogCategoryPageProps) {
 
   return (
     <PageTransition>
-      <BlogCategoryScreen category={category} posts={postsResponse.data} />
+      <BlogCategoryScreen category={category} posts={postsResponse.data.results} />
     </PageTransition>
   )
 }

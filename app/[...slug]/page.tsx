@@ -11,7 +11,7 @@ export const dynamicParams = true
 export async function generateStaticParams(): Promise<CustomPageParams[]> {
   const pagesResponse = await getAllPagesApi()
 
-  const pages = pagesResponse.data
+  const pages = pagesResponse.data.results
 
   return pages.map(post => ({
     slug: [post.slug],

@@ -39,13 +39,13 @@ describe('BooksScreen', () => {
 
     const allBooksListItems = within(allBooksList).getAllByRole('listitem')
 
-    expect(allBooksListItems).toHaveLength(allBooksSuccess.data.length)
+    expect(allBooksListItems).toHaveLength(allBooksSuccess.data.results.length)
 
     const allReadingBooksList = screen.getByRole('list', { name: /list of reading books/i })
 
     const allReadingBooksListItems = within(allReadingBooksList).getAllByRole('listitem')
 
-    expect(allReadingBooksListItems).toHaveLength(readingBooksSuccess.data.length)
+    expect(allReadingBooksListItems).toHaveLength(readingBooksSuccess.data.results.length)
 
     expect(view.baseElement).toMatchSnapshot()
   })

@@ -6,7 +6,7 @@ import { Recommendations, SectionHeader } from 'components'
 function FeaturedRecommendations() {
   const response = React.use(getFeaturedRecommendationsApi())
 
-  const recommendations = response.data ?? []
+  const recommendations = response.data?.results ?? []
 
   return (
     <div className="py-3">

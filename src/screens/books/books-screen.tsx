@@ -12,13 +12,13 @@ function BooksScreen() {
   return (
     <main className="container space-y-6 py-10">
       <header className="space-y-3">
-        <Heading size="h1">Books ({allBooksResponse.data.length})</Heading>
+        <Heading size="h1">Books ({allBooksResponse.data.results.length})</Heading>
         <p>This page contains the books I have read along of my life.</p>
       </header>
       <div className="space-y-3">
         <Heading size="h3">Reading:</Heading>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="List of reading books">
-          {readingBooksResponse.data.map(book => (
+          {readingBooksResponse.data.results.map(book => (
             <BookItem
               key={book.id}
               name={book.name}
@@ -33,7 +33,7 @@ function BooksScreen() {
       <div className="space-y-3">
         <Heading size="h3">All:</Heading>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="List of all books">
-          {allBooksResponse.data.map(book => (
+          {allBooksResponse.data.results.map(book => (
             <BookItem
               key={book.id}
               name={book.name}

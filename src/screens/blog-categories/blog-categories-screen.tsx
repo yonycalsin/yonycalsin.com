@@ -7,7 +7,7 @@ import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Button, Headin
 function BlogCategoriesScreen() {
   const categoriesResponse = React.use(getCategoriesApi())
 
-  const categories = categoriesResponse.data
+  const categories = categoriesResponse.data.results
 
   return (
     <main className="container py-10 space-y-6">

@@ -13,7 +13,7 @@ export const dynamicParams = false
 export async function generateStaticParams(): Promise<ExercisePageParams[]> {
   const exercisesResponse = await getAllExercisesApi()
 
-  const exercises = exercisesResponse.data
+  const exercises = exercisesResponse.data.results
 
   return exercises.map(exercise => ({
     slug: exercise.slug,

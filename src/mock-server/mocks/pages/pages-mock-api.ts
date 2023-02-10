@@ -10,7 +10,7 @@ function getAllPagesApi(request: MockRequest, response: MockResponse, context: M
 function getPageApi(request: MockRequest, response: MockResponse, context: MockContext) {
   const { slug } = request.params as { slug: string }
 
-  const page = allPagesSuccess.data.find(item => item.slug === slug)
+  const page = allPagesSuccess.data.results.find(item => item.slug === slug)
 
   if (!page) {
     return response(context.status(404))

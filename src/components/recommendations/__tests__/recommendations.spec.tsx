@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { featuredRecommendationsSuccess } from 'mock-server/mocks/recommendations'
 import { Recommendations } from 'components'
 
-const MOCK_RECOMMENDATIONS = featuredRecommendationsSuccess.data
+const MOCK_RECOMMENDATIONS = featuredRecommendationsSuccess.data.results
 
 const setup = () => render(<Recommendations recommendations={MOCK_RECOMMENDATIONS} />)
 

@@ -4,7 +4,7 @@ import type { AchievementResponsePayload } from 'typings/services'
 import { achievementsSuccess } from 'mock-server/mocks/achievements'
 import { Achievements } from 'components'
 
-const defaultAchievements: AchievementResponsePayload[] = achievementsSuccess.data
+const defaultAchievements: AchievementResponsePayload[] = achievementsSuccess.data.results
 
 const setup = (achievements = defaultAchievements) => {
   return render(<Achievements achievements={achievements} />)

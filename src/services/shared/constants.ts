@@ -10,13 +10,15 @@ const DEFAULT_HEADERS = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const DEFAULT_SERVER_LIST_RESPONSE: ServerListResponse<Record<string, any>> = {
   error: null,
-  data: [],
-  meta: {
-    hasNextPage: false,
-    hasPrevPage: false,
-    page: 0,
-    pages: 0,
-    total: 0,
+  data: {
+    results: [],
+    meta: {
+      hasNextPage: false,
+      hasPrevPage: false,
+      page: 0,
+      pages: 0,
+      total: 0,
+    },
   },
 }
 

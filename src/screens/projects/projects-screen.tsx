@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from 'utils/constants'
 function ProjectsScreen() {
   const response = React.use(getAllProjectsApi())
 
-  const projects = response.data ?? []
+  const projects = response.data.results ?? []
 
   return (
     <main className="container py-10">
