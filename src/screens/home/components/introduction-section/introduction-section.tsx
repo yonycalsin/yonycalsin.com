@@ -10,9 +10,7 @@ function IntroductionSection() {
     <div className="space-y-6 flex flex-col py-3 items-start">
       <Heading size="h1">Hi, I&rsquo;m Yony Calsin.</Heading>
       <p>
-        I&rsquo;m a software developer from <b>Perú</b>. I work at{' '}
-        <ExternalAnchor href="https://www.linkedin.com/company/making-sense-llc">Making Sense</ExternalAnchor> as a{' '}
-        <b>Frontend Developer.</b>
+        I&rsquo;m a software developer from <b>Perú</b>.
       </p>
       <div className="flex flex-wrap gap-3">
         <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noreferrer">
