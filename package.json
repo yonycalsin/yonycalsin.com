@@ -128,7 +128,7 @@
     "wait-on": "7.0.1",
     "webpack": "5.76.2"
   },
-  "packageManager": "pnpm@7.14.2",
+  "packageManager": "pnpm@7.29.3",
   "engines": {
     "node": "16.14.0"
   },
