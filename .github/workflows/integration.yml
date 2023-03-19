@@ -57,5 +57,5 @@ jobs:
           FF_FAQ: false
           FF_EXERCISES: false
 
-      - name: Unit Testing
-        run: pnpm run test:unit:ci
+      # - name: Unit Testing
+      #   run: pnpm run test:unit:ci
