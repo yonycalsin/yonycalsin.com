@@ -20,28 +20,11 @@ const customJestConfig = {
     },
   },
   moduleNameMapper: {
-    '^/(.*)$': '<rootDir>/src/$1',
-    /**
-     * @todo add regex to handle global paths
-     * @author yonycalsin
-     */
-    '^typings(.*)$': '<rootDir>/src/typings$1',
-    '^assets(.*)$': '<rootDir>/src/assets$1',
-    '^mock-server(.*)$': '<rootDir>/src/mock-server$1',
-    '^tests(.*)$': '<rootDir>/src/tests$1',
-    '^analytics(.*)$': '<rootDir>/src/analytics$1',
-    '^services(.*)$': '<rootDir>/src/services$1',
-    '^hooks(.*)$': '<rootDir>/src/hooks$1',
-    '^screens(.*)$': '<rootDir>/src/screens$1',
-    '^layouts(.*)$': '<rootDir>/src/layouts$1',
-    '^containers(.*)$': '<rootDir>/src/containers$1',
-    '^components(.*)$': '<rootDir>/src/components$1',
-    '^utils(.*)$': '<rootDir>/src/utils$1',
-
     // Optionals
     '^~/server/(.*)$': '<rootDir>/server/$1',
   },
   moduleDirectories: ['node_modules', '<rootDir>/'],
+  modulePaths: ['<rootDir>/src'],
   testEnvironment: 'jest-environment-jsdom',
   snapshotSerializers: [],
   collectCoverageFrom: [

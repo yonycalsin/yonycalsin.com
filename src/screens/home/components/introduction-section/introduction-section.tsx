@@ -2,7 +2,7 @@ import * as React from 'react'
 import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
 
-import { Button, ExternalAnchor, Heading, Icon } from 'components'
+import { Button, Heading, Icon } from 'components'
 import { SOCIAL_LINKS } from 'utils/constants'
 
 function IntroductionSection() {

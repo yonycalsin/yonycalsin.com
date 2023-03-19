@@ -18,7 +18,6 @@
       "*": ["./src/*"],
       "~/server*": ["./server*"]
     },
-    "importsNotUsedAsValues": "error",
     "incremental": true,
     "noImplicitOverride": true,
     "strictPropertyInitialization": false,
