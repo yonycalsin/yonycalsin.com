@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import type { CustomPagePageProps, CustomPageParams } from 'typings/app'
@@ -7,6 +8,29 @@ import CustomPageScreen from 'screens/custom-page'
 import { PageTransition } from 'components'
 
 export const dynamicParams = true
+
+export async function generateMetadata({ params }: { params: CustomPageParams }): Promise<Metadata> {
+  const customPageSlug = params.slug.join('/')
+
+  const customPageResponse = await getPageApi(customPageSlug)
+
+  const customPage = customPageResponse.data
+
+  if (!customPage) {
+    return notFound()
+  }
+
+  if (customPage.visibility === 'public') {
+    return {
+      title: customPage.title,
+      robots: 'index, follow',
+    }
+  }
+
+  return {
+    title: customPage.title,
+  }
+}
 
 export async function generateStaticParams(): Promise<CustomPageParams[]> {
   const pagesResponse = await getAllPagesApi()
