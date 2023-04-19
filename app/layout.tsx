@@ -28,16 +28,58 @@ const fontSourceSerifPro = Source_Serif_Pro({
   weight: ['200', '300', '400', '600', '700', '900'],
 })
 
+const description =
+  'Software Developer creating open source projects and writing on modern JavaScript, Node.js, Typescript and Graphql.'
+
+// Because OG images must have a absolute URL, we use the
+// `VERCEL_URL` environment variable to get the deployment’s URL.
+// More info:
+// https://vercel.com/docs/concepts/projects/environment-variables
+const image = `${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''}/api/og`
+
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    noimageindex: true,
+    indexifembedded: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      indexifembedded: false,
+    },
+  },
+  icons: {
+    icon: isotipo.src,
+  },
+  title: {
+    default: 'Yony Calsin - Software Developer',
+    template: '%s - Yony Calsin',
+  },
+  description,
+  openGraph: {
+    url: 'https://www.yonycalsin.com',
+    type: 'website',
+    title: 'Yony Calsin - Software Developer',
+    description,
+    siteName: 'Yony Calsin',
+    images: [{ url: image }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@yonycalsin',
+    title: 'Yony Calsin - Software Developer',
+    description,
+    images: [{ url: image }],
+  },
+}
+
 function Layout(props: AppLayoutProps) {
   const { children } = props
 
   return (
     <html lang="en" className={clsx(fontInter.variable, fontSourceSerifPro.variable)}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" href={isotipo.src} type="image/png" />
-      </head>
       <body className="bg-[#F8F7F3] text-gray-800 dark:bg-gray-900 dark:text-gray-300 text-base lg:text-lg">
         <MainLayout>{children}</MainLayout>
         <VercelInsights />

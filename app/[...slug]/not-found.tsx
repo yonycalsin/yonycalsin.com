@@ -1,10 +1,13 @@
+import Head from 'next/head'
+
 import NotFoundScreen from 'screens/not-found'
-import { Meta } from 'components'
 
 function NotFoundPage() {
   return (
     <>
-      <Meta title="Page not found" notRobots />
+      <Head>
+        <title>Page Not Found - Yony Calsin</title>
+      </Head>
       <NotFoundScreen />
     </>
   )

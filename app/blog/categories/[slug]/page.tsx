@@ -8,6 +8,13 @@ import { PageTransition } from 'components'
 
 export const dynamicParams = false
 
+export const metadata = {
+  /**
+   * TODO: make this dynamic using 'generateMetadata' method
+   */
+  title: 'Category',
+}
+
 export async function generateStaticParams(): Promise<BlogCategoryParams[]> {
   const response = await getCategoriesApi()
 
