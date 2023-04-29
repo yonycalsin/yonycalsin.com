@@ -5,10 +5,9 @@ import 'prism-theme-vars/base.css'
 import 'prism-theme-vars/themes/vitesse-dark.css'
 import '@runts/react/styles/editor-fonts.css'
 import '@runts/react/styles/runts-playground.css'
-import isotipo from 'assets/brand/images/isotipo.png'
 
-import { Inter, Source_Serif_Pro } from '@next/font/google'
 import clsx from 'clsx'
+import { Inter, Source_Serif_Pro } from 'next/font/google'
 import Script from 'next/script'
 
 import type { AppLayoutProps } from 'typings/app'
@@ -49,9 +48,6 @@ export const metadata = {
       noimageindex: true,
       indexifembedded: false,
     },
-  },
-  icons: {
-    icon: isotipo.src,
   },
   title: {
     default: 'Yony Calsin - Software Developer',
