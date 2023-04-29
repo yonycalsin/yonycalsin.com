@@ -42,7 +42,6 @@
     ]
   },
   "dependencies": {
-    "@next/font": "13.2.4",
     "@rqbazan/set-initial-color-mode": "1.2.0",
     "@runts/react": "2.2.0",
     "@tailwindcss/line-clamp": "0.4.2",
@@ -56,7 +55,7 @@
     "framer-motion": "10.6.0",
     "just-random": "3.2.0",
     "lodash": "4.17.21",
-    "next": "13.3.0",
+    "next": "13.3.1",
     "next-base64": "1.1.0",
     "next-connect": "0.13.0",
     "nextjs-cors": "2.1.2",
