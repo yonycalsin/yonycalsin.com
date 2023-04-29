@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 import type { ExternalAnchorProps } from 'typings/components'

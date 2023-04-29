@@ -38,11 +38,14 @@ const MDXComponents = {
    * Typography
    */
   br: (props: any) => <br {...props} />,
-  p: (props: any) => {
+  p: (props: React.PropsWithChildren) => {
     // We dont want to wrap a image with p tag
+    // @ts-expect-error ts(2339)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     if (isPlainObject(props.children) && !!props.children?.props?.src) {
-      return props.children
+      return props.children as JSX.Element
     }
+
     return <p className="my-5" {...props} />
   },
   ul: (props: any) => <UnorderedList className="my-6" {...props} />,

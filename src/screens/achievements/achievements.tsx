@@ -6,7 +6,7 @@ import { Achievements, Heading } from 'components'
 function AchievementsScreen() {
   const response = React.use(getAllAchievementsApi())
 
-  const achievementsData = response.data.results ?? []
+  const achievementsData = response.data.results
 
   return (
     <main className="container py-10 space-y-6">

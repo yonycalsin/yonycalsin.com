@@ -1,4 +1,5 @@
-import nextBase64 from 'next-base64'
+/* eslint-disable no-useless-escape */
+import { encode } from 'next-base64'
 
 import type { ExerciseResponsePayload, ServerListResponse } from 'typings/services'
 import { buildMdxRuntimeCode } from 'utils'
@@ -65,12 +66,12 @@ const allExercisesSuccess: ServerListResponse<ExerciseResponsePayload> = {
         ],
         body: {
           type: 'mdx',
-          code: nextBase64.encode(
+          code: encode(
             encodeURIComponent(
               encodeURIComponent(
                 buildMdxRuntimeCode(`jsx('div', {
                     children: \`
-                    Given an array of integers **nums** and an integer **target**, return _indices of the two numbers such that they add up to **target**_.
+                    Given an array of integers **nums** and an integer **target**, return _indices of the two numbers such that they add up to **target**_.
     
                     You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
                     
@@ -99,7 +100,7 @@ const allExercisesSuccess: ServerListResponse<ExerciseResponsePayload> = {
                     - **-109 <= target <= 109**
                     - **Only one valid answer exists.**
                     
-                    **Follow-up:** Can you come up with an algorithm that is less than **O(n2)** time complexity?
+                    **Follow-up:** Can you come up with an algorithm that is less than **O(n2)** time complexity?
                     \`
                   })`),
               ),

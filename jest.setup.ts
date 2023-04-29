@@ -6,24 +6,24 @@ import * as React from 'react'
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
-import dayjs from 'dayjs'
+import { extend } from 'dayjs'
 import isToday from 'dayjs/plugin/isToday'
 import isYesterday from 'dayjs/plugin/isYesterday'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
 
-dayjs.extend(utc)
+extend(utc)
 
-dayjs.extend(timezone)
+extend(timezone)
 
-dayjs.extend(isToday)
+extend(isToday)
 
-dayjs.extend(isYesterday)
+extend(isYesterday)
 
 beforeAll(() => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: jest.fn().mockImplementation((query: string) => ({
       matches: false,
       media: query,
       onchange: null,
@@ -44,11 +44,12 @@ beforeAll(() => {
  */
 jest.mock('react', () => {
   return {
-    ...jest.requireActual('react'),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    use: (promise: any) => {
+    ...jest.requireActual<typeof import('react')>('react'),
+    use: (promise: Promise<never>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (typeof promise?.then === 'function') {
-        return promise.value
+        // @ts-expect-error TS2339
+        return promise.value as never
       }
 
       return promise
@@ -68,35 +69,35 @@ jest.mock('react-medium-image-zoom', () => ({
  * Override the env object
  */
 jest.mock('utils/constants/shared', () => {
-  const exports = jest.requireActual('utils/constants/shared')
+  const exports = jest.requireActual<typeof import('utils/constants/shared')>('utils/constants/shared')
 
   const ENV = new Proxy({} as never, {
     get(_, prop: string) {
       const ENV_DATA: Record<string, unknown> = {
-        APP_ENV: process.env.APP_ENV || 'development',
+        APP_ENV: process.env.APP_ENV ?? 'development',
         GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
         IS_ENV_DEV: process.env.NODE_ENV === 'development',
         IS_ENV_PROD: process.env.NODE_ENV === 'production',
-        REST_API_URL: process.env.REST_API_URL as string,
-        REST_API_PUBLIC_KEY: process.env.REST_API_PUBLIC_KEY as string,
-        REST_API_MOCKING: process.env.REST_API_MOCKING ? JSON.parse(process.env.REST_API_MOCKING) : null,
+        REST_API_URL: process.env.REST_API_URL,
+        REST_API_PUBLIC_KEY: process.env.REST_API_PUBLIC_KEY,
+        REST_API_MOCKING: process.env.REST_API_MOCKING === 'true',
 
         /**
          * Feature Flags
          * this is a list of flags that can be toggled on and off temporarily
          */
-        FF_RESUME: process.env.FF_RESUME ? JSON.parse(process.env.FF_RESUME) : false,
-        FF_BLOG: process.env.FF_BLOG ? JSON.parse(process.env.FF_BLOG) : false,
-        FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS ? JSON.parse(process.env.FF_OSS_PROJECTS) : false,
-        FF_BOOKS: process.env.FF_BOOKS ? JSON.parse(process.env.FF_BOOKS) : false,
-        FF_PROJECTS: process.env.FF_PROJECTS ? JSON.parse(process.env.FF_PROJECTS) : false,
-        FF_ACHIEVEMENTS: process.env.FF_ACHIEVEMENTS ? JSON.parse(process.env.FF_ACHIEVEMENTS) : false,
-        FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS ? JSON.parse(process.env.FF_RECOMMENDATIONS) : false,
-        FF_PINNED_PROJECTS: process.env.FF_PINNED_PROJECTS ? JSON.parse(process.env.FF_PINNED_PROJECTS) : false,
-        FF_SNIPPETS: process.env.FF_SNIPPETS ? JSON.parse(process.env.FF_SNIPPETS) : false,
-        FF_USES: process.env.FF_USES ? JSON.parse(process.env.FF_USES) : false,
-        FF_FAQ: process.env.FF_FAQ ? JSON.parse(process.env.FF_FAQ) : false,
-        FF_EXERCISES: process.env.FF_EXERCISES ? JSON.parse(process.env.FF_EXERCISES) : false,
+        FF_RESUME: process.env.FF_RESUME === 'true',
+        FF_BLOG: process.env.FF_BLOG === 'true',
+        FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS === 'true',
+        FF_BOOKS: process.env.FF_BOOKS === 'true',
+        FF_PROJECTS: process.env.FF_PROJECTS === 'true',
+        FF_ACHIEVEMENTS: process.env.FF_ACHIEVEMENTS === 'true',
+        FF_RECOMMENDATIONS: process.env.FF_RECOMMENDATIONS === 'true',
+        FF_PINNED_PROJECTS: process.env.FF_PINNED_PROJECTS === 'true',
+        FF_SNIPPETS: process.env.FF_SNIPPETS === 'true',
+        FF_USES: process.env.FF_USES === 'true',
+        FF_FAQ: process.env.FF_FAQ === 'true',
+        FF_EXERCISES: process.env.FF_EXERCISES === 'true',
       }
 
       return ENV_DATA[prop]

@@ -7,7 +7,8 @@ const env = {
   /**
    * Webhooks
    */
-  REVALIDATE_WEBHOOKS_PUBLIC_KEY: process.env.REVALIDATE_WEBHOOKS_PUBLIC_KEY as string,
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  REVALIDATE_WEBHOOKS_PUBLIC_KEY: process.env.REVALIDATE_WEBHOOKS_PUBLIC_KEY!,
 }
 
 export default env

@@ -4,7 +4,7 @@ import * as React from 'react'
 import { RuntsPlayground, useDefineLightPlaygroundThemes } from '@runts/react'
 import vitesseDark from '@runts/react/themes/vitesse-dark.json'
 import dayjs from 'dayjs'
-import nextBase64 from 'next-base64'
+import { decode } from 'next-base64'
 
 import type { ExerciseScreenProps } from 'typings/screens'
 import { useMDXComponent } from 'hooks'
@@ -16,7 +16,7 @@ function ExerciseScreen(props: ExerciseScreenProps) {
 
   const solution = exercise.solutions[0]
 
-  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(exercise.body.code))))
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(decode(exercise.body.code))))
 
   useDefineLightPlaygroundThemes([vitesseDark])
 

@@ -8,7 +8,6 @@ import Zoom from 'react-medium-image-zoom'
 function ZoomImage(props: any) {
   return (
     <Zoom>
-      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <img {...props} />
     </Zoom>
   )

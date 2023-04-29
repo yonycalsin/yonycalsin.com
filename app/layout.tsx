@@ -6,7 +6,7 @@ import 'prism-theme-vars/themes/vitesse-dark.css'
 import '@runts/react/styles/editor-fonts.css'
 import '@runts/react/styles/runts-playground.css'
 
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { Inter, Source_Serif_Pro } from 'next/font/google'
 import Script from 'next/script'
 
@@ -79,7 +79,7 @@ function Layout(props: AppLayoutProps) {
       <body className="bg-[#F8F7F3] text-gray-800 dark:bg-gray-900 dark:text-gray-300 text-base lg:text-lg">
         <MainLayout>{children}</MainLayout>
         <VercelInsights />
-        {IS_PRODUCTION && (
+        {IS_PRODUCTION && ENV.GOOGLE_ANALYTICS_ID && (
           <>
             <Script
               strategy="afterInteractive"

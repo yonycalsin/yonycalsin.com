@@ -33,7 +33,7 @@ export async function getPostApi(postSlug: string) {
     },
   })
 
-  const payload = await formatResponse<ServerResponse<PostResponsePayload>>(response)
+  const payload = await formatResponse<ServerResponse<PostResponsePayload | null>>(response)
 
   return payload
 }

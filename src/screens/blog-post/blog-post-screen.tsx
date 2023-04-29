@@ -3,7 +3,7 @@
 import * as React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
-import nextBase64 from 'next-base64'
+import { decode } from 'next-base64'
 
 import type { BlogPostScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
@@ -13,7 +13,7 @@ import { DATE_FORMATS } from 'utils/constants'
 function BlogPostScreen(props: BlogPostScreenProps) {
   const { post } = props
 
-  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(post.body.code))))
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(decode(post.body.code))))
 
   return (
     <div className="container py-10 space-y-6">

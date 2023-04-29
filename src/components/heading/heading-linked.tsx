@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 import type { HeadingLinkedProps } from 'typings/components'
 import { Anchor } from 'components/anchor'

@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 import type { HeadingProps } from 'typings/components'
 import headingStyles from './heading.styles'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import { BsLink } from 'react-icons/bs'
 import { FaNpm } from 'react-icons/fa'

@@ -7,7 +7,7 @@ import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, ListI
 function BlogScreen() {
   const postsResponse = React.use(getPostsApi())
 
-  const posts = postsResponse.data.results ?? []
+  const posts = postsResponse.data.results
 
   return (
     <div className="container py-10 space-y-6">

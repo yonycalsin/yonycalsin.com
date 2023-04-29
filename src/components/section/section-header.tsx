@@ -8,6 +8,7 @@ function SectionHeader(props: SectionHeaderProps) {
     title,
     actionHref,
     actionLabel,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     actionComponent: ActionComponent = 'a',
     actionHrefExternal = false,
     children,

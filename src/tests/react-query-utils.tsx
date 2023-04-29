@@ -15,6 +15,7 @@ const queryClientConfig: QueryClientConfig = {
     error: () => {},
     //   eslint-disable-next-line no-console
     log: console.log,
+    // eslint-disable-next-line no-console
     warn: console.warn,
   },
 }
@@ -33,7 +34,7 @@ function setupWithReactQuery(children: React.ReactNode) {
 /**
  * @deprecated
  */
-function ReactQueryWrapper(props: React.PropsWithChildren<unknown>) {
+function ReactQueryWrapper(props: React.PropsWithChildren) {
   const { children } = props
 
   const queryClient = new QueryClient(queryClientConfig)

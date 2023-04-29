@@ -1,6 +1,6 @@
 import type { DefaultBodyType, PathParams, ResponseComposition, RestContext, RestRequest } from 'msw'
 
-type MockRequest<Body extends DefaultBodyType = never, Params extends PathParams = PathParams<string>> = RestRequest<
+type MockRequest<Body extends DefaultBodyType = never, Params extends PathParams = PathParams> = RestRequest<
   Body,
   Params
 >

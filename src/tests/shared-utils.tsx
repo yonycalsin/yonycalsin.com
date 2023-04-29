@@ -13,7 +13,7 @@ const TEST_ENVS = { ...process.env }
 
 function overrideFeatures(features: Partial<Record<Features, boolean>> = {}) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const overrides = {} as any
+  const overrides = {} as Record<string, any>
 
   for (const [, featureEnv] of Object.entries(Features)) {
     const value = features[featureEnv as Features]

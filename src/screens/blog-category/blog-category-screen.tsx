@@ -2,7 +2,7 @@
 
 import dayjs from 'dayjs'
 import Link from 'next/link'
-import nextBase64 from 'next-base64'
+import { decode } from 'next-base64'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
@@ -21,7 +21,7 @@ import { DATE_FORMATS } from 'utils/constants'
 function BlogCategoryScreen(props: BlogCategoryScreenProps) {
   const { category, posts } = props
 
-  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(category.body.code))))
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(decode(category.body.code))))
 
   return (
     <main className="container py-10 space-y-6">
