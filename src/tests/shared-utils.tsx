@@ -1,13 +1,4 @@
-import * as React from 'react'
-
-import type { MainTestProviderProps } from 'typings/tests'
 import { Features } from 'utils/constants'
-
-function TestProvider(props: MainTestProviderProps) {
-  const { children } = props
-
-  return <>{children}</>
-}
 
 const TEST_ENVS = { ...process.env }
 
@@ -28,4 +19,4 @@ function overrideFeatures(features: Partial<Record<Features, boolean>> = {}) {
   return { ...TEST_ENVS, ...overrides }
 }
 
-export { overrideFeatures, TEST_ENVS, TestProvider }
+export { overrideFeatures, TEST_ENVS }

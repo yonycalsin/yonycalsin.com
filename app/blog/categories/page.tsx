@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import BlogCategoriesScreen from 'screens/blog-categories'
 import { PageTransition } from 'components'
 

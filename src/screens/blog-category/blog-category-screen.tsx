@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
 import { decode } from 'next-base64'
@@ -27,19 +28,19 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
     <main className="container py-10 space-y-6">
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" legacyBehavior={true} passHref={true}>
             <Anchor>Home</Anchor>
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/blog" legacyBehavior passHref>
+          <Link href="/blog" legacyBehavior={true} passHref={true}>
             <Anchor>Blog</Anchor>
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/blog/categories" legacyBehavior passHref>
+          <Link href="/blog/categories" legacyBehavior={true} passHref={true}>
             <Anchor>Categories</Anchor>
           </Link>
         </BreadcrumbItem>
@@ -57,7 +58,7 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
       <Component components={MDXComponents} />
       <UnorderedList role="list" aria-label="List of category's posts">
         {posts.map(post => (
-          <Link href={`/blog/${post.slug}`} key={post.title} passHref legacyBehavior>
+          <Link href={`/blog/${post.slug}`} key={post.title} passHref={true} legacyBehavior={true}>
             <Anchor>
               <ListItem>{post.title}</ListItem>
             </Anchor>

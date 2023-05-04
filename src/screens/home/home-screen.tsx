@@ -8,24 +8,24 @@ function HomeScreen() {
   return (
     <div className="container  py-10">
       <IntroductionSection />
-      {ENV.FF_PINNED_PROJECTS && (
+      {ENV.FF_PINNED_PROJECTS ? (
         <>
           <Divider className="my-6" />
           <PinnedProjects />
         </>
-      )}
-      {ENV.FF_ACHIEVEMENTS && (
+      ) : null}
+      {ENV.FF_ACHIEVEMENTS ? (
         <>
           <Divider className="my-6" />
           <FeaturedAchievements />
         </>
-      )}
-      {ENV.FF_RECOMMENDATIONS && (
+      ) : null}
+      {ENV.FF_RECOMMENDATIONS ? (
         <>
           <Divider className="my-6" />
           <FeaturedRecommendations />
         </>
-      )}
+      ) : null}
     </div>
   )
 }

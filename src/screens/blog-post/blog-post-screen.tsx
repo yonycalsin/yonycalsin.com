@@ -19,13 +19,13 @@ function BlogPostScreen(props: BlogPostScreenProps) {
     <div className="container py-10 space-y-6">
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" legacyBehavior={true} passHref={true}>
             <Anchor>Home</Anchor>
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/blog" legacyBehavior passHref>
+          <Link href="/blog" legacyBehavior={true} passHref={true}>
             <Anchor>Blog</Anchor>
           </Link>
         </BreadcrumbItem>

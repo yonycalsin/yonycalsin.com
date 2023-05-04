@@ -9,6 +9,7 @@ function Button(props: ButtonProps) {
 
   return (
     <button
+      type="button"
       className={clsx(
         buttonStyles({
           variant,

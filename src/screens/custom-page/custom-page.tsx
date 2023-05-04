@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from 'react'
 import { decode } from 'next-base64'
 
 import type { CustomPageScreenProps } from 'typings/screens'

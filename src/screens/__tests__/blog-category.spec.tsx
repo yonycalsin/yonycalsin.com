@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { render, screen, within } from '@testing-library/react'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'

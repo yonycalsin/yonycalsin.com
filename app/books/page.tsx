@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import BooksScreen from 'screens/books'
 import { PageTransition } from 'components'
 

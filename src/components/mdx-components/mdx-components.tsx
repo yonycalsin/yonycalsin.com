@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import { isPlainObject } from 'lodash'
@@ -11,7 +12,7 @@ import { MdxAnchor } from './components/anchor'
 import ZoomImage from './components/zoom-image'
 
 function RoundedImage(props: ImageProps) {
-  return <Image className="rounded-lg" {...props} alt={props.alt} />
+  return <Image className="rounded-lg" {...props} />
 }
 
 const MDXComponents = {

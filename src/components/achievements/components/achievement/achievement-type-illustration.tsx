@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import type { AchievementTypeIllustrationProps } from 'typings/components'
 import {
   AwardAchievementIllustration,

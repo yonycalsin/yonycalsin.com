@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { render, renderHook, screen } from '@testing-library/react'
 
 import { useMDXComponent } from 'hooks'

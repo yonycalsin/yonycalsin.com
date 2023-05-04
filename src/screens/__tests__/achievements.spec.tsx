@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { screen, within } from '@testing-library/react'
 
 import { achievementsSuccess } from 'mock-server/mocks'

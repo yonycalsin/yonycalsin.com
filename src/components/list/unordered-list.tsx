@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { clsx } from 'clsx'
 
 import type { UnorderedListProps } from 'typings/components'

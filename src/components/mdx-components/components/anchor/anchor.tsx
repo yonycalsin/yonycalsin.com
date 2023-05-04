@@ -11,7 +11,8 @@ const MdxAnchor = React.forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) 
     return (
       // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error, @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      <Link href={props.href} passHref legacyBehavior>
+      <Link href={props.href} passHref={true} legacyBehavior={true}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Anchor ref={ref} {...props} />
       </Link>
     )
@@ -22,6 +23,7 @@ const MdxAnchor = React.forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) 
       ref={ref}
       target={isNotExternal ? undefined : '_blank'}
       rel={isNotExternal ? undefined : 'noopener noreferrer'}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     />
   )

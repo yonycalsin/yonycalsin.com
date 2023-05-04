@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import type { SectionProps } from 'typings/components'
 
 function Section(props: SectionProps) {

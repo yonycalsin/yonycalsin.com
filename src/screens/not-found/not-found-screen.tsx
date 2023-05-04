@@ -10,15 +10,15 @@ function NotFoundScreen() {
         <Heading size="h1">😢</Heading>
         <Heading size="h1">Page not found</Heading>
         <div className="flex flex-col lg:flex-row gap-6 text-center">
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref={true} legacyBehavior={true}>
             <Anchor>Go to home</Anchor>
           </Link>
           <span className="hidden lg:block">•</span>
-          <Link href="/me" passHref legacyBehavior>
+          <Link href="/me" passHref={true} legacyBehavior={true}>
             <Anchor>Go to about-me page</Anchor>
           </Link>
           <span className="hidden lg:block">•</span>
-          <Link href="/projects" passHref legacyBehavior>
+          <Link href="/projects" passHref={true} legacyBehavior={true}>
             <Anchor>Go to projects page</Anchor>
           </Link>
         </div>

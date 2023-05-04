@@ -1,12 +1,13 @@
 module.exports = {
-  extends: ['@yonycalsin/typescript', '@yonycalsin/prettier', 'plugin:storybook/recommended'],
+  extends: [
+    '@yonycalsin/typescript',
+    '@yonycalsin/react',
+    'plugin:@next/next/recommended',
+    '@yonycalsin/prettier',
+    'plugin:storybook/recommended',
+  ],
   plugins: ['@yonycalsin/import-sort', 'import'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
     project: true,
     tsconfigRootDir: __dirname,
   },

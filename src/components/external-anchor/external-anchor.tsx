@@ -12,6 +12,7 @@ function ExternalAnchor(props: ExternalAnchorProps) {
   return (
     <span>
       <Anchor
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...restProps}
         className={clsx('inline-flex items-center', className)}
         target="_blank"
