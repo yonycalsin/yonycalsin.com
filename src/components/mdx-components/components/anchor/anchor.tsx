@@ -9,7 +9,8 @@ const MdxAnchor = React.forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) 
 
   if (isNotExternal && props.href) {
     return (
-      // @ts-expect-error ts(2322)
+      // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error, @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       <Link href={props.href} passHref legacyBehavior>
         <Anchor ref={ref} {...props} />
       </Link>
