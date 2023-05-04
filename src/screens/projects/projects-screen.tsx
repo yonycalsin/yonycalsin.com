@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from 'utils/constants'
 function ProjectsScreen() {
   const response = React.use(getAllProjectsApi())
 
-  const projects = response.data.results ?? []
+  const projects = response.data.results
 
   return (
     <main className="container py-10">
@@ -22,7 +22,6 @@ function ProjectsScreen() {
       </div>
       <ul
         className="space-y-12 relative before:content-[''] before:absolute before:top-0 before:left-4 lg:before:left-6 before:h-full before:w-1 before:bg-primary-600"
-        role="list"
         aria-label="List of projects"
       >
         {projects.map(project => (

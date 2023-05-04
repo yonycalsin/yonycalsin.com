@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import AchievementsScreen from 'screens/achievements'
 import { PageTransition } from 'components'
 

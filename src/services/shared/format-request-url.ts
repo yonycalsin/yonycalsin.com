@@ -13,6 +13,7 @@ function formatRequestUrl<T extends Record<string, any> = Record<string, any>>(e
       switch (typeof value) {
         case 'string': {
           url.searchParams.append(key, value)
+
           break
         }
 
@@ -20,14 +21,15 @@ function formatRequestUrl<T extends Record<string, any> = Record<string, any>>(e
         case 'boolean':
         case 'number': {
           url.searchParams.append(key, String(value))
+
           break
         }
 
         case 'object': {
           if (Array.isArray(value)) {
-            value.forEach(itemValue => url.searchParams.append(key, itemValue))
+            value.forEach((itemValue: string) => url.searchParams.append(key, itemValue))
           } else {
-            setSearchParams(value)
+            setSearchParams(value as T)
           }
 
           break

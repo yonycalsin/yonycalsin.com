@@ -1,3 +1,4 @@
+import * as React from 'react'
 import Head from 'next/head'
 
 import NotFoundScreen from 'screens/not-found'

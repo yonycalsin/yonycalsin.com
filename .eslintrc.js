@@ -1,35 +1,27 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'testing-library', '@yonycalsin/import-sort'],
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'next',
-    'next/core-web-vitals',
-    'prettier',
+    '@yonycalsin/typescript',
+    '@yonycalsin/react',
+    'plugin:@next/next/recommended',
+    '@yonycalsin/prettier',
     'plugin:storybook/recommended',
-    'plugin:import/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  plugins: ['@yonycalsin/import-sort', 'import'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    project: true,
+    tsconfigRootDir: __dirname,
   },
-  ignorePatterns: ['!.storybook'],
+  ignorePatterns: [
+    '.storybook',
+    'tailwind.config.js',
+    'next.config.js',
+    'postcss.config.js',
+    'jest.config.js',
+    'cypress.config.ts',
+    'cypress',
+  ],
   rules: {
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
     '@next/next/no-img-element': 'off',
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      {
-        'ts-expect-error': 'allow-with-description',
-        'ts-ignore': 'allow-with-description',
-        'ts-nocheck': true,
-        'ts-check': false,
-        minimumDescriptionLength: 3,
-      },
-    ],
     /**
      * @see https://github.com/jsx-eslint/eslint-plugin-react/issues/2628#issuecomment-984160944
      */
@@ -41,8 +33,7 @@ module.exports = {
       },
     ],
     '@next/next/no-head-element': 'off',
-    'import/no-named-as-default-member': 'off',
-    'import/named': 'off',
+    'import/namespace': 'off',
   },
   overrides: [
     {

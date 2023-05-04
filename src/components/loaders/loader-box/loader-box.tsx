@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import { Spinner } from 'components/spinner'
 import LoaderBoxWrapper from './loader-box-wrapper'
 

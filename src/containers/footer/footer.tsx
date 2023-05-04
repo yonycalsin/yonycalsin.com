@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-max-depth */
+import * as React from 'react'
 import Link from 'next/link'
 
 import { Anchor } from 'components'
@@ -16,12 +18,12 @@ function Footer() {
           </span>
           <ul className="flex flex-wrap gap-3 items-center justify-center">
             <li>
-              <Link href="/me" legacyBehavior passHref>
+              <Link href="/me" legacyBehavior={true} passHref={true}>
                 <Anchor>About</Anchor>
               </Link>
             </li>
             <li>
-              <Link href="/contact" legacyBehavior passHref>
+              <Link href="/contact" legacyBehavior={true} passHref={true}>
                 <Anchor>Contact</Anchor>
               </Link>
             </li>

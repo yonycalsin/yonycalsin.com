@@ -1,5 +1,5 @@
 function normalizeDisplayUrl(url: string) {
-  return url.replace(/(^(https\:\/\/)|^(http\:\/\/))|(\/)$/g, '')
+  return url.replace(/(^(https:\/\/)|^(http:\/\/))|(\/)$/g, '')
 }
 
 export default normalizeDisplayUrl

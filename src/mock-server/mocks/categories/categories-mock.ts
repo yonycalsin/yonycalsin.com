@@ -1,4 +1,4 @@
-import nextBase64 from 'next-base64'
+import { encode } from 'next-base64'
 
 import type { CategoryResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
 import { buildMdxRuntimeCode } from 'utils'
@@ -11,7 +11,7 @@ const categoriesSuccess: ServerListResponse<CategoryResponsePayload> = {
         slug: 'programing',
         body: {
           type: 'mdx',
-          code: nextBase64.encode(
+          code: encode(
             encodeURIComponent(
               encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Category: Programing'})`)),
             ),
@@ -38,7 +38,7 @@ const categorySuccess: ServerResponse<CategoryResponsePayload> = {
     slug: 'cracking-the-coding-interview',
     body: {
       type: 'mdx',
-      code: nextBase64.encode(
+      code: encode(
         encodeURIComponent(
           encodeURIComponent(
             buildMdxRuntimeCode(`jsx('div', {

@@ -25,7 +25,7 @@ async function getExerciseApi(exerciseSlug: string) {
     },
   })
 
-  const payload = await formatResponse<ServerResponse<ExerciseResponsePayload>>(response)
+  const payload = await formatResponse<ServerResponse<ExerciseResponsePayload | null>>(response)
 
   return payload
 }

@@ -8,8 +8,8 @@ import BadRequestException from '../../Shared/Http/Exceptions/BadRequestExceptio
 import UnauthorizedException from '../../Shared/Http/Exceptions/UnauthorizedException'
 
 class WebhookMiddleware implements Middleware {
-  public async execute(request: HttpRequest, response: HttpResponse, next: HttpNextHandler): Promise<void> {
-    const secret = request.headers.public_key || request.query.public_key
+  public execute(request: HttpRequest, response: HttpResponse, next: HttpNextHandler): void {
+    const secret = request.headers.public_key ?? request.query.public_key
 
     if (!secret) {
       throw new UnauthorizedException('Public key is required')

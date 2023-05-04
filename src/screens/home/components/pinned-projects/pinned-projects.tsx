@@ -8,7 +8,7 @@ import { SectionHeader } from 'components'
 function PinnedProjects() {
   const response = React.use(getPinnedProjectsApi())
 
-  const pinnedProjects = response?.data?.results ?? []
+  const pinnedProjects = response.data.results
 
   return (
     <div className="py-3 space-y-3">

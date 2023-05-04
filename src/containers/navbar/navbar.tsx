@@ -1,5 +1,6 @@
 import isotipo from 'assets/brand/images/isotipo.png'
 
+import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -20,21 +21,21 @@ function Navbar() {
           <Link href="/me" legacyBehavior={true} passHref={true}>
             <Anchor>About Me</Anchor>
           </Link>
-          {ENV.FF_FAQ && (
+          {ENV.FF_FAQ ? (
             <Link href="/faq" legacyBehavior={true} passHref={true}>
               <Anchor>FAQ</Anchor>
             </Link>
-          )}
-          {ENV.FF_USES && (
+          ) : null}
+          {ENV.FF_USES ? (
             <Link href="/uses" legacyBehavior={true} passHref={true}>
               <Anchor className="hidden lg:inline-block">Uses</Anchor>
             </Link>
-          )}
-          {ENV.FF_SNIPPETS && (
+          ) : null}
+          {ENV.FF_SNIPPETS ? (
             <Link href="/blog/categories/snippet" legacyBehavior={true} passHref={true}>
               <Anchor className="hidden lg:inline-block">Snippets</Anchor>
             </Link>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

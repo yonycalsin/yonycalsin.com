@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 import type { BlockquoteProps } from 'typings/components'
 
@@ -22,6 +22,7 @@ function Blockquote(props: BlockquoteProps) {
           return null
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         return React.cloneElement(child, {
           style: {
             margin: 0,

@@ -1,8 +1,9 @@
 'use client'
 
+import * as React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
-import nextBase64 from 'next-base64'
+import { decode } from 'next-base64'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
 import useMDXComponent from 'hooks/use-mdx-component'
@@ -21,25 +22,25 @@ import { DATE_FORMATS } from 'utils/constants'
 function BlogCategoryScreen(props: BlogCategoryScreenProps) {
   const { category, posts } = props
 
-  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(nextBase64.decode(category.body.code))))
+  const Component = useMDXComponent(decodeURIComponent(decodeURIComponent(decode(category.body.code))))
 
   return (
     <main className="container py-10 space-y-6">
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" legacyBehavior={true} passHref={true}>
             <Anchor>Home</Anchor>
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/blog" legacyBehavior passHref>
+          <Link href="/blog" legacyBehavior={true} passHref={true}>
             <Anchor>Blog</Anchor>
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/blog/categories" legacyBehavior passHref>
+          <Link href="/blog/categories" legacyBehavior={true} passHref={true}>
             <Anchor>Categories</Anchor>
           </Link>
         </BreadcrumbItem>
@@ -57,7 +58,7 @@ function BlogCategoryScreen(props: BlogCategoryScreenProps) {
       <Component components={MDXComponents} />
       <UnorderedList role="list" aria-label="List of category's posts">
         {posts.map(post => (
-          <Link href={`/blog/${post.slug}`} key={post.title} passHref legacyBehavior>
+          <Link href={`/blog/${post.slug}`} key={post.title} passHref={true} legacyBehavior={true}>
             <Anchor>
               <ListItem>{post.title}</ListItem>
             </Anchor>

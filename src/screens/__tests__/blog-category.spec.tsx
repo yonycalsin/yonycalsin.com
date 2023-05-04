@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { render, screen, within } from '@testing-library/react'
 
 import type { BlogCategoryScreenProps } from 'typings/screens'
@@ -39,7 +40,7 @@ describe('BlogCategoryScreen', () => {
   it("renders the list of category's posts", () => {
     const view = setup(MOCK_POSTS)
 
-    const list = screen.getByRole('list', { name: /list of category\'s posts/i })
+    const list = screen.getByRole('list', { name: /list of category's posts/i })
 
     const items = within(list).getAllByRole('listitem')
 

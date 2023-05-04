@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 import type { ButtonProps } from 'typings/components'
 import buttonStyles from './button.styles'
@@ -9,6 +9,7 @@ function Button(props: ButtonProps) {
 
   return (
     <button
+      type="button"
       className={clsx(
         buttonStyles({
           variant,

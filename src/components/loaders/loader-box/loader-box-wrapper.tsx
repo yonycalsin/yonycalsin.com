@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import type { LoaderBoxWrapperProps } from 'typings/components'
 
 function LoaderBoxWrapper(props: LoaderBoxWrapperProps) {

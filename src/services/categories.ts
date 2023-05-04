@@ -25,7 +25,7 @@ export async function getCategoryApi(categorySlug: string) {
     },
   })
 
-  const payload = await formatResponse<ServerResponse<CategoryResponsePayload>>(response)
+  const payload = await formatResponse<ServerResponse<CategoryResponsePayload | null>>(response)
 
   return payload
 }

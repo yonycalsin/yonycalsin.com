@@ -13,15 +13,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"],
       "~/server*": ["./server*"]
     },
-    "incremental": true,
     "noImplicitOverride": true,
-    "strictPropertyInitialization": false,
-    "plugins": [{ "name": "next" }]
+    "strictPropertyInitialization": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "./cypress.config.ts", "cypress"]

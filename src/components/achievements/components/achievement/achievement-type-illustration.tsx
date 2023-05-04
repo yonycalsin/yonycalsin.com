@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import type { AchievementTypeIllustrationProps } from 'typings/components'
 import {
   AwardAchievementIllustration,
@@ -28,6 +30,7 @@ function AchievementTypeIllustration(props: AchievementTypeIllustrationProps) {
     }
 
     default: {
+      // eslint-disable-next-line no-console
       console.error(new UnsupportedValueError(type))
 
       return null

@@ -1,7 +1,7 @@
 import initWorker from './mock-server-browser'
 import initServer from './mock-server-node'
 
-export function initMocks() {
+export async function initMocks() {
   if (typeof window === 'undefined') {
     // const { server } = await import('./mock-server-node')
 
@@ -13,6 +13,6 @@ export function initMocks() {
 
     // worker.start()
 
-    initWorker().start()
+    await initWorker().start()
   }
 }

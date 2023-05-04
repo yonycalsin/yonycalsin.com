@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import HomeScreen from 'screens/home'
 import { PageTransition } from 'components'
 

@@ -2,6 +2,7 @@
 
 import 'react-medium-image-zoom/dist/styles.css'
 
+import * as React from 'react'
 import Zoom from 'react-medium-image-zoom'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -34,6 +34,7 @@ class ErrorHandlerMiddleware {
 
     // prettier-ignore
     logger('error message: ',(errorException as InternalServerErrorException).innerError?.message ?? errorException.message)
+
     logger('error stack: ', (errorException as InternalServerErrorException).innerError?.stack ?? errorException.stack)
 
     if (errorException instanceof HttpException) {

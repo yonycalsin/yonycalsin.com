@@ -1,4 +1,5 @@
-import clsx from 'clsx'
+import * as React from 'react'
+import { clsx } from 'clsx'
 
 import type { HeadingProps } from 'typings/components'
 import headingStyles from './heading.styles'

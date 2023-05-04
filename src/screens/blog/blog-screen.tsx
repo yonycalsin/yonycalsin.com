@@ -7,13 +7,13 @@ import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading, ListI
 function BlogScreen() {
   const postsResponse = React.use(getPostsApi())
 
-  const posts = postsResponse.data.results ?? []
+  const posts = postsResponse.data.results
 
   return (
     <div className="container py-10 space-y-6">
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" legacyBehavior={true} passHref={true}>
             <Anchor>Home</Anchor>
           </Link>
         </BreadcrumbItem>
@@ -31,7 +31,7 @@ function BlogScreen() {
       </div>
       <UnorderedList role="list" aria-label="List of posts">
         {posts.map(post => (
-          <Link href={`/blog/${post.slug}`} key={post.slug} passHref legacyBehavior>
+          <Link href={`/blog/${post.slug}`} key={post.slug} passHref={true} legacyBehavior={true}>
             <Anchor>
               <ListItem>{post.title}</ListItem>
             </Anchor>

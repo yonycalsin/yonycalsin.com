@@ -43,7 +43,7 @@ abstract class HttpException extends Error {
     messageOrOptions: HttpExceptionConstructorOptions,
   ): HttpExceptionOptions {
     const options = {
-      statusCode: statusCode,
+      statusCode,
       message: messageOrOptions,
     } as HttpExceptionOptions
 
@@ -57,8 +57,14 @@ abstract class HttpException extends Error {
   private initMessage(message?: string) {
     if (_.isString(message)) {
       this.message = message
-    } else if (this.constructor) {
-      this.message = this.constructor.name.match(/[A-Z][a-z]+|[0-9]+/g)?.join(' ') as string
+
+      return
+    }
+
+    const newMessage = this.constructor.name.match(/[A-Z][a-z]+|[0-9]+/g)?.join(' ')
+
+    if (newMessage) {
+      this.message = newMessage
     }
   }
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const tsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const prettierConfig = require('../.prettierrc')

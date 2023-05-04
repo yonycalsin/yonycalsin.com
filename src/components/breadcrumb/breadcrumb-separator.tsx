@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { BsChevronCompactRight } from 'react-icons/bs'
 
 import { Icon } from 'components/icon'

@@ -25,7 +25,7 @@ async function getPageApi(pageSlug: string) {
     },
   })
 
-  const payload = formatResponse<ServerResponse<PageResponsePayload>>(response)
+  const payload = formatResponse<ServerResponse<PageResponsePayload | null>>(response)
 
   return payload
 }

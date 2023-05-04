@@ -1,4 +1,4 @@
-import nextBase64 from 'next-base64'
+import { encode } from 'next-base64'
 
 import type { PageResponsePayload, ServerListResponse, ServerResponse } from 'typings/services'
 import { buildMdxRuntimeCode } from 'utils'
@@ -13,7 +13,7 @@ const allPagesSuccess: ServerListResponse<PageResponsePayload> = {
         visibility: 'public',
         body: {
           type: 'mdx',
-          code: nextBase64.encode(
+          code: encode(
             encodeURIComponent(
               encodeURIComponent(
                 buildMdxRuntimeCode(`jsx('div', {
@@ -41,7 +41,7 @@ const allPagesSuccess: ServerListResponse<PageResponsePayload> = {
         visibility: 'public',
         body: {
           type: 'mdx',
-          code: nextBase64.encode(
+          code: encode(
             encodeURIComponent(
               encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Page: Frequent Questions'})`)),
             ),
@@ -56,7 +56,7 @@ const allPagesSuccess: ServerListResponse<PageResponsePayload> = {
         visibility: 'public',
         body: {
           type: 'mdx',
-          code: nextBase64.encode(
+          code: encode(
             encodeURIComponent(encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Page: Uses'})`))),
           ),
         },
@@ -82,7 +82,7 @@ const pageSuccess: ServerResponse<PageResponsePayload> = {
     visibility: 'public',
     body: {
       type: 'mdx',
-      code: nextBase64.encode(
+      code: encode(
         encodeURIComponent(encodeURIComponent(buildMdxRuntimeCode(`jsx('h1', { children: 'Page: Mock Page'})`))),
       ),
     },

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import { BsLink } from 'react-icons/bs'
 import { FaNpm } from 'react-icons/fa'
@@ -32,7 +32,7 @@ function WorkItem(props: WorkItemProps) {
   }, [type])
 
   return (
-    <li id={slug} role="listitem" aria-label="Project Item">
+    <li id={slug} aria-label="Project Item">
       <div
         className={clsx(
           'shadow-lg absolute h-9 lg:h-12 w-9 lg:w-12 flex items-center justify-center rounded-full p-3',
@@ -51,7 +51,7 @@ function WorkItem(props: WorkItemProps) {
         <p>{description}</p>
         <div>
           <ul className="space-y-0 lg:space-y-1">
-            {webHref && (
+            {webHref ? (
               <li>
                 <Anchor href={webHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
                   <Icon className="text-secondary-900">
@@ -60,8 +60,8 @@ function WorkItem(props: WorkItemProps) {
                   Visit {normalizeDisplayUrl(webHref)}
                 </Anchor>
               </li>
-            )}
-            {repositoryHref && (
+            ) : null}
+            {repositoryHref ? (
               <li>
                 <Anchor href={repositoryHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
                   <Icon className="text-gray-900">
@@ -70,8 +70,8 @@ function WorkItem(props: WorkItemProps) {
                   View source code
                 </Anchor>
               </li>
-            )}
-            {packageHref && (
+            ) : null}
+            {packageHref ? (
               <li>
                 <Anchor href={packageHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
                   <Icon className="text-error-900">
@@ -80,7 +80,7 @@ function WorkItem(props: WorkItemProps) {
                   View package
                 </Anchor>
               </li>
-            )}
+            ) : null}
           </ul>
         </div>
         <div className="flex gap-2 flex-wrap">

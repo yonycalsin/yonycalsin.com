@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import { isPlainObject } from 'lodash'
@@ -11,7 +12,7 @@ import { MdxAnchor } from './components/anchor'
 import ZoomImage from './components/zoom-image'
 
 function RoundedImage(props: ImageProps) {
-  return <Image className="rounded-lg" {...props} alt={props.alt} />
+  return <Image className="rounded-lg" {...props} />
 }
 
 const MDXComponents = {
@@ -38,11 +39,14 @@ const MDXComponents = {
    * Typography
    */
   br: (props: any) => <br {...props} />,
-  p: (props: any) => {
+  p: (props: React.PropsWithChildren) => {
     // We dont want to wrap a image with p tag
+    // @ts-expect-error ts(2339)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     if (isPlainObject(props.children) && !!props.children?.props?.src) {
-      return props.children
+      return props.children as JSX.Element
     }
+
     return <p className="my-5" {...props} />
   },
   ul: (props: any) => <UnorderedList className="my-6" {...props} />,

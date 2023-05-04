@@ -1,5 +1,5 @@
 import * as React from 'react'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 import type { ExternalAnchorProps } from 'typings/components'
@@ -12,6 +12,7 @@ function ExternalAnchor(props: ExternalAnchorProps) {
   return (
     <span>
       <Anchor
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...restProps}
         className={clsx('inline-flex items-center', className)}
         target="_blank"

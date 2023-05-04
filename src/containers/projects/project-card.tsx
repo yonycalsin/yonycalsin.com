@@ -24,11 +24,11 @@ function ProjectCard(props: ProjectCardProps) {
       >
         <div className="space-y-3">
           <div className="flex flex-row items-center space-x-3">
-            {ProjectIcon && (
+            {ProjectIcon ? (
               <Icon className={colors.fill}>
                 <ProjectIcon />
               </Icon>
-            )}
+            ) : null}
             <Heading size="h5" className="line-clamp-1">
               {project.name}
             </Heading>
