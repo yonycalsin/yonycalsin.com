@@ -11,7 +11,7 @@ jobs:
       matrix:
         node: [16.14.0]
         os: [ubuntu-latest]
-        pnpm: [7.29.3]
+        pnpm: [7.30.3]
 
     steps:
       - name: Checkout Repo
