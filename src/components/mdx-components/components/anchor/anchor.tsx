@@ -9,7 +9,7 @@ const MdxAnchor = React.forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) 
 
   if (isNotExternal && props.href) {
     return (
-      // @ts-expect-error TS2322
+      // @ts-expect-error ts(2322)
       <Link href={props.href} passHref legacyBehavior>
         <Anchor ref={ref} {...props} />
       </Link>

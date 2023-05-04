@@ -48,7 +48,7 @@ jest.mock('react', () => {
     use: (promise: Promise<never>) => {
       // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (typeof promise?.then === 'function') {
-        // @ts-expect-error TS2339
+        // @ts-expect-error ts(2339)
         return promise.value as never
       }
 
