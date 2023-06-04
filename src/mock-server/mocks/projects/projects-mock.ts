@@ -1,10 +1,9 @@
 import {
   ProjectMaintenanceStatusResponsePayload,
-  ProjectResponsePayload,
   ProjectStatusResponsePayload,
   ProjectTypeResponsePayload,
-  ServerListResponse,
 } from 'typings/services'
+import type { ProjectResponsePayload, ServerListResponse } from 'typings/services'
 
 const allProjectsSuccess: ServerListResponse<ProjectResponsePayload> = {
   error: null,

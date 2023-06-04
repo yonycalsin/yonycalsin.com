@@ -1,3 +1,7 @@
+:root {
+  --prism-background: theme(colors.secondary.DEFAULT) !important;
+}
+
 .code-highlight {
   float: left;
   width: 100%;
@@ -15,12 +19,12 @@
 
 .code-line.inserted {
   /* Set inserted line (+) color */
-  /* background-color: rgba(16, 185, 129, 0.2); */
+  background-color: rgba(16, 185, 129, 0.2);
 }
 
 .code-line.deleted {
   /* Set deleted line (-) color */
-  /* background-color: rgba(239, 68, 68, 0.2); */
+  background-color: rgba(239, 68, 68, 0.2);
 }
 
 .highlight-line {
@@ -43,8 +47,4 @@
 
 pre[class*='language-'] {
   border-radius: 0.3rem;
-}
-
-html.dark {
-  --prism-background: theme(colors.gray.800) !important;
 }

@@ -1,4 +1,5 @@
-import { QueryKey, useQueryClient } from '@tanstack/react-query'
+import type { QueryKey } from '@tanstack/react-query'
+import { useQueryClient } from '@tanstack/react-query'
 
 function useQueryCache<T = unknown>(queryKey: QueryKey) {
   const queryClient = useQueryClient()

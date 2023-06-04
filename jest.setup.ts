@@ -1,11 +1,11 @@
-import * as React from 'react'
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 // Optional: configure or set up a testing framework before each test.
 // If you delete this file, remove `setupFilesAfterEnv` from `jest.config.js`
-
 // Used for __tests__/testing-library.js
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
+import * as React from 'react'
 import { extend } from 'dayjs'
 import isToday from 'dayjs/plugin/isToday'
 import isYesterday from 'dayjs/plugin/isYesterday'

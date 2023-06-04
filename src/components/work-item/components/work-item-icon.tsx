@@ -35,36 +35,36 @@ export function getWorkItemColors(projectType: WorkItemIconProps['projectType'])
   switch (projectType) {
     case ProjectTypeResponsePayload.PROJECT: {
       return {
-        fill: 'fill-secondary-900',
-        backgroundColor: 'bg-secondary-100',
+        fill: 'fill-cyan-900',
+        backgroundColor: 'bg-cyan-100',
       }
     }
 
     case ProjectTypeResponsePayload.PACKAGE: {
       return {
-        fill: 'fill-error-900',
-        backgroundColor: 'bg-error-100',
+        fill: 'fill-red-900',
+        backgroundColor: 'bg-red-100',
       }
     }
 
     case ProjectTypeResponsePayload.CONTRIBUTION: {
       return {
-        fill: 'fill-success-900',
-        backgroundColor: 'bg-success-100',
+        fill: 'fill-green-900',
+        backgroundColor: 'bg-green-100',
       }
     }
 
     case ProjectTypeResponsePayload.TEMPLATE: {
       return {
-        fill: 'fill-warning-900',
-        backgroundColor: 'bg-warning-100',
+        fill: 'fill-orange-900',
+        backgroundColor: 'bg-orange-100',
       }
     }
 
     default: {
       return {
-        fill: 'fill-primary-900',
-        backgroundColor: 'bg-primary-100',
+        fill: 'fill-blue-900',
+        backgroundColor: 'bg-blue-100',
       }
     }
   }

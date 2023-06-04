@@ -21,7 +21,7 @@ function ProjectsScreen() {
         </p>
       </div>
       <ul
-        className="space-y-12 relative before:content-[''] before:absolute before:top-0 before:left-4 lg:before:left-6 before:h-full before:w-1 before:bg-primary-600"
+        className="space-y-12 relative before:content-[''] before:absolute before:top-0 before:left-4 lg:before:left-6 before:h-full before:w-1 before:bg-gradient-to-t before:from-destructive before:via-primary before:to-destructive"
         aria-label="List of projects"
       >
         {projects.map(project => (

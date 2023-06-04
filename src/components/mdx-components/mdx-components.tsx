@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import type { ImageProps } from 'next/image'
 import * as React from 'react'
 import { isPlainObject } from 'lodash'
-import Image, { ImageProps } from 'next/image'
+import Image from 'next/image'
 
 import { Blockquote } from 'components/blockquote'
 import { Divider } from 'components/divider'

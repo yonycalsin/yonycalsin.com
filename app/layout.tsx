@@ -1,20 +1,19 @@
 import 'assets/styles/index.css'
-import 'assets/styles/runts.css'
-import 'assets/styles/tailwind.css'
-import 'prism-theme-vars/base.css'
-import 'prism-theme-vars/themes/vitesse-dark.css'
-import '@runts/react/styles/editor-fonts.css'
-import '@runts/react/styles/runts-playground.css'
 
 import * as React from 'react'
 import { clsx } from 'clsx'
-import { Inter, Source_Serif_Pro } from 'next/font/google'
+import { Inter as FontSans, Inter, Source_Serif_Pro } from 'next/font/google'
 import Script from 'next/script'
 
 import type { AppLayoutProps } from 'typings/app'
 import { VercelInsights } from 'analytics/vercel-insights'
 import { MainLayout } from 'layouts'
 import { ENV, IS_PRODUCTION } from 'utils/constants'
+
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
 
 const fontInter = Inter({
   subsets: ['greek-ext'],
@@ -76,8 +75,8 @@ function Layout(props: AppLayoutProps) {
   const { children } = props
 
   return (
-    <html lang="en" className={clsx(fontInter.variable, fontSourceSerifPro.variable)}>
-      <body className="bg-[#F8F7F3] text-gray-800 dark:bg-gray-900 dark:text-gray-300 text-base lg:text-lg">
+    <html lang="en" className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable)}>
+      <body>
         <MainLayout>{children}</MainLayout>
         <VercelInsights />
         {IS_PRODUCTION && ENV.GOOGLE_ANALYTICS_ID ? (
