@@ -34,6 +34,26 @@ module.exports = {
     ],
     '@next/next/no-head-element': 'off',
     'import/namespace': 'off',
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@yonycalsin/import-sort/typescript-react-imports': [
+      'error',
+      {
+        modules: [
+          'typings',
+          'mock-server',
+          'tests',
+          'analytics',
+          'services',
+          'hooks',
+          'screens',
+          'layouts',
+          'containers',
+          'components',
+          'utils',
+        ],
+      },
+    ],
+    '@yonycalsin/import-sort/typescript-react-exports': 'error',
   },
   overrides: [
     {
@@ -45,27 +65,11 @@ module.exports = {
       extends: ['plugin:@yonycalsin/import-sort/react'],
     },
     {
-      files: ['src/**/*.[jt]s?(x)', 'pages/**/*.[jt]s?(x)', 'app/**/*.[jt]s?(x)'],
+      files: ['**/ui/**/*.[jt]s?(x)'],
       rules: {
-        '@yonycalsin/import-sort/typescript-react-imports': [
-          'error',
-          {
-            modules: [
-              'typings',
-              'mock-server',
-              'tests',
-              'analytics',
-              'services',
-              'hooks',
-              'screens',
-              'layouts',
-              'containers',
-              'components',
-              'utils',
-            ],
-          },
-        ],
-        '@yonycalsin/import-sort/typescript-react-exports': 'error',
+        'react/no-multi-comp': 'off',
+        'react/prop-types': 'off',
+        'react/jsx-props-no-spreading': 'off',
       },
     },
   ],

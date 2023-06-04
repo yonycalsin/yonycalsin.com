@@ -6,10 +6,10 @@ import { FaNpm } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 
 import type { WorkItemProps } from 'typings/components'
-import { Anchor } from 'components/anchor'
-import { Badge } from 'components/badge'
 import { Heading } from 'components/heading'
 import { Icon } from 'components/icon'
+import { Badge } from 'components/ui/badge'
+import { Button } from 'components/ui/button'
 import { normalizeDisplayUrl } from 'utils'
 import { DATE_FORMATS } from 'utils/constants'
 import { getWorkItemColors, WorkItemIcon } from './components'
@@ -49,45 +49,41 @@ function WorkItem(props: WorkItemProps) {
           <Heading size="h4">{title}</Heading>
         </a>
         <p>{description}</p>
-        <div>
-          <ul className="space-y-0 lg:space-y-1">
-            {webHref ? (
-              <li>
-                <Anchor href={webHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                  <Icon className="text-secondary-900">
-                    <BsLink />
-                  </Icon>
-                  Visit {normalizeDisplayUrl(webHref)}
-                </Anchor>
-              </li>
-            ) : null}
-            {repositoryHref ? (
-              <li>
-                <Anchor href={repositoryHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                  <Icon className="text-gray-900">
-                    <FiGithub />
-                  </Icon>
-                  View source code
-                </Anchor>
-              </li>
-            ) : null}
-            {packageHref ? (
-              <li>
-                <Anchor href={packageHref} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                  <Icon className="text-error-900">
-                    <FaNpm />
-                  </Icon>
-                  View package
-                </Anchor>
-              </li>
-            ) : null}
-          </ul>
+        <div className="flex flex-col items-start">
+          {webHref ? (
+            <Button variant="link" asChild={true}>
+              <a href={webHref} target="_blank" rel="noreferrer">
+                <Icon className="mr-2">
+                  <BsLink />
+                </Icon>
+                Visit {normalizeDisplayUrl(webHref)}
+              </a>
+            </Button>
+          ) : null}
+          {repositoryHref ? (
+            <Button variant="link" asChild={true}>
+              <a href={repositoryHref} target="_blank" rel="noreferrer">
+                <Icon className="mr-2">
+                  <FiGithub />
+                </Icon>
+                View source code
+              </a>
+            </Button>
+          ) : null}
+          {packageHref ? (
+            <Button variant="link" asChild={true}>
+              <a href={packageHref} target="_blank" rel="noreferrer">
+                <Icon className="mr-2">
+                  <FaNpm />
+                </Icon>
+                View package
+              </a>
+            </Button>
+          ) : null}
         </div>
         <div className="flex gap-2 flex-wrap">
           {tags.map(item => (
-            <Badge key={item} palette="primary">
-              {item}
-            </Badge>
+            <Badge key={item}>{item}</Badge>
           ))}
         </div>
       </div>

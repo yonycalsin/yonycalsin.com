@@ -2,7 +2,8 @@ import * as React from 'react'
 import { BiLinkExternal } from 'react-icons/bi'
 import { TiSocialGithub, TiSocialLinkedin, TiSocialTwitter } from 'react-icons/ti'
 
-import { Button, Heading, Icon } from 'components'
+import { Heading, Icon } from 'components'
+import { Button } from 'components/ui/button'
 import { SOCIAL_LINKS } from 'utils/constants'
 
 function IntroductionSection() {
@@ -13,60 +14,39 @@ function IntroductionSection() {
         I&rsquo;m a software developer from <b>Perú</b>.
       </p>
       <div className="flex flex-wrap gap-3">
-        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noreferrer">
-          <Button
-            variant="outline"
-            palette="primary"
-            leftElement={
-              <Icon>
-                <TiSocialLinkedin />
-              </Icon>
-            }
-            rightElement={
-              <Icon>
-                <BiLinkExternal />
-              </Icon>
-            }
-          >
+        <Button asChild={true}>
+          <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noreferrer">
+            <Icon className="mr-2">
+              <TiSocialLinkedin />
+            </Icon>
             Linkedin
-          </Button>
-        </a>
-        <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noreferrer">
-          <Button
-            variant="outline"
-            palette="success"
-            leftElement={
-              <Icon>
-                <TiSocialGithub />
-              </Icon>
-            }
-            rightElement={
-              <Icon>
-                <BiLinkExternal />
-              </Icon>
-            }
-          >
+            <Icon className="ml-2">
+              <BiLinkExternal />
+            </Icon>
+          </a>
+        </Button>
+        <Button asChild={true}>
+          <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noreferrer">
+            <Icon className="mr-2">
+              <TiSocialGithub />
+            </Icon>
             Github
-          </Button>
-        </a>
-        <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noreferrer">
-          <Button
-            variant="outline"
-            palette="secondary"
-            leftElement={
-              <Icon>
-                <TiSocialLinkedin />
-              </Icon>
-            }
-            rightElement={
-              <Icon>
-                <TiSocialTwitter />
-              </Icon>
-            }
-          >
+            <Icon className="ml-2">
+              <BiLinkExternal />
+            </Icon>
+          </a>
+        </Button>
+        <Button asChild={true}>
+          <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noreferrer">
+            <Icon className="mr-2">
+              <TiSocialTwitter />
+            </Icon>
             Twitter
-          </Button>
-        </a>
+            <Icon className="ml-2">
+              <BiLinkExternal />
+            </Icon>
+          </a>
+        </Button>
       </div>
     </div>
   )

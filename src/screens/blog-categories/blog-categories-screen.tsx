@@ -2,7 +2,8 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import { getCategoriesApi } from 'services'
-import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Button, Heading } from 'components'
+import { Anchor, Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, Heading } from 'components'
+import { Button } from 'components/ui/button'
 
 function BlogCategoriesScreen() {
   const categoriesResponse = React.use(getCategoriesApi())
@@ -35,9 +36,7 @@ function BlogCategoriesScreen() {
       <div className="flex flex-wrap gap-3 flex-row" role="list" aria-label="List of categories">
         {categories.map(category => (
           <Link href={`/blog/categories/${category.slug}`} key={category.title} role="listitem">
-            <Button variant="outline" palette="success">
-              {category.title}
-            </Button>
+            <Button variant="outline">{category.title}</Button>
           </Link>
         ))}
       </div>

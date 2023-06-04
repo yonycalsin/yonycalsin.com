@@ -6,9 +6,9 @@ import { Anchor } from 'components'
 
 function Footer() {
   return (
-    <footer className="my-6">
+    <footer className="py-6 border-t">
       <div className="container">
-        <footer className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow flex flex-col md:flex-row md:items-center md:justify-between md:p-6">
+        <footer className="p-4rounded-lg flex flex-col md:flex-row md:items-center md:justify-between md:p-6">
           <span className="text-gray-500">
             © 2022{' '}
             <a href="https://yonycalsin.com" className="hover:underline">
