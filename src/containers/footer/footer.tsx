@@ -10,7 +10,7 @@ function Footer() {
       <div className="container">
         <footer className="p-4rounded-lg flex flex-col md:flex-row md:items-center md:justify-between md:p-6">
           <span className="text-gray-500">
-            © 2022{' '}
+            © 2023{' '}
             <a href="https://yonycalsin.com" className="hover:underline">
               Yony Calsin™
             </a>
