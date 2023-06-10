@@ -14,7 +14,7 @@
 
 ## Requirements
 
-Node.js v16.14.0 LTS & pnpm 7.30.3
+Node.js v16.14.0 LTS & pnpm 8.6.1
 
 > `You can use volta, nvm-sh or nvm-windows`
 
