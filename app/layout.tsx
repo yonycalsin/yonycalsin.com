@@ -76,7 +76,7 @@ function Layout(props: AppLayoutProps) {
 
   return (
     <html lang="en" className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable)}>
-      <body>
+      <body className="md:text-lg">
         <MainLayout>{children}</MainLayout>
         <VercelInsights />
         {IS_PRODUCTION && ENV.GOOGLE_ANALYTICS_ID ? (

@@ -19,7 +19,7 @@ function Navbar() {
         <Link href="/">
           <Image className="border-2" src={isotipo} alt="Logo" width="40" height="40" />
         </Link>
-        <div className="flex items-center space-x-6 text-sm font-medium">
+        <div className="flex items-center space-x-6 font-medium">
           <Link
             href="/projects"
             className={cn(
