@@ -29,6 +29,16 @@ const nextConfig = {
     appDir: true,
     typedRoutes: true,
   },
+  modularizeImports: {
+    lodash: {
+      transform: 'lodash/{{member}}',
+    },
+  },
+  compiler: {
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
 }
 
 module.exports = nextConfig
