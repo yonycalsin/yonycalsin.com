@@ -2,7 +2,7 @@ import 'assets/styles/index.css'
 
 import * as React from 'react'
 import { clsx } from 'clsx'
-import { Inter as FontSans, Inter, Source_Serif_Pro } from 'next/font/google'
+import { Inter as FontSans, Inter, Source_Serif_4 } from 'next/font/google'
 import Script from 'next/script'
 
 import type { AppLayoutProps } from 'typings/app'
@@ -21,7 +21,7 @@ const fontInter = Inter({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
-const fontSourceSerifPro = Source_Serif_Pro({
+const fontSourceSerifPro = Source_Serif_4({
   subsets: ['latin'],
   variable: '--font-source-serif-pro',
   weight: ['200', '300', '400', '600', '700', '900'],
