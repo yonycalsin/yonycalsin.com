@@ -1,4 +1,4 @@
-import 'assets/styles/index.css'
+import 'styles/globals.css'
 
 import * as React from 'react'
 import { clsx } from 'clsx'
@@ -76,7 +76,7 @@ function Layout(props: AppLayoutProps) {
 
   return (
     <html lang="en" className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable)}>
-      <body className="md:text-lg">
+      <body>
         <MainLayout>{children}</MainLayout>
         <VercelInsights />
         {IS_PRODUCTION && ENV.GOOGLE_ANALYTICS_ID ? (
