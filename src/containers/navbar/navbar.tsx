@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation'
 
 import { useDynamicBackdrop } from 'hooks'
 import { DynamicBackdrop } from 'components'
-import { cn } from 'utils'
 import { ENV } from 'utils/constants'
+import { cn } from 'utils/ui'
 
 function Navbar() {
   const pathname = usePathname()

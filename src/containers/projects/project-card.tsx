@@ -5,7 +5,7 @@ import type { ProjectCardProps } from 'typings/screens'
 import { Icon } from 'components'
 import { Card, CardDescription, CardHeader, CardTitle } from 'components/ui/card'
 import { getWorkItemColors, getWorkItemIcon } from 'components/work-item/components'
-import { cn } from 'utils'
+import { cn } from 'utils/ui'
 
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props
@@ -22,7 +22,7 @@ function ProjectCard(props: ProjectCardProps) {
     <Link href={`/projects#${project.slug}`}>
       <Card className="h-full">
         <CardHeader>
-          <CardTitle className="flex items-center">
+          <CardTitle className="flex items-center text-base">
             {ProjectIcon ? (
               <Icon className={cn(colors.fill, 'mr-2')}>
                 <ProjectIcon />

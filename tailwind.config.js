@@ -1,18 +1,24 @@
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: ['class'],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '1rem',
+        md: '2rem',
+      },
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        // xl: '1240px',
+        // '2xl': '1496px',
+      },
+    },
     extend: {
-      boxShadow: {
-        card: 'rgb(38 26 25 / 4%) 0px 1.51px 5.3px, rgb(38 26 25 / 5%) 0px 3.03px 4.54px',
-      },
-      fontFamily: {
-        heading: ['var(--font-source-serif-pro)', 'sans-serif'],
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -49,25 +55,25 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-    },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-        sm: '1rem',
-        md: '2rem',
+      keyframes: {
+        'accordion-down': {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
       },
-      screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        // xl: '1240px',
-        // '2xl': '1496px',
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
+  plugins: [require('tailwindcss-animate')],
 }

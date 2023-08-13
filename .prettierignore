@@ -49,3 +49,10 @@ content
 mockServiceWorker.js
 cypress/videos
 cypress/screenshots
+
+# shadcn-ui
+src/components/ui
+
+
+# MSW
+mockServiceWorker.js
