@@ -64,6 +64,9 @@ dependencies:
   lodash:
     specifier: 4.17.21
     version: 4.17.21
+  logrocket:
+    specifier: 6.0.0
+    version: 6.0.0
   lucide-react:
     specifier: 0.279.0
     version: 0.279.0(react@18.2.0)
@@ -11447,6 +11450,10 @@ packages:
       strip-ansi: 7.1.0
       wrap-ansi: 8.1.0
     dev: true
+
+  /logrocket@6.0.0:
+    resolution: {integrity: sha512-67wlZnY/WPEboMHUv+rEhLawJyr/LogV3MsOlEKxsqNu0pD3pLj6Z/seQVGwHKqARtyF9xrAZd6H0Lfy+91C2w==}
+    dev: false
 
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
