@@ -104,6 +104,19 @@ function Layout(props: AppLayoutProps) {
             />
           </>
         ) : null}
+
+        {ENV.LOGROCKET_APP_ID ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+            <script src="https://cdn.lr-intake.com/LogRocket.min.js" crossOrigin="anonymous"></script>
+            <script
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: `window.LogRocket && window.LogRocket.init('${ENV.LOGROCKET_APP_ID}');`,
+              }}
+            ></script>
+          </>
+        ) : null}
       </body>
     </html>
   )
