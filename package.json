@@ -133,12 +133,12 @@
     "wait-on": "7.2.0",
     "webpack": "5.89.0"
   },
-  "packageManager": "pnpm@8.6.1",
+  "packageManager": "pnpm@8.11.0",
   "engines": {
-    "node": "18.15.0"
+    "node": "20.10.0"
   },
   "volta": {
-    "node": "18.15.0"
+    "node": "20.10.0"
   },
   "msw": {
     "workerDirectory": "public"
