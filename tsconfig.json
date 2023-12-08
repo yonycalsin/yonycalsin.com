@@ -21,7 +21,8 @@
       "~/server*": ["./server*"]
     },
     "noImplicitOverride": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "types": ["jest"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "./cypress.config.ts", "cypress"]

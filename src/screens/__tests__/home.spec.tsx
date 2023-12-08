@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { screen, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import { achievementsSuccess, featuredRecommendationsSuccess, pinnedProjectsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import { getFeaturedAchievementsApi, getFeaturedRecommendationsApi, getPinnedProjectsApi } from 'services'
 import HomeScreen from 'screens/home'
 import { Features } from 'utils/constants'
 
 const setup = () => {
-  const utils = setupWithReactQuery(<HomeScreen />)
+  const utils = render(<HomeScreen />)
 
   return utils
 }

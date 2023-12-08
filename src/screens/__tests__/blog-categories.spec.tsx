@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { screen, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import { categoriesSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import { getCategoriesApi } from 'services'
 import BlogCategoriesScreen from 'screens/blog-categories'
 
@@ -11,7 +11,7 @@ jest.mock('services/categories')
 const mockGetCategoriesApi = getCategoriesApi as jest.Mock
 
 function setup() {
-  return setupWithReactQuery(<BlogCategoriesScreen />)
+  return render(<BlogCategoriesScreen />)
 }
 
 describe('BlogCategoriesScreen', () => {

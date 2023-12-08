@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { screen, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import { allBooksSuccess, readingBooksSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import { getAllBooksApi, getReadingBooksApi } from 'services'
 import BooksScreen from 'screens/books'
 
 function setup() {
-  return setupWithReactQuery(<BooksScreen />)
+  return render(<BooksScreen />)
 }
 
 jest.mock('services/books')

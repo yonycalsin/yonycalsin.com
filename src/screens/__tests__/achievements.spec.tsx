@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { screen, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import { achievementsSuccess } from 'mock-server/mocks'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import { getAllAchievementsApi } from 'services'
 import AchievementsScreen from 'screens/achievements'
 
@@ -11,7 +11,7 @@ jest.mock('services/achievements')
 const mockGetAllAchievementsApi = getAllAchievementsApi as jest.Mock
 
 function setup() {
-  return setupWithReactQuery(<AchievementsScreen />)
+  return render(<AchievementsScreen />)
 }
 
 describe('AchievementsScreen', () => {
