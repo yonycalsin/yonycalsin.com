@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { screen, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import { allProjectsSuccess } from 'mock-server/mocks/projects'
-import { overrideFeatures, setupWithReactQuery, TEST_ENVS } from 'tests'
+import { overrideFeatures, TEST_ENVS } from 'tests'
 import { getAllProjectsApi } from 'services'
 import ProjectsScreen from 'screens/projects'
 import { getRandomBadgeColors } from 'utils'
@@ -12,7 +12,7 @@ jest.mock('utils/get-random-badge-colors')
 const mockGetRandomBadgeColors = getRandomBadgeColors as jest.Mock
 
 const setup = () => {
-  const utils = setupWithReactQuery(<ProjectsScreen />)
+  const utils = render(<ProjectsScreen />)
 
   return utils
 }
