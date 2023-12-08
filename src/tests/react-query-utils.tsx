@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { type QueryClientConfig, QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient, type QueryClientConfig, QueryClientProvider } from '@tanstack/react-query'
 import { render } from '@testing-library/react'
 
 const queryClientConfig: QueryClientConfig = {
