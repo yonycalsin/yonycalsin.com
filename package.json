@@ -46,7 +46,6 @@
     "@radix-ui/react-icons": "1.3.0",
     "@radix-ui/react-separator": "1.0.3",
     "@radix-ui/react-slot": "1.0.2",
-    "@rqbazan/set-initial-color-mode": "1.2.0",
     "@runts/react": "2.2.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@tanstack/react-query": "5.12.2",

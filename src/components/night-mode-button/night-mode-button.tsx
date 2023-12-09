@@ -1,21 +1,19 @@
 'use client'
 
 import * as React from 'react'
-import { useColorModeToggle } from '@rqbazan/set-initial-color-mode'
 import { BsFillCloudSunFill, BsMoonStarsFill } from 'react-icons/bs'
 
-function NightModeButton() {
-  const { onToggle } = useColorModeToggle()
+import { toggle } from './server'
 
+function NightModeButton() {
   return (
-    <button
-      type="button"
-      className="fixed left-4 lg:left-8 top-20 lg:top-8 z-50 text-2xl lg:text-4xl"
-      onClick={onToggle}
-    >
-      <BsFillCloudSunFill className="hidden dark:block" />
-      <BsMoonStarsFill className="block dark:hidden" />
-    </button>
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+    <form action={toggle}>
+      <button type="submit" className="fixed left-4 lg:left-8 top-20 lg:top-8 z-50 text-2xl lg:text-4xl">
+        <BsFillCloudSunFill className="hidden dark:block" />
+        <BsMoonStarsFill className="block dark:hidden" />
+      </button>
+    </form>
   )
 }
 

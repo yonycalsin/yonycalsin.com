@@ -22,9 +22,6 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: 1.0.2
     version: 1.0.2(@types/react@18.2.42)(react@18.2.0)
-  '@rqbazan/set-initial-color-mode':
-    specifier: 1.2.0
-    version: 1.2.0
   '@runts/react':
     specifier: 2.2.0
     version: 2.2.0(@lezer/common@1.0.3)(react-dom@18.2.0)(react@18.2.0)
@@ -3461,10 +3458,6 @@ packages:
   /@resvg/resvg-wasm@2.6.0:
     resolution: {integrity: sha512-iDkBM6Ivex8nULtBu8cX670/lfsGxq8U1cuqE+qS9xFpPQP1enPdVm/33Kq3+B+bAldA+AHNZnCgpmlHo/fZrQ==}
     engines: {node: '>= 10'}
-    dev: false
-
-  /@rqbazan/set-initial-color-mode@1.2.0:
-    resolution: {integrity: sha512-xCBPMjwNnraV9pGQPw6LHeXDqdXp076OfC9SqtMjSKGqMnNBSHuAk1n+jkIyzQnonub4WgT0NxR8t/ont+i2lg==}
     dev: false
 
   /@runts/react@2.2.0(@lezer/common@1.0.3)(react-dom@18.2.0)(react@18.2.0):
