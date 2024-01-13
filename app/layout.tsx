@@ -6,6 +6,7 @@ import { CookieStorage } from 'constants/storage'
 import { Inter as FontSans, Inter, Source_Serif_4 } from 'next/font/google'
 import { cookies } from 'next/headers'
 import Script from 'next/script'
+import AppProviders from 'providers/app-providers'
 
 import type { AppLayoutProps } from 'typings/app'
 import { VercelInsights } from 'analytics/vercel-insights'
@@ -83,8 +84,10 @@ function Layout(props: AppLayoutProps) {
       lang="en"
       className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable, dark?.value && 'dark')}
     >
-      <body>
-        <MainLayout>{children}</MainLayout>
+      <body className="md:text-lg">
+        <MainLayout>
+          <AppProviders>{children}</AppProviders>
+        </MainLayout>
         <VercelInsights />
         {IS_PRODUCTION && ENV.GOOGLE_ANALYTICS_ID ? (
           <>
