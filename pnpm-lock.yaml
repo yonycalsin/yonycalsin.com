@@ -73,6 +73,9 @@ dependencies:
   next-base64:
     specifier: 1.1.0
     version: 1.1.0
+  next-nprogress-bar:
+    specifier: 2.1.2
+    version: 2.1.2
   nextjs-cors:
     specifier: 2.2.0
     version: 2.2.0(next@14.0.4)
@@ -11841,6 +11844,12 @@ packages:
   /next-base64@1.1.0:
     resolution: {integrity: sha512-roPubI4go4Cnb8oBp3OcXWoNmzDiMv8ykBfFe02c5imGuZJlXMBXfr6vc9gpr0rvImtgvL1FcQCZAvI/ZESVgg==}
     engines: {node: '>=12'}
+    dev: false
+
+  /next-nprogress-bar@2.1.2:
+    resolution: {integrity: sha512-2Df5d7fr6uPx+BX8MkoWCfl+RjG+uWI5mA399e5sEe8mbT3q/GIUvCXLzBgJBIISpKuMmdLAOYEzqpjlsRVOWw==}
+    dependencies:
+      nprogress: 0.2.0
     dev: false
 
   /next-tick@1.1.0:
