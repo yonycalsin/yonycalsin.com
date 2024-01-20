@@ -2,9 +2,7 @@ import 'styles/globals.css'
 
 import * as React from 'react'
 import { clsx } from 'clsx'
-import { CookieStorage } from 'constants/storage'
 import { Inter as FontSans, Inter, Source_Serif_4 } from 'next/font/google'
-import { cookies } from 'next/headers'
 import Script from 'next/script'
 import AppProviders from 'providers/app-providers'
 
@@ -77,13 +75,8 @@ export const metadata = {
 function Layout(props: AppLayoutProps) {
   const { children } = props
 
-  const dark = cookies().get(CookieStorage.DARK)
-
   return (
-    <html
-      lang="en"
-      className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable, dark?.value && 'dark')}
-    >
+    <html lang="en" className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable)}>
       <body className="md:text-lg">
         <MainLayout>
           <AppProviders>{children}</AppProviders>
