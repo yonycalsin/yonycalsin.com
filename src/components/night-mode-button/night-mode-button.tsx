@@ -36,6 +36,7 @@ function NightModeButton() {
       onClick={onToggle}
       type="button"
       className="fixed left-4 lg:left-8 top-20 lg:top-8 z-50 text-2xl lg:text-4xl"
+      aria-label="Night Toggle Button"
     >
       <BsFillCloudSunFill className="hidden dark:block" />
       <BsMoonStarsFill className="block dark:hidden" />
