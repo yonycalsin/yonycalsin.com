@@ -10,7 +10,9 @@ function AppProviders(props: React.PropsWithChildren<unknown>) {
   return (
     <>
       {children}
-      <ProgressBar height="8px" color="hsl(var(--primary))" options={{ showSpinner: true }} shallowRouting={true} />
+      <React.Suspense>
+        <ProgressBar height="8px" color="hsl(var(--primary))" options={{ showSpinner: true }} shallowRouting={true} />
+      </React.Suspense>
     </>
   )
 }
