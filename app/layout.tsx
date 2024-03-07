@@ -1,5 +1,6 @@
 import 'styles/globals.css'
 
+import type { Metadata } from 'next'
 import * as React from 'react'
 import { clsx } from 'clsx'
 import { Inter as FontSans, Inter, Source_Serif_4 } from 'next/font/google'
@@ -33,11 +34,11 @@ const description =
 
 // Because OG images must have a absolute URL, we use the
 // `VERCEL_URL` environment variable to get the deployment’s URL.
-// More info:
-// https://vercel.com/docs/concepts/projects/environment-variables
-const image = `${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''}/api/og`
+// More info: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#default-value
+const metadataBase = `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`}`
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL(metadataBase),
   robots: {
     index: false,
     follow: false,
@@ -61,14 +62,14 @@ export const metadata = {
     title: 'Yony Calsin - Software Developer',
     description,
     siteName: 'Yony Calsin',
-    images: [{ url: image }],
+    images: [{ url: '/api/og' }],
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@yonycalsin',
     title: 'Yony Calsin - Software Developer',
     description,
-    images: [{ url: image }],
+    images: [{ url: '/api/og' }],
   },
 }
 
