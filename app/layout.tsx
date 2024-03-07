@@ -35,7 +35,9 @@ const description =
 // Because OG images must have a absolute URL, we use the
 // `VERCEL_URL` environment variable to get the deployment’s URL.
 // More info: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#default-value
-const metadataBase = `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`}`
+const metadataBase =
+  process.env.APP_URL ??
+  `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`}`
 
 export const metadata: Metadata = {
   metadataBase: new URL(metadataBase),
