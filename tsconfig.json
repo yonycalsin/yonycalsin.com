@@ -18,12 +18,12 @@
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"],
-      "~/server*": ["./server*"],
+      "~/server*": ["./server*"]
     },
     "noImplicitOverride": true,
     "strictPropertyInitialization": false,
-    "types": ["jest"],
+    "types": ["jest"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "./cypress.config.ts", "cypress"],
+  "exclude": ["node_modules", "./cypress.config.ts", "cypress"]
 }
