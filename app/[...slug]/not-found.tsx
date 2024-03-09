@@ -1,17 +1,13 @@
 import * as React from 'react'
-import Head from 'next/head'
 
 import NotFoundScreen from 'screens/not-found'
 
+export const metadata = {
+  title: 'Page Not Found',
+}
+
 function NotFoundPage() {
-  return (
-    <>
-      <Head>
-        <title>Page Not Found - Yony Calsin</title>
-      </Head>
-      <NotFoundScreen />
-    </>
-  )
+  return <NotFoundScreen />
 }
 
 export default NotFoundPage

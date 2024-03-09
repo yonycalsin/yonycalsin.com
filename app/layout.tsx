@@ -3,7 +3,7 @@ import 'styles/globals.css'
 import type { Metadata } from 'next'
 import * as React from 'react'
 import { clsx } from 'clsx'
-import { Inter as FontSans, Inter, Source_Serif_4 } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import AppProviders from 'providers/app-providers'
 
@@ -12,21 +12,10 @@ import { VercelInsights } from 'analytics/vercel-insights'
 import { MainLayout } from 'layouts'
 import { ENV, IS_PRODUCTION } from 'utils/constants'
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
-
 const fontInter = Inter({
   subsets: ['greek-ext'],
   variable: '--font-inter',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-})
-
-const fontSourceSerifPro = Source_Serif_4({
-  subsets: ['latin'],
-  variable: '--font-source-serif-pro',
-  weight: ['200', '300', '400', '600', '700', '900'],
 })
 
 const description =
@@ -58,6 +47,24 @@ export const metadata: Metadata = {
     template: '%s - Yony Calsin',
   },
   description,
+  keywords: [
+    'yony',
+    'Yony',
+    'calsin',
+    'Calsin',
+    'yonycalsin',
+    'yonycalsin.com',
+    'www.yonycalsin.com',
+    'Yony Calsin',
+    'Software Engineer',
+    'Frontend Engineer',
+    'Backend Engineer',
+    'Fullstack Engineer',
+    'Personal Website',
+    'React',
+    'Javascript',
+    'Typescript',
+  ],
   openGraph: {
     url: 'https://www.yonycalsin.com',
     type: 'website',
@@ -79,7 +86,7 @@ function Layout(props: AppLayoutProps) {
   const { children } = props
 
   return (
-    <html lang="en" className={clsx(fontInter.variable, fontSans.variable, fontSourceSerifPro.variable)}>
+    <html lang="en" className={clsx(fontInter.variable)}>
       <body className="md:text-lg">
         <MainLayout>
           <AppProviders>{children}</AppProviders>
