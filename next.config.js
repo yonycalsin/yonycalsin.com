@@ -27,9 +27,6 @@ const nextConfig = {
     FF_EXERCISES: process.env.FF_EXERCISES,
   },
   swcMinify: true,
-  images: {
-    domains: ['avatars.githubusercontent.com'],
-  },
   experimental: {
     typedRoutes: true,
     optimizePackageImports: ['lodash', 'components', 'utils', 'hooks', 'containers', 'services'],

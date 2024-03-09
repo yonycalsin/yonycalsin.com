@@ -36,7 +36,7 @@ const description =
 // `VERCEL_URL` environment variable to get the deployment’s URL.
 // More info: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#default-value
 const metadataBase =
-  process.env.APP_URL ??
+  process.env.APP_URL ||
   `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`}`
 
 export const metadata: Metadata = {
