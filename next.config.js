@@ -12,7 +12,6 @@ const nextConfig = {
     REST_API_URL: process.env.REST_API_URL,
     REST_API_PUBLIC_KEY: process.env.REST_API_PUBLIC_KEY,
     REST_API_MOCKING: process.env.REST_API_MOCKING,
-    LOGROCKET_APP_ID: process.env.LOGROCKET_APP_ID,
     FF_RESUME: process.env.FF_RESUME,
     FF_BLOG: process.env.FF_BLOG,
     FF_OSS_PROJECTS: process.env.FF_OSS_PROJECTS,

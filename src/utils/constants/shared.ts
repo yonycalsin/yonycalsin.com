@@ -7,7 +7,6 @@ const ENV = {
   REST_API_URL: process.env.REST_API_URL!,
   REST_API_PUBLIC_KEY: process.env.REST_API_PUBLIC_KEY!,
   REST_API_MOCKING: process.env.REST_API_MOCKING === 'true',
-  LOGROCKET_APP_ID: process.env.LOGROCKET_APP_ID,
 
   /**
    * Feature Flags
